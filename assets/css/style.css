@@ -575,12 +575,12 @@ textarea::-ms-input-placeholder
 .single_modules_img:hover .single_modules_overlay{
     opacity:1;
 }
-.portffolio_content_deteals{
+.modules_content_deteals{
     padding-top: 10px;
     width: 90%;
     margin: 0 auto;
 }
-.portffolio_content_deteals a{
+.modules_content_deteals a{
     margin-top: 50px;
     text-transform: uppercase;
 }
