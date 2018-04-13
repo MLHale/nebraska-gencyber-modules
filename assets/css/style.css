@@ -835,10 +835,12 @@ textarea::-ms-input-placeholder
     padding-top: 30px;
     padding-bottom: 30px;
     position: relative;
+	background-color: #2d9fff;
 }
 .copyright{
-    font-family: 'open_sansregular';
+    font-family: 'Arial';
     font-size: 15px;
+	color: #fff;
 }
 .social a i{
     background: #999999;
