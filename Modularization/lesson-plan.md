@@ -65,7 +65,7 @@ Vocabulary:
 
 ![This is the handout][handout]
 
-[handout]: (img/BuildWorksheet.jpg)
+[handout]: (./img/BuildWorksheet.jpg)
 ### Accommodations for students with disabilities
 
 ... If this lesson includes special accommodations for students with disabilities, list them. Otherwise list N/A  ...
