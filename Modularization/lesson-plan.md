@@ -40,7 +40,7 @@ Each item below is optional.
 #### Warm up Activity
 Vocabulary:
 - Modularization (modular homes, legos)
--	Rube Goldberg (Mouse Trap, (https://www.youtube.com/watch?v=Y8cuuP4Jmio) )
+- Rube Goldberg (Mouse Trap, (https://www.youtube.com/watch?v=Y8cuuP4Jmio) )
 
 
 #### Focused Activity
@@ -65,7 +65,7 @@ Vocabulary:
 
 ![This is the handout][handout]
 
-[handout]: (img/BuildWorksheet.jpg)
+![handout](img/BuildWorksheet.jpg?raw=true "Handout")
 ### Accommodations for students with disabilities
 
 ... If this lesson includes special accommodations for students with disabilities, list them. Otherwise list N/A  ...
