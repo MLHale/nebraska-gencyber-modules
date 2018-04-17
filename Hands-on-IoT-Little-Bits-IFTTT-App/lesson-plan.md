@@ -1,63 +1,60 @@
 # Hands-on IoT: Littlebits IFTTT
 
 ### Summary
-This lesson ...
+In this lesson, students will explore a hands-on technology called Littlebits. Students will learn how to plug and play bits together to make some simple inventions. 
 
 ### Grade
-<Insert grade levels here>
+High School
 
 ### Time Required
-<insert time required here>
+60 Minutes
 
 ### First principles
 - [ ] Domain Separation
 - [ ] Process Isolation
-- [ ] Resource Encapsulation
-- [ ] Modularity
+- [x] Resource Encapsulation
+- [x] Modularity
 - [ ] Least Privilege
-- [ ] Abstraction
-- [ ] Data Hiding
+- [x] Abstraction
+- [x] Data Hiding
 - [ ] Layering
 - [ ] Simplicity
-- [ ] Minimization
+- [x] Minimization
 
-Add an x in each of the above that apply.
 
 ### Learning Objectives
-- Discuss ethical behavior in online context
-- Ethical dilemma, gray areas
-- Identify Ten Commandments of Cyber Ethics
-- Evaluate scenarios based on Ten Commandments...
+
+* Students will interact with web services.
+* Create web services with Littlebits
+
 
 ### Materials list
 
-* Material item goes here
-* Material item goes here
+* Littlebits kit
+* Power outlet nearby
+* Wi-Fi Internet Connection
 
 ### Learning Facilitation
 
 Each item below is optional.
 
 #### Warm up Activity
-Several scenarios about ethical situations
-- What would you do?
-- Did the people involve act ethically?
-- Who was harmed in this interaction, who is the victim?
+
+1. Have the students create an account and login to the Littlebits portal.
+
+2. Have students continue with the hands-on activity and pair their cloudbit with the portal.
 
 #### Focused Activity
-* Have students look at "Ten Commandments of Cyber Ethics" (http://cybercitizenship.org/ethics/commandments.html)
-* Students will pair up and each take one commandment.  Create an example and non-example of this commandment.
-* Present to the class
-* Least Privilege (?)
 
-[comment]: # (Not sure what Least Privilege is here, need to ask)
-ToDo: Need to come up with scenarios where there is a clear answer based on 10 commandments but it should not be so obvious that all people initially agree.  Education must change minds.
+* Continue with steps 3-8 of the module.
 
 #### Closure
-... wrap up part ...
+
+
 
 #### Reflection
-... last part ...
+
+* Host a discussion and ask questions about the variety of services that could be created.
 
 ### Assessment
 1. Re-evaluate opening scenarios and describe why the ethical response is or is not appropriate. Link the behavior back to ten commandments.
