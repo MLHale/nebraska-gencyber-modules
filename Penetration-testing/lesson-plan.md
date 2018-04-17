@@ -1,13 +1,13 @@
-# Lesson Plan <lesson name>
+# Lesson Plan: Penetration Testing
 
 ### Summary
-...insert summary here...
+This module will give you an in-depth understanding of phising.
 
 ### Grade
-High School
+Educators
 
 ### Time Required
-XX Minutes
+TBD
 
 ### First principles
 - [ ] Domain Separation
@@ -16,8 +16,8 @@ XX Minutes
 - [ ] Modularity
 - [ ] Least Privilege
 - [ ] Abstraction
-- [ ] Data Hiding
-- [ ] Layering
+- [x] Data Hiding
+- [x] Layering
 - [ ] Simplicity
 - [ ] Minimization
 
@@ -25,23 +25,27 @@ Add an x in each of the above that apply.
 
 ### Learning Objectives
 
-1. Learning Objective goes here
-1. Learning Objective goes here
+1. Students will be able to use a REST Client to make malicious POST and GET requests to an API
+2. Students will be able to identify and understand basic software testing paradigms
+3. Students will be able to identify software weaknesses in API endpoints
+4. Students will be able to trace exploit weaknesses to identify vulnerabilities
+5. Students will be able to conduct a risk assessment
 
 ### Materials list
 
-* Material item goes here
-* Material item goes here
+* PC
+* Internet connection
+* Little bits cloud bit and API Key
+* Little bits sensor and actuator
 
 ### Learning Facilitation
-
-Each item below is optional.
 
 #### Warm up Activity
 ... first part ...
 
 #### Focused Activity
-... next part ...
+Students will use POSTMAN to send a simple request to the server and see if the api has enforced authentication and permissions.
+Students will explore all the api endpoints.
 
 #### Closure
 ... next next part ...
@@ -51,18 +55,19 @@ Each item below is optional.
 
 ### Assessment
 
-1. assessment item one
-1. assessment item two
+1. Walk Around
+2. Oral Questioning
+3. Quiz (Kahootz) 
 
 e.g. Quiz / Presentation / Project / Writing Assignment / Observation / Walk Around / Oral Questioning / Other
 
 ### Accommodations for students with disabilities
 
-... If this lesson includes special accommodations for students with disabilities, list them. Otherwise list N/A  ...
+N/A
 
 ### Extension Activity (ies)
 
-... If this lesson includes any extension activities, list them. Otherwise list N/A  ...
+N/A
 
 ### Acknowledgements
 ...List any Acknowledgements or resources here...

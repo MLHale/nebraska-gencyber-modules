@@ -1,13 +1,13 @@
-# Lesson Plan <lesson name>
+# Lesson Plan: Phising
 
 ### Summary
-...insert summary here...
+This module will give you an in-depth understanding of phising.
 
 ### Grade
-High School
+Educators
 
 ### Time Required
-XX Minutes
+TBD
 
 ### First principles
 - [ ] Domain Separation
@@ -16,8 +16,8 @@ XX Minutes
 - [ ] Modularity
 - [ ] Least Privilege
 - [ ] Abstraction
-- [ ] Data Hiding
-- [ ] Layering
+- [x] Data Hiding
+- [x] Layering
 - [ ] Simplicity
 - [ ] Minimization
 
@@ -25,17 +25,18 @@ Add an x in each of the above that apply.
 
 ### Learning Objectives
 
-1. Learning Objective goes here
-1. Learning Objective goes here
+1. Students will be able to analyze URLs
+2. Students will be able to analyze Emails
+3. Students will be able to understand obfuscation of URLs and Pages.
+4. Students will be able to understand clickjacking.
+5. Students will be able to understand Open Source INTelligence (OSINT) gathering.
 
 ### Materials list
 
-* Material item goes here
+* Internet connected Machine
 * Material item goes here
 
 ### Learning Facilitation
-
-Each item below is optional.
 
 #### Warm up Activity
 ... first part ...
@@ -51,18 +52,19 @@ Each item below is optional.
 
 ### Assessment
 
-1. assessment item one
-1. assessment item two
+1. Walk Around
+2. Oral Questioning
+3. Quiz (Kahootz) 
 
 e.g. Quiz / Presentation / Project / Writing Assignment / Observation / Walk Around / Oral Questioning / Other
 
 ### Accommodations for students with disabilities
 
-... If this lesson includes special accommodations for students with disabilities, list them. Otherwise list N/A  ...
+N/A
 
 ### Extension Activity (ies)
 
-... If this lesson includes any extension activities, list them. Otherwise list N/A  ...
+N/A
 
 ### Acknowledgements
 ...List any Acknowledgements or resources here...

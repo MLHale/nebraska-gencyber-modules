@@ -1,13 +1,13 @@
-# Lesson Plan <lesson name>
+# Lesson Plan: Raspberry Pi intro
 
 ### Summary
-...insert summary here...
+This module will give you an in-depth understanding of the Raspberry Pi platform, discuss its components and how they related to the Cybersecurity First Principles.
 
 ### Grade
-High School
+Educators
 
 ### Time Required
-XX Minutes
+TBD
 
 ### First principles
 - [ ] Domain Separation
@@ -16,8 +16,8 @@ XX Minutes
 - [ ] Modularity
 - [ ] Least Privilege
 - [ ] Abstraction
-- [ ] Data Hiding
-- [ ] Layering
+- [x] Data Hiding
+- [x] Layering
 - [ ] Simplicity
 - [ ] Minimization
 
@@ -25,17 +25,21 @@ Add an x in each of the above that apply.
 
 ### Learning Objectives
 
-1. Learning Objective goes here
-1. Learning Objective goes here
+1. Students will be able to Assemble a Raspberry Pi
+2. Students will be able to Identify key components of the Raspberry Pi
+3. Students will be able to Apply the Cybersecurity First Principles of modularity, abstraction, and least privilege to the Raspberry Pi platform
 
 ### Materials list
 
-* Material item goes here
-* Material item goes here
+* Raspberry Pi kit (Pi, case, SD card, heat sinks, power cable, HDMI cable)
+* DVI to HDMI converter
+* Keyboard
+* Mouse
+* Quick Start Guide
+* Optional: Internet connection to complete updates
+* Optional: Raspberry Pi camera and poster putty
 
 ### Learning Facilitation
-
-Each item below is optional.
 
 #### Warm up Activity
 ... first part ...
@@ -51,18 +55,19 @@ Each item below is optional.
 
 ### Assessment
 
-1. assessment item one
-1. assessment item two
+1. Walk Around
+2. Oral Questioning
+3. Quiz (Kahootz) 
 
 e.g. Quiz / Presentation / Project / Writing Assignment / Observation / Walk Around / Oral Questioning / Other
 
 ### Accommodations for students with disabilities
 
-... If this lesson includes special accommodations for students with disabilities, list them. Otherwise list N/A  ...
+N/A
 
 ### Extension Activity (ies)
 
-... If this lesson includes any extension activities, list them. Otherwise list N/A  ...
+N/A
 
 ### Acknowledgements
 ...List any Acknowledgements or resources here...

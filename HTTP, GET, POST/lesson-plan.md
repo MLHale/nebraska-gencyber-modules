@@ -1,13 +1,13 @@
-# Lesson Plan <lesson name>
+# Lesson Plan: HTTP, GET, POST
 
 ### Summary
-...insert summary here...
+This modules gives you an in-depth understanding of HTTP, GET request and POST request.
 
 ### Grade
-... insert appropriate grade level(s) here ...
+Educators
 
 ### Time Required
-XX Minutes
+TBD
 
 ### First principles
 - [ ] Domain Separation
@@ -44,6 +44,7 @@ GET/POST requests using Postman. Make GET request to (http://google.com) then in
 Repeat with POST request.
 
 Notes: Postman results and inspect element results should be the same.
+
 #### Closure
 ... next next part ...
 
@@ -58,11 +59,11 @@ e.g. Quiz / Presentation / Project / Writing Assignment / Observation / Walk Aro
 
 ### Accommodations for students with disabilities
 
-... If this lesson includes special accommodations for students with disabilities, list them. Otherwise list N/A  ...
+N/A
 
 ### Extension Activity (ies)
 
-... If this lesson includes any extension activities, list them. Otherwise list N/A  ...
+N/A
 
 ### Acknowledgements
 ...List any Acknowledgements or resources here...
