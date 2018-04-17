@@ -1,10 +1,10 @@
-# Lesson Plan IFTTT 
+# Lesson Plan: IFTTT 
 
 ### Summary
-...insert summary here...
+This module will teach how to plug and play Littlebits together to make some simple inventions.
 
 ### Grade
-...insert appropriate grade level(s) here...
+Educators
 
 ### Time Required
 XX Minutes
@@ -12,16 +12,16 @@ XX Minutes
 ### First principles
 - [ ] Domain Separation
 - [ ] Process Isolation
-- [ ] Resource Encapsulation
-- [ ] Modularity
+- [x] Resource Encapsulation
+- [x] Modularity
 - [ ] Least Privilege
-- [ ] Abstraction
-- [ ] Data Hiding
+- [x] Abstraction
+- [x] Data Hiding
 - [ ] Layering
 - [ ] Simplicity
-- [ ] Minimization
+- [x] Minimization
 
-Add an x in each of the above that apply.
+
 
 ### Learning Objectives
 
@@ -29,12 +29,12 @@ Add an x in each of the above that apply.
 
 ### Materials list
 
-* Material item goes here
-* Material item goes here
+* Littlebits kit
+* Power outlet nearby
+* Wi-Fi Internet Connection
 
 ### Learning Facilitation
 
-Each item below is optional.
 
 #### Warm up Activity
 1. Give students examples of real-life IF THEN scenarios
@@ -45,30 +45,26 @@ Each item below is optional.
 #### Focused Activity
 1. Guided Instruction: Follow instructions on the GenCyber GitHib Page – Teacher Module Hands-on-IoT: LittleBits IFTTT
 
-2. Students independently create a new Applet that demonstrates an IF THIS THEN THAT scenario. Students will test the success of their Applet.
-
 #### Closure
-... next next part ...
+1. Students independently create a new Applet that demonstrates an IF THIS THEN THAT scenario. Students will test the success of their Applet.
 
 #### Reflection
-... last part ...
+1. Students will be able to explore new designs themselves.
 
 ### Assessment
 
 1. After students create their Applet, teacher will confirm that Applet is functional.
 
-e.g. Quiz / Presentation / Project / Writing Assignment / Observation / Walk Around / Oral Questioning / Other
-
 ### Accommodations for students with disabilities
 
-... If this lesson includes special accommodations for students with disabilities, list them. Otherwise list N/A  ...
+N/A 
 
 ### Extension Activity (ies)
 
-... If this lesson includes any extension activities, list them. Otherwise list N/A  ...
+Student directed design ideas.
 
 ### Acknowledgements
-...List any Acknowledgements or resources here...
+Littlbits API: http://developers.littlebitscloud.cc/
 
 ## License
 [Nebraska GenCyber](https://github.com/MLHale/nebraska-gencyber) <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /></a><br /> is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</a>.

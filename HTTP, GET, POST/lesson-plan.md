@@ -1,4 +1,4 @@
-# Lesson Plan <lesson name>
+# Lesson Plan: HTTP, GET, POST
 
 ### Summary
 ...insert summary here...
