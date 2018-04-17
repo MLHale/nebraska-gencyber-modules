@@ -50,28 +50,30 @@ Each item below is optional.
 
 #### Closure
 
-
+* Host a discussion and ask questions about the variety of services that could be created.
 
 #### Reflection
 
-* Host a discussion and ask questions about the variety of services that could be created.
+* Review how each cybersecurity First Priciple were demonstrated in this module.
 
 ### Assessment
-1. Re-evaluate opening scenarios and describe why the ethical response is or is not appropriate. Link the behavior back to ten commandments.
+
+1. Assess the student's understanding of the concepts applied in this module.
 
 
 [comment]: # (Quiz / Presentation / Project / Writing Assignment / Observation / Walk Around / Oral Questioning / Other)
 
 ### Accommodations for students with disabilities
 
-... If this lesson includes special accommodations for students with disabilities, list them. Otherwise list N/A  ...
+N/A
 
-### Extension Activity (ies)
+### Extension Activity 
 
-... If this lesson includes any extension activities, list them. Otherwise list N/A  ...
+N/A
 
 ### Acknowledgements
-...List any Acknowledgements or resources here...
+
+Special thanks to [Dr. Robin Gandhi](http://faculty.ist.unomaha.edu/rgandhi/) for reviewing and editing this lesson.
 
 ## License
 [Nebraska GenCyber](https://github.com/MLHale/nebraska-gencyber) <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /></a><br /> is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</a>.
