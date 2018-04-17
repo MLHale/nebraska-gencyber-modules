@@ -1,13 +1,13 @@
 # Lesson Plan Introduction to GITHUB and Linux Commands
 
 ### Summary
-...insert summary here...
+The module provides students hands-on experience using Git and Github for collaboration and version control. In this module, students will learn how to create, clone and manage online repositories, create and manage local repositories, synchronize repositories, and collaborate using Github.
 
 ### Grade
-... insert appropriate grade level(s) here ...
+High School
 
 ### Time Required
-XX Minutes
+60 Minutes
 
 ### First principles
 - [x] Domain Separation
