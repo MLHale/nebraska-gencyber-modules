@@ -1,1 +1,1 @@
-# Includes lesson plans and Cyber Security first principles
+# Includes lesson plans and modules for Cyber Security first principles
