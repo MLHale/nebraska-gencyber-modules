@@ -39,15 +39,45 @@ Each item below is optional.
 
 #### Warm up Activity
 
-
+Host a discussion on routing tables and how packets travel over a network.
 
 #### Focused Activity
 
+Process for Internet of Strings Routing
+
+If you are originating message
+1. Receive message and place in packet payload
+2. Refer to your node's routing table and select the least cost route to final destination
+3. Build packet header on post-it note (see example) and place on packet
+4. Pace packet on link and move to the next hop
+
+When you arrive at a node
+1. Remove packet from link, review packet header and determine if message is for the node you are at. 
+    - If message is for this node, remove payload, verify it is at the right node, and 
+      announce results, either, 
+      "message recevied" or "message misrouted"
+    - If message is not for this node, hand packet to next individual and continue with step 
+      2 below
+2. Refer to the current node's routing table and select the least cost route to final 
+     destination
+    - If there is no route to final destination announce "bad route" and go to the end of 
+      the line for that node
+    - If there is a route but the link you need is not available
+      a. Check to see if there is a higher cost route available
+      b. If there is a higher cost route use it and continue with number 3
+      c. If there is not a higher cost route announce "link down"
+3. Build new packet header by adding a new next hop (see example below) and place on 
+    packet
+4. Place packet on link and move to next hop
+
+If you are moving to the next hop and collide with another packet
+1. Return to the node you came from
+2. Pick a number between 1 and 10 and then wait that many seconds before going to the next hop again
 
 
 #### Closure
 
-
+Provide a 5 minute warning when the activity will end. Once complete, have all the students help put away the supplies.
 
 #### Reflection
 
