@@ -1,7 +1,7 @@
-# Lesson Plan: Phising
+# Lesson Plan: Phishing
 
 ### Summary
-This module will give you an in-depth understanding of phising.
+This module will give you an in-depth understanding of phishing.
 
 ### Grade
 Educators
@@ -54,7 +54,7 @@ Add an x in each of the above that apply.
 
 1. Walk Around
 2. Oral Questioning
-3. Quiz (Kahootz) 
+3. Quiz (Kahootz)
 
 e.g. Quiz / Presentation / Project / Writing Assignment / Observation / Walk Around / Oral Questioning / Other
 
