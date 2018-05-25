@@ -115,7 +115,7 @@ input[type="color"],
 }
 .form-control:focus {
     border-bottom: 2px solid #00a5ff;
-    box-shadow:none; 
+    box-shadow:none;
 }
 
 h1,
@@ -246,6 +246,65 @@ section .subtitle-half h5 {
 	margin-top: -10px;
 }
 
+/* Popup Section */
+
+#active-popup {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: rgba(0,0,0,0.8);
+  display: none;
+}
+
+#popup-container {
+  //margin: 10px 10px 10px 10px;
+  margin-top: 20px;
+  margin-right: 20px;
+  margin-left: 20px;
+  width: 990px;
+  margin: 0 auto;
+}
+
+.modal-content {
+  background-color: rgba(38, 38, 40, 0.92);
+  color: #fff;
+  padding: 20px 40px;
+}
+
+.modal-content input {
+  height: 57px;
+  border-radius: 0px;
+}
+
+.modal-content .btn-primary {
+  width: 100%;
+  background-color: #ef9919;
+  border: 0px;
+}
+
+.modal-content .btn-primary:hover {
+  background-color: #0073b7;
+  border: 0px;
+}
+
+.modal-content .logorow {
+  text-align: center;
+}
+
+.close {
+  margin-right: 10px;
+  margin-top: 5px;
+  color: #fff;
+  opacity: .8;
+}
+
+.close:hover {
+  color: #efefef;
+}
 
 
 
@@ -378,12 +437,3 @@ section .subtitle-half h5 {
 .social a i:hover{
     background: #00a5ff;
 }
-
-
-
-
-
-
-
-
-

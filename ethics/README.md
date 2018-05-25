@@ -27,3 +27,10 @@ ______________________________
 Contact
 
 ______________________________
+
+
+
+
+
+
+Here is a link with a few ethical situations that you can discuss with others: https://mlhale.github.io/nebraska-gencyber-modules/ethics/Ethics_and_Privacy.pdf
