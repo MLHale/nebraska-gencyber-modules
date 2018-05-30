@@ -1,7 +1,7 @@
-# Lesson Plan Introduction to Github and Linux Commands
+# Lesson Plan Collaboration on Github
 
 ### Summary
-The module provides students hands-on experience using Git and Github for collaboration and version control. In this module, students will learn how to create, clone and manage online repositories, create and manage local repositories, synchronize repositories, and collaborate using Github.
+This module introduces students to collaborative code authoring with git using Github.
 
 ### Grade
 High School
@@ -10,10 +10,10 @@ High School
 60 Minutes
 
 ### First principles
-- [x] Domain Separation
+- [ ] Domain Separation
 - [ ] Process Isolation
 - [ ] Resource Encapsulation
-- [x] Modularity
+- [ ] Modularity
 - [x] Least Privilege
 - [ ] Abstraction
 - [ ] Data Hiding
@@ -21,76 +21,42 @@ High School
 - [ ] Simplicity
 - [ ] Minimization
 
-Add an x in each of the above that apply.
-
 ### Learning Objectives
 
-1. Students will be able to identify related CyberSecurity Principals, relevant terminology, GitHub and Linux commands for GitHub lesson.
+1. Students will deploy, run, and publish a container
+2. Students will make and manage interactions between containers.
+3. Students will use containers to setup a development environment.
+4. Students will network containers together.
 
 ### Materials list
 
-* GIT Software Installed (Appropriate OS version)
-* Access to GitHub.com
-* Access to Command line (Linux terminal, Mac OS terminal or Windows PowerShell)
+- [git](https://git-scm.com/download/) (Windows Version)
+
+### Prerequisite lessons
+
+- [Introduction to Github](../intro_to_github/README.md)
 
 ### Learning Facilitation
 
-Each item below is optional.
-
 #### Warm up Activity
-Review Linux commands to ensure that students are comfortable with directory operations.
+
+Recall basic repository management commands for git.
 
 #### Focused Activity
-Students will work through steps 1-8 within the table of contents to gain familiarity with Github.
 
-Definitions and correlation between terminologies
-*	Committing and Saving
-* Repository
-* Clone
-* Local
-* Remote
-* Initialize(Initial)
-*	Action verbs: Create, manage, Collaborate
-* Domain
-*	Modularization
-*	Privilege
-*	PowerShell
-*	OS
-*	Authenticate
-*	Directory
-*	Push Changes
-*	Pull Changes
-*	Branch
-*	Master
-*	Origin
-*	Status
-*	cd
-*	mkdir
-*	ls
-*	pwd
-*	Modified
-*	Config
-*	Log
-*	Fetch
-*	Merge
-*	Recursive
-*	Fork
-*	Request
-*	Network
-*	Hub
-*	Nullify
-*	Separation
-
+Provide hands-on activity to students for forking a repository, making a pull request from a forked repository and authoring with Markdown.
 
 #### Closure
-Students will fork the camp repository. This will allow them to practice a new skill they learned in this module, as well as possess a copy of all of the camp content. Point students to additional resources.
+
+Review what was discussed in the module.
 
 #### Reflection
+
 Review how each cybersecurity first principles were demonstrated in this module.
 
 ### Assessment
 
-1. Students will demonstrate an understanding of definitions, terminology, and 	 Linux command prompts through a game of Jeopardy/Kahoots Game.
+Students will demonstrate an understanding of definitions, terminology, and command prompts through a game of Jeopardy/Kahoots Game.
 
 e.g. Quiz / Presentation / Project / Writing Assignment / Observation / Walk Around / Oral Questioning / Other
 
@@ -108,7 +74,7 @@ Point students to additional resources in the module.
 
 ### Acknowledgements
 
-Thanks to thoughtful comments and reviews by [Dr. Matthew L. Hale](http://faculty.ist.unomaha.edu/mhale/)
+This tutorial was initially inspired by [this blog post](https://www.codementor.io/jquacinella/docker-and-docker-compose-for-local-development-and-small-deployments-ph4p434gb) by James. Thanks to thoughtful comments and reviews by [Dr. Matthew L. Hale](http://faculty.ist.unomaha.edu/mhale/)
 
 ## License
 [Nebraska GenCyber](https://github.com/MLHale/nebraska-gencyber) <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /></a><br /> is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</a>.

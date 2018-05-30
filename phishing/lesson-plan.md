@@ -34,27 +34,33 @@ Add an x in each of the above that apply.
 ### Materials list
 
 * Internet connected Machine
-* Material item goes here
+* Phishing demo pages
 
 ### Learning Facilitation
 
 #### Warm up Activity
-... first part ...
+
+Ask for volunteers to share any personal experiences with phishing at home or at school. Discuss recent successful phishing attacks.
 
 #### Focused Activity
-... next part ...
+
+Hands-on activities to analyze URLs and Emails used in phishing attacks.
+
+Play phishing game online or in-person.
+
+In-class fun activity (Suggestion by Kristeen Shabram): Tie a note with a URL to phishing pole and swing it to a student to read and tell if the URL is a phishing attempt or not.
 
 #### Closure
-... next next part ...
+
+Review what was discussed in the module.
 
 #### Reflection
-... last part ...
+
+Review how each cybersecurity first principles were demonstrated in this module.
 
 ### Assessment
 
-1. Walk Around
-2. Oral Questioning
-3. Quiz (Kahootz)
+Students will demonstrate an understanding of definitions, terminology, and command prompts through a game of Jeopardy/Kahoots Game.
 
 e.g. Quiz / Presentation / Project / Writing Assignment / Observation / Walk Around / Oral Questioning / Other
 
@@ -64,10 +70,11 @@ N/A
 
 ### Extension Activity (ies)
 
-N/A
+Point students to additional resources in the module.
 
-### Acknowledgements
-...List any Acknowledgements or resources here...
+### Module Lead Author
+
+[Robin A. Gandhi](http://faculty.ist.unomaha.edu/rgandhi/)
 
 ## License
 [Nebraska GenCyber](https://github.com/MLHale/nebraska-gencyber) <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /></a><br /> is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</a>.

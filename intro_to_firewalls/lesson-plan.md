@@ -21,8 +21,6 @@ High School
 - [ ] Simplicity
 - [x] Minimization
 
-Add an x in each of the above that apply.
-
 ### Learning Objectives
 
 1. What is a Firewall and why is it important.
@@ -32,15 +30,12 @@ Add an x in each of the above that apply.
 
 ### Materials list
 
-* Access to Command line
-* Docker https://www.docker.com/
+* Access to Internet
 
 ### Learning Facilitation
 
-Each item below is optional.
-
 #### Warm up Activity
-What do you already know about Firewalls?
+Talk about the origins of the word "Firewall". Ask what do you already know about IT Firewalls?
 
 #### Vocabulary
 * Firewall
@@ -60,20 +55,21 @@ What do you already know about Firewalls?
 
 6. Show video:  (https://www.youtube.com/watch?v=6UtiQwCX2wU)
 
-7. Review Firewalls as a Collection of Valves, Firewall Rules, Windows Firewalls
+7. Review Firewalls as a Collection of Valves and discuss Firewall Rules.
+
+8. Author Linux iptables firewall rules.
 
 #### Closure
 
-1. Have the students write two new outbound rules to enable Google Chrome to connect to websites.
-
+Review what was discussed in the module.
 
 #### Reflection
 
-1.Summarize everything that was learned in this module.
+Review how cybersecurity first principles were demonstrated in this module.
 
 ### Assessment
 
-1. Students will accurately describe how a Firewall works and how it protects you the user. 
+Students will demonstrate an understanding of definitions, terminology, and command prompts through a game of Jeopardy/Kahoots Game.
 
 e.g. Quiz / Presentation / Project / Writing Assignment / Observation / Walk Around / Oral Questioning / Other
 
@@ -83,13 +79,11 @@ N/A
 
 ### Extension Activities / Additional Readings
 
-* [Order of Windows Firewall Rule Evaluation](https://technet.microsoft.com/en-us/library/cc755191%28v=ws.10%29.aspx)
-* [Microsoft Windows Firewall in Enterprise Environment Resources](https://docs.microsoft.com/en-us/windows/access-protection/windows-firewall/windows-firewall-with-advanced-security-design-guide)
-* [Microsoft The OSI Model's Seven Layers Defined and Functions Explained](https://support.microsoft.com/en-us/kb/103884)  
-* Linux firewalls
-  * [Ubuntu iptables Wiki](https://help.ubuntu.com/community/IptablesHowTo)  
-  * [CentOS iptables Wiki](https://wiki.centos.org/HowTos/Network/IPTables)
-  * 25 Most Used iptables commands, [The Geek Stuff](http://www.thegeekstuff.com/2011/06/iptables-rules-examples/)
+Point students to additional resources in the module.
+
+### Module Lead Author
+
+[Robin A. Gandhi](http://faculty.ist.unomaha.edu/rgandhi/)
 
 ### Acknowledgements
 
