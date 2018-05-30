@@ -1,6 +1,16 @@
 # nebraska-gencyber-modules
 This is an open-source repository of cybersecurity curricular modules for K-12
 
+## Nebraska GenCyber Program Director (Primary Point of Contact)
+Have questions or comments about the content? Used our content and want more? Want to discuss other collaboration opportunities? Please contact us.
+
+![matt](./img/matt.jpg)
+[Dr. Matt Hale](http://faculty.ist.unomaha.edu/mlhale/)
+Assistant Professor of Cybersecurity
+University of Nebraska at Omaha .
+[mlhale@unomaha.edu](mailto:mlhale@unomaha.edu)
+Twitter - [@mlhale](https://twitter.com/mlhale_)
+
 # License
 [Nebraska GenCyber](https://github.com/MLHale/nebraska-gencyber) <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /></a><br /> is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</a>. You are encouraged to reuse, remix, and add to the lessons contained herein - just remember to properly provide attribution.
 
