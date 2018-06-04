@@ -23,7 +23,7 @@ High School
 
 ### Learning Objectives
 
-1. Students will be able to identify Cybersecurity Principles
+- Students will be able to identify Cybersecurity Principles
 
 ### Materials list
 
@@ -47,9 +47,7 @@ Review how each cybersecurity first principles were demonstrated in this module.
 
 ### Assessment
 
-1. Students will demonstrate an understanding of Cybersecurity first principles through a game of Jeopardy/Kahoots Game.
-
-e.g. Quiz / Presentation / Project / Writing Assignment / Observation / Walk Around / Oral Questioning / Other
+- Students will demonstrate an understanding of Cybersecurity first principles through a game of Jeopardy/Kahoots Game. e.g. Quiz / Presentation / Project / Writing Assignment / Observation / Walk Around / Oral Questioning / Other
 
 ### Accommodations for students with disabilities
 
