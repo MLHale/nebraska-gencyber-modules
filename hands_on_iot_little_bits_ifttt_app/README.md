@@ -56,6 +56,7 @@ By the end of this tutorial, you will be able to:
 
 <!-- TOC END -->
 ### Before We Start
+<!--Last lesson link leads to a page with no content-->
 In the [last lesson](../hands-on-iot-little-bits-intro/README.md), you saw how versatile, modular, and cool Littlebits was to work with. It was easy to plug and play different modules together following simple `design patterns` to make cool, simple apps. Now, imagine everything you saw before can be hooked up to the internet and **controlled using a smartphone or online app**. We are going to do _THAT_ now!
 
 ### Step 1: Create an Account / Login to Littlebits portal!
@@ -265,6 +266,7 @@ You should see the power outlet light turn on - and you should hear a short audi
 Try some different designs yourself. You can combine any services with any Littlebits sensors. You could make an app that opens the curtains when you text it #opencurtains. You could make an app that listens for sounds and sends you an alert if sounds are detected. You could make an email or tweet counter. The possibilities are real and endless!
 
 ### Test you Bits, err... Wits!
+<!--Quiz unavailable from link-->
 [Quiz](https://www.qzzr.com/c/quiz/431837/littlebits-ifttt)
 
 ### Cybersecurity First Principle Reflections
