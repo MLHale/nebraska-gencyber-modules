@@ -43,7 +43,7 @@ TBD
 
 
 #### Focused Activity
-1. Guided Instruction: Follow instructions on the GenCyber GitHib Page – Teacher Module Hands-on-IoT: LittleBits IFTTT
+1. Guided Instruction: Follow instructions on the GenCyber GitHub Page – Teacher Module Hands-on-IoT: LittleBits IFTTT Intro
 
 #### Closure
 1. Students independently create a new Applet that demonstrates an IF THIS THEN THAT scenario. Students will test the success of their Applet.
