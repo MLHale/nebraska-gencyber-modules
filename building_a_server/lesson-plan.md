@@ -12,15 +12,15 @@ Educators
 ### First principles
 - [ ] Domain Separation
 - [ ] Process Isolation
-- [ ] Resource Encapsulation
+- [x] Resource Encapsulation
 - [ ] Modularity
-- [ ] Least Privilege
-- [ ] Abstraction
-- [ ] Data Hiding
-- [ ] Layering
-- [ ] Simplicity
-- [ ] Minimization
-- [ ] Modularization
+- [x] Least Privilege
+- [x] Abstraction
+- [x] Data Hiding
+- [x] Layering
+- [x] Simplicity
+- [x] Minimization
+- [x] Modularization
 
 ### Learning Objectives
 
