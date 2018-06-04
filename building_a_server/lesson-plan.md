@@ -15,15 +15,12 @@ Educators
 - [ ] Resource Encapsulation
 - [ ] Modularity
 - [ ] Least Privilege
-- [x] Abstraction
-- [x] Data Hiding
-- [x] Layering
+- [ ] Abstraction
+- [ ] Data Hiding
+- [ ] Layering
 - [ ] Simplicity
-- [x] Least Privilege
-- [x] Minimization
-- [x] Modularization
-- [x] Resource Encapsulation
-- [x] Simplicity
+- [ ] Minimization
+- [ ] Modularization
 
 ### Learning Objectives
 
