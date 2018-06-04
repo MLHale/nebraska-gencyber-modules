@@ -272,7 +272,7 @@ Now check if your `Cloudbit` application still works after making these changes.
 Check other programs in the Inbound rules list that you think might be allowing more exposure (Protocol and Ports) than necessary for operation.
 
 ## Test your blockage, err ... knowledge!
-
+<!--Quiz no longer available-->
 [Firewall Quiz](https://www.qzzr.com/c/quiz/435576/firewalls)
 
 That's it for Firewalls in this Unit. Happy Surfing.
