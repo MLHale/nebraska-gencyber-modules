@@ -30,6 +30,9 @@
 
 ## Obfuscation of Web Content
 
+Obfuscation means the act of making something obscure, unclear, or unintelligible. 
+In this sense, it means to make code that is intentionally hard to read, usually to the code of an atttack from being easily read.
+
 Examine this link:
 http://faculty.ist.unomaha.edu/rgandhi/phishing-demo/obfuscated.html
 
