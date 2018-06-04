@@ -39,7 +39,7 @@ For this lesson, you will need:
 * Little bits sensor and actuator
 
 ### Prerequisite lessons
-You should complete the following lessones before proceeding with this one.
+You should complete the following lessons before proceeding with this one.
 * [Hands on IoT: Little Bits Intro](../hands-on-iot-little-bits-intro/README.md)
 * [Hands on IoT: Build an IFTTT IoT app w/ Little Bits](../hands-on-iot-little-bits-ifttt-app/README.md)
 * [RESTFul APIs](../restful-api/README.md)
@@ -338,6 +338,7 @@ Body:
 
 * If you connect it, you should get:
 
+<!--Image link does not work-->
 ![request](./img/activate-request2.png)
 
 In either case, we were able to execute the method without logging in. So clearly, **authentication is not required here**. It should be - since our cloudbit could otherwise be turned on by anyone.
