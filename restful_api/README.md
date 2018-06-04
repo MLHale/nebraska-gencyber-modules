@@ -199,7 +199,7 @@ POSTMAN is a REST client, that allows end users to make requests to test their A
 
 ![Loading Postman](./img/postman1.png)
 
-In POSTMAN, lets build a new GET request targetted at the URL https://api-http.littlebitscloud.cc/v2/devices
+In POSTMAN, lets build a new GET request targeted at the URL https://api-http.littlebitscloud.cc/v2/devices
 
 * Find and click the ```headers``` button and add the following
 
