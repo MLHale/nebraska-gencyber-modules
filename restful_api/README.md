@@ -37,8 +37,7 @@ For this lesson, you will need:
 * Little bits sensor and actuator
 
 ### Prerequisite lessons
-<!-- Tried to fix first little bits link with underscores but the page is still not found-->
-You should complete the [Hands on IoT: Little Bits Intro](../hands_on_iot_little_bits_intro/README.md) and [Hands on IoT: Build an IFTTT IoT app w/ Little Bits](../hands_on_iot_little_bits_ifttt_app/README.md) lessons before attempting this lesson.
+You should complete the [Hands on IoT: Little Bits Intro](../hands_on_iot_littlebits/README.md) and [Hands on IoT: Build an IFTTT IoT app w/ Little Bits](../hands_on_iot_little_bits_ifttt_app/README.md) lessons before attempting this lesson.
 
 ### Table of Contents
 <!-- TOC START min:1 max:3 link:true update:true -->
