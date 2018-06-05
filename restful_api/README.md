@@ -37,7 +37,8 @@ For this lesson, you will need:
 * Little bits sensor and actuator
 
 ### Prerequisite lessons
-You should complete the [Hands on IoT: Little Bits Intro](../hands-on-iot-little-bits-intro/README.md) and [Hands on IoT: Build an IFTTT IoT app w/ Little Bits](../hands-on-iot-little-bits-ifttt-app/README.md) lessons before attempting this lesson.
+<!-- Tried to fix first little bits link with underscores but the page is still not found-->
+You should complete the [Hands on IoT: Little Bits Intro](../hands_on_iot_little_bits_intro/README.md) and [Hands on IoT: Build an IFTTT IoT app w/ Little Bits](../hands_on_iot_little_bits_ifttt_app/README.md) lessons before attempting this lesson.
 
 ### Table of Contents
 <!-- TOC START min:1 max:3 link:true update:true -->
@@ -48,7 +49,7 @@ You should complete the [Hands on IoT: Little Bits Intro](../hands-on-iot-little
     - [Materials Required](#materials-required)
     - [Prerequisite lessons](#prerequisite-lessons)
     - [Table of Contents](#table-of-contents)
-    - [Step 1: Hands-on Demo](#step-1-hands-on-demo)
+    - [Step 1: Background](#step-1-background)
     - [Step 2: Ok, lets take a look at a real API](#step-2-ok-lets-take-a-look-at-a-real-api)
     - [Step 3: Getting our API Key](#step-3-getting-our-api-key)
     - [Step 4: Making your first REST request](#step-4-making-your-first-rest-request)
@@ -169,7 +170,7 @@ Bodies can be broadly divided into three categories:
 *   **[Multiple-resource bodies](https://developer.mozilla.org/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types#multipartform-data)**, consisting of a multipart body, each containing a different section of information. These are relatively rare.
 
 ### Step 2: Ok, lets take a look at a real API
-Phew, enough background. In the previous [lesson](../hands-on-iot-little-bits-ifttt-app/README.md), we wired our `cloudbit` up to the web and explored how we could send it signals using [IFTTT](www.ifttt.com). We saw that if our cloud bit detected an input signal (a `request`), we could have `IFTTT` do something (send a `response`). These concepts, i.e. _request_ and _response_, are central to the concept of `RESTful APIs`. REST, or REpresentational State Transfer, APIs, or Application Programming Interfaces, are tools that developers use to provide __abstraction__ and __resource encapsulation__ to people who want to interact with their data.
+Phew, enough background. In the previous [lesson](../hands_on_iot_little_bits_ifttt_app/README.md), we wired our `cloudbit` up to the web and explored how we could send it signals using [IFTTT](https://ifttt.com). We saw that if our cloud bit detected an input signal (a `request`), we could have `IFTTT` do something (send a `response`). These concepts, i.e. _request_ and _response_, are central to the concept of `RESTful APIs`. REST, or REpresentational State Transfer, APIs, or Application Programming Interfaces, are tools that developers use to provide __abstraction__ and __resource encapsulation__ to people who want to interact with their data.
 
 APIs allow you to get and save data back to the application, without needing to tightly integrate with that application. This improves __simplicity__ and helps your code to be more __modular__. APIs include `endpoints`, such as `/api/events`, that allow you to access certain specific data (e.g. events in this example). API endpoints help provide __minimization__ since users can only interact with the application through those interfaces provided by the developer.
 
@@ -186,7 +187,7 @@ To ensure that only we can program our cloudbit, Littlebits provides something c
 
 Go to http://control.littlebitscloud.cc/
 
-Login using the account you used in the [previous lesson](../hands-on-iot-little-bits-ifttt-app/README.md)
+Login using the account you used in the [previous lesson](../hands_on_iot_little_bits_ifttt_app/README.md)
 
 Once logged in, click on your `cloudbit`:
 
@@ -199,7 +200,7 @@ POSTMAN is a REST client, that allows end users to make requests to test their A
 
 ![Loading Postman](./img/postman1.png)
 
-In POSTMAN, lets build a new GET request targetted at the URL https://api-http.littlebitscloud.cc/v2/devices
+In POSTMAN, lets build a new GET request targeted at the URL https://api-http.littlebitscloud.cc/v2/devices
 
 * Find and click the ```headers``` button and add the following
 
