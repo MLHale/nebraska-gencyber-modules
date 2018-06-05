@@ -54,7 +54,7 @@ First, open your Littlebits box. Take a second to look at the different componen
 
 * **<span style="color: pink">Pink</span>** modules are _inputs_, like an On/Off button.
 * **<span style="color: green">Green</span>** modules are _outputs_, like LEDs and Fans.
-* **<span style="color: orange">Orange</span>** modules are special and usually are _supportive_ - think spliters and logic handlers.
+* **<span style="color: orange">Orange</span>** modules are special and usually are _supportive_ - think splitters and logic handlers.
 * **<span style="color: blue">Blue</span>** modules are power related.
 
 Look over each module. Your box should include a helpful component diagram fold-out poster that shows off each of your modules. Read about some of them.
@@ -156,7 +156,7 @@ You should notice the light dimming and brightening depending on the voltage it 
 Ok, last part!
 
 * Connect the ```i23 threshold``` module between the ```o21 number``` and ```bright led``` modules
-* Set the threshold on the ```i23 threshold``` by turning the nob.
+* Set the threshold on the ```i23 threshold``` by turning the knob.
 * Keep turning until a voltage of roughly 3 or greater turns on the ```bright led```
 * You can put your finger over the light sensor to change the voltage
 
