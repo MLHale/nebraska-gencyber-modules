@@ -27,7 +27,7 @@ By the end of this tutorial, you will be able to:
 * Wi-Fi Internet Connection
 
 ### Prerequisite lessons
-[Littlebits Intro](../hands-on-iot-little-bits-intro/README.md)
+[Littlebits Intro](../hands_on_iot_littlebits/README.md)
 
 ### Table of Contents
 <!-- TOC START min:1 max:3 link:true update:true -->
