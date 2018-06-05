@@ -1,4 +1,4 @@
-# Containers - A primer
+# Containers
 
 ## Think shipping containers
 - Standard unit of shipping.
@@ -12,7 +12,7 @@ Application `containers` follow a similar philosophy.
 ## Application containers
 - Standard unit of an application’s runtime.
   (files, libraries, dependencies, sockets, etc)
-- Stackable onto a Linux, macOS or Windows Machine.
+- Stackable onto a Linux, macOS or Windows machine.
 - Can run anything that would run on a server.
 
 # Cybersecurity Principles and Containers
@@ -75,13 +75,12 @@ Let’s start with a container based on [Alpine Linux](https://alpinelinux.org)
 
 First, we need to download a container blueprint called an ```Image```
 
-- Open a Windows Powershell instance:
+- Open a Windows Powershell instance and download an Alpine Linux Image by typing:
 
 ```bash
-# Download alpine container image from Docker Hub
 docker pull alpine
 ```
-You should see some download activity. What just happened?
+You should see some download activity.
 
 ## Container images
 
@@ -90,34 +89,37 @@ You should see some download activity. What just happened?
 - By default, the `latest` image is downloaded. This label is called a Tag
 - Other tags allows downloading specific versions or those shared by other users
 
-Let’s check locally available images and note their sizes.   
+Let’s check locally available images by typing  
 
 ```bash
-# Check images available locally on your machine
 docker images
 ```
+Look at the different sizes of the images as well.
 
-> Observation: Docker images are much smaller than typical Virtual Machines  
+> Observation: Docker images are much smaller than typical Virtual Machines, whicj are usually a few hundred MB.  
 
 ## Running your first container
 
-Let's create and start a container from the alpine image
+Let's create and start a container from the alpine image. First, see a list of all the dock commands just by typing:
 ```bash
-# See list of docker commands
 docker
-# `run` executes a command in a new container (creates it too)
-# -it provides an interactive tty shell into the container
-# --name provides a name for your new container
-# `alpine:latest` is the image name and its tag
+```
+Next, run the command:
+```bash
 docker run -it --name myAlpine alpine:latest
 ```
-if the previous command was successful, the container is created and you are returned an interactive shell into the container. The shell looks like this: ```/ #```
+`run` executes a command in a new container (creates it too)
+`-it` provides an interactive tty shell into the container
+`--name` provides a name for your new container
+`alpine:latest` is the image name and its tag
+
+If the previous command was successful, the container is created and you are returned an interactive shell into the container. The shell looks like this: 
+```/ #```
 
 ## Explore the container
 
-Try some commands in the container shell
+Try some commands in the container shell. Note that the `#` indicates a comment instead of code to be run. This will help in larger `Dockerfiles` which will be described later in the lesson
 ```bash
-# Some commands to try
 whoami # enuf said!
 cd /   # Switch to the root directory
 ls -la # List contents of the root directory
@@ -126,9 +128,9 @@ exit # Stop the shell to exit container
 ```
 
 ## Observations
-- Host directories and files are inaccessible
+- Host directories and files are inaccessible form inside the container
 - The container can connect to websites and receive responses
-- You were running as `root` in the container!
+- You were running as `root` in the container
 
 ## Cleanup
 - Let's see the containers that we created. This command shows both running and stopped containers.
@@ -149,8 +151,7 @@ docker rm <container-ID or name>
 ## Container volumes
 - Containers are short-lived
 - Code and data persist over longer periods
-- Volumes are externally mapped storage areas for a container
-  - Shared folders on host, Shared drives on network, etc.,
+- Volumes are externally mapped storage areas for a container. These can be shared folders on the host machine, shared drives on the network, etc.
 
 ## Mount a host directory as a data volume
 
@@ -165,7 +166,7 @@ mkdir app
 # `\` allows you to continue a long command on a new line
 docker run -it --name myAlpineWithVol -v /c/Users/student/app:/webapp alpine:latest
 ```
-You may get a prompt to share the C: drive with Docker. Accept that and enter the your account password. Once access is granted, a container shell will be returned.
+You may get a prompt to share the `C:` drive with Docker. Accept that and then enter your account password. Once access is granted, a container shell will be returned.
 
 ## Volume configuration
 
@@ -173,10 +174,13 @@ Caution 😡:
 By default, a mounted volume allows full read/write by the container  
 This allows exceptions to the `Process Isolation`  principle
 
-- May set it to read-only (Least privilege principle)
-  - `-v /c/Users/student/app:/webapp:ro`
-- Caching option improves performance
-  - `-v /c/Users/student/app:/webapp:cached`
+To incorporate `Least Privlege`, use `:ro` to make the file read-only.
+
+`-v /c/Users/student/app:/webapp:ro`
+
+The Caching option improves performance as well.
+
+`-v /c/Users/student/app:/webapp:cached`
 
 ## Test the mounted volume
 
@@ -197,7 +201,7 @@ cat test.txt
 
 > Observation: Container and host are able to share files.
 
-It is always good stop containers when not in use to free up system resources.
+It is always a good practice to stop containers when not in use to free up system resources.
 In a new ```Powershell```:
 
 ```bash
@@ -207,27 +211,26 @@ docker ps
 docker stop myAlpineWithVol
 ```
 
-### Totally cool… 🤓
-
 ## Exposing Container Services
 
 Services are bound to container ports.
-We need to expose container ports to the network to access these services remotely.
+We need to expose container ports to the network to be able to access these services remotely.
 
 ## An HTTP Server Container
 Let’s create a container that runs an HTTP server in two commands!
 First, download an image for Lighttpd from Docker Hub
+Lightppd is a lightweight HTTP server.
 
 In a new ```Powershell```:
 ```bash
-# download a container for lighttpd, a lightweight HTTP server
 docker pull gists/lighttpd
 ```
-In a container spawned from this image, we need to expose Port 80 to access the web server.  
-We do this by mapping the container’s port to a port of the host
+In a container spawned from this image, we need to expose Port 80 (commonly used for HTTP) to access the web server.  
+We do this by mapping the container’s port to a port on the host.
 
 ## Host - Container Network
 ![Host-container network](./img/host-container-network.png)
+In this image, the container has one IP address, which is held along with the Docker Engine inside the host. The Docker Engine maps `172.17.0.2:80` (the IP address and port of the container) to `192.168.0.4:8888` (the IP address and port of the host we will be using)
 
 ## Host-Container Port Mapping
 
@@ -235,15 +238,15 @@ Port mappings have to be initialized at container creation time
 - The `-p` option maps a host port to the container port
 
 In ```Powershell```:
-
 ```bash
-# -d option runs the container in detached mode (background)
-# -p 8888:80 maps host port 8888 to container port 80
-# -v maps the host app directory to the web directory in the container
 docker run -d --name lighttpd -p 8888:80 -v /c/Users/student/app:/var/www gists/lighttpd
-# Check the mapped port in container listing
+```
+The `-d` option runs the container in detached mode (background)
+The `-p` 8888:80 maps host port 8888 to container port 80
+The `-v` maps the host app directory to the web directory in the container
+Check the mapped port in the container listing
+```
 docker ps -a
-
 ```
 
 ## Test the mapped port
@@ -255,55 +258,56 @@ In a new ```Powershell```:
 ```bash
 # Change directory to the `/app` directory on the host
 cd app
-# Add a simple HTML file exclamation marks
+# Add a simple HTML file
 set-content index.html "<html>My first Container App</html>"
 ```
-Now browse to http://localhost:8888
+Now go to http://localhost:8888 on a web browser
 
-## Testing continued…
+## Update the HTML file
 
 Return to ```Powershell```:
 
 ```bash
-# Update the HTML file
 set-content index.html "<html><h1>Cool</h1></html>"
 ```
-Now browse to http://localhost:8888
+go to http://localhost:8888 again
 
-## Reflect on what just happened 🤔
+## Reflect on what just happened
 
 > Observations:
 - Separation of persistent code from the application runtime
 - Host file updates are instantly reflected in the container application
 
-### 😎 Cool!
-
 ## Cleanup
 Let's stop the container service and delete the container before we move on.
+Stop the lightppd container
+
 ```bash
-# Stop a running container named lighttpd
 docker stop lighttpd
-
-# Delete container named lighttpd
-docker rm lighttpd
-
-# List all containers (running or stopped)
-docker ps -a
-
 ```
 
-[Top](#table-of-contents)
+Delete the container named lighttpd
+
+```bash
+docker rm lighttpd
+```
+
+List all containers (running or stopped)
+
+```bash
+docker ps -a
+```
 
 # Setting up a dev environment
 
 ## Container build automation
-Typing long docker commands in a terminal is cumbersome 😖  
-Luckily, a `Dockerfile` automates the build process. This is Akin to a “recipe” that the Docker engine understands.
+Obviously, typing long docker commands in a terminal is cumbersome
+Luckily, a `Dockerfile` automates the build process. This is basically a “recipe” that the Docker engine understands. It contains commannds to be run by Docker in a specific order.
 
 ## Dockerfile
 - Examine the `Dockerfile` for `gists/lighttpd` image that we pulled from Docker Hub earlier: https://github.com/iHavee/dockerfiles/blob/master/lighttpd/Dockerfile
 
-- Here is a reference for Dockerfile directives: https://docs.docker.com/engine/reference/builder/
+- HA reference for the Dockerfile directives can be found here: https://docs.docker.com/engine/reference/builder/
 
 ## A Django Dockerfile
 
@@ -369,7 +373,7 @@ docker build -t django:dev .
 # List local images
 docker images
 ```
-> If the build is successful,  `django` appears in your local image listing
+If the build is successful,  `django` should appear in your local image listing
 
 ## Cleanup
 
@@ -450,10 +454,9 @@ docker-compose build
 docker images
 ```
 
-> If the build is successful, `nebraskagencyberdevenv_django` appears in your local image listing.
+If the build is successful, `nebraskagencyberdevenv_django` will appear in your local image listing.
 Services are built once and then tagged, by default as `projectname_service`
 
-# Easy Peasy 😏
 
 ## Run the App
 
@@ -461,8 +464,9 @@ Before running the built containers, often additional configuration steps are ne
 The steps below are specific to our setup and will vary with applications
 
 In the previous ```Powershell```:
+The run option executes a one-time command against a service.
+
 ```bash
-# run option executes a one-time command against a service
 docker-compose run django bash
 ```
 
@@ -476,32 +480,36 @@ exit
 ```
 
 Back in the previous ```Powershell```:
+Start up the container with this command
+
 ```bash
-# One simple command to start the entire application
 docker-compose up
 ```
 
 Navigate to http://localhost to examine the running app.
-
-# Super cool 🤓
 
 ## Shutting down multiple containers
 
 While pressing CRTL+C in the terminal once will shutdown the containers, here is a better way.
 
 In a new ```Powershell```
+See the current running containers
+
 ```bash
-# Examine running containers
 docker ps
-# Gracefully shutdown the containers
-cd nebraska-gencyber-dev-env
+```
+
+Now shut down the container
+```
+cd nebraska-gencyber-dev-env    # or the name of the directory with the container you want to shut down
 docker-compose stop
 ```
-> `docker-compose down` command will shutdown and delete the containers. So be careful when using the down command.
+
+The `docker-compose down` command will shut down and delete the containers. Be careful when using it.
 
 ## Saving and Loading container images for offline development
 
-Blocked access to Docker Hub or any Github repositories in school lab networks may limit the ability to build containers images. In such scenarios, git repositories and container images can be exported in a compressed file format and later imported. You may also carry necessary installation files for [Docker for Windows](https://docs.docker.com/docker-for-windows/install/).
+Blocked access to Docker Hub or any Github repositories in school lab networks may limit the ability to build containers. In such scenarios, git repositories and container images can be exported in a compressed file format and imported somewhere else at a later time. You may also carry necessary installation files for [Docker for Windows](https://docs.docker.com/docker-for-windows/install/).
 
 ### Saving Files
 
@@ -545,11 +553,13 @@ docker images
 `nebraskagencyberdevenv_django` and `postgres` images should appear in your list of available images now. To spin up the containers we would continue the configuration steps we performed above, starting here:
 
 Continue in ```Powershell```:
+Enter the directory containing the repo
 ```bash
-# Change directory to get into the repo
 cd ~/Desktop/nebraska-gencyber-dev-env
+```
 
-# run option executes a one-time command against a service
+Start Django
+```bash
 docker-compose run django bash
 ```
 In the shell that opens in the container, we need to tell our `Django` server to setup the database and create a new user account for us. The first two lines below setup the database by creating a `database Schema` that our SQL server can use to store data. The third line creates a new superuser account. Specify a password for admin. In development, you can use something simple (e.g. admin1234) for simplicity. In practice, you would want to use a much more secure password - since the server could be accessed from the wider internet.
@@ -565,12 +575,13 @@ exit
 ```
 
 Continuing  in the previous ```Powershell```:
+Start the application
+
 ```bash
-# One simple command to start the entire application
 docker-compose up
 ```
 
-Navigate to http://localhost to examine the running app. 
+Go to to http://localhost to examine the running app. 
 
 ### Configuration Steps
 
@@ -579,13 +590,13 @@ Navigate to http://localhost to examine the running app.
 * Now open `Atom` on your desktop,
 * go to the File -> "Add Project Folder..."
 
-![Add folder](../building-a-server/img/add-folder.png)
+![Add folder](../building_a_server/img/add-folder.png)
 > note that your interface may look slightly different on windows.
 
 * Find your `nebraska-gencyber-dev-env` folder (it should be located at `C:/Users/student/Desktop/`)
 * Upon opening it you should see:
 
-![File Tree](../building-a-server/img/file-tree1.png)
+![File Tree](../building_a_server/img/file-tree1.png)
 
 Now, in `Atom`, open the `/nebraska-gencyber-dev-env/backend/django_backend/settings.py` file by navigating to it in the file tree (on the left) and clicking it.
 
@@ -593,7 +604,7 @@ find the line marked:
 ```
 ALLOWED_HOSTS = ['137.48.185.230', 'localhost']
 ```
-Replace '137.48.185.230' with your `ip address`.
+Replace '137.48.185.230' with your IP address.
 
 * to get your server ip, you need to open a `Powershell` and type:
 ```bash
@@ -608,14 +619,14 @@ Open your browser and go to http://localhost/admin/api/apikey/. Enter the userna
 
 - Click 'add api key'.
 
-![error with key](../building-a-server/img/api-key.png)
+![Add Key](../building_a_server/img/api-key.png)
 
-Then enter your username (probably `admin`) in the `owner` field. In the `key` field add in your `Littlebits` API key used in the previous lesson (without the word `Bearer`). If you forgot it or don't have it handy, you can retrieve it here by visiting http://control.littlebitscloud.cc/ and clicking on `settings`. When added, save the key.
+Then enter your username (probably `admin`) in the `owner` field. In the `key` field add in your Littlebits API key used in the previous lesson (without the word `Bearer`). If you forgot it or don't have it handy, you can retrieve it here by visiting http://control.littlebitscloud.cc/ and clicking on `settings`. When added, save the key.
 
 #### Get events from Littlebits
-The next step is to not only `send` events to Littlebits, but also to `subscribe` to and `receive` events that are output from the `cloudbit.` To do that, we need to use `POSTMAN` to add a subscriber. This was the last step where we left off in the [REST API](../restful-api/README.md) tutorial. Now we are ready!
+The next step is to not only `send` events to Littlebits, but also to `subscribe` to and `receive` events that are output from the cloudbit. To do that, we need to use `POSTMAN` to add a subscriber. This was the last step where we left off in the [REST API](../restful_api/README.md) tutorial. Now we are ready!
 
-Lets add a subscriber to catch input events going to the cloudbit:
+Let's add a subscriber to catch input events going to the cloudbit:
 * make a POST request, using `POSTMAN` to https://api-http.littlebitscloud.cc/v2/subscriptions
 * In our case we want to make a server listen for the `cloudbit`, so lets use a URI endpoint as the subscriber
 * Make sure you use the same headers that you used in the `REST` tutorial. If you don't remember it should be:
@@ -648,8 +659,8 @@ ipconfig --all
 * put the ip in the body of the request above and send the message to the `Littlebits API`
 * If the request works, you should see your request echoed back to you
 
-#### Profit!
-Pretty neat. Observe your handy work.
+#### Try it out!
+Let's try something else
 
 * connect the `power module` to the pink `button` input module
 * connect the `button` module to the `cloudbit` module
@@ -661,11 +672,11 @@ Now, press the button on `button` module. Watch as your server get the events fr
 
 
 [Top](#table-of-contents)
-
-# May the force of containers be with you! 😎
+<!-- BROKEN
+# May the force of containers be with you...
 as you take this quiz…
 https://www.qzzr.com/c/quiz/430097/the-container-quiz
-
+-->
 # Additional Resources
 
 For more information, investigate the following:
@@ -677,13 +688,9 @@ For more information, investigate the following:
 - [Volume](https://docs.docker.com/engine/tutorials/dockervolumes/) - Manage Data in Containers
 - [Container Networking](https://docs.docker.com/engine/tutorials/networkingcontainers/#add-containers-to-a-network) - Connect Containers to a Network
 
-[Top](#table-of-contents)
-
 # Acknowledgements
 
 This tutorial was initially inspired by [this blog post](https://www.codementor.io/jquacinella/docker-and-docker-compose-for-local-development-and-small-deployments-ph4p434gb) by James. Thanks to thoughtful comments and reviews by [Dr. Matthew L. Hale](http://faculty.ist.unomaha.edu/mhale/)
-
-[Top](#table-of-contents)
 
 # License
 [Nebraska GenCyber](https://github.com/MLHale/nebraska-gencyber) <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /></a><br /> is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</a>.

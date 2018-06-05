@@ -1,7 +1,7 @@
 # Obfuscation, Clickjacking and OSINT Gathering
 
 ### Cybersecurity First Principles
-* __Layering__: Cyber security uses multiple layers of defense or protecting information. If one layer is defeated the next layer should catch it.
+* __Layering__: Cybersecurity uses multiple layers of defense when protecting information or resources. If one layer is defeated the next layer should still be defending.
 
 * __Information Hiding__: Information hiding is any attempt to prevent people from being able to see information. It can be hiding the content of a letter, or it can be applied to hiding how the letter is delivered. Both ways can prevent people from being able to see the information. This lesson looks at how malicious information can be hidden in URLs or other data fields.
 
@@ -10,7 +10,7 @@
 ## Lesson goals
 - Obfuscation of URLs and Pages
 - Clickjacking
-- Open Source INTelligence (OSINT) gathering
+- Open Source Intelligence (OSINT) gathering
 
 ## Materials required
 - Internet connected Machine
@@ -30,10 +30,13 @@
 
 ## Obfuscation of Web Content
 
+Obfuscation means the act of making something obscure, unclear, or unintelligible. 
+In this sense, it means to make code that is intentionally hard to read, usually to prevent the code of an atttack from being easily read.
+
 Examine this link:
 http://faculty.ist.unomaha.edu/rgandhi/phishing-demo/obfuscated.html
 
-It is similar to the page in the [URL Analysis Lesson](./url-analysis.md) in form and function but now examine its page source. It has been obfuscated using an external javascript file. Examine that file as well: http://faculty.ist.unomaha.edu/rgandhi/phishing-demo/myscr150731.js Spammers use such obfuscation to avoid detection and analysis. Navigate away from such pages or delete emails that have gone to such lengths to conceal their "trickeries".
+It is similar to the page in the [URL Analysis Lesson](../url-analysis.md) in form and function but now examine its page source. It has been obfuscated using an external javascript file. Examine that file as well: http://faculty.ist.unomaha.edu/rgandhi/phishing-demo/myscr150731.js Spammers use such obfuscation to avoid detection and analysis. Navigate away from such pages or delete emails that have gone to such lengths to conceal their "trickeries".
 
 Just viewing the source files for obfuscated pages provides no useful information. But if we put our minds to it, we can defeat the bad guys. Navigate back to the obfuscated page. Then right click on a blank area and select `Inspect` or `Inspect Element`. In the `Elements` tab unravel the HTML code that is computed by the browser to render a human readable page. Now it should look similar to the phishing page from before:
 > ![trickyurls](./img/inspectelement.png)
@@ -47,7 +50,7 @@ Have you seen links like this before? Examine the page source (right click the b
 
 Now click on the URLs to reveal their true destinations. How is this working?
 
-Most humanly readable domain names map to IPv4 addresses. IPv4 addresses are 32-bit binary numbers. Typically, they are expressed as 4 sets of decimal numbers from 0-255. For example, `unomaha.edu` maps to 137.48.1.231 IP address.
+Most humanly readable domain names map to IPv4 addresses. IPv4 addresses are 32-bit binary numbers. Typically, they are expressed as 4 sets of decimal numbers from 0-255. For example, `unomaha.edu` maps to the `137.48.1.233` IP address.
 
 It just so happens that 32-bit IP addresses can be expressed in Octal, Decimal and Hex formats. Browsers know how to interpret IP addresses in these formats.
 
@@ -84,7 +87,7 @@ Octal Encoding (Base 8)
     Octal equivalent: http://0330.072.0302.044/
 ```
 
-> **Security Tip**: Never visit links that have IP addresses or numbers as their web address. These are most likely machines connected to the Internet with no legitimate Domain Name mapping. Anybody can set them up with an Internet connected machine.
+> **Security Tip**: Never visit links that have IP addresses or numbers as their web address. These are most likely machines connected to the Internet with no legitimate domain name mapping, which means there is no validation. Anybody can set them up with an Internet connected machine.
 
 ### Link #4
 
@@ -126,7 +129,7 @@ http://faculty.ist.unomaha.edu/rgandhi/phishing-demo/clickjacking-reveal.html
 
 ![trickyurls](./img/clickjacking-reveal.png)
 
-Now you can see, that the page is crafted to steal your _clicks_ and pass them on to an invisible page in front of it. Spammers do this to generate advertisement revenue from unsuspecting users by _stealing_ their clicks. This exploit is called **click jacking**. You may explore the page source on these pages to notice that such behavior is possible using HTML `iframe` technology. With an invisible `iframe` the entire page becomes a minefield for your mouse clicks!
+Now you can see, that the page is crafted to steal your clicks and pass them on to an invisible page in front of it. Spammers do this to generate advertisement revenue from unsuspecting users by stealing their clicks. This exploit is called **click jacking**. You may explore the page source on these pages to notice that such behavior is possible using HTML `iframe` technology. With an invisible `iframe` the entire page becomes a minefield for your mouse clicks!
 
 In the demo page, `Like the kitten` is strategically placed on a link that tweets great things about Dr. Gandhi. You would be "liking" me without really intending to do so!
 
@@ -134,12 +137,10 @@ In the demo page, `Like the kitten` is strategically placed on a link that tweet
 
 When playing "free" online games, you may be clicking invisible advertisements!
 
-[Top](#table-of-contents)
-
-## Open Source INTelligence Gathering
+## Open Source Intelligence Gathering
 
 ### Spear-Phishing
-Crafting URLs is just one part of the deception used by Spammers. *Spear-Phishing* is a social engineering technique where a spammer uses intimate details about your life, your contacts, and/or recent activities to tailor a very specific phishing attack.
+Crafting URLs is just one part of the deception used by spammers. Spear-Phishing is a social engineering technique where a spammer uses intimate details about your life, your contacts, and/or recent activities to tailor a very specific phishing attack.
 
 Watch this 3 min video (if you do not have audio, it is OK):   
 https://www.youtube.com/watch?v=F7pYHN9iC9I
@@ -151,7 +152,7 @@ Visit these sites and see how much information is available about yourself:
 
 You may have to pick out yourself from other people who share your name. But that should be easy with additional information about your age and location.
 
-Sites like Facebook, Linkedin, Company websites, Organizational Charts and Employee directories, make it easy to craft emails from colleagues, friends, and family. There are commercial tools available to collect what is called Open Source INTelligence or OSINT. Here is a tool that does just that: https://www.paterva.com/web7/buy/maltego-clients/maltego.php
+Sites like Facebook, Linkedin, company websites, organizational charts and employee directories, make it easy to craft emails from colleagues, friends, and family. There are commercial tools available to collect what is called Open Source INTelligence or OSINT. Here is a tool that does just that: https://www.paterva.com/web7/buy/maltego-clients/maltego.php
 
 > Maltego is an interactive data mining tool that renders directed graphs for link analysis. The tool is used in online investigations for finding relationships between pieces of information from various sources located on the Internet.
 
@@ -187,7 +188,7 @@ For instance, if you have a twitter account, there is a setting (Settings --> Se
 
 ![geotagging](./img/deletelocation.png)
 
-Protecting privacy requires __Information Hiding__. Deleting or hiding metadata prevents sensitive patterns from being learned over time. This is true even for encrypted `https` Internet traffic. While `https` encryption protects message contents, it still reveals the communication endpoints. Over time an accurate communication graph can be built by examining many such communications. To conceal browsing patterns over the Internet, Virtual Private Networks (VPN) are very effective. VPNs work by forming a tunnel between your current connection and a known network (such as the unomaha network). Once a tunnel is formed, all requests you make appear as if they originate from within the known network, since they emanate from the location you have tunneled to.
+Protecting privacy requires **Information Hiding**. Deleting or hiding metadata prevents sensitive patterns from being learned over time. This is true even for encrypted `https` Internet traffic. While `https` encryption protects message contents, it still reveals the communication endpoints. Over time an accurate communication graph can be built by examining many such communications. To conceal browsing patterns over the Internet, Virtual Private Networks (VPN) are very effective. VPNs work by forming a tunnel between your current connection and a known network (such as the unomaha network). Once a tunnel is formed, all requests you make appear as if they originate from within the known network, since they emanate from the location you have tunneled to.
 
 [Top](#table-of-contents)
 
