@@ -2,28 +2,63 @@
 
 ### Cybersecurity First Principles in this lesson
 
-#### Domain Separation
-Good fences make good neighbors.  
-
-#### Modularization
-The concept of modularity is like building blocks. Each block (or module) can be put in or taken out from a bigger project. Each module has its own separate function that is interchangeable with other modules.
+This lesson is about Cybersecurity first principles. So all of them will be discussed.
 
 ### Lesson goals
+
+1. Understand and apply cybersecurity first principles to organize events
+2. Explain cybersecurity first principles to peers
 
 ### Materials required
 - [Gencyber Cyber Realm Card Deck](https://gencybercards.com)
 
 ### Prerequisite lessons
-- Lots of curiosity
+- None, just lots of curiosity
 
 ### Table of Contents    
 
+TBD
+
+
+### Card Game
+
+The Cyber Realm card game helps students learn the 10 principles of cybersecurity. Students learn the 10 principles by recognizing hand gestures, playing with others, or playing by themselves.
+
+### Information Array Card Game
+
+#### Combo 1: States vs Characteristics
+
+| **Game 1**              | *22* Confidentiality (C)                     | *23* Integrity (I)                                 | *24* Availability (A)                             |
+|-------------------------|----------------------------------------------|----------------------------------------------------|---------------------------------------------------|
+| **25 Storage (S)**      | **31** `Encryption` (C) `Hard Drive` (S)       | **36** `altered by anyone` (I) `backups` (S)         | **38** `files` (S) `finding files` (A)              |
+| **26 Transmission (T)** | **32**  `send email` (T) `no one can read` (C) | **34** `digital signature` (I) `email` (T)           | **39** `email` (T) `disaster recovery` (A)          |
+| **27 Processing (P)**   | **33** `compute` (P) `secrecy` (C)             | **35** `CPU calculations` (P) `incorrect values` (I) | **37** `slow and freezes` (A) `run application` (P) |
+
+
+#### Combo 2: States vs. Countermeasures
+
+| **Game 2**              | *28* Education (E)                     | *29* Policy (Po)                      | *30* Technology (Te)                              |
+|-------------------------|----------------------------------------|---------------------------------------|---------------------------------------------------|
+| **25 Storage (S)**      | **38** `files` (S) `training` (E)        | **36** `rules` (Po) `backups` (S)       | **31** `hard drive` (S) `AES encryption` (Te)       |
+| **26 Transmission (T)** | **32**  `send email` (T) `unsure` (E)    | **39** `recovery plan` (Po) `email` (T) | **34** `email` (T) `digital signature` (Te)         |
+| **27 Processing (P)**   | **35** `compute` (P) `reads article` (E) | **33** `compute` (P) `rule` (Po)        | **37** `powerful device` (Te) `run application` (P) |
+
+#### Combo 3: Characteristics vs. Countermeasures
+
+| **Game 3**                 | *28* Education (E)                        | *29* Policy (Po)                                              | *30* Technology (Te)                                 |
+|----------------------------|-------------------------------------------|---------------------------------------------------------------|------------------------------------------------------|
+| **22 Confidentiality (C)** | **32** `unsure` (E) `no one can read` (C)   | **33** `secrecy` (C) `rules` (Po)                               | **31** `sensitive data` (C) `AES encryption` (Te)      |
+| **23 Integrity (I)**       | **35**  `incorrect` (I) `reads article` (E) | **36** `not altered` (I) `rules` (Po)                           | **34** `digitally signed` (Te) `digital signature` (I) |
+| **24 Availability (A)**    | **38** `find files` (A) `training` (E)      | **39** `constant email communications` (A) `recovery plan` (Po) | **37** `powerful device` (Te) `slow and freezes` (A)   |
 
 ### Cybersecurity First Principles Reflections
 
 [Top](#table-of-contents)
 
 ## Additional Resources
+
+- [NSA document listing Cybersecurity first principles](https://users.cs.jmu.edu/tjadenbc/Bootcamp/0-GenCyber-First-Principles.pdf)
+- [First Principle Hand Gestures](https://gencyber.utulsa.edu/wp-content/uploads/2016/10/10-Principles-GenCyber-Card-Game.pdf)
 
 
 [Top](#table-of-contents)
