@@ -3,6 +3,10 @@
 
 @import "{{ site.theme }}";
 
+html {
+  overflow-x: auto;
+}
+
 body {
   background-color: #fff;
   padding:50px;
