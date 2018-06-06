@@ -144,14 +144,14 @@ With a brand new Raspberry Pi, although the operating system comes pre-loaded yo
 * Click OK on the dialog box that pops up telling you the OS has installed successfully and your Pi should reboot
 * Before continuing make sure you have network connectivity following your local procedures for wifi or wired internet
 
-### Step 10 (optional): Configuring the camera 
+### Configuring the camera (optional)
 Now we need to tell the Raspberry Pi that you have installed a camera.  
 
 * Use the _Menu_ dropdown to select _Preferences_ and _Raspberry Pi Configuration_
 * Select the _Interfaces_ tab
 * Select _Camera Enable_, click OK, and reboot
 
-### Step 11: Updating the software
+### Step 10: Updating the software
 Even though you just assembled a brand new Raspberry Pi, it’s a good idea to update the software on the system.  It's very common that security updates or new application capabilities may have been recently developed but are not yet installed.
 *    The default Raspberry Pi user is _pi_ and default password is _raspberry_
 *    In its default configuration the Raspberry Pi logs in the user automatically. For now, we will leave this configuration in place
