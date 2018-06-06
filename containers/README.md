@@ -307,7 +307,7 @@ Luckily, a `Dockerfile` automates the build process. This is basically a “reci
 ## Dockerfile
 - Examine the `Dockerfile` for `gists/lighttpd` image that we pulled from Docker Hub earlier: https://github.com/iHavee/dockerfiles/blob/master/lighttpd/Dockerfile
 
-- HA reference for the Dockerfile directives can be found here: https://docs.docker.com/engine/reference/builder/
+- A reference for the Dockerfile directives can be found here: https://docs.docker.com/engine/reference/builder/
 
 ## A Django Dockerfile
 
@@ -480,7 +480,7 @@ exit
 ```
 
 Back in the previous ```Powershell```:
-Start up the container with this command
+Start up the application with this command
 
 ```bash
 docker-compose up
@@ -604,7 +604,7 @@ find the line marked:
 ```
 ALLOWED_HOSTS = ['137.48.185.230', 'localhost']
 ```
-Replace '137.48.185.230' with your IP address.
+Replace '137.48.185.230' with your `ip address`.
 
 * to get your server ip, you need to open a `Powershell` and type:
 ```bash
