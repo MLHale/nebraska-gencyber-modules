@@ -1,4 +1,4 @@
-# Lesson Plan Introduction to GITHUB and Linux Commands
+# Lesson Plan Introduction to Github and Linux Commands
 
 ### Summary
 The module provides students hands-on experience using Git and Github for collaboration and version control. In this module, students will learn how to create, clone and manage online repositories, create and manage local repositories, synchronize repositories, and collaborate using Github.
@@ -31,10 +31,7 @@ Add an x in each of the above that apply.
 
 * GIT Software Installed (Appropriate OS version)
 * Access to GitHub.com
-* Linux Installed
-* Access to Command line
-* PowerPoint Introducing commands and term Association
-
+* Access to Command line (Linux terminal, Mac OS terminal or Windows PowerShell)
 
 ### Learning Facilitation
 
@@ -47,49 +44,49 @@ Review Linux commands to ensure that students are comfortable with directory ope
 Students will work through steps 1-8 within the table of contents to gain familiarity with Github.
 
 Definitions and correlation between terminologies
-*	Committing and Saving	
+*	Committing and Saving
 * Repository
-* Clone	
+* Clone
 * Local
-* Remote	
+* Remote
 * Initialize(Initial)
-*	Action verbs: Create, manage, Collaborate	
+*	Action verbs: Create, manage, Collaborate
 * Domain
-*	Modularization	
+*	Modularization
 *	Privilege
-*	PowerShell	
+*	PowerShell
 *	OS
-*	Authenticate	
+*	Authenticate
 *	Directory
-*	Push Changes	
+*	Push Changes
 *	Pull Changes
-*	Branch	
+*	Branch
 *	Master
-*	Origin	
+*	Origin
 *	Status
-*	cd	
+*	cd
 *	mkdir
-*	ls	
+*	ls
 *	pwd
-*	Modified	
+*	Modified
 *	Config
-*	Log	
+*	Log
 *	Fetch
-*	Merge	
+*	Merge
 *	Recursive
-*	Fork	
+*	Fork
 *	Request
-*	Network	
+*	Network
 *	Hub
-*	Nullify	
+*	Nullify
 *	Separation
 
 
 #### Closure
-Students will fork the camp repository. This will allow them to practice a new skill they learned in this module, as well as possess a copy of all of the camp content.
+Students will fork the camp repository. This will allow them to practice a new skill they learned in this module, as well as possess a copy of all of the camp content. Point students to additional resources.
 
 #### Reflection
-Review how each cybersecurity first principles were demonstated in this module.
+Review how each cybersecurity first principles were demonstrated in this module.
 
 ### Assessment
 
@@ -103,10 +100,15 @@ N/A
 
 ### Extension Activity (ies)
 
-N/A
+Point students to additional resources in the module.
+
+### Module Lead Author
+
+[Robin A. Gandhi](http://faculty.ist.unomaha.edu/rgandhi/)
 
 ### Acknowledgements
-A special thanks to Robin Gandhi for the creation of this module.
+
+Thanks to thoughtful comments and reviews by [Dr. Matthew L. Hale](http://faculty.ist.unomaha.edu/mhale/)
 
 ## License
 [Nebraska GenCyber](https://github.com/MLHale/nebraska-gencyber) <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /></a><br /> is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</a>.

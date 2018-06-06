@@ -1,7 +1,7 @@
 # Lesson Plan Containers
 
 ### Summary
-This module will walk students through a hands-on activity to gain familiarity with Docker.
+This module will walk students through a hands-on activity to gain familiarity with Container technology using Docker.
 
 ### Grade
 High School
@@ -34,14 +34,13 @@ Add an x in each of the above that apply.
 
 * [Docker for Windows](https://docs.docker.com/docker-for-windows/install/)
 
-
 ### Learning Facilitation
 
 Each item below is optional.
 
 #### Warm up Activity
 
-Host a discussion on containers and the application of them.
+Host a discussion on containers. Discuss how this concept revolutionized logistics in the shipping industry. Extend the container concept to shipping application code to production environments with pre-packaged dependencies.
 
 #### Focused Activity
 
@@ -53,7 +52,7 @@ Review what was discussed in the module.
 
 #### Reflection
 
-Review how each cybersecurity first principles were demonstated in this module.
+Review how each cybersecurity first principles were demonstrated in this module.
 
 ### Assessment
 

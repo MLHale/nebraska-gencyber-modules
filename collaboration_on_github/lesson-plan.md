@@ -1,78 +1,80 @@
-# Lesson Plan: IFTTT 
+# Lesson Plan Collaboration on Github
 
 ### Summary
-This module will teach how to plug and play Littlebits together to make some simple inventions.
+This module introduces students to collaborative code authoring with git using Github.
 
 ### Grade
-Educators
+High School
 
 ### Time Required
-TBD
+60 Minutes
 
 ### First principles
 - [ ] Domain Separation
 - [ ] Process Isolation
-- [x] Resource Encapsulation
-- [x] Modularity
-- [ ] Least Privilege
-- [x] Abstraction
-- [x] Data Hiding
+- [ ] Resource Encapsulation
+- [ ] Modularity
+- [x] Least Privilege
+- [ ] Abstraction
+- [ ] Data Hiding
 - [ ] Layering
 - [ ] Simplicity
-- [x] Minimization
-
-
+- [ ] Minimization
 
 ### Learning Objectives
 
-1. Create a new Applet that demonstrates an IF THIS THEN THAT using (https://ifttt.com).
+1. Students will deploy, run, and publish a container
+2. Students will make and manage interactions between containers.
+3. Students will use containers to setup a development environment.
+4. Students will network containers together.
 
 ### Materials list
 
-* Littlebits kit
-* Power outlet nearby
-* Wi-Fi Internet Connection
+- [git](https://git-scm.com/download/) (Windows Version)
+
+### Prerequisite lessons
+
+- [Introduction to Github](../intro_to_github/README.md)
 
 ### Learning Facilitation
 
-
 #### Warm up Activity
-1. Give students examples of real-life IF THEN scenarios
- - If I post a picture to Snapchat, then my subscribers will see it.
- - If I receive a 90% or higher on a test, the letter grade will be an A.
 
+Recall basic repository management commands for git.
 
 #### Focused Activity
-1. Guided Instruction: Follow instructions on the GenCyber GitHub Page – Teacher Module Hands-on-IoT: LittleBits IFTTT Intro
+
+Provide hands-on activity to students for forking a repository, making a pull request from a forked repository and authoring with Markdown.
 
 #### Closure
-1. Students independently create a new Applet that demonstrates an IF THIS THEN THAT scenario. Students will test the success of their Applet.
+
+Review what was discussed in the module.
 
 #### Reflection
-1. Students will be able to explore new designs themselves.
+
+Review how each cybersecurity first principles were demonstrated in this module.
 
 ### Assessment
 
-1. After students create their Applet, teacher will confirm that Applet is functional.
+Students will demonstrate an understanding of definitions, terminology, and command prompts through a game of Jeopardy/Kahoots Game.
+
+e.g. Quiz / Presentation / Project / Writing Assignment / Observation / Walk Around / Oral Questioning / Other
 
 ### Accommodations for students with disabilities
 
-<<<<<<< HEAD
 N/A
 
 ### Extension Activity (ies)
 
-N/A
-=======
-N/A 
+Point students to additional resources in the module.
 
-### Extension Activity (ies)
+### Module Lead Author
 
-Student directed design ideas.
->>>>>>> ee9005f89850287ebe4fec123ddd90af74ad7d06
+[Robin A. Gandhi](http://faculty.ist.unomaha.edu/rgandhi/)
 
 ### Acknowledgements
-Littlbits API: http://developers.littlebitscloud.cc/
+
+This tutorial was initially inspired by [this blog post](https://www.codementor.io/jquacinella/docker-and-docker-compose-for-local-development-and-small-deployments-ph4p434gb) by James. Thanks to thoughtful comments and reviews by [Dr. Matthew L. Hale](http://faculty.ist.unomaha.edu/mhale/)
 
 ## License
 [Nebraska GenCyber](https://github.com/MLHale/nebraska-gencyber) <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /></a><br /> is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</a>.
