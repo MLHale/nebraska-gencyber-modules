@@ -96,7 +96,7 @@ docker images
 ```
 Look at the different sizes of the images as well.
 
-> Observation: Docker images are much smaller than typical Virtual Machines, whicj are usually a few hundred MB.  
+> Observation: Docker images are much smaller than typical Virtual Machines, which are usually a few hundred MB.  
 
 ## Running your first container
 
@@ -574,7 +574,7 @@ python manage.py createsuperuser --username admin --email admin
 exit
 ```
 
-Continuing  in the previous ```Powershell```:
+Continuing in the previous ```Powershell```:
 Start the application
 
 ```bash
@@ -628,7 +628,7 @@ The next step is to not only `send` events to Littlebits, but also to `subscribe
 
 Let's add a subscriber to catch input events going to the cloudbit:
 * make a POST request, using `POSTMAN` to https://api-http.littlebitscloud.cc/v2/subscriptions
-* In our case we want to make a server listen for the `cloudbit`, so lets use a URI endpoint as the subscriber
+* In our case we want to make a server listen for the `cloudbit`, so let's use a URI endpoint as the subscriber
 * Make sure you use the same headers that you used in the `REST` tutorial. If you don't remember it should be:
 
 `headers`:
