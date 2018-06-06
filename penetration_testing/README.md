@@ -39,12 +39,13 @@ For this lesson, you will need:
 * Little bits sensor and actuator
 
 ### Prerequisite lessons
-You should complete the following lessones before proceeding with this one.
-* [Hands on IoT: Little Bits Intro](../hands-on-iot-little-bits-intro/README.md)
-* [Hands on IoT: Build an IFTTT IoT app w/ Little Bits](../hands-on-iot-little-bits-ifttt-app/README.md)
-* [RESTFul APIs](../restful-api/README.md)
+You should complete the following lessons before proceeding with this one.
+<!--Tried to fix first link, still leads to 404-->
+* [Hands on IoT: Little Bits Intro](../hands_on_iot_little_bits_intro/README.md)
+* [Hands on IoT: Build an IFTTT IoT app w/ Little Bits](../hands_on_iot_little_bits_ifttt_app/README.md)
+* [RESTFul APIs](../restful_api/README.md)
 * [Containers](../containers/README.md)
-* [Building a server](../building-a-server/README.md)
+* [Building a server](../building_a_server/README.md)
 
 
 ### Table of Contents
@@ -157,7 +158,7 @@ A short list of misuse cases includes:
 * User data exfiltration
 * Hostile server takeover
 
-These goals, which can be written like `user stories` often involve some form of `web-based-attack`. We are going to look at our server, created in the previous [lesson](../building-a-server/README.md) to see where it may have `weaknesses` that leave it vulnerable to attack.
+These goals, which can be written like `user stories` often involve some form of `web-based-attack`. We are going to look at our server, created in the previous [lesson](../building_a_server/README.md) to see where it may have `weaknesses` that leave it vulnerable to attack.
 
 In general, you can follow this flow chart for thinking about penetration testing (and testing in general):
 
@@ -290,7 +291,7 @@ Overall, our server should assume that clients can be compromised and, therefore
 What Cybersecurity First Principle might that be?
 
 ### Step 7: Explore the `ActivateCloudbit` endpoint
-Next up is the `ActivateCloudbit` class. We created this controller in the [previous lesson](../building-a-server/README.md). Since this endpoint includes a `POST` request handler, we should carefully review and assess it.
+Next up is the `ActivateCloudbit` class. We created this controller in the [previous lesson](../building_a_server/README.md). Since this endpoint includes a `POST` request handler, we should carefully review and assess it.
 
 #### First Question
 The first question is does it `require authentication`? Authentication should be used anytime you want to restrict access to data as part of an effort of __information hiding__.
@@ -338,6 +339,7 @@ Body:
 
 * If you connect it, you should get:
 
+<!--Image link does not work-->
 ![request](./img/activate-request2.png)
 
 In either case, we were able to execute the method without logging in. So clearly, **authentication is not required here**. It should be - since our cloudbit could otherwise be turned on by anyone.
@@ -478,7 +480,7 @@ For more information, investigate the following.
 * [Bruegge and Dutoit, _Object-oriented Software Engineering: Using UML, Patterns, and Java_, Prentice Hall, 2010](http://dl.acm.org/citation.cfm?id=1795808)
 
 #### Stand Alone Lesson Setup
-If you want to run this lesson without running [Building a server](../building-a-server/README.md) you can run the following commands.
+If you want to run this lesson without running [Building a server](../building_a_server/README.md) you can run the following commands.
 
 Open a `Powershell` terminal and change directory to your `Desktop`:
 ```bash

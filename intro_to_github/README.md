@@ -16,7 +16,7 @@ The concept of modularity is like building blocks. Each block (or module) can be
 * [Git](https://git-scm.com/) is a popular software development tool.
 * Used by developers to collaborate and version control code.   
 * A collaborative environment to develop written works including code!
-* [Github](www.github.com) is popular for online git repository hosting
+* [Github](https://github.com/) is popular for online git repository hosting
   - Free for open source  
   - [BitBucket](https://bitbucket.org/), is another such a service.
 
@@ -51,7 +51,7 @@ ls  # list files and directories in current directory
     - [Step 4: Push Changes](#step-4-push-changes)
     - [Step 5: Pull Remote Changes](#step-5-pull-remote-changes)
     - [Initialize a new repository](#initialize-a-new-repository)
-    - [Cyber security First Principles Reflections](#cyber-security-first-principles-reflections)
+    - [Cyber security First Principles Reflections](#cybersecurity-first-principles-reflections)
   - [Additional Resources](#additional-resources)
   - [Acknowledgements](#acknowledgements)
   - [License](#license)
