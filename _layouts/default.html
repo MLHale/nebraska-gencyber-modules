@@ -52,7 +52,7 @@
                   <div class="row-full">
                     <div class="testpage col s12">
 
-                      {{ content }}
+                      {{ content | markdownify }}
 
                     </div>
                   </div>
@@ -63,7 +63,7 @@
         </div>
       </div>
       </div>
-      <footer>
+      <footer class="leftinfo">
       {% if site.github.is_project_page %}
       <p>This project is maintained by <a href="{{ site.github.owner_url }}">{{ site.github.owner_name }}</a></p>
       {% endif %}
