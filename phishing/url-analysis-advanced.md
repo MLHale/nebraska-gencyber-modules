@@ -10,7 +10,7 @@
 ## Lesson goals
 - Obfuscation of URLs and Pages
 - Clickjacking
-- Open Source Intelligence (OSINT) gathering
+- Open Source INTelligence (OSINT) gathering
 
 ## Materials required
 - Internet connected Machine
@@ -137,10 +137,10 @@ In the demo page, `Like the kitten` is strategically placed on a link that tweet
 
 When playing "free" online games, you may be clicking invisible advertisements!
 
-## Open Source Intelligence Gathering
+## Open Source INTelligence Gathering
 
 ### Spear-Phishing
-Crafting URLs is just one part of the deception used by spammers. Spear-Phishing is a social engineering technique where a spammer uses intimate details about your life, your contacts, and/or recent activities to tailor a very specific phishing attack.
+Crafting URLs is just one part of the deception used by spammers. *Spear-Phishing* is a social engineering technique where a spammer uses intimate details about your life, your contacts, and/or recent activities to tailor a very specific phishing attack.
 
 Watch this 3 min video (if you do not have audio, it is OK):   
 https://www.youtube.com/watch?v=F7pYHN9iC9I
