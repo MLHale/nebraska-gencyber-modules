@@ -437,6 +437,14 @@ header ul {
     width: 270px
 }
 
+ul:not(.browser-default) {
+  list-style-type: disc;
+}
+
+ul:not(.browser-default)>li {
+  list-style-type: disc;
+}
+
 header li {
     width: 89px;
     float: left;
