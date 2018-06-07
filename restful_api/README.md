@@ -169,7 +169,7 @@ Bodies can be broadly divided into three categories:
 *   **[Multiple-resource bodies](https://developer.mozilla.org/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types#multipartform-data)**, consisting of a multipart body, each containing a different section of information. These are relatively rare.
 
 ### Step 2: Ok, lets take a look at a real API
-Phew, enough background. In the previous [lesson](../hands_on_iot_little_bits_ifttt_app/README.md), we wired our `cloudbit` up to the web and explored how we could send it signals using [IFTTT](https://ifttt.com). We saw that if our cloud bit detected an input signal (a `request`), we could have `IFTTT` do something (send a `response`). These concepts, i.e. _request_ and _response_, are central to the concept of `RESTful APIs`. REST, or REpresentational State Transfer, APIs, or Application Programming Interfaces, are tools that developers use to provide __abstraction__ and __resource encapsulation__ to people who want to interact with their data.
+Phew, enough background. In the previous [lesson](../hands_on_iot_little_bits_ifttt_app/README.md), we wired our `cloudbit` up to the web and explored how we could send it signals using [IFTTT](https://ifttt.com). We saw that if our `cloudbit` detected an input signal (a `request`), we could have `IFTTT` do something (send a `response`). These concepts, i.e. _request_ and _response_, are central to the concept of `RESTful APIs`. REST, or REpresentational State Transfer, APIs, or Application Programming Interfaces, are tools that developers use to provide __abstraction__ and __resource encapsulation__ to people who want to interact with their data.
 
 APIs allow you to get and save data back to the application, without needing to tightly integrate with that application. This improves __simplicity__ and helps your code to be more __modular__. APIs include `endpoints`, such as `/api/events`, that allow you to access certain specific data (e.g. events in this example). API endpoints help provide __minimization__ since users can only interact with the application through those interfaces provided by the developer.
 
@@ -180,7 +180,7 @@ Open Chrome and go to http://developers.littlebitscloud.cc/. You are looking at 
 You can see that Littlebits tells us all about how to interact with our `cloudbit` using the API. Lets try it out.
 
 ### Step 3: Getting our API Key
-Secure APIs don't just accept requests and provide responses to anyone. APIs use a concept called `least privilege` to allow end-users to only have access to the features they need. Since we own the cloudbit, we should have the ability to do anything we want with it, but we might want to prevent other people from abusing and misusing our cloudbit.
+Secure APIs don't just accept requests and provide responses to anyone. APIs use a concept called `least privilege` to allow end-users to only have access to the features they need. Since we own the `cloudbit`, we should have the ability to do anything we want with it, but we might want to prevent other people from abusing and misusing our cloudbit.
 
 To ensure that only we can program our cloudbit, Littlebits provides something called an `API Key`. This key is a really long alphanumerical string that would be hard to crack. Lets find our key, so we can issue commands to our cloudbit.
 
@@ -193,7 +193,7 @@ Once logged in, click on your `cloudbit`:
 Now go to the `settings` menu. You should see your access token `API Key`, you will need this string in next steps - so keep it handy. In practice, you wouldn't want to share this with anyone.
 
 ### Step 4: Making your first REST request
-Now that we have our API Key, lets use it to make a request.
+Now that we have our `API Key`, lets use it to make a request.
 
 POSTMAN is a REST client, that allows end users to make requests to test their APIs. Lets use it to test the cloudbit API. Launch POSTMAN by typing ```chrome://apps``` into the Chrome address bar, hit enter, and then click the POSTMAN icon.
 
@@ -230,7 +230,7 @@ If all goes well you should see something like:
     }
 ]
 ```
-This tells me the label of my cloudbit is ```mlhale-cloudbit``` and that it currently doesn't have any subscribers or subscriptions.
+This tells me the label of my `cloudbit` is ```mlhale-cloudbit``` and that it currently doesn't have any subscribers or subscriptions.
 
 ### Step 5: GET device info
 Now that we know our device id, we can use it to make a specific `request` for our device.
@@ -271,7 +271,7 @@ Content-type: application/json
 
 ![POST request](img/postman4.png)
 
-Now click on the Body tab (next to the Headers tab). Select the Raw input option and type the JSON shown below to tell cloudbit to turn the LED on at 100% brightness and to stay on for 5 seconds.
+Now click on the Body tab (next to the Headers tab). Select the Raw input option and type the JSON shown below to tell `cloudbit` to turn the LED on at 100% brightness and to stay on for 5 seconds.
 
 Body:
 ```
@@ -292,7 +292,7 @@ You should get back:
 }
 ```
 
-and you should see your led light up. You just used REST!
+and you should see your LED light up. You just used REST!
 
 
 ### Checkpoint
@@ -301,7 +301,7 @@ Lets review what we've learned.
 https://www.qzzr.com/c/quiz/429280/8f69a8f7-0a69-4efa-9c3e-2aa38944ed1d
 
 ### Step 7: Adding a subscriber to handle incoming events.
-Lets add a subscriber to catch input events going to the cloudbit:
+Lets add a subscriber to catch input events going to the `cloudbit`:
 * Make a POST request to https://api-http.littlebitscloud.cc/v2/subscriptions
 * In our case we want to make a server listen for the cloudbit, so lets use a URI endpoint as the subscriber
 
