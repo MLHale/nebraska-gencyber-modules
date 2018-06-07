@@ -310,21 +310,6 @@ section .subtitle-half h5 {
   color: #efefef;
 }
 
-/* materialize Section */
-.container {
-  width: 90%
-}
-
-.row-full{
-width: 100vw;
-position: relative;
-margin-left: -43vw;
-height: 100px;
-left: 50%;
-}
-
-
-
 /* modules Section */
 .modules_menu{
     width:100%;

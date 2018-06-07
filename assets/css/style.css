@@ -339,11 +339,28 @@ h1,h2,h3 {
 }
 
 h1 {
-    font-size: 28px
+    font-size: 28px;
+    font-weight: bold;
 }
 
 h2 {
-    color: #393939
+    display: block;
+    font-size: 1.5em;
+    -webkit-margin-before: 0.83em;
+    -webkit-margin-after: 0.83em;
+    -webkit-margin-start: 0px;
+    -webkit-margin-end: 0px;
+    font-weight: bold;
+}
+
+h3 {
+    display: block;
+    font-size: 1.17em;
+    -webkit-margin-before: 1em;
+    -webkit-margin-after: 1em;
+    -webkit-margin-start: 0px;
+    -webkit-margin-end: 0px;
+    font-weight: bold;
 }
 
 h3,h4,h5,h6 {
@@ -417,7 +434,8 @@ th {
 }
 
 img {
-    max-width: 100%
+    max-width: 479px;
+    max-height: 360px;
 }
 
 header {
@@ -428,7 +446,6 @@ header {
 }
 
 header ul {
-    list-style: none;
     height: 40px;
     padding: 0;
     background: #f4f4f4;
@@ -499,4 +516,24 @@ header ul a strong {
 section {
     width: 100%;
     padding-bottom: 50px
+}
+
+/* materialize Section */
+.container {
+  width: 90%
+}
+
+.row-full{
+width: 100vw;
+position: relative;
+margin-left: -43vw;
+height: 100px;
+left: 50%;
+}
+
+.leftinfo {
+    width: 270px;
+    float: left;
+    position: fixed;
+    -webkit-font-smoothing: subpixel-antialiased
 }

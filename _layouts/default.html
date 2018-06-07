@@ -41,26 +41,24 @@
       </header>
       <div class="container" style="width: 750px; margin: 0 auto;">
         <div class="left-align">
-        <div class="wrapper">
-          <div class="row-full">
-            <div class="page col s12">
+          <div class="wrapper">
+            <div class="row-full">
+              <div class="page col s12 m6">
+                <section>
+                  <div class="container" style="width: 750px; margin: 0 auto;">
+                    <div class="row-full">
+                      <div class="testpage col s12 m6">
 
+                        {{ page.content | markdownify }}
 
-              <section>
-                <div class="container" style="width: 750px; margin: 0 auto;">
-                  <div class="row-full">
-                    <div class="testpage col s12">
-
-                      {{ page.content | markdownify }}
-
+                      </div>
                     </div>
                   </div>
-                </div>
-              </section>
+                </section>
+              </div>
             </div>
           </div>
         </div>
-      </div>
       </div>
       <footer class="leftinfo">
       {% if site.github.is_project_page %}
