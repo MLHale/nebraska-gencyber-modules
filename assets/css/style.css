@@ -365,6 +365,7 @@ h3 {
 
 h4 {
     display: block;
+    font-size: .875em;
     -webkit-margin-before: 1.33em;
     -webkit-margin-after: 1.33em;
     -webkit-margin-start: 0px;
