@@ -214,7 +214,7 @@ The last module we will explore is the ```servo``` which can bring actual moveme
 * Attach the arm by pushing it down onto the ```white plastic gear``` on the ```servo```
 * Set the switch on the ```servo``` board to ```turn```.
 
-> Note you don't need to use the screw, but hand onto it for later - it should be used in production to secure the turner down
+> Note you don't need to use the screw, but hold onto it for later - it should be used in production to secure the turner down
 
 When you press the button, it should rotate the arm 90 degrees.
 
