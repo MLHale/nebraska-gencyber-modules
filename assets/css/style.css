@@ -548,8 +548,11 @@ left: 50%;
     bottom: 50px;
     margin-left: -10px;
     -webkit-font-smoothing: subpixel-antialiased;
+    font-size: 14px;
+    font-size: .55vw;
 }
 
 .projectpage {
   margin-left: -10px;
+  font-size: 1.1vw;
 }
