@@ -1,4 +1,4 @@
-# Hands-on IoT: Littlebits IFTTT
+﻿# Hands-on IoT: Littlebits IFTTT
 ### Cybersecurity First Principles in this lesson
 
 * __Abstraction__: An abstraction is a representation of an object or concept. It could be something such as a door, a speedometer, or a data structure in computer science. Abstraction decouples the design from the implementation. The gauges in an automobile are an abstraction of the performance of a car. A map is an abstraction of the earth.
@@ -264,7 +264,7 @@ You should see the power outlet light turn on - and you should hear a short audi
 ### Self Exploration
 Try some different designs yourself. You can combine any services with any Littlebits sensors. You could make an app that opens the curtains when you text it #opencurtains. You could make an app that listens for sounds and sends you an alert if sounds are detected. You could make an email or tweet counter. The possibilities are real and endless!
 
-### Test you Bits, err... Wits!
+### Test your Bits, err... Wits!
 <!--Quizzes in all modules made with qzzr.com no longer work - the free subscription quizzes have been pulled from the website-->
 [Quiz](https://www.qzzr.com/c/quiz/431837/littlebits-ifttt)
 
