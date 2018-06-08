@@ -548,16 +548,16 @@ left: 50%;
     bottom: 50px;
     margin-left: -10px;
     -webkit-font-smoothing: subpixel-antialiased;
-    font-size: 14px;
-    font-size: .55vw;
 }
 
 .projectlink {
   margin-left: -10px;
-  font-size: 1.1vw !important;
 }
 
-.view {
-  font-size: 14px;
-  font-size: .55vw;
+@media only screen and (max-width: 1026px) {
+  .projectpage .leftinfo {
+    visibility: false;
+  }
 }
+
+/* Have the side info vanish after a certain size, wasn't told a size, so wing it I suppose. */

@@ -41,7 +41,7 @@ For this lesson, you will need:
 ### Prerequisite lessons
 You should complete the following lessons before proceeding with this one.
 <!--Tried to fix first link, still leads to 404-->
-* [Hands on IoT: Little Bits Intro](../hands_on_iot_little_bits_intro/README.md)
+* [Hands on IoT: Little Bits Intro](../hands_on_iot_littlebits/README.md)
 * [Hands on IoT: Build an IFTTT IoT app w/ Little Bits](../hands_on_iot_little_bits_ifttt_app/README.md)
 * [RESTFul APIs](../restful_api/README.md)
 * [Containers](../containers/README.md)
@@ -339,7 +339,7 @@ Body:
 
 * If you connect it, you should get:
 
-<!--Image link does not work-->
+<!--Image link does not work - activate-request2 doesn't exist-->
 ![request](./img/activate-request2.png)
 
 In either case, we were able to execute the method without logging in. So clearly, **authentication is not required here**. It should be - since our cloudbit could otherwise be turned on by anyone.
