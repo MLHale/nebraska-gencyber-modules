@@ -552,7 +552,12 @@ left: 50%;
     font-size: .55vw;
 }
 
-.projectpage {
+.projectlink {
   margin-left: -10px;
-  font-size: 1.1vw;
+  font-size: 1.1vw !important;
+}
+
+.view {
+  font-size: 14px;
+  font-size: .55vw;
 }
