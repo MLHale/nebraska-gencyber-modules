@@ -178,7 +178,7 @@ sudo apt-get upgrade
 * Hit enter to answer yes to the question do you want to continue
 * If during the install you are presented any informational notes in the terminal window pressing 'q' will bypass them and continue with the upgrade  
 
-The upgrade options to apt-get tell the operating system to compare the current software against the new catalog you just downloaded with the update command.  Any software that has a newer version is now downloaded and installed.  The ability to update software removing vulnerabilities as well as remove software you are not using is an example of the First Principle of __minimization__.  We are minimizing the amount of software an attacker could take advantage of.  
+The upgrade options to `apt-get` tell the operating system to compare the current software against the new catalog you just downloaded with the update command.  Any software that has a newer version is now downloaded and installed.  The ability to update software removing vulnerabilities as well as remove software you are not using is an example of the First Principle of __minimization__.  We are minimizing the amount of software an attacker could take advantage of.  
 
 ### Step 11: Shutdown the Raspberry Pi
 Now that the software has been updated we are done with the Raspberry Pi for now and can turn it off.  We could do this through the GUI with the mouse but since we already have a terminal window open, here’s a command to turn off the Raspberry Pi off from the command line:
