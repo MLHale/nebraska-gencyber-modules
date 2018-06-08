@@ -546,18 +546,20 @@ left: 50%;
     float: left;
     position: fixed;
     bottom: 50px;
-    margin-left: -10px;
+    margin-left: -40px;
     -webkit-font-smoothing: subpixel-antialiased;
 }
 
 .projectlink {
-  margin-left: -10px;
+  margin-left: -40px;
 }
 
-@media only screen and (max-width: 1026px) {
-  .projectpage .leftinfo {
-    visibility: false;
+/* Changes visibility of left panel */
+@media (max-width: 1460px) {
+  .leftinfo {
+    visibility: hidden !important;
+  }
+  .projectpage {
+      visibility: hidden !important;
   }
 }
-
-/* Have the side info vanish after a certain size, wasn't told a size, so wing it I suppose. */
