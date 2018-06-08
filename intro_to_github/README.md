@@ -153,11 +153,11 @@ A few things to notice here about these status messages:
   2. The staged files are `committed` to the repository.
 4. `modified:  README.md`: git knows that the README.md file has been modified  
 
-Now we `stage` our changes for a commit using this command:
+Now we `stage` our changes for a `commit` using this command:
 ```bash
 git add --all
 ```
-The above command `adds` any edited files in a staging area, a temporary holding place before a commit. We can check the status of the repository again using the following command:
+The above command `adds` any edited files in a staging area, a temporary holding place before a `commit`. We can check the status of the repository again using the following command:
 
 ```bash
 git status
@@ -228,7 +228,7 @@ Now, issue the `status` command to check your repository status once again:
 git status
 ```
 
-Visit your remote repository on `Github.com`. Your changes should appear there. You should also see your commit message there. Clicking on the commit message will show the file differences in that commit.
+Visit your remote repository on `Github.com`. Your changes should appear there. You should also see your commit message there. Clicking on the commit message will show the file differences in that `commit`.
 
 > ![updateremote](./img/remoteupdate.png)
 
@@ -244,7 +244,7 @@ So, I realized that I forgot to add a link to UNO's Cybersecurity programs in th
 1. First, click on README.md file on Github and then click the edit option as shown below:
 >![githubedit](./img/githubedit.png)
 
-2. Make changes, add a commit message and click `Commit changes`
+2. Make changes, add a `commit` message and click `Commit changes`
 >![githubcommit](./img/githubcommit.png)
 
 3. See changes in your README.md file
