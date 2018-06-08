@@ -545,5 +545,11 @@ left: 50%;
     width: 270px;
     float: left;
     position: fixed;
-    -webkit-font-smoothing: subpixel-antialiased
+    bottom: 50px;
+    margin-left: -10px;
+    -webkit-font-smoothing: subpixel-antialiased;
+}
+
+.projectpage {
+  margin-left: -10px;
 }

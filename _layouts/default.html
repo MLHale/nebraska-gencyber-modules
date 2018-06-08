@@ -9,12 +9,16 @@
       <link rel="stylesheet" href="{{ "/assets/css/style.css?v=" | append: site.github.build_revision | relative_url }}">
       <link rel="stylesheet" href="../home_assets/css/materialize.min.css"/>
       <link rel="stylesheet" href="../assets/css/style.css">
+
+      <!-- Responsive css -->
+      <link rel="stylesheet" href="../assets/css/responsive.css" />
+
       <!--[if lt IE 9]>
       <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
       <![endif]-->
     </head>
     <body>
-      <header>
+      <header class="projectpage">
         <h1 class="projectlink"><a href="{{ "/" | absolute_url }}">{{ site.title | default: site.github.repository_name }}</a></h1>
 
         {% if site.logo %}
@@ -42,16 +46,14 @@
       <div class="container" style="width: 750px; margin: 0 auto;">
         <div class="left-align">
           <div class="wrapper">
-            <div class="row-full">
-              <div class="page col s12 m6">
+            <div class="row" style="width: 750px; margin: 0 150px;">
+              <div class="contentcontainer col-md-6 col-sm-6 col-xs-12">
                 <section>
                   <div class="container" style="width: 750px; margin: 0 auto;">
                     <div class="row-full">
-                      <div class="testpage col s12 m6">
 
                         {{ page.content | markdownify }}
 
-                      </div>
                     </div>
                   </div>
                 </section>
@@ -61,9 +63,9 @@
         </div>
       </div>
       <footer class="leftinfo">
-      {% if site.github.is_project_page %}
+       <!--{% if site.github.is_project_page %} -->
       <p>This project is maintained by <a href="{{ site.github.owner_url }}">{{ site.github.owner_name }}</a></p>
-      {% endif %}
+      <!-- {% endif %} -->
       <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
       </footer>
       <script src="{{ "/assets/js/scale.fix.js" | relative_url }}"></script>
@@ -77,5 +79,7 @@
         ga('send', 'pageview');
       </script>
       {% endif %}
+
+      <script type="text/javascript" src="../home_assets/js/materialize.min.js"></script>
     </body>
   </html>
