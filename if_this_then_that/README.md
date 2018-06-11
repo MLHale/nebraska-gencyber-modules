@@ -85,7 +85,7 @@ Now that we have an account, we need to pair our `cloudbit` (an orange module wi
 ![setup](img/configuration.jpg)
 
 
-* Hold down the setup button on the `CloudBit` until the light blinks blue.  
+* Hold down the setup button on the `cloudbit` until the light blinks blue.  
 * When the light blinks, let go and wait for the light to turn a steady blue.
 * Using Wi-Fi, connect to the local Wi-Fi network the device broadcasts (it will be something like `litteBits_Cloud_somenumber`).
 * Once connected to the device's Wi-Fi adapter, pick the Wi-Fi network the `cloudbit` will live on. (At UNO that will be: `UNOGuest`).
