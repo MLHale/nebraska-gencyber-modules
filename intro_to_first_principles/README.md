@@ -1,13 +1,13 @@
-# Introduction to First Principles
+# Introduction to Cybersecurity First Principles
 
 ### Cybersecurity First Principles in this lesson
 
-This lesson is about Cybersecurity first principles. So all of them will be discussed.
+This lesson is about cybersecurity first principles. So all of them will be discussed.
 
 ### Lesson goals
 
-1. Understand and apply cybersecurity first principles to organize events
-2. Explain cybersecurity first principles to peers
+1. Understand and apply cybersecurity first principles
+2. Explain cybersecurity first principles
 
 ### Materials required
 - [Gencyber Cyber Realm Card Deck](https://gencybercards.com)
@@ -20,13 +20,308 @@ This lesson is about Cybersecurity first principles. So all of them will be disc
 TBD
 
 
+### Cybersecurity First Principles
+
+#### What are first principles?
+
+#### Stepping through the principles
+
+This discussion is adapted from [NSA guidance](https://users.cs.jmu.edu/tjadenbc/Bootcamp/0-GenCyber-First-Principles.pdf) on first principles.
+
+##### 1. Domain Separation
+
+- What is a Domain?
+  - In a computer, this word refers to a _collection of data or instructions_ that warrant protection. Outside of a computer, a domain can be an area of responsibility or control.
+  - Separating domains allow enforcement of rules for the entry and use of domains by entities outside the domain.
+  - During system testing, the test data should be separated from the "real" data. Such separation avoids unauthorized disclosure of personal or sensitive data.
+
+
+- Examples
+  - Most computers processors run in two states. The supervisor domain and the user domain. The processor when in the supervisor domain, can directly access memory (RAM) or maintain an access control table in a primitive file system. When in the user domain, the processor cannot access memory that belongs to other programs or the operating system.
+  - A virtual machine (or containers) is a domain that is separate from other virtual machines
+
+
+- Implications
+  - Crossing domain boundaries require access control. Transactional overhead and maintenance of access control rules are side-effects.
+  - Stakeholders should negotiate the level of granularity at which domains require separation.
+
+
+- Related principles
+  - Process isolation
+  - Resource encapsulation
+  - Layering
+  - Abstraction
+
+##### 2. Process Isolation
+
+- What is a Process?
+  - A process is a program running on a computer. Each process has a region of the memory (address space), which only it can access.  
+  - Isolating the process address space from other address spaces prevents tamper or interference by other processes.
+
+
+- Examples
+  - A word processor, a database and a browser running on a computer are all running in different addresses spaces. Process separation ensures correct operation, security, and protection
+  - Virtual machines provide operating isolation. Computers can execute multiple operating systems virtually without interference from each other. The host operating system views each guest virtual operating system as a process with its separate address space.
+
+
+- Implications
+  - Processes have to use defined communications mediated by the operating system to communicate with other processes.
+  - A process should never trust any other process on the computer.
+
+
+- Related principles
+  - Domain separation
+  - Resource encapsulation
+
+##### 3. Resource Encapsulation
+
+- What is a Resource?
+  - A computer has many resources. A resource can be the memory, disk drive, network bandwidth, battery power, or a monitor. It can also be system objects such as shared memory or a linked list data structure.
+
+
+- What is encapsulation?
+  - Encapsulation finds its origin in object-oriented programming (OOP). In OOP, a class definition encapsulates all data and functions to operate on the data. The goal is to allow access or manipulation of the class data in only the ways the designer intended.
+
+
+- Examples
+  - The application logic of a website only allows access and manipulation of database records in defined ways. Here the database is a resource encapsulated by the website application logic.
+
+
+- Implications
+  - Programs or users have to be aware of the interface for the resource and only communicate with it in a defined manner.
+
+
+- Related principles
+  - Domain separation
+  - Process Isolation
+  - Modularization
+  - Abstraction
+
+
+##### 4. Least Privilege
+
+- What is a privilege?
+  - In a computer, a privilege is a right for the user to act on managed computer resources.
+
+
+- Why should privileges be minimized?
+  - Minimizing the number of privileges granted to a user for accomplishing assigned duties improves accountability and limits accidental misuse. The operating system must also disable privileges when not required.
+
+
+- Examples
+  - When a person gets a new computer, s/he installs or logs onto the computer using an administrative account. This account has privileges to install software, add users, add hardware and add and delete almost any program or file. Now, if the person opens a malicious phishing attachment, the malware will run with administrative privileges. Instead, if the person lowered their privileges to a regular user immediately after the initial installation is over, the malware would not acquire administrative privilege.
+
+
+- Implications
+  - The operating system may frequently prompt users to elevate their privilege for tasks that have high consequences, such as installing software or deleting a system file.
+
+
+- Related principles
+  - Minimization
+
+##### 5. Layering
+
+- What is a Layer?
+  - In the context of computer security, a layer is a separate level that must be conquered by an attacker to breach the system.
+  - Layering slows down an attacker. The attacker needs to conquer each layer needs before moving to the next.
+
+
+- Examples
+  - A moat is an outer layer that protects a castle. The next layer that an intruder has to go through is the high walls. All of this has to be done by the intruder while avoiding the watchful guards. Finally, the intruder needs to scale the inner walls before getting to the king's treasure.
+  - Firewall, intrusion detection systems, internal encryption,  access control and personnel controls are examples of layers typically employed to protect enterprise data and programs.
+
+
+- Implications
+  - Multiple independent layers require separate management and integration to derive full benefits.
+
+
+- Related principles
+  - Domain separation
+  - Resource encapsulation
+  - Abstraction
+  - Data Hiding
+
+
+##### 6. Abstraction
+
+- How does abstraction contribute to cybersecurity?
+  - Remove/reduce any clutter that can distract the user or programmer to use a resource correctly.  
+  - Only provide the necessary details, while reducing the complexity to a set of essential characteristics.
+  - Excess complexity may hide malicious behaviors.
+
+
+- Examples
+  - The gauges in a car are an abstraction of the car's performance.
+  - A map is an abstraction of an area.
+
+
+- Implications
+  - Different users/roles may need different abstractions.
+
+
+- Related principles
+  - Layering
+  - Data Hiding
+  - Resource encapsulation
+
+
+##### 7. Data Hiding
+
+- How does data hiding contribute to cybersecurity?
+  - Only allow necessary aspects of a data structure or a record to be observed or accessed. Log all access attempts.
+
+
+- Examples
+  - A stack data structure exposes only the data at the top of the stack using simple push and pop instructions. The operating system applies access control to different regions of the stack.
+
+
+- Implications
+  - Programmer or user frustration if allowed access is not sufficient to carry out the task.
+
+
+- Related principles
+  - Resource encapsulation
+  - Abstraction
+
+##### 8. Modularity
+
+- What is modularity?
+  - It is a design technique that separates the functionality of a program into independent, interchangeable components.
+  - Each component/module is self-sufficient to execute a unique part of the desired functionality through well-designed interfaces.
+
+
+- How does modularity contribute to cybersecurity?
+  - Modules can be mutually-untrusting
+  - Compartmentalization is possible using modularization. It contains damage to a single module.
+
+
+- Examples
+  - Electronic circuits.
+  - Lego blocks.
+  - Network nodes.
+
+
+- Implications
+  - Well defined interfaces allow a system designer to replace one module with another.
+  - Prevents vendor lock-in
+
+
+- Related principles
+  - Domain separation
+  - Process isolation
+  - Resource encapsulation
+  - Abstraction
+
+
+
+##### 9. Simplicity
+
+- How does simplicity contribute to cybersecurity?
+  - The lack of complexity allows system designers and programmers to identify unwanted access paths.
+  - Users can easily translate their general protection goals to appropriate system security configurations.
+
+
+- Examples
+  - Interface designs that allow correct application of security features.
+  - Intuitive and straightforward access control rules
+
+
+- Implications
+  - Testers will be able to cover all possible combinations and spot problems sooner.
+  - Simplicity may feed aspirations to add complexity!
+
+
+- Related principles
+  - Abstraction
+  - Minimization
+
+
+##### 10. Minimization
+
+- What is minimization?
+  - Having the least functionality necessary in a program or device
+
+
+- How does minimization contribute to cybersecurity?
+  - Decrease the number of ways in which attackers can exploit a program or device.
+  - Users can easily translate their general protection goals to appropriate system security configurations.
+
+
+- Examples
+  - Turn off unnecessary features.
+  - Block unnecessary ports using a firewall.
+  - Reduce the amount of code.
+
+
+- Implications
+  - Expanding feature sets in future versions can be difficult.
+  - Reduce test combinations.
+
+
+- Related principles
+  - Simplicity
+  - Abstraction
+
+### CIA Triad - Expectations of Information
+
+#### Confidentiality
+It is an expectation for the entity entrusted with data (or code) to keep it a secret. For example, if a healthcare provider is entrusted with patient data, the user expects the health care provider to keep it secret.
+
+#### Integrity
+It is an expectation for the entity entrusted with data (or code) to only allow authorized modifications to it. For example, only authorized individuals are allowed to make changes to an employee's salary.   
+
+#### Availability
+It is an expectation for the entity entrusted with data (or code) to allow access to it when needed. For example, the personnel records in a database are available when needed.   
+
 ### Card Game
 
-The Cyber Realm card game helps students learn the 10 principles of cybersecurity. Students learn the 10 principles by recognizing hand gestures, playing with others, or playing by themselves.
+The Cyber Realm card game helps learn the 10 principles of cybersecurity. The cards reinforce the 10 principles using hand gestures, or by playing single person or group games.
 
-### Information Array Card Game
+Split in groups of 4 or less. Hand two cards decks to each group.
 
-#### Combo 1: States vs Characteristics
+##### Game 1: Question Cards
+- STEP 1: Ask the groups to further split their team into two sub-groups. Give each sub-group a card deck. Students in the sub-groups take turns to examine the cards with first principles on it.
+- STEP 2: Use question cards (cards 1-20) of the one of the sub-group's decks as the question stack.
+Shuffle these cards and place them face down in a stack to the left of sub-group 1.
+- STEP 3: Turn a question card over
+- STEP 4: Both sub-groups read the question and then place what they think the correct principle card is _face down_.
+- STEP 5: When both sub-groups have placed the card down, then both can turn over their cards at the same time.
+- STEP 6:
+> - If both sub-groups picked the same principle they will put that question card face up to the right of the turned up question card area.  
+> - If the principles don't match, the two sub-groups discuss and reach consensus. The sub-groups may invite the instructor if the mismatch cannot be resolved.
+
+- Repeat steps 3 – 6 for all principle cards
+
+##### Game 2: Cybersecurity Matrix
+
+- STEP 1: Have each sub-group identify and examine the following cards
+> Cards 22, 23, 24 are the expectations of information  
+Cards 25, 26, 27 are the information states
+
+- STEP 2: Arrange these two sets of cards into an matrix as shown in the diagram below
+
+![array](https://gencybercards.com/wp-content/uploads/2017/06/d1.jpg)
+
+- STEP 3: Have each sub-group identify and examine the following cards
+> Cards 31 – 39
+
+- STEP 4: Now ask each sub-group to arrange the cards 31-39 as examples that fit at the cross section of the cards in the row and column. In the example below – Card 31 “Javier’s Concern” indicates that he wants to encrypt his hard drive. As such it is put in the first row first column since it cross references storage (hard drive) and encryption (confidentiality).
+> Ask students to place cards in a Round Robin fashion. Internally discuss and resolve any disagreements. Each team must put all 9 cards down in the matrix within 5 minutes.
+
+- STEP 5: Ask the sub-groups to share their solution. Discuss and resolve any disagreements raised by between the sub-groups using your answer key.  
+
+- Now ask the sub-groups to replace the `states of information` cards with the following cards that represent information countermeasures
+> Cards 28, 29, 30 are information countermeasures  
+
+- Repeat above steps
+
+- Now create a matrix for characteristics of information  vs. information countermeasures
+
+- Repeat steps 4 and 5
+
+##### Game 2 Solution
+
+*Combo 1: States vs Characteristics*
 
 | **Game 1**              | *22* Confidentiality (C)                     | *23* Integrity (I)                                 | *24* Availability (A)                             |
 |-------------------------|----------------------------------------------|----------------------------------------------------|---------------------------------------------------|
@@ -35,7 +330,7 @@ The Cyber Realm card game helps students learn the 10 principles of cybersecurit
 | **27 Processing (P)**   | **33** `compute` (P) `secrecy` (C)             | **35** `CPU calculations` (P) `incorrect values` (I) | **37** `slow and freezes` (A) `run application` (P) |
 
 
-#### Combo 2: States vs. Countermeasures
+*Combo 2: States vs. Countermeasures*
 
 | **Game 2**              | *28* Education (E)                     | *29* Policy (Po)                      | *30* Technology (Te)                              |
 |-------------------------|----------------------------------------|---------------------------------------|---------------------------------------------------|
@@ -43,7 +338,7 @@ The Cyber Realm card game helps students learn the 10 principles of cybersecurit
 | **26 Transmission (T)** | **32**  `send email` (T) `unsure` (E)    | **39** `recovery plan` (Po) `email` (T) | **34** `email` (T) `digital signature` (Te)         |
 | **27 Processing (P)**   | **35** `compute` (P) `reads article` (E) | **33** `compute` (P) `rule` (Po)        | **37** `powerful device` (Te) `run application` (P) |
 
-#### Combo 3: Characteristics vs. Countermeasures
+*Combo 3: Characteristics vs. Countermeasures*
 
 | **Game 3**                 | *28* Education (E)                        | *29* Policy (Po)                                              | *30* Technology (Te)                                 |
 |----------------------------|-------------------------------------------|---------------------------------------------------------------|------------------------------------------------------|
@@ -51,9 +346,8 @@ The Cyber Realm card game helps students learn the 10 principles of cybersecurit
 | **23 Integrity (I)**       | **35**  `incorrect` (I) `reads article` (E) | **36** `not altered` (I) `rules` (Po)                           | **34** `digitally signed` (Te) `digital signature` (I) |
 | **24 Availability (A)**    | **38** `find files` (A) `training` (E)      | **39** `constant email communications` (A) `recovery plan` (Po) | **37** `powerful device` (Te) `slow and freezes` (A)   |
 
-### Cybersecurity First Principles Reflections
+If there is a question as to where the card should be placed the answer is on the card – encrypted. For example on card 31 the lower right hand has the code XON21. This code is a simple rotation cipher and it rotated 21. You will get a three letter answer. In this case it will be CTS. The first letter will be either C, I, or A for Confidentiality, Integrity, Availability. The second letter will be P, E, or T for safeguards – Policy, Education or Technology. The third letter will be S, T or P for states – Storage, Transmission or Processing. In this case the answer is C for Confidentiality, and S for Storage.
 
-[Top](#table-of-contents)
 
 ## Additional Resources
 
@@ -65,6 +359,7 @@ The Cyber Realm card game helps students learn the 10 principles of cybersecurit
 
 ## Acknowledgements
 
+TBD
 
 [Top](#table-of-contents)
 
