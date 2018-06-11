@@ -30,19 +30,19 @@ This discussion is adapted from [NSA guidance](https://users.cs.jmu.edu/tjadenbc
 
 ##### 1. Domain Separation
 
-- What is a Domain?
+- What is a `Domain`?
   - In a computer, this word refers to a _collection of data or instructions_ that warrant protection. Outside of a computer, a domain can be an area of responsibility or control.
-  - Separating domains allow enforcement of rules for the entry and use of domains by entities outside the domain.
-  - During system testing, the test data should be separated from the "real" data. Such separation avoids unauthorized disclosure of personal or sensitive data.
+  - Separating domains allows for enforcement of rules governing the entry and use of domains by entities outside the domain.
+  - During system testing, test data should be separated from "real" data, such as personal information. Such separation avoids unauthorized or accidental disclosure of personal or sensitive data.
 
 
 - Examples
-  - Most computers processors run in two states. The supervisor domain and the user domain. The processor when in the supervisor domain, can directly access memory (RAM) or maintain an access control table in a primitive file system. When in the user domain, the processor cannot access memory that belongs to other programs or the operating system.
-  - A virtual machine (or containers) is a domain that is separate from other virtual machines
+  - Most computer processors run in two states. The `supervisor domain` and the `user domain`. The processor, when in the supervisor domain, can directly access memory (i.e. RAM) or manipulate access control tables in a primitive file system. When in the user domain, the processor cannot access memory that belongs to other programs or the operating system.
+  - A virtual machine (or a container) is a domain that is separate from other virtual machines (or containers)
 
 
 - Implications
-  - Crossing domain boundaries require access control. Transactional overhead and maintenance of access control rules are side-effects.
+  - Crossing domain boundaries requires access control. Transactional overhead and maintenance of access control rules are side-effects.
   - Stakeholders should negotiate the level of granularity at which domains require separation.
 
 
@@ -55,13 +55,13 @@ This discussion is adapted from [NSA guidance](https://users.cs.jmu.edu/tjadenbc
 ##### 2. Process Isolation
 
 - What is a Process?
-  - A process is a program running on a computer. Each process has a region of the memory (address space), which only it can access.  
-  - Isolating the process address space from other address spaces prevents tamper or interference by other processes.
+  - A `process` is a program running on a computer. Each process has a region of the memory (address space), which only it can access.  
+  - Isolating the process address space from other address spaces prevents tampering or interference from/by other processes.
 
 
 - Examples
-  - A word processor, a database and a browser running on a computer are all running in different addresses spaces. Process separation ensures correct operation, security, and protection
-  - Virtual machines provide operating isolation. Computers can execute multiple operating systems virtually without interference from each other. The host operating system views each guest virtual operating system as a process with its separate address space.
+  - A word processor, a database and a browser running on a computer are all running in different addresses spaces. Process isolation ensures that each one cannot influence the others address space.
+  - A non-technical example of process isolation is when drive your car while 
 
 
 - Implications
