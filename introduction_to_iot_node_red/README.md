@@ -256,7 +256,7 @@ You've already built one flow, this one will follow the same procedures.  Add an
 ![Camera flow](img/camera_flow.png)
 
 ### Step 3: Test it!
-We are going to use the default settings for the nodes for this flow.  The camera node, when activated, will take a photo with the Pi's camera, give the photo a unique (and very long) filename, and store it in the `/home/pi/pictures` directory.  You can configure the node to give custom file names, set picture formats, sizes, and orientations.
+We are going to use the default settings for the nodes for this flow.  The camera node, when activated, will take a photo with the Pi's camera, give the photo a unique (and very long) filename, and store it in the `/home/pi/pictures` directory.  You can configure the node to give custom file names and set picture formats, sizes, and orientations.
 
 * Deploy your new flow
 * Click the timestamp inject button
