@@ -60,8 +60,8 @@ This discussion is adapted from [NSA guidance](https://users.cs.jmu.edu/tjadenbc
 
 
 - Examples
-  - A word processor, a database and a browser running on a computer are all running in different addresses spaces. Process isolation ensures that each one cannot influence the others address space.
-  - A non-technical example of process isolation is when drive your car while 
+  - A word processor, a database, and a browser running on a computer are all running in different addresses spaces. Process isolation ensures that each one cannot influence the others address space.
+  - A non-technical example of process isolation is when a prosecutor and defense attorney run their cases in court. It would be a problem if either had access to each other's work. Keeping their work seperate protects it from misuse by the other party.
 
 
 - Implications
@@ -76,15 +76,16 @@ This discussion is adapted from [NSA guidance](https://users.cs.jmu.edu/tjadenbc
 ##### 3. Resource Encapsulation
 
 - What is a Resource?
-  - A computer has many resources. A resource can be the memory, disk drive, network bandwidth, battery power, or a monitor. It can also be system objects such as shared memory or a linked list data structure.
+  - A computer has many resources. A `resource` can be the memory, disk drive, network bandwidth, battery power, or a monitor. It can also be system objects such as shared memory or a linked list data structure.
 
 
 - What is encapsulation?
-  - Encapsulation finds its origin in object-oriented programming (OOP). In OOP, a class definition encapsulates all data and functions to operate on the data. The goal is to allow access or manipulation of the class data in only the ways the designer intended.
+  - `Encapsulation` finds its origin in object-oriented programming (OOP). In OOP, a class definition encapsulates all data and functions to operate on the data. The goal is to allow access or manipulation of the class data in only the ways the designer intended. 
 
 
 - Examples
   - The application logic of a website only allows access and manipulation of database records in defined ways. Here the database is a resource encapsulated by the website application logic.
+  - A flag pole only allows certain operations (raise the flag, lower the flag, unhook the flag). No one needs to know how the flag pole works internally, just that they can use it only in certain ways.
 
 
 - Implications
@@ -101,7 +102,7 @@ This discussion is adapted from [NSA guidance](https://users.cs.jmu.edu/tjadenbc
 ##### 4. Least Privilege
 
 - What is a privilege?
-  - In a computer, a privilege is a right for the user to act on managed computer resources.
+  - In a computer, a `privilege` is a right for the user to act on managed computer resources.
 
 
 - Why should privileges be minimized?
@@ -109,7 +110,8 @@ This discussion is adapted from [NSA guidance](https://users.cs.jmu.edu/tjadenbc
 
 
 - Examples
-  - When a person gets a new computer, s/he installs or logs onto the computer using an administrative account. This account has privileges to install software, add users, add hardware and add and delete almost any program or file. Now, if the person opens a malicious phishing attachment, the malware will run with administrative privileges. Instead, if the person lowered their privileges to a regular user immediately after the initial installation is over, the malware would not acquire administrative privilege.
+  - When a person gets a new computer, they install or log onto it using an administrative account. This account has privileges to install software, add users, add hardware, and add and delete almost any program or file. Now, if the person opens a malicious phishing attachment, the malware will run with administrative privileges. Instead, if the person lowered their privileges to a regular user immediately after the initial installation is over, the malware would not be able to acquire administrative privilege.
+  - If a user doesn't need a permission, why give it to them? Should a military radio operator have permission to access a nuclear silo?
 
 
 - Implications
@@ -122,17 +124,17 @@ This discussion is adapted from [NSA guidance](https://users.cs.jmu.edu/tjadenbc
 ##### 5. Layering
 
 - What is a Layer?
-  - In the context of computer security, a layer is a separate level that must be conquered by an attacker to breach the system.
-  - Layering slows down an attacker. The attacker needs to conquer each layer needs before moving to the next.
+  - In the context of computer security, a `layer` is a separate level that must be conquered by an attacker to breach a system.
+  - Layering slows down an attacker. The attacker needs to conquer each layer before moving on to the next.
 
 
 - Examples
   - A moat is an outer layer that protects a castle. The next layer that an intruder has to go through is the high walls. All of this has to be done by the intruder while avoiding the watchful guards. Finally, the intruder needs to scale the inner walls before getting to the king's treasure.
-  - Firewall, intrusion detection systems, internal encryption,  access control and personnel controls are examples of layers typically employed to protect enterprise data and programs.
+  - Firewall, intrusion detection systems, internal encryption, access control and personnel controls are examples of layers typically employed to protect enterprise data and programs.
 
 
 - Implications
-  - Multiple independent layers require separate management and integration to derive full benefits.
+  - Multiple independent layers require separate management and integration to get the full benefits of layered protection.
 
 
 - Related principles
@@ -143,9 +145,11 @@ This discussion is adapted from [NSA guidance](https://users.cs.jmu.edu/tjadenbc
 
 
 ##### 6. Abstraction
+- What is abstraction?
+ - `Abstraction` is the concept that something complicated can be thought of and represented more simply. All models are abstractions - since they reduce the complexity of an object into something that is understandable.
 
 - How does abstraction contribute to cybersecurity?
-  - Remove/reduce any clutter that can distract the user or programmer to use a resource correctly.  
+  - Remove/reduce any clutter that can distract the user or programmer from using a resource correctly.  
   - Only provide the necessary details, while reducing the complexity to a set of essential characteristics.
   - Excess complexity may hide malicious behaviors.
 
@@ -153,6 +157,7 @@ This discussion is adapted from [NSA guidance](https://users.cs.jmu.edu/tjadenbc
 - Examples
   - The gauges in a car are an abstraction of the car's performance.
   - A map is an abstraction of an area.
+  - A model airplane is an abstraction of a real airplane and may be used to test aerodynamics.
 
 
 - Implications
@@ -173,6 +178,7 @@ This discussion is adapted from [NSA guidance](https://users.cs.jmu.edu/tjadenbc
 
 - Examples
   - A stack data structure exposes only the data at the top of the stack using simple push and pop instructions. The operating system applies access control to different regions of the stack.
+  - Websites don't need to load all of a user's data to show a list of usernames - they only need the username, the rest of the record fields can be hidden.
 
 
 - Implications
@@ -186,13 +192,14 @@ This discussion is adapted from [NSA guidance](https://users.cs.jmu.edu/tjadenbc
 ##### 8. Modularity
 
 - What is modularity?
-  - It is a design technique that separates the functionality of a program into independent, interchangeable components.
-  - Each component/module is self-sufficient to execute a unique part of the desired functionality through well-designed interfaces.
+  - `Modulatiry` is a design technique that separates the functionality of a program into independent, interchangeable components.
+  - Each component/module is self-sufficient and capable of executing a unique part of the desired functionality through well-designed interfaces.
 
 
 - How does modularity contribute to cybersecurity?
   - Modules can be mutually-untrusting
   - Compartmentalization is possible using modularization. It contains damage to a single module.
+  - Using modules means that you can swap out a bad part. If batteries weren't modules, any time a battery died you would need to throw out the entire electronic device it was in.
 
 
 - Examples
@@ -204,6 +211,7 @@ This discussion is adapted from [NSA guidance](https://users.cs.jmu.edu/tjadenbc
 - Implications
   - Well defined interfaces allow a system designer to replace one module with another.
   - Prevents vendor lock-in
+  - Encourages re-use of well designed modules by other modules.
 
 
 - Related principles
@@ -224,6 +232,7 @@ This discussion is adapted from [NSA guidance](https://users.cs.jmu.edu/tjadenbc
 - Examples
   - Interface designs that allow correct application of security features.
   - Intuitive and straightforward access control rules
+  - Easy to follow and maintain program statements.
 
 
 - Implications
@@ -275,7 +284,7 @@ It is an expectation for the entity entrusted with data (or code) to allow acces
 
 ### Card Game
 
-The Cyber Realm card game helps learn the 10 principles of cybersecurity. The cards reinforce the 10 principles using hand gestures, or by playing single person or group games.
+The Cyber Realm card game helps teach the 10 principles of cybersecurity. The cards reinforce the 10 principles using hand gestures, or by playing single person or group games.
 
 Split in groups of 4 or less. Hand two cards decks to each group.
 
