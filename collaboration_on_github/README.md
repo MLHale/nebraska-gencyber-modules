@@ -116,6 +116,10 @@ We practice what we preach. Our whole camp has been developed on GitHub using ma
 
 Go to the [Github page for the camp modules](https://github.com/MLHale/nebraska-gencyber-modules) and click fork. Boom, just like that you have your very own copy of all the modules. Use with attribution, share widely!
 
+### Ready for some trivia?
+
+[Github Collaboration Quiz](https://unomaha.az1.qualtrics.com/jfe/form/SV_0risj3sV2YTmzEV)
+
 ### Cybersecurity First Principles Reflections
 
 On Github, only the `owner` of a remote repository can push commits to it. All other `Github users` have the limited privilege to make a pull request. The repository owner reviews pull requests and initiates a merge action. The owner may reject pull requests if they do not seem appropriate. A `collaborator` can push commits, but cannot delete a repository or add other collaborators. These constraints show the concept of __least privilege__ with GitHub user roles. Users should have no more privilege than what is required for their job.
