@@ -1,6 +1,6 @@
 # Email Header Analysis
 
-### Cybersecurity Commonsense
+### Cybersecurity Common sense
 [Source: DHS Stop. Think. Connect. [Campaign](https://www.stopthinkconnect.org/tips-advice/general-tips-and-advice)]
 
 * __When in doubt, throw it out:__ Links in emails, social media posts, and online advertising are often how cybercriminals try to steal your personal information. Even if you know the source, if something looks suspicious, delete it.
@@ -22,9 +22,9 @@
 
 ## Introduction
 
-Email is an indispensable communication tool. We use it every day. Unfortunately, many attacks also originate in emails. Wouldn't it be great if everyone had some mad email ninja skills! Don't worry, you will feel pretty good about your email analysis skills at the end of this session.
+Email is an indispensable communication tool. We use it every day. Unfortunately, many attacks also originate in emails. Wouldn't it be great if everyone had some mad email ninja skills! Don't worry, at the end of this session, you should feel pretty good about your email analysis skills.
 
-A vigilant, trained and aware human user is a critical layer of defense against threats both internal and external. Even if malicious URLs and Emails get past spam filters and anti-virus software, a human user can catch it. Such a defensive strategy is common in secure system designs. It also demonstrates a *cyber security first principle* called `Layering.`
+A vigilant, trained and aware human user is a critical layer of defense against threats, both internal and external. Even if malicious URLs and emails get past spam filters and anti-virus software, a human user can catch it. Such a defensive strategy is common in secure system designs. It also demonstrates a cyber security first principle called `Layering.`
 
 When reading emails, the first item that grabs our attention is the sender's name, email, and subject. But, it may come as a surprise that spoofing these in an email is a pretty easy thing! It is also effective at fooling unsuspecting email users. Take a look at some of the statistics in the [Verizon Data Breach Reports](http://www.verizonenterprise.com/verizon-insights-lab/dbir/).
 
@@ -38,13 +38,12 @@ Here is an interesting one:
 
 >> Update from 2017: _"**Phishing via email** was the most prevalent variety of social attacks"_ Social attacks were utilized in 43% of all breaches in the 2017 dataset. Almost all phishing attacks that led to a breach were followed with some form of malware, and 28% of phishing breaches were targeted. Phishing is the most common social tactic in the 2017 dataset (93% of social incidents).
 
-If you are a bad guy planning a heist, Phishing emails are the easiest way for getting malware into an organization. So it is prudent to understand exactly where an email is “really” coming from. Do not rush to open attachments or click links in emails. Verizon DBIR states: _over 99% of malware is sent by either email or web server_
+If you are a bad guy planning a heist, Phishing emails are the easiest way for getting malware into an organization. Because of that, it is prudent to understand exactly where an email is really coming from. Do not rush to open attachments or click links in emails. Verizon DBIR states _over 99% of malware is sent by either email or web server_.
 
-[Top](#table-of-contents)
 
 ## Email Headers
 
-Email Headers hold a lot of information. Much of this information is never displayed to the user! The email reader only sees a select few pieces of information like From, Name, Subject, Date, and Sender's email. The surprising part is that the information that is actually displayed to a user can be easily forged!
+Email Headers hold a lot of information. Much of this information is never displayed to the user. The email reader only sees a select few pieces of information like the subject, date, and the sender's email and info. The surprising part is that the information that is actually displayed to a user can be easily forged!
 
 Before we get started, consider this email from President Donald Trump to a Researcher at the University of Nebraska at Omaha. They have a great Cybersecurity program. They recently obtained the prestigious [CAE-CO](https://www.nsa.gov/resources/educators/centers-academic-excellence/cyber-operations/) (Cyber Operations) designation from NSA. You may read about the available degree programs in Cybersecurity here: https://www.unomaha.edu/college-of-information-science-and-technology/academics/cybersecurity.php
 
@@ -67,7 +66,7 @@ There is more to this header. To reveal the full message header, different deskt
 #### Gmail
 > ![gmail](./img/gmail.png)
 
-It is obvious that in all cases, full email headers are hard to find.
+It is obvious that in all cases, full email headers are hard to find if you don't know where to look.
 
 Once you do find it, there is a ton of information in the header about the route taken by an email. Let's look at some actual email headers. Open up the files in the ["email-headers" Folder](./email-headers).
 
@@ -137,7 +136,6 @@ my email:carrr444@yahoo.com
 ### Discussion:
 What are your first thoughts?
 
-[Top](#table-of-contents)
 
 ## Headers are like Passports
 
@@ -165,9 +163,9 @@ Received: from User (85-250-54-29.bb.netvision.net.il[85.250.54.29])
 by mail.shako.com.tw (8.14.3/8.14.3/4.90) with ESMTP
  id r0HNXZSI028539; Fri, 18 Jan 2013 07:33:38 +0800
 ```
-The first email-server to receive the email from the sender's computer creates this entry. If the email client is web-based then this entry will include details about the server hosting the email web application.
+The first email server to receive the email from the sender's computer creates this entry. If the email client is web-based then this entry will include details about the server hosting the email web application.
 
-Let's further breakdown this entry. The `from` part of this entry indicates source of the email for this leg of the travel: `User (85-250-54-29.bb.netvision.net.il[85.250.54.29])`. You can pick out a Domain Name (`85-250-54-29.bb.netvision.net.il`) and an IP address (`85.250.54.29`) here.
+Let's further break down this entry. The `from` part of this entry indicates source of the email for this leg of the travel: `User (85-250-54-29.bb.netvision.net.il[85.250.54.29])`. You can pick out a Domain Name (`85-250-54-29.bb.netvision.net.il`) and an IP address (`85.250.54.29`) here.
 
 The `by` part indicates the first stop taken after email origin:  
 `mail.shako.com.tw (8.14.3/8.14.3/4.90)`. You can pick out a Domain Name here: `mail.shako.com.tw`.
@@ -195,7 +193,7 @@ Registered Domain: shako.com.tw
 
 ```
 
-The searches reveal that a computer in `Israel` used an email server in `Taiwan` as the first stop on its way to the U.S., while the actual body of the email claims the sender is from `Guinea Bissau.` Something is not right!
+The searches reveal that a computer in Israel used an email server in Taiwan as the first stop on its way to the U.S., while the actual body of the email claims the sender is from Guinea Bissau. Something is not right!
 
 There are few other fields that you should investigate in the email header.  
 
@@ -215,7 +213,6 @@ Google has an [online tool](https://toolbox.googleapps.com/apps/messageheader/) 
 
 ![google header analysis](./img/googleheaderanalyzer.png)
 
-[Top](#table-of-contents)
 
 ## Exercise
 
@@ -223,8 +220,6 @@ Open up the files in the ["email-headers" Folder](./email-headers) using the Goo
 
 * [Network-tools](http://network-tools.com)
 * [Google Message Header Analyzer](https://toolbox.googleapps.com/apps/messageheader/)
-
-[Top](#table-of-contents)
 
 
 ## Investigation
@@ -299,7 +294,6 @@ Questions:
 * What website is linked to “Grant funding request.” in the message?
 * How likely is it that this message is spam?
 
-[Top](#table-of-contents)
 
 ## Additional Tasks
 
@@ -309,7 +303,6 @@ Pick a spam email in your inbox. Inspect discrepancies in its headers and invest
 
 Stay Vigilant!
 
-[Top](#table-of-contents)
 
 ## Additional Readings and Tools
 
@@ -318,7 +311,6 @@ Stay Vigilant!
 * DomainKeys Identified Mail (DKIM), https://en.wikipedia.org/wiki/DomainKeys_Identified_Mail
 * Sender Policy Framework (SPF), http://www.openspf.org
 
-[Top](#table-of-contents)
 
 
 ## Special Thanks

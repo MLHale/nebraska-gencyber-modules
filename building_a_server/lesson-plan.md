@@ -12,18 +12,15 @@ Educators
 ### First principles
 - [ ] Domain Separation
 - [ ] Process Isolation
-- [ ] Resource Encapsulation
+- [x] Resource Encapsulation
 - [ ] Modularity
-- [ ] Least Privilege
+- [x] Least Privilege
 - [x] Abstraction
 - [x] Data Hiding
 - [x] Layering
-- [ ] Simplicity
-- [x] Least Privilege
+- [x] Simplicity
 - [x] Minimization
 - [x] Modularization
-- [x] Resource Encapsulation
-- [x] Simplicity
 
 ### Learning Objectives
 
@@ -41,7 +38,7 @@ Educators
 ### Learning Facilitation
 
 #### Warm up Activity
-Students will start by using paper and post it notes to get a physical conception of a REST API.
+Students will start by using paper and post-it notes to get a physical conception of a REST API.
 
 #### Focused Activity
 Students will use POSTMAN rest client to connect to the little bits api and make GET and POST requests.
@@ -56,13 +53,13 @@ Students will review relevant first principles learned through though lesson. A 
 
 1. Walk Around
 1. Oral Questioning
-1. Quiz (Kahootz)
+1. Quiz (Kahoot)
 
 ### Accommodations for students with disabilities
 
 N/A
 
-### Extension Activity (ies)
+### Extension Activity(ies)
 
 Student-directed Mashup application idea
 
