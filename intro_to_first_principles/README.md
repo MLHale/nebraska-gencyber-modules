@@ -1,34 +1,41 @@
 # Introduction to Cybersecurity First Principles
 
-### Cybersecurity First Principles in this lesson
+## Cybersecurity First Principles in this lesson
 
 This lesson is about cybersecurity first principles. So all of them will be discussed.
 
-### Lesson goals
+## Lesson goals
 
 1. Understand and apply cybersecurity first principles
 2. Explain cybersecurity first principles
 
-### Materials required
+## Materials required
 - [Gencyber Cyber Realm Card Deck](https://gencybercards.com)
 
-### Prerequisite lessons
+## Prerequisite lessons
 - None, just lots of curiosity
 
-### Table of Contents    
+## Table of Contents    
 
-TBD
+- [Cybersecurity First Principles](#cybersecurity-first-principles)
+- [CIA Triad - Expectations of Information](#cia-triad---expectations-of-information)
+- [Card Game](#card-game)
+- [Additional Resources](#additional-resources)
+- [Acknowledgements](#acknowledgements)
+- [License](#license)
 
 
-### Cybersecurity First Principles
+## Cybersecurity First Principles
 
-#### What are first principles?
+### What are first principles?
 
-#### Stepping through the principles
+Building a secure system is a design problem. Which means that there is no de-facto recipe to do so. In the absence of methodical techniques, experience has contributed to a set of first principles. The principles are basic, foundational propositions regarding what qualities of a system contribute to cybersecurity. These principles guide tradeoffs during system design that contribute to security.
 
-This discussion is adapted from [NSA guidance](https://users.cs.jmu.edu/tjadenbc/Bootcamp/0-GenCyber-First-Principles.pdf) on first principles.
+### Stepping through the principles
 
-##### 1. Domain Separation
+We now examine 10 cybersecurity first principles. This discussion is adapted from [NSA guidance](https://users.cs.jmu.edu/tjadenbc/Bootcamp/0-GenCyber-First-Principles.pdf) on this topic.
+
+#### 1. Domain Separation
 
 - What is a `Domain`?
   - In a computer, this word refers to a _collection of data or instructions_ that warrant protection. Outside of a computer, a domain can be an area of responsibility or control.
@@ -52,7 +59,7 @@ This discussion is adapted from [NSA guidance](https://users.cs.jmu.edu/tjadenbc
   - Layering
   - Abstraction
 
-##### 2. Process Isolation
+#### 2. Process Isolation
 
 - What is a Process?
   - A `process` is a program running on a computer. Each process has a region of the memory (address space), which only it can access.  
@@ -73,14 +80,14 @@ This discussion is adapted from [NSA guidance](https://users.cs.jmu.edu/tjadenbc
   - Domain separation
   - Resource encapsulation
 
-##### 3. Resource Encapsulation
+#### 3. Resource Encapsulation
 
 - What is a Resource?
   - A computer has many resources. A `resource` can be the memory, disk drive, network bandwidth, battery power, or a monitor. It can also be system objects such as shared memory or a linked list data structure.
 
 
 - What is encapsulation?
-  - `Encapsulation` finds its origin in object-oriented programming (OOP). In OOP, a class definition encapsulates all data and functions to operate on the data. The goal is to allow access or manipulation of the class data in only the ways the designer intended. 
+  - `Encapsulation` finds its origin in object-oriented programming (OOP). In OOP, a class definition encapsulates all data and functions to operate on the data. The goal is to allow access or manipulation of the class data in only the ways the designer intended.
 
 
 - Examples
@@ -99,7 +106,7 @@ This discussion is adapted from [NSA guidance](https://users.cs.jmu.edu/tjadenbc
   - Abstraction
 
 
-##### 4. Least Privilege
+#### 4. Least Privilege
 
 - What is a privilege?
   - In a computer, a `privilege` is a right for the user to act on managed computer resources.
@@ -121,7 +128,7 @@ This discussion is adapted from [NSA guidance](https://users.cs.jmu.edu/tjadenbc
 - Related principles
   - Minimization
 
-##### 5. Layering
+#### 5. Layering
 
 - What is a Layer?
   - In the context of computer security, a `layer` is a separate level that must be conquered by an attacker to breach a system.
@@ -144,7 +151,7 @@ This discussion is adapted from [NSA guidance](https://users.cs.jmu.edu/tjadenbc
   - Data Hiding
 
 
-##### 6. Abstraction
+#### 6. Abstraction
 - What is abstraction?
  - `Abstraction` is the concept that something complicated can be thought of and represented more simply. All models are abstractions - since they reduce the complexity of an object into something that is understandable.
 
@@ -170,7 +177,7 @@ This discussion is adapted from [NSA guidance](https://users.cs.jmu.edu/tjadenbc
   - Resource encapsulation
 
 
-##### 7. Data Hiding
+#### 7. Data Hiding
 
 - How does data hiding contribute to cybersecurity?
   - Only allow necessary aspects of a data structure or a record to be observed or accessed. Log all access attempts.
@@ -189,7 +196,7 @@ This discussion is adapted from [NSA guidance](https://users.cs.jmu.edu/tjadenbc
   - Resource encapsulation
   - Abstraction
 
-##### 8. Modularity
+#### 8. Modularity
 
 - What is modularity?
   - `Modulatiry` is a design technique that separates the functionality of a program into independent, interchangeable components.
@@ -222,7 +229,7 @@ This discussion is adapted from [NSA guidance](https://users.cs.jmu.edu/tjadenbc
 
 
 
-##### 9. Simplicity
+#### 9. Simplicity
 
 - How does simplicity contribute to cybersecurity?
   - The lack of complexity allows system designers and programmers to identify unwanted access paths.
@@ -245,7 +252,7 @@ This discussion is adapted from [NSA guidance](https://users.cs.jmu.edu/tjadenbc
   - Minimization
 
 
-##### 10. Minimization
+#### 10. Minimization
 
 - What is minimization?
   - Having the least functionality necessary in a program or device
@@ -253,7 +260,6 @@ This discussion is adapted from [NSA guidance](https://users.cs.jmu.edu/tjadenbc
 
 - How does minimization contribute to cybersecurity?
   - Decrease the number of ways in which attackers can exploit a program or device.
-  - Users can easily translate their general protection goals to appropriate system security configurations.
 
 
 - Examples
@@ -282,13 +288,13 @@ It is an expectation for the entity entrusted with data (or code) to only allow 
 #### Availability
 It is an expectation for the entity entrusted with data (or code) to allow access to it when needed. For example, the personnel records in a database are available when needed.   
 
-### Card Game
+## Card Game
 
 The Cyber Realm card game helps teach the 10 principles of cybersecurity. The cards reinforce the 10 principles using hand gestures, or by playing single person or group games.
 
 Split in groups of 4 or less. Hand two cards decks to each group.
 
-##### Game 1: Question Cards
+#### Game 1: Question Cards
 - STEP 1: Ask the groups to further split their team into two sub-groups. Give each sub-group a card deck. Students in the sub-groups take turns to examine the cards with first principles on it.
 - STEP 2: Use question cards (cards 1-20) of the one of the sub-group's decks as the question stack.
 Shuffle these cards and place them face down in a stack to the left of sub-group 1.
@@ -301,7 +307,7 @@ Shuffle these cards and place them face down in a stack to the left of sub-group
 
 - Repeat steps 3 – 6 for all principle cards
 
-##### Game 2: Cybersecurity Matrix
+#### Game 2: Cybersecurity Matrix
 
 - STEP 1: Have each sub-group identify and examine the following cards
 > Cards 22, 23, 24 are the expectations of information  
@@ -328,7 +334,7 @@ Cards 25, 26, 27 are the information states
 
 - Repeat steps 4 and 5
 
-##### Game 2 Solution
+#### Game 2 Solution
 
 *Combo 1: States vs Characteristics*
 
@@ -368,7 +374,7 @@ If there is a question as to where the card should be placed the answer is on th
 
 ## Acknowledgements
 
-TBD
+- A special thanks to Matt Hale for reviews of this module and thoughtful discussions.
 
 [Top](#table-of-contents)
 
