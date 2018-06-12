@@ -54,7 +54,7 @@ First, open your Littlebits box. Take a second to look at the different componen
 
 * **<span style="color: pink">Pink</span>** modules are _inputs_, like an On/Off button.
 * **<span style="color: green">Green</span>** modules are _outputs_, like LEDs and Fans.
-* **<span style="color: orange">Orange</span>** modules are special and usually are _supportive_ - think spliters and logic handlers.
+* **<span style="color: orange">Orange</span>** modules are special and usually are _supportive_ - think splitters and logic handlers.
 * **<span style="color: blue">Blue</span>** modules are power related.
 
 Look over each module. Your box should include a helpful component diagram fold-out poster that shows off each of your modules. Read about some of them.
@@ -93,7 +93,7 @@ Time to extend your previous circuit to ![count](./img/count-all-the-things.jpg)
 
 Press the button!
 
-Pretty simple. Notice we can **chain the output modules together** (bright led and a counter in this case). Any number of output modules can be chained together.
+Pretty simple. Notice we can **chain the output modules together** (```bright led``` and a ```counter``` in this case). Any number of output modules can be chained together.
 
 Now, lets switch up our circuit a bit.
 
@@ -110,7 +110,7 @@ Press the button. Everything still works!
 
 Press the button. Does it work? How about if you cover up the light sensor?
 
-This shows you that you can also **chain multiple input modules together** and their **total behavior is a combination of their input designs**. In this case, our counter only worked if the light was detected `AND` the button was pressed.
+This shows you that you can also **chain multiple input modules together** and their **total behavior is a combination of their input designs**. In this case, our counter only worked if the light was detected **AND** the button was pressed.
 
 Lets try one more combo:
 
@@ -125,7 +125,9 @@ Snap your fingers or tap the table near your device.
 ### Step 4: The world is more than True or False - Variable Inputs
 So far, we have outputs and inputs that result in an **on** (True) or **off** (False) behavior.
 
-The world is not always **on** or **off** ![grey](./img/grey-world.jpg).
+![grey](./img/grey-world.jpg).
+
+The world is not always **on** or **off**
 
 * Find the pink ```temperature sensor``` input module.
 * Find the pink ```i23 threshold``` input module.
@@ -156,7 +158,7 @@ You should notice the light dimming and brightening depending on the voltage it 
 Ok, last part!
 
 * Connect the ```i23 threshold``` module between the ```o21 number``` and ```bright led``` modules
-* Set the threshold on the ```i23 threshold``` by turning the nob.
+* Set the threshold on the ```i23 threshold``` by turning the knob.
 * Keep turning until a voltage of roughly 3 or greater turns on the ```bright led```
 * You can put your finger over the light sensor to change the voltage
 
@@ -214,7 +216,7 @@ The last module we will explore is the ```servo``` which can bring actual moveme
 * Attach the arm by pushing it down onto the ```white plastic gear``` on the ```servo```
 * Set the switch on the ```servo``` board to ```turn```.
 
-> Note you don't need to use the screw, but hand onto it for later - it should be used in production to secure the turner down
+> Note you don't need to use the screw, but hang onto it for later - it should be used in production to secure the turner down
 
 When you press the button, it should rotate the arm 90 degrees.
 

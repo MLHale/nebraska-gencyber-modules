@@ -27,7 +27,7 @@ By the end of this tutorial, you will be able to:
 * Wi-Fi Internet Connection
 
 ### Prerequisite lessons
-[Littlebits Intro](../hands-on-iot-little-bits-intro/README.md)
+[Littlebits Intro](../hands_on_iot_littlebits/README.md)
 
 ### Table of Contents
 <!-- TOC START min:1 max:3 link:true update:true -->
@@ -85,7 +85,7 @@ Now that we have an account, we need to pair our `cloudbit` (an orange module wi
 ![setup](img/configuration.jpg)
 
 
-* Hold down the setup button on the `CloudBit` until the light blinks blue.  
+* Hold down the setup button on the `cloudbit` until the light blinks blue.  
 * When the light blinks, let go and wait for the light to turn a steady blue.
 * Using Wi-Fi, connect to the local Wi-Fi network the device broadcasts (it will be something like `litteBits_Cloud_somenumber`).
 * Once connected to the device's Wi-Fi adapter, pick the Wi-Fi network the `cloudbit` will live on. (At UNO that will be: `UNOGuest`).
@@ -265,6 +265,7 @@ You should see the power outlet light turn on - and you should hear a short audi
 Try some different designs yourself. You can combine any services with any Littlebits sensors. You could make an app that opens the curtains when you text it #opencurtains. You could make an app that listens for sounds and sends you an alert if sounds are detected. You could make an email or tweet counter. The possibilities are real and endless!
 
 ### Test you Bits, err... Wits!
+<!--Quizzes in all modules made with qzzr.com no longer work - the free subscription quizzes have been pulled from the website-->
 [Quiz](https://www.qzzr.com/c/quiz/431837/littlebits-ifttt)
 
 ### Cybersecurity First Principle Reflections

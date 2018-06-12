@@ -39,12 +39,12 @@ For this lesson, you will need:
 * Little bits sensor and actuator
 
 ### Prerequisite lessons
-You should complete the following lessones before proceeding with this one.
-* [Hands on IoT: Little Bits Intro](../hands-on-iot-little-bits-intro/README.md)
-* [Hands on IoT: Build an IFTTT IoT app w/ Little Bits](../hands-on-iot-little-bits-ifttt-app/README.md)
-* [RESTFul APIs](../restful-api/README.md)
+You should complete the following lessons before proceeding with this one.
+* [Hands on IoT: Little Bits Intro](../hands_on_iot_littlebits/README.md)
+* [Hands on IoT: Build an IFTTT IoT app w/ Little Bits](../hands_on_iot_little_bits_ifttt_app/README.md)
+* [RESTFul APIs](../restful_api/README.md)
 * [Containers](../containers/README.md)
-* [Building a server](../building-a-server/README.md)
+* [Building a server](../building_a_server/README.md)
 
 
 ### Table of Contents
@@ -78,7 +78,7 @@ You should complete the following lessones before proceeding with this one.
 
 
 ### Step 1: Where we left off
-When we left off, you had created an `endpoint` to make the button work to send a message to your `cloudbit`. We had to store our API key on the server to make this work. Our endpoint accepted a POST request to turn on the device. We also integrated our server with `Littlebits API` to `subscribe` to events that occurred on the cloudbit.
+When we left off, you had created an `endpoint` to make the button work to send a message to your `cloudbit`. We had to store our API key on the server to make this work. Our endpoint accepted a POST request to turn on the device. We also integrated our server with `Littlebits API` to `subscribe` to events that occurred on the `cloudbit`.
 
 In this lesson, we will take a look at the security implications of this service integration to see how our server isn't well protected against attacks.
 
@@ -157,7 +157,7 @@ A short list of misuse cases includes:
 * User data exfiltration
 * Hostile server takeover
 
-These goals, which can be written like `user stories` often involve some form of `web-based-attack`. We are going to look at our server, created in the previous [lesson](../building-a-server/README.md) to see where it may have `weaknesses` that leave it vulnerable to attack.
+These goals, which can be written like `user stories` often involve some form of `web-based-attack`. We are going to look at our server, created in the previous [lesson](../building_a_server/README.md) to see where it may have `weaknesses` that leave it vulnerable to attack.
 
 In general, you can follow this flow chart for thinking about penetration testing (and testing in general):
 
@@ -289,8 +289,8 @@ Overall, our server should assume that clients can be compromised and, therefore
 
 What Cybersecurity First Principle might that be?
 
-### Step 7: Explore the `ActivateCloudbit` endpoint
-Next up is the `ActivateCloudbit` class. We created this controller in the [previous lesson](../building-a-server/README.md). Since this endpoint includes a `POST` request handler, we should carefully review and assess it.
+### Step 8: Explore the `ActivateCloudbit` endpoint
+Next up is the `ActivateCloudbit` class. We created this controller in the [previous lesson](../building_a_server/README.md). Since this endpoint includes a `POST` request handler, we should carefully review and assess it.
 
 #### First Question
 The first question is does it `require authentication`? Authentication should be used anytime you want to restrict access to data as part of an effort of __information hiding__.
@@ -312,7 +312,7 @@ Sometimes you want to restrict access to data based on who is making the request
 In our case, the question is 'does our method restrict who can make the `POST` request?' Assuming authentication was put in place, who has access?
 
 #### Answering Question 1 (Authentication)
-Lets evaluate authentication. This one is easy. Looking at the code we see the line: `permission_classes = (AllowAny,)` in the ActivateCloudbit class. This, as the name implies, literally allows anyone to access this method. We can confirm this in `POSTMAN`.
+Lets evaluate authentication. This one is easy. Looking at the code we see the line: `permission_classes = (AllowAny,)` in the `ActivateCloudbit` class. This, as the name implies, literally allows anyone to access this method. We can confirm this in `POSTMAN`.
 
 * Open `POSTMAN`
 * Issue the following request:
@@ -338,6 +338,7 @@ Body:
 
 * If you connect it, you should get:
 
+<!--Image link does not work - activate-request2 doesn't exist-->
 ![request](./img/activate-request2.png)
 
 In either case, we were able to execute the method without logging in. So clearly, **authentication is not required here**. It should be - since our cloudbit could otherwise be turned on by anyone.
@@ -446,10 +447,10 @@ In this case, our method doesn't use authentication, so it **doesn't** use `obje
 
 We will come back to this in the next lesson.
 
-### Step 8: Perform a similar analysis on the other endpoints
+### Step 9: Perform a similar analysis on the other endpoints
 Look at the other URLs our app makes use of. Ask yourself similar questions and back them up with some tests. Keep track of the results you find as you go along.
 
-### Step 9: Exploring Error Handling Behavior
+### Step 10: Exploring Error Handling Behavior
 Earlier, in Step 7 we saw that sending a string in the `timestamp` field generated the following error message:
 ![request](./img/activate-request3.png)
 
@@ -459,7 +460,7 @@ Accidentally revealing server information is a big problem. While this info is r
 
 We will return to this in the next lesson.
 
-### Step 10: Risk Assessment - Summarizing your test results
+### Step 11: Risk Assessment - Summarizing your test results
 For now, lets summarize the `test results` that we have collected to identify what our risks look like. Usually, risks are collected and then ranked according to `severity` (or `impact`) and `likelihood` (i.e. how probable an attack is to occur). In organizations or systems with many risks, preventing all of them isn't always feasible. `Risk prioritization` can help you decide which threats to focus on first and which vulnerabilities need to be mitigated most.
 
 ![request](./img/risk-priority-table.jpg)
@@ -478,7 +479,7 @@ For more information, investigate the following.
 * [Bruegge and Dutoit, _Object-oriented Software Engineering: Using UML, Patterns, and Java_, Prentice Hall, 2010](http://dl.acm.org/citation.cfm?id=1795808)
 
 #### Stand Alone Lesson Setup
-If you want to run this lesson without running [Building a server](../building-a-server/README.md) you can run the following commands.
+If you want to run this lesson without running [Building a server](../building_a_server/README.md) you can run the following commands.
 
 Open a `Powershell` terminal and change directory to your `Desktop`:
 ```bash

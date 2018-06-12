@@ -34,13 +34,13 @@ We will continue our work towards our GenCyber camp purpose with the below goals
 * Internet connection
 
 ### Prerequisite lessons
-[Raspberry Pi Intro](../raspberry-pi-intro/README.md)
+[Raspberry Pi Intro](../raspberry_pi_intro/README.md)
 
  ### Table of Contents
  <!-- TOC START min:1 max:3 link:true update:true -->
  - [Cybersecurity First Principles in this lesson](#cybersecurity-first-principles-in-this-lesson)
  - [Introduction](#introduction)
- - [Goals](#Goals)
+ - [Goals](#goals)
  - [Materials Required](#materials-required)
  - [Prerequisite lessons](#prerequisite-lessons)
  - [What is the IoT](#what-is-the-iot)
@@ -48,15 +48,15 @@ We will continue our work towards our GenCyber camp purpose with the below goals
  - [Step 1: Install and update needed programs](#step-1-install-and-update-needed-programs)
  - [Step 2: Start Node-Red](#step-2-start-node-red)
  - [Step 3: Start Firefox](#step-3-start-firefox)
- - [Step 4: Create an IFTTT account](#step-4-create-an-IFTTT-account)
+ - [Step 4: Create an IFTTT account](#step-4-create-an-ifttt-account)
  - [Step 5: Create your first Node-Red flow](#step-5-create-your-first-node-red-flow)
  - [Step 6: Link flow to IFTTT](#step-6-link-flow-to-ifttt)
  - [Step 7: Build an IFTTT Recipe](#step-7-build-an-ifttt-recipe)
  - [Step 8: Test it!](#step-8-test-it)
  - [A Second Example](#a-second-example)
- - [Step 1: Add a new flow](#add-a-new-flow)
+ - [Step 1: Add a new flow](#step-1-add-a-new-flow)
  - [Step 2: Build your new flow](#step-2-build-your-new-flow)
- - [Step 3: Test it!](#step-3-test-it!)
+ - [Step 3: Test it!](#step-3-test-it)
  - [Evaluation](#evaluation)
  - [Additional Resources](#additional-resources)
  - [Acknowledgements](#acknowledgements)
@@ -256,7 +256,7 @@ You've already built one flow, this one will follow the same procedures.  Add an
 ![Camera flow](img/camera_flow.png)
 
 ### Step 3: Test it!
-We are going to use the default settings for the nodes for this flow.  The camera node, when activated, will take a photo with the Pi's camera, give the photo a unique (and very long) filename, and store it in the `/home/pi/pictures` directory.  You can configure the node to give custom file names, set picture formats and sizes, and orientations.
+We are going to use the default settings for the nodes for this flow.  The camera node, when activated, will take a photo with the Pi's camera, give the photo a unique (and very long) filename, and store it in the `/home/pi/pictures` directory.  You can configure the node to give custom file names and set picture formats, sizes, and orientations.
 
 * Deploy your new flow
 * Click the timestamp inject button

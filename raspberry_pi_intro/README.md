@@ -5,7 +5,7 @@
 
 * __Least Privilege__: One of the ways to protect information is by limiting what people can see and do with your information and resources. The principle of least privilege says to allow the minimum number of privileges necessary to accomplish the task.
 
-* __Minimization__: Minimization refers to having the least functionality necessary in a program or device. The goal of minimization is to simplify and decrease the number of ways that software can be exploited. This can include **turning off ports that are not needed**, reducing the amount of code running on a machine, and/or turning off unneeded features in an application. This lesson focuses specifically on turning off ports that aren't in use.  
+* __Minimization__: Minimization refers to having the least functionality necessary in a program or device. The goal of minimization is to simplify and decrease the number of ways that software can be exploited. This can include turning off ports that are not needed, reducing the amount of code running on a machine, and/or turning off unneeded features in an application. This lesson focuses specifically on turning off ports that aren't in use. Unnecessairily open ports can lead to security issues.  
 
 * __Modularization__: The concept of modularity is like building blocks. Each block (or module) can be put in or taken out from a bigger project. Each module has its own separate function that is interchangeable with other modules.
 
@@ -16,6 +16,7 @@ This lesson will introduce students to the Raspberry Pi platform, discuss its co
 By the end of this lesson students will be able to:
 *    Assemble a Raspberry Pi
 *    Identify key components of the Raspberry Pi
+*    Apply the basic functions of a Raspberry Pi
 *    Apply the Cybersecurity First Principles of modularity, abstraction, and least privilege to the Raspberry Pi platform
 
 ### Materials Required
@@ -55,7 +56,7 @@ By the end of this lesson students will be able to:
 <!-- TOC END -->
 
 ### Step 1: Distribute the Raspberry Pi kit and other materials
-The Raspberry Pi kit goes together very quickly, the main thing to remember is to ensure each student has ample room to spread out their parts and work.  Some of the parts are small and once the students get started it often looks like Christmas morning with boxes and packing paper being flung everywhere.  What tends to work well is to only unbox what is needed, as it’s needed, explain the part, and install it. Lockstep for the whole class making sure everyone is caught up before moving on.
+The Raspberry Pi kit goes together very quickly; the main thing to remember is to ensure each student has ample room to spread out their parts and work.  Some of the parts are small and once the students get started it often looks like Christmas morning with boxes and packing paper being flung everywhere.  What tends to work well is to only unbox what is needed, as it’s needed, explain the part, and install it. After each step, ensure everyone is caught up before moving on.
 
 ### Step 2: Unbox the Raspberry Pi
 Have the students unbox the Raspberry Pi and identify/discuss with them the various components shown in the diagram below:
@@ -77,18 +78,18 @@ Have the students unbox the Raspberry Pi and identify/discuss with them the vari
 This is an example of __Modularity__.  The Raspberry Pi board has several components, each doing a specialized function.  You will later add components such as a camera, keyboard, mouse, and power supply.  At a higher level, the Raspberry Pi is a modular component in and of itself, fitting into a larger IoT application.  The principle of __Abstraction__ also applies here as the Raspberry Pi itself is an abstraction of all the supporting components doing the input/output/storage and processing functions.
 
 ### Step 3: Install the heat sinks
-Remove the backing paper from the heat sinks and stick to the chips as shown in the picture below.  The heat sinks look like silver plates with fins off the top.  Heat sinks will help keep the chips below them cool by spreading the chips heat out over a larger area and exposing it to more air.
+Remove the backing paper from the heat sinks and stick them to the chips as shown in the picture below.  The heat sinks look like silver plates with fins off the top.  Heat sinks will help keep the chips below them cool by spreading the chips heat out over a larger area and exposing it to more air.  Make sure that the larger heatsink goes on the larger chip, and the smaller heatsink on the smaller chip.  
 
 ![heat sinks](img/heat_sink.jpg)
 
 ### Step 4: Install the micro SD card into the Raspberry Pi
-The micro SD card holds both the operating system for the Raspberry Pi (which is a version of Linux) as well as any installed applications and user data.  Due to its small size and accessibility, it is possible to have multiple SD cards with different operating systems and applications loaded.  Simply removing the SD card and replacing with a different one can give the user a completely new computer environment.  This is another example of the __modularity__ principle.
+The micro SD card holds both Raspian, an operating system based on Debian Linux designed specifically for the Raspberry Pi, as well as any installed applications and user data.  Due to its small size and accessibility, it is possible to have multiple SD cards with different operating systems and applications loaded.  Simply removing the SD card and replacing with a different one can give the user a completely new computer environment.  This is another example of the __modularity__ principle.
 
 * Insert the SD card as shown in the diagram below. _Note the direction of the printing on the card_
 
 ![SD Card](img/pi_sd.jpg)
 
-### Step 5: Install the Raspberry Pi camera
+### Step 5 (optional): Install the Raspberry Pi camera
 The camera provides the ability for the Raspberry Pi to take photos and video.  This is another example of modularity.  The camera provides a special capability not native to the Pi, cutting down the cost of the basic Pi.
 
 * The camera is connected to the Raspberry Pi by connecting its ribbon cable to the camera connector port between the audio connector and the HDMI port
@@ -124,8 +125,7 @@ You have a couple options for mounting your camera for use:
 ![Cover Putty Mount](img/cover_putty_mount.jpg)
 
 ### Step 7: Install the keyboard and mouse
-* Plug the keyboard into a free USB port
-* Plug the mouse into a free USB port
+* Plug the keyboard and mouse into a free USB port
 
 ### Step 8: Install the HDMI cable
 *    Plug one end of the HDMI cable into the HDMI port on the Pi (refer to [Step 2](#step-2-unbox-the-raspberry-pi) if you forget where that is)
@@ -134,23 +134,24 @@ You have a couple options for mounting your camera for use:
 
 ### Step 9: The moment you have been waiting for - turn on the Raspberry Pi!
 *    Turn on your computer monitor
-* Plug the small end of the power cable into the Raspberry Pi
+*    Plug the small end of the power cable into the Raspberry Pi
 *    Plug the other end of the power cable into a power strip or wall socket
 
 With a brand new Raspberry Pi, although the operating system comes pre-loaded you will need to install it.
 
 * Select your proper language and keyboard at the bottom of the screen 
-* Use your mouse to select the Raspian option in the dialog box, click the __Install button__, and confirm - then wait
+* Use your mouse to select the Raspian option in the dialog box, click the __Install button__, and confirm. Installation should take a few minutes
 * Click OK on the dialog box that pops up telling you the OS has installed successfully and your Pi should reboot
 * Before continuing make sure you have network connectivity following your local procedures for wifi or wired internet
 
-### Step 10: Configuring the camera and updating the Raspberry Pi software
+### Configuring the camera (optional)
 Now we need to tell the Raspberry Pi that you have installed a camera.  
 
 * Use the _Menu_ dropdown to select _Preferences_ and _Raspberry Pi Configuration_
 * Select the _Interfaces_ tab
 * Select _Camera Enable_, click OK, and reboot
 
+### Step 10: Updating the software
 Even though you just assembled a brand new Raspberry Pi, it’s a good idea to update the software on the system.  It's very common that security updates or new application capabilities may have been recently developed but are not yet installed.
 *    The default Raspberry Pi user is _pi_ and default password is _raspberry_
 *    In its default configuration the Raspberry Pi logs in the user automatically. For now, we will leave this configuration in place
@@ -177,7 +178,7 @@ sudo apt-get upgrade
 * Hit enter to answer yes to the question do you want to continue
 * If during the install you are presented any informational notes in the terminal window pressing 'q' will bypass them and continue with the upgrade  
 
-The upgrade options to apt-get tell the operating system to compare the current software against the new catalog you just downloaded with the update command.  Any software that has a newer version is now downloaded and installed.  The ability to update software removing vulnerabilities as well as remove software you are not using is an example of the First Principle of __minimization__.  We are minimizing the amount of software an attacker could take advantage of.  
+The upgrade options to `apt-get` tell the operating system to compare the current software against the new catalog you just downloaded with the update command.  Any software that has a newer version is now downloaded and installed.  The ability to update software removing vulnerabilities as well as remove software you are not using is an example of the First Principle of __minimization__.  We are minimizing the amount of software an attacker could take advantage of.  
 
 ### Step 11: Shutdown the Raspberry Pi
 Now that the software has been updated we are done with the Raspberry Pi for now and can turn it off.  We could do this through the GUI with the mouse but since we already have a terminal window open, here’s a command to turn off the Raspberry Pi off from the command line:
