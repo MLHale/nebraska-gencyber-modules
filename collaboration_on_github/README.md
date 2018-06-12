@@ -88,7 +88,7 @@ The updated content is now reflected in the peer's repository. It will be someth
 
 Now return the favor to your peer. Help them `fork` your hello-world repository and make a `pull request` back to you.
 
-A collaborator may on accept your pull request on the first attempt. She may suggest changes. In that case, you may continue to make commits to the branch referenced in your pull request. Github conveniently tracks previous commits, new commits, and discussions along with the pending pull request.
+A collaborator may not accept your pull request on the first attempt. She may suggest changes. In that case, you may continue to make commits to the branch referenced in your pull request. Github conveniently tracks previous commits, new commits, and discussions along with the pending pull request.
 
 With your peer try going back and forth on your pull request to experience this feature.
 
