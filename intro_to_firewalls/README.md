@@ -48,7 +48,7 @@ When two machines communicate (such as a client talking to a server), communicat
 
 ### Question
 
-At what [network layer](https://support.microsoft.com/en-us/kb/103884) does it make the most sense to operate a firewall, considering that it is connecting two different networks?
+At which [OSI layer](https://support.microsoft.com/en-us/kb/103884) does it make the most sense for a firewall to filter the information flowing between two different networks?
 
 - [ ] Physical layer  
 - [ ] Data link layer  
@@ -111,6 +111,13 @@ Discussion:
 * Inbound and outbound rules are typically maintained in separate lists. We will see this shortly. Rule 3 is typically implemented as a ```Default Policy``` in Inbound and Outbound rule lists. It applies if none of the specified rules match.
 
 [Top](#table-of-contents)
+
+
+## Interactive Firewall Game
+
+Let's play a game that helps us understand firewall rules. These rules are the basic building blocks of a fundamental packet filtering mechanism.
+
+[Click here to play the Game](https://groups.inf.ed.ac.uk/tulips/projects/1617/PermissionImpossible/)
 
 ## Windows Firewall
 
@@ -271,9 +278,9 @@ Now check if your `Cloudbit` application still works after making these changes.
 
 Check other programs in the Inbound rules list that you think might be allowing more exposure (Protocol and Ports) than necessary for operation.
 
-## Test your blockage, err ... knowledge!
+## Test your blockage, err … knowledge!
 
-[Firewall Quiz](https://www.qzzr.com/c/quiz/435576/firewalls)
+[Firewall Quiz](https://unomaha.az1.qualtrics.com/jfe/form/SV_2nx7ci6Tm2NE7Jz)
 
 That's it for Firewalls in this Unit. Happy Surfing.
 
