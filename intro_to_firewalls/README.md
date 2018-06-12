@@ -159,33 +159,23 @@ Now the firewall status page should look like this:
 
 > ![Windows firewall](./img/default-deny.png)
 
-Let's test with docker. Open a Powershell terminal:
+Let's test with Chrome. Open the Chrome browser and see if you can navigate to any website.
 
-```bash
-# Try to pull this docker image
-# If you already have a local copy
-# this command will attempt to update it
-docker pull gists/lighttpd
-```
-> ![Windows firewall](./img/outbound-fail.png)
+The web request fails. Why?
 
-The pull fails. Why?
+> The request can not pass through the firewall (outgoing direction) to reach web servers
 
-> The request can not pass through the firewall (outgoing direction) to reach docker servers
-
-Docker for Windows uses ```vpnkit``` module to provide virtual networking. So we need to allow this program through our firewall in the Outbound direction.
+So we need to allow Chrome program through our firewall in the Outbound direction.
 We want to be very specific to the Program, Ports, and Protocol in our Rule (Cybersecurity First principle: Minimization).
 
-Let's start to author a new Outbound rule. Select ```Custom``` rule to provide the most flexibility:
+Let's start to author a new Outbound rule. Select ```Custom``` rule to provide the most flexibility. Click ```Next```.
 
 > ![Windows firewall](./img/outbound-rule.png)
 
-Next, we locate the program that we want to allow through the firewall in the outbound direction.
-
-> ![Windows firewall](./img/outbound-program.png)
+Next, we locate the program that we want to allow through the firewall in the outbound direction. Click the browse button and locate the Chrome executable here: `%ProgramFiles%\Google\Chrome\Application\chrome.exe`
 
 Click ```Next```. That brings us to ```Protocols and Ports```.   
-We want docker to be able to contact docker hub webservers (```Remote```) to access HTTP (Port ```80```) and HTTPS (Port ```443```) services using the ```TCP``` protocol.    
+We want Chrome to be able to contact web servers on HTTP (Port ```80```) and HTTPS (Port ```443```) services using the ```TCP``` protocol.    
 So adjust the settings as shown:
 
 > ![Windows firewall](./img/outbound-ports.png)
@@ -198,85 +188,17 @@ Now for ```Action```. Select ```Allow the connection``` since we are whitelistin
 > ![Windows firewall](./img/outbound-action.png)
 
 Next, for ```Profile``` select all profiles so that the rule applies to all network types.  
-Finally, provide the rule a Name and Description as shown below:
-
-> ![Windows firewall](./img/outbound-name.png)
+Finally, provide the rule a Name and Description to identify it later.
 
 Click ```Finish```. The rule is now active and should be listed in the Outbound rules listing.
 
-Now use similar steps as above to add a rule for the same program (vpnkit), but allowing protocol ```UDP``` for remote port ```53```. This allows DNS requests to go through. DNS helps with domain name discovery.
+Now use similar steps as above to add a rule for the same program (Chrome), but allowing protocol ```UDP``` for remote port ```53```. This allows DNS requests to go through. DNS helps with domain name discovery.
 
-Once the UDP rule is added, we are ready to try the `pull` command again.
+Once the UDP rule is added, we are ready to try accessing a website again.
 
-```bash
-# Try to pull this docker image
-docker pull gists/lighttpd
-```
+It should work this time. Call the instructor to troubleshoot if are still not able to browse to a website.
 
-It should work this time. Call the instructor to troubleshoot if the command fails.
-
-> ![Windows firewall](./img/outbound-allowed.png)
-
-## Exercise
-
-Write two new outbound rules to enable Google Chrome to connect to websites. To carry out this task you will need the following information:
-
-> 1. Program: `%ProgramFiles%\Google\Chrome\Application\chrome.exe`
-> 2. Protocol: TCP
-> 3. Remote Ports: 80, 443
-
-and
-
-> 1. Program: `%ProgramFiles%\Google\Chrome\Application\chrome.exe`
-> 2. Protocol: UDP
-> 3. Remote Port: 53
-
-### Inbound Connection Filtering
-
-The default policy for Inbound connections is ```Block```. So at installation time, programs insert very broad ranging rules to avoid later connection issues. Docker does the same. Locate inbound rules named ```vpnkit```. You should see two of them.
-
-> ![Windows firewall](./img/inbound-vpnkit.png)
-
-Examine the properties of both. Properties for the TCP rule are shown below.
-
-> ![Windows firewall](./img/inbound-properties.png)
-
-Here is a summary of properties from both rules:
-
-> 1. Program: `%ProgramFiles%\Docker\Docker\resources\vpnkit.exe`
-> 2. Protocol: ```TCP```
-> 3. Local Port: ```any```
-> 4. Remote Ports: ```any```
-
-and
-
-> 1. Program: `%ProgramFiles%\Docker\Docker\resources\vpnkit.exe`
-> 2. Protocol: ```UDP```
-> 3. Local Port: ```any```
-> 4. Remote Port: ```any```
-
-If you only wanted to host a webserver container or a DNS server container, this rule allows unnecessary exposure to all other ports. By applying the minimization principle we can reduce the attack surface. What we need is the following configuration, if all we want to do is expose web services and perhaps allow incoming DNS requests:
-
-> 1. Program: `%ProgramFiles%\Docker\Docker\resources\vpnkit.exe`
-> 2. Protocol: ```TCP```
-> 3. Local Port: ```80, 443```
-> 4. Remote Ports: ```any```
-
-and (2nd rule is optional for the `cloudbit` container app, rule may be just disabled)
-
-> 1. Program: `%ProgramFiles%\Docker\Docker\resources\vpnkit.exe`
-> 2. Protocol: ```UDP```
-> 3. Local Port: ```53```
-> 4. Remote Port: ```any```
-
-Here is the change illustrated for the TCP rule.
-> ![Windows firewall](./img/inbound-updated.png)
-
-This change minimizes the attack surface and enforces least privilege.
-
-Now check if your `Cloudbit` application still works after making these changes.
-
-Check other programs in the Inbound rules list that you think might be allowing more exposure (Protocol and Ports) than necessary for operation.
+If you would like to practice further, [firewall configuration with Docker for Windows is available here.](./advanced.md)
 
 ## Test your blockage, err … knowledge!
 
@@ -284,7 +206,7 @@ Check other programs in the Inbound rules list that you think might be allowing 
 
 That's it for Firewalls in this Unit. Happy Surfing.
 
-> Firewalls are an essential component of "Defense-in-Depth" strategy. It can certainly slow down an attacker. However, firewalls cannot keep a determined adversary out. There are many ways in which firewalls can be abused and easily bypassed. Such attacks need to be constantly monitored using Intrusion Detection Systems (IDS) and Network Monitoring solutions. The final line of defense is applications built using secure coding practices and proper encryption implementations.  
+> Firewalls are an essential component of "Defense-in-Depth" strategy. It can certainly slow down an attacker. However, firewalls cannot keep a determined adversary out. There are many ways in which firewalls can be abused and easily bypassed. Such attacks need to be constantly monitored using Intrusion Detection Systems (IDS) and Network Monitoring solutions. The final line of defense is applications built using secure coding practices and proper encryption implementations. This is an example of `Layering`.
 
 [Top](#table-of-contents)
 
@@ -297,12 +219,7 @@ That's it for Firewalls in this Unit. Happy Surfing.
   * [Ubuntu iptables Wiki](https://help.ubuntu.com/community/IptablesHowTo)  
   * [CentOS iptables Wiki](https://wiki.centos.org/HowTos/Network/IPTables)
   * 25 Most Used iptables commands, [The Geek Stuff](http://www.thegeekstuff.com/2011/06/iptables-rules-examples/)
-
-[Top](#table-of-contents)
-
-## Teacher Developed Modules
-
-* [Firewall discussion: Part 1 @ GenCyber Camp 2016](https://dl.dropboxusercontent.com/u/4594444/Gencyber-teacher-modules/FirewallPresentation2016.pptx)
+  * [UFW - Uncomplicated Firewall for Ubuntu](https://help.ubuntu.com/community/UFW)
 
 [Top](#table-of-contents)
 
