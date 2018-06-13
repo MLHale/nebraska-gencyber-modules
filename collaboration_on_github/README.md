@@ -136,6 +136,10 @@ On Github, only the `owner` of a remote repository can push commits to it. All o
 
 [Top](#table-of-contents)
 
+## Lead Author
+
+- Robin Gandhi
+
 ## Acknowledgements
 
 * A special thanks to Matt Hale, Aaron Vigal and Cade Wollcot for reviews of this module and thoughtful discussions.

@@ -224,6 +224,10 @@ That's it for Firewalls in this Unit. Happy Surfing.
 
 [Top](#table-of-contents)
 
+## Lead Author
+
+- Robin Gandhi
+
 ## Special Thanks
 
 * A special thanks to Matt Hale for reviews of this module and thoughtful discussions.

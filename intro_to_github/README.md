@@ -314,6 +314,10 @@ Finally, Github repositories separate source code from other resources. This sep
 
 [Top](#table-of-contents)
 
+## Lead Author
+
+- Robin Gandhi
+
 ## Acknowledgements
 
 * A special thanks to Matt Hale, Aaron Vigal and Cade Wollcot for reviews of this module and thoughtful discussions.

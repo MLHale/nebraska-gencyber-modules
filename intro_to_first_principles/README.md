@@ -152,8 +152,11 @@ We now examine 10 cybersecurity first principles. This discussion is adapted fro
 
 
 #### 6. Abstraction
+
 - What is abstraction?
  - `Abstraction` is the concept that something complicated can be thought of and represented more simply. All models are abstractions - since they reduce the complexity of an object into something that is understandable.
+
+
 
 - How does abstraction contribute to cybersecurity?
   - Remove/reduce any clutter that can distract the user or programmer from using a resource correctly.  
@@ -364,6 +367,10 @@ Cards 25, 26, 27 are the information states
 If there is a question as to where the card should be placed the answer is on the card – encrypted. For example on card 31 the lower right hand has the code XON21. This code is a simple rotation cipher and it rotated 21. You will get a three letter answer. In this case it will be CTS. The first letter will be either C, I, or A for Confidentiality, Integrity, Availability. The second letter will be P, E, or T for safeguards – Policy, Education or Technology. The third letter will be S, T or P for states – Storage, Transmission or Processing. In this case the answer is C for Confidentiality, and S for Storage.
 
 
+## A test of your principles...
+
+[Quiz](https://unomaha.az1.qualtrics.com/jfe/form/SV_eVbcBA7Pk0VqD7D)
+
 ## Additional Resources
 
 - [NSA document listing Cybersecurity first principles](https://users.cs.jmu.edu/tjadenbc/Bootcamp/0-GenCyber-First-Principles.pdf)
@@ -371,6 +378,10 @@ If there is a question as to where the card should be placed the answer is on th
 
 
 [Top](#table-of-contents)
+
+## Lead Author
+
+- Robin Gandhi
 
 ## Acknowledgements
 

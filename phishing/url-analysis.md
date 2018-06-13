@@ -3,7 +3,7 @@
 ## Cybersecurity Commonsense
 [Source: DHS Stop. Think. Connect. [Campaign](https://www.stopthinkconnect.org/tips-advice/general-tips-and-advice)]
 
-* __Protect your $$:__ When banking and shopping, check to be sure the site is security enabled. Look for web addresses with `https://`, which means the site takes extra measures to help secure your information. `http://` is not secure.
+* __Protect your $$:__ When banking and shopping, check to be sure the site is security enabled. Look for web addresses with `https://`, which means the site takes extra measures to help secure your information. `http://` is not secure for the communication of private/sensitive information.
 
 * __When in doubt, throw it out:__ Links in emails, social media posts and online advertising are often how cybercriminals try to steal your personal information. Even if you know the source, if something looks suspicious, delete it.
 
@@ -53,7 +53,7 @@ Phishing victims often fear ridicule and do not report crimes...
 
 Most Phishing attacks start with a specially-crafted URL. When clicked on, phishing URLs take you to fake websites, download malware or prompt for credentials.
 
-A URL is an acronym for Uniform Resource Locator. It is a standard format for locating web resources on the Internet. Most Internet users refer to it as the "address for a website". For example, http://www.amazon.com. News story URLs like this one: http://www.cnn.com/2016/07/06/health/juno-jupiter-nasa/index.html are often much longer. On social media sites we are used to seeing short URLs like this one: http://cnn.it/29lG6OK or links on shopping sites: https://amzn.com/0132390779. Even emails are often filled with URLs that senders want us to click on. URLs also give us access to our bank accounts, tax filing, healthcare, billing, and many government services. While all Internet users use it everyday, very few are confident in their abilities to read a URL, much less understand what might happen if clicked on. Let's change that. A vigilant, trained and aware human user is a critical layer of defense against threats both internal and external. Even if malicious URLs and Emails get past spam filters and anti-virus software, a human user can catch it. Such a defensive strategy is common in secure system designs. It is a *cyber security first principle* called `Layering.`
+A URL is an acronym for Uniform Resource Locator. It is a standard format for locating web resources on the Internet. Most Internet users refer to it as the "address for a website". For example, http://www.amazon.com. News story URLs like this one: http://www.cnn.com/2016/07/06/health/juno-jupiter-nasa/index.html are often much longer. On social media sites we are used to seeing short URLs like this one: http://cnn.it/29lG6OK or links on shopping sites: https://amzn.com/0132390779. Even emails are often filled with URLs that senders want us to click on. URLs also give us access to our bank accounts, tax filing, healthcare, billing, and many government services. While all Internet users use it everyday, very few are confident in their abilities to read a URL, much less understand what might happen if clicked on. Let's change that. A vigilant, trained and aware human user is a critical layer of defense against threats both internal and external. Even if malicious URLs and Emails get past spam filters and anti-virus software, a human user can catch it. Such a defensive strategy is common in secure system designs. It is a *cybersecurity first principle* called `Layering.`
 
 [Top](#table-of-contents)
 
@@ -81,7 +81,7 @@ If we just start reading the URL from left to right, like English, then this URL
 
 ### The "Right" way to read a URL
 
-The Internet is a network of networks. Each network that is under the control of an authority, is a separate **Domain**. For example, organizations like University of Nebraska at Omaha, Facebook or Apple have authority over their own Domains/Networks that are connected to the Internet. URLs, which are used to reference computers in a particular network are also called **Domain Names**. Continuing our example, some top-level domains are `unomaha.edu`, `facebook.com` and `apple.com`.
+The Internet is a network of networks. Each network that is under the control of an authority, is a separate **Domain** (Hey! that is another example for `Domain Separation`). For example, organizations like University of Nebraska at Omaha, Facebook or Apple have authority over their own Domains/Networks that are connected to the Internet. URLs, which are used to reference computers in a particular network are also called **Domain Names**. Continuing our example, some top-level domains are `unomaha.edu`, `facebook.com` and `apple.com`.
 
 These domain names have to be **unique** on the Internet. So who is responsible for ensuring this? This function is coordinated by ICANN. Here is what is listed on the ICANN website:
 
@@ -153,7 +153,7 @@ Beyond the top-level domains, a organization or individual that has registered t
 The knowledge in the previous section should serve you well in reading URLs. But spammers often conceal the real URL in HTML formatted emails or fake websites. Let's explore a few such tricks. Some URL behaviors are browser specific. So for our discussion let's open the links below in a `Chrome` browser.
 
 ## Tricky Links  
-Open this link in a Chrome browser: http://faculty.ist.unomaha.edu/rgandhi/phishing-demo/phishing.html
+Open this link in a Chrome browser: https://robinagandhi.github.io/phishing-demo/phishing.html
 
 ### Link #1  
 
@@ -260,7 +260,7 @@ When visiting questionable websites, it is prudent to turn off JavaScript or use
 
 ### Link #8
 
-Hover over [link #8](http://faculty.ist.unomaha.edu/rgandhi/phishing-demo/phishing.html) to examine its real destination. What do you see?
+Hover over [link #8](https://robinagandhi.github.io/phishing-demo/phishing.html) to examine its real destination. What do you see?
 
 Turns out you can register DNS names in any language using Unicode. Punycode is used to encode internationalized domain names (IDN). As a result, similar looking foreign alphabets can be used to register domains that are extremely close in appearance to english letters.
 
@@ -278,9 +278,11 @@ Such attacks are similar to domain-squatting but also referred to as [homophone]
 
 >![trickyurls](./img/punycode.png)
 
-### Link #9
+### Link #9 and #10
 
-Click on Link #9. The destination appears to be wellsfargo.com. Even the URL appears to be wellsfargo.com. But a few things are off. The protocol is different and there are additional characters (`<`, `...` and `,`) that you would not normally see. Now click in the URL bar and navigate to the right of the URL using arrow keys. You will notice a bunch of text. Copy the entire URL (`crtl+a` and then `crtl+c`) and paste it in Notepad.
+**Right Click** on links #9 and #10 and select `Open Link in New Tab`. Switch to the new tab.
+
+When you visit these links, the destination appears to be wellsfargo.com. Even the URL appears to be wellsfargo.com. But a few things are off. The protocol is different and there are additional characters (`<`, `...` and `,`) that you would not normally see. Now click in the URL bar and navigate to the right of the URL using arrow keys. You will notice a bunch of text. Copy the entire URL (`crtl+a` and then `crtl+c`) and paste it in Notepad.
 
 > ![trickyurls](./img/dataURL.png)
 
@@ -288,7 +290,13 @@ This is a [Data URL](https://en.wikipedia.org/wiki/Data_URI_scheme) that allows 
 
 In this link we have embedded enough spaces between the place holder text and the real content such that a user can be fooled into believing the website is being loaded from the displayed domain name. This URL was generated by scraping all the HTML from wellsfargo.com, including embedded images, and encoding it within the Data URL. We could have just as easily included some malicious javascript in here to steal any username and password entered.
 
-Don't worry the game in the next section is safe 😎
+### Link #11
+
+Phishers craft links like #11 using an HTML-based trick. Tool-tips in HTML can be set using the `title` attribute for any element. For an HTML link, setup using `href` attribute, the `title` attribute setup with an alternate link can be misleading to a user. As you see in the image below, the link tooltip is different from the link displayed in the status bar.
+
+> ![trickyurls](./img/11-tricky-urls.png)
+
+I hope these examples made you a bit more skeptical of links on a webpage or email. Don't worry the game in the next section is safe 😎
 
 ## AntiPhishing Phil Game
 
@@ -315,11 +323,9 @@ https://oit.byuh.edu/help/anti-phishing
 
 [Top](#table-of-contents)
 
-## Teacher Developed Modules
+## Lead Author
 
-* [Phishing Discussion @ GenCyber Camp 2016](https://dl.dropboxusercontent.com/u/4594444/Gencyber-teacher-modules/spear%20phishing.pptx)
-
-[Top](#table-of-contents)
+- Robin Gandhi
 
 ## Special Thanks
 
