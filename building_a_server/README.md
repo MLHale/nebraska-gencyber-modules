@@ -38,9 +38,9 @@ For this lesson, you will need:
 
 ### Prerequisite lessons
 You should complete the following lessons before attempting this lesson.
-* [Hands on IoT: Little Bits Intro](../hands-on-iot-little-bits-intro/README.md),
-* [Hands on IoT: Build an IFTTT IoT app w/ Little Bits](../hands-on-iot-little-bits-ifttt-app/README.md),
-* [Web Services and REST](../restful-api/README.md)
+* [Hands on IoT: Little Bits Intro](../hands_on_iot_littlebits/README.md),
+* [Hands on IoT: Build an IFTTT IoT app w/ Little Bits](../hands_on_iot_little_bits_ifttt_app/README.md),
+* [Web Services and REST](../restful_api/README.md)
 * [Containers](../containers/README.md)
 
 ### Table of Contents

@@ -54,7 +54,7 @@ Process Isolation keeps separate functions from accessing the same memory.
 - [Docker for Windows](https://docs.docker.com/docker-for-windows/install/)
 
 ## Prerequisite lessons
-- [Github Tutorial](../github/index.md)
+- [Github Tutorial](../intro_to_github/README.md)
 - [Linux Commands](https://www.cheatography.com/davechild/cheat-sheets/linux-command-line/pdf/)
 
 # Table of contents
@@ -113,7 +113,7 @@ docker run -it --name myAlpine alpine:latest
 `--name` provides a name for your new container
 `alpine:latest` is the image name and its tag
 
-If the previous command was successful, the container is created and you are returned an interactive shell into the container. The shell looks like this: 
+If the previous command was successful, the container is created and you are returned an interactive shell into the container. The shell looks like this:
 ```/ #```
 
 ## Explore the container
@@ -174,7 +174,7 @@ Caution 😡:
 By default, a mounted volume allows full read/write by the container  
 This allows exceptions to the `Process Isolation`  principle
 
-To incorporate `Least Privlege`, use `:ro` to make the file read-only.
+To incorporate `Least Privilege`, use `:ro` to make the file read-only.
 
 `-v /c/Users/student/app:/webapp:ro`
 
@@ -513,7 +513,7 @@ Blocked access to Docker Hub or any Github repositories in school lab networks m
 
 ### Saving Files
 
-For our development server, on a un-restricted internet connected computer first download the following repository zip files and transfer to a USB drive (or store at an accessible location). 
+For our development server, on a un-restricted internet connected computer first download the following repository zip files and transfer to a USB drive (or store at an accessible location).
 
 Next, build the docker container images required. Then export the container images to a tar file. For example, to save the `nebraskagencyberdevenv_django` and `postgres` images we created above, open a new `Powershell`:
 
@@ -581,7 +581,7 @@ Start the application
 docker-compose up
 ```
 
-Go to to http://localhost to examine the running app. 
+Go to to http://localhost to examine the running app.
 
 ### Configuration Steps
 
@@ -615,7 +615,7 @@ ipconfig --all
 
 #### Adding the API key
 
-Open your browser and go to http://localhost/admin/api/apikey/. Enter the username and password for Django administrator if prompted. This is what you setup just a few instructions before. 
+Open your browser and go to http://localhost/admin/api/apikey/. Enter the username and password for Django administrator if prompted. This is what you setup just a few instructions before.
 
 - Click 'add api key'.
 

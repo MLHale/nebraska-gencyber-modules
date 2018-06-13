@@ -27,7 +27,7 @@ By the end of this tutorial, you will be able to:
 * Wi-Fi Internet Connection
 
 ### Prerequisite lessons
-[Littlebits Intro](../hands_on_iot_littlebits/README.md)
+[Littlebits Intro](../hands_on_iot_littlebits/README.me)
 
 ### Table of Contents
 <!-- TOC START min:1 max:3 link:true update:true -->
@@ -56,7 +56,7 @@ By the end of this tutorial, you will be able to:
 
 <!-- TOC END -->
 ### Before We Start
-In the [last lesson](../hands-on-iot-little-bits-intro/README.md), you saw how versatile, modular, and cool Littlebits was to work with. It was easy to plug and play different modules together following simple `design patterns` to make cool, simple apps. Now, imagine everything you saw before can be hooked up to the internet and **controlled using a smartphone or online app**. We are going to do _THAT_ now!
+In the [last lesson](../hands_on_iot_littlebits/), you saw how versatile, modular, and cool Littlebits was to work with. It was easy to plug and play different modules together following simple `design patterns` to make cool, simple apps. Now, imagine everything you saw before can be hooked up to the internet and **controlled using a smartphone or online app**. We are going to do _THAT_ now!
 
 ### Step 1: Create an Account / Login to Littlebits portal!
 To start we need to create an account:
