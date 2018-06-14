@@ -569,6 +569,24 @@ left: 50%;
 /* Grey Background Highlighted Rectangles */
 .language-bash.highlighter-rouge {
 
-max-width: 500px;
+max-width: 850px;
+
+}
+
+.language-python.highlighter-rouge {
+
+max-width: 1150px;
+
+}
+
+.language-json.highlighter-rouge {
+
+max-width: 1100px;
+
+}
+
+.highlighter-rouge {
+
+max-width: 850px;
 
 }
