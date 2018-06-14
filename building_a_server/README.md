@@ -516,7 +516,7 @@ Did you get an error?
 
 This is because we haven't added our `API Key` to our server, so the field `api_key = ApiKey.objects.all().first()` returns null (or `NoneType`). To fix this, open your browser and go to http://localhost/admin/api/apikey/. Click 'add api key'.
 
-![error with key](./img/add-api-key.png)
+![error with key](./img/api-key.png)
 
 Then enter your username (probably `admin`) in the `owner` field. In the `key` field add in your `Littlebits` API key used in the previous lesson (without the word `Bearer`). If you forgot it or don't have it handy, you can retrieve it here by visiting http://control.littlebitscloud.cc/ and clicking on `settings`. When added, save the key.
 
