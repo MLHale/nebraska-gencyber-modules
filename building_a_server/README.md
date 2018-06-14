@@ -38,9 +38,9 @@ For this lesson, you will need:
 
 ### Prerequisite lessons
 You should complete the following lessons before attempting this lesson.
-* [Hands on IoT: Little Bits Intro](../hands-on-iot-little-bits-intro/README.md),
-* [Hands on IoT: Build an IFTTT IoT app w/ Little Bits](../hands-on-iot-little-bits-ifttt-app/README.md),
-* [Web Services and REST](../restful-api/README.md)
+* [Hands on IoT: Little Bits Intro](../hands_on_iot_littlebits/README.md),
+* [Hands on IoT: Build an IFTTT IoT app w/ Little Bits](../hands_on_iot_little_bits_ifttt_app/README.md),
+* [Web Services and REST](../restful_api/README.md)
 * [Containers](../containers/README.md)
 
 ### Table of Contents
@@ -70,7 +70,7 @@ You should complete the following lessons before attempting this lesson.
 <!-- TOC END -->
 
 ### Step 1: Review - Where are we so far?
-Before we get started, lets talk about what we've done so far. First, we looked at `Littlebits` and saw that we could plug and play the parts together to create new inventions. We wired these up and hooked them to `IFTTT` to let the web control our `cloudbit`. Then, in the `REST` lesson, we looked behind-the-scenes to see how `web services` like IFTTT and Littlebits actually work. We played around with `POSTMAN` and interacted with the Littlebits `API`.
+Before we get started, let's talk about what we've done so far. First, we looked at `Littlebits` and saw that we could plug and play the parts together to create new inventions. We wired these up and hooked them to `IFTTT` to let the web control our `cloudbit`. Then, in the `REST` lesson, we looked behind-the-scenes to see how `web services` like IFTTT and Littlebits actually work. We played around with `POSTMAN` and interacted with the Littlebits `API`.
 
 The last thing we left off with was hooking the Littlebits API up to our own server (instead of IFTTT) so we could make our own home-automation controller Dashboard. We saw how `containers` could be used to host `isolated` servers on another host machine.
 
@@ -134,7 +134,7 @@ git commit -m "updated to forked submodule repository"
 git push
 ```
 
-This should checkout the code for the start of this lesson and create a new branch called `my-server-work`. It also updates the `nebraska-gencyber-dev-env` repository you forked to include the correct pointer to the new forked submodule. You should also see your file tree in `Atom` update. Any new updates you make you can always run the commands `git add`, `git commit`, and `git push` to save your changes in the branch to your remote repo.
+This should check out the code for the start of this lesson and create a new branch called `my-server-work`. It also updates the `nebraska-gencyber-dev-env` repository you forked to include the correct pointer to the newly forked submodule. You should also see your file tree in `Atom` update. Any new updates you make you can always run the commands `git add`, `git commit`, and `git push` to save your changes in the branch to your remote repo.
 
 For now, we have our code ready.
 Now use `docker` to build the `image` that our container will use:
@@ -157,7 +157,7 @@ This server is completely new, so we need to do some setup to get it initially c
 docker-compose run django bash
 ```
 
-In this terminal that opens in the container, we need to tell our `Django` server to setup the database and create a new user account for us. The first two lines below setup the database by creating a `database Schema` that our SQL server can use to store data. The third line creates a new superuser account. Specify a password for admin. In development, you can use something simple (e.g. admin1234) for simplicity. In practice, you would want to use a much more secure password - since the server could be accessed from the wider internet.
+In this terminal that opens in the container, we need to tell our `Django` server to set up the database and create a new user account for us. The first two lines below set up the database by creating a `database Schema` that our SQL server can use to store data. The third line creates a new superuser account. Specify a password for admin. In development, you can use something simple (e.g. admin1234) for simplicity. In practice, you would want to use a much more secure password - since the server could be accessed from the wider internet.
 
 ```bash
 python manage.py makemigrations
@@ -200,7 +200,7 @@ With the database initialized, you should be able to easily run the app. All you
 docker-compose up
 ```
 
-This server, diagrammatically looks like:
+This server diagrammatically looks like:
 
 ![Django Architecture](./img/django-architecture.png)
 
@@ -218,7 +218,7 @@ With the server running, you should be able to visit [http://localhost](http://l
 This is a `web client` (also called a `frontend`) that we've built for demo purposes to work with our server. You will be making the server work better with the client.
 
 ### Step 5: Explore the server
-Since our focus is the `backend` - lets take a look at our server environment. First. Lets explore the file tree.
+Since our focus is the `backend` - let's take a look at our server environment. First. Let's explore the file tree.
 
 
 
@@ -301,7 +301,7 @@ urlpatterns = [
 #### Controllers.py
 Next, lets look at the `controllers.py` file to see what the server does when a URL is visited.
 
-There is a lot of code in this file. Lets look at the function that handles requests to the `/api/deviceevents` URL.
+There is a lot of code in this file. Let's look at the function that handles requests to the `/api/deviceevents` URL.
 
 * Find the code below.
 * Notice that this is a `class` that extends the Django REST class `APIView`.
@@ -384,9 +384,9 @@ class DeviceEvents(APIView):
 1. What would be the result of making a `POST` request to `<myserver>/api/deviceevents`?
 
 ### Step 6: Press the button
-Ok, so you now have a loose familiarity with the skeleton `backend` code that was provided to you. Lets build upon it.
+Ok, so you now have a loose familiarity with the skeleton `backend` code that was provided to you. Let's build upon it.
 
-When you login, you should see a green button that says **turn cloudbit on** when visiting `localhost`. Time to push it!
+When you log in, you should see a green button that says **turn cloudbit on** when visiting `localhost`. Time to push it!
 
 
 * connect the `power module` to the pink `button` input module

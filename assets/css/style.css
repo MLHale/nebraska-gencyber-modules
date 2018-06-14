@@ -424,7 +424,7 @@ pre {
 }
 
 table {
-    width: 100%;
+    width: 40%;
     border-collapse: collapse
 }
 
@@ -528,7 +528,7 @@ section {
     padding-bottom: 50px
 }
 
-/* materialize Section */
+/* Materialize Section */
 .container {
   width: 90%
 }
@@ -564,4 +564,11 @@ left: 50%;
   }
 }
 
-/* Put creative license also on the left bar along with the "maintained by" */
+/* Specific Overrides */
+
+/* Grey Background Highlighted Rectangles */
+.language-bash.highlighter-rouge {
+
+max-width: 500px;
+
+}
