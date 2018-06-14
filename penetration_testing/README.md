@@ -471,7 +471,7 @@ Based on the risks you've identified, score them and rank them based what you th
 ### Checkpoint
 Lets review what we've learned.
 
-<insert quiz here>
+ <!-- <insert quiz here> -->
 
 ### Additional Resources
 For more information, investigate the following.

@@ -444,8 +444,8 @@ th {
 }
 
 img {
-    max-width: 479px;
-    max-height: 360px;
+    max-width: 500px;
+    max-height: 400px;
 }
 
 header {
@@ -585,8 +585,22 @@ max-width: 1100px;
 
 }
 
+.language-jhtml.highlighter-rouge {
+
+max-width: 1225px;
+
+}
+
 .highlighter-rouge {
 
-max-width: 850px;
+max-width: 1125px;
 
+}
+
+.maintained {
+  width: 270px;
+}
+
+li {
+  max-width: 1500px;
 }
