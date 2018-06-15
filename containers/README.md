@@ -71,7 +71,7 @@ Process Isolation keeps separate functions from accessing the same memory.
 
 Let’s start with a container based on [Alpine Linux](https://alpinelinux.org)
 
-- Alpine Linux is a security-oriented, lightweight Linux distribution
+- Alpine Linux is a security-oriented, lightweight Linux distribution (`Minimization`)
 
 First, we need to download a container blueprint called an ```Image```
 
@@ -113,7 +113,7 @@ docker run -it --name myAlpine alpine:latest
 `--name` provides a name for your new container
 `alpine:latest` is the image name and its tag
 
-If the previous command was successful, the container is created and you are returned an interactive shell into the container. The shell looks like this: 
+If the previous command was successful, the container is created and you are returned an interactive shell into the container. The shell looks like this:
 ```/ #```
 
 ## Explore the container
@@ -133,11 +133,12 @@ exit # Stop the shell to exit container
 - You were running as `root` in the container
 
 ## Cleanup
-- Let's see the containers that we created. This command shows both running and stopped containers.
+- Let's see the containers that we created.   
+This command shows both running and stopped containers.
 ```bash
 docker ps -a
 ```
-- Using the name of a container we can delete containers that are stopped.
+- Stopped containers can be deleted.
 ```bash
 docker rm <container-ID or name>
 ```
@@ -513,7 +514,7 @@ Blocked access to Docker Hub or any Github repositories in school lab networks m
 
 ### Saving Files
 
-For our development server, on a un-restricted internet connected computer first download the following repository zip files and transfer to a USB drive (or store at an accessible location). 
+For our development server, on a un-restricted internet connected computer first download the following repository zip files and transfer to a USB drive (or store at an accessible location).
 
 Next, build the docker container images required. Then export the container images to a tar file. For example, to save the `nebraskagencyberdevenv_django` and `postgres` images we created above, open a new `Powershell`:
 
@@ -581,7 +582,7 @@ Start the application
 docker-compose up
 ```
 
-Go to to http://localhost to examine the running app. 
+Go to to http://localhost to examine the running app.
 
 ### Configuration Steps
 
@@ -615,7 +616,7 @@ ipconfig --all
 
 #### Adding the API key
 
-Open your browser and go to http://localhost/admin/api/apikey/. Enter the username and password for Django administrator if prompted. This is what you setup just a few instructions before. 
+Open your browser and go to http://localhost/admin/api/apikey/. Enter the username and password for Django administrator if prompted. This is what you setup just a few instructions before.
 
 - Click 'add api key'.
 
@@ -672,11 +673,12 @@ Now, press the button on `button` module. Watch as your server get the events fr
 
 
 [Top](#table-of-contents)
-<!-- BROKEN
+
 # May the force of containers be with you...
 as you take this quiz…
-https://www.qzzr.com/c/quiz/430097/the-container-quiz
--->
+
+[Container Quiz](https://unomaha.az1.qualtrics.com/jfe/form/SV_1ALx1FS1TPdej0F)
+
 # Additional Resources
 
 For more information, investigate the following:
@@ -687,6 +689,10 @@ For more information, investigate the following:
 - [docker-compose.yml](https://docs.docker.com/compose/compose-file/) - Authoring File Reference
 - [Volume](https://docs.docker.com/engine/tutorials/dockervolumes/) - Manage Data in Containers
 - [Container Networking](https://docs.docker.com/engine/tutorials/networkingcontainers/#add-containers-to-a-network) - Connect Containers to a Network
+
+## Lead Author
+
+- Robin Gandhi
 
 # Acknowledgements
 

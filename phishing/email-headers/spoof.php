@@ -20,7 +20,7 @@ $message .= '<br class="">';
 $message .= 'You are doing very very good work with the Gencyber Camp.&nbsp;<br class="">';
 $message .= 'Just let me know what you need to make it bigly successful next year!<br class="">';
 $message .= 'Please put in your funding request here:&nbsp;';
-$message .= '<a href="http://faculty.ist.unomaha.edu/rgandhi/phishing-demo/encoding.html" class="">Grant Application</a>';
+$message .= '<a href="https://robinagandhi.github.io/phishing-demo/encoding.html" class="">Grant Application</a>';
 $message .= '<br class=""> <br class="">';
 $message .= '<div class="">~Yours Truly<br class="">';
 $message .= '<font color="#ff2600" class="">Donald</font></div>';
