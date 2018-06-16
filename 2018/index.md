@@ -1,5 +1,5 @@
 <!-- tab separated syntax: title (required)	 link_to_module (required)	 link_to_lesson_plan	 link_to_preview_img	 short description  -->
-First Principles	 https://mlhale.github.io/nebraska-gencyber-modules/first_principle/lesson-plan.md	 https://mlhale.github.io/nebraska-gencyber-modules/first_principle/README.md
+First Principles	 https://mlhale.github.io/nebraska-gencyber-modules/first_principle/ https://mlhale.github.io/nebraska-gencyber-modules/first_principle/lesson-plan	 
 Introduction to GitHub	 https://mlhale.github.io/nebraska-gencyber-modules/intro_to_github/lesson-plan.md	 https://mlhale.github.io/nebraska-gencyber-modules/intro_to_github/README.md
 Introduction to Littlebits	 https://mlhale.github.io/nebraska-gencyber-modules/hands_on_iot_littlebits/lesson-plan.md	 https://mlhale.github.io/nebraska-gencyber-modules/hands_on_iot_littlebits/README.md
 Hands on Littlebits and IFTTT	 https://mlhale.github.io/nebraska-gencyber-modules/hands_on_iot_little_bits_ifttt_app/lesson-plan.md	 https://mlhale.github.io/nebraska-gencyber-modules/hands_on_iot_little_bits_ifttt_app/README.md
