@@ -293,6 +293,10 @@ git init
 
 That's it! This directory is now ready for version control using git. This is useful if you are **creating new files from scratch**. You can also _push_ newly tracked files such to a remote repository hosted on Github. The steps are the same as we saw for repositories cloned from Github.
 
+### Git your engines ready!
+
+[Github Primer Quiz](https://unomaha.az1.qualtrics.com/jfe/form/SV_41PxKUKx24T3GG9)
+
 ### Cybersecurity First Principles Reflections
 
 Developers often design Github repositories, to be self-contained _modules_. These modules are then put in or taken out of a bigger project. During build time these components are composed to create an integrated system. This strategy facilitates __Modularization__. Following this principle allows globally distributed teams to collaborate and locate faulty components.
@@ -309,6 +313,10 @@ Finally, Github repositories separate source code from other resources. This sep
 * How To: [Ignore files during a check into Github](https://help.github.com/articles/ignoring-files/)
 
 [Top](#table-of-contents)
+
+## Lead Author
+
+- Robin Gandhi
 
 ## Acknowledgements
 
