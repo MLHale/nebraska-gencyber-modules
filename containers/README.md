@@ -54,7 +54,7 @@ Process Isolation keeps separate functions from accessing the same memory.
 - [Docker for Windows](https://docs.docker.com/docker-for-windows/install/)
 
 ## Prerequisite lessons
-- [Github Tutorial](../github/index.md)
+- [Github Tutorial](../intro_to_github/README.md)
 - [Linux Commands](https://www.cheatography.com/davechild/cheat-sheets/linux-command-line/pdf/)
 
 # Table of contents
@@ -175,7 +175,7 @@ Caution 😡:
 By default, a mounted volume allows full read/write by the container  
 This allows exceptions to the `Process Isolation`  principle
 
-To incorporate `Least Privlege`, use `:ro` to make the file read-only.
+To incorporate `Least Privilege`, use `:ro` to make the file read-only.
 
 `-v /c/Users/student/app:/webapp:ro`
 
