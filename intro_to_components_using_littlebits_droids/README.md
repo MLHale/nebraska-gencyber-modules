@@ -9,18 +9,26 @@
 * __Simplicity__: Simplicity allows a person to better understand hardware and software. Without the clutter of unnecessarily complicated code and interfaces, the software will be more understandable by people that will update the code when requirements change. It will be easier to understand by the testers and they will be able to spot problems sooner. By keeping software as simple and as focused as possible, the reliability and security is greatly increased.
 
 ### Introduction
-In this lesson, we will explore a cool hands-on technology called [Littlebits](http://littlebits.cc/). Littlebits follows a _component-based design_ paradigm using _GPIO_ (or general purpose input/output) to let you easily make apps. We will learn how to plug and play bits together to make some simple inventions. Littlebits will be the central platform for the rest of camp and you will be using them in other lessons.
+In this lesson, we will learn about components and how to solve a problem by decomposing it into sub-problems. We will also explore a cool hands-on technology called [Littlebits](http://littlebits.cc/). Littlebits follows a _component-based design_ paradigm using _GPIO_ (or general purpose input/output) to let you easily make apps. We will learn how to plug and play bits together to make some simple inventions. Littlebits is used as an enabling technology platform and is used in many other lessons.
 
 ### Goals
 By the end of this tutorial, you will be able to:
+* Understand and be able to describe `modularity`
+* Use components to solve a problem
+* Decompose a problem into smaller problems
 * Use Littlebits and GPIO to make your first (or another) IoT app
-* Understand IoT `modularity`
-* Come up with some of your own app ideas
 
 ### Materials Required
 
-* Littlebits kit
-* Power outlet nearby
+* [Littlebits Droid Inventor Kit](https://shop.littlebits.com/products/droid-inventor-kit)
+* [Number bit](https://shop.littlebits.com/products/number-bit)
+* [LED bit](https://shop.littlebits.com/products/led)
+* [Sound trigger bit](https://shop.littlebits.com/products/sound-trigger)
+* [Temperature sensor bit](https://shop.littlebits.com/products/temp-sensor)
+* [Button bit](https://shop.littlebits.com/products/button)
+* [Wire bit](https://shop.littlebits.com/products/wire-bit)
+* [USB power bit](https://shop.littlebits.com/products/usb-power)
+* [Rechargable battery pack](https://shop.littlebits.com/products/rechargeable-battery)
 
 ### Prerequisite lessons
 None
@@ -57,23 +65,25 @@ First, open your Littlebits box. Take a second to look at the different componen
 * **<span style="color: orange">Orange</span>** modules are special and usually are _supportive_ - think splitters and logic handlers.
 * **<span style="color: blue">Blue</span>** modules are power related.
 
-Look over each module. Your box should include a helpful component diagram fold-out poster that shows off each of your modules. Read about some of them.
+Look over each module. Your kit should include all of these parts:
 
-![unbox](./img/unbox.jpg)
+![unbox](./img/box-contents.jpg)
+> Note: Dog not included!
+
+![unbox](./img/droid-kit.jpg)
 
 ### Step 2: Gotta start somewhere
-No time like the present. Lets make a simple invention:
+No time like the present. Before we get into the droid, lets start with the basics to make a simple invention:
 
 * find the blue ```power``` module.
 * find the pink ```button``` input module
-* find the green ```bright led``` output module
+* find the green ```led``` output module
 
 Lets make a simple circuit:
 
-* Connect the power to the wall
-* Connect micro USB end to the ```power``` module
+* Connect micro USB end to the ```power``` module and plug up to a computer or the `battery`
 * Connect the ```button``` to the ```power``` module
-* Connect the ```bright led``` to the ```button```.
+* Connect the ```led``` to the ``` button```.
 
 ![unbox](./img/simple-circuit.jpg)
 
@@ -130,8 +140,7 @@ So far, we have outputs and inputs that result in an **on** (True) or **off** (F
 The world is not always **on** or **off**
 
 * Find the pink ```temperature sensor``` input module.
-* Find the pink ```i23 threshold``` input module.
-* Get the ```light sensor``` and ```bright led``` out again
+* Get the ```light sensor``` and ```led``` out again
 
 We are going to make a circuit that shows off variable voltage.
 
@@ -150,77 +159,17 @@ You should see the current temperature in the room near the device.
 
 You should see that the more light it gets, the more voltage it outputs.
 
-* Now connect the ```bright led``` to the right-hand side of the ```o21 number``` module
+* Now connect the ```led``` to the right-hand side of the ```o21 number``` module
 * Move your finger closer to and further away from the light sensor
 
 You should notice the light dimming and brightening depending on the voltage it receives.
 
-Ok, last part!
+### Step 6: Motoring onward
+We've saved the best for last. It is time to unbox and open up your droid! There are a lot of parts, but we Littlebits provides some nice `missions` to walk students through each of them.
 
-* Connect the ```i23 threshold``` module between the ```o21 number``` and ```bright led``` modules
-* Set the threshold on the ```i23 threshold``` by turning the knob.
-* Keep turning until a voltage of roughly 3 or greater turns on the ```bright led```
-* You can put your finger over the light sensor to change the voltage
-
-So, what did we learn? The thresholder can **set a voltage tolerance and output a 1 (True) if its input is greater than the threshold***. This can be helpful if you want to do **sound**, **light**, or **temperature** detection, but you only want to output True if the value is greater than some value.
-
-### Step 5: Hey, Listen - Audio
-![navi](./img/hey-listen.jpg)
-> Photo Credit: CmOrigins@deviantart http://cmorigins.deviantart.com/art/Navi-Hey-Listen-322389835
-
-Sometimes you want your inventions to have some sound. The next design we will explore involves using audio.
-
-* Find the pink ```mp3 player``` input module
-* Find the green ```synth speaker``` output module
-* Get the pink ```button``` module again
-
-Lets play a sound when a button is pressed:
-
-* Remove all components
-* Connect the ```button``` to the ```power```
-* Connect the ```mp3 player``` to the ```button```
-* Connect the ```synth speaker``` to the ```mp3 player```
-
-Press the button. This plays **all** of the tracks. If you move the ```mp3 player``` switch to **next**, it will allow you to press the ```button``` to switch tracks. You can also use the buttons on the ```mp3 player``` board.
-
-![mp3-player](./img/mp3player.jpg)
-
-By default, the ```mp3 player``` comes loaded with stock Littlebits tutorial audio. You can replace it using the ```sdcard``` in the board to load it with your own audio.
-
-### Step 6: Turning on an outlet with the IR transmitter
-The next module to explore is the ```ir transmitter``` and ```power outlet``` combo.
-
-* Find the green ```ir transmitter``` output module
-* Find the outlet with IR sensor (hard to miss)
-* Get your pink ```button``` module
-
-Lets wire this up so that when you press the button the outlet comes on.
-
-* Remove all components
-* Connect the ```button``` up to the ```power```
-* Plug the outlet into a nearby power outlet
-* Plug something up to the outlet (optional)
-* Connect the ```ir transmitter``` to the ```button```
-
-Pressing the button should turn on the device. The first time you press it, you will see the outlet light blink. It is pairing up. Once its paired, press the button a few times. You can see the red light turn on and off as you do.
-
-> Note: Since it is IR, the IR transmitter needs line-of-sight to the IR sensor on the outlet.
-
-### Step 7: Motoring onward
-The last module we will explore is the ```servo``` which can bring actual movement into your inventions!
-
-* Remove all components
-* Connect the ```button``` to the ```power```.
-* Connect the ```servo``` to the ```button```.
-* Open the packet of black attachments and pick one of the arms.
-* Attach the arm by pushing it down onto the ```white plastic gear``` on the ```servo```
-* Set the switch on the ```servo``` board to ```turn```.
-
-> Note you don't need to use the screw, but hang onto it for later - it should be used in production to secure the turner down
-
-When you press the button, it should rotate the arm 90 degrees.
-
-This can be used for all kinds of purposes!
+* Open droid inventor box
+* Install [Littlebits Droid Inventor App](https://littlebits.com/app) on your phone or tablet.
+* Complete Missions 1-9, 13
 
 ### Self Exploration
 Try some different designs yourself.

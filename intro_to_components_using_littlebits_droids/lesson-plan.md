@@ -1,45 +1,49 @@
-# Lesson Plan: Hands on IoT Littlebits Intro
+# Intro to Components using Littlebits Droids
 
 ### Summary
-This module will explore hands-on technology called **Littlebits**.
+This is a module about modules. It introduces component-based thinking using modular components in the `Littlebits Droid Kit (TM)`.
 
 ### Grade
-Educators
+6-10
 
 ### Time Required
-TBD
+1-2 hours
 
 ### First principles
 - [ ] Domain Separation
 - [ ] Process Isolation
 - [ ] Resource Encapsulation
-- [ ] Modularity
+- [x] Modularity
 - [ ] Least Privilege
 - [x] Abstraction
 - [ ] Data Hiding
 - [ ] Layering
-- [ ] Simplicity
-- [ ] Least Privilege
-- [ ] Minimization
-- [x] Modularization
-- [ ] Resource Encapsulation
 - [x] Simplicity
+- [ ] Minimization
 
 ### Learning Objectives
 
-1. Student will be able to use **Littlebits and **GPIO** to make IoT app.
-2. Student will be able to understand IoT modularity.
-3. Student will be able to come up with their own app ideas.
+1. Student will be able to use input and output modules to assemble a larger design.
+2. Student will understand the benefits of modularity.
+3. Student will be able to conceptualize and decompose a problem into smaller sub-problems.
 
 ### Materials list
 
-* Littlebits kit
-* Power outlet nearby
+* [Littlebits Droid Inventor Kit](https://shop.littlebits.com/products/droid-inventor-kit)
+* [Number bit](https://shop.littlebits.com/products/number-bit)
+* [LED bit](https://shop.littlebits.com/products/led)
+* [Sound trigger bit](https://shop.littlebits.com/products/sound-trigger)
+* [Temperature sensor bit](https://shop.littlebits.com/products/temp-sensor)
+* [Button bit](https://shop.littlebits.com/products/button)
+* [Wire bit](https://shop.littlebits.com/products/wire-bit)
+* [USB power bit](https://shop.littlebits.com/products/usb-power)
+* [Rechargable battery pack](https://shop.littlebits.com/products/rechargeable-battery)
+
 
 ### Learning Facilitation
 
 #### Warm up Activity
-Students will start by unboxing Littlebits and looking around components.
+Students will start by unboxing Littlebits and examining the components.
 
 #### Focused Activity
 Students will make circuits and add modules to them.
@@ -62,16 +66,20 @@ N/A
 
 ### Extension Activity (ies)
 
-Self exploration to try some different designs.
+Self exploration to try some different component configurations.
+
+### Module Lead Author
+
+[Dr. Matthew L. Hale](http://faculty.ist.unomaha.edu/mhale/)
 
 ### Acknowledgements
 
-* Littlbits API: http://developers.littlebitscloud.cc/
+N/A
 
 ## License
 [Nebraska GenCyber](https://github.com/MLHale/nebraska-gencyber) <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /></a><br /> is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</a>.
 
 Overall content: Copyright (C) 2017-2018  [Dr. Matthew L. Hale](http://faculty.ist.unomaha.edu/mhale/), [Dr. Robin Gandhi](http://faculty.ist.unomaha.edu/rgandhi/), [Dr. Briana B. Morrison](http://www.brianamorrison.net), and [Doug Rausch](http://www.bellevue.edu/about/leadership/faculty/rausch-douglas).
 
-Lesson content: Copyright (C) [Your name here](your site here) 2017.  
+Lesson content: Copyright (C) [Dr. Matthew L. Hale](http://faculty.ist.unomaha.edu/mhale/) 2018.  
 <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /></a><br /><span xmlns:dct="http://purl.org/dc/terms/" property="dct:title">This lesson</span> is licensed by the author under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</a>.
