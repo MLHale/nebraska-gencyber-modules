@@ -1,4 +1,4 @@
-# Using Git and Github
+# Introduction to Git and Github
 
 ### Cybersecurity First Principles in this lesson
 
@@ -44,15 +44,23 @@ ls  # list files and directories in current directory
 
 ### Table of Contents    
 <!-- TOC START min:1 max:3 link:true update:true -->
-- [Github Primer](#github-primer)
+- [Introduction to Git and Github](#introduction-to-git-and-github)
+    - [Cybersecurity First Principles in this lesson](#cybersecurity-first-principles-in-this-lesson)
+    - [Introduction: Git and Github](#introduction-git-and-github)
+    - [Lesson goals](#lesson-goals)
+    - [Materials required](#materials-required)
+    - [Prerequisite lessons](#prerequisite-lessons)
+    - [Table of Contents](#table-of-contents)
     - [Step 1: Create an Account](#step-1-create-an-account)
     - [Step 2: Hello World](#step-2-hello-world)
     - [Step 3: Clone a Repository](#step-3-clone-a-repository)
     - [Step 4: Push Changes](#step-4-push-changes)
     - [Step 5: Pull Remote Changes](#step-5-pull-remote-changes)
     - [Initialize a new repository](#initialize-a-new-repository)
-    - [Cyber security First Principles Reflections](#cybersecurity-first-principles-reflections)
+    - [Git your engines ready!](#git-your-engines-ready)
+    - [Cybersecurity First Principles Reflections](#cybersecurity-first-principles-reflections)
   - [Additional Resources](#additional-resources)
+  - [Lead Author](#lead-author)
   - [Acknowledgements](#acknowledgements)
   - [License](#license)
 
