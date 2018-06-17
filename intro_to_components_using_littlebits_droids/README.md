@@ -164,12 +164,17 @@ You should see that the more light it gets, the more voltage it outputs.
 
 You should notice the light dimming and brightening depending on the voltage it receives.
 
-### Step 6: Motoring onward
+### Step 6: Motoring onward: Beep beep boop
 We've saved the best for last. It is time to unbox and open up your droid! There are a lot of parts, but we Littlebits provides some nice `missions` to walk students through each of them.
 
-* Open droid inventor box
+* Open your `droid inventor kit`
 * Install [Littlebits Droid Inventor App](https://littlebits.com/app) on your phone or tablet.
-* Complete Missions 1-9, 13
+* Follow the in-box instructions:
+  * Connect the app to your droid
+  * Complete Missions 1-4,7,8,12 and 13
+
+You'll be driving around in no time!
+![driving](./img/driving.gif)
 
 ### Self Exploration
 Try some different designs yourself.
@@ -183,10 +188,13 @@ Try some different designs yourself.
 For more information, investigate the following:
 
 * [Littlebits](http://littlebits.cc/how-it-works) - Overview of concepts and available bits
-* [https://shop.littlebits.cc/products/smart-home-kit](https://shop.littlebits.cc/products/smart-home-kit) - Information about the Smart Home Kit
+
+## Lead Author
+
+- Matt Hale
 
 ### Acknowledgements
-Special thanks to [Dr. Robin Gandhi](http://faculty.ist.unomaha.edu/rgandhi/) for reviewing and editing this lesson.
+Special thanks to [Dr. Robin Gandhi](http://faculty.ist.unomaha.edu/rgandhi/) for reviewing and editing earlier versions of this lesson.
 
 ### License
 [Nebraska GenCyber](https://github.com/MLHale/nebraska-gencyber) <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /></a><br /> is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</a>.
