@@ -1,4 +1,4 @@
-# Hands-on IoT: Littlebits IFTTT
+# Web services and IoT using Littlebits and IFTTT
 ### Cybersecurity First Principles in this lesson
 
 * __Abstraction__: An abstraction is a representation of an object or concept. It could be something such as a door, a speedometer, or a data structure in computer science. Abstraction decouples the design from the implementation. The gauges in an automobile are an abstraction of the performance of a car. A map is an abstraction of the earth.
@@ -31,7 +31,7 @@ By the end of this tutorial, you will be able to:
 
 ### Table of Contents
 <!-- TOC START min:1 max:3 link:true update:true -->
-- [Hands-on IoT: Littlebits IFTTT](#hands-on-iot-littlebits-ifttt)
+- [Web services and IoT using Littlebits and IFTTT](#web-services-and-iot-using-littlebits-and-ifttt)
     - [Cybersecurity First Principles in this lesson](#cybersecurity-first-principles-in-this-lesson)
     - [Introduction and goals](#introduction-and-goals)
     - [Goals](#goals)
