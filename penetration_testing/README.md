@@ -39,10 +39,12 @@ For this lesson, you will need:
 * Little bits sensor and actuator
 
 ### Prerequisite lessons
-You should complete the following lessons before proceeding with this one.
-* [Hands on IoT: Little Bits Intro](../hands_on_iot_littlebits/README.md)
-* [Hands on IoT: Build an IFTTT IoT app w/ Little Bits](../hands_on_iot_little_bits_ifttt_app/README.md)
-* [RESTFul APIs](../restful_api/README.md)
+While not required, you should consider completing the following lessons before proceeding with this one.
+* [Intro to Components using Littlebits Droids](../intro_to_components_using_littlebits_droids/README.md)
+* [Web Services and IoT using Littlebits and IFTTT](../web_services_and_iot_using_littlebits_and_ifttt/README.md)
+* [Understanding REST and APIs](../understanding_rest_and_apis/README.md)
+
+(optional if you want to build the server you are penetration testing)
 * [Containers](../containers/README.md)
 * [Building a server](../building_a_server/README.md)
 
@@ -63,13 +65,13 @@ You should complete the following lessons before proceeding with this one.
     - [Step 5: Exploring Authentication and permissions](#step-5-exploring-authentication-and-permissions)
     - [Step 6: Examine the attack surface of our app](#step-6-examine-the-attack-surface-of-our-app)
     - [Step 7: Exploring the `home` method](#step-7-exploring-the-home-method)
-    - [Step 7: Explore the `ActivateCloudbit` endpoint](#step-7-explore-the-activatecloudbit-endpoint)
-  - [<Insert example of that here. >](#insert-example-of-that-here-)
-    - [Step 8: Perform a similar analysis on the other endpoints](#step-8-perform-a-similar-analysis-on-the-other-endpoints)
-    - [Step 9: Exploring Error Handling Behavior](#step-9-exploring-error-handling-behavior)
-    - [Step 10: Risk Assessment - Summarizing your test results](#step-10-risk-assessment---summarizing-your-test-results)
+    - [Step 8: Explore the `ActivateCloudbit` endpoint](#step-8-explore-the-activatecloudbit-endpoint)
+    - [Step 9: Perform a similar analysis on the other endpoints](#step-9-perform-a-similar-analysis-on-the-other-endpoints)
+    - [Step 10: Exploring Error Handling Behavior](#step-10-exploring-error-handling-behavior)
+    - [Step 11: Risk Assessment - Summarizing your test results](#step-11-risk-assessment---summarizing-your-test-results)
     - [Checkpoint](#checkpoint)
     - [Additional Resources](#additional-resources)
+  - [Lead Author](#lead-author)
     - [Acknowledgements](#acknowledgements)
     - [License](#license)
 
@@ -515,13 +517,17 @@ ipconfig --all
 
 Also be sure to login to http://localhost/admin/ and add your API key by clicking `Api keys` and then `Add Api Key`. If you forgot it or don't have your key handy, you can retrieve it by visiting http://control.littlebitscloud.cc/ and clicking on `settings`. Set `owner` to `admin` and then click save to store it.
 
+## Lead Author
+
+- Matt Hale
+
 ### Acknowledgements
 Special thanks to [Dr. Robin Gandhi](http://faculty.ist.unomaha.edu/rgandhi/), Andrew Li, and April Guerin for reviewing and editing this module.
 
 ### License
 [Nebraska GenCyber](https://github.com/MLHale/nebraska-gencyber) <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /></a><br /> is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</a>.
 
-Overall content: Copyright (C) 2017  [Dr. Matthew L. Hale](http://faculty.ist.unomaha.edu/mhale/), [Dr. Robin Gandhi](http://faculty.ist.unomaha.edu/rgandhi/), and [Doug Rausch](http://www.bellevue.edu/about/leadership/faculty/rausch-douglas).
+Overall content: Copyright (C) 2017-2018  [Dr. Matthew L. Hale](http://faculty.ist.unomaha.edu/mhale/), [Dr. Robin Gandhi](http://faculty.ist.unomaha.edu/rgandhi/), [Dr. Briana B. Morrison](http://www.brianamorrison.net), and [Doug Rausch](http://www.bellevue.edu/about/leadership/faculty/rausch-douglas).
 
-Lesson content: Copyright (C) [Dr. Matthew Hale](http://faculty.ist.unomaha.edu/mhale/) 2017.  
+Lesson content: Copyright (C) [Dr. Matthew Hale](http://faculty.ist.unomaha.edu/mhale/) 2017-2018.  
 <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /></a><br /><span xmlns:dct="http://purl.org/dc/terms/" property="dct:title">This lesson</span> is licensed by the author under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</a>.

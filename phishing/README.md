@@ -6,5 +6,4 @@ This module has three parts:
 
 1. [URL Analysis](./url-analysis.md)
 2. [Email Analysis](./email-headeranalysis.md)
-3. [Obfuscation, Clickjacking   
-and OSINT gathering](./url-analysis-advanced.md)
+3. [Obfuscation, Clickjacking and OSINT gathering](./url-analysis-advanced.md)

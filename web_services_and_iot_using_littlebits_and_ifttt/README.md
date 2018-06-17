@@ -27,7 +27,7 @@ By the end of this tutorial, you will be able to:
 * Wi-Fi Internet Connection
 
 ### Prerequisite lessons
-[Littlebits Intro](../hands_on_iot_littlebits/README.md)
+[Intro to components using Littlebits Droids](../intro_to_components_using_littlebits_droids/README.md)
 
 ### Table of Contents
 <!-- TOC START min:1 max:3 link:true update:true -->
@@ -51,13 +51,14 @@ By the end of this tutorial, you will be able to:
     - [Test you Bits, err... Wits!](#test-you-bits-err-wits)
     - [Cybersecurity First Principle Reflections](#cybersecurity-first-principle-reflections)
     - [Additional Resources](#additional-resources)
+  - [Lead Author](#lead-author)
     - [Acknowledgements](#acknowledgements)
     - [License](#license)
 
 <!-- TOC END -->
 ### Before We Start
 <!--Last lesson link leads to a page with no content-->
-In the [last lesson](../hands_on_iot_littlebits/), you saw how versatile, modular, and cool Littlebits was to work with. It was easy to plug and play different modules together following simple `design patterns` to make cool, simple apps. Now, imagine everything you saw before can be hooked up to the internet and **controlled using a smartphone or online app**. We are going to do _THAT_ now!
+In the [last lesson](../intro_to_components_using_littlebits_droids/README.md), you saw how versatile, modular, and cool Littlebits was to work with. It was easy to plug and play different modules together following simple `design patterns` to make cool, simple apps. Now, imagine everything you saw before can be hooked up to the internet and **controlled using a smartphone or online app**. We are going to do _THAT_ now!
 
 ### Step 1: Create an Account / Login to Littlebits portal!
 To start we need to create an account:
@@ -283,6 +284,9 @@ For more information, investigate the following.
 * [Littlebits](http://littlebits.cc/how-it-works) - Overview of concepts and available bits
 * [https://shop.littlebits.cc/products/smart-home-kit](https://shop.littlebits.cc/products/smart-home-kit) - Information about the Smart Home Kit
 
+## Lead Author
+
+- Matt Hale
 
 ### Acknowledgements
 Special thanks to [Dr. Robin Gandhi](http://faculty.ist.unomaha.edu/rgandhi/) for reviewing and editing this lesson.
@@ -290,7 +294,7 @@ Special thanks to [Dr. Robin Gandhi](http://faculty.ist.unomaha.edu/rgandhi/) fo
 ### License
 [Nebraska GenCyber](https://github.com/MLHale/nebraska-gencyber) <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /></a><br /> is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</a>.
 
-Overall content: Copyright (C) 2017  [Dr. Matthew L. Hale](http://faculty.ist.unomaha.edu/mhale/), [Dr. Robin Gandhi](http://faculty.ist.unomaha.edu/rgandhi/), and [Doug Rausch](http://www.bellevue.edu/about/leadership/faculty/rausch-douglas).
+Overall content: Copyright (C) 2017-2018  [Dr. Matthew L. Hale](http://faculty.ist.unomaha.edu/mhale/), [Dr. Robin Gandhi](http://faculty.ist.unomaha.edu/rgandhi/), [Dr. Briana B. Morrison](http://www.brianamorrison.net), and [Doug Rausch](http://www.bellevue.edu/about/leadership/faculty/rausch-douglas).
 
-Lesson content: Copyright (C) [Dr. Matthew L. Hale](http://faculty.ist.unomaha.edu/mhale/) 2017.  
+Lesson content: Copyright (C) [Dr. Matthew L. Hale](http://faculty.ist.unomaha.edu/mhale/) 2017-2018.  
 <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /></a><br /><span xmlns:dct="http://purl.org/dc/terms/" property="dct:title">This lesson</span> is licensed by the author under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</a>.
