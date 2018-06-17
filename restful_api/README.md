@@ -1,4 +1,4 @@
-# RESTFul APIs and Little bits
+# Exchanging information online with REST and APIs
 
 ### Cybersecurity First Principles in this lesson
 
@@ -41,7 +41,7 @@ You should complete the [Hands on IoT: Little Bits Intro](../hands_on_iot_little
 
 ### Table of Contents
 <!-- TOC START min:1 max:3 link:true update:true -->
-- [RESTFul APIs and Little bits](#restful-apis-and-little-bits)
+- [Exchanging information online with REST and APIs](#exchanging-information-online-with-rest-and-apis)
     - [Cybersecurity First Principles in this lesson](#cybersecurity-first-principles-in-this-lesson)
     - [Introduction](#introduction)
     - [Goals](#goals)
