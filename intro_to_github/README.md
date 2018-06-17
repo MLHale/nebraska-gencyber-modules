@@ -1,4 +1,4 @@
-# Github Primer
+# Using Git and Github
 
 ### Cybersecurity First Principles in this lesson
 
