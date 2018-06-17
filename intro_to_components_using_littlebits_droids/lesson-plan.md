@@ -12,7 +12,7 @@ This is a module about modules. It introduces component-based thinking using mod
 ### First principles
 - [ ] Domain Separation
 - [ ] Process Isolation
-- [ ] Resource Encapsulation
+- [x] Resource Encapsulation
 - [x] Modularity
 - [ ] Least Privilege
 - [x] Abstraction
@@ -23,9 +23,8 @@ This is a module about modules. It introduces component-based thinking using mod
 
 ### Learning Objectives
 
-1. Student will be able to use input and output modules to assemble a larger design.
-2. Student will understand the benefits of modularity.
-3. Student will be able to conceptualize and decompose a problem into smaller sub-problems.
+1. Student will be able to use input and output modules to assemble a larger device.
+2. Student will understand the benefits of modularity, abstraction, and encapsulation.
 
 ### Materials list
 
@@ -46,10 +45,10 @@ This is a module about modules. It introduces component-based thinking using mod
 Students will start by unboxing Littlebits and examining the components.
 
 #### Focused Activity
-Students will make circuits and add modules to them.
+Students will make circuits and add components to them to solve small problems - including driving a droid around.
 
 #### Closure
-Students will make a mashup to signal the little bits api.
+Students will finish a few missions to see how components can be combined to solve more complex challenges.
 
 #### Reflection
 Students will review relevant first principles learned through the lesson.
@@ -58,7 +57,7 @@ Students will review relevant first principles learned through the lesson.
 
 1. Walk Around
 1. Oral Questioning
-1. Quiz (Kahootz)
+1. Quiz
 
 ### Accommodations for students with disabilities
 
