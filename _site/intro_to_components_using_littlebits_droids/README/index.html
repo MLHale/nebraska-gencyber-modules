@@ -82,7 +82,7 @@
 <h3 id="goals">Goals</h3>
 <p>By the end of this tutorial, you will be able to:</p>
 <ul>
-  <li>Understand and be able to describe <code>modularity</code>, <code>encapsulation</code>, <code>abstraction</code>, and <code>simplicity</code> in terms of components</li>
+  <li>Understand and be able to describe <code class="highlighter-rouge">modularity</code>, <code class="highlighter-rouge">encapsulation</code>, <code class="highlighter-rouge">abstraction</code>, and <code class="highlighter-rouge">simplicity</code> in terms of components</li>
   <li>Use Littlebits components and GPIO to make simple IoT devices</li>
 </ul>
 
@@ -155,79 +155,79 @@
 <p>No time like the present. Before we get into the droid, lets start with the basics to make a simple invention:</p>
 
 <ul>
-  <li>find the blue <code>power</code> module.</li>
-  <li>find the pink <code>button</code> input module</li>
-  <li>find the green <code>led</code> output module</li>
+  <li>find the blue <code class="highlighter-rouge">power</code> module.</li>
+  <li>find the pink <code class="highlighter-rouge">button</code> input module</li>
+  <li>find the green <code class="highlighter-rouge">led</code> output module</li>
 </ul>
 
 <p>Lets make a simple circuit:</p>
 
 <ul>
-  <li>Connect micro USB end to the <code>power</code> module and plug up to a computer or the <code>battery</code></li>
-  <li>Connect the <code>button</code> to the <code>power</code> module</li>
-  <li>Connect the <code>led</code> to the <code>button</code>.</li>
+  <li>Connect micro USB end to the <code class="highlighter-rouge">power</code> module and plug up to a computer or the <code class="highlighter-rouge">battery</code></li>
+  <li>Connect the <code class="highlighter-rouge">button</code> to the <code class="highlighter-rouge">power</code> module</li>
+  <li>Connect the <code class="highlighter-rouge">led</code> to the <code class="highlighter-rouge">button</code>.</li>
 </ul>
 
 <p><img src="../img/simple-circuit.jpg" alt="unbox" /></p>
 
 <p>Press the button and the light turns on. That was easy!</p>
 
-<p>This is <code>GPIO</code> in a nutshell. Each module has a general purpose input and output, with a standard interface, and <strong>doesn’t need to understand or know anything about what they are connected to</strong>. These modules also need to protect themselves from invalid input. This is a great example of the <code>modularity</code> cybersecurity first principle.</p>
+<p>This is <code class="highlighter-rouge">GPIO</code> in a nutshell. Each module has a general purpose input and output, with a standard interface, and <strong>doesn’t need to understand or know anything about what they are connected to</strong>. These modules also need to protect themselves from invalid input. This is a great example of the <code class="highlighter-rouge">modularity</code> cybersecurity first principle.</p>
 
 <h3 id="step-3-count-all-the-things">Step 3: Count all the things!</h3>
 <p>Ok, we’ve made our first circuit - but it’s pretty simple. Let’s add some more modules:</p>
 
 <ul>
-  <li>Find the green <code>o21 number</code> output module</li>
+  <li>Find the green <code class="highlighter-rouge">o21 number</code> output module</li>
 </ul>
 
 <p>Time to extend your previous circuit to <img src="../img/count-all-the-things.jpg" alt="count" /></p>
 
 <ul>
-  <li>Connect the <code>o21 number</code> to the <code>bright led</code></li>
-  <li>Set the switch to the up position on the <code>o21 number</code> module. This puts it into <strong>count</strong> mode instead of <strong>voltage</strong> mode.</li>
+  <li>Connect the <code class="highlighter-rouge">o21 number</code> to the <code class="highlighter-rouge">bright led</code></li>
+  <li>Set the switch to the up position on the <code class="highlighter-rouge">o21 number</code> module. This puts it into <strong>count</strong> mode instead of <strong>voltage</strong> mode.</li>
 </ul>
 
 <p>Press the button!</p>
 
-<p>Pretty simple. Notice we can <strong>chain the output modules together</strong> (<code>bright led</code> and a <code>counter</code> in this case). Any number of output modules can be chained together.</p>
+<p>Pretty simple. Notice we can <strong>chain the output modules together</strong> (<code class="highlighter-rouge">bright led</code> and a <code class="highlighter-rouge">counter</code> in this case). Any number of output modules can be chained together.</p>
 
 <p>Now, lets switch up our circuit a bit.</p>
 
 <ul>
-  <li>Find the pink <code>sound trigger</code> input module</li>
-  <li>Find the pink <code>light sensor</code> input module</li>
+  <li>Find the pink <code class="highlighter-rouge">sound trigger</code> input module</li>
+  <li>Find the pink <code class="highlighter-rouge">light sensor</code> input module</li>
 </ul>
 
 <p>Lets swap some components around.</p>
 
 <ul>
-  <li>Remove the <code>led</code> module.</li>
+  <li>Remove the <code class="highlighter-rouge">led</code> module.</li>
 </ul>
 
 <p>Press the button. Everything still works!</p>
 
 <ul>
-  <li>Connect the <code>light sensor</code> to the <code>power</code> and then to the <code>button</code></li>
+  <li>Connect the <code class="highlighter-rouge">light sensor</code> to the <code class="highlighter-rouge">power</code> and then to the <code class="highlighter-rouge">button</code></li>
 </ul>
 
-<p>Press the button. Does it work? How about if you cover up the light sensor? The simple functionality of each component is an example of <code>simplicity</code>.</p>
+<p>Press the button. Does it work? How about if you cover up the light sensor? The simple functionality of each component is an example of <code class="highlighter-rouge">simplicity</code>.</p>
 
-<p>This shows you that you can also <strong>chain multiple input modules together</strong> and their <strong>total behavior is a combination of their input designs</strong>. In this case, our counter only worked if the light was detected <strong>AND</strong> the button was pressed. Allowing each component to hand its own functionality is an example of <code>resource encapsulation</code> - since each component encapsulates the code and components needed to do its job.</p>
+<p>This shows you that you can also <strong>chain multiple input modules together</strong> and their <strong>total behavior is a combination of their input designs</strong>. In this case, our counter only worked if the light was detected <strong>AND</strong> the button was pressed. Allowing each component to hand its own functionality is an example of <code class="highlighter-rouge">resource encapsulation</code> - since each component encapsulates the code and components needed to do its job.</p>
 
 <p>Lets try one more combo:</p>
 
 <ul>
-  <li>Remove the <code>button</code> module.</li>
-  <li>Remove the <code>light sensor</code> module.</li>
-  <li>Connect the <code>sound trigger</code> between the <code>power</code> and the <code>o21 number</code> module.</li>
+  <li>Remove the <code class="highlighter-rouge">button</code> module.</li>
+  <li>Remove the <code class="highlighter-rouge">light sensor</code> module.</li>
+  <li>Connect the <code class="highlighter-rouge">sound trigger</code> between the <code class="highlighter-rouge">power</code> and the <code class="highlighter-rouge">o21 number</code> module.</li>
 </ul>
 
 <p>Snap your fingers or tap the table near your device.</p>
 
 <p><img src="../img/sound-counter.gif" alt="unbox" /></p>
 
-<p>In cybersecurity, simplicity is the notion that each function should only do what it needs to do and nothing else. All of the littlebits components are a good example of this. The <code>light sensor</code> does not also act as a <code>temperature sensor</code> or <code>sound sensor</code> and vice versa - this makes them easier to test, debug, and protect.</p>
+<p>In cybersecurity, simplicity is the notion that each function should only do what it needs to do and nothing else. All of the littlebits components are a good example of this. The <code class="highlighter-rouge">light sensor</code> does not also act as a <code class="highlighter-rouge">temperature sensor</code> or <code class="highlighter-rouge">sound sensor</code> and vice versa - this makes them easier to test, debug, and protect.</p>
 
 <h3 id="step-4-the-world-is-more-than-true-or-false---variable-inputs">Step 4: The world is more than True or False - Variable Inputs</h3>
 <p>So far, we have outputs and inputs that result in an <strong>on</strong> (True) or <strong>off</strong> (False) behavior.</p>
@@ -237,42 +237,42 @@
 <p>The world is not always <strong>on</strong> or <strong>off</strong></p>
 
 <ul>
-  <li>Find the pink <code>temperature sensor</code> input module.</li>
-  <li>Get the <code>light sensor</code> and <code>led</code> out again</li>
+  <li>Find the pink <code class="highlighter-rouge">temperature sensor</code> input module.</li>
+  <li>Get the <code class="highlighter-rouge">light sensor</code> and <code class="highlighter-rouge">led</code> out again</li>
 </ul>
 
 <p>We are going to make a circuit that shows off variable voltage.</p>
 
 <ul>
   <li>Remove all components.</li>
-  <li>Connect the <code>temperature sensor</code> to the <code>o21 number</code> module.</li>
-  <li>Set the <code>o21 number</code> switch to <strong>value</strong> (middle position)</li>
-  <li>Set the <code>temperature sensor</code> switch to <strong>f</strong> (for Fahrenheit)</li>
+  <li>Connect the <code class="highlighter-rouge">temperature sensor</code> to the <code class="highlighter-rouge">o21 number</code> module.</li>
+  <li>Set the <code class="highlighter-rouge">o21 number</code> switch to <strong>value</strong> (middle position)</li>
+  <li>Set the <code class="highlighter-rouge">temperature sensor</code> switch to <strong>f</strong> (for Fahrenheit)</li>
 </ul>
 
 <p>You should see the current temperature in the room near the device.
 <img src="../img/temperature.jpg" alt="temperature" /></p>
 
 <ul>
-  <li>Replace the <code>temperature sensor</code> with the <code>light sensor</code></li>
-  <li>Put the <code>o21 number</code> module back into <strong>voltage</strong> mode by moving the switch to the bottom position.</li>
+  <li>Replace the <code class="highlighter-rouge">temperature sensor</code> with the <code class="highlighter-rouge">light sensor</code></li>
+  <li>Put the <code class="highlighter-rouge">o21 number</code> module back into <strong>voltage</strong> mode by moving the switch to the bottom position.</li>
   <li>Move your finger closer to and further away from the light sensor</li>
 </ul>
 
 <p>You should see that the more light it gets, the more voltage it outputs.</p>
 
 <ul>
-  <li>Now connect the <code>led</code> to the right-hand side of the <code>o21 number</code> module</li>
+  <li>Now connect the <code class="highlighter-rouge">led</code> to the right-hand side of the <code class="highlighter-rouge">o21 number</code> module</li>
   <li>Move your finger closer to and further away from the light sensor</li>
 </ul>
 
 <p>You should notice the light dimming and brightening depending on the voltage it receives.</p>
 
 <h3 id="step-6-motoring-onward-beep-beep-boop">Step 6: Motoring onward: Beep beep boop</h3>
-<p>We’ve saved the best for last. It is time to unbox and open up your droid! There are a lot of parts, but we Littlebits provides some nice <code>missions</code> to walk students through each of them.</p>
+<p>We’ve saved the best for last. It is time to unbox and open up your droid! There are a lot of parts, but we Littlebits provides some nice <code class="highlighter-rouge">missions</code> to walk students through each of them.</p>
 
 <ul>
-  <li>Open your <code>droid inventor kit</code></li>
+  <li>Open your <code class="highlighter-rouge">droid inventor kit</code></li>
   <li>Install <a href="https://littlebits.com/app">Littlebits Droid Inventor App</a> on your phone or tablet.</li>
   <li>Follow the in-box instructions:
     <ul>
@@ -282,7 +282,7 @@
   </li>
 </ul>
 
-<p>The Littlebits droid inventory kit has a controller and mission interface that is a good example of <code>abstraction</code> - since it represents information about a real physical device in a way that allows the user to conceptualize it.</p>
+<p>The Littlebits droid inventory kit has a controller and mission interface that is a good example of <code class="highlighter-rouge">abstraction</code> - since it represents information about a real physical device in a way that allows the user to conceptualize it.</p>
 
 <p>You’ll be driving around in no time!
 <img src="../img/driving.gif" alt="driving" /></p>

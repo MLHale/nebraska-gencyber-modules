@@ -85,7 +85,7 @@
 
 <h2 id="overview">Overview</h2>
 
-<p>The name <code>firewall</code> is inspired from its physical manifestation in construction which refers to walls that are designed to stop a fire from spreading.</p>
+<p>The name <code class="highlighter-rouge">firewall</code> is inspired from its physical manifestation in construction which refers to walls that are designed to stop a fire from spreading.</p>
 
 <blockquote>
   <p><img src="https://upload.wikimedia.org/wikipedia/commons/3/3c/Firewall_Electrical_Substation.jpg" alt="Firewall in a substation" /></p>
@@ -97,7 +97,7 @@
   <p><img src="./img/networkfirewall.png" alt="network firewalls" /></p>
 </blockquote>
 
-<p>Firewalls aren’t just for networks. Each computer in a network can have its own <code>personal firewall</code>. All popular operating systems now come with a firewall installed. For Windows Server and Desktop installations we will focus on the built-in <code>Windows Firewall with Advanced Security</code> application. This application can be configured with a graphical user interface or the command line interface using <code>netsh</code> or Powershell <code>NetSecurity</code> modules. These options provide a lot of flexibility and control over the configuration of the firewall for personal and enterprise use.</p>
+<p>Firewalls aren’t just for networks. Each computer in a network can have its own <code class="highlighter-rouge">personal firewall</code>. All popular operating systems now come with a firewall installed. For Windows Server and Desktop installations we will focus on the built-in <code class="highlighter-rouge">Windows Firewall with Advanced Security</code> application. This application can be configured with a graphical user interface or the command line interface using <code class="highlighter-rouge">netsh</code> or Powershell <code class="highlighter-rouge">NetSecurity</code> modules. These options provide a lot of flexibility and control over the configuration of the firewall for personal and enterprise use.</p>
 
 <blockquote>
   <p><img src="./img/windowsfirewall.png" alt="Windows firewall" /></p>
@@ -106,13 +106,13 @@
 <p>When two machines communicate (such as a client talking to a server), communication spans many different <strong>layers</strong>. Each of these layers is progressively lower level as you move downward. In general there are 7 layers:</p>
 
 <ul>
-  <li><code>Application</code> - The highest level layer where application data is handled (HTTP/FTP/DHCP/SSH/SSL, etc)</li>
-  <li><code>Presentation</code> - often the same as the application level, sometimes acts as a translation between application and session</li>
-  <li><code>Session</code> - The layer that is used to form sessions between applications (often issues remote procedure calls (RPCs))</li>
-  <li><code>Transport</code> - One of the two layers that are foundational to the modern internet (TCP / UDP), this layer serves to transport packets from one host to another.</li>
-  <li><code>Network</code> - The second of the foundation layers for the modern internet (IP, IPv4, IPv6, IPSec, etc). This layer serves to transport packets between routers (often referred to as <strong>packet forwarding</strong>).</li>
-  <li><code>Data Link</code> - The biggest example of the data link layer is <code>ethernet</code>. It provides a protocol for exchanging data over a local network.</li>
-  <li>and <code>Physical</code> - This layer is nothing but raw bits that underly the interpretation of those bits at higher levels.</li>
+  <li><code class="highlighter-rouge">Application</code> - The highest level layer where application data is handled (HTTP/FTP/DHCP/SSH/SSL, etc)</li>
+  <li><code class="highlighter-rouge">Presentation</code> - often the same as the application level, sometimes acts as a translation between application and session</li>
+  <li><code class="highlighter-rouge">Session</code> - The layer that is used to form sessions between applications (often issues remote procedure calls (RPCs))</li>
+  <li><code class="highlighter-rouge">Transport</code> - One of the two layers that are foundational to the modern internet (TCP / UDP), this layer serves to transport packets from one host to another.</li>
+  <li><code class="highlighter-rouge">Network</code> - The second of the foundation layers for the modern internet (IP, IPv4, IPv6, IPSec, etc). This layer serves to transport packets between routers (often referred to as <strong>packet forwarding</strong>).</li>
+  <li><code class="highlighter-rouge">Data Link</code> - The biggest example of the data link layer is <code class="highlighter-rouge">ethernet</code>. It provides a protocol for exchanging data over a local network.</li>
+  <li>and <code class="highlighter-rouge">Physical</code> - This layer is nothing but raw bits that underly the interpretation of those bits at higher levels.</li>
 </ul>
 
 <blockquote>
@@ -130,7 +130,7 @@
 </ul>
 
 <p>Discussion:<br />
-The headers on ethernet frames at the <code>Data link</code> layer and below are not useful for routing across networks. Packet filtering Firewalls rules are authored using routing information starting at the <code>Network</code> (also called the IP layer in the TCP/IP implementation) layer and above, all the way to the <code>Application</code> layer. As a result IP layer firewalls are the simplest and most widely used.</p>
+The headers on ethernet frames at the <code class="highlighter-rouge">Data link</code> layer and below are not useful for routing across networks. Packet filtering Firewalls rules are authored using routing information starting at the <code class="highlighter-rouge">Network</code> (also called the IP layer in the TCP/IP implementation) layer and above, all the way to the <code class="highlighter-rouge">Application</code> layer. As a result IP layer firewalls are the simplest and most widely used.</p>
 
 <p><a href="#table-of-contents">Top</a></p>
 
@@ -154,7 +154,7 @@ The headers on ethernet frames at the <code>Data link</code> layer and below are
 
 <p>First, lets consider <strong>Ports 1 and 4</strong>. These ports are open. Which means they permit packets from internal and external sources. So in the case of the TCP protocol, which forms explicit connections or circuits before transmitting data via a handshake mechanism, such connections can be externally or internally initiated.</p>
 
-<p>In the case of <strong>Port 2</strong>, it allows unrestricted flow of information if the connection is initiated internally. However, it blocks all external requests to initiate an information flow. That is, it permits packets from external sources only if they correspond to a <code>connection</code> initiated by an internal source. The firewall will not permit connection requests from external sources. This restriction is useful when an internal web client initiates a web browsing request, then the firewall will allow the corresponding incoming response from an external webserver to pass through the firewall. Any connection initiated externally will not be allowed.</p>
+<p>In the case of <strong>Port 2</strong>, it allows unrestricted flow of information if the connection is initiated internally. However, it blocks all external requests to initiate an information flow. That is, it permits packets from external sources only if they correspond to a <code class="highlighter-rouge">connection</code> initiated by an internal source. The firewall will not permit connection requests from external sources. This restriction is useful when an internal web client initiates a web browsing request, then the firewall will allow the corresponding incoming response from an external webserver to pass through the firewall. Any connection initiated externally will not be allowed.</p>
 
 <p>Finally, <strong>Port 3</strong> is closed. Which means that it denies all traffic. A closed port may just drop the packets or send back an RST or “Reset” packet. From a security and resource consumption standpoint, it is always better to just drop the packet. Upon denial of access, no additional or useful information should be communicated back.</p>
 
@@ -162,11 +162,11 @@ The headers on ethernet frames at the <code>Data link</code> layer and below are
 
 <h2 id="firewall-rules">Firewall Rules</h2>
 
-<p>Firewalls are configured using simple <code>if then</code> rules. In a packet filtering firewall, a rule says: <code>IF source IP, destination IP, protocol, and local ports and remote ports match a pattern THEN take this action</code>. Since there are many rules involved, the order of the rules matters. <strong>A LOT!</strong></p>
+<p>Firewalls are configured using simple <code class="highlighter-rouge">if then</code> rules. In a packet filtering firewall, a rule says: <code class="highlighter-rouge">IF source IP, destination IP, protocol, and local ports and remote ports match a pattern THEN take this action</code>. Since there are many rules involved, the order of the rules matters. <strong>A LOT!</strong></p>
 
-<p>Rules are evaluated <strong>in order</strong>, starting with the first one at the top until a first match is discovered. If your top rule is very generic, i.e. matches almost every packet, then <strong>none of the later specific rules will ever be evaluated</strong>. So it is best to start with rules that are the <code>most restrictive</code> (i.e rules that focus on to specific services and have a very small chance of interfering with other rules). After ordering by restrictiveness it is then best to order rules according to <code>how well they match the majority of your network traffic</code>. This minimizes the number of checks required to find a matching rule. If <code>block</code> and <code>allow</code> rules do not match, the default policy of the firewall is applied.</p>
+<p>Rules are evaluated <strong>in order</strong>, starting with the first one at the top until a first match is discovered. If your top rule is very generic, i.e. matches almost every packet, then <strong>none of the later specific rules will ever be evaluated</strong>. So it is best to start with rules that are the <code class="highlighter-rouge">most restrictive</code> (i.e rules that focus on to specific services and have a very small chance of interfering with other rules). After ordering by restrictiveness it is then best to order rules according to <code class="highlighter-rouge">how well they match the majority of your network traffic</code>. This minimizes the number of checks required to find a matching rule. If <code class="highlighter-rouge">block</code> and <code class="highlighter-rouge">allow</code> rules do not match, the default policy of the firewall is applied.</p>
 
-<p>Always start firewall configuration with a <code>whitelisting</code> philosophy, where you <strong>Deny by default</strong> and allow only specific information flows. This means, start the firewall configuration by dropping all packets by default. Then add rules to <code>allow</code> specific traffic patterns (incoming, outbound, or forwarding) as required by application needs.</p>
+<p>Always start firewall configuration with a <code class="highlighter-rouge">whitelisting</code> philosophy, where you <strong>Deny by default</strong> and allow only specific information flows. This means, start the firewall configuration by dropping all packets by default. Then add rules to <code class="highlighter-rouge">allow</code> specific traffic patterns (incoming, outbound, or forwarding) as required by application needs.</p>
 
 <p>Let’s look at an example for exposing a web service over HTTP.</p>
 
@@ -190,7 +190,7 @@ The headers on ethernet frames at the <code>Data link</code> layer and below are
       <td style="text-align: center">web server</td>
       <td style="text-align: center">http (80)</td>
       <td style="text-align: center">any</td>
-      <td style="text-align: center"><code>accept</code></td>
+      <td style="text-align: center"><code class="highlighter-rouge">accept</code></td>
     </tr>
     <tr>
       <td>2</td>
@@ -199,7 +199,7 @@ The headers on ethernet frames at the <code>Data link</code> layer and below are
       <td style="text-align: center">any</td>
       <td style="text-align: center">http (80)</td>
       <td style="text-align: center">any</td>
-      <td style="text-align: center"><code>accept</code></td>
+      <td style="text-align: center"><code class="highlighter-rouge">accept</code></td>
     </tr>
     <tr>
       <td>3</td>
@@ -208,16 +208,16 @@ The headers on ethernet frames at the <code>Data link</code> layer and below are
       <td style="text-align: center">any</td>
       <td style="text-align: center">any</td>
       <td style="text-align: center">any</td>
-      <td style="text-align: center"><code>reject</code></td>
+      <td style="text-align: center"><code class="highlighter-rouge">reject</code></td>
     </tr>
   </tbody>
 </table>
 
-<p><strong>Rule 1</strong> permits externally initiated requests (Direction: inbound) to a webserver behind the firewall. So the source is <code>any</code>, since we cannot anticipate a specific IP address at the time of writing the rule. The destination is the IP address of the webserver and the Local Port specifies the port number where the service is typically hosted. That would be port <code>80</code> for a web server. The request may originate from any Remote Port. If these conditions match an incoming packet then the action is <code>accept</code>(allow packet to come in).</p>
+<p><strong>Rule 1</strong> permits externally initiated requests (Direction: inbound) to a webserver behind the firewall. So the source is <code class="highlighter-rouge">any</code>, since we cannot anticipate a specific IP address at the time of writing the rule. The destination is the IP address of the webserver and the Local Port specifies the port number where the service is typically hosted. That would be port <code class="highlighter-rouge">80</code> for a web server. The request may originate from any Remote Port. If these conditions match an incoming packet then the action is <code class="highlighter-rouge">accept</code>(allow packet to come in).</p>
 
-<p><strong>Rule 2</strong> permits internal requests (Direction: outbound) out to the Internet. So the source is any IP address of the <code>web server</code> and the Destination is  <code>any</code>. The Local Port is <code>80</code> (originating port) and Remote Port is <code>any</code>. If a packet matches these conditions then the action is <code>accept</code> (allow packet to go out).</p>
+<p><strong>Rule 2</strong> permits internal requests (Direction: outbound) out to the Internet. So the source is any IP address of the <code class="highlighter-rouge">web server</code> and the Destination is  <code class="highlighter-rouge">any</code>. The Local Port is <code class="highlighter-rouge">80</code> (originating port) and Remote Port is <code class="highlighter-rouge">any</code>. If a packet matches these conditions then the action is <code class="highlighter-rouge">accept</code> (allow packet to go out).</p>
 
-<p><strong>Rule 3</strong> denies all traffic (in <code>any</code> direction). So all match conditions are specified as <code>any</code> and the action is <code>reject</code>. This is <code>Default Deny</code> behavior.</p>
+<p><strong>Rule 3</strong> denies all traffic (in <code class="highlighter-rouge">any</code> direction). So all match conditions are specified as <code class="highlighter-rouge">any</code> and the action is <code class="highlighter-rouge">reject</code>. This is <code class="highlighter-rouge">Default Deny</code> behavior.</p>
 
 <h3 id="question-1">Question</h3>
 
@@ -225,7 +225,7 @@ The headers on ethernet frames at the <code>Data link</code> layer and below are
 
 <p>Discussion:</p>
 <ul>
-  <li>Inbound and outbound rules are typically maintained in separate lists. We will see this shortly. Rule 3 is typically implemented as a <code>Default Policy</code> in Inbound and Outbound rule lists. It applies if none of the specified rules match.</li>
+  <li>Inbound and outbound rules are typically maintained in separate lists. We will see this shortly. Rule 3 is typically implemented as a <code class="highlighter-rouge">Default Policy</code> in Inbound and Outbound rule lists. It applies if none of the specified rules match.</li>
 </ul>
 
 <p><a href="#table-of-contents">Top</a></p>
@@ -238,7 +238,7 @@ The headers on ethernet frames at the <code>Data link</code> layer and below are
 
 <h2 id="windows-firewall">Windows Firewall</h2>
 
-<p>As mentioned before, Windows has a built-in firewall. Depending on the profile (type) of Network your computer is connected to, the firewall can be configured to have a different behavior. Your home network should be assigned the <code>Private</code> profile, while coffee-shop and airport networks are best assigned to the <code>Public</code> profile. Enterprise computers are typically part of a <code>Domain</code> in an enterprise network. For this option, the <code>Domain</code> profile is used. When you bring up the firewall, you will see these profiles listed. You will also see the default policy for inbound and outbound network connections associated with each profile.</p>
+<p>As mentioned before, Windows has a built-in firewall. Depending on the profile (type) of Network your computer is connected to, the firewall can be configured to have a different behavior. Your home network should be assigned the <code class="highlighter-rouge">Private</code> profile, while coffee-shop and airport networks are best assigned to the <code class="highlighter-rouge">Public</code> profile. Enterprise computers are typically part of a <code class="highlighter-rouge">Domain</code> in an enterprise network. For this option, the <code class="highlighter-rouge">Domain</code> profile is used. When you bring up the firewall, you will see these profiles listed. You will also see the default policy for inbound and outbound network connections associated with each profile.</p>
 
 <blockquote>
   <p><img src="./img/network-profiles.png" alt="Windows firewall" /></p>
@@ -253,7 +253,7 @@ The headers on ethernet frames at the <code>Data link</code> layer and below are
 Which means that unless you block a connection, it is allowed. This is not a secure setting. Once malware is installed on your machine (quite plausible with phishing), it can easily call out to a remote server and exfiltrate data. This poor <a href="https://docs.microsoft.com/en-us/windows/access-protection/windows-firewall/create-an-outbound-port-rule">design choice</a> is perhaps motivated by a trade-off between usability and security.</li>
 </ul>
 
-<p>The defaults for Outbound connections go against the fundamental security principle of <code>Default Deny</code> and <code>Whitelisting</code> allowed connections. Let’s go ahead and make it right.</p>
+<p>The defaults for Outbound connections go against the fundamental security principle of <code class="highlighter-rouge">Default Deny</code> and <code class="highlighter-rouge">Whitelisting</code> allowed connections. Let’s go ahead and make it right.</p>
 
 <blockquote>
   <p>Be ready for many internet connected programs to stop working after this change!</p>
@@ -265,23 +265,23 @@ Which means that unless you block a connection, it is allowed. This is not a sec
   <p><img src="./img/firewall-defaults.png" alt="Windows firewall" /></p>
 </blockquote>
 
-<p>Let’s change the default behavior for Outbound connections to <code>Block</code>.</p>
+<p>Let’s change the default behavior for Outbound connections to <code class="highlighter-rouge">Block</code>.</p>
 
 <blockquote>
   <p><img src="./img/block-outbound.png" alt="Windows firewall" /></p>
 </blockquote>
 
-<p>Repeat the same for Private and Public profiles (tabs). Then hit <code>Apply</code> to save these settings.</p>
+<p>Repeat the same for Private and Public profiles (tabs). Then hit <code class="highlighter-rouge">Apply</code> to save these settings.</p>
 
-<p>By default, all rules apply to all network interfaces for both IPv4 and IPv6 protocols. The network interfaces protected by Windows Firewall can be changed clicking on the <code>Customize</code> button next to <code>Protected network connections</code></p>
+<p>By default, all rules apply to all network interfaces for both IPv4 and IPv6 protocols. The network interfaces protected by Windows Firewall can be changed clicking on the <code class="highlighter-rouge">Customize</code> button next to <code class="highlighter-rouge">Protected network connections</code></p>
 
 <blockquote>
   <p><img src="./img/network-connections.png" alt="Windows firewall" /></p>
 </blockquote>
 
 <p>We see that all network interfaces are selected. Observe that DockerNAT is also covered.<br />
-Hit <code>OK</code> to exit.<br />
-Hit <code>OK</code> again to exit the Properties dialog box.</p>
+Hit <code class="highlighter-rouge">OK</code> to exit.<br />
+Hit <code class="highlighter-rouge">OK</code> again to exit the Properties dialog box.</p>
 
 <p>Now the firewall status page should look like this:</p>
 
@@ -300,37 +300,37 @@ Hit <code>OK</code> again to exit the Properties dialog box.</p>
 <p>So we need to allow Chrome program through our firewall in the Outbound direction.
 We want to be very specific to the Program, Ports, and Protocol in our Rule (Cybersecurity First principle: Minimization).</p>
 
-<p>Let’s start to author a new Outbound rule. Select <code>Custom</code> rule to provide the most flexibility. Click <code>Next</code>.</p>
+<p>Let’s start to author a new Outbound rule. Select <code class="highlighter-rouge">Custom</code> rule to provide the most flexibility. Click <code class="highlighter-rouge">Next</code>.</p>
 
 <blockquote>
   <p><img src="./img/outbound-rule.png" alt="Windows firewall" /></p>
 </blockquote>
 
-<p>Next, we locate the program that we want to allow through the firewall in the outbound direction. Click the browse button and locate the Chrome executable here: <code>%ProgramFiles%\Google\Chrome\Application\chrome.exe</code></p>
+<p>Next, we locate the program that we want to allow through the firewall in the outbound direction. Click the browse button and locate the Chrome executable here: <code class="highlighter-rouge">%ProgramFiles%\Google\Chrome\Application\chrome.exe</code></p>
 
-<p>Click <code>Next</code>. That brings us to <code>Protocols and Ports</code>. <br />
-We want Chrome to be able to contact web servers on HTTP (Port <code>80</code>) and HTTPS (Port <code>443</code>) services using the <code>TCP</code> protocol.  <br />
+<p>Click <code class="highlighter-rouge">Next</code>. That brings us to <code class="highlighter-rouge">Protocols and Ports</code>. <br />
+We want Chrome to be able to contact web servers on HTTP (Port <code class="highlighter-rouge">80</code>) and HTTPS (Port <code class="highlighter-rouge">443</code>) services using the <code class="highlighter-rouge">TCP</code> protocol.  <br />
 So adjust the settings as shown:</p>
 
 <blockquote>
   <p><img src="./img/outbound-ports.png" alt="Windows firewall" /></p>
 </blockquote>
 
-<p>Click <code>Next</code>. We will not limit the connection to specific IP addresses, so we will leave <code>Scope</code> as is. <br />
-Click <code>Next</code> again.</p>
+<p>Click <code class="highlighter-rouge">Next</code>. We will not limit the connection to specific IP addresses, so we will leave <code class="highlighter-rouge">Scope</code> as is. <br />
+Click <code class="highlighter-rouge">Next</code> again.</p>
 
-<p>Now for <code>Action</code>. Select <code>Allow the connection</code> since we are whitelisting this application.</p>
+<p>Now for <code class="highlighter-rouge">Action</code>. Select <code class="highlighter-rouge">Allow the connection</code> since we are whitelisting this application.</p>
 
 <blockquote>
   <p><img src="./img/outbound-action.png" alt="Windows firewall" /></p>
 </blockquote>
 
-<p>Next, for <code>Profile</code> select all profiles so that the rule applies to all network types.<br />
+<p>Next, for <code class="highlighter-rouge">Profile</code> select all profiles so that the rule applies to all network types.<br />
 Finally, provide the rule a Name and Description to identify it later.</p>
 
-<p>Click <code>Finish</code>. The rule is now active and should be listed in the Outbound rules listing.</p>
+<p>Click <code class="highlighter-rouge">Finish</code>. The rule is now active and should be listed in the Outbound rules listing.</p>
 
-<p>Now use similar steps as above to add a rule for the same program (Chrome), but allowing protocol <code>UDP</code> for remote port <code>53</code>. This allows DNS requests to go through. DNS helps with domain name discovery.</p>
+<p>Now use similar steps as above to add a rule for the same program (Chrome), but allowing protocol <code class="highlighter-rouge">UDP</code> for remote port <code class="highlighter-rouge">53</code>. This allows DNS requests to go through. DNS helps with domain name discovery.</p>
 
 <p>Once the UDP rule is added, we are ready to try accessing a website again.</p>
 
@@ -345,7 +345,7 @@ Finally, provide the rule a Name and Description to identify it later.</p>
 <p>That’s it for Firewalls in this Unit. Happy Surfing.</p>
 
 <blockquote>
-  <p>Firewalls are an essential component of “Defense-in-Depth” strategy. It can certainly slow down an attacker. However, firewalls cannot keep a determined adversary out. There are many ways in which firewalls can be abused and easily bypassed. Such attacks need to be constantly monitored using Intrusion Detection Systems (IDS) and Network Monitoring solutions. The final line of defense is applications built using secure coding practices and proper encryption implementations. This is an example of <code>Layering</code>.</p>
+  <p>Firewalls are an essential component of “Defense-in-Depth” strategy. It can certainly slow down an attacker. However, firewalls cannot keep a determined adversary out. There are many ways in which firewalls can be abused and easily bypassed. Such attacks need to be constantly monitored using Intrusion Detection Systems (IDS) and Network Monitoring solutions. The final line of defense is applications built using secure coding practices and proper encryption implementations. This is an example of <code class="highlighter-rouge">Layering</code>.</p>
 </blockquote>
 
 <p><a href="#table-of-contents">Top</a></p>

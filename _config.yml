@@ -3,14 +3,14 @@
 # @Email:  mlhale@unomaha.edu
 # @Filename: _config.yml
 # @Last modified by:   matthale
-# @Last modified time: 2018-06-18T00:49:20-05:00
+# @Last modified time: 2018-06-18T01:01:18-05:00
 # @Copyright: Copyright (C) 2018 Matthew L. Hale
 
 
 
 # Dependencies
 markdown:         kramdown
-highlighter:      pygments
+highlighter:      rouge
 
 # Permalinks
 permalink:        pretty

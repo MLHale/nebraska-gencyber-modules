@@ -104,20 +104,20 @@
 <ul>
   <li>Lots of curiosity</li>
   <li><a href="https://www.cheatography.com/davechild/cheat-sheets/linux-command-line/pdf/">Linux Commands</a>. These directory operations will be very useful:
-    <pre><code class="language-bash"># Directory Operations
-pwd # Show current directory
-mkdir dir # Make directory dir
-cd dir # Change directory to dir
-cd .. # Move up a directory
-ls  # list files and directories in current directory
-</code></pre>
+    <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># Directory Operations</span>
+<span class="nb">pwd</span> <span class="c"># Show current directory</span>
+<span class="nb">mkdir dir</span> <span class="c"># Make directory dir</span>
+<span class="nb">cd dir</span> <span class="c"># Change directory to dir</span>
+<span class="nb">cd</span> .. <span class="c"># Move up a directory</span>
+<span class="nb">ls</span>  <span class="c"># list files and directories in current directory</span>
+</code></pre></div>    </div>
   </li>
   <li>Windows PowerShell and MacOS terminal also understand above commands.</li>
 </ul>
 
 <h3 id="table-of-contents">Table of Contents</h3>
 <!-- TOC START min:1 max:3 link:true update:true -->
-<pre><code>- [Cybersecurity First Principles in this lesson](#cybersecurity-first-principles-in-this-lesson)
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>- [Cybersecurity First Principles in this lesson](#cybersecurity-first-principles-in-this-lesson)
 - [Introduction: Git and Github](#introduction-git-and-github)
 - [Lesson goals](#lesson-goals)
 - [Materials required](#materials-required)
@@ -131,7 +131,7 @@ ls  # list files and directories in current directory
 - [Initialize a new repository](#initialize-a-new-repository)
 - [Git your engines ready!](#git-your-engines-ready)
 - [Cybersecurity First Principles Reflections](#cybersecurity-first-principles-reflections)   - [Additional Resources](#additional-resources)   - [Lead Author](#lead-author)   - [Acknowledgements](#acknowledgements)   - [License](#license)
-</code></pre>
+</code></pre></div></div>
 
 <!-- TOC END -->
 
@@ -145,17 +145,17 @@ You will also need to verify your email address after registration in order to u
 <p>Complete the following Github tutorial:
 https://guides.github.com/activities/hello-world/</p>
 
-<p>At the end of Step 2, you will have created a <code>remote</code> repository and will have added a <code>branch</code>. It is <code>remote</code> because all your files are in the Github cloud. As a developer, you might ask, <em>“how do I use this to create code if it is just online?”</em> It is not convenient to write and test code online, especially when many applications require locally install packages to even work. It would be great to use your own <code>Local</code> repository. We will do just that in the next step.</p>
+<p>At the end of Step 2, you will have created a <code class="highlighter-rouge">remote</code> repository and will have added a <code class="highlighter-rouge">branch</code>. It is <code class="highlighter-rouge">remote</code> because all your files are in the Github cloud. As a developer, you might ask, <em>“how do I use this to create code if it is just online?”</em> It is not convenient to write and test code online, especially when many applications require locally install packages to even work. It would be great to use your own <code class="highlighter-rouge">Local</code> repository. We will do just that in the next step.</p>
 
-<p>Git is a distributed configuration management system. It helps to <code>avoid</code> thinking of a traditional central code repository. Instead, with Git we have multiple independent repositories that could be in different states at any given time and synchronized using specific commits.</p>
+<p>Git is a distributed configuration management system. It helps to <code class="highlighter-rouge">avoid</code> thinking of a traditional central code repository. Instead, with Git we have multiple independent repositories that could be in different states at any given time and synchronized using specific commits.</p>
 
 <p><a href="#table-of-contents">Top</a></p>
 
 <h3 id="step-3-clone-a-repository">Step 3: Clone a Repository</h3>
-<p>To create a <code>Local</code> repository there are two basic options.</p>
+<p>To create a <code class="highlighter-rouge">Local</code> repository there are two basic options.</p>
 <ol>
-  <li><code>Clone</code> a remote repository on your computer, or</li>
-  <li><code>Initialize</code> a new git repository from scratch on your computer.</li>
+  <li><code class="highlighter-rouge">Clone</code> a remote repository on your computer, or</li>
+  <li><code class="highlighter-rouge">Initialize</code> a new git repository from scratch on your computer.</li>
 </ol>
 
 <p><a href="#table-of-contents">Top</a></p>
@@ -166,10 +166,10 @@ https://guides.github.com/activities/hello-world/</p>
 <ul>
   <li>Git tools do not come pre-installed with all operating systems.</li>
   <li>
-    <p>To check if they exist on your operating system, open up a command line interface (<code>PowerShell</code> for Windows) and type:</p>
+    <p>To check if they exist on your operating system, open up a command line interface (<code class="highlighter-rouge">PowerShell</code> for Windows) and type:</p>
 
-    <pre><code class="language-bash">git --version
-</code></pre>
+    <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git <span class="nt">--version</span>
+</code></pre></div>    </div>
   </li>
   <li>If Git is installed, this command will show the version installed. If the command is not recognized, then it means you need to install git on your OS. The information available at <a href="https://git-scm.com/book/en/v2/Getting-Started-Installing-Git">https://git-scm.com/book/en/v2/Getting-Started-Installing-Git</a> can walk you through it for a variety of OSes.</li>
   <li>We will assume a Windows OS environment with PowerShell as shown below:</li>
@@ -179,15 +179,15 @@ https://guides.github.com/activities/hello-world/</p>
   <p><img src="../img/gitVersionCheck.png" alt="version" /></p>
 </blockquote>
 
-<p>To <code>clone</code> a remote repository (what we set out to do), we first need a <code>reference URL</code> to find it.</p>
+<p>To <code class="highlighter-rouge">clone</code> a remote repository (what we set out to do), we first need a <code class="highlighter-rouge">reference URL</code> to find it.</p>
 <ul>
-  <li>On <code>Github.com</code>, navigate to your hello-world repository and click on the button that says <code>Clone or download</code>.</li>
+  <li>On <code class="highlighter-rouge">Github.com</code>, navigate to your hello-world repository and click on the button that says <code class="highlighter-rouge">Clone or download</code>.</li>
   <li>Copy that URL.</li>
   <li>
     <p>Now we are ready to clone this remote repository, and create a local repository.</p>
 
-    <pre><code class="language-bash">git clone &lt;replace this, including angled brackets with the clone URL that you copied above&gt;
-</code></pre>
+    <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git clone &lt;replace this, including angled brackets with the clone URL that you copied above&gt;
+</code></pre></div>    </div>
   </li>
 </ul>
 
@@ -199,23 +199,23 @@ https://guides.github.com/activities/hello-world/</p>
 
 <p>Now, in PowerShell, switch to the hello-world directory that has all the files from the repository that you just cloned.</p>
 
-<pre><code class="language-bash">cd hello-world/
-</code></pre>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">cd </span>hello-world/
+</code></pre></div></div>
 
 <p>To list the files in this directory, use this command</p>
 
-<pre><code class="language-bash">ls
-</code></pre>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">ls</span>
+</code></pre></div></div>
 <p>You should see a README.md and possibly some other files.</p>
 
 <p><a href="#table-of-contents">Top</a></p>
 
 <h3 id="step-4-push-changes">Step 4: Push Changes</h3>
-<p>In this step, we will make changes to files in our <code>Local</code> repository and then <code>push</code> changes back to the <code>remote</code> repository.</p>
+<p>In this step, we will make changes to files in our <code class="highlighter-rouge">Local</code> repository and then <code class="highlighter-rouge">push</code> changes back to the <code class="highlighter-rouge">remote</code> repository.</p>
 
 <p>Git is based on a <strong>de-centralized</strong> model of ownership - which means that there is no central authoritative repository. Every repository, Local or Remote, is fully autonomous and fully functional on its own. So changes made in any repository are tracked in that repository only. Two repositories do not communicate unless there is a explicit request to synchronize changes across them. This will make more sense as we work through a scenario.</p>
 
-<p>Let’s open the hello-world folder in windows explorer and make changes to the <code>README.md</code> file in a text editor.</p>
+<p>Let’s open the hello-world folder in windows explorer and make changes to the <code class="highlighter-rouge">README.md</code> file in a text editor.</p>
 
 <ol>
   <li>Navigate to the files</li>
@@ -229,8 +229,8 @@ https://guides.github.com/activities/hello-world/</p>
 
 <p>Once you save the edited README.md, check the status of the local repository using the following command. Return to PowerShell:</p>
 
-<pre><code class="language-bash">git status
-</code></pre>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git status
+</code></pre></div></div>
 <p>You should see something like this:</p>
 
 <blockquote>
@@ -239,68 +239,68 @@ https://guides.github.com/activities/hello-world/</p>
 
 <p>A few things to notice here about these status messages:</p>
 <ol>
-  <li><code>On branch master</code>: You are on the master branch in your <code>local</code> repository.</li>
-  <li><code>Your branch is up-to-date with 'origin/master'</code>: Your local repository master branch is in sync with your remote repository master branch on GitHub. The default name for the remote repository is <strong>origin</strong>. This makes sense as you cloned your local repository from it.</li>
-  <li><code>Changes not staged for commit</code>: git follows a two step process to save changes to a repository.</li>
-  <li>The user indicates which modified/deleted/new files need to be <code>staged</code> for a save in the repository.</li>
-  <li>The staged files are <code>committed</code> to the repository.</li>
-  <li><code>modified:  README.md</code>: git knows that the README.md file has been modified</li>
+  <li><code class="highlighter-rouge">On branch master</code>: You are on the master branch in your <code class="highlighter-rouge">local</code> repository.</li>
+  <li><code class="highlighter-rouge">Your branch is up-to-date with 'origin/master'</code>: Your local repository master branch is in sync with your remote repository master branch on GitHub. The default name for the remote repository is <strong>origin</strong>. This makes sense as you cloned your local repository from it.</li>
+  <li><code class="highlighter-rouge">Changes not staged for commit</code>: git follows a two step process to save changes to a repository.</li>
+  <li>The user indicates which modified/deleted/new files need to be <code class="highlighter-rouge">staged</code> for a save in the repository.</li>
+  <li>The staged files are <code class="highlighter-rouge">committed</code> to the repository.</li>
+  <li><code class="highlighter-rouge">modified:  README.md</code>: git knows that the README.md file has been modified</li>
 </ol>
 
-<p>Now we <code>stage</code> our changes for a <code>commit</code> using this command:</p>
-<pre><code class="language-bash">git add --all
-</code></pre>
-<p>The above command <code>adds</code> any edited files in a staging area, a temporary holding place before a <code>commit</code>. We can check the status of the repository again using the following command:</p>
+<p>Now we <code class="highlighter-rouge">stage</code> our changes for a <code class="highlighter-rouge">commit</code> using this command:</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git add <span class="nt">--all</span>
+</code></pre></div></div>
+<p>The above command <code class="highlighter-rouge">adds</code> any edited files in a staging area, a temporary holding place before a <code class="highlighter-rouge">commit</code>. We can check the status of the repository again using the following command:</p>
 
-<pre><code class="language-bash">git status
-</code></pre>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git status
+</code></pre></div></div>
 <p>You should see something like this:</p>
 
 <blockquote>
   <p><img src="../img/gitadded.png" alt="gitadd" /></p>
 </blockquote>
 
-<p>This time the modified files are <code>staged</code> for a <code>commit</code> and appear in green.</p>
+<p>This time the modified files are <code class="highlighter-rouge">staged</code> for a <code class="highlighter-rouge">commit</code> and appear in green.</p>
 
-<p>Now before we <code>commit</code> these files into our local repository, the git author details need to be set. This is for accountability of commits. Using the commands below, save your information to the git configuration files and set them for all of your local repositories. Make sure to use the same name and email you used to register with Github. This is a one-time setup only. Once it is set, you don’t have to do this on subsequent commits.</p>
+<p>Now before we <code class="highlighter-rouge">commit</code> these files into our local repository, the git author details need to be set. This is for accountability of commits. Using the commands below, save your information to the git configuration files and set them for all of your local repositories. Make sure to use the same name and email you used to register with Github. This is a one-time setup only. Once it is set, you don’t have to do this on subsequent commits.</p>
 
-<pre><code class="language-bash">git config --global user.name "replace this with your name"
-git config --global user.email youremail@example.com
-</code></pre>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git config <span class="nt">--global</span> user.name <span class="s2">"replace this with your name"</span>
+git config <span class="nt">--global</span> user.email youremail@example.com
+</code></pre></div></div>
 <p>You should see something like this (with your name and email):</p>
 <blockquote>
   <p><img src="../img/gitconfig.png" alt="gitconfig" /></p>
 </blockquote>
 
 <p>Check your configuration changes by using the following command:</p>
-<pre><code class="language-bash">git config --list
-</code></pre>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git config <span class="nt">--list</span>
+</code></pre></div></div>
 
 <p>Again, you only have to set the config parameters once. Now that they are set, git will keep reusing them when making commits or merging your changes with other repositories.</p>
 
-<p>Now let’s commit the changes that we staged before. Here we use the <code>commit</code> option with <code>-m</code> to provide a short commit message. This helps us remember various checkpoints in our editing process. These messages are very helpful to rollback changes to an appropriate commit.</p>
+<p>Now let’s commit the changes that we staged before. Here we use the <code class="highlighter-rouge">commit</code> option with <code class="highlighter-rouge">-m</code> to provide a short commit message. This helps us remember various checkpoints in our editing process. These messages are very helpful to rollback changes to an appropriate commit.</p>
 
-<pre><code class="language-bash">git commit -m "added UNO description"
-</code></pre>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git commit <span class="nt">-m</span> <span class="s2">"added UNO description"</span>
+</code></pre></div></div>
 
 <p>Use this command to see all your commits:</p>
 
-<pre><code class="language-bash">git log
-</code></pre>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git log
+</code></pre></div></div>
 
 <p>This command shows a summary of commits in the repository, starting with the most recent. Observe the hash code, user details and commit message. These attributes provide attribution of all changes in the code repository, promoting code integrity.</p>
 
 <blockquote>
-  <p>Hit the key <code>q</code> to exit the log of commit messages.</p>
+  <p>Hit the key <code class="highlighter-rouge">q</code> to exit the log of commit messages.</p>
 </blockquote>
 
 <p>Issue this command to check your repository status once again:</p>
-<pre><code class="language-bash">git status
-</code></pre>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git status
+</code></pre></div></div>
 
-<p>It should report <strong>no</strong> uncommitted changes. But it indicates that <code>Your branch is ahead of 'origin/master' by 1 commit</code>. Which means that our local repository master branch has more recent commits than the remote repository master branch.</p>
+<p>It should report <strong>no</strong> uncommitted changes. But it indicates that <code class="highlighter-rouge">Your branch is ahead of 'origin/master' by 1 commit</code>. Which means that our local repository master branch has more recent commits than the remote repository master branch.</p>
 
-<p>To push our local commits to the remote repository (Github in this case), we need the git <code>push</code> command. With this command, we need to indicate the name of the remote repository followed by the name of the local repository branch that has updates to be pushed. Do you remember the name of our remote repository and the main branch?</p>
+<p>To push our local commits to the remote repository (Github in this case), we need the git <code class="highlighter-rouge">push</code> command. With this command, we need to indicate the name of the remote repository followed by the name of the local repository branch that has updates to be pushed. Do you remember the name of our remote repository and the main branch?</p>
 
 <blockquote>
   <p><strong>Questions</strong></p>
@@ -310,22 +310,22 @@ git config --global user.email youremail@example.com
   </ul>
 </blockquote>
 
-<p>To <code>push</code> local commits in the current branch to a remote repository (<code>origin</code> in our case) and its remote branch (<code>master</code> in our case), use the following command:</p>
+<p>To <code class="highlighter-rouge">push</code> local commits in the current branch to a remote repository (<code class="highlighter-rouge">origin</code> in our case) and its remote branch (<code class="highlighter-rouge">master</code> in our case), use the following command:</p>
 
-<pre><code class="language-bash"> git push origin master
-</code></pre>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code> git push origin master
+</code></pre></div></div>
 
 <blockquote>
   <p><strong>OPTIONAL</strong>: To rename a branch in the remote repository, you’d use the same git push command, but you would add one more argument: the name of the new branch. For example:<br />
-<code>git push  &lt;REMOTENAME&gt; &lt;LOCALBRANCHNAME&gt;:&lt;REMOTEBRANCHNAME&gt;</code><br />
+<code class="highlighter-rouge">git push  &lt;REMOTENAME&gt; &lt;LOCALBRANCHNAME&gt;:&lt;REMOTEBRANCHNAME&gt;</code><br />
 This command pushes the LOCALBRANCHNAME to your REMOTENAME, but it is renamed to REMOTEBRANCHNAME.</p>
 </blockquote>
 
-<p>Now, issue the <code>status</code> command to check your repository status once again:</p>
-<pre><code class="language-bash">git status
-</code></pre>
+<p>Now, issue the <code class="highlighter-rouge">status</code> command to check your repository status once again:</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git status
+</code></pre></div></div>
 
-<p>Visit your remote repository on <code>Github.com</code>. Your changes should appear there. You should also see your commit message there. Clicking on the commit message will show the file differences in that <code>commit</code>.</p>
+<p>Visit your remote repository on <code class="highlighter-rouge">Github.com</code>. Your changes should appear there. You should also see your commit message there. Clicking on the commit message will show the file differences in that <code class="highlighter-rouge">commit</code>.</p>
 
 <blockquote>
   <p><img src="../img/remoteupdate.png" alt="updateremote" /></p>
@@ -336,7 +336,7 @@ This command pushes the LOCALBRANCHNAME to your REMOTENAME, but it is renamed to
 <p><a href="#table-of-contents">Top</a></p>
 
 <h3 id="step-5-pull-remote-changes">Step 5: Pull Remote Changes</h3>
-<p>What happens if we make some changes to README.md on <code>Github.com</code>? Or another collaborator makes changes to it. How do we get these changes back into our local repository? We will learn just that in this step.</p>
+<p>What happens if we make some changes to README.md on <code class="highlighter-rouge">Github.com</code>? Or another collaborator makes changes to it. How do we get these changes back into our local repository? We will learn just that in this step.</p>
 
 <p>So, I realized that I forgot to add a link to UNO’s Cybersecurity programs in the README.md file. So I will make these changes and commit those changes on Github.com itself.</p>
 
@@ -346,7 +346,7 @@ This command pushes the LOCALBRANCHNAME to your REMOTENAME, but it is renamed to
       <p><img src="../img/githubedit.png" alt="githubedit" /></p>
     </blockquote>
   </li>
-  <li>Make changes, add a <code>commit</code> message and click <code>Commit changes</code>
+  <li>Make changes, add a <code class="highlighter-rouge">commit</code> message and click <code class="highlighter-rouge">Commit changes</code>
     <blockquote>
       <p><img src="../img/githubcommit.png" alt="githubcommit" /></p>
     </blockquote>
@@ -358,15 +358,15 @@ This command pushes the LOCALBRANCHNAME to your REMOTENAME, but it is renamed to
   </li>
 </ol>
 
-<p>Now the remote repository is one <code>commit</code> ahead of the local repository. To bring the <em>local</em> repository up to speed, we use the following command in a terminal. This single command fetches remote changes (<code>git fetch</code>) and merges them (<code>git merge</code>) into your local repository.</p>
+<p>Now the remote repository is one <code class="highlighter-rouge">commit</code> ahead of the local repository. To bring the <em>local</em> repository up to speed, we use the following command in a terminal. This single command fetches remote changes (<code class="highlighter-rouge">git fetch</code>) and merges them (<code class="highlighter-rouge">git merge</code>) into your local repository.</p>
 
-<pre><code class="language-bash">git pull
-</code></pre>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git pull
+</code></pre></div></div>
 
 <blockquote>
-  <p><code>Sidebar</code>: If a repository has linked sub-modules (e.g. <a href="https://github.com/MLHale/nebraska-gencyber">nebraska-gencyber</a>), add the following recursion flags to clone and pull changes from the sub-modules as well:<br />
-<code>git clone --recursive https://github.com/MLHale/nebraska-gencyber-dev-env.git</code><br />
-<code>git pull --recurse-submodules</code></p>
+  <p><code class="highlighter-rouge">Sidebar</code>: If a repository has linked sub-modules (e.g. <a href="https://github.com/MLHale/nebraska-gencyber">nebraska-gencyber</a>), add the following recursion flags to clone and pull changes from the sub-modules as well:<br />
+<code class="highlighter-rouge">git clone --recursive https://github.com/MLHale/nebraska-gencyber-dev-env.git</code><br />
+<code class="highlighter-rouge">git pull --recurse-submodules</code></p>
 </blockquote>
 
 <p>Continuing with the lesson, if we look at our local README.MD file in windows explorer, it should have the updated link.</p>
@@ -376,9 +376,9 @@ This command pushes the LOCALBRANCHNAME to your REMOTENAME, but it is renamed to
 
 <p>At this point, you know enough to keep both the local and remote repositories synchronized.</p>
 
-<p>As long as you always <code>pull</code> before making changes and keep <code>pushing</code> any new changes - you will avoid most merge conflicts that can occur.</p>
+<p>As long as you always <code class="highlighter-rouge">pull</code> before making changes and keep <code class="highlighter-rouge">pushing</code> any new changes - you will avoid most merge conflicts that can occur.</p>
 
-<p>If you are interested in learning more about complex team interaction scenarios - you may want to explore a concept called <code>branching</code> that avoids most <code>merge conflicts</code>; for more information about merge conflicts see: <a href="https://help.github.com/articles/resolving-a-merge-conflict-from-the-command-line/">https://help.github.com/articles/resolving-a-merge-conflict-from-the-command-line/</a>.</p>
+<p>If you are interested in learning more about complex team interaction scenarios - you may want to explore a concept called <code class="highlighter-rouge">branching</code> that avoids most <code class="highlighter-rouge">merge conflicts</code>; for more information about merge conflicts see: <a href="https://help.github.com/articles/resolving-a-merge-conflict-from-the-command-line/">https://help.github.com/articles/resolving-a-merge-conflict-from-the-command-line/</a>.</p>
 
 <p><a href="#table-of-contents">Top</a></p>
 
@@ -389,17 +389,17 @@ This command pushes the LOCALBRANCHNAME to your REMOTENAME, but it is renamed to
 <h3 id="initialize-a-new-repository">Initialize a new repository</h3>
 
 <p>In previous steps we assumed that a repository existed on Github. What if you wanted to start a repository on your local computer?
-If you need to create a new repository you would just navigate to the folder (using the <code>cd</code> command) containing the files you wish to version control and then use the <code>init</code> command.</p>
+If you need to create a new repository you would just navigate to the folder (using the <code class="highlighter-rouge">cd</code> command) containing the files you wish to version control and then use the <code class="highlighter-rouge">init</code> command.</p>
 
 <p>In the commands below, I will first create a new directory and then initialize a git repository within that directory. Git will then allow you to keep track all the files in that directory with version control.</p>
 
-<pre><code class="language-bash"># Create a new directory
-mkdir test
-# Switch to that directory
-cd test
-# Initialize a new git repository
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># Create a new directory</span>
+<span class="nb">mkdir test</span>
+<span class="c"># Switch to that directory</span>
+<span class="nb">cd test</span>
+<span class="c"># Initialize a new git repository</span>
 git init
-</code></pre>
+</code></pre></div></div>
 
 <p>That’s it! This directory is now ready for version control using git. This is useful if you are <strong>creating new files from scratch</strong>. You can also <em>push</em> newly tracked files such to a remote repository hosted on Github. The steps are the same as we saw for repositories cloned from Github.</p>
 
