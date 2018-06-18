@@ -76,16 +76,14 @@ a span {
 p {
     margin: 0 0 15px;
 }
-.clear {
-    clear: both;
-}
+
 ol,
 ul {
     list-style: none;
     padding: 0;
 }
 img {
-    max-width: 100%;
+    max-width: 479px;
 }
 textarea,
 input[type="text"],
@@ -167,6 +165,12 @@ p {
 }
 p:last-child {
     margin-bottom: 0px;
+}
+.projectlink {
+    font-size: 30px;
+}
+.view {
+  font-size: 13px;
 }
 /*.home-wrap h1,*/
 .home-wrap h2,
@@ -305,8 +309,6 @@ section .subtitle-half h5 {
 .close:hover {
   color: #efefef;
 }
-
-
 
 /* modules Section */
 .modules_menu{
