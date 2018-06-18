@@ -141,14 +141,15 @@ Try coding your droid.
 * How could you combine the scratch interface with various inputs and outputs to solve a problem?
 
 ### Exercise: Apply design thinking to solve a problem with Littlebits
-The problem: Navigate a course, drop and object on the dropzone, drive out.  
-The twist: You may only use materials present on the table and any of your Littlebits parts.  
-The second twist: You must drive and deliver the object using a scratch program written on your R2-D2.  
+The problem: Navigate a course, drop an object on the dropzone, and drive out.  
+The twist: You must drive and deliver the object using a scratch program written on your R2-D2.  
+
+Work in teams.
 
 Tips:
 > Make sure to use the design process, in this case since the problem is defined, focus on the ideating, prototyping, and testing phases
 > Consider decomposing the problem into subproblems and solving each one of them
-
+> You can use parts from more than one droid kit, just make sure everyone gets their parts back at the end.
 
 ### Reflection and takeaways
 The design process is useful for conceptualizing a problem and exploring different solutions that meet all of your user's needs or meet the requirements of the problem. Often, breaking a problem down into subproblems can help you tackle complex issues. Components can be used in more than one way for more than one purpose. This leads to `reuse` and is a positive side effect of `modularization` and `resource encapsulation`.
