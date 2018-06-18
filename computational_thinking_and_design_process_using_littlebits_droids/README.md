@@ -1,4 +1,4 @@
-# Intro to Components using Littlebits Droids
+# Computational thinking and design process with Littlebits droids
 
 ### Cybersecurity First Principles in this lesson
 
@@ -34,7 +34,7 @@ By the end of this tutorial, you will be able to:
 
 ### Table of Contents
 <!-- TOC START min:1 max:3 link:true update:true -->
-- [Intro to Components using Littlebits Droids](#intro-to-components-using-littlebits-droids)
+- [Computational thinking and design process with Littlebits droids](#computational-thinking-and-design-process-with-littlebits-droids)
     - [Cybersecurity First Principles in this lesson](#cybersecurity-first-principles-in-this-lesson)
     - [Introduction](#introduction)
     - [Goals](#goals)
@@ -42,12 +42,7 @@ By the end of this tutorial, you will be able to:
     - [Prerequisite lessons](#prerequisite-lessons)
     - [Table of Contents](#table-of-contents)
     - [The Design Process](#the-design-process)
-    - [Step 2: Gotta start somewhere](#step-2-gotta-start-somewhere)
-    - [Step 3: Count all the things!](#step-3-count-all-the-things)
-    - [Step 4: The world is more than True or False - Variable Inputs](#step-4-the-world-is-more-than-true-or-false---variable-inputs)
-    - [Step 6: Motoring onward: Beep beep boop](#step-6-motoring-onward-beep-beep-boop)
-    - [Self Exploration](#self-exploration)
-    - [Test Your Bits, err... Wits!](#test-your-bits-err-wits)
+    - [Exercise: Apply design thinking to solve a problem with Littlebits](#exercise-apply-design-thinking-to-solve-a-problem-with-littlebits)
     - [Additional Resources](#additional-resources)
   - [Lead Author](#lead-author)
     - [Acknowledgements](#acknowledgements)
@@ -56,131 +51,88 @@ By the end of this tutorial, you will be able to:
 <!-- TOC END -->
 
 ### The Design Process
-First, open your Littlebits box. Take a second to look at the different components you have. Littlebits is organized around three colors:
+Design is more than sitting down and starting to code. In the real world when faced with a complex problem, companies, and individuals need a systematic process to think about the problem, consider all of the stakeholders and come up with a solution. In this lesson, we examine a 5-step `design thinking process` created by the [Hasso-Plattner Institute of Design at Stanford](https://dschool.stanford.edu/). Their process is iterative and non-linear.
 
-* **<span style="color: pink">Pink</span>** modules are _inputs_, like an On/Off button.
-* **<span style="color: green">Green</span>** modules are _outputs_, like LEDs and Fans.
-* **<span style="color: orange">Orange</span>** modules are special and usually are _supportive_ - think splitters and logic handlers.
-* **<span style="color: blue">Blue</span>** modules are power related.
+![design process](./img/design-process.jpg)
+> Author/Copyright holder: Teo Yu Siang and Interaction Design Foundation. Copyright licence: CC BY-NC-SA 3.0
 
-Look over each module. Your kit should include all of these parts:
+#### Empathizing and Defining
+I group these two stages together as they are very iterative. 
 
-![unbox](./img/box-contents.jpg)
-> Note: Dog not included!
+![design process](./img/empathize.jpg)
+> Author/Copyright holder: Teo Yu Siang and Interaction Design Foundation. Copyright licence: CC BY-NC-SA 3.0
 
-![unbox](./img/droid-kit.jpg)
+Before trying to solve a problem, one must understand it. Complex real-world problems involve more than one stakeholder. If you are trying to design software, for instance, you need to cognizant of _all_ of your users, not just some of them. `Implicit bias` (where problem solvers accidentally leave some users out) can be a real issue if problem solvers don't `empathize` with their users. In this sense, empathizing is the part of the design process where we observe and study our user base, build `user stories` that describe who our users are and what they want to do with our product, and then make sure we have coverage across our user population. Empathy is also important for **setting aside our assumptions** so that our product can meet the needs our users and not ourselves.
 
-### Step 2: Gotta start somewhere
-No time like the present. Before we get into the droid, lets start with the basics to make a simple invention:
+![design process](./img/define.jpg)
+> Author/Copyright holder: Teo Yu Siang and Interaction Design Foundation. Copyright licence: CC BY-NC-SA 3.0
 
-* find the blue ```power``` module.
-* find the pink ```button``` input module
-* find the green ```led``` output module
+After we have gathered some data about our users and empathically considered their perspective, we can begin to `define` the problem. It should be noted that the `define` stage is not done once we initially define the problem. We will keep returning to the problem statement as we test our potential solutions. With definition, we want to make problem assumptions clear and define the requirements for any potential solution. 
 
-Lets make a simple circuit:
+##### Some processes for empathizing and defining the problem
+A good technique for empathizing and defining the problem is `affinity diagramming`. This technique helps development teams consider multiple perspectives and is a great process to use with groups of users from the target population.
 
-* Connect micro USB end to the ```power``` module and plug up to a computer or the `battery`
-* Connect the ```button``` to the ```power``` module
-* Connect the ```led``` to the ``` button```.
+For affinity diagramming, you need some sticky note cards, a few ink pens or markers, and a few questions. The questions get posed the group. Individuals in the group think up their answers and write them on the note cards, and then the facilitator goes note by note and the group decides how to categorize the notes. No note is bad.
 
-![unbox](./img/simple-circuit.jpg)
+This can produce some interesting categories that help define and contextualize the problem. 
 
-Press the button and the light turns on. That was easy!
+`User stories` are another useful technique for contextualizing a problem. User stories are used pretty extensively in software design and development - particularly in teams using a process called `Agile`.
 
-This is `GPIO` in a nutshell. Each module has a general purpose input and output, with a standard interface, and **doesn't need to understand or know anything about what they are connected to**. These modules also need to protect themselves from invalid input. This is a great example of the `modularity` cybersecurity first principle.
+A user story is generally written as:
 
-### Step 3: Count all the things!
-Ok, we've made our first circuit - but it's pretty simple. Let's add some more modules:
+As a `type of user`, I want to `some action`, so that I can `rationale`.
 
-* Find the green ```o21 number``` output module
+an example would be:
 
-Time to extend your previous circuit to ![count](./img/count-all-the-things.jpg)
+As a `instagram user in highschool`, I want to `post pictures of myself and my friends`, so that I can `build my social status at school`.
 
-* Connect the ```o21 number``` to the ```bright led```
-* Set the switch to the up position on the ```o21 number``` module. This puts it into **count** mode instead of **voltage** mode.
+This may create very different requirements that a different kind of instagram user with different actions and rationales, e.g.
 
-Press the button!
+As a `company on instagram`, I want to `post pictures of my products`, so that I can `build brand recognition`.
 
-Pretty simple. Notice we can **chain the output modules together** (```bright led``` and a ```counter``` in this case). Any number of output modules can be chained together.
+Both statements help define requirements for any potential solution.
 
-Now, lets switch up our circuit a bit.
+##### Exercise:
+* Read [https://www.mountaingoatsoftware.com/blog/advantages-of-the-as-a-user-i-want-user-story-template](https://www.mountaingoatsoftware.com/blog/advantages-of-the-as-a-user-i-want-user-story-template)
+* Read [https://uxdict.io/design-thinking-methods-affinity-diagrams-357bd8671ad4](https://uxdict.io/design-thinking-methods-affinity-diagrams-357bd8671ad4)
+* try it
 
-* Find the pink ```sound trigger``` input module
-* Find the pink ```light sensor``` input module
+#### Ideating
+Once we can begin to stabilize the problem definition, we can start zoning in on solutions. The `ideation` phase is very important to help us find as many possible solutions to the problem as possible - so that we can pick the best one. Often times, computer scientists and developers **don't ideate enough** before jumping into development. This can lead to some myopic focus on one particular design - that might be _bad_. 
 
-Lets swap some components around.
+When ideating, there are several techniques you can use to come up with good ideas.
 
-* Remove the ```bright led``` module (it is really bright!)
+One is obviously `brainstorming` - where the team sits around a table and thinks up different ideas to address the problem. Brainstorming is great, but it is better applied as a second step. 
 
-Press the button. Everything still works!
+First, a technique called `worst possible idea` is a good starting place. Worst possible idea runs counter to out notions of solving a problem, but its a helpful exercise. Here, participants come up with the absolute worst solutions to a problem that they can think of. Bad solutions are considered for _why_ and _how_ they are bad - to list out all the reasons. 
 
-* Connect the ```light sensor``` to the ```power``` and then to the ```button```
+Going through this process, the group begins to get a notion of the **solutions to avoid**. This is a great time to introduce brainstorming. The group can start to frame new ideas in terms of how they avoid the mistake and pitfalls of the bad ideas. This can help break town team-dynamics barriers that often emerge whenever a particular team member becomes _attached_ to their particular idea.
 
-Press the button. Does it work? How about if you cover up the light sensor?
+##### Exercise:
+* Read [https://www.interaction-design.org/literature/article/learn-how-to-use-the-best-ideation-methods-worst-possible-idea](https://www.interaction-design.org/literature/article/learn-how-to-use-the-best-ideation-methods-worst-possible-idea) (~5 min read)
+* try it
 
-This shows you that you can also **chain multiple input modules together** and their **total behavior is a combination of their input designs**. In this case, our counter only worked if the light was detected **AND** the button was pressed.
+![design process](./img/ideate.jpg)
+> Author/Copyright holder: Teo Yu Siang and Interaction Design Foundation. Copyright licence: CC BY-NC-SA 3.0
 
-Lets try one more combo:
+#### Prototyping and Testing
+![design process](./img/prototype.jpg)
 
-* Remove the ```button``` module.
-* Remove the ```light sensor``` module.
-* Connect the ```sound trigger``` between the ```power``` and the ```o21 number``` module.
+Prototyping is the stage where you start making. `Prototypes` should not be full-fledged at the beginning. Since we aren't always sure if an idea coming out of the ideation stage is really going to work, we don't want to spend too much time on it at first. Prototypes can help to identify whether or not an idea will pan out. Often prototypes lead to new ideas - because different members of a team begin to bounce ideas off one another to create better ones.
 
-Snap your fingers or tap the table near your device.
+As you progress, prototypes need to be `tested.` 
 
-![unbox](./img/sound-counter.gif)
+![design process](./img/test.jpg)
+> Author/Copyright holder: Teo Yu Siang and Interaction Design Foundation. Copyright licence: CC BY-NC-SA 3.0
 
-### Step 4: The world is more than True or False - Variable Inputs
-So far, we have outputs and inputs that result in an **on** (True) or **off** (False) behavior.
+Testing a prototype helps us to learn whether or not it succeeds (i.e. does it meet the requirements of the problem) and can help to refine the definition of the problem - if we learn something about the problem that we hadn't thought of before. 
 
-![grey](./img/grey-world.jpg).
+### Exercise: Apply design thinking to solve a problem with Littlebits
+The problem: Drop an egg three stories without it breaking.  
+The twist: You may only use materials present on the table and any of your Littlebits parts.  
+The second twist: You must deliver your egg using a scratch program written on your R2-D2.  
 
-The world is not always **on** or **off**
-
-* Find the pink ```temperature sensor``` input module.
-* Get the ```light sensor``` and ```led``` out again
-
-We are going to make a circuit that shows off variable voltage.
-
-* Remove all components.
-* Connect the ```temperature sensor``` to the ```o21 number``` module.
-* Set the ```o21 number``` switch to **value** (middle position)
-* Set the ```temperature sensor``` switch to **f** (for Fahrenheit)
-
-You should see the current temperature in the room near the device.
-![temperature](./img/temperature.jpg)
-
-
-* Replace the ```temperature sensor``` with the ```light sensor```
-* Put the ```o21 number``` module back into **voltage** mode by moving the switch to the bottom position.
-* Move your finger closer to and further away from the light sensor
-
-You should see that the more light it gets, the more voltage it outputs.
-
-* Now connect the ```led``` to the right-hand side of the ```o21 number``` module
-* Move your finger closer to and further away from the light sensor
-
-You should notice the light dimming and brightening depending on the voltage it receives.
-
-### Step 6: Motoring onward: Beep beep boop
-We've saved the best for last. It is time to unbox and open up your droid! There are a lot of parts, but we Littlebits provides some nice `missions` to walk students through each of them.
-
-* Open your `droid inventor kit`
-* Install [Littlebits Droid Inventor App](https://littlebits.com/app) on your phone or tablet.
-* Follow the in-box instructions:
-  * Connect the app to your droid
-  * Complete Missions 1-4,7,8,12 and 13
-
-You'll be driving around in no time!
-![driving](./img/driving.gif)
-
-### Self Exploration
-Try some different designs yourself.
-
-### Test Your Bits, err... Wits!
-[Quiz](https://www.qzzr.com/c/quiz/430545/all-about-littlebits-introduction)
-
-<div class="quizz-container" data-width="100%" data-iframe-title="QUIZ: All About Littlebits - Introduction" data-height="auto" data-quiz="430545"></div>
+> Make sure to use the design process, in this case since the problem is defined, focus on the ideating, prototyping, and testing phases
 
 ### Additional Resources
 For more information, investigate the following:
@@ -192,12 +144,12 @@ For more information, investigate the following:
 - Matt Hale
 
 ### Acknowledgements
-Special thanks to [Dr. Robin Gandhi](http://faculty.ist.unomaha.edu/rgandhi/) for reviewing and editing earlier versions of this lesson.
+This lesson was inspired and informed by a [blog post](https://www.interaction-design.org/literature/article/5-stages-in-the-design-thinking-process) written by Rikke Dam and Teo Siang. Materials in this lesson are used consistent with their CC-v3 license.
 
 ### License
 [Nebraska GenCyber](https://github.com/MLHale/nebraska-gencyber) <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /></a><br /> is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</a>.
 
 Overall content: Copyright (C) 2017-2018  [Dr. Matthew L. Hale](http://faculty.ist.unomaha.edu/mhale/), [Dr. Robin Gandhi](http://faculty.ist.unomaha.edu/rgandhi/), [Dr. Briana B. Morrison](http://www.brianamorrison.net), and [Doug Rausch](http://www.bellevue.edu/about/leadership/faculty/rausch-douglas).
 
-Lesson content: Copyright (C) [Dr. Matthew L. Hale](http://faculty.ist.unomaha.edu/mhale/) 2017.  
+Lesson content: Copyright (C) [Dr. Matthew L. Hale](http://faculty.ist.unomaha.edu/mhale/) 2018.  
 <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /></a><br /><span xmlns:dct="http://purl.org/dc/terms/" property="dct:title">This lesson</span> is licensed by the author under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</a>.
