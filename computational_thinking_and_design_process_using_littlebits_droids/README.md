@@ -132,13 +132,13 @@ Testing a prototype helps us to learn whether or not it succeeds (i.e. does it m
 Try coding your droid.
 
 * Go to the `mission interface` in the inventor kit app
-* Try missions 11 and 18
+* Try missions 11 (with secret handshake) and 18
 * How could you combine the scratch interface with various inputs and outputs to solve a problem?
 
 ### Exercise: Apply design thinking to solve a problem with Littlebits
-The problem: Drop an egg three stories without it breaking.  
+The problem: Navigate a course, drop and object on the dropzone, drive out.  
 The twist: You may only use materials present on the table and any of your Littlebits parts.  
-The second twist: You must deliver your egg using a scratch program written on your R2-D2.  
+The second twist: You must drive and deliver the object using a scratch program written on your R2-D2.  
 
 > Make sure to use the design process, in this case since the problem is defined, focus on the ideating, prototyping, and testing phases
 
