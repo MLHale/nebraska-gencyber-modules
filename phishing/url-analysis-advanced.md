@@ -30,13 +30,15 @@
 
 ## Obfuscation of Web Content
 
-Obfuscation means the act of making something obscure, unclear, or unintelligible. 
+Obfuscation means the act of making something obscure, unclear, or unintelligible.
 In this sense, it means to make code that is intentionally hard to read, usually to prevent the code of an atttack from being easily read.
 
 Examine this link:
-http://faculty.ist.unomaha.edu/rgandhi/phishing-demo/obfuscated.html
+https://robinagandhi.github.io/phishing-demo/obfuscated.html
 
-It is similar to the page in the [URL Analysis Lesson](../url-analysis.md) in form and function but now examine its page source. It has been obfuscated using an external javascript file. Examine that file as well: http://faculty.ist.unomaha.edu/rgandhi/phishing-demo/myscr150731.js Spammers use such obfuscation to avoid detection and analysis. Navigate away from such pages or delete emails that have gone to such lengths to conceal their "trickeries".
+It is similar to the page in the [URL Analysis Lesson](./url-analysis.md) in form and function but now examine its page source. It has been obfuscated using an external javascript file. Examine that file as well: https://robinagandhi.github.io/phishing-demo/myscr150731.js
+
+Spammers use such obfuscation to avoid detection and analysis. Navigate away from such pages or delete emails that have gone to such lengths to conceal their "trickeries".
 
 Just viewing the source files for obfuscated pages provides no useful information. But if we put our minds to it, we can defeat the bad guys. Navigate back to the obfuscated page. Then right click on a blank area and select `Inspect` or `Inspect Element`. In the `Elements` tab unravel the HTML code that is computed by the browser to render a human readable page. Now it should look similar to the phishing page from before:
 > ![trickyurls](./img/inspectelement.png)
@@ -45,7 +47,7 @@ The developer tools built into the browser also help us see right through the ob
 
 ## Obfuscation of URLs using Encoding
 
-Examine links on this page: http://faculty.ist.unomaha.edu/rgandhi/phishing-demo/encoding.html  
+Examine links on this page: https://robinagandhi.github.io/phishing-demo/encoding.html
 Have you seen links like this before? Examine the page source (right click the blank area and click `view source`).   
 
 Now click on the URLs to reveal their true destinations. How is this working?
@@ -120,12 +122,12 @@ Link #5 is an image map. Different regions of the image are mapped to different 
 ## Clickjacking
 
 Visit this link:
-http://faculty.ist.unomaha.edu/rgandhi/phishing-demo/clickjacking.html
+https://robinagandhi.github.io/phishing-demo/clickjacking.html
 
 At first, there is nothing unusual about this page. There is just a single link to "like the kitten".
 
 As you should know very well by now, nothing is as it seems. To reveal the true nature of this page click on a modified version of this page below.
-http://faculty.ist.unomaha.edu/rgandhi/phishing-demo/clickjacking-reveal.html
+https://robinagandhi.github.io/phishing-demo/clickjacking-reveal.html
 
 ![trickyurls](./img/clickjacking-reveal.png)
 
@@ -199,6 +201,10 @@ Protecting privacy requires **Information Hiding**. Deleting or hiding metadata 
 
 [Top](#table-of-contents)
 
+## Lead Author
+
+- Robin Gandhi
+
 ## Special Thanks
 
 * A special thanks to Matt Hale, Aaron Vigal and Cade Wollcot for reviews of this module and thoughtful discussions.
@@ -209,7 +215,7 @@ Protecting privacy requires **Information Hiding**. Deleting or hiding metadata 
 ## License
 [Nebraska GenCyber](https://github.com/MLHale/nebraska-gencyber) <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /></a><br /> is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</a>.
 
-Overall content: Copyright (C) 2017  [Dr. Matthew L. Hale](http://faculty.ist.unomaha.edu/mhale/), [Dr. Robin Gandhi](http://faculty.ist.unomaha.edu/rgandhi/), and [Doug Rausch](http://www.bellevue.edu/about/leadership/faculty/rausch-douglas).
+Overall content: Copyright (C) 2017-2018  [Dr. Matthew L. Hale](http://faculty.ist.unomaha.edu/mhale/), [Dr. Robin Gandhi](http://faculty.ist.unomaha.edu/rgandhi/), [Dr. Briana B. Morrison](http://www.brianamorrison.net), and [Doug Rausch](http://www.bellevue.edu/about/leadership/faculty/rausch-douglas).
 
-Lesson content: Copyright (C) [Robin Gandhi](http://faculty.ist.unomaha.edu/rgandhi/) 2017.  
+Lesson content: Copyright (C) [Robin Gandhi](http://faculty.ist.unomaha.edu/rgandhi/) 2017-2018.  
 <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /></a><br /><span xmlns:dct="http://purl.org/dc/terms/" property="dct:title">This lesson</span> is licensed by the author under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</a>.

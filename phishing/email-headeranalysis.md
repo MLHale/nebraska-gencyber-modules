@@ -283,7 +283,7 @@ X-Forefront-Antispam-Report: CIP:148.163.152.157;IPV:NLI;CTRY:US;EFV:NLI;SFV:SKN
 MIME-Version: 1.0
 
 <html><head>
-<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">    </head>    <body style="word-wrap: break-word; -webkit-nbsp-mode: space; -webkit-line-break: after-white-space;" class="">    Dear Dr. Gandhi,<br class="">    <br class="">    You are doing very very good work with the Gencyber Camp.&nbsp;<br class="">    Just let me know what you need to make it bigly successful next year!<br class="">    Please put in your funding request here:&nbsp;<a href="http://faculty.ist.unomaha.edu/rgandhi/phishing-demo/encoding.html" class="">Grant Application</a><br class=""> <br class=""><div class="">~Yours Truly<br class=""><font color="#ff2600" class="">Donald</font></div></body></html>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">    </head>    <body style="word-wrap: break-word; -webkit-nbsp-mode: space; -webkit-line-break: after-white-space;" class="">    Dear Dr. Gandhi,<br class="">    <br class="">    You are doing very very good work with the Gencyber Camp.&nbsp;<br class="">    Just let me know what you need to make it bigly successful next year!<br class="">    Please put in your funding request here:&nbsp;<a href="https://robinagandhi.github.io/phishing-demo/encoding.html" class="">Grant Application</a><br class=""> <br class=""><div class="">~Yours Truly<br class=""><font color="#ff2600" class="">Donald</font></div></body></html>
 ```
 
 Questions:
@@ -311,7 +311,9 @@ Stay Vigilant!
 * DomainKeys Identified Mail (DKIM), https://en.wikipedia.org/wiki/DomainKeys_Identified_Mail
 * Sender Policy Framework (SPF), http://www.openspf.org
 
+## Lead Author
 
+- Robin Gandhi
 
 ## Special Thanks
 
@@ -323,7 +325,7 @@ Stay Vigilant!
 # License
 [Nebraska GenCyber](https://github.com/MLHale/nebraska-gencyber) <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /></a><br /> is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</a>.
 
-Overall content: Copyright (C) 2017  [Dr. Matthew L. Hale](http://faculty.ist.unomaha.edu/mhale/), [Dr. Robin Gandhi](http://faculty.ist.unomaha.edu/rgandhi/), and [Doug Rausch](http://www.bellevue.edu/about/leadership/faculty/rausch-douglas).
+Overall content: Copyright (C) 2017-2018  [Dr. Matthew L. Hale](http://faculty.ist.unomaha.edu/mhale/), [Dr. Robin Gandhi](http://faculty.ist.unomaha.edu/rgandhi/), [Dr. Briana B. Morrison](http://www.brianamorrison.net), and [Doug Rausch](http://www.bellevue.edu/about/leadership/faculty/rausch-douglas).
 
-Lesson content: Copyright (C) [Robin Gandhi](http://faculty.ist.unomaha.edu/rgandhi/) 2017.  
+Lesson content: Copyright (C) [Robin Gandhi](http://faculty.ist.unomaha.edu/rgandhi/) 2017-2018.  
 <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /></a><br /><span xmlns:dct="http://purl.org/dc/terms/" property="dct:title">This lesson</span> is licensed by the author under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</a>.

@@ -11,10 +11,10 @@ One of the ways to protect information is by limiting what people can see and do
 - Collaborate using Github
 
 ### Materials required
-- [git](https://git-scm.com/download/) (Windows Version)
+- Access to Github.com
 
 ### Prerequisite lessons
-- [Github Primer](../intro_to_github/README.md)
+- [Introduction to Git and Github](../intro_to_git_and_github/README.md)
 
 ### Table of Contents
 <!-- TOC START min:1 max:3 link:true update:false -->
@@ -88,6 +88,10 @@ The updated content is now reflected in the peer's repository. It will be someth
 
 Now return the favor to your peer. Help them `fork` your hello-world repository and make a `pull request` back to you.
 
+A collaborator may not accept your pull request on the first attempt. She may suggest changes. In that case, you may continue to make commits to the branch referenced in your pull request. Github conveniently tracks previous commits, new commits, and discussions along with the pending pull request.
+
+With your peer try going back and forth on your pull request to experience this feature.
+
 And that is one way you can collaborate using `Github`.
 
 [Top](#table-of-contents)
@@ -110,15 +114,15 @@ You are now ready to explore the wonderful world of open source on Github. Enjoy
 ### Fork Our whole camp
 We practice what we preach. Our whole camp has been developed on GitHub using markdown, for your viewing pleasure and for you to take home with you. Now that you are a Github/git guru, you may as well fork all of the camp content so that you can extend the content as you wish. But don't forget to tell us about it. We love seeing your work!
 
-Go to the Github page for the cam and click fork. Boom, you have our whole camp, use responsibly!
+Go to the [Github page for the camp modules](https://github.com/MLHale/nebraska-gencyber-modules) and click fork. Boom, just like that you have your very own copy of all the modules. Use with attribution, share widely!
+
+### Ready for some trivia?
+
+[Github Collaboration Quiz](https://unomaha.az1.qualtrics.com/jfe/form/SV_0risj3sV2YTmzEV)
 
 ### Cybersecurity First Principles Reflections
 
 On Github, only the `owner` of a remote repository can push commits to it. All other `Github users` have the limited privilege to make a pull request. The repository owner reviews pull requests and initiates a merge action. The owner may reject pull requests if they do not seem appropriate. A `collaborator` can push commits, but cannot delete a repository or add other collaborators. These constraints show the concept of __least privilege__ with GitHub user roles. Users should have no more privilege than what is required for their job.
-
-Developers often design Github repositories, to be self-contained _modules_. These modules are then put in or taken out of a bigger project. During build time these components are composed to create an integrated system. This strategy facilitates __Modularization__. Following this principle allows globally distributed teams to collaborate and locate faulty components.
-
-Finally, Github repositories separate source code from other resources. This separation allows long term archival and maintenance of a code base, separate from its dependencies. __Domain Separation__ enables the management of source code versions that target different products and operating environments.
 
 [Top](#table-of-contents)
 
@@ -131,6 +135,10 @@ Finally, Github repositories separate source code from other resources. This sep
 
 
 [Top](#table-of-contents)
+
+## Lead Author
+
+- Robin Gandhi
 
 ## Acknowledgements
 

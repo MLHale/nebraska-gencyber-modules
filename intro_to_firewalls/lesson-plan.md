@@ -69,7 +69,7 @@ Review how cybersecurity first principles were demonstrated in this module.
 
 ### Assessment
 
-Students will demonstrate an understanding of definitions, terminology, and command prompts through a game of Jeopardy/Kahoots Game.
+Students will demonstrate an understanding of definitions, terminology, and command prompts through a game of Jeopardy/Kahoot Game.
 
 e.g. Quiz / Presentation / Project / Writing Assignment / Observation / Walk Around / Oral Questioning / Other
 

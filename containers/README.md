@@ -71,7 +71,7 @@ Process Isolation keeps separate functions from accessing the same memory.
 
 Let’s start with a container based on [Alpine Linux](https://alpinelinux.org)
 
-- Alpine Linux is a security-oriented, lightweight Linux distribution
+- Alpine Linux is a security-oriented, lightweight Linux distribution (`Minimization`)
 
 First, we need to download a container blueprint called an ```Image```
 
@@ -133,11 +133,12 @@ exit # Stop the shell to exit container
 - You were running as `root` in the container
 
 ## Cleanup
-- Let's see the containers that we created. This command shows both running and stopped containers.
+- Let's see the containers that we created.   
+This command shows both running and stopped containers.
 ```bash
 docker ps -a
 ```
-- Using the name of a container we can delete containers that are stopped.
+- Stopped containers can be deleted.
 ```bash
 docker rm <container-ID or name>
 ```
@@ -673,11 +674,11 @@ Now, press the button on `button` module. Watch as your server get the events fr
 
 [Top](#table-of-contents)
 
-<!-- BROKEN
 # May the force of containers be with you...
 as you take this quiz…
-https://www.qzzr.com/c/quiz/430097/the-container-quiz
--->
+
+[Container Quiz](https://unomaha.az1.qualtrics.com/jfe/form/SV_1ALx1FS1TPdej0F)
+
 # Additional Resources
 
 For more information, investigate the following:
@@ -688,6 +689,10 @@ For more information, investigate the following:
 - [docker-compose.yml](https://docs.docker.com/compose/compose-file/) - Authoring File Reference
 - [Volume](https://docs.docker.com/engine/tutorials/dockervolumes/) - Manage Data in Containers
 - [Container Networking](https://docs.docker.com/engine/tutorials/networkingcontainers/#add-containers-to-a-network) - Connect Containers to a Network
+
+## Lead Author
+
+- Robin Gandhi
 
 # Acknowledgements
 
