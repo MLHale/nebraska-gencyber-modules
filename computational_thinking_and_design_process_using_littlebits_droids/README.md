@@ -6,6 +6,8 @@
 
 * __Modularization__: The concept of modularity is like building blocks. Each block (or module) can be put in or taken out from a bigger project. Each module has its own separate function that is interchangeable with other modules.
 
+* __Resource Encapsulation__: Encapsulation is an object oriented concept where all data and functions required to use the resource are packaged into a single self-contained component. The goal is to only allow access or manipulation of the resource in the way the designer intended. An example, assume a flag pole is the object. There are fixed methods on how the flag pole is to be used. Put the flag on, take the flag off, raise or lower the flag. Nothing else can be done to the flag pole.
+
 * __Simplicity__: Simplicity allows a person to better understand hardware and software. Without the clutter of unnecessarily complicated code and interfaces, the software will be more understandable by people that will update the code when requirements change. It will be easier to understand by the testers and they will be able to spot problems sooner. By keeping software as simple and as focused as possible, the reliability and security is greatly increased.
 
 ### Introduction
@@ -140,12 +142,22 @@ The problem: Navigate a course, drop and object on the dropzone, drive out.
 The twist: You may only use materials present on the table and any of your Littlebits parts.  
 The second twist: You must drive and deliver the object using a scratch program written on your R2-D2.  
 
+Tips:
 > Make sure to use the design process, in this case since the problem is defined, focus on the ideating, prototyping, and testing phases
+> Consider decomposing the problem into subproblems and solving each one of them
+
+
+### Reflection and takeaways
+The design process is useful for conceptualizing a problem and exploring different solutions that meet all of your user's needs or meet the requirements of the problem. Often, breaking a problem down into subproblems can help you tackle complex issues. Components can be used in more than one way for more than one purpose. This leads to `reuse` and is a positive side effect of `modularization` and `resource encapsulation`.
 
 ### Additional Resources
 For more information, investigate the following:
 
 * [Littlebits](http://littlebits.cc/how-it-works) - Overview of concepts and available bits
+* [Scratch Studio](https://scratch.mit.edu/studios/1113820/) - Practice learning scratch
+* [Advantages of User stories](https://www.mountaingoatsoftware.com/blog/advantages-of-the-as-a-user-i-want-user-story-template)
+* [Affinity diagramming process](https://uxdict.io/design-thinking-methods-affinity-diagrams-357bd8671ad4)
+* [Worst Possible ideas](https://www.interaction-design.org/literature/article/learn-how-to-use-the-best-ideation-methods-worst-possible-idea)
 
 ## Lead Author
 
