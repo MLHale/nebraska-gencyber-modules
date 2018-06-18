@@ -1,4 +1,7 @@
-# Lesson Plan Introduction to First Principles
+---
+layout: page
+title: Introduction to Cybersecurity First Principles
+---
 
 ### Summary
 Learners play a card game to learn the principles of cybersecurity.

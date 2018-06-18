@@ -1,4 +1,7 @@
-# Firewalls
+---
+layout: page
+title: Firewalls
+---
 
 Firewalls are often the first line of defense for an enterprise or home network. In this unit, we will understand the fundamentals of firewalls, write firewall rules that configure its behavior and then test if the firewall performs as expected.
 

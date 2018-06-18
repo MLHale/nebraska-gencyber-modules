@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+  <head>
+  <link href="http://gmpg.org/xfn/11" rel="profile">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+  <!-- Enable responsiveness on mobile devices-->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+
+  <title>
+    
+      Intro to Components using Littlebits Droids &middot; 
+    
+  </title>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="/public/css/poole.css">
+  <link rel="stylesheet" href="/public/css/syntax.css">
+  <link rel="stylesheet" href="/public/css/hyde.css">
+  <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=PT+Sans:400,400italic,700|Abril+Fatface">
+
+  <!-- Icons -->
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/public/apple-touch-icon-144-precomposed.png">
+                                 <link rel="shortcut icon" href="/public/favicon.ico">
+
+  <!-- RSS -->
+  <link rel="alternate" type="application/rss+xml" title="RSS" href="/atom.xml">
+</head>
+
+
+  <body>
+
+    <div class="sidebar">
+  <div class="container sidebar-sticky">
+    <div class="sidebar-about">
+      <h1>
+        <a href="/">
+          
+        </a>
+      </h1>
+      <p class="lead"></p>
+    </div>
+
+    <nav class="sidebar-nav">
+      <a class="sidebar-nav-item" href="https://github.com/MLHale/nebraska-gencyber-modules">Nebraska GenCyber</a>
+      <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"></a>is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</a>. <img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /> You are encouraged to reuse, remix, and add to the lessons contained herein - just remember to properly provide attribution.
+      <br><br>
+      Overall content: Copyright (C) 2017-2018  <a href="http://faculty.ist.unomaha.edu/mhale/">Dr. Matthew L. Hale</a>, <a href="http://faculty.ist.unomaha.edu/rgandhi/">Dr. Robin Gandhi</a>, <a href="http://www.brianamorrison.net">Dr. Briana B. Morrison</a>, and <a href="http://www.bellevue.edu/about/leadership/faculty/rausch-douglas">Doug Rausch</a>. <br>
+      Individual content: Copyright (C) 2017-2018 as listed in each lesson.
+    </nav>
+
+    <p>&copy; 2018. All rights reserved.</p>
+  </div>
+</div>
+
+
+    <div class="content container">
+      <div class="page">
+  <h1 class="page-title">Intro to Components using Littlebits Droids</h1>
+  <h3 id="cybersecurity-first-principles-in-this-lesson">Cybersecurity First Principles in this lesson</h3>
+
+<ul>
+  <li>
+    <p><strong>Abstraction</strong>: An abstraction is a representation of an object or concept. It could be something such as a door, a speedometer, or a data structure in computer science. Abstraction decouples the design from the implementation. The gauges in an automobile are an abstraction of the performance of a car. A map is an abstraction of the earth.</p>
+  </li>
+  <li>
+    <p><strong>Modularization</strong>: The concept of modularity is like building blocks. Each block (or module) can be put in or taken out from a bigger project. Each module has its own separate function that is interchangeable with other modules.</p>
+  </li>
+  <li>
+    <p><strong>Resource Encapsulation</strong>: Encapsulation is an object oriented concept where all data and functions required to use the resource are packaged into a single self-contained component. The goal is to only allow access or manipulation of the resource in the way the designer intended. An example, assume a flag pole is the object. There are fixed methods on how the flag pole is to be used. Put the flag on, take the flag off, raise or lower the flag. Nothing else can be done to the flag pole.</p>
+  </li>
+  <li>
+    <p><strong>Simplicity</strong>: Simplicity allows a person to better understand hardware and software. Without the clutter of unnecessarily complicated code and interfaces, the software will be more understandable by people that will update the code when requirements change. It will be easier to understand by the testers and they will be able to spot problems sooner. By keeping software as simple and as focused as possible, the reliability and security is greatly increased.</p>
+  </li>
+</ul>
+
+<h3 id="introduction">Introduction</h3>
+<p>In this lesson, we will learn about components and how they can help solve a problem by decomposing it into sub-problems. We will also explore a cool hands-on technology called <a href="http://littlebits.cc/">Littlebits</a>. Littlebits follows a <em>component-based design</em> paradigm using <em>GPIO</em> (or general purpose input/output) to let you easily make devices. We will learn how to plug and play bits together to make some simple inventions.</p>
+
+<h3 id="goals">Goals</h3>
+<p>By the end of this tutorial, you will be able to:</p>
+<ul>
+  <li>Understand and be able to describe <code>modularity</code>, <code>encapsulation</code>, <code>abstraction</code>, and <code>simplicity</code> in terms of components</li>
+  <li>Use Littlebits components and GPIO to make simple IoT devices</li>
+</ul>
+
+<h3 id="materials-required">Materials Required</h3>
+
+<ul>
+  <li><a href="https://shop.littlebits.com/products/droid-inventor-kit">Littlebits Droid Inventor Kit</a></li>
+  <li><a href="https://shop.littlebits.com/products/number-bit">Number bit</a></li>
+  <li><a href="https://shop.littlebits.com/products/led">LED bit</a></li>
+  <li><a href="https://shop.littlebits.com/products/sound-trigger">Sound trigger bit</a></li>
+  <li><a href="https://shop.littlebits.com/products/temp-sensor">Temperature sensor bit</a></li>
+  <li><a href="https://shop.littlebits.com/products/button">Button bit</a></li>
+  <li><a href="https://shop.littlebits.com/products/wire-bit">Wire bit</a></li>
+  <li><a href="https://shop.littlebits.com/products/usb-power">USB power bit</a></li>
+  <li><a href="https://shop.littlebits.com/products/rechargeable-battery">Rechargable battery pack</a></li>
+</ul>
+
+<h3 id="prerequisite-lessons">Prerequisite lessons</h3>
+<p>None</p>
+
+<h3 id="table-of-contents">Table of Contents</h3>
+<!-- TOC START min:1 max:3 link:true update:true -->
+<ul>
+  <li><a href="#intro-to-components-using-littlebits-droids">Intro to Components using Littlebits Droids</a>
+    <ul>
+      <li><a href="#cybersecurity-first-principles-in-this-lesson">Cybersecurity First Principles in this lesson</a></li>
+      <li><a href="#introduction">Introduction</a></li>
+      <li><a href="#goals">Goals</a></li>
+      <li><a href="#materials-required">Materials Required</a></li>
+      <li><a href="#prerequisite-lessons">Prerequisite lessons</a></li>
+      <li><a href="#table-of-contents">Table of Contents</a></li>
+      <li><a href="#step-1-unbox-it">Step 1: Unbox it!</a></li>
+      <li><a href="#step-2-gotta-start-somewhere">Step 2: Gotta start somewhere</a></li>
+      <li><a href="#step-3-count-all-the-things">Step 3: Count all the things!</a></li>
+      <li><a href="#step-4-the-world-is-more-than-true-or-false---variable-inputs">Step 4: The world is more than True or False - Variable Inputs</a></li>
+      <li><a href="#step-5-hey-listen---audio">Step 5: Hey, Listen - Audio</a></li>
+      <li><a href="#step-6-turning-on-an-outlet-with-the-ir-transmitter">Step 6: Turning on an outlet with the IR transmitter</a></li>
+      <li><a href="#step-7-motoring-onward">Step 7: Motoring onward</a></li>
+      <li><a href="#self-exploration">Self Exploration</a></li>
+      <li><a href="#test-your-bits-err-wits">Test Your Bits, err… Wits!</a></li>
+      <li><a href="#additional-resources">Additional Resources</a></li>
+      <li><a href="#acknowledgements">Acknowledgements</a></li>
+      <li><a href="#license">License</a></li>
+    </ul>
+  </li>
+</ul>
+
+<!-- TOC END -->
+
+<h3 id="step-1-unbox-it">Step 1: Unbox it!</h3>
+<p>First, open your Littlebits box. Take a second to look at the different components you have. Littlebits is organized around three colors:</p>
+
+<ul>
+  <li><strong><span style="color: pink">Pink</span></strong> modules are <em>inputs</em>, like an On/Off button.</li>
+  <li><strong><span style="color: green">Green</span></strong> modules are <em>outputs</em>, like LEDs and Fans.</li>
+  <li><strong><span style="color: orange">Orange</span></strong> modules are special and usually are <em>supportive</em> - think splitters and logic handlers.</li>
+  <li><strong><span style="color: blue">Blue</span></strong> modules are power related.</li>
+</ul>
+
+<p>Look over each module. Your kit should include all of these parts:</p>
+
+<p><img src="../img/box-contents.jpg" alt="unbox" /></p>
+<blockquote>
+  <p>Note: Dog not included!</p>
+</blockquote>
+
+<p><img src="../img/droid-kit.jpg" alt="unbox" /></p>
+
+<h3 id="step-2-gotta-start-somewhere">Step 2: Gotta start somewhere</h3>
+<p>No time like the present. Before we get into the droid, lets start with the basics to make a simple invention:</p>
+
+<ul>
+  <li>find the blue <code>power</code> module.</li>
+  <li>find the pink <code>button</code> input module</li>
+  <li>find the green <code>led</code> output module</li>
+</ul>
+
+<p>Lets make a simple circuit:</p>
+
+<ul>
+  <li>Connect micro USB end to the <code>power</code> module and plug up to a computer or the <code>battery</code></li>
+  <li>Connect the <code>button</code> to the <code>power</code> module</li>
+  <li>Connect the <code>led</code> to the <code>button</code>.</li>
+</ul>
+
+<p><img src="../img/simple-circuit.jpg" alt="unbox" /></p>
+
+<p>Press the button and the light turns on. That was easy!</p>
+
+<p>This is <code>GPIO</code> in a nutshell. Each module has a general purpose input and output, with a standard interface, and <strong>doesn’t need to understand or know anything about what they are connected to</strong>. These modules also need to protect themselves from invalid input. This is a great example of the <code>modularity</code> cybersecurity first principle.</p>
+
+<h3 id="step-3-count-all-the-things">Step 3: Count all the things!</h3>
+<p>Ok, we’ve made our first circuit - but it’s pretty simple. Let’s add some more modules:</p>
+
+<ul>
+  <li>Find the green <code>o21 number</code> output module</li>
+</ul>
+
+<p>Time to extend your previous circuit to <img src="../img/count-all-the-things.jpg" alt="count" /></p>
+
+<ul>
+  <li>Connect the <code>o21 number</code> to the <code>bright led</code></li>
+  <li>Set the switch to the up position on the <code>o21 number</code> module. This puts it into <strong>count</strong> mode instead of <strong>voltage</strong> mode.</li>
+</ul>
+
+<p>Press the button!</p>
+
+<p>Pretty simple. Notice we can <strong>chain the output modules together</strong> (<code>bright led</code> and a <code>counter</code> in this case). Any number of output modules can be chained together.</p>
+
+<p>Now, lets switch up our circuit a bit.</p>
+
+<ul>
+  <li>Find the pink <code>sound trigger</code> input module</li>
+  <li>Find the pink <code>light sensor</code> input module</li>
+</ul>
+
+<p>Lets swap some components around.</p>
+
+<ul>
+  <li>Remove the <code>led</code> module.</li>
+</ul>
+
+<p>Press the button. Everything still works!</p>
+
+<ul>
+  <li>Connect the <code>light sensor</code> to the <code>power</code> and then to the <code>button</code></li>
+</ul>
+
+<p>Press the button. Does it work? How about if you cover up the light sensor? The simple functionality of each component is an example of <code>simplicity</code>.</p>
+
+<p>This shows you that you can also <strong>chain multiple input modules together</strong> and their <strong>total behavior is a combination of their input designs</strong>. In this case, our counter only worked if the light was detected <strong>AND</strong> the button was pressed. Allowing each component to hand its own functionality is an example of <code>resource encapsulation</code> - since each component encapsulates the code and components needed to do its job.</p>
+
+<p>Lets try one more combo:</p>
+
+<ul>
+  <li>Remove the <code>button</code> module.</li>
+  <li>Remove the <code>light sensor</code> module.</li>
+  <li>Connect the <code>sound trigger</code> between the <code>power</code> and the <code>o21 number</code> module.</li>
+</ul>
+
+<p>Snap your fingers or tap the table near your device.</p>
+
+<p><img src="../img/sound-counter.gif" alt="unbox" /></p>
+
+<p>In cybersecurity, simplicity is the notion that each function should only do what it needs to do and nothing else. All of the littlebits components are a good example of this. The <code>light sensor</code> does not also act as a <code>temperature sensor</code> or <code>sound sensor</code> and vice versa - this makes them easier to test, debug, and protect.</p>
+
+<h3 id="step-4-the-world-is-more-than-true-or-false---variable-inputs">Step 4: The world is more than True or False - Variable Inputs</h3>
+<p>So far, we have outputs and inputs that result in an <strong>on</strong> (True) or <strong>off</strong> (False) behavior.</p>
+
+<p><img src="../img/grey-world.jpg" alt="grey" />.</p>
+
+<p>The world is not always <strong>on</strong> or <strong>off</strong></p>
+
+<ul>
+  <li>Find the pink <code>temperature sensor</code> input module.</li>
+  <li>Get the <code>light sensor</code> and <code>led</code> out again</li>
+</ul>
+
+<p>We are going to make a circuit that shows off variable voltage.</p>
+
+<ul>
+  <li>Remove all components.</li>
+  <li>Connect the <code>temperature sensor</code> to the <code>o21 number</code> module.</li>
+  <li>Set the <code>o21 number</code> switch to <strong>value</strong> (middle position)</li>
+  <li>Set the <code>temperature sensor</code> switch to <strong>f</strong> (for Fahrenheit)</li>
+</ul>
+
+<p>You should see the current temperature in the room near the device.
+<img src="../img/temperature.jpg" alt="temperature" /></p>
+
+<ul>
+  <li>Replace the <code>temperature sensor</code> with the <code>light sensor</code></li>
+  <li>Put the <code>o21 number</code> module back into <strong>voltage</strong> mode by moving the switch to the bottom position.</li>
+  <li>Move your finger closer to and further away from the light sensor</li>
+</ul>
+
+<p>You should see that the more light it gets, the more voltage it outputs.</p>
+
+<ul>
+  <li>Now connect the <code>led</code> to the right-hand side of the <code>o21 number</code> module</li>
+  <li>Move your finger closer to and further away from the light sensor</li>
+</ul>
+
+<p>You should notice the light dimming and brightening depending on the voltage it receives.</p>
+
+<h3 id="step-6-motoring-onward-beep-beep-boop">Step 6: Motoring onward: Beep beep boop</h3>
+<p>We’ve saved the best for last. It is time to unbox and open up your droid! There are a lot of parts, but we Littlebits provides some nice <code>missions</code> to walk students through each of them.</p>
+
+<ul>
+  <li>Open your <code>droid inventor kit</code></li>
+  <li>Install <a href="https://littlebits.com/app">Littlebits Droid Inventor App</a> on your phone or tablet.</li>
+  <li>Follow the in-box instructions:
+    <ul>
+      <li>Connect the app to your droid</li>
+      <li>Complete Missions 1-4,7,8,12 and 13</li>
+    </ul>
+  </li>
+</ul>
+
+<p>The Littlebits droid inventory kit has a controller and mission interface that is a good example of <code>abstraction</code> - since it represents information about a real physical device in a way that allows the user to conceptualize it.</p>
+
+<p>You’ll be driving around in no time!
+<img src="../img/driving.gif" alt="driving" /></p>
+
+<h3 id="self-exploration">Self Exploration</h3>
+<p>Try some different designs yourself.</p>
+
+<h3 id="reflection">Reflection</h3>
+<p>In this lesson, we saw how components can be used to</p>
+
+<h3 id="test-your-bits-err-wits">Test Your Bits, err… Wits!</h3>
+<p><a href="https://www.qzzr.com/c/quiz/430545/all-about-littlebits-introduction">Quiz</a></p>
+
+<div class="quizz-container" data-width="100%" data-iframe-title="QUIZ: All About Littlebits - Introduction" data-height="auto" data-quiz="430545"></div>
+
+<h3 id="additional-resources">Additional Resources</h3>
+<p>For more information, investigate the following:</p>
+
+<ul>
+  <li><a href="http://littlebits.cc/how-it-works">Littlebits</a> - Overview of concepts and available bits</li>
+</ul>
+
+<h2 id="lead-author">Lead Author</h2>
+
+<ul>
+  <li>Matt Hale</li>
+</ul>
+
+<h3 id="acknowledgements">Acknowledgements</h3>
+<p>Special thanks to <a href="http://faculty.ist.unomaha.edu/rgandhi/">Dr. Robin Gandhi</a> for reviewing and editing earlier versions of this lesson.</p>
+
+<h3 id="license">License</h3>
+<p><a href="https://github.com/MLHale/nebraska-gencyber">Nebraska GenCyber</a> <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /></a><br /> is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</a>.</p>
+
+<p>Overall content: Copyright (C) 2017-2018  <a href="http://faculty.ist.unomaha.edu/mhale/">Dr. Matthew L. Hale</a>, <a href="http://faculty.ist.unomaha.edu/rgandhi/">Dr. Robin Gandhi</a>, <a href="http://www.brianamorrison.net">Dr. Briana B. Morrison</a>, and <a href="http://www.bellevue.edu/about/leadership/faculty/rausch-douglas">Doug Rausch</a>.</p>
+
+<p>Lesson content: Copyright (C) <a href="http://faculty.ist.unomaha.edu/mhale/">Dr. Matthew L. Hale</a> 2017.<br />
+<a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /></a><br /><span xmlns:dct="http://purl.org/dc/terms/" property="dct:title">This lesson</span> is licensed by the author under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</a>.</p>
+
+</div>
+
+    </div>
+
+  </body>
+</html>

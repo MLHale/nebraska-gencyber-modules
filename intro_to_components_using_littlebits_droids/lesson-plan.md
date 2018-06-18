@@ -1,4 +1,8 @@
-# Intro to Components using Littlebits Droids
+---
+layout: page
+title: Intro to Components using Littlebits Droids
+---
+
 
 ### Summary
 This is a module about modules. It introduces component-based thinking using modular components in the `Littlebits Droid Kit (TM)`.

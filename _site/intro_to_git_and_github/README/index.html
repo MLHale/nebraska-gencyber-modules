@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+  <head>
+  <link href="http://gmpg.org/xfn/11" rel="profile">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+  <!-- Enable responsiveness on mobile devices-->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+
+  <title>
+    
+      Introduction to Git and Github &middot; 
+    
+  </title>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="/public/css/poole.css">
+  <link rel="stylesheet" href="/public/css/syntax.css">
+  <link rel="stylesheet" href="/public/css/hyde.css">
+  <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=PT+Sans:400,400italic,700|Abril+Fatface">
+
+  <!-- Icons -->
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/public/apple-touch-icon-144-precomposed.png">
+                                 <link rel="shortcut icon" href="/public/favicon.ico">
+
+  <!-- RSS -->
+  <link rel="alternate" type="application/rss+xml" title="RSS" href="/atom.xml">
+</head>
+
+
+  <body>
+
+    <div class="sidebar">
+  <div class="container sidebar-sticky">
+    <div class="sidebar-about">
+      <h1>
+        <a href="/">
+          
+        </a>
+      </h1>
+      <p class="lead"></p>
+    </div>
+
+    <nav class="sidebar-nav">
+      <a class="sidebar-nav-item" href="https://github.com/MLHale/nebraska-gencyber-modules">Nebraska GenCyber</a>
+      <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"></a>is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</a>. <img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /> You are encouraged to reuse, remix, and add to the lessons contained herein - just remember to properly provide attribution.
+      <br><br>
+      Overall content: Copyright (C) 2017-2018  <a href="http://faculty.ist.unomaha.edu/mhale/">Dr. Matthew L. Hale</a>, <a href="http://faculty.ist.unomaha.edu/rgandhi/">Dr. Robin Gandhi</a>, <a href="http://www.brianamorrison.net">Dr. Briana B. Morrison</a>, and <a href="http://www.bellevue.edu/about/leadership/faculty/rausch-douglas">Doug Rausch</a>. <br>
+      Individual content: Copyright (C) 2017-2018 as listed in each lesson.
+    </nav>
+
+    <p>&copy; 2018. All rights reserved.</p>
+  </div>
+</div>
+
+
+    <div class="content container">
+      <div class="page">
+  <h1 class="page-title">Introduction to Git and Github</h1>
+  <h3 id="cybersecurity-first-principles-in-this-lesson">Cybersecurity First Principles in this lesson</h3>
+
+<h4 id="domain-separation">Domain Separation</h4>
+<p>Good fences make good neighbors.</p>
+<ul>
+  <li>It is good to separate source code from build and runtime environments</li>
+  <li>Version control for source code prevents accidental or unauthorized changes</li>
+  <li>Eliminate dead code</li>
+</ul>
+
+<h4 id="modularization">Modularization</h4>
+<p>The concept of modularity is like building blocks. Each block (or module) can be put in or taken out from a bigger project. Each module has its own separate function that is interchangeable with other modules.</p>
+<ul>
+  <li>Different code repositories can be maintained for project modules</li>
+</ul>
+
+<h3 id="introduction-git-and-github">Introduction: Git and Github</h3>
+<ul>
+  <li><a href="https://git-scm.com/">Git</a> is a popular software development tool.</li>
+  <li>Used by developers to collaborate and version control code.</li>
+  <li>A collaborative environment to develop written works including code!</li>
+  <li><a href="https://github.com/">Github</a> is popular for online git repository hosting
+    <ul>
+      <li>Free for open source</li>
+      <li><a href="https://bitbucket.org/">BitBucket</a>, is another such a service.</li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="lesson-goals">Lesson goals</h3>
+<ul>
+  <li>Create, clone and manage online repositories</li>
+  <li>Create and manage local repositories</li>
+  <li>Synchronize repositories</li>
+</ul>
+
+<h3 id="materials-required">Materials required</h3>
+<ul>
+  <li><a href="https://git-scm.com/download/">git</a> (Windows Version)</li>
+</ul>
+
+<h3 id="prerequisite-lessons">Prerequisite lessons</h3>
+<ul>
+  <li>Lots of curiosity</li>
+  <li><a href="https://www.cheatography.com/davechild/cheat-sheets/linux-command-line/pdf/">Linux Commands</a>. These directory operations will be very useful:
+    <pre><code class="language-bash"># Directory Operations
+pwd # Show current directory
+mkdir dir # Make directory dir
+cd dir # Change directory to dir
+cd .. # Move up a directory
+ls  # list files and directories in current directory
+</code></pre>
+  </li>
+  <li>Windows PowerShell and MacOS terminal also understand above commands.</li>
+</ul>
+
+<h3 id="table-of-contents">Table of Contents</h3>
+<!-- TOC START min:1 max:3 link:true update:true -->
+<pre><code>- [Cybersecurity First Principles in this lesson](#cybersecurity-first-principles-in-this-lesson)
+- [Introduction: Git and Github](#introduction-git-and-github)
+- [Lesson goals](#lesson-goals)
+- [Materials required](#materials-required)
+- [Prerequisite lessons](#prerequisite-lessons)
+- [Table of Contents](#table-of-contents)
+- [Step 1: Create an Account](#step-1-create-an-account)
+- [Step 2: Hello World](#step-2-hello-world)
+- [Step 3: Clone a Repository](#step-3-clone-a-repository)
+- [Step 4: Push Changes](#step-4-push-changes)
+- [Step 5: Pull Remote Changes](#step-5-pull-remote-changes)
+- [Initialize a new repository](#initialize-a-new-repository)
+- [Git your engines ready!](#git-your-engines-ready)
+- [Cybersecurity First Principles Reflections](#cybersecurity-first-principles-reflections)   - [Additional Resources](#additional-resources)   - [Lead Author](#lead-author)   - [Acknowledgements](#acknowledgements)   - [License](#license)
+</code></pre>
+
+<!-- TOC END -->
+
+<h3 id="step-1-create-an-account">Step 1: Create an Account</h3>
+<p>First things first, create a free account on Github. https://github.com/join
+You will also need to verify your email address after registration in order to use your new GitHub account.</p>
+
+<p><a href="#table-of-contents">Top</a></p>
+
+<h3 id="step-2-hello-world">Step 2: Hello World</h3>
+<p>Complete the following Github tutorial:
+https://guides.github.com/activities/hello-world/</p>
+
+<p>At the end of Step 2, you will have created a <code>remote</code> repository and will have added a <code>branch</code>. It is <code>remote</code> because all your files are in the Github cloud. As a developer, you might ask, <em>“how do I use this to create code if it is just online?”</em> It is not convenient to write and test code online, especially when many applications require locally install packages to even work. It would be great to use your own <code>Local</code> repository. We will do just that in the next step.</p>
+
+<p>Git is a distributed configuration management system. It helps to <code>avoid</code> thinking of a traditional central code repository. Instead, with Git we have multiple independent repositories that could be in different states at any given time and synchronized using specific commits.</p>
+
+<p><a href="#table-of-contents">Top</a></p>
+
+<h3 id="step-3-clone-a-repository">Step 3: Clone a Repository</h3>
+<p>To create a <code>Local</code> repository there are two basic options.</p>
+<ol>
+  <li><code>Clone</code> a remote repository on your computer, or</li>
+  <li><code>Initialize</code> a new git repository from scratch on your computer.</li>
+</ol>
+
+<p><a href="#table-of-contents">Top</a></p>
+
+<h5 id="clone-a-remote-repository">Clone a remote repository</h5>
+<p>Let’s start by looking at option #1 and checking that Git is installed.</p>
+
+<ul>
+  <li>Git tools do not come pre-installed with all operating systems.</li>
+  <li>
+    <p>To check if they exist on your operating system, open up a command line interface (<code>PowerShell</code> for Windows) and type:</p>
+
+    <pre><code class="language-bash">git --version
+</code></pre>
+  </li>
+  <li>If Git is installed, this command will show the version installed. If the command is not recognized, then it means you need to install git on your OS. The information available at <a href="https://git-scm.com/book/en/v2/Getting-Started-Installing-Git">https://git-scm.com/book/en/v2/Getting-Started-Installing-Git</a> can walk you through it for a variety of OSes.</li>
+  <li>We will assume a Windows OS environment with PowerShell as shown below:</li>
+</ul>
+
+<blockquote>
+  <p><img src="../img/gitVersionCheck.png" alt="version" /></p>
+</blockquote>
+
+<p>To <code>clone</code> a remote repository (what we set out to do), we first need a <code>reference URL</code> to find it.</p>
+<ul>
+  <li>On <code>Github.com</code>, navigate to your hello-world repository and click on the button that says <code>Clone or download</code>.</li>
+  <li>Copy that URL.</li>
+  <li>
+    <p>Now we are ready to clone this remote repository, and create a local repository.</p>
+
+    <pre><code class="language-bash">git clone &lt;replace this, including angled brackets with the clone URL that you copied above&gt;
+</code></pre>
+  </li>
+</ul>
+
+<p>You will start to see some download messages and upon success, your local repository will be ready for use. You may be asked to authenticate with Github credentials if your repository is not public.</p>
+
+<blockquote>
+  <p><img src="../img/gitClone.png" alt="clone" /></p>
+</blockquote>
+
+<p>Now, in PowerShell, switch to the hello-world directory that has all the files from the repository that you just cloned.</p>
+
+<pre><code class="language-bash">cd hello-world/
+</code></pre>
+
+<p>To list the files in this directory, use this command</p>
+
+<pre><code class="language-bash">ls
+</code></pre>
+<p>You should see a README.md and possibly some other files.</p>
+
+<p><a href="#table-of-contents">Top</a></p>
+
+<h3 id="step-4-push-changes">Step 4: Push Changes</h3>
+<p>In this step, we will make changes to files in our <code>Local</code> repository and then <code>push</code> changes back to the <code>remote</code> repository.</p>
+
+<p>Git is based on a <strong>de-centralized</strong> model of ownership - which means that there is no central authoritative repository. Every repository, Local or Remote, is fully autonomous and fully functional on its own. So changes made in any repository are tracked in that repository only. Two repositories do not communicate unless there is a explicit request to synchronize changes across them. This will make more sense as we work through a scenario.</p>
+
+<p>Let’s open the hello-world folder in windows explorer and make changes to the <code>README.md</code> file in a text editor.</p>
+
+<ol>
+  <li>Navigate to the files</li>
+  <li>Open README.md in Notepad</li>
+  <li>Edit README.md to add a message. Like the one below.
+    <blockquote>
+      <p><img src="../img/editreadme.png" alt="readme" /></p>
+    </blockquote>
+  </li>
+</ol>
+
+<p>Once you save the edited README.md, check the status of the local repository using the following command. Return to PowerShell:</p>
+
+<pre><code class="language-bash">git status
+</code></pre>
+<p>You should see something like this:</p>
+
+<blockquote>
+  <p><img src="../img/editedFileStatus.png" alt="gitstatus" /></p>
+</blockquote>
+
+<p>A few things to notice here about these status messages:</p>
+<ol>
+  <li><code>On branch master</code>: You are on the master branch in your <code>local</code> repository.</li>
+  <li><code>Your branch is up-to-date with 'origin/master'</code>: Your local repository master branch is in sync with your remote repository master branch on GitHub. The default name for the remote repository is <strong>origin</strong>. This makes sense as you cloned your local repository from it.</li>
+  <li><code>Changes not staged for commit</code>: git follows a two step process to save changes to a repository.</li>
+  <li>The user indicates which modified/deleted/new files need to be <code>staged</code> for a save in the repository.</li>
+  <li>The staged files are <code>committed</code> to the repository.</li>
+  <li><code>modified:  README.md</code>: git knows that the README.md file has been modified</li>
+</ol>
+
+<p>Now we <code>stage</code> our changes for a <code>commit</code> using this command:</p>
+<pre><code class="language-bash">git add --all
+</code></pre>
+<p>The above command <code>adds</code> any edited files in a staging area, a temporary holding place before a <code>commit</code>. We can check the status of the repository again using the following command:</p>
+
+<pre><code class="language-bash">git status
+</code></pre>
+<p>You should see something like this:</p>
+
+<blockquote>
+  <p><img src="../img/gitadded.png" alt="gitadd" /></p>
+</blockquote>
+
+<p>This time the modified files are <code>staged</code> for a <code>commit</code> and appear in green.</p>
+
+<p>Now before we <code>commit</code> these files into our local repository, the git author details need to be set. This is for accountability of commits. Using the commands below, save your information to the git configuration files and set them for all of your local repositories. Make sure to use the same name and email you used to register with Github. This is a one-time setup only. Once it is set, you don’t have to do this on subsequent commits.</p>
+
+<pre><code class="language-bash">git config --global user.name "replace this with your name"
+git config --global user.email youremail@example.com
+</code></pre>
+<p>You should see something like this (with your name and email):</p>
+<blockquote>
+  <p><img src="../img/gitconfig.png" alt="gitconfig" /></p>
+</blockquote>
+
+<p>Check your configuration changes by using the following command:</p>
+<pre><code class="language-bash">git config --list
+</code></pre>
+
+<p>Again, you only have to set the config parameters once. Now that they are set, git will keep reusing them when making commits or merging your changes with other repositories.</p>
+
+<p>Now let’s commit the changes that we staged before. Here we use the <code>commit</code> option with <code>-m</code> to provide a short commit message. This helps us remember various checkpoints in our editing process. These messages are very helpful to rollback changes to an appropriate commit.</p>
+
+<pre><code class="language-bash">git commit -m "added UNO description"
+</code></pre>
+
+<p>Use this command to see all your commits:</p>
+
+<pre><code class="language-bash">git log
+</code></pre>
+
+<p>This command shows a summary of commits in the repository, starting with the most recent. Observe the hash code, user details and commit message. These attributes provide attribution of all changes in the code repository, promoting code integrity.</p>
+
+<blockquote>
+  <p>Hit the key <code>q</code> to exit the log of commit messages.</p>
+</blockquote>
+
+<p>Issue this command to check your repository status once again:</p>
+<pre><code class="language-bash">git status
+</code></pre>
+
+<p>It should report <strong>no</strong> uncommitted changes. But it indicates that <code>Your branch is ahead of 'origin/master' by 1 commit</code>. Which means that our local repository master branch has more recent commits than the remote repository master branch.</p>
+
+<p>To push our local commits to the remote repository (Github in this case), we need the git <code>push</code> command. With this command, we need to indicate the name of the remote repository followed by the name of the local repository branch that has updates to be pushed. Do you remember the name of our remote repository and the main branch?</p>
+
+<blockquote>
+  <p><strong>Questions</strong></p>
+  <ul>
+    <li>What is the default name of the remote repository?</li>
+    <li>What is the default name of the base branch in a repository?</li>
+  </ul>
+</blockquote>
+
+<p>To <code>push</code> local commits in the current branch to a remote repository (<code>origin</code> in our case) and its remote branch (<code>master</code> in our case), use the following command:</p>
+
+<pre><code class="language-bash"> git push origin master
+</code></pre>
+
+<blockquote>
+  <p><strong>OPTIONAL</strong>: To rename a branch in the remote repository, you’d use the same git push command, but you would add one more argument: the name of the new branch. For example:<br />
+<code>git push  &lt;REMOTENAME&gt; &lt;LOCALBRANCHNAME&gt;:&lt;REMOTEBRANCHNAME&gt;</code><br />
+This command pushes the LOCALBRANCHNAME to your REMOTENAME, but it is renamed to REMOTEBRANCHNAME.</p>
+</blockquote>
+
+<p>Now, issue the <code>status</code> command to check your repository status once again:</p>
+<pre><code class="language-bash">git status
+</code></pre>
+
+<p>Visit your remote repository on <code>Github.com</code>. Your changes should appear there. You should also see your commit message there. Clicking on the commit message will show the file differences in that <code>commit</code>.</p>
+
+<blockquote>
+  <p><img src="../img/remoteupdate.png" alt="updateremote" /></p>
+</blockquote>
+
+<p>As mentioned before in the introduction, git version control is very efficient for text files. It does not store entire files for old versions but only the differences. So it is prudent to make frequent commits and then push these changes to the remote repository - so that you have as many checkpoints as possible should you need to roll back. To keep the master branch commits clean, it is advisable to do feature development and testing in a feature branch and then merge with master.</p>
+
+<p><a href="#table-of-contents">Top</a></p>
+
+<h3 id="step-5-pull-remote-changes">Step 5: Pull Remote Changes</h3>
+<p>What happens if we make some changes to README.md on <code>Github.com</code>? Or another collaborator makes changes to it. How do we get these changes back into our local repository? We will learn just that in this step.</p>
+
+<p>So, I realized that I forgot to add a link to UNO’s Cybersecurity programs in the README.md file. So I will make these changes and commit those changes on Github.com itself.</p>
+
+<ol>
+  <li>First, click on README.md file on Github and then click the edit option as shown below:
+    <blockquote>
+      <p><img src="../img/githubedit.png" alt="githubedit" /></p>
+    </blockquote>
+  </li>
+  <li>Make changes, add a <code>commit</code> message and click <code>Commit changes</code>
+    <blockquote>
+      <p><img src="../img/githubcommit.png" alt="githubcommit" /></p>
+    </blockquote>
+  </li>
+  <li>See changes in your README.md file
+    <blockquote>
+      <p><img src="../img/githubupdated.png" alt="githubupdated" /></p>
+    </blockquote>
+  </li>
+</ol>
+
+<p>Now the remote repository is one <code>commit</code> ahead of the local repository. To bring the <em>local</em> repository up to speed, we use the following command in a terminal. This single command fetches remote changes (<code>git fetch</code>) and merges them (<code>git merge</code>) into your local repository.</p>
+
+<pre><code class="language-bash">git pull
+</code></pre>
+
+<blockquote>
+  <p><code>Sidebar</code>: If a repository has linked sub-modules (e.g. <a href="https://github.com/MLHale/nebraska-gencyber">nebraska-gencyber</a>), add the following recursion flags to clone and pull changes from the sub-modules as well:<br />
+<code>git clone --recursive https://github.com/MLHale/nebraska-gencyber-dev-env.git</code><br />
+<code>git pull --recurse-submodules</code></p>
+</blockquote>
+
+<p>Continuing with the lesson, if we look at our local README.MD file in windows explorer, it should have the updated link.</p>
+<blockquote>
+  <p><img src="../img/openreadme.png" alt="localpullupdate" /></p>
+</blockquote>
+
+<p>At this point, you know enough to keep both the local and remote repositories synchronized.</p>
+
+<p>As long as you always <code>pull</code> before making changes and keep <code>pushing</code> any new changes - you will avoid most merge conflicts that can occur.</p>
+
+<p>If you are interested in learning more about complex team interaction scenarios - you may want to explore a concept called <code>branching</code> that avoids most <code>merge conflicts</code>; for more information about merge conflicts see: <a href="https://help.github.com/articles/resolving-a-merge-conflict-from-the-command-line/">https://help.github.com/articles/resolving-a-merge-conflict-from-the-command-line/</a>.</p>
+
+<p><a href="#table-of-contents">Top</a></p>
+
+<p>You are now ready to explore the wonderful world of open source on Github. Enjoy and make your own contributions!</p>
+
+<p><a href="#table-of-contents">Top</a></p>
+
+<h3 id="initialize-a-new-repository">Initialize a new repository</h3>
+
+<p>In previous steps we assumed that a repository existed on Github. What if you wanted to start a repository on your local computer?
+If you need to create a new repository you would just navigate to the folder (using the <code>cd</code> command) containing the files you wish to version control and then use the <code>init</code> command.</p>
+
+<p>In the commands below, I will first create a new directory and then initialize a git repository within that directory. Git will then allow you to keep track all the files in that directory with version control.</p>
+
+<pre><code class="language-bash"># Create a new directory
+mkdir test
+# Switch to that directory
+cd test
+# Initialize a new git repository
+git init
+</code></pre>
+
+<p>That’s it! This directory is now ready for version control using git. This is useful if you are <strong>creating new files from scratch</strong>. You can also <em>push</em> newly tracked files such to a remote repository hosted on Github. The steps are the same as we saw for repositories cloned from Github.</p>
+
+<h3 id="git-your-engines-ready">Git your engines ready!</h3>
+
+<p><a href="https://unomaha.az1.qualtrics.com/jfe/form/SV_41PxKUKx24T3GG9">Github Primer Quiz</a></p>
+
+<h3 id="cybersecurity-first-principles-reflections">Cybersecurity First Principles Reflections</h3>
+
+<p>Developers often design Github repositories, to be self-contained <em>modules</em>. These modules are then put in or taken out of a bigger project. During build time these components are composed to create an integrated system. This strategy facilitates <strong>Modularization</strong>. Following this principle allows globally distributed teams to collaborate and locate faulty components.</p>
+
+<p>Finally, Github repositories separate source code from other resources. This separation allows long term archival and maintenance of a codebase, separate from its dependencies. <strong>Domain Separation</strong> enables the management of source code versions that target different products and operating environments.</p>
+
+<p><a href="#table-of-contents">Top</a></p>
+
+<h2 id="additional-resources">Additional Resources</h2>
+
+<ul>
+  <li>Interactive tutorial: <a href="https://try.github.io/">tryGit</a></li>
+  <li><a href="https://education.github.com/git-cheat-sheet-education.pdf">Github cheatsheet</a></li>
+  <li>Collection of <a href="https://help.github.com/articles/git-and-github-learning-resources/">Github tutorials</a></li>
+  <li>How To: <a href="https://help.github.com/articles/ignoring-files/">Ignore files during a check into Github</a></li>
+</ul>
+
+<p><a href="#table-of-contents">Top</a></p>
+
+<h2 id="lead-author">Lead Author</h2>
+
+<ul>
+  <li>Robin Gandhi</li>
+</ul>
+
+<h2 id="acknowledgements">Acknowledgements</h2>
+
+<ul>
+  <li>A special thanks to Matt Hale, Aaron Vigal and Cade Wollcot for reviews of this module and thoughtful discussions.</li>
+</ul>
+
+<p><a href="#table-of-contents">Top</a></p>
+
+<h2 id="license">License</h2>
+<p><a href="https://github.com/MLHale/nebraska-gencyber">Nebraska GenCyber</a> <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /></a><br /> is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</a>.</p>
+
+<p>Overall content: Copyright (C) 2017-2018  <a href="http://faculty.ist.unomaha.edu/mhale/">Dr. Matthew L. Hale</a>, <a href="http://faculty.ist.unomaha.edu/rgandhi/">Dr. Robin Gandhi</a>, <a href="http://www.brianamorrison.net">Dr. Briana B. Morrison</a>, and <a href="http://www.bellevue.edu/about/leadership/faculty/rausch-douglas">Doug Rausch</a>.</p>
+
+<p>Lesson content: Copyright (C) <a href="http://faculty.ist.unomaha.edu/rgandhi/">Robin Gandhi</a> 2017-2018.<br />
+<a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /></a><br /><span xmlns:dct="http://purl.org/dc/terms/" property="dct:title">This lesson</span> is licensed by the author under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</a>.</p>
+
+</div>
+
+    </div>
+
+  </body>
+</html>

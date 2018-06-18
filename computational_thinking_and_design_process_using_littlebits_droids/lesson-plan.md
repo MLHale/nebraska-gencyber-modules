@@ -1,4 +1,7 @@
-# Intro to Components using Littlebits Droids
+---
+layout: page
+title: Computational thinking and design process with Littlebits droids
+---
 
 ### Summary
 This module follows up on the intro to components lesson by focusing on applying design process with Littlebits to solve a real world problem.

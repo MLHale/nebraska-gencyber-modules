@@ -1,1 +1,35 @@
-theme: jekyll-theme-minimal
+# @Author: Matthew Hale <matthale>
+# @Date:   2018-06-16T11:53:12-05:00
+# @Email:  mlhale@unomaha.edu
+# @Filename: _config.yml
+# @Last modified by:   matthale
+# @Last modified time: 2018-06-18T00:49:20-05:00
+# @Copyright: Copyright (C) 2018 Matthew L. Hale
+
+
+
+# Dependencies
+markdown:         kramdown
+highlighter:      pygments
+
+# Permalinks
+permalink:        pretty
+
+# Setup
+title:            
+tagline:          ''
+description:      ''
+url:              https://mlhale.github.io/nebraska-gencyber-modules/
+baseurl:          /
+
+author:
+  name:           'Matt Hale'
+  url:            https://twitter.com/mlhale_
+
+paginate:         5
+
+# Custom vars
+version:          2.0.0
+
+github:
+  repo:           https://github.com/MLHale/nebraska-gencyber-modules

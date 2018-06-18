@@ -1,4 +1,7 @@
-# Introduction to Git and Github
+---
+layout: page
+title: Introduction to Git and Github
+---
 
 ### Cybersecurity First Principles in this lesson
 
@@ -44,7 +47,6 @@ ls  # list files and directories in current directory
 
 ### Table of Contents    
 <!-- TOC START min:1 max:3 link:true update:true -->
-- [Introduction to Git and Github](#introduction-to-git-and-github)
     - [Cybersecurity First Principles in this lesson](#cybersecurity-first-principles-in-this-lesson)
     - [Introduction: Git and Github](#introduction-git-and-github)
     - [Lesson goals](#lesson-goals)
@@ -102,7 +104,7 @@ Let's start by looking at option #1 and checking that Git is installed.
 - If Git is installed, this command will show the version installed. If the command is not recognized, then it means you need to install git on your OS. The information available at [https://git-scm.com/book/en/v2/Getting-Started-Installing-Git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git) can walk you through it for a variety of OSes.
 - We will assume a Windows OS environment with PowerShell as shown below:
 
-> ![version](./img/gitVersionCheck.png)
+> ![version](../img/gitVersionCheck.png)
 
 To `clone` a remote repository (what we set out to do), we first need a ```reference URL``` to find it.   
 * On `Github.com`, navigate to your hello-world repository and click on the button that says ```Clone or download```.   
@@ -115,7 +117,7 @@ To `clone` a remote repository (what we set out to do), we first need a ```refer
 
 You will start to see some download messages and upon success, your local repository will be ready for use. You may be asked to authenticate with Github credentials if your repository is not public.
 
->![clone](./img/gitClone.png)
+>![clone](../img/gitClone.png)
 
 Now, in PowerShell, switch to the hello-world directory that has all the files from the repository that you just cloned.
 
@@ -142,7 +144,7 @@ Let's open the hello-world folder in windows explorer and make changes to the `R
 1. Navigate to the files
 2. Open README.md in Notepad
 3. Edit README.md to add a message. Like the one below.
->![readme](./img/editreadme.png)
+>![readme](../img/editreadme.png)
 
 Once you save the edited README.md, check the status of the local repository using the following command. Return to PowerShell:
 
@@ -151,7 +153,7 @@ git status
 ```
 You should see something like this:
 
->![gitstatus](./img/editedFileStatus.png)
+>![gitstatus](../img/editedFileStatus.png)
 
 A few things to notice here about these status messages:  
 1. `On branch master`: You are on the master branch in your `local` repository.  
@@ -172,7 +174,7 @@ git status
 ```
 You should see something like this:
 
->![gitadd](./img/gitadded.png)
+>![gitadd](../img/gitadded.png)
 
 This time the modified files are `staged` for a `commit` and appear in green.
 
@@ -183,7 +185,7 @@ git config --global user.name "replace this with your name"
 git config --global user.email youremail@example.com
 ```
 You should see something like this (with your name and email):
->![gitconfig](./img/gitconfig.png)
+>![gitconfig](../img/gitconfig.png)
 
 Check your configuration changes by using the following command:
 ```bash
@@ -238,7 +240,7 @@ git status
 
 Visit your remote repository on `Github.com`. Your changes should appear there. You should also see your commit message there. Clicking on the commit message will show the file differences in that `commit`.
 
-> ![updateremote](./img/remoteupdate.png)
+> ![updateremote](../img/remoteupdate.png)
 
 As mentioned before in the introduction, git version control is very efficient for text files. It does not store entire files for old versions but only the differences. So it is prudent to make frequent commits and then push these changes to the remote repository - so that you have as many checkpoints as possible should you need to roll back. To keep the master branch commits clean, it is advisable to do feature development and testing in a feature branch and then merge with master.
 
@@ -250,13 +252,13 @@ What happens if we make some changes to README.md on `Github.com`? Or another co
 So, I realized that I forgot to add a link to UNO's Cybersecurity programs in the README.md file. So I will make these changes and commit those changes on Github.com itself.
 
 1. First, click on README.md file on Github and then click the edit option as shown below:
->![githubedit](./img/githubedit.png)
+>![githubedit](../img/githubedit.png)
 
 2. Make changes, add a `commit` message and click `Commit changes`
->![githubcommit](./img/githubcommit.png)
+>![githubcommit](../img/githubcommit.png)
 
 3. See changes in your README.md file
->![githubupdated](./img/githubupdated.png)
+>![githubupdated](../img/githubupdated.png)
 
 Now the remote repository is one `commit` ahead of the local repository. To bring the _local_ repository up to speed, we use the following command in a terminal. This single command fetches remote changes (`git fetch`) and merges them (`git merge`) into your local repository.
 
@@ -269,7 +271,7 @@ git pull
 > `git pull --recurse-submodules`
 
 Continuing with the lesson, if we look at our local README.MD file in windows explorer, it should have the updated link.
->![localpullupdate](./img/openreadme.png)
+>![localpullupdate](../img/openreadme.png)
 
 At this point, you know enough to keep both the local and remote repositories synchronized.    
 

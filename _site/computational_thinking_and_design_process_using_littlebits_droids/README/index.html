@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+  <head>
+  <link href="http://gmpg.org/xfn/11" rel="profile">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+  <!-- Enable responsiveness on mobile devices-->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+
+  <title>
+    
+      Computational thinking and design process with Littlebits droids &middot; 
+    
+  </title>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="/public/css/poole.css">
+  <link rel="stylesheet" href="/public/css/syntax.css">
+  <link rel="stylesheet" href="/public/css/hyde.css">
+  <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=PT+Sans:400,400italic,700|Abril+Fatface">
+
+  <!-- Icons -->
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/public/apple-touch-icon-144-precomposed.png">
+                                 <link rel="shortcut icon" href="/public/favicon.ico">
+
+  <!-- RSS -->
+  <link rel="alternate" type="application/rss+xml" title="RSS" href="/atom.xml">
+</head>
+
+
+  <body>
+
+    <div class="sidebar">
+  <div class="container sidebar-sticky">
+    <div class="sidebar-about">
+      <h1>
+        <a href="/">
+          
+        </a>
+      </h1>
+      <p class="lead"></p>
+    </div>
+
+    <nav class="sidebar-nav">
+      <a class="sidebar-nav-item" href="https://github.com/MLHale/nebraska-gencyber-modules">Nebraska GenCyber</a>
+      <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"></a>is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</a>. <img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /> You are encouraged to reuse, remix, and add to the lessons contained herein - just remember to properly provide attribution.
+      <br><br>
+      Overall content: Copyright (C) 2017-2018  <a href="http://faculty.ist.unomaha.edu/mhale/">Dr. Matthew L. Hale</a>, <a href="http://faculty.ist.unomaha.edu/rgandhi/">Dr. Robin Gandhi</a>, <a href="http://www.brianamorrison.net">Dr. Briana B. Morrison</a>, and <a href="http://www.bellevue.edu/about/leadership/faculty/rausch-douglas">Doug Rausch</a>. <br>
+      Individual content: Copyright (C) 2017-2018 as listed in each lesson.
+    </nav>
+
+    <p>&copy; 2018. All rights reserved.</p>
+  </div>
+</div>
+
+
+    <div class="content container">
+      <div class="page">
+  <h1 class="page-title">Computational thinking and design process with Littlebits droids</h1>
+  <h3 id="cybersecurity-first-principles-in-this-lesson">Cybersecurity First Principles in this lesson</h3>
+
+<ul>
+  <li>
+    <p><strong>Abstraction</strong>: An abstraction is a representation of an object or concept. It could be something such as a door, a speedometer, or a data structure in computer science. Abstraction decouples the design from the implementation. The gauges in an automobile are an abstraction of the performance of a car. A map is an abstraction of the earth.</p>
+  </li>
+  <li>
+    <p><strong>Modularization</strong>: The concept of modularity is like building blocks. Each block (or module) can be put in or taken out from a bigger project. Each module has its own separate function that is interchangeable with other modules.</p>
+  </li>
+  <li>
+    <p><strong>Resource Encapsulation</strong>: Encapsulation is an object oriented concept where all data and functions required to use the resource are packaged into a single self-contained component. The goal is to only allow access or manipulation of the resource in the way the designer intended. An example, assume a flag pole is the object. There are fixed methods on how the flag pole is to be used. Put the flag on, take the flag off, raise or lower the flag. Nothing else can be done to the flag pole.</p>
+  </li>
+  <li>
+    <p><strong>Simplicity</strong>: Simplicity allows a person to better understand hardware and software. Without the clutter of unnecessarily complicated code and interfaces, the software will be more understandable by people that will update the code when requirements change. It will be easier to understand by the testers and they will be able to spot problems sooner. By keeping software as simple and as focused as possible, the reliability and security is greatly increased.</p>
+  </li>
+</ul>
+
+<h3 id="introduction">Introduction</h3>
+<p>In this lesson, we will learn how components can be used to solve a problem by decomposing it into sub-problems. We will also learn about how the <code>design process</code> can be applied to imagine a problem, think about different solutions, and then iteratively make attempts to solve it - getting better solutions at each iteration. The Littlebits Scratch programming interface will be used as an organizing technology platform for these activities.</p>
+
+<h3 id="goals">Goals</h3>
+<p>By the end of this tutorial, you will be able to:</p>
+<ul>
+  <li>express the key steps of the design process</li>
+  <li>conceptualize and decompose a problem into smaller sub-problems using components</li>
+  <li>program in scratch to solve a physical challenge</li>
+</ul>
+
+<h3 id="materials-required">Materials Required</h3>
+
+<ul>
+  <li><a href="https://shop.littlebits.com/products/droid-inventor-kit">Littlebits Droid Inventor Kit</a></li>
+  <li><a href="https://shop.littlebits.com/products/number-bit">Number bit</a></li>
+  <li><a href="https://shop.littlebits.com/products/led">LED bit</a></li>
+  <li><a href="https://shop.littlebits.com/products/sound-trigger">Sound trigger bit</a></li>
+  <li><a href="https://shop.littlebits.com/products/temp-sensor">Temperature sensor bit</a></li>
+  <li><a href="https://shop.littlebits.com/products/button">Button bit</a></li>
+  <li><a href="https://shop.littlebits.com/products/wire-bit">Wire bit</a></li>
+  <li><a href="https://shop.littlebits.com/products/usb-power">USB power bit</a></li>
+  <li><a href="https://shop.littlebits.com/products/rechargeable-battery">Rechargable battery pack</a></li>
+</ul>
+
+<h3 id="prerequisite-lessons">Prerequisite lessons</h3>
+<p><a href="../intro_to_components_using_littlebits_droids/README.md">Intro to components using Littlebits Droids</a></p>
+
+<h3 id="table-of-contents">Table of Contents</h3>
+<!-- TOC START min:1 max:3 link:true update:true -->
+<ul>
+  <li><a href="#computational-thinking-and-design-process-with-littlebits-droids">Computational thinking and design process with Littlebits droids</a>
+    <ul>
+      <li><a href="#cybersecurity-first-principles-in-this-lesson">Cybersecurity First Principles in this lesson</a></li>
+      <li><a href="#introduction">Introduction</a></li>
+      <li><a href="#goals">Goals</a></li>
+      <li><a href="#materials-required">Materials Required</a></li>
+      <li><a href="#prerequisite-lessons">Prerequisite lessons</a></li>
+      <li><a href="#table-of-contents">Table of Contents</a></li>
+      <li><a href="#the-design-process">The Design Process</a></li>
+      <li><a href="#scratch-101-in-littlebits-app">Scratch 101 in Littlebits App</a></li>
+      <li><a href="#exercise-apply-design-thinking-to-solve-a-problem-with-littlebits">Exercise: Apply design thinking to solve a problem with Littlebits</a></li>
+      <li><a href="#additional-resources">Additional Resources</a></li>
+      <li><a href="#lead-author">Lead Author</a>
+        <ul>
+          <li><a href="#acknowledgements">Acknowledgements</a></li>
+          <li><a href="#license">License</a></li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<!-- TOC END -->
+
+<h3 id="the-design-process">The Design Process</h3>
+<p>Design is more than sitting down and starting to code. In the real world when faced with a complex problem, companies, and individuals need a systematic process to think about the problem, consider all of the stakeholders and come up with a solution. In this lesson, we examine a 5-step <code>design thinking process</code> created by the <a href="https://dschool.stanford.edu/">Hasso-Plattner Institute of Design at Stanford</a>. Their process is iterative and non-linear.</p>
+
+<p><img src="../img/design-process.jpg" alt="design process" /></p>
+<blockquote>
+  <p>Author/Copyright holder: Teo Yu Siang and Interaction Design Foundation. Copyright licence: CC BY-NC-SA 3.0</p>
+</blockquote>
+
+<h4 id="empathizing-and-defining">Empathizing and Defining</h4>
+<p>I group these two stages together as they are very iterative.</p>
+
+<p><img src="../img/empathize.jpg" alt="design process" /></p>
+<blockquote>
+  <p>Author/Copyright holder: Teo Yu Siang and Interaction Design Foundation. Copyright licence: CC BY-NC-SA 3.0</p>
+</blockquote>
+
+<p>Before trying to solve a problem, one must understand it. Complex real-world problems involve more than one stakeholder. If you are trying to design software, for instance, you need to cognizant of <em>all</em> of your users, not just some of them. <code>Implicit bias</code> (where problem solvers accidentally leave some users out) can be a real issue if problem solvers don’t <code>empathize</code> with their users. In this sense, empathizing is the part of the design process where we observe and study our user base, build <code>user stories</code> that describe who our users are and what they want to do with our product, and then make sure we have coverage across our user population. Empathy is also important for <strong>setting aside our assumptions</strong> so that our product can meet the needs our users and not ourselves.</p>
+
+<p><img src="../img/define.jpg" alt="design process" /></p>
+<blockquote>
+  <p>Author/Copyright holder: Teo Yu Siang and Interaction Design Foundation. Copyright licence: CC BY-NC-SA 3.0</p>
+</blockquote>
+
+<p>After we have gathered some data about our users and empathically considered their perspective, we can begin to <code>define</code> the problem. It should be noted that the <code>define</code> stage is not done once we initially define the problem. We will keep returning to the problem statement as we test our potential solutions. With definition, we want to make problem assumptions clear and define the requirements for any potential solution.</p>
+
+<h5 id="some-processes-for-empathizing-and-defining-the-problem">Some processes for empathizing and defining the problem</h5>
+<p>A good technique for empathizing and defining the problem is <code>affinity diagramming</code>. This technique helps development teams consider multiple perspectives and is a great process to use with groups of users from the target population.</p>
+
+<p>For affinity diagramming, you need some sticky note cards, a few ink pens or markers, and a few questions. The questions get posed the group. Individuals in the group think up their answers and write them on the note cards, and then the facilitator goes note by note and the group decides how to categorize the notes. No note is bad.</p>
+
+<p>This can produce some interesting categories that help define and contextualize the problem.</p>
+
+<p><code>User stories</code> are another useful technique for contextualizing a problem. User stories are used pretty extensively in software design and development - particularly in teams using a process called <code>Agile</code>.</p>
+
+<p>A user story is generally written as:</p>
+
+<p>As a <code>type of user</code>, I want to <code>some action</code>, so that I can <code>rationale</code>.</p>
+
+<p>an example would be:</p>
+
+<p>As a <code>instagram user in highschool</code>, I want to <code>post pictures of myself and my friends</code>, so that I can <code>build my social status at school</code>.</p>
+
+<p>This may create very different requirements that a different kind of instagram user with different actions and rationales, e.g.</p>
+
+<p>As a <code>company on instagram</code>, I want to <code>post pictures of my products</code>, so that I can <code>build brand recognition</code>.</p>
+
+<p>Both statements help define requirements for any potential solution.</p>
+
+<h5 id="exercise">Exercise:</h5>
+<ul>
+  <li>Read <a href="https://www.mountaingoatsoftware.com/blog/advantages-of-the-as-a-user-i-want-user-story-template">https://www.mountaingoatsoftware.com/blog/advantages-of-the-as-a-user-i-want-user-story-template</a></li>
+  <li>Read <a href="https://uxdict.io/design-thinking-methods-affinity-diagrams-357bd8671ad4">https://uxdict.io/design-thinking-methods-affinity-diagrams-357bd8671ad4</a></li>
+  <li>try it</li>
+</ul>
+
+<h4 id="ideating">Ideating</h4>
+<p>Once we can begin to stabilize the problem definition, we can start zoning in on solutions. The <code>ideation</code> phase is very important to help us find as many possible solutions to the problem as possible - so that we can pick the best one. Often times, computer scientists and developers <strong>don’t ideate enough</strong> before jumping into development. This can lead to some myopic focus on one particular design - that might be <em>bad</em>.</p>
+
+<p>When ideating, there are several techniques you can use to come up with good ideas.</p>
+
+<p>One is obviously <code>brainstorming</code> - where the team sits around a table and thinks up different ideas to address the problem. Brainstorming is great, but it is better applied as a second step.</p>
+
+<p>First, a technique called <code>worst possible idea</code> is a good starting place. Worst possible idea runs counter to out notions of solving a problem, but its a helpful exercise. Here, participants come up with the absolute worst solutions to a problem that they can think of. Bad solutions are considered for <em>why</em> and <em>how</em> they are bad - to list out all the reasons.</p>
+
+<p>Going through this process, the group begins to get a notion of the <strong>solutions to avoid</strong>. This is a great time to introduce brainstorming. The group can start to frame new ideas in terms of how they avoid the mistake and pitfalls of the bad ideas. This can help break town team-dynamics barriers that often emerge whenever a particular team member becomes <em>attached</em> to their particular idea.</p>
+
+<h5 id="exercise-1">Exercise:</h5>
+<ul>
+  <li>Read <a href="https://www.interaction-design.org/literature/article/learn-how-to-use-the-best-ideation-methods-worst-possible-idea">https://www.interaction-design.org/literature/article/learn-how-to-use-the-best-ideation-methods-worst-possible-idea</a> (~5 min read)</li>
+  <li>try it</li>
+</ul>
+
+<p><img src="../img/ideate.jpg" alt="design process" /></p>
+<blockquote>
+  <p>Author/Copyright holder: Teo Yu Siang and Interaction Design Foundation. Copyright licence: CC BY-NC-SA 3.0</p>
+</blockquote>
+
+<h4 id="prototyping-and-testing">Prototyping and Testing</h4>
+<p><img src="../img/prototype.jpg" alt="design process" /></p>
+
+<p>Prototyping is the stage where you start making. <code>Prototypes</code> should not be full-fledged at the beginning. Since we aren’t always sure if an idea coming out of the ideation stage is really going to work, we don’t want to spend too much time on it at first. Prototypes can help to identify whether or not an idea will pan out. Often prototypes lead to new ideas - because different members of a team begin to bounce ideas off one another to create better ones.</p>
+
+<p>As you progress, prototypes need to be <code>tested.</code></p>
+
+<p><img src="../img/test.jpg" alt="design process" /></p>
+<blockquote>
+  <p>Author/Copyright holder: Teo Yu Siang and Interaction Design Foundation. Copyright licence: CC BY-NC-SA 3.0</p>
+</blockquote>
+
+<p>Testing a prototype helps us to learn whether or not it succeeds (i.e. does it meet the requirements of the problem) and can help to refine the definition of the problem - if we learn something about the problem that we hadn’t thought of before.</p>
+
+<h3 id="scratch-101-in-littlebits-app">Scratch 101 in Littlebits App</h3>
+<p>Try coding your droid.</p>
+
+<ul>
+  <li>Go to the <code>mission interface</code> in the inventor kit app</li>
+  <li>Try missions 11 (with secret handshake) and 18</li>
+  <li>How could you combine the scratch interface with various inputs and outputs to solve a problem?</li>
+</ul>
+
+<h3 id="exercise-apply-design-thinking-to-solve-a-problem-with-littlebits">Exercise: Apply design thinking to solve a problem with Littlebits</h3>
+<p>The problem: Navigate a course, drop and object on the dropzone, drive out.<br />
+The twist: You may only use materials present on the table and any of your Littlebits parts.<br />
+The second twist: You must drive and deliver the object using a scratch program written on your R2-D2.</p>
+
+<p>Tips:</p>
+<blockquote>
+  <p>Make sure to use the design process, in this case since the problem is defined, focus on the ideating, prototyping, and testing phases
+Consider decomposing the problem into subproblems and solving each one of them</p>
+</blockquote>
+
+<h3 id="reflection-and-takeaways">Reflection and takeaways</h3>
+<p>The design process is useful for conceptualizing a problem and exploring different solutions that meet all of your user’s needs or meet the requirements of the problem. Often, breaking a problem down into subproblems can help you tackle complex issues. Components can be used in more than one way for more than one purpose. This leads to <code>reuse</code> and is a positive side effect of <code>modularization</code> and <code>resource encapsulation</code>.</p>
+
+<h3 id="additional-resources">Additional Resources</h3>
+<p>For more information, investigate the following:</p>
+
+<ul>
+  <li><a href="http://littlebits.cc/how-it-works">Littlebits</a> - Overview of concepts and available bits</li>
+  <li><a href="https://scratch.mit.edu/studios/1113820/">Scratch Studio</a> - Practice learning scratch</li>
+  <li><a href="https://www.mountaingoatsoftware.com/blog/advantages-of-the-as-a-user-i-want-user-story-template">Advantages of User stories</a></li>
+  <li><a href="https://uxdict.io/design-thinking-methods-affinity-diagrams-357bd8671ad4">Affinity diagramming process</a></li>
+  <li><a href="https://www.interaction-design.org/literature/article/learn-how-to-use-the-best-ideation-methods-worst-possible-idea">Worst Possible ideas</a></li>
+</ul>
+
+<h2 id="lead-author">Lead Author</h2>
+
+<ul>
+  <li>Matt Hale</li>
+</ul>
+
+<h3 id="acknowledgements">Acknowledgements</h3>
+<p>This lesson was inspired and informed by a <a href="https://www.interaction-design.org/literature/article/5-stages-in-the-design-thinking-process">blog post</a> written by Rikke Dam and Teo Siang. Materials in this lesson are used consistent with their CC-v3 license.</p>
+
+<h3 id="license">License</h3>
+<p><a href="https://github.com/MLHale/nebraska-gencyber">Nebraska GenCyber</a> <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /></a><br /> is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</a>.</p>
+
+<p>Overall content: Copyright (C) 2017-2018  <a href="http://faculty.ist.unomaha.edu/mhale/">Dr. Matthew L. Hale</a>, <a href="http://faculty.ist.unomaha.edu/rgandhi/">Dr. Robin Gandhi</a>, <a href="http://www.brianamorrison.net">Dr. Briana B. Morrison</a>, and <a href="http://www.bellevue.edu/about/leadership/faculty/rausch-douglas">Doug Rausch</a>.</p>
+
+<p>Lesson content: Copyright (C) <a href="http://faculty.ist.unomaha.edu/mhale/">Dr. Matthew L. Hale</a> 2018.<br />
+<a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /></a><br /><span xmlns:dct="http://purl.org/dc/terms/" property="dct:title">This lesson</span> is licensed by the author under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</a>.</p>
+
+</div>
+
+    </div>
+
+  </body>
+</html>

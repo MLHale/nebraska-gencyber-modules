@@ -1,5 +1,7 @@
-# Intro to Components using Littlebits Droids
-
+---
+layout: page
+title: Intro to Components using Littlebits Droids
+---
 ### Cybersecurity First Principles in this lesson
 
 * __Abstraction__: An abstraction is a representation of an object or concept. It could be something such as a door, a speedometer, or a data structure in computer science. Abstraction decouples the design from the implementation. The gauges in an automobile are an abstraction of the performance of a car. A map is an abstraction of the earth.
@@ -67,10 +69,10 @@ First, open your Littlebits box. Take a second to look at the different componen
 
 Look over each module. Your kit should include all of these parts:
 
-![unbox](./img/box-contents.jpg)
+![unbox](../img/box-contents.jpg)
 > Note: Dog not included!
 
-![unbox](./img/droid-kit.jpg)
+![unbox](../img/droid-kit.jpg)
 
 ### Step 2: Gotta start somewhere
 No time like the present. Before we get into the droid, lets start with the basics to make a simple invention:
@@ -85,7 +87,7 @@ Lets make a simple circuit:
 * Connect the ```button``` to the ```power``` module
 * Connect the ```led``` to the ``` button```.
 
-![unbox](./img/simple-circuit.jpg)
+![unbox](../img/simple-circuit.jpg)
 
 Press the button and the light turns on. That was easy!
 
@@ -96,7 +98,7 @@ Ok, we've made our first circuit - but it's pretty simple. Let's add some more m
 
 * Find the green ```o21 number``` output module
 
-Time to extend your previous circuit to ![count](./img/count-all-the-things.jpg)
+Time to extend your previous circuit to ![count](../img/count-all-the-things.jpg)
 
 * Connect the ```o21 number``` to the ```bright led```
 * Set the switch to the up position on the ```o21 number``` module. This puts it into **count** mode instead of **voltage** mode.
@@ -130,14 +132,14 @@ Lets try one more combo:
 
 Snap your fingers or tap the table near your device.
 
-![unbox](./img/sound-counter.gif)
+![unbox](../img/sound-counter.gif)
 
 In cybersecurity, simplicity is the notion that each function should only do what it needs to do and nothing else. All of the littlebits components are a good example of this. The `light sensor` does not also act as a `temperature sensor` or `sound sensor` and vice versa - this makes them easier to test, debug, and protect.
 
 ### Step 4: The world is more than True or False - Variable Inputs
 So far, we have outputs and inputs that result in an **on** (True) or **off** (False) behavior.
 
-![grey](./img/grey-world.jpg).
+![grey](../img/grey-world.jpg).
 
 The world is not always **on** or **off**
 
@@ -152,7 +154,7 @@ We are going to make a circuit that shows off variable voltage.
 * Set the ```temperature sensor``` switch to **f** (for Fahrenheit)
 
 You should see the current temperature in the room near the device.
-![temperature](./img/temperature.jpg)
+![temperature](../img/temperature.jpg)
 
 
 * Replace the ```temperature sensor``` with the ```light sensor```
@@ -178,7 +180,7 @@ We've saved the best for last. It is time to unbox and open up your droid! There
 The Littlebits droid inventory kit has a controller and mission interface that is a good example of `abstraction` - since it represents information about a real physical device in a way that allows the user to conceptualize it.
 
 You'll be driving around in no time!
-![driving](./img/driving.gif)
+![driving](../img/driving.gif)
 
 ### Self Exploration
 Try some different designs yourself.

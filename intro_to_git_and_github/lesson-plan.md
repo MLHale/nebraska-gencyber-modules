@@ -1,4 +1,7 @@
-# Lesson Plan Introduction to Github and Linux Commands
+---
+layout: page
+title: Introduction to Git and Github
+---
 
 ### Summary
 The module provides students hands-on experience using Git and Github for collaboration and version control. In this module, students will learn how to create, clone and manage online repositories, create and manage local repositories, synchronize repositories, and collaborate using Github.

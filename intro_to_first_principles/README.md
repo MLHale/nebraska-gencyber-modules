@@ -1,5 +1,7 @@
-# Introduction to Cybersecurity First Principles
-
+---
+layout: page
+title: Introduction to Cybersecurity First Principles
+---
 ## Cybersecurity First Principles in this lesson
 
 This lesson is about cybersecurity first principles. So all of them will be discussed.
