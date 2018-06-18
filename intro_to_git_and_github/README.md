@@ -46,37 +46,28 @@ ls  # list files and directories in current directory
 - Windows PowerShell and MacOS terminal also understand above commands.
 
 ### Table of Contents    
-<!-- TOC START min:1 max:3 link:true update:true -->
-    - [Cybersecurity First Principles in this lesson](#cybersecurity-first-principles-in-this-lesson)
-    - [Introduction: Git and Github](#introduction-git-and-github)
-    - [Lesson goals](#lesson-goals)
-    - [Materials required](#materials-required)
-    - [Prerequisite lessons](#prerequisite-lessons)
-    - [Table of Contents](#table-of-contents)
-    - [Step 1: Create an Account](#step-1-create-an-account)
-    - [Step 2: Hello World](#step-2-hello-world)
-    - [Step 3: Clone a Repository](#step-3-clone-a-repository)
-    - [Step 4: Push Changes](#step-4-push-changes)
-    - [Step 5: Pull Remote Changes](#step-5-pull-remote-changes)
-    - [Initialize a new repository](#initialize-a-new-repository)
-    - [Git your engines ready!](#git-your-engines-ready)
-    - [Cybersecurity First Principles Reflections](#cybersecurity-first-principles-reflections)
+  - [Step 1: Create an Account](#step-1-create-an-account)
+  - [Step 2: Hello World](#step-2-hello-world)
+  - [Step 3: Clone a Repository](#step-3-clone-a-repository)
+  - [Step 4: Push Changes](#step-4-push-changes)
+  - [Step 5: Pull Remote Changes](#step-5-pull-remote-changes)
+  - [Initialize a new repository](#initialize-a-new-repository)
+  - [Git your engines ready!](#git-your-engines-ready)
+  - [Cybersecurity First Principles Reflections](#cybersecurity-first-principles-reflections)
   - [Additional Resources](#additional-resources)
   - [Lead Author](#lead-author)
   - [Acknowledgements](#acknowledgements)
   - [License](#license)
 
-<!-- TOC END -->
-
 ### Step 1: Create an Account
-First things first, create a free account on Github. https://github.com/join
+First things first, create a free account on Github: [https://github.com/join](https://github.com/join)  
 You will also need to verify your email address after registration in order to use your new GitHub account.
 
 [Top](#table-of-contents)
 
 ### Step 2: Hello World
 Complete the following Github tutorial:
-https://guides.github.com/activities/hello-world/
+[https://guides.github.com/activities/hello-world/](https://guides.github.com/activities/hello-world/)
 
 At the end of Step 2, you will have created a `remote` repository and will have added a `branch`. It is `remote` because all your files are in the Github cloud. As a developer, you might ask, _"how do I use this to create code if it is just online?"_ It is not convenient to write and test code online, especially when many applications require locally install packages to even work. It would be great to use your own `Local` repository. We will do just that in the next step.   
 
