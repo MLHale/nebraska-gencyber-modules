@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+  <head>
+  <link href="http://gmpg.org/xfn/11" rel="profile">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+  <!-- Enable responsiveness on mobile devices-->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+
+  <title>
+    
+      Phishing - URL Analysis &middot; 
+    
+  </title>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="https://mlhale.github.io/nebraska-gencyber-modules/public/css/poole.css">
+  <link rel="stylesheet" href="https://mlhale.github.io/nebraska-gencyber-modules/public/css/syntax.css">
+  <link rel="stylesheet" href="https://mlhale.github.io/nebraska-gencyber-modules/public/css/hyde.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=PT+Sans:400,400italic,700|Abril+Fatface">
+
+  <!-- Icons -->
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/public/apple-touch-icon-144-precomposed.png">
+                                 <link rel="shortcut icon" href="/public/favicon.ico">
+
+  <!-- RSS -->
+  <link rel="alternate" type="application/rss+xml" title="RSS" href="/atom.xml">
+</head>
+
+
+  <body>
+
+    <div class="sidebar">
+  <div class="container sidebar-sticky">
+    <div class="sidebar-about">
+      <h1>
+
+      </h1>
+      <p class="lead"></p>
+    </div>
+
+    <nav class="sidebar-nav">
+      <a class="sidebar-nav-item" href="https://github.com/MLHale/nebraska-gencyber-modules">Nebraska GenCyber</a>
+      <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"></a>is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</a>. <img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /> You are encouraged to reuse, remix, and add to the lessons contained herein - just remember to properly provide attribution.
+      <br><br>
+      Overall content: Copyright (C) 2017-2018  <a href="http://faculty.ist.unomaha.edu/mhale/">Dr. Matthew L. Hale</a>, <a href="http://faculty.ist.unomaha.edu/rgandhi/">Dr. Robin Gandhi</a>, <a href="http://www.brianamorrison.net">Dr. Briana B. Morrison</a>, and <a href="http://www.bellevue.edu/about/leadership/faculty/rausch-douglas">Doug Rausch</a>. <br>
+      Individual content: Copyright (C) 2017-2018 as listed in each lesson.
+    </nav>
+
+    <p>&copy; 2018. All rights reserved.</p>
+  </div>
+</div>
+
+
+    <div class="content container">
+      <div class="page">
+  <h1 class="page-title">Phishing - URL Analysis</h1>
+  <h2 id="cybersecurity-commonsense">Cybersecurity Commonsense</h2>
+<p>[Source: DHS Stop. Think. Connect. <a href="https://www.stopthinkconnect.org/tips-advice/general-tips-and-advice">Campaign</a>]</p>
+
+<ul>
+  <li>
+    <p><strong>Protect your $$:</strong> When banking and shopping, check to be sure the site is security enabled. Look for web addresses with <code class="highlighter-rouge">https://</code>, which means the site takes extra measures to help secure your information. <code class="highlighter-rouge">http://</code> is not secure for the communication of private/sensitive information.</p>
+  </li>
+  <li>
+    <p><strong>When in doubt, throw it out:</strong> Links in emails, social media posts and online advertising are often how cybercriminals try to steal your personal information. Even if you know the source, if something looks suspicious, delete it.</p>
+  </li>
+  <li>
+    <p><strong>Stay current:</strong> Keep pace with new ways to stay safe online: Check trusted websites for the latest information, and share with friends, family, and colleagues and encourage them to be web wise.</p>
+  </li>
+  <li>
+    <p><strong>Safer for me, more secure for all:</strong> What you do online has the potential to affect everyone – at home, at work and around the world. Practicing good online habits benefits the global digital community.</p>
+  </li>
+</ul>
+
+<h3 id="cybersecurity-first-principles">Cybersecurity First Principles</h3>
+<ul>
+  <li>
+    <p><strong>Layering</strong>: Cyber security uses multiple layers of defense or protecting information. If one layer is defeated the next layer should catch it.</p>
+  </li>
+  <li>
+    <p><strong>Information Hiding</strong>: Information hiding is any attempt to prevent people from being able to see information. It can be hiding the content of a letter, or it can be applied to hiding how the letter is delivered. Both ways can prevent people from being able to see the information. This lesson looks at how malicious information can be hidden in URLs or other data fields.</p>
+  </li>
+</ul>
+
+<h2 id="phishing-humor">Phishing Humor</h2>
+
+<p>Phishing is a play of words on “fishing”. The bait is often a email or social media message from a spammer, the fish are the unsuspecting victims who act on them.</p>
+<blockquote>
+  <p><img src="http://assets.amuniversal.com/c82f58606d5101301d7a001dd8b71c47" alt="dibert1" /></p>
+</blockquote>
+
+<p>Spammers send out millions of messages, only a few need to succeed…</p>
+<blockquote>
+  <p><img src="http://assets.amuniversal.com/b0d71fd0abaf01314782005056a9545d" alt="dibert2" /></p>
+</blockquote>
+
+<p>Phishing victims often fear ridicule and do not report crimes…</p>
+<blockquote>
+  <p><img src="http://assets.amuniversal.com/b1cbb110abaf01314782005056a9545d" alt="dibert3" /></p>
+</blockquote>
+
+<h1 id="introduction">Introduction</h1>
+
+<h2 id="lesson-goals">Lesson goals</h2>
+<ul>
+  <li>Read URLs</li>
+  <li>Spot common techniques for URL manipulation</li>
+</ul>
+
+<h2 id="materials-required">Materials required</h2>
+<ul>
+  <li>Internet connected Machine</li>
+</ul>
+
+<h2 id="prerequisite-lessons">Prerequisite lessons</h2>
+<ul>
+  <li>Lots of curiosity</li>
+</ul>
+
+<h2 id="table-of-contents">Table of Contents</h2>
+<p><a href="#introduction-to-urls">Introduction</a><br />
+<a href="#reading-a-url">Reading a URL</a><br />
+<a href="#url-tricks">URL Tricks</a><br />
+<a href="#antiphishing-phil-game">AntiPhishing Phil Game</a> <br />
+<a href="#additional-readings">Additional Readings</a><br />
+<a href="#teacher-developed-modules">Teacher Developed Modules</a><br />
+<a href="#special-thanks">Acknowledgements</a></p>
+
+<h2 id="introduction-to-urls">Introduction to URLs</h2>
+
+<p>Most Phishing attacks start with a specially-crafted URL. When clicked on, phishing URLs take you to fake websites, download malware or prompt for credentials.</p>
+
+<p>A URL is an acronym for Uniform Resource Locator. It is a standard format for locating web resources on the Internet. Most Internet users refer to it as the “address for a website”. For example, http://www.amazon.com. News story URLs like this one: http://www.cnn.com/2016/07/06/health/juno-jupiter-nasa/index.html are often much longer. On social media sites we are used to seeing short URLs like this one: http://cnn.it/29lG6OK or links on shopping sites: https://amzn.com/0132390779. Even emails are often filled with URLs that senders want us to click on. URLs also give us access to our bank accounts, tax filing, healthcare, billing, and many government services. While all Internet users use it everyday, very few are confident in their abilities to read a URL, much less understand what might happen if clicked on. Let’s change that. A vigilant, trained and aware human user is a critical layer of defense against threats both internal and external. Even if malicious URLs and Emails get past spam filters and anti-virus software, a human user can catch it. Such a defensive strategy is common in secure system designs. It is a <em>cybersecurity first principle</em> called <code class="highlighter-rouge">Layering.</code></p>
+
+<p><a href="#table-of-contents">Top</a></p>
+
+<h2 id="reading-a-url">Reading a URL</h2>
+
+<p>Computer users often have misconceptions about understanding a URL. Spammers take advantage of these misconceptions when crafting phishing URLs.</p>
+
+<h5 id="misconception-1">Misconception 1</h5>
+<p>Read a URL from left to right, just like English [WRONG!]</p>
+
+<p>Consider this email snippet:</p>
+
+<div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Dear user:
+Your facebook account has been locked out due to inactivity.
+To re-activate your account please on the click below.
+
+	http://activate.facebook.fblogins.net/88adbao798283o8298398?login.asp
+
+</code></pre></div></div>
+
+<p>So is this a Facebook URL?  How do we tell if this link is legitimate or not without clicking on it?</p>
+
+<p>If we just start reading the URL from left to right, like English, then this URL appears legitimate because we encounter the word <code class="highlighter-rouge">facebook</code> in the URL. But that is not the correct way of reading a URL.</p>
+
+<h3 id="the-right-way-to-read-a-url">The “Right” way to read a URL</h3>
+
+<p>The Internet is a network of networks. Each network that is under the control of an authority, is a separate <strong>Domain</strong> (Hey! that is another example for <code class="highlighter-rouge">Domain Separation</code>). For example, organizations like University of Nebraska at Omaha, Facebook or Apple have authority over their own Domains/Networks that are connected to the Internet. URLs, which are used to reference computers in a particular network are also called <strong>Domain Names</strong>. Continuing our example, some top-level domains are <code class="highlighter-rouge">unomaha.edu</code>, <code class="highlighter-rouge">facebook.com</code> and <code class="highlighter-rouge">apple.com</code>.</p>
+
+<p>These domain names have to be <strong>unique</strong> on the Internet. So who is responsible for ensuring this? This function is coordinated by ICANN. Here is what is listed on the ICANN website:</p>
+
+<blockquote>
+  <p>Internet Corporation for Assigned Names and Numbers (ICANN) coordinates the Internet Assigned Numbers Authority (IANA) functions, which are key technical services critical to the continued operations of the Internet’s underlying address book, the Domain Name System (DNS).</p>
+</blockquote>
+
+<p>There is a structured scheme to assign domain names to various organizations. All domain names end in a period <code class="highlighter-rouge">.</code>. But the period is not always required when using URLs. So it does not matter if it is there or not. Go ahead and paste this URL in your browser window. Notice the period at the end.</p>
+
+<div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code>www.google.com.
+</code></pre></div></div>
+<p>The browser still takes you to the google search page.</p>
+
+<p>The period is the “root” of the entire DNS (Domain Name System). The next level child nodes are the “com”, “edu”, “org”, “in”, etc. Next, if the organization Wikipedia want a domain name like <code class="highlighter-rouge">wikipedia.org</code>, then IANA or another ICANN-accredited registrar will insert the <code class="highlighter-rouge">wikipedia</code> node into the Global DNS system for the Internet. This is where the control of ICANN ends.</p>
+
+<p>Below the <code class="highlighter-rouge">wikipedia</code> node, the Wikipedia organization has full autonomy and authority to make up whatever names that it wants for specific computers in its <strong>Domain</strong>. So for its Russian office, if it wants to create a <code class="highlighter-rouge">ru</code> node, then Wikipedia has full authority to do so.</p>
+
+<p>This is depicted in the figure below.</p>
+
+<p><img src="../img/domainnames.png" alt="domainnames" /></p>
+
+<p>So if wikipedia wants to name a computer <code class="highlighter-rouge">apple</code> in its domain, then it has full freedom to do so. The name of the computer on the Internet would be <code class="highlighter-rouge">apple.wikipedia.org.</code> This URL has nothing to do with the <code class="highlighter-rouge">apple.com.</code> top-level domain.</p>
+
+<p>Now it should be apparent that the “right” way to read a url is to actually start reading it from the <em>right</em>. Starting from the right allows us to identify the top-level domain for the URL. There are two simple rules to follow:</p>
+
+<ul>
+  <li>
+    <p>If no single forward-slash characters (<code class="highlighter-rouge">/</code>) exists in the URL, start reading the top-level domain names from the far right to left.</p>
+
+    <blockquote>
+      <p>For example: https://www.icann.org has no single forward-slash characters. It does have double forward-slash characters (<code class="highlighter-rouge">//</code>), but that is not what we are looking for. So in this case, start reading the top-level domains from the far right to left. It is <code class="highlighter-rouge">org</code> and then <code class="highlighter-rouge">icann</code></p>
+    </blockquote>
+  </li>
+  <li>
+    <p>If single forward-slash characters (<code class="highlighter-rouge">/</code>) exist in the URL, then find the farthest one from the right. Start reading the top-level domain names right to left from that point onwards.</p>
+
+    <blockquote>
+      <p>For example: <code class="highlighter-rouge">http://activate.facebook.fblogins.net/88adbao798283o8298398?login.asp</code> <br />
+In this link the farthest single forward-slash(<code class="highlighter-rouge">/</code>) from the right is between <code class="highlighter-rouge">net</code> and <code class="highlighter-rouge">88adbao798283o8298398</code>. So the top-level domains here are <code class="highlighter-rouge">net</code> and then <code class="highlighter-rouge">fblogins</code>. Beyond these two names, the organization that owns <code class="highlighter-rouge">fblogins</code> domain can makeup whatever names that it wants, such as <code class="highlighter-rouge">www</code>, <code class="highlighter-rouge">login</code>,<code class="highlighter-rouge">facebook</code>, <code class="highlighter-rouge">apple</code> or <code class="highlighter-rouge">google</code>. <br />
+So now we know that this link is not at all affiliated with <code class="highlighter-rouge">facebook.com</code>!</p>
+    </blockquote>
+  </li>
+</ul>
+
+<h4 id="exercise">Exercise:</h4>
+
+<h5 id="what-are-the-top-level-domain-names-for-these-urls">What are the top-level domain names for these URLs:</h5>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>http://www.cnn.com/tiger-woods/story.html   
+
+http://www.buy.com.money.ru
+</code></pre></div></div>
+
+<p>Check your answers with your peers. Do they match?</p>
+
+<h5 id="which-link-will-you-click-on-1-or-2">Which link will you click on? #1 or #2</h5>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>#1: ftp://ftp.microsoft.com/software/patches/fixit.exe  
+#2: http://www.micosoft.com/software/patches/fixit.exe  
+
+</code></pre></div></div>
+<p>Check your answers with your peers. Do they match?<br />
+<a href="./misc.md">Answer key</a></p>
+
+<h5 id="misconception-2">Misconception 2</h5>
+<p><code class="highlighter-rouge">www</code> is a standard part of a URL and cannot be changed. <code class="highlighter-rouge">WRONG!</code></p>
+
+<p>Beyond the top-level domains, a organization or individual that has registered the domain has much control over the names of the computers in their networks. The name <code class="highlighter-rouge">www</code> is commonly give to computers that serve pages to the <em>World Wide Web</em>. But it is not necessary to name a web-server as <code class="highlighter-rouge">www</code>. For example, it is OK to have names such as <code class="highlighter-rouge">http://www2.nationalgeographic.com</code> or even <code class="highlighter-rouge">http://web.nationalgeographic.com</code>. So there is nothing special about the <code class="highlighter-rouge">www</code> part of a URL.</p>
+
+<p><a href="#table-of-contents">Top</a></p>
+
+<h2 id="url-tricks">URL Tricks</h2>
+
+<p>The knowledge in the previous section should serve you well in reading URLs. But spammers often conceal the real URL in HTML formatted emails or fake websites. Let’s explore a few such tricks. Some URL behaviors are browser specific. So for our discussion let’s open the links below in a <code class="highlighter-rouge">Chrome</code> browser.</p>
+
+<h2 id="tricky-links">Tricky Links</h2>
+<p>Open this link in a Chrome browser: https://robinagandhi.github.io/phishing-demo/phishing.html</p>
+
+<h3 id="link-1">Link #1</h3>
+
+<p>On the first link, you will notice that it appears to be a legitimate wellsfargo.com URL. But if you hover over the link, your status bar should show <code class="highlighter-rouge">www.google.com</code>. How did that happen?</p>
+
+<p><img src="../img/1-tricky-urls.png" alt="trickyurls" /></p>
+
+<p>Examine the page HTML source by right clicking on a blank area of the webpage and selecting <code class="highlighter-rouge">View Page Source</code> option.</p>
+
+<p><img src="../img/2-tricky-urls.png" alt="trickyurls" /></p>
+
+<p><img src="../img/3-tricky-urls.png" alt="trickyurls" /></p>
+
+<p>In the source code you will see that the <code class="highlighter-rouge">href</code> attribute, which controls the link target is set to <code class="highlighter-rouge">google.com</code>. This explains the strange behavior. Hovering over links without clicking them will reveal their real destination in the status bar of the browser.</p>
+
+<h3 id="link-2">Link #2</h3>
+
+<p>For link #2, we explore a peculiarity of browsers. Many browsers will not display, named rightly so, the “shy” character, which is expressed as follows: <code class="highlighter-rouge">&amp;shy</code>. The page source shows that this character is present in the <code class="highlighter-rouge">href</code> attribute and the link text. But the character is not displayed in the page!</p>
+
+<p><img src="../img/6-tricky-urls.png" alt="trickyurls" /></p>
+
+<p><img src="../img/5-tricky-urls.png" alt="trickyurls" /></p>
+
+<p>Chrome shows the <code class="highlighter-rouge">&amp;shy</code> character in the status bar. Some other programs/browsers may not display it at all. Spammers can register domains with <code class="highlighter-rouge">&amp;shy</code> characters to manipulate users into clicking the links.</p>
+
+<h3 id="link-3">Link #3</h3>
+
+<p>Link #3 is straight-forward, but a bad practice. Legitimate emails often use this technique, but it conceals the true link and conditions users to click on such links. When sending out emails, avoid such practices.</p>
+
+<h3 id="link-4">Link #4</h3>
+
+<p>Link #4 is very strange looking. You may examine the page source and still have no additional clues. Naively following the two rules of reading a URL from above, you may end up thinking that this is a <code class="highlighter-rouge">wellfargo.com</code> URL. But it is not!</p>
+
+<p><img src="../img/7-tricky-urls.png" alt="trickyurls" /></p>
+
+<p>If you hover over the link in Chrome, much to our surprise it turns out to be <code class="highlighter-rouge">google.com</code>!!!!</p>
+
+<p><img src="../img/8-tricky-urls.png" alt="trickyurls" /></p>
+
+<p>This URL uses two methods to trick users.</p>
+<ul>
+  <li>Hex encode the URL letters. The full conversion table is available here: http://www.asciitable.com/index/asciifull.gif Using this table we can decode the letters as follows:
+    <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>%67 = g
+%6F = o
+%6F = o
+%67 = g
+%6C = l
+%65 = e
+%2E = .
+%63 = c
+%6F = o
+%6D = m
+</code></pre></div>    </div>
+    <p>So the last part of Link #4 is <code class="highlighter-rouge">google.com</code></p>
+  </li>
+  <li>
+    <p>This URL also uses an arcane URL technique to specify the login and password as part of the link itself. Some insecure websites allow login requests in the following manner.</p>
+
+    <div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  http://username:password@example.com
+
+  For link #4:
+  username = wellsfargo.com
+  password = login
+  website  = google.com
+
+  http://wellfargo.com:login@google.com
+
+  Tricky indeed!
+</code></pre></div>    </div>
+  </li>
+</ul>
+
+<p>With these tricks uncovered, the previous two URL reading rules will suffice now to know what the true top-level domains are. Certainly not <code class="highlighter-rouge">wellsfargo.com</code>.</p>
+
+<h3 id="link-5">Link #5</h3>
+
+<p>The next link is very mysterious as well. By hovering over it or examining the page source, you will notice that it is a <strong>short URL</strong>. A short URL is notoriously deceptive as you cannot tell where it will take you once clicked on.</p>
+
+<p>To overcome this issue, we will use a service that expands the short URL and provides a preview of the final destination.</p>
+
+<p><strong>Short URL expander</strong>: http://checkshorturl.com/expand.php</p>
+
+<p>Upon using the URL expander service, it is apparent that this short URL redirects to <code class="highlighter-rouge">google.com</code>.</p>
+
+<p><img src="../img/9-tricky-urls.png" alt="trickyurls" /></p>
+
+<h3 id="link-6">Link #6</h3>
+
+<p>At first glance, Link #6 is a short URL too. Let’s just copy this link from the browser and check it using the URL expander service. You will determine that it is <code class="highlighter-rouge">google.com</code>.</p>
+
+<p>But, now hover over the link or view the page source to examine the real link in the <code class="highlighter-rouge">href</code> attribute. It appears to be a slightly different short URL!</p>
+
+<p><img src="../img/10-tricky-urls.png" alt="trickyurls" /></p>
+
+<p>If you expand this different short URL, it leads you to <code class="highlighter-rouge">duckduckgo.com</code>.</p>
+
+<p>Spammers may trick you by making such subtle modifications in the HTML page.</p>
+
+<h3 id="link-7">Link #7</h3>
+
+<p>Hover over link #7 to examine its real destination. What happens?</p>
+
+<p>Using JavaScript, the page automatically redirects you to <code class="highlighter-rouge">google.com</code> when your mouse hovers over the link! The script is triggered by a <code class="highlighter-rouge">onMouseOver</code> event.</p>
+
+<p>When visiting questionable websites, it is prudent to turn off JavaScript or use JavaScript blocking extensions such as <a href="https://noscript.net">No-Script</a> or <a href="https://chrome.google.com/webstore/detail/scriptsafe/oiigbmnaadbkfbmpbfijlflahbdbdgdf?hl=en">ScriptSafe</a></p>
+
+<h3 id="link-8">Link #8</h3>
+
+<p>Hover over <a href="https://robinagandhi.github.io/phishing-demo/phishing.html">link #8</a> to examine its real destination. What do you see?</p>
+
+<p>Turns out you can register DNS names in any language using Unicode. Punycode is used to encode internationalized domain names (IDN). As a result, similar looking foreign alphabets can be used to register domains that are extremely close in appearance to english letters.</p>
+
+<ul>
+  <li>Copy this URL http://гауthеоn.соm and use this site to check if it is internationalized or not.
+https://www.punycoder.com/
+    <ul>
+      <li>You should see equivalent punycode</li>
+    </ul>
+  </li>
+  <li>Now try it with this URL: http://raytheon.com
+    <ul>
+      <li>This one is in english.</li>
+    </ul>
+  </li>
+</ul>
+
+<p>The previous one uses <a href="http://symbolcodes.tlt.psu.edu/bylanguage/cyrchart.html">Russian Cyrillic Characters</a>. This attack also fools browser inspection tool in Chrome.</p>
+
+<p>Such attacks are similar to domain-squatting but also referred to as <a href="http://blog.trendmicro.com/trendlabs-security-intelligence/soundsquatting-unraveled-homophone-based-domain-squatting/">homophone</a> (similar looking, sounding, spelling) attacks.</p>
+
+<blockquote>
+  <p><img src="../img/punycode.png" alt="trickyurls" /></p>
+</blockquote>
+
+<h3 id="link-9-and-10">Link #9 and #10</h3>
+
+<p><strong>Right Click</strong> on links #9 and #10 and select <code class="highlighter-rouge">Open Link in New Tab</code>. Switch to the new tab.</p>
+
+<p>When you visit these links, the destination appears to be wellsfargo.com. Even the URL appears to be wellsfargo.com. But a few things are off. The protocol is different and there are additional characters (<code class="highlighter-rouge">&lt;</code>, <code class="highlighter-rouge">...</code> and <code class="highlighter-rouge">,</code>) that you would not normally see. Now click in the URL bar and navigate to the right of the URL using arrow keys. You will notice a bunch of text. Copy the entire URL (<code class="highlighter-rouge">crtl+a</code> and then <code class="highlighter-rouge">crtl+c</code>) and paste it in Notepad.</p>
+
+<blockquote>
+  <p><img src="../img/dataURL.png" alt="trickyurls" /></p>
+</blockquote>
+
+<p>This is a <a href="https://en.wikipedia.org/wiki/Data_URI_scheme">Data URL</a> that allows specifying small files inline within HTML documents. Typically this is used to includes images in HTML document. Turns out that browsers will also render this URL as an HTML page. All the content needed to render the html page is right within the URL itself!</p>
+
+<p>In this link we have embedded enough spaces between the place holder text and the real content such that a user can be fooled into believing the website is being loaded from the displayed domain name. This URL was generated by scraping all the HTML from wellsfargo.com, including embedded images, and encoding it within the Data URL. We could have just as easily included some malicious javascript in here to steal any username and password entered.</p>
+
+<h3 id="link-11">Link #11</h3>
+
+<p>Phishers craft links like #11 using an HTML-based trick. Tool-tips in HTML can be set using the <code class="highlighter-rouge">title</code> attribute for any element. For an HTML link, setup using <code class="highlighter-rouge">href</code> attribute, the <code class="highlighter-rouge">title</code> attribute setup with an alternate link can be misleading to a user. As you see in the image below, the link tooltip is different from the link displayed in the status bar.</p>
+
+<blockquote>
+  <p><img src="../img/11-tricky-urls.png" alt="trickyurls" /></p>
+</blockquote>
+
+<p>I hope these examples made you a bit more skeptical of links on a webpage or email. Don’t worry the game in the next section is safe 😎</p>
+
+<h2 id="antiphishing-phil-game">AntiPhishing Phil Game</h2>
+
+<p>Let’s play a game to test your URL “Know-How”. The game is called AntiPhishing Phil.</p>
+
+<blockquote>
+  <p>Sometimes the game is slow to load between rounds. If you see a blank square box then be patient and click inside it to move through the game.</p>
+</blockquote>
+
+<p>http://www.ucl.ac.uk/cert/antiphishing/</p>
+
+<p>Here is a link to the commercial game site.
+Registration is required to play the demo game :-(<br />
+http://wombatsecurity.com/antiphishingphil</p>
+
+<p>A free training course is available at OIT. This is free to play:<br />
+https://oit.byuh.edu/help/anti-phishing</p>
+
+<p><a href="#table-of-contents">Top</a></p>
+
+<h2 id="additional-readings">Additional Readings</h2>
+
+<ul>
+  <li>Infographic, Phishing: <a href="http://www.getcybersafe.gc.ca/cnt/rsrcs/nfgrphcs/nfgrphcs-2012-10-11-en.aspx">How many take the bait?</a></li>
+  <li><a href="https://www.consumer.ftc.gov/articles/0003-phishing">Reporting Phishing</a>, Federal Trade Commission</li>
+</ul>
+
+<p><a href="#table-of-contents">Top</a></p>
+
+<h2 id="lead-author">Lead Author</h2>
+
+<ul>
+  <li>Robin Gandhi</li>
+</ul>
+
+<h2 id="special-thanks">Special Thanks</h2>
+
+<ul>
+  <li>A special thanks to Matt Hale, Aaron Vigal and Cade Wollcot for reviews of this module and thoughtful discussions.</li>
+</ul>
+
+<p><a href="#table-of-contents">Top</a></p>
+
+<h2 id="license">License</h2>
+<p><a href="https://github.com/MLHale/nebraska-gencyber">Nebraska GenCyber</a> <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /></a><br /> is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</a>.</p>
+
+<p>Overall content: Copyright (C) 2017-2018  <a href="http://faculty.ist.unomaha.edu/mhale/">Dr. Matthew L. Hale</a>, <a href="http://faculty.ist.unomaha.edu/rgandhi/">Dr. Robin Gandhi</a>, <a href="http://www.brianamorrison.net">Dr. Briana B. Morrison</a>, and <a href="http://www.bellevue.edu/about/leadership/faculty/rausch-douglas">Doug Rausch</a>.</p>
+
+<p>Lesson content: Copyright (C) <a href="http://faculty.ist.unomaha.edu/rgandhi/">Robin Gandhi</a> 2017-2018.<br />
+<a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /></a><br /><span xmlns:dct="http://purl.org/dc/terms/" property="dct:title">This lesson</span> is licensed by the author under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</a>.</p>
+
+</div>
+
+    </div>
+
+  </body>
+</html>

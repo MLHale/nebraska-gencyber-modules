@@ -1,4 +1,7 @@
-# Phishing
+---
+layout: page
+title: Phishing - URL Analysis
+---
 
 ## Cybersecurity Commonsense
 [Source: DHS Stop. Think. Connect. [Campaign](https://www.stopthinkconnect.org/tips-advice/general-tips-and-advice)]
@@ -100,7 +103,7 @@ Below the `wikipedia` node, the Wikipedia organization has full autonomy and aut
 
 This is depicted in the figure below.
 
-![domainnames](./img/domainnames.png)
+![domainnames](../img/domainnames.png)
 
 
 So if wikipedia wants to name a computer `apple` in its domain, then it has full freedom to do so. The name of the computer on the Internet would be `apple.wikipedia.org.` This URL has nothing to do with the `apple.com.` top-level domain.
@@ -159,13 +162,13 @@ Open this link in a Chrome browser: https://robinagandhi.github.io/phishing-demo
 
 On the first link, you will notice that it appears to be a legitimate wellsfargo.com URL. But if you hover over the link, your status bar should show `www.google.com`. How did that happen?
 
-![trickyurls](./img/1-tricky-urls.png)
+![trickyurls](../img/1-tricky-urls.png)
 
 Examine the page HTML source by right clicking on a blank area of the webpage and selecting `View Page Source` option.
 
-![trickyurls](./img/2-tricky-urls.png)
+![trickyurls](../img/2-tricky-urls.png)
 
-![trickyurls](./img/3-tricky-urls.png)
+![trickyurls](../img/3-tricky-urls.png)
 
 In the source code you will see that the `href` attribute, which controls the link target is set to `google.com`. This explains the strange behavior. Hovering over links without clicking them will reveal their real destination in the status bar of the browser.
 
@@ -173,9 +176,9 @@ In the source code you will see that the `href` attribute, which controls the li
 
 For link #2, we explore a peculiarity of browsers. Many browsers will not display, named rightly so, the "shy" character, which is expressed as follows: `&shy`. The page source shows that this character is present in the `href` attribute and the link text. But the character is not displayed in the page!
 
-![trickyurls](./img/6-tricky-urls.png)
+![trickyurls](../img/6-tricky-urls.png)
 
-![trickyurls](./img/5-tricky-urls.png)
+![trickyurls](../img/5-tricky-urls.png)
 
 Chrome shows the `&shy` character in the status bar. Some other programs/browsers may not display it at all. Spammers can register domains with `&shy` characters to manipulate users into clicking the links.
 
@@ -187,11 +190,11 @@ Link #3 is straight-forward, but a bad practice. Legitimate emails often use thi
 
 Link #4 is very strange looking. You may examine the page source and still have no additional clues. Naively following the two rules of reading a URL from above, you may end up thinking that this is a `wellfargo.com` URL. But it is not!
 
-![trickyurls](./img/7-tricky-urls.png)
+![trickyurls](../img/7-tricky-urls.png)
 
 If you hover over the link in Chrome, much to our surprise it turns out to be `google.com`!!!!
 
-![trickyurls](./img/8-tricky-urls.png)
+![trickyurls](../img/8-tricky-urls.png)
 
 This URL uses two methods to trick users.
 * Hex encode the URL letters. The full conversion table is available here: http://www.asciitable.com/index/asciifull.gif Using this table we can decode the letters as follows:
@@ -236,7 +239,7 @@ To overcome this issue, we will use a service that expands the short URL and pro
 
 Upon using the URL expander service, it is apparent that this short URL redirects to `google.com`.
 
-![trickyurls](./img/9-tricky-urls.png)
+![trickyurls](../img/9-tricky-urls.png)
 
 ### Link #6
 
@@ -244,7 +247,7 @@ At first glance, Link #6 is a short URL too. Let's just copy this link from the 
 
 But, now hover over the link or view the page source to examine the real link in the `href` attribute. It appears to be a slightly different short URL!
 
-![trickyurls](./img/10-tricky-urls.png)
+![trickyurls](../img/10-tricky-urls.png)
 
 If you expand this different short URL, it leads you to `duckduckgo.com`.
 
@@ -276,7 +279,7 @@ The previous one uses [Russian Cyrillic Characters](http://symbolcodes.tlt.psu.e
 
 Such attacks are similar to domain-squatting but also referred to as [homophone](http://blog.trendmicro.com/trendlabs-security-intelligence/soundsquatting-unraveled-homophone-based-domain-squatting/) (similar looking, sounding, spelling) attacks.
 
->![trickyurls](./img/punycode.png)
+>![trickyurls](../img/punycode.png)
 
 ### Link #9 and #10
 
@@ -284,7 +287,7 @@ Such attacks are similar to domain-squatting but also referred to as [homophone]
 
 When you visit these links, the destination appears to be wellsfargo.com. Even the URL appears to be wellsfargo.com. But a few things are off. The protocol is different and there are additional characters (`<`, `...` and `,`) that you would not normally see. Now click in the URL bar and navigate to the right of the URL using arrow keys. You will notice a bunch of text. Copy the entire URL (`crtl+a` and then `crtl+c`) and paste it in Notepad.
 
-> ![trickyurls](./img/dataURL.png)
+> ![trickyurls](../img/dataURL.png)
 
 This is a [Data URL](https://en.wikipedia.org/wiki/Data_URI_scheme) that allows specifying small files inline within HTML documents. Typically this is used to includes images in HTML document. Turns out that browsers will also render this URL as an HTML page. All the content needed to render the html page is right within the URL itself!
 
@@ -294,7 +297,7 @@ In this link we have embedded enough spaces between the place holder text and th
 
 Phishers craft links like #11 using an HTML-based trick. Tool-tips in HTML can be set using the `title` attribute for any element. For an HTML link, setup using `href` attribute, the `title` attribute setup with an alternate link can be misleading to a user. As you see in the image below, the link tooltip is different from the link displayed in the status bar.
 
-> ![trickyurls](./img/11-tricky-urls.png)
+> ![trickyurls](../img/11-tricky-urls.png)
 
 I hope these examples made you a bit more skeptical of links on a webpage or email. Don't worry the game in the next section is safe 😎
 

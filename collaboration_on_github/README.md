@@ -1,5 +1,7 @@
-# Github Collaboration
-
+---
+layout: page
+title: Collaboration on Github
+---
 ### Cybersecurity First Principles in this lesson
 
 #### Least Privilege

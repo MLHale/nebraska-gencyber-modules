@@ -1,5 +1,7 @@
-# Lesson Plan Collaboration on Github
-
+---
+layout: page
+title: Collaboration on Github
+---
 ### Summary
 This module introduces students to collaborative code authoring with git using Github.
 

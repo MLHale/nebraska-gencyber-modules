@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+  <head>
+  <link href="http://gmpg.org/xfn/11" rel="profile">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+  <!-- Enable responsiveness on mobile devices-->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+
+  <title>
+    
+      Web services and IoT using Littlebits and IFTTT (w/ droids) &middot; 
+    
+  </title>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="https://mlhale.github.io/nebraska-gencyber-modules/public/css/poole.css">
+  <link rel="stylesheet" href="https://mlhale.github.io/nebraska-gencyber-modules/public/css/syntax.css">
+  <link rel="stylesheet" href="https://mlhale.github.io/nebraska-gencyber-modules/public/css/hyde.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=PT+Sans:400,400italic,700|Abril+Fatface">
+
+  <!-- Icons -->
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/public/apple-touch-icon-144-precomposed.png">
+                                 <link rel="shortcut icon" href="/public/favicon.ico">
+
+  <!-- RSS -->
+  <link rel="alternate" type="application/rss+xml" title="RSS" href="/atom.xml">
+</head>
+
+
+  <body>
+
+    <div class="sidebar">
+  <div class="container sidebar-sticky">
+    <div class="sidebar-about">
+      <h1>
+
+      </h1>
+      <p class="lead"></p>
+    </div>
+
+    <nav class="sidebar-nav">
+      <a class="sidebar-nav-item" href="https://github.com/MLHale/nebraska-gencyber-modules">Nebraska GenCyber</a>
+      <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"></a>is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</a>. <img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /> You are encouraged to reuse, remix, and add to the lessons contained herein - just remember to properly provide attribution.
+      <br><br>
+      Overall content: Copyright (C) 2017-2018  <a href="http://faculty.ist.unomaha.edu/mhale/">Dr. Matthew L. Hale</a>, <a href="http://faculty.ist.unomaha.edu/rgandhi/">Dr. Robin Gandhi</a>, <a href="http://www.brianamorrison.net">Dr. Briana B. Morrison</a>, and <a href="http://www.bellevue.edu/about/leadership/faculty/rausch-douglas">Doug Rausch</a>. <br>
+      Individual content: Copyright (C) 2017-2018 as listed in each lesson.
+    </nav>
+
+    <p>&copy; 2018. All rights reserved.</p>
+  </div>
+</div>
+
+
+    <div class="content container">
+      <div class="page">
+  <h1 class="page-title">Web services and IoT using Littlebits and IFTTT (w/ droids)</h1>
+  <h3 id="cybersecurity-first-principles-in-this-lesson">Cybersecurity First Principles in this lesson</h3>
+
+<ul>
+  <li>
+    <p><strong>Abstraction</strong>: An abstraction is a representation of an object or concept. It could be something such as a door, a speedometer, or a data structure in computer science. Abstraction decouples the design from the implementation. The gauges in an automobile are an abstraction of the performance of a car. A map is an abstraction of the earth.</p>
+  </li>
+  <li>
+    <p><strong>Data Hiding</strong>: Data hiding is the technique that does not allow certain aspects of an object to be observed or accessed. Data and information hiding keeps the programmer from having complete access to data structures. It allows access to only what is necessary.</p>
+  </li>
+  <li>
+    <p><strong>Minimization</strong>: Minimization refers to having the least functionality necessary in a program or device. The goal of minimization is to simplify and decrease the number of ways that software can be exploited. This can include <strong>turning off ports that are not needed</strong>, reducing the amount of code running on a machine, and/or turning off unneeded features in an application.</p>
+  </li>
+  <li>
+    <p><strong>Modularization</strong>: The concept of modularity is like building blocks. Each block (or module) can be put in or taken out from a bigger project. Each module has its own separate function that is interchangeable with other modules.</p>
+  </li>
+  <li>
+    <p><strong>Resource Encapsulation</strong>: Encapsulation is an object oriented concept where all data and functions required to use the resource are packaged into a single self-contained component. The goal is to only allow access or manipulation of the resource in the way the designer intended. An example, assume a flag pole is the object. There are fixed methods on how the flag pole is to be used. Put the flag on, take the flag off, raise or lower the flag. Nothing else can be done to the flag pole.</p>
+  </li>
+</ul>
+
+<h3 id="introduction-and-goals">Introduction and goals</h3>
+<p>In this lesson, we will explore a cool hands-on technology called <a href="http://littlebits.cc/">Littlebits</a>. Littlebits follows a <em>component-based design</em> paradigm using <em>GPIO</em> (or general purpose input/output) to let you easily make apps. We will learn how to plug and play bits together to make some simple inventions. Littlebits will be the central platform for the rest of camp and you will be using them in other lessons.</p>
+
+<h3 id="goals">Goals</h3>
+<p>By the end of this tutorial, you will be able to:</p>
+<ul>
+  <li>Interact with <code class="highlighter-rouge">web services</code></li>
+  <li><code class="highlighter-rouge">Mashup</code> web services with Littlebits</li>
+  <li>Make some apps that help automate your home</li>
+</ul>
+
+<h3 id="materials-required">Materials Required</h3>
+
+<ul>
+  <li>Littlebits kit</li>
+  <li>Power outlet nearby</li>
+  <li>Wi-Fi Internet Connection</li>
+</ul>
+
+<h3 id="prerequisite-lessons">Prerequisite lessons</h3>
+<p><a href="../intro_to_components_using_littlebits_droids/README.md">Intro to components using Littlebits Droids</a></p>
+
+<h3 id="table-of-contents">Table of Contents</h3>
+<!-- TOC START min:1 max:3 link:true update:true -->
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>- [Cybersecurity First Principles in this lesson](#cybersecurity-first-principles-in-this-lesson)
+- [Introduction and goals](#introduction-and-goals)
+- [Goals](#goals)
+- [Materials Required](#materials-required)
+- [Prerequisite lessons](#prerequisite-lessons)
+- [Table of Contents](#table-of-contents)
+- [Before We Start](#before-we-start)
+- [Step 1: Create an Account / Login to Littlebits portal!](#step-1-create-an-account--login-to-littlebits-portal)
+- [Step 2: Pair your Cloudbit with the portal](#step-2-pair-your-cloudbit-with-the-portal)
+- [Step 3: ~~Don't Push~~ Push the ~~Red~~ Purple Button](#step-3-dont-push-push-the-red-purple-button)
+- [Step 4: Using web services - connecting to IFTTT](#step-4-using-web-services---connecting-to-ifttt)
+- [Step 5: Web Service Wizardry - Make an Easy Button](#step-5-web-service-wizardry---make-an-easy-button)
+- [Step 6: Email / SMS trigger](#step-6-email--sms-trigger)
+- [Step 7: Twitter watcher](#step-7-twitter-watcher)
+- [Step 8: Control your world](#step-8-control-your-world)
+- [Self Exploration](#self-exploration)
+- [Test you Bits, err... Wits!](#test-you-bits-err-wits)
+- [Cybersecurity First Principle Reflections](#cybersecurity-first-principle-reflections)
+- [Additional Resources](#additional-resources)   - [Lead Author](#lead-author)
+- [Acknowledgements](#acknowledgements)
+- [License](#license)
+</code></pre></div></div>
+
+<!-- TOC END -->
+<h3 id="before-we-start">Before We Start</h3>
+<!--Last lesson link leads to a page with no content-->
+<p>In the <a href="../intro_to_components_using_littlebits_droids/README.md">last lesson</a>, you saw how versatile, modular, and cool Littlebits was to work with. It was easy to plug and play different modules together following simple <code class="highlighter-rouge">design patterns</code> to make cool, simple apps. Now, imagine everything you saw before can be hooked up to the internet and <strong>controlled using a smartphone or online app</strong>. We are going to do <em>THAT</em> now!</p>
+
+<h3 id="step-1-create-an-account--login-to-littlebits-portal">Step 1: Create an Account / Login to Littlebits portal!</h3>
+<p>To start we need to create an account:</p>
+
+<ul>
+  <li>Visit https://littlebits.cc/login and click <code class="highlighter-rouge">register</code></li>
+  <li>Walk through the online instructions to create your account</li>
+</ul>
+
+<h3 id="step-2-pair-your-cloudbit-with-the-portal">Step 2: Pair your Cloudbit with the portal</h3>
+
+<p>Now that we have an account, we need to pair our <code class="highlighter-rouge">cloudbit</code> (an orange module with <code class="highlighter-rouge">cloud</code> written on it) with the <code class="highlighter-rouge">Littlebits Cloud Platform</code>. To do that:</p>
+
+<ul>
+  <li>Login at http://control.littlebitscloud.cc/ using your account info.</li>
+  <li>Give your new <code class="highlighter-rouge">cloudbit</code> a name: I decided to call mine “Tim”.</li>
+</ul>
+
+<p><img src="img/tim.jpg" alt="tim" /></p>
+
+<ul>
+  <li>Follow the on-screen instructions to setup your <code class="highlighter-rouge">cloudbit</code>.</li>
+</ul>
+
+<p><img src="img/setup.png" alt="setup" /></p>
+
+<ul>
+  <li>First, connect the blue <code class="highlighter-rouge">power</code> module to the pink <code class="highlighter-rouge">button</code> module.</li>
+  <li>Next, connect the <code class="highlighter-rouge">button</code> module to the orange <code class="highlighter-rouge">cloudbit</code> module.</li>
+  <li>Then, connect the <code class="highlighter-rouge">bright led</code> module to the <code class="highlighter-rouge">cloudbit</code> module.</li>
+  <li>It should all be connected as shown:</li>
+</ul>
+
+<p><img src="img/configuration.jpg" alt="setup" /></p>
+
+<ul>
+  <li>Hold down the setup button on the <code class="highlighter-rouge">CloudBit</code> until the light blinks blue.</li>
+  <li>When the light blinks, let go and wait for the light to turn a steady blue.</li>
+  <li>Using Wi-Fi, connect to the local Wi-Fi network the device broadcasts (it will be something like <code class="highlighter-rouge">litteBits_Cloud_somenumber</code>).</li>
+  <li>Once connected to the device’s Wi-Fi adapter, pick the Wi-Fi network the <code class="highlighter-rouge">cloudbit</code> will live on. (At UNO that will be: <code class="highlighter-rouge">UNOGuest</code>).</li>
+  <li>It should auto-connect and the light should turn a solid green color.</li>
+  <li>You should see as message saying <strong>‘Awesome’</strong></li>
+</ul>
+
+<h3 id="step-3-dont-push-push-the-red-purple-button">Step 3: <del>Don’t Push</del> Push the <del>Red</del> Purple Button</h3>
+<p><img src="img/red-button-meme.jpg" alt="red button" /></p>
+
+<p>The purple button on your screen is linked to your <code class="highlighter-rouge">cloudbit</code> <code class="highlighter-rouge">output</code>.</p>
+
+<ul>
+  <li>Add a green <code class="highlighter-rouge">bright LED</code> output module to the <code class="highlighter-rouge">cloudbit</code>.</li>
+  <li>Now definitely press the giant purple <code class="highlighter-rouge">button</code> on your screen.</li>
+</ul>
+
+<p>It works! With that, you just made your first <code class="highlighter-rouge">IoT app</code>.</p>
+
+<ul>
+  <li>The control portal will also now have you press the <code class="highlighter-rouge">button</code> on the <code class="highlighter-rouge">button</code> module.</li>
+</ul>
+
+<p>You should see your gauge go up! Now you have input and outputs routed through the cloud controller!</p>
+
+<h3 id="step-4-using-web-services---connecting-to-ifttt">Step 4: Using web services - connecting to IFTTT</h3>
+<p><code class="highlighter-rouge">Web services</code> are, as the name implies, services that live on the web. You use these all the time - mostly without knowing it. The internet is built on top of them. Google, Dropbox, Youtube, Twitter, and Facebook are just a few juggernauts that provide and use many different web services. In this lesson, we are going to use a <code class="highlighter-rouge">mashup service</code> called <a href="https://ifttt.com">IFTTT</a> (which stands for <strong>I</strong>f <strong>T</strong>his, <strong>T</strong>hen <strong>T</strong>hat ). <strong>IFTTT</strong> is a great platform that <em>talks to</em> all kinds of other web services. One service it connects with is, conveniently, <code class="highlighter-rouge">Littlebits</code>. This is an example of <strong>modularity</strong> because <code class="highlighter-rouge">IFTTT</code> can swap out components for others easily.</p>
+
+<ul>
+  <li>Connect your <code class="highlighter-rouge">cloudbit</code> to <code class="highlighter-rouge">IFTTT</code> by pressing the <code class="highlighter-rouge">automate</code> button in the <code class="highlighter-rouge">Littlebits</code> cloud controller user interface.</li>
+  <li>Visit https://ifttt.com</li>
+  <li>You will need to create an account with <code class="highlighter-rouge">IFTTT</code> if you don’t already have one.</li>
+  <li>Once you sign in, you will see some <code class="highlighter-rouge">recipes</code> that have already been made for you by the Littlebits team. A <code class="highlighter-rouge">recipe</code> is a <code class="highlighter-rouge">design pattern</code> that combines input and output behavior to do something cool. <code class="highlighter-rouge">IFTTT</code> refers to recipes as <code class="highlighter-rouge">applets</code>.</li>
+</ul>
+
+<h3 id="step-5-web-service-wizardry---make-an-easy-button">Step 5: Web Service Wizardry - Make an Easy Button</h3>
+<p>Lets create a new <code class="highlighter-rouge">applet</code> that sends an email when you press the <code class="highlighter-rouge">button</code> module. For flair, lets make it an <em>easy button</em>™ (Staples).</p>
+
+<ul>
+  <li>In your browser, open <code class="highlighter-rouge">IFTTT</code> and click the <strong>down caret</strong> next to your name.</li>
+  <li>Now click <strong>new applet</strong> in the menu that pops up:</li>
+</ul>
+
+<p><img src="img/ifttt-applet.png" alt="applet" /></p>
+
+<ul>
+  <li>Click the <code class="highlighter-rouge">plus</code> icon to specify the <em>if</em> condition our applet will fire up on.</li>
+  <li>You will see all of the service options available to be used as <em>IF</em> conditions. Find <code class="highlighter-rouge">Littlebits</code> by typing it in the search/filter bar.</li>
+  <li>Authorize <code class="highlighter-rouge">IFTTT</code> to access your <code class="highlighter-rouge">Littlebits</code> API.</li>
+  <li>Now you should see two options: <strong>turned on</strong> and <strong>turned off</strong>, pick <strong>turned on</strong></li>
+  <li>Select your <code class="highlighter-rouge">cloudbit</code> from the dropdown and click <strong>create trigger</strong> to set this as the <em>IF</em> condition. Once selected you should see:</li>
+</ul>
+
+<p><img src="img/ifttt-bits.png" alt="applet" /></p>
+<blockquote>
+  <p>If (littlebits) then that</p>
+</blockquote>
+
+<ul>
+  <li>Click the <code class="highlighter-rouge">plus</code> icon to specify the <em>THAT</em> condition.</li>
+  <li>You will again see all of the service options, select <code class="highlighter-rouge">email</code> and then <strong>send me an email</strong>. You will be asked to link your email to your <code class="highlighter-rouge">IFTTT</code> account (if you haven’t already). Go ahead and confirm your email.</li>
+  <li>Once selected, you will see an email template available. Click <code class="highlighter-rouge">add ingredient</code> to see available input information. You should have, <code class="highlighter-rouge">DeviceName</code>, <code class="highlighter-rouge">TurnedOnAt</code>, and <code class="highlighter-rouge">PowerPercent</code> options. You can customize the email message here if you want. I made mine an easy button by embedding an image (<code class="highlighter-rouge">img</code> tag).</li>
+</ul>
+
+<p><img src="img/easy-button.png" alt="applet" /></p>
+
+<ul>
+  <li>When satisfied, select <strong>create action</strong> to set this email as the <em>THAT</em>.</li>
+  <li>Click <strong>finish</strong> to turn the applet on.</li>
+  <li>You should see the applet as a purple box explaining what it does.</li>
+  <li>Try it out by pressing the <code class="highlighter-rouge">button</code> module connected as input to your <code class="highlighter-rouge">cloudbit</code> module.</li>
+</ul>
+
+<p>Check your email!</p>
+
+<p><img src="img/email-worked.png" alt="email worked" /></p>
+<blockquote>
+  <p>It worked!</p>
+</blockquote>
+
+<p>This is a simple, but powerful tool. It also shows off <strong>resource encapsulation</strong> and <strong>abstraction</strong>. In terms of resource encapsulation, each of the services connected to <code class="highlighter-rouge">IFTTT</code> have many functions. These functions are encapsulated in a service (e.g. <code class="highlighter-rouge">email</code> in this example). The functions are also <strong>abstract</strong> because <code class="highlighter-rouge">IFTTT</code> doesn’t need to know <em>how</em> they work, just that they achieve a certain purpose (e.g. send an email). This helps <em>model</em> or <em>abstract</em> the implementation away from the design.</p>
+
+<h3 id="step-6-email--sms-trigger">Step 6: Email / SMS trigger</h3>
+<p>Lets make an <code class="highlighter-rouge">applet</code> that allows us to turn the <code class="highlighter-rouge">cloudbit</code> output on with an email or text.</p>
+
+<ul>
+  <li>Go to https://ifttt.com, select the dropdown caret next to your name, and then click <strong>New Applet</strong>.</li>
+  <li>As the <strong>IF</strong> condition, select the <code class="highlighter-rouge">email</code> service.</li>
+  <li>Of the two options, select the <code class="highlighter-rouge">Send IFTTT an email tagged</code> option.</li>
+  <li>Use the hashtag <code class="highlighter-rouge">#nebraskagencyber</code></li>
+  <li>For the <strong>THAT</strong> condition, select the <code class="highlighter-rouge">littlebits</code> service</li>
+  <li>Select <code class="highlighter-rouge">SetOutputLevel</code> of the three options available.</li>
+  <li>Pick your <code class="highlighter-rouge">cloudbit</code> from the dropdown.</li>
+  <li>Select <strong>100%</strong> and <strong>5 seconds</strong> as the output levels</li>
+  <li>Press the <strong>create action</strong> button</li>
+  <li>Click <strong>finish</strong></li>
+</ul>
+
+<p>You should see:
+<img src="img/email-trigger.png" alt="trigger" /></p>
+
+<ul>
+  <li>Test it out by sending <code class="highlighter-rouge">trigger@applet.ifttt.com</code> an email with the tag <code class="highlighter-rouge">#nebraskagencyber</code> in the subject line.</li>
+  <li>Give it a minute to process</li>
+</ul>
+
+<p>Pretty cool, imagine - instead of turning on a light we can turn anything on.</p>
+
+<p>Lets make a second applet to do the same thing, but via <code class="highlighter-rouge">SMS</code>.</p>
+
+<ul>
+  <li>Go to https://ifttt.com, select the dropdown caret next to your name, and then click <strong>New Applet</strong>.</li>
+  <li>As the <strong>IF</strong> condition, select the <code class="highlighter-rouge">SMS</code> service.</li>
+  <li>Register your phone with IFTTT SMS service</li>
+  <li>Of the two options, select the <code class="highlighter-rouge">SMS tagged</code> option.</li>
+  <li>Use the hashtag <code class="highlighter-rouge">#nebraskagencyber</code></li>
+  <li>For the <strong>THAT</strong> condition, select the <code class="highlighter-rouge">littlebits</code> service</li>
+  <li>Select <code class="highlighter-rouge">SetOutputLevel</code> of the three options available.</li>
+  <li>Pick your <code class="highlighter-rouge">cloudbit</code> from the dropdown.</li>
+  <li>Select <strong>100%</strong> and <strong>5 seconds</strong> as the output levels</li>
+  <li>Press the <strong>create action</strong> button</li>
+  <li>Click <strong>finish</strong></li>
+</ul>
+
+<p><img src="img/sms-trigger.png" alt="trigger" /></p>
+
+<ul>
+  <li>Test it out by sending a text message to the number in the <code class="highlighter-rouge">IFTTT applet</code> with the tag <code class="highlighter-rouge">#nebraskagencyber</code> in the body.</li>
+  <li>Give it a minute to process</li>
+</ul>
+
+<h3 id="step-7-twitter-watcher">Step 7: Twitter watcher</h3>
+<p>Lets make an app that lights up every time a new tweet on a certain topic happens. This requires a <code class="highlighter-rouge">Twitter</code> account. If you don’t have and don’t want to create a Twitter account, feel free to skip this, but it’s fun!</p>
+
+<ul>
+  <li>Go to https://ifttt.com, select the dropdown caret next to your name, and then click <strong>New Applet</strong>.</li>
+  <li>As the <strong>IF</strong> condition, select the <code class="highlighter-rouge">Twitter</code> service. You will be asked to link your Twitter account first.</li>
+  <li>Select the <code class="highlighter-rouge">New tweet from search</code> option.</li>
+  <li>Specify the search string <code class="highlighter-rouge">#nebraskagencyber</code> to only fulfill the IF condition if someone tweets the hashtag.</li>
+  <li>For the <strong>THAT</strong> condition, select the <code class="highlighter-rouge">littlebits</code> service</li>
+  <li>Select <code class="highlighter-rouge">Activate Output</code> this time. This will just turn on the output for 3 seconds.</li>
+  <li>Select your <code class="highlighter-rouge">cloudbit</code></li>
+  <li>Press <strong>create action</strong> and then <strong>finish</strong></li>
+</ul>
+
+<p><img src="img/twitter-hashtag.png" alt="twitter" /></p>
+
+<h3 id="step-8-control-your-world">Step 8: Control your world</h3>
+<p>Lets go beyond simple triggers and make something that you might use in your home. First, we’re going to create a service-controlled light switch.</p>
+
+<ul>
+  <li>Connect the <code class="highlighter-rouge">blue</code> power module to the <code class="highlighter-rouge">light sensor</code> input module.</li>
+  <li>Set the <code class="highlighter-rouge">light sensor</code> switch to <strong>dark</strong> mode to make it detect darkness.</li>
+  <li>Connect the <code class="highlighter-rouge">light sensor</code> to the <code class="highlighter-rouge">cloudbit</code>.</li>
+  <li>Connect the <code class="highlighter-rouge">cloudbit</code> to the orange <code class="highlighter-rouge">split</code> module</li>
+  <li>Connect one of the <code class="highlighter-rouge">split</code> ends to the <code class="highlighter-rouge">ir transmitter</code> module</li>
+  <li>Connect the <code class="highlighter-rouge">ir transmitter</code> to the <code class="highlighter-rouge">o21 number</code> module</li>
+  <li>Connect the other end of the <code class="highlighter-rouge">split</code> to the <code class="highlighter-rouge">mp3 player</code></li>
+  <li>Put the <code class="highlighter-rouge">mp3 player</code> in <strong>once</strong> mode</li>
+  <li>Connect the <code class="highlighter-rouge">mp3 player</code> to the <code class="highlighter-rouge">synth speaker</code></li>
+  <li>Take the <code class="highlighter-rouge">mini sd card</code> out of the <code class="highlighter-rouge">mp3 player</code> and put it in the <code class="highlighter-rouge">adapter</code> - bring it up to me to get an amusing file that goes with this demo</li>
+</ul>
+
+<p><img src="img/light-config.jpg" alt="light config" /></p>
+
+<ul>
+  <li>Go to https://ifttt.com, turn off the other applets we made earlier. You can save them for later if you want.</li>
+  <li>Select the dropdown caret next to your name, and then click <strong>New Applet</strong>.</li>
+  <li>As the <strong>IF</strong> condition, select the <code class="highlighter-rouge">littlebits</code> service.</li>
+  <li>Select the <strong>turned on</strong> option.</li>
+  <li>Select <strong>create trigger</strong>.</li>
+  <li>For the <strong>THAT</strong> condition, select the <code class="highlighter-rouge">email</code> service.</li>
+  <li>Set the email content to the following:</li>
+</ul>
+
+<p>Subject:</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>() It's dark at home: Want to turn the lights on?
+</code></pre></div></div>
+<p>Body:</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Want to turn the lights on? Reply with  &lt;a href="mailto:trigger@applet.ifttt.com?subject=#lightson&amp;body=#lightson"&gt;`#lightson`&lt;/a&gt;
+</code></pre></div></div>
+<ul>
+  <li>Click <strong>create action</strong> and then <strong>finish</strong></li>
+</ul>
+
+<p>Cover the light sensor up with your finger to turn it on (simulating it being <strong>dark</strong>).</p>
+
+<p><img src="img/lights-on-email.png" alt="light email" /></p>
+
+<ul>
+  <li>Now make another applet by selecting the dropdown caret next to your name, and then clicking <strong>New Applet</strong>.</li>
+  <li>As the <strong>IF</strong> condition, select the <code class="highlighter-rouge">email</code> service.</li>
+  <li>Of the two options, select the <code class="highlighter-rouge">Send IFTTT an email tagged</code> option.</li>
+  <li>Use the hashtag <code class="highlighter-rouge">#lightson</code>. Create the trigger.</li>
+  <li>For the <strong>THAT</strong> condition, select the <code class="highlighter-rouge">littlebits</code> service.</li>
+  <li>Select <code class="highlighter-rouge">Activate Output</code> this time. This will just turn on the output for 3 seconds.</li>
+  <li>Select your <code class="highlighter-rouge">cloudbit</code></li>
+  <li>Press <strong>create action</strong> and then <strong>finish</strong></li>
+  <li>Connect your <code class="highlighter-rouge">ir power outlet</code> to an outlet. Make sure the red tag is in line of sight with the <code class="highlighter-rouge">ir sensor</code></li>
+  <li>To pair the <code class="highlighter-rouge">ir sensor</code> with the <code class="highlighter-rouge">ir power outlet</code> send <code class="highlighter-rouge">trigger@applet.ifttt.com</code> an email with the tag <code class="highlighter-rouge">#lightson</code> in the subject line. Once the pairing is complete, <code class="highlighter-rouge">ir power outlet</code> should have a steady on or off state. If it is still blinking then it is attempting to get paired.</li>
+  <li>Once pairing is successful, toggle the <code class="highlighter-rouge">ir power outlet</code> by sending <code class="highlighter-rouge">trigger@applet.ifttt.com</code> an email with the tag <code class="highlighter-rouge">#lightson</code> in the subject line.</li>
+  <li>If it doesn’t happen instantly, give it a minute to process</li>
+</ul>
+
+<p>You should see the power outlet light turn on - and you should hear a short audio clip play.</p>
+
+<p><img src="img/outlet.jpg" alt="light config" /></p>
+
+<h3 id="self-exploration">Self Exploration</h3>
+<p>Try some different designs yourself. You can combine any services with any Littlebits sensors. You could make an app that opens the curtains when you text it #opencurtains. You could make an app that listens for sounds and sends you an alert if sounds are detected. You could make an email or tweet counter. The possibilities are real and endless!</p>
+
+<h3 id="test-you-bits-err-wits">Test you Bits, err… Wits!</h3>
+<!--Quiz unavailable from link-->
+<p><a href="https://www.qzzr.com/c/quiz/431837/littlebits-ifttt">Quiz</a></p>
+
+<h3 id="cybersecurity-first-principle-reflections">Cybersecurity First Principle Reflections</h3>
+<p>In this lesson, we saw web services, such as <code class="highlighter-rouge">IFTTT</code>, can <strong>abstract</strong> away details about devices and instead focus on recipes or <code class="highlighter-rouge">design patterns</code> to describe how things work. We also saw that by keeping functionality <strong>modular</strong>, <code class="highlighter-rouge">IFTTT</code> can combine <code class="highlighter-rouge">Littlebits</code> with many other services.</p>
+
+<p>Web services use <strong>resource encapsulation</strong> to ensure that all functions related to the execution of an app or service are neatly within the scope of the service itself. <code class="highlighter-rouge">IFTTT</code> relies on services to be encapsulated so that they can provide external services with the ability to use them without worrying about connecting to multiple other related services.</p>
+
+<p><strong>Data hiding</strong> is also important to prevent internal data in the service from being released outside of the <code class="highlighter-rouge">service invocation</code>. Local data remains hidden, while <code class="highlighter-rouge">interfaces</code> expose only what the service wants to release (for instance to <code class="highlighter-rouge">IFTTT</code>). This also relates to <strong>minimization</strong> because services can turn ports and other access off except for the specific interfaces it wants to leave open for other services to use.</p>
+
+<h3 id="additional-resources">Additional Resources</h3>
+<p>For more information, investigate the following.</p>
+
+<ul>
+  <li><a href="http://littlebits.cc/how-it-works">Littlebits</a> - Overview of concepts and available bits</li>
+  <li><a href="https://shop.littlebits.cc/products/smart-home-kit">https://shop.littlebits.cc/products/smart-home-kit</a> - Information about the Smart Home Kit</li>
+</ul>
+
+<h2 id="lead-author">Lead Author</h2>
+
+<ul>
+  <li>Matt Hale</li>
+</ul>
+
+<h3 id="acknowledgements">Acknowledgements</h3>
+<p>Special thanks to <a href="http://faculty.ist.unomaha.edu/rgandhi/">Dr. Robin Gandhi</a> for reviewing and editing this lesson.</p>
+
+<h3 id="license">License</h3>
+<p><a href="https://github.com/MLHale/nebraska-gencyber">Nebraska GenCyber</a> <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /></a><br /> is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</a>.</p>
+
+<p>Overall content: Copyright (C) 2017-2018  <a href="http://faculty.ist.unomaha.edu/mhale/">Dr. Matthew L. Hale</a>, <a href="http://faculty.ist.unomaha.edu/rgandhi/">Dr. Robin Gandhi</a>, <a href="http://www.brianamorrison.net">Dr. Briana B. Morrison</a>, and <a href="http://www.bellevue.edu/about/leadership/faculty/rausch-douglas">Doug Rausch</a>.</p>
+
+<p>Lesson content: Copyright (C) <a href="http://faculty.ist.unomaha.edu/mhale/">Dr. Matthew L. Hale</a> 2017-2018.<br />
+<a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /></a><br /><span xmlns:dct="http://purl.org/dc/terms/" property="dct:title">This lesson</span> is licensed by the author under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</a>.</p>
+
+</div>
+
+    </div>
+
+  </body>
+</html>

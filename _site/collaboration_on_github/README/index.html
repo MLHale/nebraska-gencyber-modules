@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+  <head>
+  <link href="http://gmpg.org/xfn/11" rel="profile">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+  <!-- Enable responsiveness on mobile devices-->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+
+  <title>
+    
+      Collaboration on Github &middot; 
+    
+  </title>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="https://mlhale.github.io/nebraska-gencyber-modules/public/css/poole.css">
+  <link rel="stylesheet" href="https://mlhale.github.io/nebraska-gencyber-modules/public/css/syntax.css">
+  <link rel="stylesheet" href="https://mlhale.github.io/nebraska-gencyber-modules/public/css/hyde.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=PT+Sans:400,400italic,700|Abril+Fatface">
+
+  <!-- Icons -->
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/public/apple-touch-icon-144-precomposed.png">
+                                 <link rel="shortcut icon" href="/public/favicon.ico">
+
+  <!-- RSS -->
+  <link rel="alternate" type="application/rss+xml" title="RSS" href="/atom.xml">
+</head>
+
+
+  <body>
+
+    <div class="sidebar">
+  <div class="container sidebar-sticky">
+    <div class="sidebar-about">
+      <h1>
+
+      </h1>
+      <p class="lead"></p>
+    </div>
+
+    <nav class="sidebar-nav">
+      <a class="sidebar-nav-item" href="https://github.com/MLHale/nebraska-gencyber-modules">Nebraska GenCyber</a>
+      <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"></a>is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</a>. <img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /> You are encouraged to reuse, remix, and add to the lessons contained herein - just remember to properly provide attribution.
+      <br><br>
+      Overall content: Copyright (C) 2017-2018  <a href="http://faculty.ist.unomaha.edu/mhale/">Dr. Matthew L. Hale</a>, <a href="http://faculty.ist.unomaha.edu/rgandhi/">Dr. Robin Gandhi</a>, <a href="http://www.brianamorrison.net">Dr. Briana B. Morrison</a>, and <a href="http://www.bellevue.edu/about/leadership/faculty/rausch-douglas">Doug Rausch</a>. <br>
+      Individual content: Copyright (C) 2017-2018 as listed in each lesson.
+    </nav>
+
+    <p>&copy; 2018. All rights reserved.</p>
+  </div>
+</div>
+
+
+    <div class="content container">
+      <div class="page">
+  <h1 class="page-title">Collaboration on Github</h1>
+  <h3 id="cybersecurity-first-principles-in-this-lesson">Cybersecurity First Principles in this lesson</h3>
+
+<h4 id="least-privilege">Least Privilege</h4>
+<p>One of the ways to protect information is by limiting what people can see and do with your information and resources. The principle of least privilege says to allow the minimum number of privileges necessary to accomplish the task.</p>
+<ul>
+  <li>When collaboratively developing code, each collaborator should only have privileges to play their part.</li>
+  <li>For example, a code reviewer should only have the ability to read and comment on code, but not edit it.</li>
+</ul>
+
+<h3 id="lesson-goals">Lesson goals</h3>
+<ul>
+  <li>Collaborate using Github</li>
+</ul>
+
+<h3 id="materials-required">Materials required</h3>
+<ul>
+  <li>Access to Github.com</li>
+</ul>
+
+<h3 id="prerequisite-lessons">Prerequisite lessons</h3>
+<ul>
+  <li><a href="../intro_to_git_and_github/README.md">Introduction to Git and Github</a></li>
+</ul>
+
+<h3 id="table-of-contents">Table of Contents</h3>
+<!-- TOC START min:1 max:3 link:true update:false -->
+<ul>
+  <li><a href="#github-collaboration">Github Collaboration</a>
+    <ul>
+      <li><a href="#forking-a-repository">Forking a Repository</a></li>
+      <li><a href="#make-a-pull-request-from-a-forked-repository">Make a Pull Request from a Forked Repository</a></li>
+      <li><a href="#markdown">Authoring Markdown</a></li>
+      <li><a href="#fork-our-whole-camp">Fork Our whole camp</a></li>
+      <li><a href="#cyber-security-first-principles-reflections">Cyber security First Principles Reflections</a></li>
+      <li><a href="#additional-resources">Additional Resources</a></li>
+      <li><a href="#acknowledgements">Acknowledgements</a></li>
+      <li><a href="#license">License</a></li>
+    </ul>
+  </li>
+</ul>
+
+<!-- TOC END -->
+
+<p>Writing code alone is no fun. Collaborative features of Github are integrated in to all aspects of a code repository. For example, Github allows anyone to make a copy of a public repository for their own use. It also allows discussions to support code reviews, bug reports, and code contributions.</p>
+
+<p>You might have heard or seen the phrase “Fork me on Github”. Let’s start with exploring this feature.</p>
+
+<h3 id="forking-a-repository">Forking a Repository</h3>
+<p>Now we will learn about <strong>forking</strong> a repository. This is as easy as pie. But what is a fork and what do you use it for?</p>
+
+<p>Here is what Github <a href="https://help.github.com/articles/fork-a-repo/">says</a>:</p>
+<blockquote>
+  <p>A fork is a copy of a repository. Forking a repository allows you to freely experiment with changes without affecting the original project.</p>
+</blockquote>
+
+<blockquote>
+  <p>Most commonly, forks are used to either propose changes to someone else’s project or to use someone else’s project as a starting point for your own idea.</p>
+</blockquote>
+
+<blockquote>
+  <p>Every public repository can be forked</p>
+</blockquote>
+
+<p>So head-on over to a hello-world repository developed by one of your peers. You can do this by browsing to the <code class="highlighter-rouge">git URL</code> of your peer’s hello-world repository in your browser.</p>
+
+<p>You should see something like this on your peer’s repository:</p>
+<blockquote>
+  <p><img src="./img/githubfork.png" alt="githubfork" /></p>
+</blockquote>
+
+<p>Click the <code class="highlighter-rouge">Fork</code> button.</p>
+
+<p>After forking, you will have your own copy of your peer’s repository to work on. You may <code class="highlighter-rouge">clone</code> this repository to your local computer, make changes to files and then <code class="highlighter-rouge">push</code> it back to this forked remote repository. Since you own the forked copy, you do not need permission from the original repository owner.</p>
+
+<p>Forking a repository is a good way to suggest new features to the original repository that you do not own, using a <code class="highlighter-rouge">pull</code> request. Let’s do this in the next step.</p>
+
+<p><a href="#table-of-contents">Top</a></p>
+
+<h3 id="make-a-pull-request-from-a-forked-repository">Make a Pull Request from a Forked Repository</h3>
+<p>In this step, make changes to the fork of your peers’ repository on <code class="highlighter-rouge">Github.com</code> and create a <code class="highlighter-rouge">pull request</code>.</p>
+
+<p>Let’s assume that a <code class="highlighter-rouge">gencyber</code> (insert your ID here) user forks <code class="highlighter-rouge">robinagandhi/hello-world</code> repository (this will be your peer’s repository).</p>
+
+<p>The forked repository for the <code class="highlighter-rouge">gencyber</code> user will look like this:</p>
+<blockquote>
+  <p><img src="./img/forkedrepo.png" alt="forkedrepo" /></p>
+</blockquote>
+
+<p>The <code class="highlighter-rouge">gencyber</code> user now makes changes to the README.md file in this forked repository. She is also the owner of this new <code class="highlighter-rouge">forked</code> repository.</p>
+<blockquote>
+  <p><img src="./img/forkupdate.png" alt="forkupdate" /></p>
+</blockquote>
+
+<p>Now to suggest these changes to the <code class="highlighter-rouge">robinagandhi</code> user; the <code class="highlighter-rouge">gencyber</code> user needs to create a <code class="highlighter-rouge">pull request</code>. So the <code class="highlighter-rouge">gencyber</code> user switches over to the <code class="highlighter-rouge">Pull Request</code> tab on the forked repository and clicks the <strong>new pull request</strong> button. It will look something like this:</p>
+<blockquote>
+  <p><img src="./img/forkpulltab.png" alt="forkpulltab" /></p>
+</blockquote>
+
+<p>Here is an open pull request that compares the master branches across the two repositories.</p>
+<blockquote>
+  <p><img src="./img/forkpullopen.png" alt="forkpullopen" /></p>
+</blockquote>
+
+<p>The <code class="highlighter-rouge">robinagandhi</code> user is now notified of a <code class="highlighter-rouge">pull request</code> on his hello-world repository. He examines the suggested changes, and in this case, the files can be automatically merged.</p>
+<blockquote>
+  <p><img src="./img/forkmerge.png" alt="forkmerge" /></p>
+</blockquote>
+
+<p>In cases where files cannot be merged automatically, discussions around the pull request can help to resolve the conflicts manually. In this case that won’t be necessary. With a few more simple clicks the changes are <code class="highlighter-rouge">merged</code>. Your peer will see something like this to confirm the merge:</p>
+<blockquote>
+  <p><img src="./img/mergeconfirm.png" alt="mergeconfirm" /></p>
+</blockquote>
+
+<p>Here is a confirmation message after a successful <code class="highlighter-rouge">merge</code>:</p>
+<blockquote>
+  <p><img src="./img/mergemsg.png" alt="mergemsg" /></p>
+</blockquote>
+
+<p>The updated content is now reflected in the peer’s repository. It will be something like this:</p>
+<blockquote>
+  <p><img src="./img/forkupdatefinal.png" alt="finalupdate" /></p>
+</blockquote>
+
+<p>Now return the favor to your peer. Help them <code class="highlighter-rouge">fork</code> your hello-world repository and make a <code class="highlighter-rouge">pull request</code> back to you.</p>
+
+<p>A collaborator may not accept your pull request on the first attempt. She may suggest changes. In that case, you may continue to make commits to the branch referenced in your pull request. Github conveniently tracks previous commits, new commits, and discussions along with the pending pull request.</p>
+
+<p>With your peer try going back and forth on your pull request to experience this feature.</p>
+
+<p>And that is one way you can collaborate using <code class="highlighter-rouge">Github</code>.</p>
+
+<p><a href="#table-of-contents">Top</a></p>
+
+<h3 id="markdown">Markdown</h3>
+<p>To communicate and write on Github, it is useful to learn <code class="highlighter-rouge">Markdown</code> and its <code class="highlighter-rouge">Github Flavor Variants</code>. You may explore this simple format here: https://guides.github.com/features/mastering-markdown/</p>
+
+<p>You can try out the syntax on directly on Github in any file that ends in the extension <code class="highlighter-rouge">.md</code>. Files with the <code class="highlighter-rouge">.md</code> extension signify Markdown files. So head on over to your hello-world repository on Github and edit the README.md file. In the edit mode, you can observe the effect of Markdown syntax by clicking on the Preview tab.</p>
+
+<p>In the figure below, When in the preview mode, notice the formatting effect of <code class="highlighter-rouge">#</code> before text related to a heading.</p>
+
+<blockquote>
+  <p><img src="./img/markdownpreview.gif" alt="preview" /></p>
+</blockquote>
+
+<p>Explore functional uses of Markdown on Github here: https://help.github.com/categories/writing-on-github/</p>
+
+<p>You are now ready to explore the wonderful world of open source on Github. Enjoy and make your own contributions!</p>
+
+<p><a href="#table-of-contents">Top</a></p>
+
+<h3 id="fork-our-whole-camp">Fork Our whole camp</h3>
+<p>We practice what we preach. Our whole camp has been developed on GitHub using markdown, for your viewing pleasure and for you to take home with you. Now that you are a Github/git guru, you may as well fork all of the camp content so that you can extend the content as you wish. But don’t forget to tell us about it. We love seeing your work!</p>
+
+<p>Go to the <a href="https://github.com/MLHale/nebraska-gencyber-modules">Github page for the camp modules</a> and click fork. Boom, just like that you have your very own copy of all the modules. Use with attribution, share widely!</p>
+
+<h3 id="ready-for-some-trivia">Ready for some trivia?</h3>
+
+<p><a href="https://unomaha.az1.qualtrics.com/jfe/form/SV_0risj3sV2YTmzEV">Github Collaboration Quiz</a></p>
+
+<h3 id="cybersecurity-first-principles-reflections">Cybersecurity First Principles Reflections</h3>
+
+<p>On Github, only the <code class="highlighter-rouge">owner</code> of a remote repository can push commits to it. All other <code class="highlighter-rouge">Github users</code> have the limited privilege to make a pull request. The repository owner reviews pull requests and initiates a merge action. The owner may reject pull requests if they do not seem appropriate. A <code class="highlighter-rouge">collaborator</code> can push commits, but cannot delete a repository or add other collaborators. These constraints show the concept of <strong>least privilege</strong> with GitHub user roles. Users should have no more privilege than what is required for their job.</p>
+
+<p><a href="#table-of-contents">Top</a></p>
+
+<h2 id="additional-resources">Additional Resources</h2>
+
+<ul>
+  <li>Video: <a href="https://www.youtube.com/watch?v=jLWZaFzPS6Q">Collaboration Scenarios on Github</a></li>
+  <li>Github Guide: <a href="https://guides.github.com/activities/socialize/">Socialize on Github</a></li>
+  <li>Github Guide: <a href="https://guides.github.com/features/wikis/">Documenting your Project on Github</a></li>
+  <li>Github Guide: <a href="https://guides.github.com/features/pages/">Creating webpages on Github</a></li>
+</ul>
+
+<p><a href="#table-of-contents">Top</a></p>
+
+<h2 id="lead-author">Lead Author</h2>
+
+<ul>
+  <li>Robin Gandhi</li>
+</ul>
+
+<h2 id="acknowledgements">Acknowledgements</h2>
+
+<ul>
+  <li>A special thanks to Matt Hale, Aaron Vigal and Cade Wollcot for reviews of this module and thoughtful discussions.</li>
+</ul>
+
+<p><a href="#table-of-contents">Top</a></p>
+
+<h2 id="license">License</h2>
+<p><a href="https://github.com/MLHale/nebraska-gencyber">Nebraska GenCyber</a> <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /></a><br /> is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</a>.</p>
+
+<p>Overall content: Copyright (C) 2017-2018  <a href="http://faculty.ist.unomaha.edu/mhale/">Dr. Matthew L. Hale</a>, <a href="http://faculty.ist.unomaha.edu/rgandhi/">Dr. Robin Gandhi</a>, and <a href="http://www.bellevue.edu/about/leadership/faculty/rausch-douglas">Doug Rausch</a>.</p>
+
+<p>Lesson content: Copyright (C) <a href="http://faculty.ist.unomaha.edu/rgandhi/">Robin Gandhi</a> 2017-2018.
+<a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /></a><br /><span xmlns:dct="http://purl.org/dc/terms/" property="dct:title">This lesson</span> is licensed by the author under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</a>.</p>
+
+</div>
+
+    </div>
+
+  </body>
+</html>

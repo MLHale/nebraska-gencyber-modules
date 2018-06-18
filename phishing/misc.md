@@ -1,4 +1,7 @@
-# Answer Key
+---
+layout: page
+title: Phishing Answer key
+---
 
 ## Reading a URL
 #### Exercise:

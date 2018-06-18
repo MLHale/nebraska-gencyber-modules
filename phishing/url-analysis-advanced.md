@@ -1,4 +1,7 @@
-# Obfuscation, Clickjacking and OSINT Gathering
+---
+layout: page
+title: Phishing - Advanced URL Analysis - Obfuscation, Clickjacking and OSINT Gathering
+---
 
 ### Cybersecurity First Principles
 * __Layering__: Cybersecurity uses multiple layers of defense when protecting information or resources. If one layer is defeated the next layer should still be defending.
@@ -36,12 +39,12 @@ In this sense, it means to make code that is intentionally hard to read, usually
 Examine this link:
 https://robinagandhi.github.io/phishing-demo/obfuscated.html
 
-It is similar to the page in the [URL Analysis Lesson](./url-analysis.md) in form and function but now examine its page source. It has been obfuscated using an external javascript file. Examine that file as well: https://robinagandhi.github.io/phishing-demo/myscr150731.js
+It is similar to the page in the [URL Analysis Lesson](../url-analysis.md) in form and function but now examine its page source. It has been obfuscated using an external javascript file. Examine that file as well: https://robinagandhi.github.io/phishing-demo/myscr150731.js
 
 Spammers use such obfuscation to avoid detection and analysis. Navigate away from such pages or delete emails that have gone to such lengths to conceal their "trickeries".
 
 Just viewing the source files for obfuscated pages provides no useful information. But if we put our minds to it, we can defeat the bad guys. Navigate back to the obfuscated page. Then right click on a blank area and select `Inspect` or `Inspect Element`. In the `Elements` tab unravel the HTML code that is computed by the browser to render a human readable page. Now it should look similar to the phishing page from before:
-> ![trickyurls](./img/inspectelement.png)
+> ![trickyurls](../img/inspectelement.png)
 
 The developer tools built into the browser also help us see right through the obfuscated data.
 
@@ -129,13 +132,13 @@ At first, there is nothing unusual about this page. There is just a single link 
 As you should know very well by now, nothing is as it seems. To reveal the true nature of this page click on a modified version of this page below.
 https://robinagandhi.github.io/phishing-demo/clickjacking-reveal.html
 
-![trickyurls](./img/clickjacking-reveal.png)
+![trickyurls](../img/clickjacking-reveal.png)
 
 Now you can see, that the page is crafted to steal your clicks and pass them on to an invisible page in front of it. Spammers do this to generate advertisement revenue from unsuspecting users by stealing their clicks. This exploit is called **click jacking**. You may explore the page source on these pages to notice that such behavior is possible using HTML `iframe` technology. With an invisible `iframe` the entire page becomes a minefield for your mouse clicks!
 
 In the demo page, `Like the kitten` is strategically placed on a link that tweets great things about Dr. Gandhi. You would be "liking" me without really intending to do so!
 
-![trickyurls](./img/clickjacking-tweet.png)
+![trickyurls](../img/clickjacking-tweet.png)
 
 When playing "free" online games, you may be clicking invisible advertisements!
 
@@ -174,21 +177,21 @@ http://app.teachingprivacy.org  (Beware of the ".com" version of this site. This
 
 This web-application takes a twitter handle and aggregates all publicly available geotagged information on a map. For example, here are the travel patterns of Steve Wozniak, co-founder of Apple.
 
-![geotagging](./img/stevewoz.png)
+![geotagging](../img/stevewoz.png)
 
 It is often prudent for celebrities and politicians to turn off geotagging in their posts. Here is Donald Trump's twitter account. He (or someone on his behalf) has taken appropriate steps to avoid leaking information about his whereabouts through social media, even while leaking hot air.
 
-![geotagging](./img/trump.png)
+![geotagging](../img/trump.png)
 
 Hillary Clinton is also very cautious about her privacy, unlike her handling of classified emails.
 
- ![geotagging](./img/clinton.png)
+ ![geotagging](../img/clinton.png)
 
 To prevent inadvertent sharing of geolocation data, turn off **location services** for social media applications. Also, remove geotags from photos before sharing them on social media.  Here is some more guidance: http://teachingprivacy.org/prevention/#location
 
 For instance, if you have a twitter account, there is a setting (Settings --> Security and Privacy) to delete any previously tagged locations.
 
-![geotagging](./img/deletelocation.png)
+![geotagging](../img/deletelocation.png)
 
 Protecting privacy requires **Information Hiding**. Deleting or hiding metadata prevents sensitive patterns from being learned over time. This is true even for encrypted `https` Internet traffic. While `https` encryption protects message contents, it still reveals the communication endpoints. Over time an accurate communication graph can be built by examining many such communications. To conceal browsing patterns over the Internet, Virtual Private Networks (VPN) are very effective. VPNs work by forming a tunnel between your current connection and a known network (such as the unomaha network). Once a tunnel is formed, all requests you make appear as if they originate from within the known network, since they emanate from the location you have tunneled to.
 
