@@ -42,6 +42,7 @@ By the end of this tutorial, you will be able to:
     - [Prerequisite lessons](#prerequisite-lessons)
     - [Table of Contents](#table-of-contents)
     - [The Design Process](#the-design-process)
+    - [Scratch 101 in Littlebits App](#scratch-101-in-littlebits-app)
     - [Exercise: Apply design thinking to solve a problem with Littlebits](#exercise-apply-design-thinking-to-solve-a-problem-with-littlebits)
     - [Additional Resources](#additional-resources)
   - [Lead Author](#lead-author)
@@ -126,6 +127,13 @@ As you progress, prototypes need to be `tested.`
 > Author/Copyright holder: Teo Yu Siang and Interaction Design Foundation. Copyright licence: CC BY-NC-SA 3.0
 
 Testing a prototype helps us to learn whether or not it succeeds (i.e. does it meet the requirements of the problem) and can help to refine the definition of the problem - if we learn something about the problem that we hadn't thought of before. 
+
+### Scratch 101 in Littlebits App
+Try coding your droid.
+
+* Go to the `mission interface` in the inventor kit app
+* Try missions 11 and 18
+* How could you combine the scratch interface with various inputs and outputs to solve a problem?
 
 ### Exercise: Apply design thinking to solve a problem with Littlebits
 The problem: Drop an egg three stories without it breaking.  
