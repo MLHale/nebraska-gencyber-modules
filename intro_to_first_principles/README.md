@@ -310,7 +310,7 @@ Shuffle these cards and place them face down in a stack to the left of sub-group
 > - If both sub-groups picked the same principle they will put that question card face up to the right of the turned up question card area.  
 > - If the principles don't match, the two sub-groups discuss and reach consensus. The sub-groups may invite the instructor if the mismatch cannot be resolved.
 
-- Repeat steps 3 – 6 for all principle cards
+- Repeat steps 3 – 6 for all question cards
 
 #### Game 2: Cybersecurity Matrix
 
