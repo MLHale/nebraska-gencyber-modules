@@ -189,9 +189,7 @@ Try some different designs yourself.
 In this lesson, we saw how components can be used to
 
 ### Test Your Bits, err... Wits!
-[Quiz](https://www.qzzr.com/c/quiz/430545/all-about-littlebits-introduction)
-
-<div class="quizz-container" data-width="100%" data-iframe-title="QUIZ: All About Littlebits - Introduction" data-height="auto" data-quiz="430545"></div>
+[Quiz](https://unomaha.az1.qualtrics.com/jfe/form/SV_eVXfBwQBTkBdlUF)
 
 ### Additional Resources
 For more information, investigate the following:
