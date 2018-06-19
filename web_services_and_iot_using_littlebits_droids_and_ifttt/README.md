@@ -2,6 +2,7 @@
 layout: page
 title: Web services and IoT using Littlebits and IFTTT (w/ droids)
 ---
+
 ### Cybersecurity First Principles in this lesson
 
 * __Abstraction__: An abstraction is a representation of an object or concept. It could be something such as a door, a speedometer, or a data structure in computer science. Abstraction decouples the design from the implementation. The gauges in an automobile are an abstraction of the performance of a car. A map is an abstraction of the earth.
@@ -37,35 +38,31 @@ By the end of this tutorial, you will be able to:
 * [Cloud bit](https://shop.littlebits.com/products/cloudbit)
 
 ### Prerequisite lessons
-[Intro to components using Littlebits Droids](../intro_to_components_using_littlebits_droids/README.md)
+[Intro to components using Littlebits Droids](../intro_to_components_using_littlebits_droids/README.md)  
 [Computational Thinking and Design Process using Littlebits Droids](../computational_thinking_and_design_process_using_littlebits_droids/README.md)
 
 ### Table of Contents
-<!-- TOC START min:1 max:3 link:true update:true -->
-    - [Cybersecurity First Principles in this lesson](#cybersecurity-first-principles-in-this-lesson)
-    - [Introduction and goals](#introduction-and-goals)
-    - [Goals](#goals)
-    - [Materials Required](#materials-required)
-    - [Prerequisite lessons](#prerequisite-lessons)
-    - [Table of Contents](#table-of-contents)
-    - [Before We Start](#before-we-start)
-    - [Step 1: Create an Account / Login to Littlebits portal!](#step-1-create-an-account--login-to-littlebits-portal)
-    - [Step 2: Pair your Cloudbit with the portal](#step-2-pair-your-cloudbit-with-the-portal)
-    - [Step 3: ~~Don't Push~~ Push the ~~Red~~ Purple Button](#step-3-dont-push-push-the-red-purple-button)
-    - [Step 4: connecting to the droid.](#step-4-connecting-to-the-droid)
-    - [Step 5: Using web services - connecting to IFTTT](#step-5-using-web-services---connecting-to-ifttt)
-    - [Step 6: Web Service Wizardry - Make an R2 Button](#step-6-web-service-wizardry---make-an-r2-button)
-    - [Step 7: Email trigger](#step-7-email-trigger)
-    - [Step 8: Twitter watcher](#step-8-twitter-watcher)
-    - [Self Exploration](#self-exploration)
-    - [Test you Bits, err... Wits!](#test-you-bits-err-wits)
-    - [Cybersecurity First Principle Reflections](#cybersecurity-first-principle-reflections)
-    - [Additional Resources](#additional-resources)
-  - [Lead Author](#lead-author)
-    - [Acknowledgements](#acknowledgements)
-    - [License](#license)
+<!-- TOC START min:1 max:3 link:true update:false -->
+  - [Before We Start](#before-we-start)
+  - [Step 1: Create an Account / Login to Littlebits portal!](#step-1-create-an-account--login-to-littlebits-portal)
+  - [Step 2: Pair your Cloudbit with the portal](#step-2-pair-your-cloudbit-with-the-portal)
+  - [Step 3: ~~Don't Push~~ Push the ~~Red~~ Purple Button](#step-3-dont-push-push-the-red-purple-button)
+  - [Step 4: connecting to the droid.](#step-4-connecting-to-the-droid)
+  - [Step 5: Using web services - connecting to IFTTT](#step-5-using-web-services---connecting-to-ifttt)
+  - [Step 6: Web Service Wizardry - Make an R2 Button](#step-6-web-service-wizardry---make-an-r2-button)
+  - [Step 7: Email trigger](#step-7-email-trigger)
+  - [Step 8: Twitter watcher](#step-8-twitter-watcher)
+  - [Self Exploration](#self-exploration)
+  - [Test you Bits, err... Wits!](#test-you-bits-err-wits)
+  - [Cybersecurity First Principle Reflections](#cybersecurity-first-principle-reflections)
+  - [Additional Resources](#additional-resources)
+- [Lead Author](#lead-author)
+  - [Acknowledgements](#acknowledgements)
+  - [License](#license)
 
 <!-- TOC END -->
+
+
 ### Before We Start
 <!--Last lesson link leads to a page with no content-->
 In the [last lesson](../computational_thinking_and_design_process_using_littlebits_droids/README.md), you saw how versatile, modular, and cool Littlebits was to work with. It was easy to plug and play different modules together following simple `design patterns` to make simple designs and inventions. Now, imagine everything you saw before can be hooked up to the internet and **controlled using a smartphone or online app**. We are going to do _THAT_ now!
