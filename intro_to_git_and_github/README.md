@@ -1,7 +1,8 @@
----
+<!-- Is this table supposed to be visible?-->
+<!---
 layout: page
 title: Introduction to Git and Github
----
+--->
 
 ### Cybersecurity First Principles in this lesson
 
