@@ -1,0 +1,13 @@
+
+Email Header
+============================================================================
+
+Delivered-To: jammiep@gmail.comReceived: by 10.229.63.70 with SMTP id a6csp82228qci;        Sun, 8 Jun 2014 17:46:14 -0700 (PDT)X-Received: by 10.194.6.166 with SMTP id c6mr26622251wja.64.1402274774183;        Sun, 08 Jun 2014 17:46:14 -0700 (PDT)Return-Path: <anonymous@webserver.mkjc.net>Received: from webserver.mkjc.net (webserver.mkjc.net. [176.9.152.195])        by mx.google.com with ESMTPS id ey14si9044050wid.4.2014.06.08.17.46.13        for <jammiep@gmail.com>        (version=TLSv1 cipher=RC4-SHA bits=128/128);        Sun, 08 Jun 2014 17:46:14 -0700 (PDT)Received-SPF: none (google.com: anonymous@webserver.mkjc.net does not designate permitted sender hosts) client-ip=176.9.152.195;Authentication-Results: mx.google.com;       spf=neutral (google.com: anonymous@webserver.mkjc.net does not designate permitted sender hosts) smtp.mail=anonymous@webserver.mkjc.netReceived: (qmail 7826 invoked by uid 10005); 9 Jun 2014 02:51:25 +0200Date: 9 Jun 2014 02:51:25 +0200Message-ID: <20140609005125.7821.qmail@webserver.mkjc.net>To: jammiep@gmail.comSubject: Delivery NotificationX-PHP-Originating-Script: 10005:23vghw8m.phpFrom: "Standard Shipping" <information_43@bavaria-zeitarbeit.de>X-Mailer: FastMailer/Webmail(versionSM/1.2.6)Reply-To: "Standard Shipping" <information_43@bavaria-zeitarbeit.de>Mime-Version: 1.0Content-Type: multipart/alternative;boundary="----------14022750855395050DB4772"------------14022750855395050DR4772Content-Type: text/plain; charset="ISO-8859-1"; format=flowedContent-Transfer-Encoding: 7bit  USPS.COM    Notification    Your parcel has arrived at June 5th, 2014.   Courier was unable to deliver the parcel to you.  Print your label and show it in the nearest post office to get a parcel.    Print Shipping Label     Copyright 2014 USPS. All Rights Reserved.    ------------14022750855395050DR4772--
+
+
+===============================================================================
+
+Questions:
+
+What is the IP address from where the message originated?_______________________________________________________________What is the name of the sending computer or server?_______________________________________________________________Check the From and Return Path email addresses. Do they match?_______________________________________________________________At what time did the message originate? In what timezone? 
+What countries are in that timezone?_______________________________________________________________How likely is it that this message is spam? _______________________________________________________________
