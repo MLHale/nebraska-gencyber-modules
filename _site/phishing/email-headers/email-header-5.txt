@@ -1,0 +1,142 @@
+Received: from BL2PR07MB2356.namprd07.prod.outlook.com (10.167.101.22) by
+ BL2PR07MB2354.namprd07.prod.outlook.com (10.167.101.20) with Microsoft SMTP
+ Server (version=TLS1_2, cipher=TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384_P384) id
+ 15.1.860.13 via Mailbox Transport; Tue, 31 Jan 2017 17:01:20 +0000
+Received: from SN2PR07MB2733.namprd07.prod.outlook.com (10.167.19.142) by
+ BL2PR07MB2356.namprd07.prod.outlook.com (10.167.101.22) with Microsoft SMTP
+ Server (version=TLS1_2, cipher=TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384_P384) id
+ 15.1.874.12; Tue, 31 Jan 2017 17:01:19 +0000
+Received: from CO2PR07CA0022.namprd07.prod.outlook.com (10.141.194.160) by
+ SN2PR07MB2733.namprd07.prod.outlook.com (10.167.19.142) with Microsoft SMTP
+ Server (version=TLS1_2, cipher=TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384_P384) id
+ 15.1.860.13; Tue, 31 Jan 2017 17:01:18 +0000
+Received: from SN1NAM01FT034.eop-nam01.prod.protection.outlook.com
+ (2a01:111:f400:7e40::204) by CO2PR07CA0022.outlook.office365.com
+ (2a01:111:e400:1414::32) with Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384_P384) id 15.1.874.12 via
+ Frontend Transport; Tue, 31 Jan 2017 17:01:17 +0000
+Authentication-Results: spf=softfail (sender IP is 115.159.143.229)
+ smtp.mailfrom=usa.gov; unomaha.edu; dkim=none (message not signed)
+ header.d=none;unomaha.edu; dmarc=none action=none
+ header.from=usa.gov;unomaha.edu; dkim=none (message not signed)
+ header.d=none;
+Received-SPF: SoftFail (protection.outlook.com: domain of transitioning
+ usa.gov discourages use of 115.159.143.229 as permitted sender)
+Received: from 10_133_196_196 (115.159.143.229) by
+ SN1NAM01FT034.mail.protection.outlook.com (10.152.64.194) with Microsoft SMTP
+ Server id 15.1.874.2 via Frontend Transport; Tue, 31 Jan 2017 17:01:15 +0000
+Received: from [10.33.81.27] ([197.211.59.116]) by 10_133_196_196 with Microsoft SMTPSVC(8.5.9600.16384);
+	 Wed, 1 Feb 2017 01:01:07 +0800
+Content-Type: text/plain; charset="iso-8859-1"
+Content-Transfer-Encoding: quoted-printable
+Content-Description: Mail message body
+Subject: PLEASE ACT ACCORDNGLY
+To: Recipients <info@usa.gov>
+From: ADAM SZUBIC <info@usa.gov>
+Date: Tue, 31 Jan 2017 18:00:46 +0100
+Reply-To: <adam_szubic@e1.ru>
+Return-Path: info@usa.gov
+Message-ID: <10_133_196_196DTM9w00019e45@10_133_196_196>
+X-OriginalArrivalTime: 31 Jan 2017 17:01:08.0266 (UTC) FILETIME=[9DD0B8A0:01D27BE3]
+X-MS-Exchange-Organization-Network-Message-Id: 49cbb488-6a1e-4aea-d6fa-08d449fac577
+X-EOPAttributedMessage: 0
+X-EOPTenantAttributedMessage: f1f4be86-d048-47e8-aa26-15b01dcdb13d:0
+X-MS-Exchange-Organization-MessageDirectionality: Incoming
+X-Forefront-Antispam-Report: CIP:115.159.143.229;IPV:NLI;CTRY:CN;EFV:NLI;SFV:SPM;SFS:(6009001)(5330300001)(2980300002)(199003)(84964002)(189002)(5660300001)(6200100001)(47776003)(38730400001)(5001810100001)(71646002)(551964002)(77096006)(50986999)(250100001)(53256004)(104016004)(6666003)(106466001)(105596002)(7116003)(97736004)(82202002)(35302002)(54356999)(450100001)(189998001)(1250700005)(33716001)(3480700004)(34003)(8666007)(1096003)(8896002)(110136003)(8746002)(8676002)(43066003)(107886002)(9686003)(7416002)(68736007)(305945005)(50466002)(6306002)(81156014)(86362001)(356003)(53936002)(23756003)(81166006)(626004)(62346012);DIR:INB;SFP:;SCL:5;SRVR:SN2PR07MB2733;H:10_133_196_196;FPR:;SPF:SoftFail;PTR:InfoDomainNonexistent;A:1;MX:1;CAT:SPM;LANG:en;
+X-Microsoft-Exchange-Diagnostics: 1;SN1NAM01FT034;1:c3HrLXZ5WssM56q0cfOje8Crzil++0SclBXwVSLjXJHlZ1ctVBYRiuBTBm2n9g9toorEw3vFFrvYp4H5V0BUHqpM4u1opbcDbdUnXTB+z6BXX+ZczlE2SiN4CvusMBdVafBJWjasUNPlorOrQhVVejGmY9a+wqxzcWDSb844awcuU/SOIeXBt9ymAGnQVIpvEND43Zeqmi4squ74CAAMSPR1zn3G5LtzGuOuXfopoLUtTKLs/rHJ3y4UyZsS03BRikbV1o10qO09EnejXW8PmBzozcfOQ+d1p45Wf4SwqGD+d5DKyW2FM/800dM3RnYDSMRO48sPO40FuPwaXf9tsIRBR2o2Phd7ddKs+GfpNB2K5nBB/ix9KypqRHBSU1mMuUunBVmwsFZn+V4o7Q5AAz/qwXBBYxMI489vdEsb24ucroenPG1fr1nAPYZwcO8gr8aG9t/VfKOPWzVY7ML73cnZch4ALzwyrgZ9ze2XsbmRpSNSfMKtMDlaOUduVCliEYR4SFlpNr148TcrkF+kZMA0hC4NlKGdDFezjrS91Fs9PKmeOGVADSGrMG3vlGOL
+X-MS-Office365-Filtering-Correlation-Id: 49cbb488-6a1e-4aea-d6fa-08d449fac577
+X-Microsoft-Antispam: UriScan:;BCL:0;PCL:0;RULEID:(22001)(81800161)(71702078);SRVR:SN2PR07MB2733;
+X-Microsoft-Exchange-Diagnostics: 1;SN2PR07MB2733;3:8TGF7bQ3HT/CgVtWt8Z2Tu0aC2051bvfJxzJ7QkHScDtMe/CDc80YtqbThbPzx6Chsv6P5cFZkTRraY+0BpHoNbJ5W3Zw6WuC7E6hIt2ds3n+LsfoLkBiZALk755N9u4b13NIJhRI6TW9gsItzARxmxQgW55RXC5OFrj+BLSbN5G4fyXuk1g6XWQON9NRmMRrvk/olLWvRL+xSzZOQTbQQ/Y8FSTEAOGqkhxX6GvkuQKCqDNW39JfvlsTE6z2pSuqulNOTBeEFFwIwjKBLHE9Bw9wNKLSUTh5qgQcjmnQbnnekpAkNDw0VvxlxzJcOIax0iHXDF4RlTpr/sR5GTD0QaB1xsqgY6heiv+UgHaEZWXrIOeeMCeSUFsqoXlw5HqREyvnocJ2Qx+hqQSAllpwXsIiC9plKgya0Hk98AGnTU=;25:F1e+UPd7BEyiV6iA6OJ2dOLpLjBeSJt8vpigM5PTRzZ1/Aqr+BYi4CUDrAacYUBdKwzQ9XxLjuy9q7Cc5wAEFeeTjWehVgWsA99ADmFyHE5pwpFrVQLaIOdXUQ1vISxJTlM/hQcIO599HiJbDQzJlCt0zLmQ0j/YHmg0BdvsGNjeS52OeLaciU4RDGLUjfdKfZNR5nayHWYLU7oeJN0t5XGWwCeM3y3IMEzW8PAOqQ5LhyYYS83F2QKXGAINR5TaTSv00Bmd+OXRC+TZOifBYJz9IMJr2f1bOHoaHAIlGCGWxAtou7AaQG3iDvrk44xr+zkBPg6jBqjuajtXnrri5HuJSs7ACwJoZcZ8Htv/wZOciDULiZAueHf0b6ivtUEVcBwmwDJrnxyw+79mbO29ocJ/c5xxpiaA3pfLxMXMXNogQ9TbCKWNY1FfJzU1iS/608lZjg3sjQ0CtOx5Pv6iag==
+X-MS-Exchange-Organization-AVStamp-Service: 1.0
+X-Microsoft-Exchange-Diagnostics: 1;SN2PR07MB2733;31:G1NqZRWDpKh2UNZkdehvh4irJBmLq8Q5rZ5CLeQW/quFmhJr8k4Jh+M5/te6aUbQPtyAqFU4ZUweLf6rnOGNZPcq4pSzfDm+ptst93KpHeRID15x7tZsLnLNPkill95lufQqfxQvRHOjXkn9PCpMmfSl0mEY132GGuJFp99UhFvr/xLd037lM5lXbfvxbXtLCAomSeH7ksR7hhsgncS39B8KmZmr52X5hGzpt/2qPr/f+f8OBKlRm9114jdi25ng9PlEqg0j9bScfjkNVJ9/6w==;20:P3HD0DJkYdXUIIeuurc/EDI+jbc0IVVhCFrRNBYXLllPbix4L3f1Ot8XYkb5guiSrQX4uDE8B5mjL6AF97CPmPALIiz9rS696gxdLb89Upnb4sH+8x1WX80zRPasaiBL3ssv5QG/UPyHZMIUJ2o0kIwW90GGXYPT7DWuMquIfKaDpK9byxahEITAITImUutM5Yal7Y7ARfXLzxJU1hDXsxDxtupA6cx20GZb8WY0Yq0m92TkSueC35AxOF+oT1eWjRYmxpMwzmh7sFUYDw9f3inI3xDHtRGHUwC19g7wOykd41NMs7uR7eWe7jyG4spzQdSB+LDLeArFHUlcZphJ4LU4oMq8jVrLPoZk+9eQr+9Fal6E7u518ZfQqooQ2rRmCb1H1Qx6QtUgxBo9q2h4ka1TlycxH6nfCbpbRMp1r3bJbAFbyWL4jBCKHNn8T7nIGpEl00Q3egdVvNf4TwCU0Nbz3mZmOLiykIQTfcSTedbmyAplLsSxFOXX87zdTXni
+X-Exchange-Antispam-Report-Test: UriScan:(137522910406469);
+X-Exchange-Antispam-Report-CFA-Test: BCL:0;PCL:0;RULEID:(9101531078)(601004)(2401047)(8121501046)(13016025)(13018025)(9101536074)(3002001)(10201501046);SRVR:SN2PR07MB2733;BCL:0;PCL:0;RULEID:;SRVR:SN2PR07MB2733;
+X-Microsoft-Exchange-Diagnostics: 1;SN2PR07MB2733;4:GIV/DS4pY9K5SiWdwgERvtDDXxIx2spw5LfpgZ1EdZHqBn9z0lgf+Dv/CDV+hUZuGagzleC+MzK1tezEZdmC1o5hTatOal1KHUCLRULrY+qBGaoW2yA0BQCzqpxWPmH5FsxOmJ5P0amUJnQYLOkIjBXT17DZg9tOQ73iAgPi6IWK+SuBRuYhIFa3vq5YWfluBWkraF+6wVX+L8Kdr4dIRrQn5cw6CVzu7IYmXnHqeM9FBe5NfvLz1GEmv/dUxG6HTL82Te1kEuiz/H2NMWY4hLLwt3P8BM4ZyMJp9sIvSzxSX4MmgZLOKIIdSzKw/Y9DKV2MVVJrQHpmHLYzl0WvxD4Cg8xLBE9d5VkVVnAbKJ8BXV7gtES6yLNTOAvAjDn+AA3VVP7eUZgQRF18q2WABcPOWfWTC+5SpsfrLXGHt7HMXQK4e4GN4QuBxv0U5/nroyV0fg+PIKkdJgA3L2v9sTUF6R/SCyJ4xgomL8lXBLKDESlyaHObdFwHmaoSZSFD
+X-MS-Exchange-Organization-SCL: 5
+X-Microsoft-Exchange-Diagnostics: =?iso-8859-1?Q?1;SN2PR07MB2733;23:EVBpFUTw/8Ev+qcpyyJmRewZXSYBR3iNBj7aCGk?=
+ =?iso-8859-1?Q?iv1x9YryiXf8jiy8iUr6LobQuKa8HEctUepKMF8czqO6hR4/o0PNAAtO1F?=
+ =?iso-8859-1?Q?mDrucXWvSgVDvuFxyr4Q/PkbMPKZ7vzpPbuH224oWvVdf+LbPjVQ/tWZWG?=
+ =?iso-8859-1?Q?EnnnRmu6VOgQ4CFBu1zwWl2yJydkWg2AUFkfCxAvqcBbfvcOKvUZlWFoqh?=
+ =?iso-8859-1?Q?Q8cM+v3LmocPaZ0hGpRDMkNF8QiDUEX8l2HvZhO1zSuCBN0n2g195dfozu?=
+ =?iso-8859-1?Q?7891Ii6n5LhRLRHTFhhWmNbeRCyxxZEjGZ+XadjTjn0qHPiHTXyVPnvHrK?=
+ =?iso-8859-1?Q?LwocKGZ23EpRJRAe4FomsrbnlKzYnIDckeG8LZbAARPbvIjqdFB8vNoUeP?=
+ =?iso-8859-1?Q?5t1EKOKzGmDk/S4dl1xrX3byFK9hBmG1aIcdlaihj7Rm5d1csk+bs8hFtH?=
+ =?iso-8859-1?Q?cuuTVWdYY1eaqwlJjJBu21wKp52MlEc2U1/9uySWXyUtr9YW2xvnPFwDrv?=
+ =?iso-8859-1?Q?saQLoKZs8C/09X5QMtX1q423B+qHndwEG8RVWyDSm0y/vKDsgKjjcT2Njj?=
+ =?iso-8859-1?Q?AaSVpp/7aci0cWAaK/b+MeTOApgtnAtN5dCV4mJ7bIUziGO7lYIKPr90jy?=
+ =?iso-8859-1?Q?DZzDsbS4O7gaqtS5uED7QXtpq65vJnKu2h38Zjpglw+cWq2etjrFSV3gMB?=
+ =?iso-8859-1?Q?/HJP9CLbLbGp8wxy2tISV1E0pAsnQKo10uwjKlgRKhuCB5iIaNMH/1Fgah?=
+ =?iso-8859-1?Q?KrUTMySF4eg8l8+8Ji1zvDpfDLhe6t68boDbLg2nH68vM47RhfxVeHyQ7n?=
+ =?iso-8859-1?Q?c53GlqZrzBJzfdixUYUN8r9psqPFq3tZP/JDDi/8GA8d4pCGELFRXPz8a4?=
+ =?iso-8859-1?Q?p50FnYiVj7KbZq3RS1TW55+dbD1JxN7MVmGQBMXT/8gOqX/nKMIlp7/LOD?=
+ =?iso-8859-1?Q?bBxrVR6wY5fT/jC+i0JvntoCTsUPRZd0FYiFgqYO7MQGnT8LqfD2PBpmYr?=
+ =?iso-8859-1?Q?pZriCoq+5jv5TWg/+slM/zvkDF+/ePZS6AyEmsi7+FD4YhOdbaGmT/eyWh?=
+ =?iso-8859-1?Q?WjVuExucRwN7m9PdHmVXM0F6mYXr/Zt1m3e28iWDNWfspFZRTKjJkbpcI4?=
+ =?iso-8859-1?Q?TqKPMPLlVWBQvK7bnypu+yTHOB7ckAzk7ePOdPJrZtCZ7ZkKbKJKMnG3JH?=
+ =?iso-8859-1?Q?wuONBiTAZWdrLiKzLQOoSgbXTpkZe18cEG1LbI0ORtdgdJbV3FnQ+nEGlO?=
+ =?iso-8859-1?Q?Kp6BG2H2nTSdbOU3WTzOfOyiV3KkhmBUGsauQ4AL3wnvKDWb3agBj9CYE5?=
+ =?iso-8859-1?Q?8dLFAyd5ywMExHgMv6XNH+poPcHTnrl0AIUBFFZkTjVa6WnvWn3YpU0WJK?=
+ =?iso-8859-1?Q?avqlPVgG+hEDxPoJ5v01fU8MKJ/W4svxhVV2OiQw6s+2TGhAdrQ=3D=3D?=
+X-Microsoft-Exchange-Diagnostics: 1;SN2PR07MB2733;6:YwP5xMS5CXdx6Hsen2SZ2BZ0d5AwuMMSBWHNKXlC9haQNeira4TtlA+vNSLP2hi1nT+08gfkD501e4KlTjnkoxYRXahL5/5HuCO74E93OTCMLLuVF7MAmlTZzP96z7WNNgmw7kKeCb54bAp61u9nzQpYfwXHeIix6Obv7yWTxa6dm3nsDmYXInmWeebhIkE28TC/bV9M4xdC0Tf6mwqZJATGb7xTArHHy/UUbMGAU23KAmv+PgFqGHXN3A7vWUTc3QR5hDHXLM6D72KF4Iaht/j6br7bv/TYXvLQ60jSt8ibtmSmFByx6W1GcZcElDLPGR4CXgoOBpwmsBoEJI06+VAU7oKltnVI3svYFyFibv++kzG6LsPg9QvM0dOjSSt86wWywkU+6PJCWFC84WXY07gBt+qNwFbOlI8O81mqDQFVzYkL9520HjYrCIB/q5uSBS6+2ybAqzXnCfICasCN+ZsLM2PlQP80S29AdWLvlRR1RHA561NIYf9tdekFoWzfGGcLN72h2wKw4xxotr8WBw==;5:uYGBo+dfdO4IB/djTU8hpjzGs42f5KuNwiVaHCivBG+cuBNXdARaHrYQKavBmSYaWOFv+KLZkJDe3/m2o9jrNVf9771NxTxni4tgi4g/C5RqIFxUy+7ogwgbfOU2TFiJTUZFWXfNXdQRIR5H/7sIwg==;24:j+ykGVgLfqfhs4JYcTKdfKyT0h5nAjtj1NN9trgV6J4wxmZyJhz5eTgYPGDE8YHck70n4aHlo3R2bj8CMQWAig==
+SpamDiagnosticOutput: 1:22
+SpamDiagnosticMetadata: UNO+Custom+Spam+filter
+X-Microsoft-Exchange-Diagnostics: 1;SN2PR07MB2733;7:WlvCVkdzUcLSwIAIq3Djg2VUMagNnSTx2dgOcEAe+8DaLtNxNvbAnbWoaal1vCbC3RlE/c9ghUULYlmbARGxenJrfXtGyj4irLaXdjtVQh/+bsRr21LWFF5C1nRwmdJN3S1C5DK3xwF+ZELACt6Y3DYZ0PDyWNruKceiAvghikjWRElVNv1BE0quFBKxe0E2VjSUx1UbSRLSgk/lVucpyDbsORGiBwUOMFfSntZLFhFJsuAnmYphuXdp5BM2LoZ0l/LYabA/jpFiYrbLPR4RJObn8P4Ly3KFhRcUOa6xsJbuISW/DkAWcIGYMmRNy2kF+MwUMyEg7gjKr93IbbRLkASsVtu81uza4ktxAb4tPU13gQQEhLyW69VfaMjtpzwGxMDWpeBPqQjWVoc82u5X0PxVhcG4wolncjTqACFYWy7Zaaz+PEB7padDTh4tHeK2d2e2pMUyPBwb2bub8XNOEw+Zzx/OsjdJd7DlpWE19rdnAiXXDhbhJmBlDfT0TcISFRx75p8ny55y4sbp2bZ9QqX/okXwY2dXO6n/rauyV65bpSG8NyZc7J94fLwR5NBFPtVcYeAsWyj8mKY+lRS8MOb3XRK8fpVNba3jHqHRNPAyOisifC6l+OqPt3vg2+fh1hZSf8em8oPOS3+uoKvUizDEfODoCeccoK8+ULYda7o=
+X-MS-Exchange-CrossTenant-OriginalArrivalTime: 31 Jan 2017 17:01:15.7824
+ (UTC)
+X-MS-Exchange-CrossTenant-Id: f1f4be86-d048-47e8-aa26-15b01dcdb13d
+X-MS-Exchange-CrossTenant-FromEntityHeader: Internet
+X-MS-Exchange-Transport-CrossTenantHeadersStamped: SN2PR07MB2733
+X-Microsoft-Exchange-Diagnostics: 1;BL2PR07MB2356;23:9j+oOrM7tWyF0sCbiiz2fzPWoStTSwhXZAfc2mRonQ+SM1YQoeqlCbQCQ8h5T7NeNW5cQAGUOhvQ+ljnrYmZ7l9ahuYL6pUldWEDZws498zO69U1SL/ViDsFdkweD+l23FuLJrdLTsZqMaAH6EAuwpLiFE21hkSzc7LJk1E92F4yEwmrVxNzJJ82ciL0Jkxg
+X-MS-Exchange-Organization-AuthSource: SN1NAM01FT034.eop-nam01.prod.protection.outlook.com
+X-MS-Exchange-Organization-AuthAs: Anonymous
+X-MS-Exchange-Transport-EndToEndLatency: 00:00:04.4485942
+X-Microsoft-Exchange-Diagnostics:
+	1;BL2PR07MB2354;9:8LPm4VF3/b6xhm1Z3DRYA8G7GHbdv6QBZZMeTU2uJvyxYJJR64yzQfzpD4k46JAgHhI0Sq17U8w7bmZHIIee1yunbFDvqWDcHNL1AoDxv6Fc+OjjgJOk5w1OwMx/GMcvv6Ycw2D/otZ6NnWwkVVHZZZRot31/ogSpAnPX3+SNuxzHryICRPO4D0RCd4Lmp2OoCLxTboYOkunISaRoWb91M1kUWbaTAiF+LKqG8zgulI=
+MIME-Version: 1.0
+
+Dear Beneficiary,
+=20
+I am Adam Szubic, Acting Secretary of the Treasury under the U.S. Departmen=
+t of the Treasury. You can get more details about me here;
+
+https://www.treasury.gov/about/organizationalstructure/Pages/szubin-a.aspx
+=20
+At the recently concluded meeting with the World Bank and the United Nation=
+s, an agreement was reached between both parties for us to settle all outst=
+anding payments accrued to individuals/corporations with respect to local a=
+nd overseas contract payment, debt re-scheduling and outstanding compensati=
+on payment. Fortunately, you have been selected alongside a few other benef=
+iciaries to receive your own payment of $850,000 (Eight Hundred and Fifty T=
+housand United States Dollars only).
+
+We have been notified that you are yet to receive your fund valued at $850,=
+000. This money will now be transferred to your nominated bank account.
+=20
+You are advised to kindly reply this email with the below details enclosed =
+to help us process your payment;
+
+(1) Full Names:
+(2) Residential Address:
+(3) Country of Residence:
+(4) Age:
+(5) Phone/Cell Number:
+(6) Occupation:
+
+
+Feel Free to contact me below is my telephone number;
+
+
++1 206-855-3577 (text if I did not pick may be busy with meetings).
+
+Looking forward to hearing from you and God Bless America.
+
+Yours faithfully,
+=20
+Adam Szubic
+Secretary of the Treasury=20
+(U.S. Department of the Treasury)
+
+Note: The information contained in this e-mail is private & confidential an=
+d may also be legally privileged. If you are not the intended recipient, pl=
+ease notify us, preferably by e-mail, and do not read, copy or disclose the=
+ contents of this message to anyone.

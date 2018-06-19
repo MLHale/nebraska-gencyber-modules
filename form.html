@@ -1,0 +1,86 @@
+<!doctype html>
+
+<html>
+
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <style>
+
+    input[type=text], select {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+    input[type=submit] {
+    width: 20%;
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+
+    input[type=submit]:hover {
+    background-color: #45a049;
+    }
+
+    .buttonHolder {
+      text-align: center;
+    }
+
+    textarea {
+      resize: none;
+    }
+
+    </style>
+
+  </head>
+
+  <body>
+
+    <form action="" id="popupform" method="post">
+
+      First name:<br>
+      <input type="text" name="firstname" placeholder="Your first name..."><br>
+      Last name:<br>
+      <input type="text" name="lastname" placeholder="Your last name..."><br>
+      School District:<br>
+      <input type="text" name="schooldistrict" placeholder="Your school district..."><br>
+      Number of students the lesson will serve:<br>
+      <input type="text" name="studentcount" placeholder="Number of students..."><br>
+      Any additional comments?<br>
+
+    </form>
+
+    <textarea rows="4" cols="50" name="comments" form="popupform"  placeholder="Comments, suggestions..."></textarea>
+    <br>
+
+    <div class="buttonHolder">
+      <input type="submit" value="Submit" form="popupform">
+    </div>
+
+
+
+
+  </body>
+
+  <footer>
+
+  </footer>
+
+
+
+
+
+</html>

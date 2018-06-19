@@ -1,0 +1,102 @@
+                                                                                                                                                                                                                                                               
+Email Header
+============================================================================
+
+Delivered-To: jammiep@gmail.com
+Received: by 10.107.15.149 with SMTP id 21csp628946iop;
+        Thu, 2 Jun 2016 04:02:52 -0700 (PDT)
+X-Received: by 10.28.11.82 with SMTP id 79mr8168489wml.33.1464865372649;
+        Thu, 02 Jun 2016 04:02:52 -0700 (PDT)
+Return-Path: <454alksduteir33@canoemail.com>
+Received: from Server449.dnslake.com (Server449.dnslake.com. [94.232.169.155])
+        by mx.google.com with SMTP id ip4si6737700wjb.126.2016.06.02.04.02.51
+        for <jammiep@gmail.com>;
+        Thu, 02 Jun 2016 04:02:52 -0700 (PDT)
+Received-SPF: neutral (google.com: 94.232.169.155 is neither permitted nor denied by best guess record for domain of hburlingham@canoemail.com) client-ip=94.232.169.155;
+Authentication-Results: mx.google.com;
+       spf=neutral (google.com: 94.232.169.155 is neither permitted nor denied by best guess record for domain of hburlingham@canoemail.com) smtp.mailfrom=hburlingham@canoemail.com
+Date: Thu, 2 Jun 2016 15:32:52 +0000
+MIME-Version: 1.0
+From: Molly <hburlingham@canoemail.com>
+Cheerless-Normalizes: 3cbffbda597c42
+Message-ID: <8cee1375-1b1555-b75b4@canoemail.com>
+To: jammiep <jammiep@gmail.com>
+Fervent-Thirds-Cobweb: F7389678DE37
+Content-Type: text/html; charset=UTF-8
+Reorders-Lexicons: 12321
+Grecianize-Siegmund: baa6d7d1
+Subject: FedEx:Delivery problems notification
+Content-Transfer-Encoding: 7bit
+Maces-Extraction-Channel: c8e52f8f665dd79
+
+<html>
+   
+  
+    
+  <body> 
+ 
+ <div style="max-width:680px;color:#555555;font:13px Arial;border:solid 1px #dfdfdf;padding:20px;">    
+
+ 
+    
+
+   <b style="color:#4d148c;font-size:32px;font-weight:bold;">Fed</b><b style="color:#adafb1;font-size:32px;font-weight:bold;">Ex</b> 
+
+   
+  
+   
+  
+   
+  
+ 
+   <br />    
+    
+
+  
+
+    <br />  
+   
+   June 2, 2013<br />     <span initializes='twenties' style="color:#222222;font-weight:bold;">Not possible to make delivery.</span><br />    
+
+    
+    
+	 <br />       <br />      Our companys courier couldnt make the delivery.<br />  
+   
+
+ 
+	 <br />
+   
+   
+   
+  
+
+ 
+
+ 
+<a bourbaki="4" href="http://sincormlhor.com/negatively.php" style="color:#4d2c86;text-decoration:underline;">Delivery Manager</a><br />   
+
+  
+ 
+
+ <br />   
+  <br /> 
+  
+ 
+
+   
+   
+   
+  <div topically='corroboration' style="font-size:11px;">� FedEx 1995-2013 |  <a ossify=8 href="http://www.fedex.com/?location=home" style="color:#555555;text-decoration:none;">Global Home</a> | <a huts=23 href="http://www.fedex.com/us/legal/" style="color:#555555;text-decoration:none;">Terms of Use</a> | <a gatherings=64 href="http://www.fedex.com/us/security/" style="color:#555555;text-decoration:none;">Security and Privacy</a></div>   </div>   </body>   
+  
+
+ 
+</html> 
+
+
+
+===============================================================================
+
+Questions:
+
+What is the IP address from where the message originated?_______________________________________________________________What is the name of the sending computer or server?_______________________________________________________________Check the From and Return Path email addresses. Do they match?_______________________________________________________________What company name do you see in the bottom of the message? 
+Does it match the links in the middle of the message?_______________________________________________________________How likely is it that this message is spam? _______________________________________________________________
