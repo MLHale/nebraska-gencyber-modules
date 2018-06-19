@@ -19,7 +19,7 @@ One of the ways to protect information is by limiting what people can see and do
 - [Introduction to Git and Github](../intro_to_git_and_github/README.md)
 
 ### Table of Contents
-<!-- TOC START min:1 max:3 link:true update:false -->
+
 - [Github Collaboration](#github-collaboration)
     - [Forking a Repository](#forking-a-repository)
     - [Make a Pull Request from a Forked Repository](#make-a-pull-request-from-a-forked-repository)
@@ -30,7 +30,6 @@ One of the ways to protect information is by limiting what people can see and do
   - [Acknowledgements](#acknowledgements)
   - [License](#license)
 
-<!-- TOC END -->
 
 Writing code alone is no fun. Collaborative features of Github are integrated in to all aspects of a code repository. For example, Github allows anyone to make a copy of a public repository for their own use. It also allows discussions to support code reviews, bug reports, and code contributions.
 
@@ -99,7 +98,7 @@ And that is one way you can collaborate using `Github`.
 [Top](#table-of-contents)
 
 ### Markdown
-To communicate and write on Github, it is useful to learn `Markdown` and its `Github Flavor Variants`. You may explore this simple format here: https://guides.github.com/features/mastering-markdown/
+To communicate and write on Github, it is useful to learn `Markdown` and its `Github Flavor Variants`. You may explore this simple format here: [https://guides.github.com/features/mastering-markdown/](https://guides.github.com/features/mastering-markdown/)
 
 You can try out the syntax on directly on Github in any file that ends in the extension `.md`. Files with the `.md` extension signify Markdown files. So head on over to your hello-world repository on Github and edit the README.md file. In the edit mode, you can observe the effect of Markdown syntax by clicking on the Preview tab.
 
@@ -107,7 +106,7 @@ In the figure below, When in the preview mode, notice the formatting effect of `
 
 >![preview](./img/markdownpreview.gif)
 
-Explore functional uses of Markdown on Github here: https://help.github.com/categories/writing-on-github/
+Explore functional uses of Markdown on Github here: [https://help.github.com/categories/writing-on-github/](https://help.github.com/categories/writing-on-github/)
 
 You are now ready to explore the wonderful world of open source on Github. Enjoy and make your own contributions!
 
