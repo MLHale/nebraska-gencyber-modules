@@ -25,12 +25,20 @@ By the end of this tutorial, you will be able to:
 
 ### Materials Required
 
-* Littlebits kit
-* Power outlet nearby
-* Wi-Fi Internet Connection
+* [Littlebits Droid Inventor Kit](https://shop.littlebits.com/products/droid-inventor-kit)
+* [Number bit](https://shop.littlebits.com/products/number-bit)
+* [LED bit](https://shop.littlebits.com/products/led)
+* [Sound trigger bit](https://shop.littlebits.com/products/sound-trigger)
+* [Temperature sensor bit](https://shop.littlebits.com/products/temp-sensor)
+* [Button bit](https://shop.littlebits.com/products/button)
+* [Wire bit](https://shop.littlebits.com/products/wire-bit)
+* [USB power bit](https://shop.littlebits.com/products/usb-power)
+* [Rechargable battery pack](https://shop.littlebits.com/products/rechargeable-battery)
+* [Cloud bit](https://shop.littlebits.com/products/cloudbit)
 
 ### Prerequisite lessons
 [Intro to components using Littlebits Droids](../intro_to_components_using_littlebits_droids/README.md)
+[Computational Thinking and Design Process using Littlebits Droids](../computational_thinking_and_design_process_using_littlebits_droids/README.md)
 
 ### Table of Contents
 <!-- TOC START min:1 max:3 link:true update:true -->
@@ -44,11 +52,11 @@ By the end of this tutorial, you will be able to:
     - [Step 1: Create an Account / Login to Littlebits portal!](#step-1-create-an-account--login-to-littlebits-portal)
     - [Step 2: Pair your Cloudbit with the portal](#step-2-pair-your-cloudbit-with-the-portal)
     - [Step 3: ~~Don't Push~~ Push the ~~Red~~ Purple Button](#step-3-dont-push-push-the-red-purple-button)
-    - [Step 4: Using web services - connecting to IFTTT](#step-4-using-web-services---connecting-to-ifttt)
-    - [Step 5: Web Service Wizardry - Make an Easy Button](#step-5-web-service-wizardry---make-an-easy-button)
-    - [Step 6: Email / SMS trigger](#step-6-email--sms-trigger)
-    - [Step 7: Twitter watcher](#step-7-twitter-watcher)
-    - [Step 8: Control your world](#step-8-control-your-world)
+    - [Step 4: connecting to the droid.](#step-4-connecting-to-the-droid)
+    - [Step 5: Using web services - connecting to IFTTT](#step-5-using-web-services---connecting-to-ifttt)
+    - [Step 6: Web Service Wizardry - Make an R2 Button](#step-6-web-service-wizardry---make-an-r2-button)
+    - [Step 7: Email trigger](#step-7-email-trigger)
+    - [Step 8: Twitter watcher](#step-8-twitter-watcher)
     - [Self Exploration](#self-exploration)
     - [Test you Bits, err... Wits!](#test-you-bits-err-wits)
     - [Cybersecurity First Principle Reflections](#cybersecurity-first-principle-reflections)
@@ -60,7 +68,7 @@ By the end of this tutorial, you will be able to:
 <!-- TOC END -->
 ### Before We Start
 <!--Last lesson link leads to a page with no content-->
-In the [last lesson](../intro_to_components_using_littlebits_droids/README.md), you saw how versatile, modular, and cool Littlebits was to work with. It was easy to plug and play different modules together following simple `design patterns` to make cool, simple apps. Now, imagine everything you saw before can be hooked up to the internet and **controlled using a smartphone or online app**. We are going to do _THAT_ now!
+In the [last lesson](../computational_thinking_and_design_process_using_littlebits_droids/README.md), you saw how versatile, modular, and cool Littlebits was to work with. It was easy to plug and play different modules together following simple `design patterns` to make simple designs and inventions. Now, imagine everything you saw before can be hooked up to the internet and **controlled using a smartphone or online app**. We are going to do _THAT_ now!
 
 ### Step 1: Create an Account / Login to Littlebits portal!
 To start we need to create an account:
@@ -81,9 +89,9 @@ Now that we have an account, we need to pair our `cloudbit` (an orange module wi
 
  ![setup](img/setup.png)
 
-* First, connect the blue `power` module to the pink `button` module.
+* First, connect your blue `usb power` module to a power source and then snap the blue module to the pink `button` module.
 * Next, connect the `button` module to the orange `cloudbit` module.
-* Then, connect the `bright led` module to the `cloudbit` module.
+* Then, connect the `led` module to the `cloudbit` module.
 * It should all be connected as shown:
 
 ![setup](img/configuration.jpg)
@@ -94,7 +102,9 @@ Now that we have an account, we need to pair our `cloudbit` (an orange module wi
 * Using Wi-Fi, connect to the local Wi-Fi network the device broadcasts (it will be something like `litteBits_Cloud_somenumber`).
 * Once connected to the device's Wi-Fi adapter, pick the Wi-Fi network the `cloudbit` will live on. (At UNO that will be: `UNOGuest`).
 * It should auto-connect and the light should turn a solid green color.
-* You should see as message saying **'Awesome'**
+* You should see a message saying **'Awesome'**
+
+> Note if you are trying to pair multiple cloudbits for the first time it can be difficult to make sure you are pairing to the right one, we will do them in sequence in the camp. Don't worry though - once paired you shouldn't need to pair them again unless you change the network.
 
 
 ### Step 3: ~~Don't Push~~ Push the ~~Red~~ Purple Button
@@ -102,7 +112,7 @@ Now that we have an account, we need to pair our `cloudbit` (an orange module wi
 
 The purple button on your screen is linked to your `cloudbit` `output`.
 
-* Add a green `bright LED` output module to the `cloudbit`.
+* Add a green `LED` output module to the `cloudbit` (if you didnt already).
 * Now definitely press the giant purple `button` on your screen.
 
 It works! With that, you just made your first `IoT app`.
@@ -111,7 +121,27 @@ It works! With that, you just made your first `IoT app`.
 
 You should see your gauge go up! Now you have input and outputs routed through the cloud controller!
 
-### Step 4: Using web services - connecting to IFTTT
+### Step 4: connecting to the droid.
+Unplug all of the modules on the CloudBit
+
+* First, connect your blue `usb power` module to a power source and then snap the blue module to the `button` module.
+* Next connect the `button` module to the `cloudbit`
+* Next, connect the `cloudbit` to the `wire`
+* connect the `wire` to the `droid control hub`
+
+wait for your cloudbit to reconnect (it will turn solid green)
+
+* Open up your `littlebit inventor kit app` 
+* launch the code master mission (mission 18) to bring up the scratch interface.
+* write a scratch program that looks like:
+
+![scratch input](img/input-on-scratch.png)
+
+* click run to launch it
+* go to the [http://control.littlebitscloud.cc/](http://control.littlebitscloud.cc/) and press the purple button. Do you hear your R2-D2 talking?
+
+
+### Step 5: Using web services - connecting to IFTTT
 `Web services` are, as the name implies, services that live on the web. You use these all the time - mostly without knowing it. The internet is built on top of them. Google, Dropbox, Youtube, Twitter, and Facebook are just a few juggernauts that provide and use many different web services. In this lesson, we are going to use a `mashup service` called [IFTTT](https://ifttt.com) (which stands for **I**f **T**his, **T**hen **T**hat ). **IFTTT** is a great platform that _talks to_ all kinds of other web services. One service it connects with is, conveniently, `Littlebits`. This is an example of __modularity__ because `IFTTT` can swap out components for others easily.
 
 * Connect your `cloudbit` to `IFTTT` by pressing the `automate` button in the `Littlebits` cloud controller user interface.
@@ -119,8 +149,8 @@ You should see your gauge go up! Now you have input and outputs routed through t
 * You will need to create an account with `IFTTT` if you don't already have one.
 * Once you sign in, you will see some `recipes` that have already been made for you by the Littlebits team. A `recipe` is a `design pattern` that combines input and output behavior to do something cool. `IFTTT` refers to recipes as `applets`.
 
-### Step 5: Web Service Wizardry - Make an Easy Button
-Lets create a new `applet` that sends an email when you press the `button` module. For flair, lets make it an _easy button_™ (Staples).
+### Step 6: Web Service Wizardry - Make an R2 Button
+Lets create a new `applet` that sends an email when you press the `button` module. For flair, lets assume R2 is talking to us.
 
 * In your browser, open `IFTTT` and click the **down caret** next to your name.
 * Now click **new applet** in the menu that pops up:
@@ -139,29 +169,29 @@ Lets create a new `applet` that sends an email when you press the `button` modul
 
 * Click the `plus` icon to specify the _THAT_ condition.
 * You will again see all of the service options, select ``email`` and then **send me an email**. You will be asked to link your email to your `IFTTT` account (if you haven't already). Go ahead and confirm your email.
-* Once selected, you will see an email template available. Click `add ingredient` to see available input information. You should have, `DeviceName`, `TurnedOnAt`, and `PowerPercent` options. You can customize the email message here if you want. I made mine an easy button by embedding an image (`img` tag).
+* Once selected, you will see an email template available. Click `add ingredient` to see available input information. You should have, `DeviceName`, `TurnedOnAt`, and `PowerPercent` options. You can customize the email message here if you want. I made mine an r2 button.
 
- ![applet](img/easy-button.png)
+ ![applet](img/r2-button.png)
 
 * When satisfied, select **create action** to set this email as the _THAT_.
 * Click **finish** to turn the applet on.
-* You should see the applet as a purple box explaining what it does.
+* You should see the applet as a box explaining what it does.
 * Try it out by pressing the `button` module connected as input to your `cloudbit` module.
 
 Check your email!
 
-![email worked](img/email-worked.png)
+![email worked](img/r2-hi.png)
 > It worked!
 
 This is a simple, but powerful tool. It also shows off __resource encapsulation__ and __abstraction__. In terms of resource encapsulation, each of the services connected to `IFTTT` have many functions. These functions are encapsulated in a service (e.g. `email` in this example). The functions are also __abstract__ because `IFTTT` doesn't need to know _how_ they work, just that they achieve a certain purpose (e.g. send an email). This helps _model_ or _abstract_ the implementation away from the design.
 
-### Step 6: Email / SMS trigger
+### Step 7: Email trigger
 Lets make an `applet` that allows us to turn the `cloudbit` output on with an email or text.
 
 * Go to https://ifttt.com, select the dropdown caret next to your name, and then click **New Applet**.
 * As the **IF** condition, select the `email` service.
 * Of the two options, select the `Send IFTTT an email tagged` option.
-* Use the hashtag `#nebraskagencyber`
+* Use the tag `nebraskagencyber`
 * For the **THAT** condition, select the `littlebits` service
 * Select `SetOutputLevel` of the three options available.
 * Pick your `cloudbit` from the dropdown.
@@ -171,32 +201,12 @@ Lets make an `applet` that allows us to turn the `cloudbit` output on with an em
 
 You should see:
 ![trigger](img/email-trigger.png)
-
-* Test it out by sending `trigger@applet.ifttt.com` an email with the tag `#nebraskagencyber` in the subject line.
-* Give it a minute to process
-
-Pretty cool, imagine - instead of turning on a light we can turn anything on.
-
-Lets make a second applet to do the same thing, but via `SMS`.
-
-* Go to https://ifttt.com, select the dropdown caret next to your name, and then click **New Applet**.
-* As the **IF** condition, select the `SMS` service.
-* Register your phone with IFTTT SMS service
-* Of the two options, select the `SMS tagged` option.
-* Use the hashtag `#nebraskagencyber`
-* For the **THAT** condition, select the `littlebits` service
-* Select `SetOutputLevel` of the three options available.
-* Pick your `cloudbit` from the dropdown.
-* Select **100%** and **5 seconds** as the output levels
-* Press the **create action** button
-* Click **finish**
-
-![trigger](img/sms-trigger.png)
+Before we test it, make sure your scratch program is still running
 
 * Test it out by sending a text message to the number in the `IFTTT applet` with the tag `#nebraskagencyber` in the body.
-* Give it a minute to process
+> Note it may take a minute to process
 
-### Step 7: Twitter watcher
+### Step 8: Twitter watcher
 Lets make an app that lights up every time a new tweet on a certain topic happens. This requires a `Twitter` account. If you don't have and don't want to create a Twitter account, feel free to skip this, but it's fun!
 
 * Go to https://ifttt.com, select the dropdown caret next to your name, and then click **New Applet**.
@@ -210,67 +220,20 @@ Lets make an app that lights up every time a new tweet on a certain topic happen
 
 ![twitter](img/twitter-hashtag.png)
 
-### Step 8: Control your world
-Lets go beyond simple triggers and make something that you might use in your home. First, we're going to create a service-controlled light switch.
-
-* Connect the `blue` power module to the `light sensor` input module.
-* Set the `light sensor` switch to **dark** mode to make it detect darkness.
-* Connect the `light sensor` to the `cloudbit`.
-* Connect the `cloudbit` to the orange `split` module
-* Connect one of the `split` ends to the `ir transmitter` module
-* Connect the `ir transmitter` to the `o21 number` module
-* Connect the other end of the `split` to the `mp3 player`
-* Put the `mp3 player` in **once** mode
-* Connect the `mp3 player` to the `synth speaker`
-* Take the `mini sd card` out of the `mp3 player` and put it in the `adapter` - bring it up to me to get an amusing file that goes with this demo
-
- ![light config](img/light-config.jpg)
-
-* Go to https://ifttt.com, turn off the other applets we made earlier. You can save them for later if you want.
-* Select the dropdown caret next to your name, and then click **New Applet**.
-* As the **IF** condition, select the `littlebits` service.
-* Select the **turned on** option.
-* Select **create trigger**.
-* For the **THAT** condition, select the `email` service.
-* Set the email content to the following:
-
-Subject:
-```
-({{TurnedOnAt}}) It's dark at home: Want to turn the lights on?
-```
-Body:
-```
-Want to turn the lights on? Reply with  <a href="mailto:trigger@applet.ifttt.com?subject=#lightson&body=#lightson">`#lightson`</a>
-```
-* Click **create action** and then **finish**
-
-Cover the light sensor up with your finger to turn it on (simulating it being **dark**).
-
- ![light email](img/lights-on-email.png)
-
-* Now make another applet by selecting the dropdown caret next to your name, and then clicking **New Applet**.
-* As the **IF** condition, select the `email` service.
-* Of the two options, select the `Send IFTTT an email tagged` option.
-* Use the hashtag `#lightson`. Create the trigger.
-* For the **THAT** condition, select the `littlebits` service.
-* Select `Activate Output` this time. This will just turn on the output for 3 seconds.
-* Select your `cloudbit`
-* Press **create action** and then **finish**
-* Connect your `ir power outlet` to an outlet. Make sure the red tag is in line of sight with the `ir sensor`
-* To pair the `ir sensor` with the `ir power outlet` send `trigger@applet.ifttt.com` an email with the tag `#lightson` in the subject line. Once the pairing is complete, `ir power outlet` should have a steady on or off state. If it is still blinking then it is attempting to get paired.
-* Once pairing is successful, toggle the `ir power outlet` by sending `trigger@applet.ifttt.com` an email with the tag `#lightson` in the subject line.
-* If it doesn't happen instantly, give it a minute to process
-
-You should see the power outlet light turn on - and you should hear a short audio clip play.
-
-![light config](img/outlet.jpg)
 
 ### Self Exploration
-Try some different designs yourself. You can combine any services with any Littlebits sensors. You could make an app that opens the curtains when you text it #opencurtains. You could make an app that listens for sounds and sends you an alert if sounds are detected. You could make an email or tweet counter. The possibilities are real and endless!
+Try some different designs yourself. You can combine any services with any Littlebits sensors. 
+
+You could swap the sound maker output for move forward.
+
+You could write a scratch app that listens for different voltage levels on the inputs and then uses if conditions to switch between them. Then you could send those different signal levels from either the littlebits cloud or from IFTTT.
+
+E.g. 
+
+![twitter](img/self-exploration.png)
 
 ### Test you Bits, err... Wits!
-<!--Quiz unavailable from link-->
-[Quiz](https://www.qzzr.com/c/quiz/431837/littlebits-ifttt)
+TBA
 
 ### Cybersecurity First Principle Reflections
 In this lesson, we saw web services, such as `IFTTT`, can __abstract__ away details about devices and instead focus on recipes or `design patterns` to describe how things work. We also saw that by keeping functionality __modular__, `IFTTT` can combine `Littlebits` with many other services.
@@ -284,7 +247,6 @@ __Data hiding__ is also important to prevent internal data in the service from b
 For more information, investigate the following.
 
 * [Littlebits](http://littlebits.cc/how-it-works) - Overview of concepts and available bits
-* [https://shop.littlebits.cc/products/smart-home-kit](https://shop.littlebits.cc/products/smart-home-kit) - Information about the Smart Home Kit
 
 ## Lead Author
 
