@@ -1,3 +1,8 @@
+---
+layout: page
+title: Penetration Testing
+---
+
 # Penetration Testing
 
 ### Cybersecurity First Principles in this lesson

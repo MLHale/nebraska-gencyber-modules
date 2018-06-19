@@ -1,3 +1,8 @@
+---
+layout: page
+title: Containers
+---
+
 # Containers
 
 ## Think shipping containers

@@ -1,3 +1,8 @@
+---
+layout: page
+title: HTTP, GET, POST
+---
+
 # Lesson Plan: HTTP, GET, POST
 
 ### Summary

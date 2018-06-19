@@ -1,3 +1,8 @@
+---
+layout: page
+title: Building a Server
+---
+
 # Building a Server
 
 ### Cybersecurity First Principles in this lesson

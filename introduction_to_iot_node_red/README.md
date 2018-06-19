@@ -1,3 +1,8 @@
+---
+layout: page
+title: Introduction to IoT, Node Red, and Raspberry Pi
+---
+
 # Introduction to the Internet of Things (IoT), Node Red, and the Raspberry Pi
 
 ### Cybersecurity First Principles in this lesson

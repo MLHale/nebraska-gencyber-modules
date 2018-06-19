@@ -1,3 +1,8 @@
+---
+layout: page
+title: Web Services and IoT using Littlebits and IFTTT
+---
+
 # Hands-on IoT: Littlebits IFTTT
 
 ### Summary

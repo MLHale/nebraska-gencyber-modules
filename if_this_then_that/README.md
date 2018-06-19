@@ -1,3 +1,8 @@
+---
+layout: page
+title: If, This, Then, That
+---
+
 # Hands-on IoT: Littlebits IFTTT
 ### Cybersecurity First Principles in this lesson
 

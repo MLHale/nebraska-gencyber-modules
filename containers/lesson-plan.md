@@ -1,3 +1,8 @@
+---
+layout: page
+title: Containers
+---
+
 # Lesson Plan Containers
 
 ### Summary

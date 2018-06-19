@@ -1,4 +1,9 @@
-# Lesson Plan: IFTTT 
+---
+layout: page
+title: If, This, Then, That
+---
+
+# Lesson Plan: IFTTT
 
 ### Summary
 This module will teach how to plug and play Littlebits together to make some simple inventions.

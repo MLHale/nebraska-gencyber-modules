@@ -1,3 +1,8 @@
+---
+layout: page
+title: Introduction to IoT, Node Red, and Raspberry Pi
+---
+
 # Lesson Plan: Introduction to IoT, Node Red and Raspberry pi
 
 ### Summary

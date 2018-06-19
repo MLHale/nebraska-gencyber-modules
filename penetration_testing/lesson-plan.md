@@ -1,3 +1,8 @@
+---
+layout: page
+title: Penetration Testing
+---
+
 # Lesson Plan: Penetration Testing
 
 ### Summary

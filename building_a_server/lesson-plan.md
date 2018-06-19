@@ -1,3 +1,8 @@
+---
+layout: page
+title: Building a Server
+---
+
 # Lesson Plan: Building a Server
 
 ### Summary

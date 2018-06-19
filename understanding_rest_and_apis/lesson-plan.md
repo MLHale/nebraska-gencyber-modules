@@ -1,3 +1,8 @@
+---
+layout: page
+title: Understanding REST and APIs
+---
+
 # Lesson Plan: RESTful APIs and Little bits
 
 ### Summary

@@ -1,3 +1,8 @@
+---
+layout: page
+title: Introduction to Raspberry Pi
+---
+
 # Introduction to Raspberry PI
 ### Cybersecurity First Principles in this lesson
 

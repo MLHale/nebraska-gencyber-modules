@@ -1,3 +1,8 @@
+---
+layout: page
+title: Intro to Components with Littlebits IoT
+---
+
 # Lesson Plan: Hands on IoT Littlebits Intro
 
 ### Summary

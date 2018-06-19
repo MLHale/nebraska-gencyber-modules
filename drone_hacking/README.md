@@ -1,3 +1,8 @@
+---
+layout: page
+title: Drone Hacking
+---
+
 # Drone Programming
 
 ### Cybersecurity First Principles in this lesson

@@ -1,3 +1,8 @@
+---
+layout: page
+title: Understanding REST and APIs
+---
+
 # Exchanging information online with REST and APIs
 
 ### Cybersecurity First Principles in this lesson

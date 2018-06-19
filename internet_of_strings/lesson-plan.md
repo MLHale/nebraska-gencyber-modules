@@ -1,3 +1,8 @@
+---
+layout: page
+title: Internet of Strings
+---
+
 # Hands-on IoT: Internet of Strings
 
 ### Summary

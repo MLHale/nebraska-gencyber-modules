@@ -1,3 +1,8 @@
+---
+layout: page
+title: Introduction to Raspberry Pi
+---
+
 # Lesson Plan: Raspberry Pi intro
 
 ### Summary

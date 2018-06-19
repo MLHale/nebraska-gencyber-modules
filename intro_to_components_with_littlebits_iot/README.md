@@ -1,3 +1,8 @@
+---
+layout: page
+title: Intro to Components with Littlebits IoT
+---
+
 # Hands-on IoT with - Littlebits Intro
 
 ### Cybersecurity First Principles in this lesson

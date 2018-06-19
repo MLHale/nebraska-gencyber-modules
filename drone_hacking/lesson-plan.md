@@ -1,4 +1,9 @@
-# Lesson Plan: Drone Programming
+---
+layout: page
+title: Drone Hacking
+---
+
+ Lesson Plan: Drone Programming
 
 ### Summary
 This module will teach how to build a server of your own and connect it up to Littlebits..
