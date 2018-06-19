@@ -1,4 +1,7 @@
-# Lesson Plan: RESTful APIs and Little bits
+---
+layout: page
+title: Understanding REST and APIs
+---
 
 ### Summary
 This module will introduce students to the concept of APIs, REST, and how to use a rest client.
