@@ -199,7 +199,7 @@ Discuss to ensure all understand the material.
 ### Additional Resources
 For more information, investigate the following.
 
-* [CanaKit Pi Quick Start Guide](http://www.canakit.com/Media/CanaKit-Raspberry-Pi-Quick-Start-Guide-2.1.pdf)
+* [CanaKit Pi Quick Start Guide](http://www.canakit.com/Media/CanaKit-Raspberry-Pi-Quick-Start-Guide-3.2.pdf)
 
 ### Acknowledgements
 
