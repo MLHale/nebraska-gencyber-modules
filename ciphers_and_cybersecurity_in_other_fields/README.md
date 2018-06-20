@@ -69,39 +69,41 @@ Strength – determines how much effort and how long it takes to break a ciphert
 
 ### Step 2: Ciphers
 
-Zig-Zag and Route Crypto
-Civil War Crypto Sticks
-Caesar Ciphers
-![Caesar](../img/caesarciper.jpg).
-Vigenere Square
-![vigenere](../img/vigenere.jpg).
-Enigma Machine
+- Zig-Zag and Route Crypto
+- Civil War Crypto Sticks
+- Caesar Ciphers
+> ![Caesar](./img/caesarciper.jpg)
+- Vigenere Square
+> ![vigenere](./img/vigenere.png)
+- Enigma Machine  
 
 We will discuss the usages and history of each of these ciphers.
 
 
 ### Step 3: Cryptanalysis
 
-Frequency
+- Frequency  
 By doing frequency analysis to see which letters appeared most often then substituting most frequent plain text letter, could break the cipher.
-Language characteristics
+- Language characteristics  
 If spaces are left in, then characteristics like single letter and 2 letter words are still in tact and knowledge of these can be utilized to help in breaking
 Having a longer message only makes both things easier to spot
 
 ### Step 4: Practice decrypting and encrypting Cleartext
 
 Using the cipher rings we will practice encoding and decoding.
+> ![Cipher Rings](https://pbs.twimg.com/media/DgDyyy0W4AEPAjx.jpg:small)
 
 ### Self Exploration
 Try some different encryption yourself.
 
 ### Reflection
-In this lesson, we saw how components can be used to
+In this lesson, we saw how encryption can be used for `data hiding`. Multiple encryption rounds can also be used as for `layering`.
 
 ### Additional Resources
 For more information, investigate the following:
 
-* [Littlebits](http://littlebits.cc/how-it-works) - Overview of concepts and available bits
+* [NSA Cytptochallenges](http://cryptochallenge.io) - Puzzle of the week
+* [NSA CryptoKids](https://www.nsa.gov/resources/everyone/digital-media-center/publications/cryptokids/)
 
 ## Lead Author
 
