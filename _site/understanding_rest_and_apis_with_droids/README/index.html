@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+  <head>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-33788105-3"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-33788105-3');
+  </script>
+  <link href="http://gmpg.org/xfn/11" rel="profile">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  
+  <!-- Enable responsiveness on mobile devices-->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+
+  <title>
+    
+      Understanding REST and APIs &middot; 
+    
+  </title>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="https://mlhale.github.io/nebraska-gencyber-modules/public/css/poole.css">
+  <link rel="stylesheet" href="https://mlhale.github.io/nebraska-gencyber-modules/public/css/syntax.css">
+  <link rel="stylesheet" href="https://mlhale.github.io/nebraska-gencyber-modules/public/css/hyde.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=PT+Sans:400,400italic,700|Abril+Fatface">
+
+  <!-- Icons -->
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/public/apple-touch-icon-144-precomposed.png">
+  <link rel="shortcut icon" href="/public/favicon.ico">
+  <script async defer src="https://buttons.github.io/buttons.js"></script>
+                                
+  <!-- RSS -->
+  <link rel="alternate" type="application/rss+xml" title="RSS" href="/atom.xml">
+</head>
+
+
+  <body>
+
+    <div class="sidebar">
+  <div class="container sidebar-sticky">
+    <div class="sidebar-about">
+      <h1>
+
+      </h1>
+      <p class="lead"></p>
+    </div>
+
+    <nav class="sidebar-nav">
+      <a class="sidebar-nav-item" href="https://github.com/MLHale/nebraska-gencyber-modules">Nebraska GenCyber</a>
+      <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"></a>is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</a>. <img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /> You are encouraged to reuse, remix, and add to the lessons contained herein - just remember to properly provide attribution.
+      <br><br>
+      Overall content: Copyright (C) 2017-2018  <a href="http://faculty.ist.unomaha.edu/mhale/">Dr. Matthew L. Hale</a>, <a href="http://faculty.ist.unomaha.edu/rgandhi/">Dr. Robin Gandhi</a>, <a href="http://www.brianamorrison.net">Dr. Briana B. Morrison</a>, and <a href="http://www.bellevue.edu/about/leadership/faculty/rausch-douglas">Doug Rausch</a>. <br>
+      Individual content: Copyright (C) 2017-2018 as listed in each lesson.
+    </nav>
+
+    <a class="github-button" href="https://github.com/mlhale/nebraska-gencyber-modules" data-icon="octicon-star" data-size="large" aria-label="Star mlhale/nebraska-gencyber-modules on GitHub">Star</a>
+    <a class="github-button" href="https://github.com/mlhale/nebraska-gencyber-modules/fork" data-icon="octicon-repo-forked" data-size="large" aria-label="Fork mlhale/nebraska-gencyber-modules on GitHub">Fork</a>
+    <a class="github-button" href="https://github.com/mlhale/nebraska-gencyber-modules/issues" data-icon="octicon-issue-opened" data-size="large" aria-label="Issue mlhale/nebraska-gencyber-modules on GitHub">Issue</a>
+    <p>Site &copy; 2018 <a href="http://faculty.ist.unomaha.edu/mhale/">Matt Hale</a>. All rights reserved.</p>
+    
+  </div>
+</div>
+
+
+    <div class="content container">
+      <div class="page">
+  <h1 class="page-title">Understanding REST and APIs</h1>
+  <h3 id="cybersecurity-first-principles-in-this-lesson">Cybersecurity First Principles in this lesson</h3>
+
+<ul>
+  <li>
+    <p><strong>Abstraction</strong>: An abstraction is a representation of an object or concept. It could be something such as a door, a speedometer, or a data structure in computer science. Abstraction decouples the design from the implementation. The gauges in an automobile are an abstraction of the performance of a car. A map is an abstraction of the earth.</p>
+  </li>
+  <li>
+    <p><strong>Data Hiding</strong>: Data hiding is the technique that does not allow certain aspects of an object to be observed or accessed. Data and information hiding keeps the programmer from having complete access to data structures. It allows access to only what is necessary.</p>
+  </li>
+  <li>
+    <p><strong>Layering</strong>: Cyber security uses multiple layers of defense or protecting information. If one layer is defeated the next layer should catch it.</p>
+  </li>
+  <li>
+    <p><strong>Least Privilege</strong>: One of the ways to protect information is by limiting what people can see and do with your information and resources. The principle of least privilege says to allow the minimum number of privileges necessary to accomplish the task.</p>
+  </li>
+  <li>
+    <p><strong>Minimization</strong>: Minimization refers to having the least functionality necessary in a program or device. The goal of minimization is to simplify and decrease the number of ways that software can be exploited. This can include <strong>turning off ports that are not needed</strong>, reducing the amount of code running on a machine, and/or turning off unneeded features in an application.</p>
+  </li>
+  <li>
+    <p><strong>Modularization</strong>: The concept of modularity is like building blocks. Each block (or module) can be put in or taken out from a bigger project. Each module has its own separate function that is interchangeable with other modules.</p>
+  </li>
+  <li>
+    <p><strong>Resource Encapsulation</strong>: Encapsulation is an object oriented concept where all data and functions required to use the resource are packaged into a single self-contained component. The goal is to only allow access or manipulation of the resource in the way the designer intended. An example, assume a flag pole is the object. There are fixed methods on how the flag pole is to be used. Put the flag on, take the flag off, raise or lower the flag. Nothing else can be done to the flag pole.</p>
+  </li>
+  <li>
+    <p><strong>Simplicity</strong>: Simplicity allows a person to better understand hardware and software. Without the clutter of unnecessarily complicated code and interfaces, the software will be more understandable by people that will update the code when requirements change. It will be easier to understand by the testers and they will be able to spot problems sooner. By keeping software as simple and as focused as possible, the reliability and security is greatly increased.</p>
+  </li>
+</ul>
+
+<h3 id="introduction">Introduction</h3>
+<p>In this module, you will learn what a RESTful API is, how Littlebits uses APIs to monitor and issue commands to the cloudbit, and how you can use the Littlebits API yourself.</p>
+
+<h3 id="goals">Goals</h3>
+<p>By the end of this tutorial, you will be able to:</p>
+<ul>
+  <li>Define <code class="highlighter-rouge">REST</code>, <code class="highlighter-rouge">an endpoint</code>, <code class="highlighter-rouge">API Integration</code>, and <code class="highlighter-rouge">API Invocation</code></li>
+  <li>Use a REST Client to make <code class="highlighter-rouge">POST</code> and <code class="highlighter-rouge">GET</code> requests to an <code class="highlighter-rouge">API</code></li>
+  <li>Using manual requests to <code class="highlighter-rouge">mashup</code> web services</li>
+</ul>
+
+<h3 id="materials-required">Materials Required</h3>
+<p>For this lesson, you will need:</p>
+
+<ul>
+  <li>PC</li>
+  <li>Internet connection</li>
+  <li>Little bits cloud bit and API Key</li>
+  <li>Little bits sensor and actuator</li>
+</ul>
+
+<h3 id="prerequisite-lessons">Prerequisite lessons</h3>
+<p>You should complete the <a href="../intro_to_components_using_littlebits_droids/README.md">Intro to components using Littlebits Droids</a> and <a href="../web_services_and_iot_using_littlebits_and_ifttt/README.md">Web services and IoT using Littlebits and IFTTT</a> lessons before attempting this lesson.</p>
+
+<h3 id="table-of-contents">Table of Contents</h3>
+<!-- TOC START min:1 max:3 link:true update:true -->
+<ul>
+  <li><a href="#exchanging-information-online-with-rest-and-apis">Exchanging information online with REST and APIs</a>
+    <ul>
+      <li><a href="#cybersecurity-first-principles-in-this-lesson">Cybersecurity First Principles in this lesson</a></li>
+      <li><a href="#introduction">Introduction</a></li>
+      <li><a href="#goals">Goals</a></li>
+      <li><a href="#materials-required">Materials Required</a></li>
+      <li><a href="#prerequisite-lessons">Prerequisite lessons</a></li>
+      <li><a href="#table-of-contents">Table of Contents</a></li>
+      <li><a href="#step-1-background">Step 1: Background</a></li>
+      <li><a href="#step-2-ok-lets-take-a-look-at-a-real-api">Step 2: Ok, lets take a look at a real API</a></li>
+      <li><a href="#step-3-getting-our-api-key">Step 3: Getting our API Key</a></li>
+      <li><a href="#step-4-making-your-first-rest-request">Step 4: Making your first REST request</a></li>
+      <li><a href="#step-5-get-device-info">Step 5: GET device info</a></li>
+      <li><a href="#step-6-first-post-request-to-turn-the-device-on">Step 6: First POST request to turn the device on</a></li>
+      <li><a href="#checkpoint">Checkpoint</a></li>
+      <li><a href="#step-7-adding-a-subscriber-to-handle-incoming-events">Step 7: Adding a subscriber to handle incoming events.</a></li>
+      <li><a href="#additional-resources">Additional Resources</a></li>
+      <li><a href="#lead-author">Lead Author</a>
+        <ul>
+          <li><a href="#acknowledgements">Acknowledgements</a></li>
+          <li><a href="#license">License</a></li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<!-- TOC END -->
+
+<h3 id="step-1-background">Step 1: Background</h3>
+<p>Before we get started, lets talk about what an <code class="highlighter-rouge">API</code> is.</p>
+
+<blockquote>
+  <p>This background text and its associated images are modified for this setting by Matt Hale. Modifications are licensed under creative commons share-alike. The original material it is based upon was created by the Mozilla foundation and its contributors. Credit: <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Overview#">https://developer.mozilla.org/en-US/docs/Web/HTTP/Overview</a>
+<a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Messages">https://developer.mozilla.org/en-US/docs/Web/HTTP/Messages</a></p>
+</blockquote>
+
+<p><strong>HTTP</strong> is a <code class="highlighter-rouge">protocol</code> which allows the fetching of resources, such as HTML documents. It is the foundation of any data exchange on the Web and a client-server protocol, which means requests are initiated by the recipient, usually the Web browser. A complete document is reconstructed from the different sub-documents fetched, for instance text, layout description, images, videos, scripts, and more.</p>
+
+<p><img src="https://mdn.mozillademos.org/files/13677/Fetching_a_page.png" alt="A Web document is the composition of different resources" /></p>
+
+<p>Clients and servers communicate by exchanging individual messages (as opposed to a stream of data). The messages sent by the client, usually a Web browser, are called <code class="highlighter-rouge">requests</code> and the messages sent by the server as an answer are called <code class="highlighter-rouge">responses</code>.</p>
+
+<p><img src="https://mdn.mozillademos.org/files/13673/HTTP%20&amp;%20layers.png" alt="HTTP as an application layer protocol, on top of TCP (transport layer) and IP (network layer) and below the presentation layer." />Designed in the early 1990s, HTTP is an extensible protocol which has evolved over time. It is an application layer protocol that is sent over <code class="highlighter-rouge">TCP</code>, or over a <code class="highlighter-rouge">TLS</code>-encrypted TCP connection, though any reliable transport protocol could theoretically be used. Due to its extensibility, it is used to not only fetch hypertext documents, but also images and videos or to post content to servers, like with HTML form results. HTTP can also be used to fetch parts of documents to update Web pages on demand.</p>
+
+<h4 id="http-messages">HTTP Messages</h4>
+
+<p>HTTP messages are composed of textual information encoded in ASCII, and span over multiple lines. In HTTP/1.1, and earlier versions of the protocol, these messages were openly sent across the connection. In HTTP/2, the once human-readable message is now divided up into HTTP frames, providing optimization and performance improvements.</p>
+
+<p>Web developers, or webmasters, rarely craft these textual HTTP messages themselves: software, a Web browser, proxy, or Web server, perform this action. They provide HTTP messages through config files (for proxies or servers), APIs (for browsers), or other interfaces.</p>
+
+<p><img src="https://mdn.mozillademos.org/files/13825/HTTPMsg2.png" alt="From a user-, script-, or server- generated event, an HTTP/1.x msg is generated, and if HTTP/2 is in use, it is binary framed into an HTTP/2 stream, then sent." /></p>
+
+<p>The HTTP/2 binary framing mechanism has been designed to not require any alteration of the APIs or config files applied: it is broadly transparent to the user.</p>
+
+<p>HTTP requests, and responses, share similar structure and are composed of:</p>
+
+<ol>
+  <li>A <code class="highlighter-rouge">start-line</code> describing the requests to be implemented, or its status of whether successful or a failure. This start-line is always a single line.</li>
+  <li>An optional set of <code class="highlighter-rouge">HTTP headers</code> specifying the request, or describing the body included in the message.</li>
+  <li>A blank line indicating all meta-information for the request have been sent.</li>
+  <li>An optional <code class="highlighter-rouge">body</code> containing data associated with the request (like content of an HTML form), or the document associated with a response. The presence of the body and its size is specified by the start-line and HTTP headers.</li>
+</ol>
+
+<p>The start-line and HTTP headers of the HTTP message are collectively known as the <code class="highlighter-rouge">head</code> of the requests, whereas its payload is known as the <code class="highlighter-rouge">body</code>.</p>
+
+<p><img src="https://mdn.mozillademos.org/files/13827/HTTPMsgStructure2.png" alt="Requests and responses share a common structure in HTTP" /></p>
+
+<h4 id="http-requests">HTTP Requests</h4>
+
+<h5 id="start-line">Start line</h5>
+
+<p><code class="highlighter-rouge">HTTP requests</code> are messages sent by the client to initiate an action on the server. Their <code class="highlighter-rouge">start-line</code> contain three elements:</p>
+
+<ol>
+  <li>An <strong>HTTP Method</strong>, a verb (like <code class="highlighter-rouge">GET</code>, <code class="highlighter-rouge">PUT</code>, <code class="highlighter-rouge">POST</code>, or <code class="highlighter-rouge">DELETE</code>) or a noun (like <code class="highlighter-rouge">HEAD</code> or <code class="highlighter-rouge">OPTIONS</code>), that describes the action to be performed. For example, <code class="highlighter-rouge">GET</code> indicates that a resource should be fetched or <code class="highlighter-rouge">POST</code> means that data is pushed to the server (creating or modifying a resource, or generating a temporary document to send back). <code class="highlighter-rouge">PUT</code> modifies an existing resource, while <code class="highlighter-rouge">DELETE</code> removes one.</li>
+  <li>The <strong>request target</strong>, usually a <code class="highlighter-rouge">URL</code>, or the absolute path of the protocol, port, and domain are usually characterized by the request context. The format of this request target varies between different HTTP methods. It can be
+    <ul>
+      <li>An absolute path, ultimately followed by a <code class="highlighter-rouge">'?'</code> and query string. This is the most common form, known as the <em>origin form</em>, and is used with <code class="highlighter-rouge">GET</code>, <code class="highlighter-rouge">POST</code>, <code class="highlighter-rouge">HEAD</code>, and <code class="highlighter-rouge">OPTIONS</code> methods.<br />
+<code class="highlighter-rouge">POST / HTTP 1.1  
+GET /background.png HTTP/1.0  
+HEAD /test.html?query=alibaba HTTP/1.1  
+OPTIONS /anypage.html HTTP/1.0</code></li>
+      <li>A complete URL, known as the <em>absolute form</em>, is mostly used with <code class="highlighter-rouge">GET</code> when connected to a proxy.<br />
+<code class="highlighter-rouge">GET http://developer.mozilla.org/en-US/docs/Web/HTTP/Messages HTTP/1.1</code></li>
+      <li>The authority component of a URL, consisting of the domain name and optionally the port (prefixed by a <code class="highlighter-rouge">':'</code>), is called the <em>authority form</em>. It is only used with <code class="highlighter-rouge">CONNECT</code> when setting up an HTTP tunnel.<br />
+<code class="highlighter-rouge">CONNECT developer.mozilla.org:80 HTTP/1.1</code></li>
+      <li>The <em>asterisk form</em>, a simple asterisk (<code class="highlighter-rouge">'*'</code>) is used with <code class="highlighter-rouge">OPTIONS</code>, representing the server as a whole.<br />
+<code class="highlighter-rouge">OPTIONS * HTTP/1.1</code></li>
+    </ul>
+  </li>
+  <li>The <strong>HTTP version</strong> which defines the structure of the remaining message, acting as an indicator of the expected version to use for the response.</li>
+</ol>
+
+<h4 id="headers">Headers</h4>
+
+<p><code class="highlighter-rouge">HTTP headers</code> from a request follow the same basic structure of an HTTP header: a case-insensitive string followed by a colon (<code class="highlighter-rouge">':'</code>) and a value whose structure depends upon the header. The whole header, including the value, consist of one single line, which can be quite long.</p>
+
+<p>There are numerous request headers available. They can be divided in several groups:</p>
+
+<ul>
+  <li><strong>General headers</strong>, like <code class="highlighter-rouge">Via</code>,  apply to the message as a whole.</li>
+  <li><strong>Request headers</strong>, like <code class="highlighter-rouge">User-Agent</code>, <code class="highlighter-rouge">Accept-Type</code>, modify the request by specifying it further (like <code class="highlighter-rouge">Accept-Language</code>), by giving context (like <code class="highlighter-rouge">Referer</code>), or by conditionally restricting it (like <code class="highlighter-rouge">If-None</code>).</li>
+  <li><strong>Entity headers</strong>, like <code class="highlighter-rouge">Content-Length</code> which apply to the body of the request. Obviously there is no such header transmitted if there is no body in the request.</li>
+</ul>
+
+<p><img src="https://mdn.mozillademos.org/files/13821/HTTP_Request_Headers2.png" alt="Example of headers in an HTTP request" /></p>
+
+<h4 id="body">Body</h4>
+
+<p>The final part of the request is its body. Not all requests have one: requests fetching resources, like <code class="highlighter-rouge">GET</code>, <code class="highlighter-rouge">HEAD</code>, DELETE, or OPTIONS, usually don’t need one. Some requests send data to the server in order to update it: as often the case with <code class="highlighter-rouge">POST</code> requests (containing HTML form data).</p>
+
+<p>Bodies can be broadly divided into two categories:</p>
+
+<ul>
+  <li><strong>Single-resource bodies</strong>, consisting of one single file, defined by the two headers: <code class="highlighter-rouge">Content-Type</code> and <code class="highlighter-rouge">Content-Length</code>.</li>
+  <li><strong><a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types#multipartform-data">Multiple-resource bodies</a></strong>, consisting of a <code class="highlighter-rouge">multipart body</code>, each containing a different bit of information. This is typically associated with <code class="highlighter-rouge">HTML Forms</code>.</li>
+</ul>
+
+<h4 id="http-responses">HTTP Responses</h4>
+
+<h5 id="status-line">Status line</h5>
+
+<p>The start line of an HTTP response, called the <code class="highlighter-rouge">status line</code>, contains the following information:</p>
+
+<ol>
+  <li>The <code class="highlighter-rouge">protocol version</code>, usually <code class="highlighter-rouge">HTTP/1.1</code>.</li>
+  <li>A <code class="highlighter-rouge">status code</code>, indicating success or failure of the request. Common status codes are <code class="highlighter-rouge">200</code> (ok), <code class="highlighter-rouge">404</code> (Not found), or <code class="highlighter-rouge">500</code> (Server error)</li>
+  <li>A <code class="highlighter-rouge">status text</code>. A brief, purely informational, textual description of the status code to help a human understand the HTTP message.</li>
+</ol>
+
+<p>A typical status line looks like: <code class="highlighter-rouge">HTTP/1.1 404 Not Found.</code></p>
+
+<h4 id="headers-1">Headers</h4>
+
+<p><code class="highlighter-rouge">HTTP headers</code> for responses follow the same structure as any other header: a case-insensitive string followed by a colon (<code class="highlighter-rouge">':'</code>) and a value whose structure depends upon the type of the header. The whole header, including its value, presents as a single line.</p>
+
+<p><img src="https://mdn.mozillademos.org/files/13823/HTTP_Response_Headers2.png" alt="Example of headers in an HTTP response" /></p>
+
+<h4 id="body-1">Body</h4>
+
+<p>The last part of a response is the <code class="highlighter-rouge">body</code>. Not all responses have one: responses with a status code, like <code class="highlighter-rouge">201</code> or <code class="highlighter-rouge">204</code>, usually don’t.</p>
+
+<p>Bodies can be broadly divided into three categories:</p>
+
+<ul>
+  <li><strong>Single-resource bodies</strong>, consisting of a single file of known length, defined by the two headers: <code class="highlighter-rouge">Content-Type</code> and <code class="highlighter-rouge">Content-Length</code>.</li>
+  <li><strong>Single-resource bodies</strong>, consisting of a single file of unknown length, encoded by chunks with <code class="highlighter-rouge">Transfer-Encoding</code> set to <code class="highlighter-rouge">chunked</code>.</li>
+  <li><strong><a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types#multipartform-data">Multiple-resource bodies</a></strong>, consisting of a multipart body, each containing a different section of information. These are relatively rare.</li>
+</ul>
+
+<h3 id="step-2-ok-lets-take-a-look-at-a-real-api">Step 2: Ok, lets take a look at a real API</h3>
+<p>Phew, enough background. In the previous <a href="../web_services_and_iot_using_littlebits_and_ifttt/README.md">lesson</a>, we wired our <code class="highlighter-rouge">cloudbit</code> up to the web and explored how we could send it signals using <a href="https://ifttt.com">IFTTT</a>. We saw that if our <code class="highlighter-rouge">cloudbit</code> detected an input signal (a <code class="highlighter-rouge">request</code>), we could have <code class="highlighter-rouge">IFTTT</code> do something (send a <code class="highlighter-rouge">response</code>). These concepts, i.e. <em>request</em> and <em>response</em>, are central to the concept of <code class="highlighter-rouge">RESTful APIs</code>. REST, or REpresentational State Transfer, APIs, or Application Programming Interfaces, are tools that developers use to provide <strong>abstraction</strong> and <strong>resource encapsulation</strong> to people who want to interact with their data.</p>
+
+<p>APIs allow you to get and save data back to the application, without needing to tightly integrate with that application. This improves <strong>simplicity</strong> and helps your code to be more <strong>modular</strong>. APIs include <code class="highlighter-rouge">endpoints</code>, such as <code class="highlighter-rouge">/api/events</code>, that allow you to access certain specific data (e.g. events in this example). API endpoints help provide <strong>minimization</strong> since users can only interact with the application through those interfaces provided by the developer.</p>
+
+<p>…Enough talk! Lets look at an API!</p>
+
+<p>Open Chrome and go to <a href="http://developers.littlebitscloud.cc/">http://developers.littlebitscloud.cc/</a>. You are looking at the <code class="highlighter-rouge">cloudbit</code> API. This is what <code class="highlighter-rouge">IFTTT</code> uses to handle requests and responses.</p>
+
+<p>You can see that Littlebits tells us all about how to interact with our <code class="highlighter-rouge">cloudbit</code> using the API. Lets try it out.</p>
+
+<h3 id="step-3-getting-our-api-key">Step 3: Getting our API Key</h3>
+<p>Secure APIs don’t just accept requests and provide responses to anyone. APIs use a concept called <code class="highlighter-rouge">least privilege</code> to allow end-users to only have access to the features they need. Since we own the <code class="highlighter-rouge">cloudbit</code>, we should have the ability to do anything we want with it, but we might want to prevent other people from abusing and misusing our cloudbit.</p>
+
+<p>To ensure that only we can program our cloudbit, Littlebits provides something called an <code class="highlighter-rouge">API Key</code>. This key is a really long alphanumerical string that would be hard to crack. Lets find our key, so we can issue commands to our cloudbit.</p>
+
+<p>Go to <a href="http://control.littlebitscloud.cc/">http://control.littlebitscloud.cc/</a></p>
+
+<p>Login using the account you used in the <a href="../web_services_and_iot_using_littlebits_and_ifttt/">previous lesson</a></p>
+
+<p>Once logged in, click on your <code class="highlighter-rouge">cloudbit</code>:</p>
+
+<p>Now go to the <code class="highlighter-rouge">settings</code> menu. You should see your access token <code class="highlighter-rouge">API Key</code>, you will need this string in next steps - so keep it handy. In practice, you wouldn’t want to share this with anyone.</p>
+
+<h3 id="step-4-making-your-first-rest-request">Step 4: Making your first REST request</h3>
+<p>Now that we have our <code class="highlighter-rouge">API Key</code>, lets use it to make a request.</p>
+
+<p>POSTMAN is a REST client, that allows end users to make requests to test their APIs. Lets use it to test the cloudbit API. Launch POSTMAN by typing <code class="highlighter-rouge">chrome://apps</code> into the Chrome address bar, hit enter, and then click the POSTMAN icon.</p>
+
+<p><img src="../img/postman1.png" alt="Loading Postman" /></p>
+
+<p>In POSTMAN, lets build a new GET request targeted at the URL <a href="https://api-http.littlebitscloud.cc/v2/devices">https://api-http.littlebitscloud.cc/v2/devices</a></p>
+
+<ul>
+  <li>Find and click the <code class="highlighter-rouge">headers</code> button and add the following</li>
+</ul>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Authorization: Bearer &lt;your access token with no angled brackets&gt;
+</code></pre></div></div>
+
+<p>You can add the header as a key value pair, where the key is <code class="highlighter-rouge">Authorization</code> and the value is <code class="highlighter-rouge">Bearer &lt;insert your access token here, remove the angled brackets&gt;</code>. Make sure to use your access token.</p>
+
+<ul>
+  <li>Hit the <code class="highlighter-rouge">send</code> button to issue the <em>GET request</em> to the URL.</li>
+</ul>
+
+<p>If all goes well you should see something like:</p>
+
+<p><img src="../img/postman2.png" alt="GET request" /></p>
+
+<ul>
+  <li>The <code class="highlighter-rouge">response</code> you got back, when you sent the GET request contains the name and meta information for each of the <code class="highlighter-rouge">cloudbits</code> currently connected to your account. In the screenshot above, the JSON data returned for me was:</li>
+</ul>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>[
+    {
+        "label": "mlhale-cloudbit",
+        "id": "00e04c036f15",
+        "subscriptions": [],
+        "subscribers": [],
+        "user_id": 175306,
+        "is_connected": true,
+        "input_interval_ms": 200
+    }
+]
+</code></pre></div></div>
+<p>This tells me the label of my <code class="highlighter-rouge">cloudbit</code> is <code class="highlighter-rouge">mlhale-cloudbit</code> and that it currently doesn’t have any subscribers or subscriptions.</p>
+
+<h3 id="step-5-get-device-info">Step 5: GET device info</h3>
+<p>Now that we know our device id, we can use it to make a specific <code class="highlighter-rouge">request</code> for our device.</p>
+
+<ul>
+  <li>make a new <code class="highlighter-rouge">GET</code> request in POSTMAN to</li>
+</ul>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>https://api-http.littlebitscloud.cc/v2/devices/&lt;your-device-id&gt;
+</code></pre></div></div>
+
+<ul>
+  <li>e.g. <code class="highlighter-rouge">https://api-http.littlebitscloud.cc/v2/devices/00e04c036f15</code> in my example</li>
+</ul>
+
+<p>You should get the same device info back, but notice that it is now not in square brackets - this means it is a singleton instead of a list.</p>
+
+<p><img src="../img/postman3.png" alt="GET request" />.</p>
+
+<h3 id="step-6-first-post-request-to-turn-the-device-on">Step 6: First POST request to turn the device on</h3>
+<p>Now that we have the basics of GET requests to access device info, lets try issuing a POST request to actually make our device do something.</p>
+
+<ul>
+  <li>Make sure you arrange your Littlebits as shown in the following picture:</li>
+</ul>
+
+<p><img src="../img/configuration.jpg" alt="Littlebits Setup" /></p>
+
+<ul>
+  <li>make a POST request using POSTMAN to set the voltage output on the cloudbit for a few seconds</li>
+</ul>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>https://api-http.littlebitscloud.cc/v2/devices/&lt;your-device-id&gt;/output
+</code></pre></div></div>
+<ul>
+  <li>e.g. <code class="highlighter-rouge">https://api-http.littlebitscloud.cc/v2/devices/00e04c036f15/output</code> in my example</li>
+</ul>
+
+<p>Before you issue the request make sure the headers are set as follows:</p>
+
+<p>Headers:</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Authorization: Bearer &lt;your access token&gt;
+Content-type: application/json
+</code></pre></div></div>
+
+<p><img src="../img/postman4.png" alt="POST request" /></p>
+
+<p>Now click on the Body tab (next to the Headers tab). Select the Raw input option and type the JSON shown below to tell <code class="highlighter-rouge">cloudbit</code> to turn the LED on at 100% brightness and to stay on for 5 seconds.</p>
+
+<p>Body:</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>{
+    "percent": 100,
+    "duration_ms": 5000
+}
+</code></pre></div></div>
+
+<p><img src="../img/postman5.png" alt="POST request" /></p>
+
+<p>Now send the request
+You should get back:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>{
+    "success": true
+}
+</code></pre></div></div>
+
+<p>and you should see your LED light up. You just used REST!</p>
+
+<h3 id="checkpoint">Checkpoint</h3>
+<p>Lets review what we’ve learned.</p>
+
+<p>https://www.qzzr.com/c/quiz/429280/8f69a8f7-0a69-4efa-9c3e-2aa38944ed1d</p>
+
+<h3 id="step-7-adding-a-subscriber-to-handle-incoming-events">Step 7: Adding a subscriber to handle incoming events.</h3>
+<p>Lets add a subscriber to catch input events going to the <code class="highlighter-rouge">cloudbit</code>:</p>
+<ul>
+  <li>Make a POST request to <a href="https://api-http.littlebitscloud.cc/v2/subscriptions">https://api-http.littlebitscloud.cc/v2/subscriptions</a></li>
+  <li>In our case we want to make a server listen for the cloudbit, so lets use a URI endpoint as the subscriber</li>
+</ul>
+
+<p>same headers as before
+body:</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>{
+    "publisher_id": "&lt;your device id&gt;",
+    "subscriber_id": "http://ourserver.com/endpoint"
+}
+</code></pre></div></div>
+
+<p>But where is our server? We don’t have one yet. We will talk about deploying a server in the next lesson and then come back to this.</p>
+
+<h3 id="additional-resources">Additional Resources</h3>
+<p>For more information, investigate the following.</p>
+
+<ul>
+  <li><a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Overview">https://developer.mozilla.org/en-US/docs/Web/HTTP/Overview</a> - Overview of basic HTTP operations</li>
+  <li><a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Messages">https://developer.mozilla.org/en-US/docs/Web/HTTP/Messages</a> - Overview of request and response messages in HTTP</li>
+  <li><a href="http://developers.littlebitscloud.cc/">http://developers.littlebitscloud.cc/</a> - API reference for the Littlebits web service.</li>
+</ul>
+
+<h2 id="lead-author">Lead Author</h2>
+
+<ul>
+  <li>Matt Hale</li>
+</ul>
+
+<h3 id="acknowledgements">Acknowledgements</h3>
+<p>Special thanks to <a href="http://faculty.ist.unomaha.edu/rgandhi/">Dr. Robin Gandhi</a>, Andrew Li, and April Guerin for reviewing and editing this module.</p>
+
+<h3 id="license">License</h3>
+<p><a href="https://github.com/MLHale/nebraska-gencyber">Nebraska GenCyber</a> <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /></a><br /> is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</a>.</p>
+
+<p>Overall content: Copyright (C) 2017-2018  <a href="http://faculty.ist.unomaha.edu/mhale/">Dr. Matthew L. Hale</a>, <a href="http://faculty.ist.unomaha.edu/rgandhi/">Dr. Robin Gandhi</a>, <a href="http://www.brianamorrison.net">Dr. Briana B. Morrison</a>, and <a href="http://www.bellevue.edu/about/leadership/faculty/rausch-douglas">Doug Rausch</a>.</p>
+
+<p>Lesson content: Copyright (C) <a href="http://faculty.ist.unomaha.edu/mhale/">Dr. Matthew Hale</a> 2017-2018.<br />
+<a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /></a><br /><span xmlns:dct="http://purl.org/dc/terms/" property="dct:title">This lesson</span> is licensed by the author under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</a>.</p>
+
+</div>
+
+    </div>
+
+  </body>
+</html>
