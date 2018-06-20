@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+  <head>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-33788105-3"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-33788105-3');
+  </script>
+  <link href="http://gmpg.org/xfn/11" rel="profile">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  
+  <!-- Enable responsiveness on mobile devices-->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+
+  <title>
+    
+      Ciphers and Cybersecurity in Other Fields &middot; 
+    
+  </title>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="https://mlhale.github.io/nebraska-gencyber-modules/public/css/poole.css">
+  <link rel="stylesheet" href="https://mlhale.github.io/nebraska-gencyber-modules/public/css/syntax.css">
+  <link rel="stylesheet" href="https://mlhale.github.io/nebraska-gencyber-modules/public/css/hyde.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=PT+Sans:400,400italic,700|Abril+Fatface">
+
+  <!-- Icons -->
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/public/apple-touch-icon-144-precomposed.png">
+  <link rel="shortcut icon" href="/public/favicon.ico">
+  <script async defer src="https://buttons.github.io/buttons.js"></script>
+                                
+  <!-- RSS -->
+  <link rel="alternate" type="application/rss+xml" title="RSS" href="/atom.xml">
+</head>
+
+
+  <body>
+
+    <div class="sidebar">
+  <div class="container sidebar-sticky">
+    <div class="sidebar-about">
+      <h1>
+
+      </h1>
+      <p class="lead"></p>
+    </div>
+
+    <nav class="sidebar-nav">
+      <a class="sidebar-nav-item" href="https://github.com/MLHale/nebraska-gencyber-modules">Nebraska GenCyber</a>
+      <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"></a>is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</a>. <img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /> You are encouraged to reuse, remix, and add to the lessons contained herein - just remember to properly provide attribution.
+      <br><br>
+      Overall content: Copyright (C) 2017-2018  <a href="http://faculty.ist.unomaha.edu/mhale/">Dr. Matthew L. Hale</a>, <a href="http://faculty.ist.unomaha.edu/rgandhi/">Dr. Robin Gandhi</a>, <a href="http://www.brianamorrison.net">Dr. Briana B. Morrison</a>, and <a href="http://www.bellevue.edu/about/leadership/faculty/rausch-douglas">Doug Rausch</a>. <br>
+      Individual content: Copyright (C) 2017-2018 as listed in each lesson.
+    </nav>
+
+    <a class="github-button" href="https://github.com/mlhale/nebraska-gencyber-modules" data-icon="octicon-star" data-size="large" aria-label="Star mlhale/nebraska-gencyber-modules on GitHub">Star</a>
+    <a class="github-button" href="https://github.com/mlhale/nebraska-gencyber-modules/fork" data-icon="octicon-repo-forked" data-size="large" aria-label="Fork mlhale/nebraska-gencyber-modules on GitHub">Fork</a>
+    <a class="github-button" href="https://github.com/mlhale/nebraska-gencyber-modules/issues" data-icon="octicon-issue-opened" data-size="large" aria-label="Issue mlhale/nebraska-gencyber-modules on GitHub">Issue</a>
+    <p>Site &copy; 2018 <a href="http://faculty.ist.unomaha.edu/mhale/">Matt Hale</a>. All rights reserved.</p>
+    
+  </div>
+</div>
+
+
+    <div class="content container">
+      <div class="page">
+  <h1 class="page-title">Ciphers and Cybersecurity in Other Fields</h1>
+  <h3 id="cybersecurity-first-principles-in-this-lesson">Cybersecurity First Principles in this lesson</h3>
+
+<ul>
+  <li>
+    <p><strong>Data Hiding</strong>: Data hiding is the technique that does not allow certain aspects of an object to be observed or accessed. Data and information hiding keeps the programmer from having complete access to data structures. It allows access to only what is necessary.</p>
+  </li>
+  <li>
+    <p><strong>Layering</strong>: Cyber security uses multiple layers of defense or protecting information. If one layer is defeated the next layer should catch it.</p>
+  </li>
+  <li>
+    <p><strong>Least Privilege</strong>: One of the ways to protect information is by limiting what people can see and do with your information and resources. The principle of least privilege says to allow the minimum number of privileges necessary to accomplish the task.</p>
+  </li>
+  <li>
+    <p><strong>Pre-digital era Ciphers</strong>: Transposition ciphers – rearrange the order of the characters of plaintext also called permutation ciphers
+The arrangement becomes the key
+Substitution ciphers – replace the characters with something else (e.g. another character or number)
+The replacement function becomes the key</p>
+  </li>
+</ul>
+
+<h3 id="introduction">Introduction</h3>
+<p>In this lesson, we will learn about ciphers and basic cryptography and how it can apply to cybersecurity and other areas of education.  We will go over a brief history of the usage of ciphers and how they work.</p>
+
+<h3 id="goals">Goals</h3>
+<p>By the end of this tutorial, you will be able to:</p>
+<ul>
+  <li>Understand and be able to describe <code class="highlighter-rouge">data hiding</code>, <code class="highlighter-rouge">layering</code>, and <code class="highlighter-rouge">least privilege</code> in terms of cryptography</li>
+  <li>Encrypt and decrypt simple messages using different Ciphers</li>
+</ul>
+
+<h3 id="materials-required">Materials Required</h3>
+
+<ul>
+  <li>Cipher Wheels</li>
+  <li>Vigenere Square</li>
+</ul>
+
+<h3 id="prerequisite-lessons">Prerequisite lessons</h3>
+<p>None</p>
+
+<h3 id="table-of-contents">Table of Contents</h3>
+<!-- TOC START min:1 max:3 link:true update:true -->
+<ul>
+  <li><a href="#ciphers-and-cybersecurity-in-other-fields">Basic Terms</a>
+    <ul>
+      <li><a href="#cybersecurity-first-principles-in-this-lesson">Cybersecurity First Principles in this lesson</a></li>
+      <li><a href="#introduction">Introduction</a></li>
+      <li><a href="#goals">Goals</a></li>
+      <li><a href="#materials-required">Materials Required</a></li>
+      <li><a href="#prerequisite-lessons">Prerequisite lessons</a></li>
+      <li><a href="#table-of-contents">Table of Contents</a></li>
+      <li><a href="#step-1-learn-all-the-words">Step 1: Learn all the words!</a></li>
+      <li><a href="#step-2-gotta-start-somewhere">Step 2: Gotta start somewhere</a></li>
+      <li><a href="#step-3-count-all-the-things">Step 3: Count all the things!</a></li>
+      <li><a href="#step-4-the-world-is-more-than-true-or-false---variable-inputs">Step 4: The world is more than True or False - Variable Inputs</a></li>
+      <li><a href="#step-5-hey-listen---audio">Step 5: Hey, Listen - Audio</a></li>
+      <li><a href="#step-6-turning-on-an-outlet-with-the-ir-transmitter">Step 6: Turning on an outlet with the IR transmitter</a></li>
+      <li><a href="#step-7-motoring-onward">Step 7: Motoring onward</a></li>
+      <li><a href="#self-exploration">Self Exploration</a></li>
+      <li><a href="#test-your-bits-err-wits">Test Your Bits, err… Wits!</a></li>
+      <li><a href="#additional-resources">Additional Resources</a></li>
+      <li><a href="#acknowledgements">Acknowledgements</a></li>
+      <li><a href="#license">License</a></li>
+    </ul>
+  </li>
+</ul>
+
+<!-- TOC END -->
+
+<h3 id="step-1-learn-all-the-words">Step 1: Learn all the words!</h3>
+<p>Plaintext/Cleartext - an unaltered message as it’s intended to be read
+Ciphertext – message that has been changed so its meaning is concealed
+Encryption/enciphering – changing plaintext to ciphertext
+Decryption/deciphering – changing ciphertext back into plaintext
+Key – secret value needed to encrypt and/or decrypt
+Cryptographic Algorithm/cipher – a standard sequence of computational steps to encrypt or decrypt a message using a key
+Cryptanalysis – practice of analyzing encrypted messages to reveal the plaintext without knowing the key
+Strength – determines how much effort and how long it takes to break a ciphertext</p>
+
+<h3 id="step-2-ciphers">Step 2: Ciphers</h3>
+
+<p>Zig-Zag and Route Crypto
+Civil War Crypto Sticks
+Caesar Ciphers
+<img src="../img/caesarciper.jpg" alt="Caesar" />.
+Vigenere Square
+<img src="../img/vigenere.jpg" alt="vigenere" />.
+Enigma Machine</p>
+
+<p>We will discuss the usages and history of each of these ciphers.</p>
+
+<h3 id="step-3-cryptanalysis">Step 3: Cryptanalysis</h3>
+
+<p>Frequency
+By doing frequency analysis to see which letters appeared most often then substituting most frequent plain text letter, could break the cipher.
+Language characteristics
+If spaces are left in, then characteristics like single letter and 2 letter words are still in tact and knowledge of these can be utilized to help in breaking
+Having a longer message only makes both things easier to spot</p>
+
+<h3 id="step-4-practice-decrypting-and-encrypting-cleartext">Step 4: Practice decrypting and encrypting Cleartext</h3>
+
+<p>Using the cipher rings we will practice encoding and decoding.</p>
+
+<h3 id="self-exploration">Self Exploration</h3>
+<p>Try some different encryption yourself.</p>
+
+<h3 id="reflection">Reflection</h3>
+<p>In this lesson, we saw how components can be used to</p>
+
+<h3 id="additional-resources">Additional Resources</h3>
+<p>For more information, investigate the following:</p>
+
+<ul>
+  <li><a href="http://littlebits.cc/how-it-works">Littlebits</a> - Overview of concepts and available bits</li>
+</ul>
+
+<h2 id="lead-author">Lead Author</h2>
+
+<ul>
+  <li>Chris Daniels</li>
+</ul>
+
+<h3 id="acknowledgements">Acknowledgements</h3>
+<p>Special thanks to <a href="http://faculty.ist.unomaha.edu/rgandhi/">Dr. Robin Gandhi</a> for reviewing and editing earlier versions of this lesson.</p>
+
+<h3 id="license">License</h3>
+<p><a href="https://github.com/MLHale/nebraska-gencyber">Nebraska GenCyber</a> <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /></a><br /> is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</a>.</p>
+
+<p>Overall content: Copyright (C) 2017-2018  <a href="http://faculty.ist.unomaha.edu/mhale/">Dr. Matthew L. Hale</a>, <a href="http://faculty.ist.unomaha.edu/rgandhi/">Dr. Robin Gandhi</a>, <a href="http://www.brianamorrison.net">Dr. Briana B. Morrison</a>, and <a href="http://www.bellevue.edu/about/leadership/faculty/rausch-douglas">Doug Rausch</a>.</p>
+
+<p>Lesson content: Copyright (C) <a href="https://www.unomaha.edu/college-of-information-science-and-technology/about/faculty-staff/chris-daniels.php">Chris Daniels</a> 2017.<br />
+<a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /></a><br /><span xmlns:dct="http://purl.org/dc/terms/" property="dct:title">This lesson</span> is licensed by the author under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</a>.</p>
+
+</div>
+
+    </div>
+
+  </body>
+</html>

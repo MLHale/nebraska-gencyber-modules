@@ -208,30 +208,22 @@
 
 <ul>
   <li>Find the pink <code class="highlighter-rouge">sound trigger</code> input module</li>
-  <li>Find the pink <code class="highlighter-rouge">light sensor</code> input module</li>
-</ul>
-
-<p>Lets swap some components around.</p>
-
-<ul>
   <li>Remove the <code class="highlighter-rouge">led</code> module.</li>
+  <li>Add the <code class="highlighter-rouge">sound trigger</code> between the <code class="highlighter-rouge">o21 number</code> and the <code class="highlighter-rouge">button</code></li>
 </ul>
 
-<p>Press the button. Everything still works!</p>
+<p>Press the button. Does it work?</p>
 
 <ul>
-  <li>Connect the <code class="highlighter-rouge">light sensor</code> to the <code class="highlighter-rouge">power</code> and then to the <code class="highlighter-rouge">button</code></li>
+  <li>tap the table and hold the button down</li>
+  <li>Does it work now?</li>
 </ul>
 
-<p>Press the button. Does it work? How about if you cover up the light sensor? The simple functionality of each component is an example of <code class="highlighter-rouge">simplicity</code>.</p>
-
-<p>This shows you that you can also <strong>chain multiple input modules together</strong> and their <strong>total behavior is a combination of their input designs</strong>. In this case, our counter only worked if the light was detected <strong>AND</strong> the button was pressed. Allowing each component to hand its own functionality is an example of <code class="highlighter-rouge">resource encapsulation</code> - since each component encapsulates the code and components needed to do its job.</p>
+<p>This shows you that you can also <strong>chain multiple input modules together</strong> and their <strong>total behavior is a combination of their input designs</strong>. In this case, our counter only worked if the light was detected <strong>AND</strong> the button was pressed. Allowing each component to hand its own functionality is an example of <code class="highlighter-rouge">resource encapsulation</code> - since each component encapsulates the code and components needed to do its job. The simple functionality of each component is an example of <code class="highlighter-rouge">simplicity</code>.</p>
 
 <p>Lets try one more combo:</p>
-
 <ul>
   <li>Remove the <code class="highlighter-rouge">button</code> module.</li>
-  <li>Remove the <code class="highlighter-rouge">light sensor</code> module.</li>
   <li>Connect the <code class="highlighter-rouge">sound trigger</code> between the <code class="highlighter-rouge">power</code> and the <code class="highlighter-rouge">o21 number</code> module.</li>
 </ul>
 
