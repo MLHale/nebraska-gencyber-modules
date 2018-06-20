@@ -43,12 +43,9 @@ None
     - [Prerequisite lessons](#prerequisite-lessons)
     - [Table of Contents](#table-of-contents)
     - [Step 1: Learn all the words!](#step-1-learn-all-the-words)
-    - [Step 2: Gotta start somewhere](#step-2-gotta-start-somewhere)
-    - [Step 3: Count all the things!](#step-3-count-all-the-things)
-    - [Step 4: The world is more than True or False - Variable Inputs](#step-4-the-world-is-more-than-true-or-false---variable-inputs)
-    - [Step 5: Hey, Listen - Audio](#step-5-hey-listen---audio)
-    - [Step 6: Turning on an outlet with the IR transmitter](#step-6-turning-on-an-outlet-with-the-ir-transmitter)
-    - [Step 7: Motoring onward](#step-7-motoring-onward)
+    - [Step 2: Ciphers](#step-2-ciphers)
+    - [Step 3: Cryptanalysis](#step-3-cryptanalysis)
+    - [Step 4 : Practice decrypting and encrypting](#step-4-practice-decrypting-and-encrypting)
     - [Self Exploration](#self-exploration)
     - [Test Your Bits, err... Wits!](#test-your-bits-err-wits)
     - [Additional Resources](#additional-resources)
@@ -88,7 +85,7 @@ Language characteristics
 If spaces are left in, then characteristics like single letter and 2 letter words are still in tact and knowledge of these can be utilized to help in breaking
 Having a longer message only makes both things easier to spot
 
-### Step 4: Practice decrypting and encrypting Cleartext
+### Step 4: Practice decrypting and encrypting
 
 Using the cipher rings we will practice encoding and decoding.
 
@@ -101,7 +98,7 @@ In this lesson, we saw how components can be used to
 ### Additional Resources
 For more information, investigate the following:
 
-* [Littlebits](http://littlebits.cc/how-it-works) - Overview of concepts and available bits
+* None
 
 ## Lead Author
 
