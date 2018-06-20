@@ -10,7 +10,7 @@ title: Introduction to Raspberry Pi
 
 * __Least Privilege__: One of the ways to protect information is by limiting what people can see and do with your information and resources. The principle of least privilege says to allow the minimum number of privileges necessary to accomplish the task.
 
-* __Minimization__: Minimization refers to having the least functionality necessary in a program or device. The goal of minimization is to simplify and decrease the number of ways that software can be exploited. This can include turning off ports that are not needed, reducing the amount of code running on a machine, and/or turning off unneeded features in an application. This lesson focuses specifically on turning off ports that aren't in use. Unnecessairily open ports can lead to security issues.  
+* __Minimization__: Minimization refers to having the least functionality necessary in a program or device. The goal of minimization is to simplify and decrease the number of ways that software can be exploited. This can include turning off ports that are not needed, reducing the amount of code running on a machine, and/or turning off unneeded features in an application. This lesson focuses specifically on turning off ports that aren't in use. Unnecessarily open ports can lead to security issues.  
 
 * __Modularization__: The concept of modularity is like building blocks. Each block (or module) can be put in or taken out from a bigger project. Each module has its own separate function that is interchangeable with other modules.
 
@@ -204,7 +204,7 @@ Discuss to ensure all understand the material.
 ### Additional Resources
 For more information, investigate the following.
 
-* [CanaKit Pi Quick Start Guide](http://www.canakit.com/Media/CanaKit-Raspberry-Pi-Quick-Start-Guide-2.1.pdf)
+* [CanaKit Pi Quick Start Guide](http://www.canakit.com/Media/CanaKit-Raspberry-Pi-Quick-Start-Guide-3.2.pdf)
 
 ### Acknowledgements
 

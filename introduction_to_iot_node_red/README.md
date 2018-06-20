@@ -93,7 +93,7 @@ The first thing we need to do is install and update a few needed programs. As mu
 
 During the below installs respond yes to any prompts you receive during the following operations.
 
-* Install the Firefox Browser - Node-Red works best with Firefox.  Remember we need to use the command `sudo` to preface the install command due to the Raspberry Pi implementing the Cybersecurity First Principle of __Least Privilege__
+* Install the Firefox Browser - Node-Red works best with Firefox.  Remember we need to use the command `sudo` to preface the install command due to the Raspberry Pi implementing the Cybersecurity First Principle of __Least Privilege__.
 
 ```bash
 sudo apt-get install firefox-esr
@@ -132,7 +132,7 @@ On the Raspberry Pi desktop select _Menu_, _Internet_, _Firefox ESR_
 ### Step 4: Create an IFTTT account
 IFTTT (If This Then That) is a cloud service that allows us to automate actions, if the service receives a certain input, then it will execute a pre-selected action.  We will use the IFTTT service with Node-Red to interface with some common cloud services.
 
-* In Firefox, navigate to https://littlebits.cc/login and click _Sign up_
+* In Firefox, navigate to https://ifttt.com and click _Sign up_
 * Walk through the online instructions to create your account
 * Once registration is complete, click search and enter Webhooks
 
@@ -155,7 +155,7 @@ Programs in Node-Red are called flows and they can be very simple or very comple
 With those principles in mind, lets start your first flow.
 
 * Open a new tab in Firefox (keep the IFTTT tab open for now) and enter the address __http://127.0.0.1:1880__, this will bring up the web page for the Node-Red server running on _your_ Raspberry Pi.  `127.0.0.1` is always the local address of the computer you are using.
-* Drag a __timestamp__ node from the left pane, called the palette, into the flow
+* Drag a __inject__ node from the left pane, called the palette, into the flow, once you drag it into the field it's title will change to __timestamp__
 
 ![Timestamp](img/timestamp.png)
 
