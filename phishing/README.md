@@ -8,5 +8,6 @@ Phishing is an attempt to deceive an individual using fraudulent emails or websi
 This module has three parts:
 
 1. [URL Analysis](../url-analysis)
-2. [Email Analysis](../email-headeranalysis)
-3. [Obfuscation, Clickjacking and OSINT gathering](../url-analysis-advanced)
+2. [URL Analysis (Middle School)](../url-analysis-middle-school)
+3. [Email Analysis](../email-headeranalysis)
+4. [Obfuscation, Clickjacking and OSINT gathering](../url-analysis-advanced)

@@ -110,24 +110,18 @@ Pretty simple. Notice we can **chain the output modules together** (```bright le
 Now, lets switch up our circuit a bit.
 
 * Find the pink ```sound trigger``` input module
-* Find the pink ```light sensor``` input module
-
-Lets swap some components around.
-
 * Remove the ```led``` module.
+* Add the `sound trigger` between the `o21 number` and the `button`
 
-Press the button. Everything still works!
+Press the button. Does it work? 
 
-* Connect the ```light sensor``` to the ```power``` and then to the ```button```
+* tap the table and hold the button down
+* Does it work now?
 
-Press the button. Does it work? How about if you cover up the light sensor? The simple functionality of each component is an example of `simplicity`.
-
-This shows you that you can also **chain multiple input modules together** and their **total behavior is a combination of their input designs**. In this case, our counter only worked if the light was detected **AND** the button was pressed. Allowing each component to hand its own functionality is an example of `resource encapsulation` - since each component encapsulates the code and components needed to do its job.
+This shows you that you can also **chain multiple input modules together** and their **total behavior is a combination of their input designs**. In this case, our counter only worked if the light was detected **AND** the button was pressed. Allowing each component to hand its own functionality is an example of `resource encapsulation` - since each component encapsulates the code and components needed to do its job. The simple functionality of each component is an example of `simplicity`.	
 
 Lets try one more combo:
-
 * Remove the ```button``` module.
-* Remove the ```light sensor``` module.
 * Connect the ```sound trigger``` between the ```power``` and the ```o21 number``` module.
 
 Snap your fingers or tap the table near your device.

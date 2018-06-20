@@ -3,8 +3,6 @@ layout: page
 title: Understanding REST and APIs
 ---
 
-# Exchanging information online with REST and APIs
-
 ### Cybersecurity First Principles in this lesson
 
 * __Abstraction__: An abstraction is a representation of an object or concept. It could be something such as a door, a speedometer, or a data structure in computer science. Abstraction decouples the design from the implementation. The gauges in an automobile are an abstraction of the performance of a car. A map is an abstraction of the earth.
@@ -71,8 +69,8 @@ You should complete the [Intro to components using Littlebits Droids](../intro_t
 ### Step 1: Background
 Before we get started, lets talk about what an `API` is.
 
-> This background text and its associated images are modified for this setting by Matt Hale. Modifications are licensed under creative commons share-alike. The original material it is based upon was created by the Mozilla foundation and its contributors. Credit: https://developer.mozilla.org/en-US/docs/Web/HTTP/Overview#
-https://developer.mozilla.org/en-US/docs/Web/HTTP/Messages
+> This background text and its associated images are modified for this setting by Matt Hale. Modifications are licensed under creative commons share-alike. The original material it is based upon was created by the Mozilla foundation and its contributors. Credit: [https://developer.mozilla.org/en-US/docs/Web/HTTP/Overview](https://developer.mozilla.org/en-US/docs/Web/HTTP/Overview#)
+[https://developer.mozilla.org/en-US/docs/Web/HTTP/Messages](https://developer.mozilla.org/en-US/docs/Web/HTTP/Messages)
 
 **HTTP** is a `protocol` which allows the fetching of resources, such as HTML documents. It is the foundation of any data exchange on the Web and a client-server protocol, which means requests are initiated by the recipient, usually the Web browser. A complete document is reconstructed from the different sub-documents fetched, for instance text, layout description, images, videos, scripts, and more.
 
@@ -181,7 +179,7 @@ APIs allow you to get and save data back to the application, without needing to 
 
 ...Enough talk! Lets look at an API!
 
-Open Chrome and go to http://developers.littlebitscloud.cc/. You are looking at the `cloudbit` API. This is what `IFTTT` uses to handle requests and responses.
+Open Chrome and go to [http://developers.littlebitscloud.cc/](http://developers.littlebitscloud.cc/). You are looking at the `cloudbit` API. This is what `IFTTT` uses to handle requests and responses.
 
 You can see that Littlebits tells us all about how to interact with our `cloudbit` using the API. Lets try it out.
 
@@ -190,7 +188,7 @@ Secure APIs don't just accept requests and provide responses to anyone. APIs use
 
 To ensure that only we can program our cloudbit, Littlebits provides something called an `API Key`. This key is a really long alphanumerical string that would be hard to crack. Lets find our key, so we can issue commands to our cloudbit.
 
-Go to http://control.littlebitscloud.cc/
+Go to [http://control.littlebitscloud.cc/](http://control.littlebitscloud.cc/)
 
 Login using the account you used in the [previous lesson](../web_services_and_iot_using_littlebits_and_ifttt/)
 
@@ -203,9 +201,9 @@ Now that we have our `API Key`, lets use it to make a request.
 
 POSTMAN is a REST client, that allows end users to make requests to test their APIs. Lets use it to test the cloudbit API. Launch POSTMAN by typing ```chrome://apps``` into the Chrome address bar, hit enter, and then click the POSTMAN icon.
 
-![Loading Postman](./img/postman1.png)
+![Loading Postman](../img/postman1.png)
 
-In POSTMAN, lets build a new GET request targeted at the URL https://api-http.littlebitscloud.cc/v2/devices
+In POSTMAN, lets build a new GET request targeted at the URL [https://api-http.littlebitscloud.cc/v2/devices](https://api-http.littlebitscloud.cc/v2/devices)
 
 * Find and click the ```headers``` button and add the following
 
@@ -219,7 +217,7 @@ You can add the header as a key value pair, where the key is ```Authorization```
 
 If all goes well you should see something like:
 
-![GET request](./img/postman2.png)
+![GET request](../img/postman2.png)
 
 * The `response` you got back, when you sent the GET request contains the name and meta information for each of the `cloudbits` currently connected to your account. In the screenshot above, the JSON data returned for me was:
 
@@ -251,14 +249,14 @@ https://api-http.littlebitscloud.cc/v2/devices/<your-device-id>
 
 You should get the same device info back, but notice that it is now not in square brackets - this means it is a singleton instead of a list.
 
-![GET request](./img/postman3.png).
+![GET request](../img/postman3.png).
 
 ### Step 6: First POST request to turn the device on
 Now that we have the basics of GET requests to access device info, lets try issuing a POST request to actually make our device do something.
 
 * Make sure you arrange your Littlebits as shown in the following picture:
 
-![Littlebits Setup](./img/configuration.jpg)
+![Littlebits Setup](../img/configuration.jpg)
 
 * make a POST request using POSTMAN to set the voltage output on the cloudbit for a few seconds
 
@@ -275,7 +273,7 @@ Authorization: Bearer <your access token>
 Content-type: application/json
 ```
 
-![POST request](img/postman4.png)
+![POST request](../img/postman4.png)
 
 Now click on the Body tab (next to the Headers tab). Select the Raw input option and type the JSON shown below to tell `cloudbit` to turn the LED on at 100% brightness and to stay on for 5 seconds.
 
@@ -287,7 +285,7 @@ Body:
 }
 ```
 
-![POST request](img/postman5.png)
+![POST request](../img/postman5.png)
 
 Now send the request
 You should get back:
@@ -308,7 +306,7 @@ https://www.qzzr.com/c/quiz/429280/8f69a8f7-0a69-4efa-9c3e-2aa38944ed1d
 
 ### Step 7: Adding a subscriber to handle incoming events.
 Lets add a subscriber to catch input events going to the `cloudbit`:
-* Make a POST request to https://api-http.littlebitscloud.cc/v2/subscriptions
+* Make a POST request to [https://api-http.littlebitscloud.cc/v2/subscriptions](https://api-http.littlebitscloud.cc/v2/subscriptions)
 * In our case we want to make a server listen for the cloudbit, so lets use a URI endpoint as the subscriber
 
 same headers as before
@@ -326,8 +324,8 @@ But where is our server? We don't have one yet. We will talk about deploying a s
 ### Additional Resources
 For more information, investigate the following.
 
-* https://developer.mozilla.org/en-US/docs/Web/HTTP/Overview - Overview of basic HTTP operations
-* https://developer.mozilla.org/en-US/docs/Web/HTTP/Messages - Overview of request and response messages in HTTP
+* [https://developer.mozilla.org/en-US/docs/Web/HTTP/Overview](https://developer.mozilla.org/en-US/docs/Web/HTTP/Overview) - Overview of basic HTTP operations
+* [https://developer.mozilla.org/en-US/docs/Web/HTTP/Messages](https://developer.mozilla.org/en-US/docs/Web/HTTP/Messages) - Overview of request and response messages in HTTP
 * [http://developers.littlebitscloud.cc/](http://developers.littlebitscloud.cc/) - API reference for the Littlebits web service.
 
 ## Lead Author
