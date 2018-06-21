@@ -9,6 +9,7 @@ Have questions or comments about the content? Used our content and want more? Wa
 Assistant Professor of Cybersecurity
 University of Nebraska at Omaha.
 [mlhale@unomaha.edu](mailto:mlhale@unomaha.edu)
+
 Twitter - [@mlhale](https://twitter.com/mlhale_)
 
 # License
