@@ -1,4 +1,8 @@
-# Introduction to the Internet of Things (IoT), Node Red, and the Raspberry Pi
+---
+layout: page
+title: Introduction to the Internet of Things (IoT), Node Red, and the Raspberry Pi
+---
+
 
 ### Cybersecurity First Principles in this lesson
 
@@ -18,7 +22,7 @@ to use the resource are packaged into a single self-contained component. The goa
 ### Introduction
 Lets build an IoT device – wait, just what is the IoT – and why should I care?  I’m afraid to ask – is it secure?
 
-![IoT Security](img/no_s_in_iot.jpg)
+![IoT Security](../img/no_s_in_iot.jpg)
 
 In this lesson, we will take a close look at IoT and the associated security implications by building a simple IoT application on a Raspberry Pi using a program called Node-Red.
 
@@ -38,45 +42,45 @@ We will continue our work towards our GenCyber camp purpose with the below goals
 
  ### Table of Contents
  <!-- TOC START min:1 max:3 link:true update:true -->
- - [Cybersecurity First Principles in this lesson](#cybersecurity-first-principles-in-this-lesson)
- - [Introduction](#introduction)
- - [Goals](#goals)
- - [Materials Required](#materials-required)
- - [Prerequisite lessons](#prerequisite-lessons)
- - [What is the IoT](#what-is-the-iot)
- - [A Simple IoT Example](#a-simple-iot-example)
- - [Step 1: Install and update needed programs](#step-1-install-and-update-needed-programs)
- - [Step 2: Start Node-Red](#step-2-start-node-red)
- - [Step 3: Start Firefox](#step-3-start-firefox)
- - [Step 4: Create an IFTTT account](#step-4-create-an-ifttt-account)
- - [Step 5: Create your first Node-Red flow](#step-5-create-your-first-node-red-flow)
- - [Step 6: Link flow to IFTTT](#step-6-link-flow-to-ifttt)
- - [Step 7: Build an IFTTT Recipe](#step-7-build-an-ifttt-recipe)
- - [Step 8: Test it!](#step-8-test-it)
- - [A Second Example](#a-second-example)
- - [Step 1: Add a new flow](#step-1-add-a-new-flow)
- - [Step 2: Build your new flow](#step-2-build-your-new-flow)
- - [Step 3: Test it!](#step-3-test-it)
- - [Evaluation](#evaluation)
- - [Additional Resources](#additional-resources)
- - [Acknowledgements](#acknowledgements)
- - [License](#license)
+    - [Cybersecurity First Principles in this lesson](#cybersecurity-first-principles-in-this-lesson)
+    - [Introduction](#introduction)
+    - [Goals](#goals)
+    - [Materials Required](#materials-required)
+    - [Prerequisite lessons](#prerequisite-lessons)
+    - [What is the IoT](#what-is-the-iot)
+    - [A Simple IoT Example](#a-simple-iot-example)
+    - [Step 1: Install and update needed programs](#step-1-install-and-update-needed-programs)
+    - [Step 2: Start Node-Red](#step-2-start-node-red)
+    - [Step 3: Start Firefox](#step-3-start-firefox)
+    - [Step 4: Create an IFTTT account](#step-4-create-an-ifttt-account)
+    - [Step 5: Create your first Node-Red flow](#step-5-create-your-first-node-red-flow)
+    - [Step 6: Link flow to IFTTT](#step-6-link-flow-to-ifttt)
+    - [Step 7: Build an IFTTT Recipe](#step-7-build-an-ifttt-recipe)
+    - [Step 8: Test it!](#step-8-test-it)
+    - [A Second Example](#a-second-example)
+    - [Step 1: Add a new flow](#step-1-add-a-new-flow)
+    - [Step 2: Build your new flow](#step-2-build-your-new-flow)
+    - [Step 3: Test it!](#step-3-test-it)
+    - [Evaluation](#evaluation)
+    - [Additional Resources](#additional-resources)
+    - [Acknowledgements](#acknowledgements)
+    - [License](#license)
 
- <!-- TOC END -->
+<!-- TOC END -->
 
 ### What is the IoT
 
  The IoT is the term applied to the many internet connected devices now occupying space in our lives.  Take a look through your house. You may have phones, tablets, laptops, fitbits, televisions, thermostats, smoke detectors, bathroom scales, refrigerators, light bulbs, and who knows what else all connected to the internet.
 
- ![Internet of Things](img/Internet_of_Things.png)
+ ![Internet of Things](../img/Internet_of_Things.png)
 
  These devices communicate with you, perhaps a cloud server, maybe even each other.  Although some devices such as phones or tablets have very powerful operating systems and security features, many IoT devices such as thermostats or fitbits don’t have security features due to the added cost and drain on batteries.  Is that a problem?  The general consensus amongst security experts is this is like running with scissors.  It may help you get a task done but at some point, you may find the results painful.  Where do we start with addressing the issue?  Let’s start by taking a very generalized look at an IoT device.
 
- ![IoT Block Diagram](img/IoT_block.png)
+ ![IoT Block Diagram](../img/IoT_block.png)
 
  In a very general sense an IoT device is a device that may have sensors (_inputs_) such as thermometers or light detectors, actuators (_outputs_) such as switches or alarms, a processor (like your _Raspberry Pi_ running _Node-Red_) to make sense of the data and direct actions, and a gateway (_network connection_) to interact with users and other systems.  An IoT device can make our lives much easier, or if someone who wants to do harm gets access to the device they could steal data or take control of objects in your house or business.
 
-![IoT Ransomware](img/iot_ransom.png)
+![IoT Ransomware](../img/iot_ransom.png)
 
 * Discuss with students some of the ways compromise of IoT devices could lead to harm, perhaps through information leakage or loss of control of devices.
 
@@ -131,11 +135,11 @@ IFTTT (If This Then That) is a cloud service that allows us to automate actions,
 * Walk through the online instructions to create your account
 * Once registration is complete, click search and enter Webhooks
 
-![Webhooks](img/webhooks.png)
+![Webhooks](../img/webhooks.png)
 
 * Click the _Connect_ button
 
-![Connect Webhooks](img/connect_webhooks.png)
+![Connect Webhooks](../img/connect_webhooks.png)
 
 * We are done with the IFTTT web site for now but don't close the tab yet, we'll be back here shortly
 
@@ -152,17 +156,17 @@ With those principles in mind, lets start your first flow.
 * Open a new tab in Firefox (keep the IFTTT tab open for now) and enter the address __http://127.0.0.1:1880__, this will bring up the web page for the Node-Red server running on _your_ Raspberry Pi.  `127.0.0.1` is always the local address of the computer you are using.
 * Drag a __inject__ node from the left pane, called the palette, into the flow, once you drag it into the field it's title will change to __timestamp__
 
-![Timestamp](img/timestamp.png)
+![Timestamp](../img/timestamp.png)
 
 You will notice on the right-hand side of the screen a description of the node is given.  This particular node returns the current system time when you click the button on the left side of the node.  For this flow we don't care about the time on the timestamp, we will just use it to indicate the button was pressed.
 
 * Now scroll down through the palette and locate the IFTTT node under the output section and drag it into the flow.
 
-![IFTTT](img/IFTTT.png)
+![IFTTT](../img/IFTTT.png)
 
 * Now we need to connect the two nodes.  Click the dot on the right side of the inject node and drag a connection line to the dot on the left side of the IFTTT node.
 
-![Connection](img/connection.png)
+![Connection](../img/connection.png)
 
 Your flow is now built but we still need to link it to your account on IFTTT.
 
@@ -171,21 +175,21 @@ Remember the Cybersecurity First Principles of __Abstraction__ and __Resource En
 
 * Double click on the IFTTT node, you will see a dialog box displayed which allows us to give the node some of the information it needs to do its job.  Notice, you are not setting variables directly but entering them through a dialog.  This is __Resource Encapsulation__ and allows error checking and security checks to be done behind the scenes.
 
-![IFTTT Config](img/IFTTT_config1.png)
+![IFTTT Config](../img/IFTTT_config1.png)
 
 Now we need to fill in the first field named key.  This is a unique identifier which links this flow to _your_ IFTTT account.  To get this value you will need to go back to the browser tab for IFTTT.com
 
 * Once you are back at IFTTT click the settings button.  The identifier you want is the last part of the URL which is blocked out on the image below.  Everyone's key is different, you need to use your key to link to your IFTTT account.  Select and copy this key.
 
-![IFTTT key](img/IFTTT_key.png)
+![IFTTT key](../img/IFTTT_key.png)
 
 * Go back to the Node-Red tab in your browser and click the key field.  Click __Add new ifttt-key...__ and then click the pencil next to the field.  
 
-![Node Red Key Entry 1](img/enter_key.png)
+![Node Red Key Entry 1](../img/enter_key.png)
 
 * Paste the key you just copied from IFTTT into the field.  Click __Add__.
 
-![Node Red Key Entry 2](img/enter_key2.png)
+![Node Red Key Entry 2](../img/enter_key2.png)
 
 * Leave the Event Name field with the default `event1`.  You can change this to something more descriptive but remember what it is because we will need it later.
 
@@ -197,37 +201,37 @@ Your flow is now built and configured but we need to tell the IFTTT service what
 * Go back to your IFTTT browser tab.  If it got closed, use the address https://ifttt.com/my_applets
 * Click on __New Applet__
 
-![Start Recipe](img/start_recipe.png)
+![Start Recipe](../img/start_recipe.png)
 
 * Click on the __+ this__ to set the trigger
 
-![This portion](img/this.png)
+![This portion](../img/this.png)
 
 * In the __Choose a Service__ search field enter Webhooks and select the Webhooks service displayed
 
-![Choose Service](img/choose_service.png)
+![Choose Service](../img/choose_service.png)
 
 * On the choose a trigger screen select __Receive a web request__
 
-![Choose trigger](img/choose_trigger.png)
+![Choose trigger](../img/choose_trigger.png)
 
 * In the Event Name field enter `event1`.  If you named your event something else in Node-Red you should enter that here
 
-![Trigger event name](img/trigger_event_name.png)
+![Trigger event name](../img/trigger_event_name.png)
 
 * Click __Create Trigger__
 
 * You now get to tell IFTTT what it should do when it receives the trigger.  Take a moment to look through all the options.  We are going to send an email.  Click the email service tile.
 
-![Email action](img/email_action.png)
+![Email action](../img/email_action.png)
 
 * You now have the opportunity to customize what the email will say when it is sent.  You can pass data between Node-red and IFTTT.  For now, we will use the default values. This will send an email to the address you used to register when you created your IFTTT account. Click __Create Action__.
 
-![Complete action](img/complete_action.png)
+![Complete action](../img/complete_action.png)
 
 * Congratulations!  You have built your first recipe.  Click __Finish__
 
-![Finish action](img/finish.png)
+![Finish action](../img/finish.png)
 
 ### Step 8: Test it!
 We have now built our flow and the supporting recipe.  To test the flow we must first deploy it and then activate the timestamp node.
@@ -235,7 +239,7 @@ We have now built our flow and the supporting recipe.  To test the flow we must 
 * Click the __Deploy__ button at the top right of the screen
 * Click the button on the left side of the timestamp node
 
-![Test It](img/test.png)
+![Test It](../img/test.png)
 
  If you did everything correctly you will receive an email telling you that the timestamp button was pressed.  Although this was very simple and perhaps not very useful think about what how this could be expanded.  Maybe instead of clicking the timestamp node, the IFTTT is triggered by an external switch that activates whenever your pet goes out their pet door.  Now your pet will send you an email when it goes out into the yard!
 
@@ -248,12 +252,12 @@ We will begin by adding a new flow, that way the one you created will still be a
 
 * Click the plus to the right of the flow names, this will open a new tab for your new flow.
 
-![New flow](img/new_flow.png)
+![New flow](../img/new_flow.png)
 
 ### Step 2: Build your new flow
 You've already built one flow, this one will follow the same procedures.  Add an inject node, a camerapi node (under the Raspberry Pi section of the pallet), and connect them.  Your completed flow should look like the below.
 
-![Camera flow](img/camera_flow.png)
+![Camera flow](../img/camera_flow.png)
 
 ### Step 3: Test it!
 We are going to use the default settings for the nodes for this flow.  The camera node, when activated, will take a photo with the Pi's camera, give the photo a unique (and very long) filename, and store it in the `/home/pi/pictures` directory.  You can configure the node to give custom file names and set picture formats, sizes, and orientations.
@@ -285,7 +289,7 @@ For more information, investigate the following:
 ### License
 [Nebraska GenCyber](https://github.com/MLHale/nebraska-gencyber) <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /></a><br /> is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</a>.
 
-Overall content: Copyright (C) 2017-2018  [Dr. Matthew L. Hale](http://faculty.ist.unomaha.edu/mhale/), [Dr. Robin Gandhi](http://faculty.ist.unomaha.edu/rgandhi/), and [Doug Rausch](http://www.bellevue.edu/about/leadership/faculty/rausch-douglas).
+Overall content: Copyright (C) 2017-2018  [Dr. Matthew L. Hale](http://faculty.ist.unomaha.edu/mhale/), [Dr. Robin Gandhi](http://faculty.ist.unomaha.edu/rgandhi/), [Dr. Briana B. Morrison](http://www.brianamorrison.net), and [Doug Rausch](http://www.bellevue.edu/about/leadership/faculty/rausch-douglas).
 
-Lesson content: Copyright (C) [Your name here](your site here) 2017-2018.
+Lesson content: Copyright (C) Doug Rausch 2017-2018.
 <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /></a><br /><span xmlns:dct="http://purl.org/dc/terms/" property="dct:title">This lesson</span> is licensed by the author under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</a>.

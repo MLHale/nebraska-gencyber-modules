@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+  <head>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-107147738-2"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-107147738-2');
+  </script>
+
+  <link href="http://gmpg.org/xfn/11" rel="profile">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  
+  <!-- Enable responsiveness on mobile devices-->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+
+  <title>
+    
+      Introduction to Raspberry PI &middot; 
+    
+  </title>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="https://mlhale.github.io/nebraska-gencyber-modules/public/css/poole.css">
+  <link rel="stylesheet" href="https://mlhale.github.io/nebraska-gencyber-modules/public/css/syntax.css">
+  <link rel="stylesheet" href="https://mlhale.github.io/nebraska-gencyber-modules/public/css/hyde.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=PT+Sans:400,400italic,700|Abril+Fatface">
+
+  <!-- Icons -->
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/public/apple-touch-icon-144-precomposed.png">
+  <link rel="shortcut icon" href="/public/favicon.ico">
+  <script async defer src="https://buttons.github.io/buttons.js"></script>
+                                
+  <!-- RSS -->
+  <link rel="alternate" type="application/rss+xml" title="RSS" href="/atom.xml">
+</head>
+
+
+  <body>
+
+    <div class="sidebar">
+  <div class="container sidebar-sticky">
+    <div class="sidebar-about">
+      <h1>
+
+      </h1>
+      <p class="lead"></p>
+    </div>
+
+    <nav class="sidebar-nav">
+      <a class="sidebar-nav-item" href="https://github.com/MLHale/nebraska-gencyber-modules">Nebraska GenCyber</a>
+      <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"></a>is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</a>. <img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /> You are encouraged to reuse, remix, and add to the lessons contained herein - just remember to properly provide attribution.
+      <br><br>
+      Overall content: Copyright (C) 2017-2018  <a href="http://faculty.ist.unomaha.edu/mhale/">Dr. Matthew L. Hale</a>, <a href="http://faculty.ist.unomaha.edu/rgandhi/">Dr. Robin Gandhi</a>, <a href="http://www.brianamorrison.net">Dr. Briana B. Morrison</a>, and <a href="http://www.bellevue.edu/about/leadership/faculty/rausch-douglas">Doug Rausch</a>. <br>
+      Individual content: Copyright (C) 2017-2018 as listed in each lesson.
+    </nav>
+
+    <a class="github-button" href="https://github.com/mlhale/nebraska-gencyber-modules" data-icon="octicon-star" data-size="large" aria-label="Star mlhale/nebraska-gencyber-modules on GitHub">Star</a>
+    <a class="github-button" href="https://github.com/mlhale/nebraska-gencyber-modules/fork" data-icon="octicon-repo-forked" data-size="large" aria-label="Fork mlhale/nebraska-gencyber-modules on GitHub">Fork</a>
+    <a class="github-button" href="https://github.com/mlhale/nebraska-gencyber-modules/issues" data-icon="octicon-issue-opened" data-size="large" aria-label="Issue mlhale/nebraska-gencyber-modules on GitHub">Issue</a>
+    <p>Site &copy; 2018 <a href="http://faculty.ist.unomaha.edu/mhale/">Matt Hale</a>. All rights reserved.</p>
+    
+  </div>
+</div>
+
+
+    <div class="content container">
+      <div class="page">
+  <h1 class="page-title">Introduction to Raspberry PI</h1>
+  <h3 id="cybersecurity-first-principles-in-this-lesson">Cybersecurity First Principles in this lesson</h3>
+
+<ul>
+  <li>
+    <p><strong>Abstraction</strong>: An abstraction is a representation of an object or concept. It could be something such as a door, a speedometer, or a data structure in computer science. Abstraction decouples the design from the implementation. The gauges in an automobile are an abstraction of the performance of a car. A map is an abstraction of the earth.</p>
+  </li>
+  <li>
+    <p><strong>Least Privilege</strong>: One of the ways to protect information is by limiting what people can see and do with your information and resources. The principle of least privilege says to allow the minimum number of privileges necessary to accomplish the task.</p>
+  </li>
+  <li>
+    <p><strong>Minimization</strong>: Minimization refers to having the least functionality necessary in a program or device. The goal of minimization is to simplify and decrease the number of ways that software can be exploited. This can include turning off ports that are not needed, reducing the amount of code running on a machine, and/or turning off unneeded features in an application. This lesson focuses specifically on turning off ports that aren’t in use. Unnecessairily open ports can lead to security issues.</p>
+  </li>
+  <li>
+    <p><strong>Modularization</strong>: The concept of modularity is like building blocks. Each block (or module) can be put in or taken out from a bigger project. Each module has its own separate function that is interchangeable with other modules.</p>
+  </li>
+</ul>
+
+<h3 id="introduction">Introduction</h3>
+<p>This lesson will introduce students to the Raspberry Pi platform, discuss its components and how they related to the Cybersecurity First Principles.  Students will demonstrate their understanding of the component relationships by building a Raspberry Pi from a kit, booting it up, and installing updates.  The Raspberry Pi will be the student’s primary computer for developing their own Internet of Things (IoT) app.</p>
+
+<h3 id="goals">Goals</h3>
+<p>By the end of this lesson students will be able to:</p>
+<ul>
+  <li>Assemble a Raspberry Pi</li>
+  <li>Identify key components of the Raspberry Pi</li>
+  <li>Apply the basic functions of a Raspberry Pi</li>
+  <li>Apply the Cybersecurity First Principles of modularity, abstraction, and least privilege to the Raspberry Pi platform</li>
+</ul>
+
+<h3 id="materials-required">Materials Required</h3>
+<ul>
+  <li>Raspberry Pi kit (Pi, case, SD card, heat sinks, power cable, HDMI cable)</li>
+  <li>DVI to HDMI converter</li>
+  <li>Keyboard</li>
+  <li>Mouse</li>
+  <li>Quick Start Guide</li>
+  <li>Optional: Internet connection to complete updates</li>
+  <li>Optional: Raspberry Pi camera and poster putty</li>
+</ul>
+
+<h3 id="prerequisite-lessons">Prerequisite Lessons</h3>
+<ul>
+  <li>None</li>
+</ul>
+
+<h3 id="table-of-contents">Table of Contents</h3>
+<!-- TOC START min:1 max:3 link:true update:true -->
+<ul>
+  <li><a href="#cybersecurity-first-principles-in-this-lesson">Cybersecurity First Principles in this lesson</a></li>
+  <li><a href="#introduction">Introduction</a></li>
+  <li><a href="#Goals">Goals</a></li>
+  <li><a href="#materials-required">Materials Required</a></li>
+  <li><a href="#prerequisite-lessons">Prerequisite lessons</a></li>
+  <li><a href="#step-1-distribute-the-raspberry-pi-kit-and-other-materials">Step 1: Distribute the Raspberry Pi kit and other materials</a></li>
+  <li><a href="#step-2-unbox-the-raspberry-pi">Step 2: Unbox the Raspberry Pi</a></li>
+  <li><a href="#step-3-install-the-heat-sinks">Step 3: Install the heat sinks</a></li>
+  <li><a href="#step-4-install-the-micro-SD-card-into-the-raspberry-pi">Step 4: Install the micro SD card into the Raspberry Pi</a></li>
+  <li><a href="#step-5-install-the-raspberry-pi-camera">Step 5: Install the Raspberry Pi camera</a></li>
+  <li><a href="#step-6-install-the-raspberry-pi-into-the-case">Step 6: Install the Raspberry Pi into the case</a></li>
+  <li><a href="#step-7-install-the-keyboard-and-mouse">Step 7: Install the keyboard and mouse</a></li>
+  <li><a href="#step-8-install-the-hdmi-cable">Step 8: Install the HDMI cable</a></li>
+  <li><a href="#step-9-the-moment-you-have-been-waiting-for-turn-on-the-raspberry-pi!">Step 9: The moment you have been waiting for - turn on the Raspberry Pi!</a></li>
+  <li><a href="#step-10-updating-the-raspberry-pi-software">Step 10: Updating the Raspberry Pi software</a></li>
+  <li><a href="#step-11-shutdown-the-raspberry-pi">Step 11: Shutdown the Raspberry Pi</a></li>
+  <li><a href="#additional-resources">Additional Resources</a></li>
+  <li><a href="#acknowledgements">Acknowledgements</a></li>
+  <li><a href="#license">License</a></li>
+</ul>
+
+<!-- TOC END -->
+
+<h3 id="step-1-distribute-the-raspberry-pi-kit-and-other-materials">Step 1: Distribute the Raspberry Pi kit and other materials</h3>
+<p>The Raspberry Pi kit goes together very quickly; the main thing to remember is to ensure each student has ample room to spread out their parts and work.  Some of the parts are small and once the students get started it often looks like Christmas morning with boxes and packing paper being flung everywhere.  What tends to work well is to only unbox what is needed, as it’s needed, explain the part, and install it. After each step, ensure everyone is caught up before moving on.</p>
+
+<h3 id="step-2-unbox-the-raspberry-pi">Step 2: Unbox the Raspberry Pi</h3>
+<p>Have the students unbox the Raspberry Pi and identify/discuss with them the various components shown in the diagram below:</p>
+
+<p><img src="img/pi_comp.png" alt="components" /></p>
+
+<ul>
+  <li>GPIO: General Purpose Input/Output, this is where you can interface various projects to the Pi</li>
+  <li>USB Ports: Pretty much any USB device can go here, we will use it for a keyboard and mouse</li>
+  <li>Ethernet Port: Connection for a network</li>
+  <li>Audio and composite video: Audio output for speakers or headphones and composite video</li>
+  <li>Camera Connector: Add a camera here to take pictures</li>
+  <li>HDMI port: High Definition Multimedia Interface for video output</li>
+  <li>5V Micro USB: Your power cable will go here</li>
+  <li>Micro SD card slot: The Pi uses micro SD cards store the operating system, applications, and user data</li>
+  <li>Display Connector: An optional display port, we won’t use it</li>
+  <li>WiFi Antenna: For communicating with a WiFi access point</li>
+  <li>Broadcom CPU: This is the brains of the Pi, it makes everything work together</li>
+</ul>
+
+<p>This is an example of <strong>Modularity</strong>.  The Raspberry Pi board has several components, each doing a specialized function.  You will later add components such as a camera, keyboard, mouse, and power supply.  At a higher level, the Raspberry Pi is a modular component in and of itself, fitting into a larger IoT application.  The principle of <strong>Abstraction</strong> also applies here as the Raspberry Pi itself is an abstraction of all the supporting components doing the input/output/storage and processing functions.</p>
+
+<h3 id="step-3-install-the-heat-sinks">Step 3: Install the heat sinks</h3>
+<p>Remove the backing paper from the heat sinks and stick them to the chips as shown in the picture below.  The heat sinks look like silver plates with fins off the top.  Heat sinks will help keep the chips below them cool by spreading the chips heat out over a larger area and exposing it to more air.  Make sure that the larger heatsink goes on the larger chip, and the smaller heatsink on the smaller chip.</p>
+
+<p><img src="img/heat_sink.jpg" alt="heat sinks" /></p>
+
+<h3 id="step-4-install-the-micro-sd-card-into-the-raspberry-pi">Step 4: Install the micro SD card into the Raspberry Pi</h3>
+<p>The micro SD card holds both Raspian, an operating system based on Debian Linux designed specifically for the Raspberry Pi, as well as any installed applications and user data.  Due to its small size and accessibility, it is possible to have multiple SD cards with different operating systems and applications loaded.  Simply removing the SD card and replacing with a different one can give the user a completely new computer environment.  This is another example of the <strong>modularity</strong> principle.</p>
+
+<ul>
+  <li>Insert the SD card as shown in the diagram below. <em>Note the direction of the printing on the card</em></li>
+</ul>
+
+<p><img src="img/pi_sd.jpg" alt="SD Card" /></p>
+
+<h3 id="step-5-optional-install-the-raspberry-pi-camera">Step 5 (optional): Install the Raspberry Pi camera</h3>
+<p>The camera provides the ability for the Raspberry Pi to take photos and video.  This is another example of modularity.  The camera provides a special capability not native to the Pi, cutting down the cost of the basic Pi.</p>
+
+<ul>
+  <li>The camera is connected to the Raspberry Pi by connecting its ribbon cable to the camera connector port between the audio connector and the HDMI port</li>
+  <li>Follow the instructions which come with the camera to connect the ribbon cable.</li>
+</ul>
+
+<p><img src="img/install_camera.jpg" alt="Install Camera" /></p>
+
+<h3 id="step-6-install-the-raspberry-pi-into-the-case">Step 6: Install the Raspberry Pi into the case</h3>
+<p>The case provides protection for the Raspberry Pi.  It comes in three parts.  If you are actively using the camera or GPIO ports the cover can be left off.</p>
+<ul>
+  <li>Insert the Pi into the case base, starting by aligning the SD card with the matching opening</li>
+</ul>
+
+<p><img src="img/install_board.jpg" alt="Install Board" /></p>
+
+<ul>
+  <li>Place the case middle collar over the base, passing the camera through the appropriate opening and aligning and snapping in the tabs</li>
+</ul>
+
+<p><img src="img/install_ring.jpg" alt="Install Ring" /></p>
+
+<p>You have a couple options for mounting your camera for use:</p>
+<ul>
+  <li>Depending on the case and camera, the camera may slip into the camera tabs on the ring of the case but don’t force it. Some camera boards are too thick to fit.</li>
+</ul>
+
+<p><img src="img/case_mount.jpg" alt="Case Mount" /></p>
+
+<ul>
+  <li>Another option is to use poster putty as shown below to mount and point the camera.</li>
+</ul>
+
+<p><img src="img/case_putty_mount.jpg" alt="Case Putty Mount" /></p>
+
+<ul>
+  <li>If you are not using the GPIO pins or the camera, place the camera flat on the Pi and place the cover on the collar</li>
+</ul>
+
+<p><img src="img/install_cover.jpg" alt="Install Cover" /></p>
+
+<ul>
+  <li>You also have the option to pass the camera ribbon cable between the cover and the ring of the case and mount the camera on top of the case with poster putty.</li>
+</ul>
+
+<p><img src="img/cover_putty_mount.jpg" alt="Cover Putty Mount" /></p>
+
+<h3 id="step-7-install-the-keyboard-and-mouse">Step 7: Install the keyboard and mouse</h3>
+<ul>
+  <li>Plug the keyboard and mouse into a free USB port</li>
+</ul>
+
+<h3 id="step-8-install-the-hdmi-cable">Step 8: Install the HDMI cable</h3>
+<ul>
+  <li>Plug one end of the HDMI cable into the HDMI port on the Pi (refer to <a href="#step-2-unbox-the-raspberry-pi">Step 2</a> if you forget where that is)</li>
+  <li>If your monitor has an HDMI port then plug the free end of the HDMI cable into your monitor</li>
+  <li>If your monitor doesn’t have an HDMI port but has a DVI port then plug the free end of the HDMI cable into the DVI to HDMI converter and attach the DVI converter to your computer monitor</li>
+</ul>
+
+<h3 id="step-9-the-moment-you-have-been-waiting-for---turn-on-the-raspberry-pi">Step 9: The moment you have been waiting for - turn on the Raspberry Pi!</h3>
+<ul>
+  <li>Turn on your computer monitor</li>
+  <li>Plug the small end of the power cable into the Raspberry Pi</li>
+  <li>Plug the other end of the power cable into a power strip or wall socket</li>
+</ul>
+
+<p>With a brand new Raspberry Pi, although the operating system comes pre-loaded you will need to install it.</p>
+
+<ul>
+  <li>Select your proper language and keyboard at the bottom of the screen</li>
+  <li>Use your mouse to select the Raspian option in the dialog box, click the <strong>Install button</strong>, and confirm. Installation should take a few minutes</li>
+  <li>Click OK on the dialog box that pops up telling you the OS has installed successfully and your Pi should reboot</li>
+  <li>Before continuing make sure you have network connectivity following your local procedures for wifi or wired internet</li>
+</ul>
+
+<h3 id="configuring-the-camera-optional">Configuring the camera (optional)</h3>
+<p>Now we need to tell the Raspberry Pi that you have installed a camera.</p>
+
+<ul>
+  <li>Use the <em>Menu</em> dropdown to select <em>Preferences</em> and <em>Raspberry Pi Configuration</em></li>
+  <li>Select the <em>Interfaces</em> tab</li>
+  <li>Select <em>Camera Enable</em>, click OK, and reboot</li>
+</ul>
+
+<h3 id="step-10-updating-the-software">Step 10: Updating the software</h3>
+<p>Even though you just assembled a brand new Raspberry Pi, it’s a good idea to update the software on the system.  It’s very common that security updates or new application capabilities may have been recently developed but are not yet installed.</p>
+<ul>
+  <li>The default Raspberry Pi user is <em>pi</em> and default password is <em>raspberry</em></li>
+  <li>In its default configuration the Raspberry Pi logs in the user automatically. For now, we will leave this configuration in place</li>
+  <li>Start by opening a terminal window by clicking the terminal icon at the top of the screen as shown below.</li>
+</ul>
+
+<p><img src="img/terminal.png" alt="Terminal" /></p>
+
+<ul>
+  <li>Enter the following command
+    <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>apt-get update
+</code></pre></div>    </div>
+    <p>You will notice you get an error message. That is because installing or updating software requires administrative privileges.  Although the user <em>pi</em> is an administrator, the Raspberry Pi enforces the first principle of <strong>least privilege</strong> which says a user should have no more privileges than what is needed to do their job.  Generally, you do not need administrator privileges to use the Raspberry Pi so by default they are not provided.  We need to tell the Pi we want to use administrative privileges by using the command <code class="highlighter-rouge">sudo</code>, which is short for ‘super user do’.  By proceeding a command with the command <code class="highlighter-rouge">sudo</code> we are telling the system to execute that program as an administrator or super user.  If the user is not an approved administrator this command will fail.</p>
+  </li>
+</ul>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">sudo </span>apt-get update
+</code></pre></div></div>
+
+<p><code class="highlighter-rouge">apt-get</code> is a Linux program used to install and update software.  The option <code class="highlighter-rouge">update</code> tells the operating system to download the most recent list of available software.  Now enter the following:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">sudo </span>apt-get upgrade
+</code></pre></div></div>
+
+<ul>
+  <li>Hit enter to answer yes to the question do you want to continue</li>
+  <li>If during the install you are presented any informational notes in the terminal window pressing ‘q’ will bypass them and continue with the upgrade</li>
+</ul>
+
+<p>The upgrade options to <code class="highlighter-rouge">apt-get</code> tell the operating system to compare the current software against the new catalog you just downloaded with the update command.  Any software that has a newer version is now downloaded and installed.  The ability to update software removing vulnerabilities as well as remove software you are not using is an example of the First Principle of <strong>minimization</strong>.  We are minimizing the amount of software an attacker could take advantage of.</p>
+
+<h3 id="step-11-shutdown-the-raspberry-pi">Step 11: Shutdown the Raspberry Pi</h3>
+<p>Now that the software has been updated we are done with the Raspberry Pi for now and can turn it off.  We could do this through the GUI with the mouse but since we already have a terminal window open, here’s a command to turn off the Raspberry Pi off from the command line:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>shutdown now
+</code></pre></div></div>
+
+<h3 id="evaluation">Evaluation</h3>
+<p>Use <a href="https://play.kahoot.it/#/k/8a4db51b-d705-42b9-a9bb-928c2a82976f">Kahoot</a> to assess comprehension:</p>
+<ul>
+  <li>A Raspberry Pi uses modularity because: <em>It uses separate components for many of its functions.  Something like the camera can be installed and removed as needed, being replaced with any other similar camera module</em></li>
+  <li>The Linux command <code class="highlighter-rouge">sudo</code> demonstrates the Cybersecurity First Principle: <em>Least Privilege</em></li>
+  <li>The component of the Raspberry Pi stores the operating system: <em>SD card</em></li>
+  <li>The ability to remove software which is not required demonstrates: <em>Minimization</em></li>
+</ul>
+
+<p>Discuss to ensure all understand the material.</p>
+
+<h3 id="additional-resources">Additional Resources</h3>
+<p>For more information, investigate the following.</p>
+
+<ul>
+  <li><a href="http://www.canakit.com/Media/CanaKit-Raspberry-Pi-Quick-Start-Guide-3.2.pdf">CanaKit Pi Quick Start Guide</a></li>
+</ul>
+
+<h3 id="acknowledgements">Acknowledgements</h3>
+
+<h3 id="license">License</h3>
+<p><a href="https://github.com/MLHale/nebraska-gencyber">Nebraska GenCyber</a> <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /></a><br /> is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</a>.</p>
+
+<p>Overall content: Copyright (C) 2017-2018  <a href="http://faculty.ist.unomaha.edu/mhale/">Dr. Matthew L. Hale</a>, <a href="http://faculty.ist.unomaha.edu/rgandhi/">Dr. Robin Gandhi</a>, <a href="http://www.brianamorrison.net">Dr. Briana B. Morrison</a>, and <a href="http://www.bellevue.edu/about/leadership/faculty/rausch-douglas">Doug Rausch</a>.</p>
+
+<p>Lesson content: Copyright (C) Doug Rausch 2017-2018.
+<a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /></a><br /><span xmlns:dct="http://purl.org/dc/terms/" property="dct:title">This lesson</span> is licensed by the author under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</a>.</p>
+
+</div>
+
+    </div>
+
+  </body>
+</html>

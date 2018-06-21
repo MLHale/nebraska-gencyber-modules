@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+  <head>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-107147738-2"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-107147738-2');
+  </script>
+
+  <link href="http://gmpg.org/xfn/11" rel="profile">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  
+  <!-- Enable responsiveness on mobile devices-->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+
+  <title>
+    
+      Introduction to the Internet of Things (IoT), Node Red, and the Raspberry Pi &middot; 
+    
+  </title>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="https://mlhale.github.io/nebraska-gencyber-modules/public/css/poole.css">
+  <link rel="stylesheet" href="https://mlhale.github.io/nebraska-gencyber-modules/public/css/syntax.css">
+  <link rel="stylesheet" href="https://mlhale.github.io/nebraska-gencyber-modules/public/css/hyde.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=PT+Sans:400,400italic,700|Abril+Fatface">
+
+  <!-- Icons -->
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/public/apple-touch-icon-144-precomposed.png">
+  <link rel="shortcut icon" href="/public/favicon.ico">
+  <script async defer src="https://buttons.github.io/buttons.js"></script>
+                                
+  <!-- RSS -->
+  <link rel="alternate" type="application/rss+xml" title="RSS" href="/atom.xml">
+</head>
+
+
+  <body>
+
+    <div class="sidebar">
+  <div class="container sidebar-sticky">
+    <div class="sidebar-about">
+      <h1>
+
+      </h1>
+      <p class="lead"></p>
+    </div>
+
+    <nav class="sidebar-nav">
+      <a class="sidebar-nav-item" href="https://github.com/MLHale/nebraska-gencyber-modules">Nebraska GenCyber</a>
+      <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"></a>is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</a>. <img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /> You are encouraged to reuse, remix, and add to the lessons contained herein - just remember to properly provide attribution.
+      <br><br>
+      Overall content: Copyright (C) 2017-2018  <a href="http://faculty.ist.unomaha.edu/mhale/">Dr. Matthew L. Hale</a>, <a href="http://faculty.ist.unomaha.edu/rgandhi/">Dr. Robin Gandhi</a>, <a href="http://www.brianamorrison.net">Dr. Briana B. Morrison</a>, and <a href="http://www.bellevue.edu/about/leadership/faculty/rausch-douglas">Doug Rausch</a>. <br>
+      Individual content: Copyright (C) 2017-2018 as listed in each lesson.
+    </nav>
+
+    <a class="github-button" href="https://github.com/mlhale/nebraska-gencyber-modules" data-icon="octicon-star" data-size="large" aria-label="Star mlhale/nebraska-gencyber-modules on GitHub">Star</a>
+    <a class="github-button" href="https://github.com/mlhale/nebraska-gencyber-modules/fork" data-icon="octicon-repo-forked" data-size="large" aria-label="Fork mlhale/nebraska-gencyber-modules on GitHub">Fork</a>
+    <a class="github-button" href="https://github.com/mlhale/nebraska-gencyber-modules/issues" data-icon="octicon-issue-opened" data-size="large" aria-label="Issue mlhale/nebraska-gencyber-modules on GitHub">Issue</a>
+    <p>Site &copy; 2018 <a href="http://faculty.ist.unomaha.edu/mhale/">Matt Hale</a>. All rights reserved.</p>
+    
+  </div>
+</div>
+
+
+    <div class="content container">
+      <div class="page">
+  <h1 class="page-title">Introduction to the Internet of Things (IoT), Node Red, and the Raspberry Pi</h1>
+  <h3 id="cybersecurity-first-principles-in-this-lesson">Cybersecurity First Principles in this lesson</h3>
+
+<ul>
+  <li>
+    <p><strong>Abstraction</strong>: An abstraction is a representation of an object or concept. It could be something such as a door, a speedometer, or a data structure in computer science. Abstraction decouples the design from the implementation. The gauges in an automobile are an abstraction of the performance of a car. A map is an abstraction of the earth.</p>
+  </li>
+  <li>
+    <p><strong>Least Privilege</strong>: One of the ways to protect information is by limiting what people can see and do with your information and resources. The principle of least privilege says to allow the minimum number of privileges necessary to accomplish the task.</p>
+  </li>
+  <li>
+    <p><strong>Minimization</strong>: Minimization refers to having the least functionality necessary in a program or device. The goal of minimization is to simplify and decrease the number of ways that software can be exploited. This can include <strong>turning off ports that are not needed</strong>, reducing the amount of code running on a machine, and/or turning off unneeded features in an application. This lesson focuses specifically on turning off ports that aren’t in use.</p>
+  </li>
+  <li>
+    <p><strong>Modularization</strong>: The concept of modularity is like building blocks. Each block (or module) can be put in or taken out from a bigger project. Each module has its own separate function that is interchangeable with other modules.</p>
+  </li>
+  <li>
+    <p><strong>Resource Encapsulation</strong>: Encapsulation is an object oriented concept where all data and functions required
+to use the resource are packaged into a single self-contained component. The goal is to only allow access or manipulation of the resource in the way the designer intended. An example, assume a flag pole is the object. There are fixed methods on how the flag pole is to be used. Put the flag on, take the flag off, raise or lower the flag. Nothing else can be done to the flag pole.</p>
+  </li>
+  <li>
+    <p><strong>Simplicity</strong>: Simplicity allows a person to better understand hardware and software. Without the clutter of unnecessarily complicated code and interfaces, the software will be more understandable by people that will update the code when requirements change. It will be easier to understand by the testers and they will be able to spot problems sooner. By keeping the software as simple and as focused as possible, the reliability and security are greatly increased.</p>
+  </li>
+</ul>
+
+<h3 id="introduction">Introduction</h3>
+<p>Lets build an IoT device – wait, just what is the IoT – and why should I care?  I’m afraid to ask – is it secure?</p>
+
+<p><img src="../img/no_s_in_iot.jpg" alt="IoT Security" /></p>
+
+<p>In this lesson, we will take a close look at IoT and the associated security implications by building a simple IoT application on a Raspberry Pi using a program called Node-Red.</p>
+
+<h3 id="goals">Goals</h3>
+<p>We will continue our work towards our GenCyber camp purpose with the below goals for this lesson:</p>
+<ul>
+  <li>Use Node-Red to develop a simple IoT application on a Raspberry Pi</li>
+  <li>Integrate the If This Then That (IFTTT) service as an IoT cloud service</li>
+  <li>Recall how the Cybersecurity First Principles of abstraction, least privilege, minimization, modularization, resource encapsulation, and simplicity apply to IoT applications</li>
+</ul>
+
+<h3 id="materials-required">Materials Required</h3>
+
+<ul>
+  <li>Raspberry Pi</li>
+  <li>Internet connection</li>
+</ul>
+
+<h3 id="prerequisite-lessons">Prerequisite lessons</h3>
+<p><a href="../raspberry_pi_intro/README.md">Raspberry Pi Intro</a></p>
+
+<p>### Table of Contents
+ <!-- TOC START min:1 max:3 link:true update:true -->
+    - <a href="#cybersecurity-first-principles-in-this-lesson">Cybersecurity First Principles in this lesson</a>
+    - <a href="#introduction">Introduction</a>
+    - <a href="#goals">Goals</a>
+    - <a href="#materials-required">Materials Required</a>
+    - <a href="#prerequisite-lessons">Prerequisite lessons</a>
+    - <a href="#what-is-the-iot">What is the IoT</a>
+    - <a href="#a-simple-iot-example">A Simple IoT Example</a>
+    - <a href="#step-1-install-and-update-needed-programs">Step 1: Install and update needed programs</a>
+    - <a href="#step-2-start-node-red">Step 2: Start Node-Red</a>
+    - <a href="#step-3-start-firefox">Step 3: Start Firefox</a>
+    - <a href="#step-4-create-an-ifttt-account">Step 4: Create an IFTTT account</a>
+    - <a href="#step-5-create-your-first-node-red-flow">Step 5: Create your first Node-Red flow</a>
+    - <a href="#step-6-link-flow-to-ifttt">Step 6: Link flow to IFTTT</a>
+    - <a href="#step-7-build-an-ifttt-recipe">Step 7: Build an IFTTT Recipe</a>
+    - <a href="#step-8-test-it">Step 8: Test it!</a>
+    - <a href="#a-second-example">A Second Example</a>
+    - <a href="#step-1-add-a-new-flow">Step 1: Add a new flow</a>
+    - <a href="#step-2-build-your-new-flow">Step 2: Build your new flow</a>
+    - <a href="#step-3-test-it">Step 3: Test it!</a>
+    - <a href="#evaluation">Evaluation</a>
+    - <a href="#additional-resources">Additional Resources</a>
+    - <a href="#acknowledgements">Acknowledgements</a>
+    - <a href="#license">License</a></p>
+
+<!-- TOC END -->
+
+<h3 id="what-is-the-iot">What is the IoT</h3>
+
+<p>The IoT is the term applied to the many internet connected devices now occupying space in our lives.  Take a look through your house. You may have phones, tablets, laptops, fitbits, televisions, thermostats, smoke detectors, bathroom scales, refrigerators, light bulbs, and who knows what else all connected to the internet.</p>
+
+<p><img src="../img/Internet_of_Things.png" alt="Internet of Things" /></p>
+
+<p>These devices communicate with you, perhaps a cloud server, maybe even each other.  Although some devices such as phones or tablets have very powerful operating systems and security features, many IoT devices such as thermostats or fitbits don’t have security features due to the added cost and drain on batteries.  Is that a problem?  The general consensus amongst security experts is this is like running with scissors.  It may help you get a task done but at some point, you may find the results painful.  Where do we start with addressing the issue?  Let’s start by taking a very generalized look at an IoT device.</p>
+
+<p><img src="../img/IoT_block.png" alt="IoT Block Diagram" /></p>
+
+<p>In a very general sense an IoT device is a device that may have sensors (<em>inputs</em>) such as thermometers or light detectors, actuators (<em>outputs</em>) such as switches or alarms, a processor (like your <em>Raspberry Pi</em> running <em>Node-Red</em>) to make sense of the data and direct actions, and a gateway (<em>network connection</em>) to interact with users and other systems.  An IoT device can make our lives much easier, or if someone who wants to do harm gets access to the device they could steal data or take control of objects in your house or business.</p>
+
+<p><img src="../img/iot_ransom.png" alt="IoT Ransomware" /></p>
+
+<ul>
+  <li>Discuss with students some of the ways compromise of IoT devices could lead to harm, perhaps through information leakage or loss of control of devices.</li>
+</ul>
+
+<p>By properly applying the Cybersecurity First Principles we can reduce the risk that someone can take over our IoT device and cause us harm.  The platform we will use to explore the IoT is our Raspberry Pi running a program called Node-Red.  Lets jump right into it.</p>
+
+<h3 id="a-simple-iot-example">A Simple IoT Example</h3>
+<h3 id="step-1-install-and-update-needed-programs">Step 1: Install and update needed programs</h3>
+<p>The first thing we need to do is install and update a few needed programs. As much as we would like to have all the programs we would ever need loaded on a system not only does allowable memory not allow this it’s not a good idea from a cybersecuirty perspective.  The First Principle of <strong>minimization</strong> tells us that by reducing the amount of places where vulnerabilities could exist we make our system more secure.  We call this reducing our <em>attack surface</em>.  Having programs loaded you are not using makes you needlessly open to attacks to those programs.</p>
+
+<p>During the below installs respond yes to any prompts you receive during the following operations.</p>
+
+<ul>
+  <li>Install the Firefox Browser - Node-Red works best with Firefox.  Remember we need to use the command <code class="highlighter-rouge">sudo</code> to preface the install command due to the Raspberry Pi implementing the Cybersecurity First Principle of <strong>Least Privilege</strong>.</li>
+</ul>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">sudo </span>apt-get <span class="nb">install </span>firefox-esr
+</code></pre></div></div>
+
+<ul>
+  <li>Install npm - This will allow us to install additional capabilities, called nodes, into Node-Red</li>
+</ul>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">sudo </span>apt-get <span class="nb">install </span>npm
+</code></pre></div></div>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">sudo </span>npm i <span class="nt">-g</span> npm@2.x
+</code></pre></div></div>
+
+<ul>
+  <li>Update Node-Red - this operation may take several minutes</li>
+</ul>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>update-nodejs-and-nodered
+</code></pre></div></div>
+
+<ul>
+  <li>Install nodes for the IFTTT service and Raspberry Pi camera.  Note: If you receive an error that the .node-red directory does not exist go under the rasperry menu (first on the left), select programming, and node-red.  This will create the directory.  Then enter the command <code class="highlighter-rouge">node-red-stop</code> from a terminal window.  This will shutdown the program so you can continue with installs.  After that you can continue with the below instructions</li>
+</ul>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">cd</span> ~/.node-red
+npm <span class="nb">install </span>node-red-contrib-ifttt
+npm <span class="nb">install </span>node-red-contrib-camerapi
+</code></pre></div></div>
+
+<h3 id="step-2-start-node-red">Step 2: Start Node-Red</h3>
+<p>On the Raspberry Pi desktop select <em>Menu</em>, <em>Programming</em>, <em>Node-RED</em></p>
+
+<h3 id="step-3-start-firefox">Step 3: Start Firefox</h3>
+<p>On the Raspberry Pi desktop select <em>Menu</em>, <em>Internet</em>, <em>Firefox ESR</em></p>
+
+<h3 id="step-4-create-an-ifttt-account">Step 4: Create an IFTTT account</h3>
+<p>IFTTT (If This Then That) is a cloud service that allows us to automate actions, if the service receives a certain input, then it will execute a pre-selected action.  We will use the IFTTT service with Node-Red to interface with some common cloud services.</p>
+
+<ul>
+  <li>In Firefox, navigate to https://ifttt.com and click <em>Sign up</em></li>
+  <li>Walk through the online instructions to create your account</li>
+  <li>Once registration is complete, click search and enter Webhooks</li>
+</ul>
+
+<p><img src="../img/webhooks.png" alt="Webhooks" /></p>
+
+<ul>
+  <li>Click the <em>Connect</em> button</li>
+</ul>
+
+<p><img src="../img/connect_webhooks.png" alt="Connect Webhooks" /></p>
+
+<ul>
+  <li>We are done with the IFTTT web site for now but don’t close the tab yet, we’ll be back here shortly</li>
+</ul>
+
+<h3 id="step-5-create-your-first-node-red-flow">Step 5: Create your first Node-Red flow</h3>
+<p>Programs in Node-Red are called flows and they can be very simple or very complex.  We will keep our first flows very simple but you will see you can do quite a bit with a simple flow.  Flows are made up of connected nodes.  Although each node is a single element in a flow there may be several actions which that flow generates.  This implementation of nodes and flows illustrate several examples of Cybersecurity First Principles:</p>
+
+<ul>
+  <li><strong>Simplicity</strong>: A flow simplifies all the activity which is being conducted in the background.  By studying a flow you can quickly get an idea of what actions are being executed.  This aids security as you can quickly understand the overall actions taking place vice getting lost in all the details.</li>
+  <li><strong>Abstraction</strong>: Each node presents a single action, however, there may be several steps occurring in the background.  The details are abstracted behind the node which represents the interior actions.</li>
+  <li><strong>Modularization</strong>: Each node is a building block in a flow.  Nodes can be swapped out to change the functionality of a flow without requiring changing the entire flow.</li>
+  <li><strong>Resource Encapsulation</strong>: You are unable to directly access several of the interior functions which are necessary for a flow to work.  Due to this internalization, or encapsulation, critical functions are protected from external misuse.</li>
+</ul>
+
+<p>With those principles in mind, lets start your first flow.</p>
+
+<ul>
+  <li>Open a new tab in Firefox (keep the IFTTT tab open for now) and enter the address <strong>http://127.0.0.1:1880</strong>, this will bring up the web page for the Node-Red server running on <em>your</em> Raspberry Pi.  <code class="highlighter-rouge">127.0.0.1</code> is always the local address of the computer you are using.</li>
+  <li>Drag a <strong>inject</strong> node from the left pane, called the palette, into the flow, once you drag it into the field it’s title will change to <strong>timestamp</strong></li>
+</ul>
+
+<p><img src="../img/timestamp.png" alt="Timestamp" /></p>
+
+<p>You will notice on the right-hand side of the screen a description of the node is given.  This particular node returns the current system time when you click the button on the left side of the node.  For this flow we don’t care about the time on the timestamp, we will just use it to indicate the button was pressed.</p>
+
+<ul>
+  <li>Now scroll down through the palette and locate the IFTTT node under the output section and drag it into the flow.</li>
+</ul>
+
+<p><img src="../img/IFTTT.png" alt="IFTTT" /></p>
+
+<ul>
+  <li>Now we need to connect the two nodes.  Click the dot on the right side of the inject node and drag a connection line to the dot on the left side of the IFTTT node.</li>
+</ul>
+
+<p><img src="../img/connection.png" alt="Connection" /></p>
+
+<p>Your flow is now built but we still need to link it to your account on IFTTT.</p>
+
+<h3 id="step-6-link-flow-to-ifttt">Step 6: Link flow to IFTTT</h3>
+<p>Remember the Cybersecurity First Principles of <strong>Abstraction</strong> and <strong>Resource Encapsulation</strong>?  Now we get to take a closer look at how those principles are implemented.</p>
+
+<ul>
+  <li>Double click on the IFTTT node, you will see a dialog box displayed which allows us to give the node some of the information it needs to do its job.  Notice, you are not setting variables directly but entering them through a dialog.  This is <strong>Resource Encapsulation</strong> and allows error checking and security checks to be done behind the scenes.</li>
+</ul>
+
+<p><img src="../img/IFTTT_config1.png" alt="IFTTT Config" /></p>
+
+<p>Now we need to fill in the first field named key.  This is a unique identifier which links this flow to <em>your</em> IFTTT account.  To get this value you will need to go back to the browser tab for IFTTT.com</p>
+
+<ul>
+  <li>Once you are back at IFTTT click the settings button.  The identifier you want is the last part of the URL which is blocked out on the image below.  Everyone’s key is different, you need to use your key to link to your IFTTT account.  Select and copy this key.</li>
+</ul>
+
+<p><img src="../img/IFTTT_key.png" alt="IFTTT key" /></p>
+
+<ul>
+  <li>Go back to the Node-Red tab in your browser and click the key field.  Click <strong>Add new ifttt-key…</strong> and then click the pencil next to the field.</li>
+</ul>
+
+<p><img src="../img/enter_key.png" alt="Node Red Key Entry 1" /></p>
+
+<ul>
+  <li>Paste the key you just copied from IFTTT into the field.  Click <strong>Add</strong>.</li>
+</ul>
+
+<p><img src="../img/enter_key2.png" alt="Node Red Key Entry 2" /></p>
+
+<ul>
+  <li>
+    <p>Leave the Event Name field with the default <code class="highlighter-rouge">event1</code>.  You can change this to something more descriptive but remember what it is because we will need it later.</p>
+  </li>
+  <li>
+    <p>Click <strong>Done</strong>.</p>
+  </li>
+</ul>
+
+<h3 id="step-7-build-an-ifttt-recipe">Step 7: Build an IFTTT Recipe</h3>
+<p>Your flow is now built and configured but we need to tell the IFTTT service what to do if it gets activated.  We do this through building an IFTTT recipe.</p>
+
+<ul>
+  <li>Go back to your IFTTT browser tab.  If it got closed, use the address https://ifttt.com/my_applets</li>
+  <li>Click on <strong>New Applet</strong></li>
+</ul>
+
+<p><img src="../img/start_recipe.png" alt="Start Recipe" /></p>
+
+<ul>
+  <li>Click on the <strong>+ this</strong> to set the trigger</li>
+</ul>
+
+<p><img src="../img/this.png" alt="This portion" /></p>
+
+<ul>
+  <li>In the <strong>Choose a Service</strong> search field enter Webhooks and select the Webhooks service displayed</li>
+</ul>
+
+<p><img src="../img/choose_service.png" alt="Choose Service" /></p>
+
+<ul>
+  <li>On the choose a trigger screen select <strong>Receive a web request</strong></li>
+</ul>
+
+<p><img src="../img/choose_trigger.png" alt="Choose trigger" /></p>
+
+<ul>
+  <li>In the Event Name field enter <code class="highlighter-rouge">event1</code>.  If you named your event something else in Node-Red you should enter that here</li>
+</ul>
+
+<p><img src="../img/trigger_event_name.png" alt="Trigger event name" /></p>
+
+<ul>
+  <li>
+    <p>Click <strong>Create Trigger</strong></p>
+  </li>
+  <li>
+    <p>You now get to tell IFTTT what it should do when it receives the trigger.  Take a moment to look through all the options.  We are going to send an email.  Click the email service tile.</p>
+  </li>
+</ul>
+
+<p><img src="../img/email_action.png" alt="Email action" /></p>
+
+<ul>
+  <li>You now have the opportunity to customize what the email will say when it is sent.  You can pass data between Node-red and IFTTT.  For now, we will use the default values. This will send an email to the address you used to register when you created your IFTTT account. Click <strong>Create Action</strong>.</li>
+</ul>
+
+<p><img src="../img/complete_action.png" alt="Complete action" /></p>
+
+<ul>
+  <li>Congratulations!  You have built your first recipe.  Click <strong>Finish</strong></li>
+</ul>
+
+<p><img src="../img/finish.png" alt="Finish action" /></p>
+
+<h3 id="step-8-test-it">Step 8: Test it!</h3>
+<p>We have now built our flow and the supporting recipe.  To test the flow we must first deploy it and then activate the timestamp node.</p>
+
+<ul>
+  <li>Click the <strong>Deploy</strong> button at the top right of the screen</li>
+  <li>Click the button on the left side of the timestamp node</li>
+</ul>
+
+<p><img src="../img/test.png" alt="Test It" /></p>
+
+<p>If you did everything correctly you will receive an email telling you that the timestamp button was pressed.  Although this was very simple and perhaps not very useful think about what how this could be expanded.  Maybe instead of clicking the timestamp node, the IFTTT is triggered by an external switch that activates whenever your pet goes out their pet door.  Now your pet will send you an email when it goes out into the yard!</p>
+
+<h3 id="a-second-example">A Second Example</h3>
+
+<p>Let’s try a second example that doesn’t use the IFTTT service.  In this example we will build a new flow that swaps out the IFTTT node for a camera node - remember that principle of <strong>Modularization</strong>?  Here it is in action.</p>
+
+<h3 id="step-1-add-a-new-flow">Step 1: Add a new flow</h3>
+<p>We will begin by adding a new flow, that way the one you created will still be active.</p>
+
+<ul>
+  <li>Click the plus to the right of the flow names, this will open a new tab for your new flow.</li>
+</ul>
+
+<p><img src="../img/new_flow.png" alt="New flow" /></p>
+
+<h3 id="step-2-build-your-new-flow">Step 2: Build your new flow</h3>
+<p>You’ve already built one flow, this one will follow the same procedures.  Add an inject node, a camerapi node (under the Raspberry Pi section of the pallet), and connect them.  Your completed flow should look like the below.</p>
+
+<p><img src="../img/camera_flow.png" alt="Camera flow" /></p>
+
+<h3 id="step-3-test-it">Step 3: Test it!</h3>
+<p>We are going to use the default settings for the nodes for this flow.  The camera node, when activated, will take a photo with the Pi’s camera, give the photo a unique (and very long) filename, and store it in the <code class="highlighter-rouge">/home/pi/pictures</code> directory.  You can configure the node to give custom file names and set picture formats, sizes, and orientations.</p>
+
+<ul>
+  <li>Deploy your new flow</li>
+  <li>Click the timestamp inject button</li>
+  <li>You can view the picture you just took by going to the Pi desktop, clicking <strong>Menu</strong>, <strong>Accessories</strong>, <strong>File Manager</strong>.  Click the <strong>Pictures</strong> folder and double click your photo to view.</li>
+</ul>
+
+<p>Discuss with the class how these features could be used in an IoT device.  Maybe the inject is triggered with a sound, takes a photo, and emails it to you - your own burglar alarm!</p>
+
+<p>Spend some time exploring the Node-Red nodes.  What else could you build?</p>
+
+<h3 id="evaluation">Evaluation</h3>
+<p>Use <a href="https://play.kahoot.it/#/k/79c3cc26-1bf2-4da4-a576-a31b1d83e737">Kahoot</a> to assess comprehension</p>
+<ul>
+  <li>Which Cybersecurity First Principle addresses how nodes can be replaced with other nodes in a flow to modify features? <em>Modularization</em>.</li>
+  <li>Which Cybersecurity First Principle addresses how you are unable to directly access the inner workings of a node but must set parameters through dialogs? <em>Resource Encapsulation</em>.</li>
+  <li>Each node represents a single action, however, there may be several steps hidden in the background is an example of? <em>Abstraction</em>.</li>
+  <li>An IFTTT program is called a what? <em>Recipe</em>.</li>
+  <li>When you use the IFTTT node in a flow which element or action represents the use of least privilege? <em>webhooks key</em>.</li>
+</ul>
+
+<h3 id="additional-resources">Additional Resources</h3>
+<p>For more information, investigate the following:</p>
+
+<ul>
+  <li><a href="https://nodered.org/">Node Red website</a></li>
+  <li><a href="http://kookye.com">Raspberry Pi IoT kit</a></li>
+</ul>
+
+<h3 id="acknowledgements">Acknowledgements</h3>
+
+<h3 id="license">License</h3>
+<p><a href="https://github.com/MLHale/nebraska-gencyber">Nebraska GenCyber</a> <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /></a><br /> is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</a>.</p>
+
+<p>Overall content: Copyright (C) 2017-2018  <a href="http://faculty.ist.unomaha.edu/mhale/">Dr. Matthew L. Hale</a>, <a href="http://faculty.ist.unomaha.edu/rgandhi/">Dr. Robin Gandhi</a>, <a href="http://www.brianamorrison.net">Dr. Briana B. Morrison</a>, and <a href="http://www.bellevue.edu/about/leadership/faculty/rausch-douglas">Doug Rausch</a>.</p>
+
+<p>Lesson content: Copyright (C) Doug Rausch 2017-2018.
+<a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /></a><br /><span xmlns:dct="http://purl.org/dc/terms/" property="dct:title">This lesson</span> is licensed by the author under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</a>.</p>
+
+</div>
+
+    </div>
+
+  </body>
+</html>
