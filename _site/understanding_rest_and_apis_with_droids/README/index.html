@@ -124,37 +124,28 @@
 </ul>
 
 <h3 id="prerequisite-lessons">Prerequisite lessons</h3>
-<p>You should complete the <a href="../intro_to_components_using_littlebits_droids/README.md">Intro to components using Littlebits Droids</a> and <a href="../web_services_and_iot_using_littlebits_and_ifttt/README.md">Web services and IoT using Littlebits and IFTTT</a> lessons before attempting this lesson.</p>
+<p>You should complete the <a href="../intro_to_components_using_littlebits_droids/README.md">Intro to components using Littlebits Droids</a> and <a href="../web_services_and_iot_using_littlebits_droids_and_ifttt/README.md">Web services and IoT using Littlebits and IFTTT</a> lessons before attempting this lesson.</p>
 
 <h3 id="table-of-contents">Table of Contents</h3>
 <!-- TOC START min:1 max:3 link:true update:true -->
-<ul>
-  <li><a href="#exchanging-information-online-with-rest-and-apis">Exchanging information online with REST and APIs</a>
-    <ul>
-      <li><a href="#cybersecurity-first-principles-in-this-lesson">Cybersecurity First Principles in this lesson</a></li>
-      <li><a href="#introduction">Introduction</a></li>
-      <li><a href="#goals">Goals</a></li>
-      <li><a href="#materials-required">Materials Required</a></li>
-      <li><a href="#prerequisite-lessons">Prerequisite lessons</a></li>
-      <li><a href="#table-of-contents">Table of Contents</a></li>
-      <li><a href="#step-1-background">Step 1: Background</a></li>
-      <li><a href="#step-2-ok-lets-take-a-look-at-a-real-api">Step 2: Ok, lets take a look at a real API</a></li>
-      <li><a href="#step-3-getting-our-api-key">Step 3: Getting our API Key</a></li>
-      <li><a href="#step-4-making-your-first-rest-request">Step 4: Making your first REST request</a></li>
-      <li><a href="#step-5-get-device-info">Step 5: GET device info</a></li>
-      <li><a href="#step-6-first-post-request-to-turn-the-device-on">Step 6: First POST request to turn the device on</a></li>
-      <li><a href="#checkpoint">Checkpoint</a></li>
-      <li><a href="#step-7-adding-a-subscriber-to-handle-incoming-events">Step 7: Adding a subscriber to handle incoming events.</a></li>
-      <li><a href="#additional-resources">Additional Resources</a></li>
-      <li><a href="#lead-author">Lead Author</a>
-        <ul>
-          <li><a href="#acknowledgements">Acknowledgements</a></li>
-          <li><a href="#license">License</a></li>
-        </ul>
-      </li>
-    </ul>
-  </li>
-</ul>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>- [Cybersecurity First Principles in this lesson](#cybersecurity-first-principles-in-this-lesson)
+- [Introduction](#introduction)
+- [Goals](#goals)
+- [Materials Required](#materials-required)
+- [Prerequisite lessons](#prerequisite-lessons)
+- [Table of Contents](#table-of-contents)
+- [Step 1: Background](#step-1-background)
+- [Step 2: Ok, lets take a look at a real API](#step-2-ok-lets-take-a-look-at-a-real-api)
+- [Step 3: Getting our API Key](#step-3-getting-our-api-key)
+- [Step 4: Making your first REST request](#step-4-making-your-first-rest-request)
+- [Step 5: GET device info](#step-5-get-device-info)
+- [Step 6: First POST request to turn the device on](#step-6-first-post-request-to-turn-the-device-on)
+- [Exercise](#exercise)
+- [Checkpoint](#checkpoint)
+- [Additional Resources](#additional-resources)   - [Lead Author](#lead-author)
+- [Acknowledgements](#acknowledgements)
+- [License](#license)
+</code></pre></div></div>
 
 <!-- TOC END -->
 
@@ -281,7 +272,7 @@ OPTIONS /anypage.html HTTP/1.0</code></li>
 </ul>
 
 <h3 id="step-2-ok-lets-take-a-look-at-a-real-api">Step 2: Ok, lets take a look at a real API</h3>
-<p>Phew, enough background. In the previous <a href="../web_services_and_iot_using_littlebits_and_ifttt/README.md">lesson</a>, we wired our <code class="highlighter-rouge">cloudbit</code> up to the web and explored how we could send it signals using <a href="https://ifttt.com">IFTTT</a>. We saw that if our <code class="highlighter-rouge">cloudbit</code> detected an input signal (a <code class="highlighter-rouge">request</code>), we could have <code class="highlighter-rouge">IFTTT</code> do something (send a <code class="highlighter-rouge">response</code>). These concepts, i.e. <em>request</em> and <em>response</em>, are central to the concept of <code class="highlighter-rouge">RESTful APIs</code>. REST, or REpresentational State Transfer, APIs, or Application Programming Interfaces, are tools that developers use to provide <strong>abstraction</strong> and <strong>resource encapsulation</strong> to people who want to interact with their data.</p>
+<p>Phew, enough background. In the previous <a href="../web_services_and_iot_using_littlebits_droids_and_ifttt/README.md">lesson</a>, we wired our <code class="highlighter-rouge">cloudbit</code> up to the web and explored how we could send it signals using <a href="https://ifttt.com">IFTTT</a>. We saw that if our <code class="highlighter-rouge">cloudbit</code> detected an input signal (a <code class="highlighter-rouge">request</code>), we could have <code class="highlighter-rouge">IFTTT</code> do something (send a <code class="highlighter-rouge">response</code>). These concepts, i.e. <em>request</em> and <em>response</em>, are central to the concept of <code class="highlighter-rouge">RESTful APIs</code>. REST, or REpresentational State Transfer, APIs, or Application Programming Interfaces, are tools that developers use to provide <strong>abstraction</strong> and <strong>resource encapsulation</strong> to people who want to interact with their data.</p>
 
 <p>APIs allow you to get and save data back to the application, without needing to tightly integrate with that application. This improves <strong>simplicity</strong> and helps your code to be more <strong>modular</strong>. APIs include <code class="highlighter-rouge">endpoints</code>, such as <code class="highlighter-rouge">/api/events</code>, that allow you to access certain specific data (e.g. events in this example). API endpoints help provide <strong>minimization</strong> since users can only interact with the application through those interfaces provided by the developer.</p>
 
@@ -296,9 +287,13 @@ OPTIONS /anypage.html HTTP/1.0</code></li>
 
 <p>To ensure that only we can program our cloudbit, Littlebits provides something called an <code class="highlighter-rouge">API Key</code>. This key is a really long alphanumerical string that would be hard to crack. Lets find our key, so we can issue commands to our cloudbit.</p>
 
+<blockquote>
+  <p>2018 note, for the purposes of our lesson today, you will be using a key I have setup for your use, thus you don’t need to get your own API Key.</p>
+</blockquote>
+
 <p>Go to <a href="http://control.littlebitscloud.cc/">http://control.littlebitscloud.cc/</a></p>
 
-<p>Login using the account you used in the <a href="../web_services_and_iot_using_littlebits_and_ifttt/">previous lesson</a></p>
+<p>Login using the account you used in the <a href="../web_services_and_iot_using_littlebits_droids_and_ifttt/">previous lesson</a></p>
 
 <p>Once logged in, click on your <code class="highlighter-rouge">cloudbit</code>:</p>
 
@@ -318,6 +313,13 @@ OPTIONS /anypage.html HTTP/1.0</code></li>
 </ul>
 
 <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Authorization: Bearer &lt;your access token with no angled brackets&gt;
+</code></pre></div></div>
+
+<blockquote>
+  <p>2018 note, use the following key I have setup for you</p>
+</blockquote>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Authorization: Bearer 3111600dc0d5bd1f6cd25d39ed11302e182a23dff77d77cc8d79ab6def76fc60
 </code></pre></div></div>
 
 <p>You can add the header as a key value pair, where the key is <code class="highlighter-rouge">Authorization</code> and the value is <code class="highlighter-rouge">Bearer &lt;insert your access token here, remove the angled brackets&gt;</code>. Make sure to use your access token.</p>
@@ -358,6 +360,13 @@ OPTIONS /anypage.html HTTP/1.0</code></li>
 <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>https://api-http.littlebitscloud.cc/v2/devices/&lt;your-device-id&gt;
 </code></pre></div></div>
 
+<blockquote>
+  <p>2018 note, for today’s lesson you will use the cloudbit I have setup for you</p>
+</blockquote>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>https://api-http.littlebitscloud.cc/v2/devices/243c201ece7c
+</code></pre></div></div>
+
 <ul>
   <li>e.g. <code class="highlighter-rouge">https://api-http.littlebitscloud.cc/v2/devices/00e04c036f15</code> in my example</li>
 </ul>
@@ -375,12 +384,24 @@ OPTIONS /anypage.html HTTP/1.0</code></li>
 
 <p><img src="../img/configuration.jpg" alt="Littlebits Setup" /></p>
 
+<blockquote>
+  <p>2018 note, for today’s lesson the cloudbit configuration is on the south east corner wall</p>
+</blockquote>
+
 <ul>
   <li>make a POST request using POSTMAN to set the voltage output on the cloudbit for a few seconds</li>
 </ul>
 
 <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>https://api-http.littlebitscloud.cc/v2/devices/&lt;your-device-id&gt;/output
 </code></pre></div></div>
+
+<blockquote>
+  <p>2018 note, for today’s lesson you will use the cloudbit I have setup for you</p>
+</blockquote>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>https://api-http.littlebitscloud.cc/v2/devices/243c201ece7c/output
+</code></pre></div></div>
+
 <ul>
   <li>e.g. <code class="highlighter-rouge">https://api-http.littlebitscloud.cc/v2/devices/00e04c036f15/output</code> in my example</li>
 </ul>
@@ -392,9 +413,17 @@ OPTIONS /anypage.html HTTP/1.0</code></li>
 Content-type: application/json
 </code></pre></div></div>
 
+<blockquote>
+  <p>2018 note, use the following header parameters</p>
+</blockquote>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Authorization: Bearer 3111600dc0d5bd1f6cd25d39ed11302e182a23dff77d77cc8d79ab6def76fc60
+Content-type: application/json
+</code></pre></div></div>
+
 <p><img src="../img/postman4.png" alt="POST request" /></p>
 
-<p>Now click on the Body tab (next to the Headers tab). Select the Raw input option and type the JSON shown below to tell <code class="highlighter-rouge">cloudbit</code> to turn the LED on at 100% brightness and to stay on for 5 seconds.</p>
+<p>Now click on the Body tab (next to the Headers tab). Select the Raw input option and type the JSON shown below to tell <code class="highlighter-rouge">cloudbit</code> to turn its output to 100% and to stay on for 5 seconds.</p>
 
 <p>Body:</p>
 <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>{
@@ -413,29 +442,21 @@ You should get back:</p>
 }
 </code></pre></div></div>
 
-<p>and you should see your LED light up. You just used REST!</p>
+<p>and you should see your the cloudbit light up. You just used REST!</p>
+
+<h3 id="exercise">Exercise</h3>
+<p>Assume the cloudbit is now hooked up to the droid inventor kit from previous lessons. Assume the following code is written in scratch:</p>
+
+<p><img src="../img/scratch-program.jpg" alt="Scratch Program" /></p>
+
+<p>Also assume the droidkit is wired up as the output of our cloudbit.</p>
+
+<p>Trigger each of the conditions by making <code class="highlighter-rouge">POST</code> requests to the littlebits API.</p>
 
 <h3 id="checkpoint">Checkpoint</h3>
 <p>Lets review what we’ve learned.</p>
 
-<p>https://www.qzzr.com/c/quiz/429280/8f69a8f7-0a69-4efa-9c3e-2aa38944ed1d</p>
-
-<h3 id="step-7-adding-a-subscriber-to-handle-incoming-events">Step 7: Adding a subscriber to handle incoming events.</h3>
-<p>Lets add a subscriber to catch input events going to the <code class="highlighter-rouge">cloudbit</code>:</p>
-<ul>
-  <li>Make a POST request to <a href="https://api-http.littlebitscloud.cc/v2/subscriptions">https://api-http.littlebitscloud.cc/v2/subscriptions</a></li>
-  <li>In our case we want to make a server listen for the cloudbit, so lets use a URI endpoint as the subscriber</li>
-</ul>
-
-<p>same headers as before
-body:</p>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>{
-    "publisher_id": "&lt;your device id&gt;",
-    "subscriber_id": "http://ourserver.com/endpoint"
-}
-</code></pre></div></div>
-
-<p>But where is our server? We don’t have one yet. We will talk about deploying a server in the next lesson and then come back to this.</p>
+<p><a href="https://unomaha.az1.qualtrics.com/jfe/form/SV_ekry3hrf2Pgc9dH">Quiz - Test your knowledge</a></p>
 
 <h3 id="additional-resources">Additional Resources</h3>
 <p>For more information, investigate the following.</p>
