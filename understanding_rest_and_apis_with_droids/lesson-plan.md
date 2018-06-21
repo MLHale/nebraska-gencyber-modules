@@ -7,7 +7,7 @@ title: Understanding REST and APIs
 This module will introduce students to the concept of APIs, REST, and how to use a rest client.
 
 ### Grade
-Educators
+9-12
 
 ### Time Required
 3.5 hours
@@ -26,6 +26,7 @@ Educators
 
 ### Learning Objectives
 
+1. Students will be able to define HTTP GET and POST operations.
 1. Student will be able to define 'REST', 'a REST endpoint', 'API Integration', and 'API Invocation'
 1. Student will be able use a REST Client to make POST and GET requests to an API
 1. Student will be able to make an API mashup using API data.
@@ -36,12 +37,12 @@ Educators
 * PC
 * Internet connection
 * Little bits cloud bit and API Key
-* Little bits sensor and actuator
+* Little bits sensors and actuators
 
 ### Learning Facilitation
 
 #### Warm up Activity
-Students will start by using paper and post it notes to get a physical conception of a REST API.
+Students will start by using paper and post it notes in a Role playing activity to get a physical conception of a REST API.
 
 #### Focused Activity
 Students will use POSTMAN rest client to connect to the little bits api and make GET and POST requests.
@@ -50,13 +51,13 @@ Students will use POSTMAN rest client to connect to the little bits api and make
 Students will make a mashup to signal the little bits api to light up an LED using a restful request.
 
 #### Reflection
-Students will review relevant first principles learned through though lesson. A small kahoots (or similar) quiz will be given
+Students will review and reflect relevant first principles learned through though lesson. 
 
 ### Assessment
 
 1. Walk Around
 1. Oral Questioning
-1. Quiz (Kahootz)
+1. Quiz (e.g. Kahootz)
 
 ### Accommodations for students with disabilities
 

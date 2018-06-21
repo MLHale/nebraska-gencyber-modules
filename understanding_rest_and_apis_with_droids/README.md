@@ -40,11 +40,10 @@ For this lesson, you will need:
 * Little bits sensor and actuator
 
 ### Prerequisite lessons
-You should complete the [Intro to components using Littlebits Droids](../intro_to_components_using_littlebits_droids/README.md) and [Web services and IoT using Littlebits and IFTTT](../web_services_and_iot_using_littlebits_and_ifttt/README.md) lessons before attempting this lesson.
+You should complete the [Intro to components using Littlebits Droids](../intro_to_components_using_littlebits_droids/README.md) and [Web services and IoT using Littlebits and IFTTT](../web_services_and_iot_using_littlebits_droids_and_ifttt/README.md) lessons before attempting this lesson.
 
 ### Table of Contents
 <!-- TOC START min:1 max:3 link:true update:true -->
-- [Exchanging information online with REST and APIs](#exchanging-information-online-with-rest-and-apis)
     - [Cybersecurity First Principles in this lesson](#cybersecurity-first-principles-in-this-lesson)
     - [Introduction](#introduction)
     - [Goals](#goals)
@@ -57,8 +56,8 @@ You should complete the [Intro to components using Littlebits Droids](../intro_t
     - [Step 4: Making your first REST request](#step-4-making-your-first-rest-request)
     - [Step 5: GET device info](#step-5-get-device-info)
     - [Step 6: First POST request to turn the device on](#step-6-first-post-request-to-turn-the-device-on)
+    - [Exercise](#exercise)
     - [Checkpoint](#checkpoint)
-    - [Step 7: Adding a subscriber to handle incoming events.](#step-7-adding-a-subscriber-to-handle-incoming-events)
     - [Additional Resources](#additional-resources)
   - [Lead Author](#lead-author)
     - [Acknowledgements](#acknowledgements)
@@ -173,7 +172,7 @@ Bodies can be broadly divided into three categories:
 *   **[Multiple-resource bodies](https://developer.mozilla.org/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types#multipartform-data)**, consisting of a multipart body, each containing a different section of information. These are relatively rare.
 
 ### Step 2: Ok, lets take a look at a real API
-Phew, enough background. In the previous [lesson](../web_services_and_iot_using_littlebits_and_ifttt/README.md), we wired our `cloudbit` up to the web and explored how we could send it signals using [IFTTT](https://ifttt.com). We saw that if our `cloudbit` detected an input signal (a `request`), we could have `IFTTT` do something (send a `response`). These concepts, i.e. _request_ and _response_, are central to the concept of `RESTful APIs`. REST, or REpresentational State Transfer, APIs, or Application Programming Interfaces, are tools that developers use to provide __abstraction__ and __resource encapsulation__ to people who want to interact with their data.
+Phew, enough background. In the previous [lesson](../web_services_and_iot_using_littlebits_droids_and_ifttt/README.md), we wired our `cloudbit` up to the web and explored how we could send it signals using [IFTTT](https://ifttt.com). We saw that if our `cloudbit` detected an input signal (a `request`), we could have `IFTTT` do something (send a `response`). These concepts, i.e. _request_ and _response_, are central to the concept of `RESTful APIs`. REST, or REpresentational State Transfer, APIs, or Application Programming Interfaces, are tools that developers use to provide __abstraction__ and __resource encapsulation__ to people who want to interact with their data.
 
 APIs allow you to get and save data back to the application, without needing to tightly integrate with that application. This improves __simplicity__ and helps your code to be more __modular__. APIs include `endpoints`, such as `/api/events`, that allow you to access certain specific data (e.g. events in this example). API endpoints help provide __minimization__ since users can only interact with the application through those interfaces provided by the developer.
 
@@ -188,9 +187,11 @@ Secure APIs don't just accept requests and provide responses to anyone. APIs use
 
 To ensure that only we can program our cloudbit, Littlebits provides something called an `API Key`. This key is a really long alphanumerical string that would be hard to crack. Lets find our key, so we can issue commands to our cloudbit.
 
+> 2018 note, for the purposes of our lesson today, you will be using a key I have setup for your use, thus you don't need to get your own API Key.
+
 Go to [http://control.littlebitscloud.cc/](http://control.littlebitscloud.cc/)
 
-Login using the account you used in the [previous lesson](../web_services_and_iot_using_littlebits_and_ifttt/)
+Login using the account you used in the [previous lesson](../web_services_and_iot_using_littlebits_droids_and_ifttt/)
 
 Once logged in, click on your `cloudbit`:
 
@@ -209,6 +210,12 @@ In POSTMAN, lets build a new GET request targeted at the URL [https://api-http.l
 
 ```
 Authorization: Bearer <your access token with no angled brackets>
+```
+
+> 2018 note, use the following key I have setup for you 
+
+```
+Authorization: Bearer 3111600dc0d5bd1f6cd25d39ed11302e182a23dff77d77cc8d79ab6def76fc60
 ```
 
 You can add the header as a key value pair, where the key is ```Authorization``` and the value is ```Bearer <insert your access token here, remove the angled brackets>```. Make sure to use your access token.
@@ -245,6 +252,12 @@ Now that we know our device id, we can use it to make a specific `request` for o
 https://api-http.littlebitscloud.cc/v2/devices/<your-device-id>
 ```
 
+> 2018 note, for today's lesson you will use the cloudbit I have setup for you 
+
+```
+https://api-http.littlebitscloud.cc/v2/devices/243c201ece7c
+```
+
 * e.g. ```https://api-http.littlebitscloud.cc/v2/devices/00e04c036f15``` in my example
 
 You should get the same device info back, but notice that it is now not in square brackets - this means it is a singleton instead of a list.
@@ -258,11 +271,20 @@ Now that we have the basics of GET requests to access device info, lets try issu
 
 ![Littlebits Setup](../img/configuration.jpg)
 
+> 2018 note, for today's lesson the cloudbit configuration is on the south east corner wall 
+
 * make a POST request using POSTMAN to set the voltage output on the cloudbit for a few seconds
 
 ```
 https://api-http.littlebitscloud.cc/v2/devices/<your-device-id>/output
 ```
+
+> 2018 note, for today's lesson you will use the cloudbit I have setup for you 
+
+```
+https://api-http.littlebitscloud.cc/v2/devices/243c201ece7c/output
+```
+
 * e.g. ```https://api-http.littlebitscloud.cc/v2/devices/00e04c036f15/output``` in my example
 
 Before you issue the request make sure the headers are set as follows:
@@ -273,9 +295,16 @@ Authorization: Bearer <your access token>
 Content-type: application/json
 ```
 
+> 2018 note, use the following header parameters
+
+```
+Authorization: Bearer 3111600dc0d5bd1f6cd25d39ed11302e182a23dff77d77cc8d79ab6def76fc60
+Content-type: application/json
+```
+
 ![POST request](../img/postman4.png)
 
-Now click on the Body tab (next to the Headers tab). Select the Raw input option and type the JSON shown below to tell `cloudbit` to turn the LED on at 100% brightness and to stay on for 5 seconds.
+Now click on the Body tab (next to the Headers tab). Select the Raw input option and type the JSON shown below to tell `cloudbit` to turn its output to 100% and to stay on for 5 seconds.
 
 Body:
 ```
@@ -296,29 +325,21 @@ You should get back:
 }
 ```
 
-and you should see your LED light up. You just used REST!
+and you should see your the cloudbit light up. You just used REST! 
 
+### Exercise 
+Assume the cloudbit is now hooked up to the droid inventor kit from previous lessons. Assume the following code is written in scratch:
+
+![Scratch Program](../img/scratch-program.jpg)
+
+Also assume the droidkit is wired up as the output of our cloudbit. 
+
+Trigger each of the conditions by making `POST` requests to the littlebits API. 
 
 ### Checkpoint
 Lets review what we've learned.
 
-https://www.qzzr.com/c/quiz/429280/8f69a8f7-0a69-4efa-9c3e-2aa38944ed1d
-
-### Step 7: Adding a subscriber to handle incoming events.
-Lets add a subscriber to catch input events going to the `cloudbit`:
-* Make a POST request to [https://api-http.littlebitscloud.cc/v2/subscriptions](https://api-http.littlebitscloud.cc/v2/subscriptions)
-* In our case we want to make a server listen for the cloudbit, so lets use a URI endpoint as the subscriber
-
-same headers as before
-body:
-```
-{
-    "publisher_id": "<your device id>",
-    "subscriber_id": "http://ourserver.com/endpoint"
-}
-```
-
-But where is our server? We don't have one yet. We will talk about deploying a server in the next lesson and then come back to this.
+[Quiz - Test your knowledge](https://unomaha.az1.qualtrics.com/jfe/form/SV_ekry3hrf2Pgc9dH)
 
 
 ### Additional Resources
