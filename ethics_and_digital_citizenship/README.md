@@ -1,3 +1,8 @@
+---
+layout: page
+title: Ethics and Digital Citizenship
+---
+
 ## ETHICS STATEMENT
 
 In this study, one may learn or gain access to methods of bypassing computer security measures, malicious uses for computers, how to disrupt normal operations of computers or networks, and / or other illegal, immoral or unethical uses of computers and networks.  It is important then, that one must realize the responsibility that will accompany such knowledge.  The realization of such responsibility shall come from adherence to the laws and guidelines held by the university, state, country, and global computer user community.  
