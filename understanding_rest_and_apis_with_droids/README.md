@@ -43,25 +43,19 @@ For this lesson, you will need:
 You should complete the [Intro to components using Littlebits Droids](../intro_to_components_using_littlebits_droids/README.md) and [Web services and IoT using Littlebits and IFTTT](../web_services_and_iot_using_littlebits_droids_and_ifttt/README.md) lessons before attempting this lesson.
 
 ### Table of Contents
-<!-- TOC START min:1 max:3 link:true update:true -->
-    - [Cybersecurity First Principles in this lesson](#cybersecurity-first-principles-in-this-lesson)
-    - [Introduction](#introduction)
-    - [Goals](#goals)
-    - [Materials Required](#materials-required)
-    - [Prerequisite lessons](#prerequisite-lessons)
-    - [Table of Contents](#table-of-contents)
-    - [Step 1: Background](#step-1-background)
-    - [Step 2: Ok, lets take a look at a real API](#step-2-ok-lets-take-a-look-at-a-real-api)
-    - [Step 3: Getting our API Key](#step-3-getting-our-api-key)
-    - [Step 4: Making your first REST request](#step-4-making-your-first-rest-request)
-    - [Step 5: GET device info](#step-5-get-device-info)
-    - [Step 6: First POST request to turn the device on](#step-6-first-post-request-to-turn-the-device-on)
-    - [Exercise](#exercise)
-    - [Checkpoint](#checkpoint)
-    - [Additional Resources](#additional-resources)
-  - [Lead Author](#lead-author)
-    - [Acknowledgements](#acknowledgements)
-    - [License](#license)
+<!-- TOC START min:1 max:3 link:true update:false -->
+  - [Step 1: Background](#step-1-background)
+  - [Step 2: Ok, lets take a look at a real API](#step-2-ok-lets-take-a-look-at-a-real-api)
+  - [Step 3: Getting our API Key](#step-3-getting-our-api-key)
+  - [Step 4: Making your first REST request](#step-4-making-your-first-rest-request)
+  - [Step 5: GET device info](#step-5-get-device-info)
+  - [Step 6: First POST request to turn the device on](#step-6-first-post-request-to-turn-the-device-on)
+  - [Exercise](#exercise)
+  - [Checkpoint](#checkpoint)
+  - [Additional Resources](#additional-resources)
+- [Lead Author](#lead-author)
+  - [Acknowledgements](#acknowledgements)
+  - [License](#license)
 
 <!-- TOC END -->
 
