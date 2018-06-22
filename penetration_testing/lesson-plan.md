@@ -1,32 +1,28 @@
 ---
 layout: page
-title: Penetration Testing
+title: Penetration testing
 ---
 
-# Lesson Plan: Penetration Testing
-
 ### Summary
-This module will give you an in-depth understanding of phising.
+Web servers are constantly bombarded with attacks. This lesson explores how developers can get ahead of attackers and test their web apps to identify vulnerabilities.
 
 ### Grade
-Educators
+10-11
 
 ### Time Required
-TBD
+2 Hours
 
 ### First principles
 - [ ] Domain Separation
 - [ ] Process Isolation
-- [ ] Resource Encapsulation
+- [x] Resource Encapsulation
 - [ ] Modularity
-- [ ] Least Privilege
+- [x] Least Privilege
 - [ ] Abstraction
 - [x] Data Hiding
 - [x] Layering
 - [ ] Simplicity
-- [ ] Minimization
-
-Add an x in each of the above that apply.
+- [x] Minimization
 
 ### Learning Objectives
 
@@ -41,30 +37,28 @@ Add an x in each of the above that apply.
 * PC
 * Internet connection
 * Little bits cloud bit and API Key
-* Little bits sensor and actuator
+* Little bits acuator (of any kind) e.g. an led
 
 ### Learning Facilitation
 
 #### Warm up Activity
-... first part ...
+Introduce the concept of a risk landscape and attack surface. 
 
 #### Focused Activity
-Students will use POSTMAN to send a simple request to the server and see if the api has enforced authentication and permissions.
+Students will use POSTMAN to send a simple requests to the server and see if the api has enforced authentication and permissions.
 Students will explore all the api endpoints.
 
 #### Closure
-... next next part ...
+Talk about how risks exist in any context, but we can learn more about them and prioritize accordingly to mitigate the most risky ones.
 
 #### Reflection
-... last part ...
+Think back to other REST lessons to emphasize the importance of security in design
 
 ### Assessment
 
 1. Walk Around
 2. Oral Questioning
-3. Quiz (Kahootz)
-
-e.g. Quiz / Presentation / Project / Writing Assignment / Observation / Walk Around / Oral Questioning / Other
+3. Successful GET/POST requests 
 
 ### Accommodations for students with disabilities
 
@@ -78,13 +72,10 @@ N/A
 
 [Dr. Matthew L. Hale](http://faculty.ist.unomaha.edu/mhale/)
 
-### Acknowledgements
-...List any Acknowledgements or resources here...
-
 ## License
 [Nebraska GenCyber](https://github.com/MLHale/nebraska-gencyber) <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /></a><br /> is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</a>.
 
 Overall content: Copyright (C) 2017-2018  [Dr. Matthew L. Hale](http://faculty.ist.unomaha.edu/mhale/), [Dr. Robin Gandhi](http://faculty.ist.unomaha.edu/rgandhi/), [Dr. Briana B. Morrison](http://www.brianamorrison.net), and [Doug Rausch](http://www.bellevue.edu/about/leadership/faculty/rausch-douglas).
 
-Lesson content: Copyright (C) [Your name here](your site here) 2017-2018.  
+Lesson content: Copyright (C) [Dr. Matthew L. Hale](http://faculty.ist.unomaha.edu/mhale/) 2017-2018.  
 <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /></a><br /><span xmlns:dct="http://purl.org/dc/terms/" property="dct:title">This lesson</span> is licensed by the author under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</a>.

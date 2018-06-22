@@ -1,9 +1,7 @@
 ---
 layout: page
-title: Penetration Testing
+title: Penetration testing
 ---
-
-# Penetration Testing
 
 ### Cybersecurity First Principles in this lesson
 
@@ -46,8 +44,8 @@ For this lesson, you will need:
 ### Prerequisite lessons
 While not required, you should consider completing the following lessons before proceeding with this one.
 * [Intro to Components using Littlebits Droids](../intro_to_components_using_littlebits_droids/README.md)
-* [Web Services and IoT using Littlebits and IFTTT](../web_services_and_iot_using_littlebits_and_ifttt/README.md)
-* [Understanding REST and APIs](../understanding_rest_and_apis/README.md)
+* [Web Services and IoT using Littlebits and IFTTT](../web_services_and_iot_using_littlebits_droids_and_ifttt/README.md)
+* [Understanding REST and APIs](../understanding_rest_and_apis_with_droids/README.md)
 
 (optional if you want to build the server you are penetration testing)
 * [Containers](../containers/README.md)
@@ -56,7 +54,6 @@ While not required, you should consider completing the following lessons before 
 
 ### Table of Contents
 <!-- TOC START min:1 max:3 link:true update:true -->
-- [Penetration Testing](#penetration-testing)
     - [Cybersecurity First Principles in this lesson](#cybersecurity-first-principles-in-this-lesson)
     - [Introduction](#introduction)
     - [Goals](#goals)
@@ -96,7 +93,7 @@ At its core, penetration testing, is about trying to **make an app do something 
 
 First of all, what is this?
 
-![error-slides](./img/error-slide1.png)
+![error-slides](../img/error-slide1.png)
  > Image credit: Bruegge and Dutoit, _Object-oriented Software Engineering: Using UML, Patterns, and Java_, Prentice Hall, 2010
 
 * It all depends on what the goal of the app is. Maybe this is _how it is supposed to work_ - but probably not.
@@ -105,7 +102,7 @@ First of all, what is this?
 * `Faults` are the root causes of `errors`
 * `Failures` occur after errors and can potentially bring down or harm other systems leading to more errors and failures.
 
-![error-slides](./img/error-slide2.png)
+![error-slides](../img/error-slide2.png)
  > Image credit: Bruegge and Dutoit, _Object-oriented Software Engineering: Using UML, Patterns, and Java_, Prentice Hall, 2010
 
 #### Reasons for Errors
@@ -114,10 +111,10 @@ There can be many different scenarios that lead to errors.
 * Maybe something went wrong with the implementation (an `algorithm fault`)
 * Maybe something occurs in the deployment environment that changes the setup and causes a `mechanical fault`
 
-![error-slides](./img/error-slide3.png)
+![error-slides](../img/error-slide3.png)
 > Image credit: Bruegge and Dutoit, _Object-oriented Software Engineering: Using UML, Patterns, and Java_, Prentice Hall, 2010
 
-![error-slides](./img/error-slide4.png)
+![error-slides](../img/error-slide4.png)
  > Image credit: Bruegge and Dutoit, _Object-oriented Software Engineering: Using UML, Patterns, and Java_, Prentice Hall, 2010
 
 #### What can we do about errors and faults?
@@ -126,22 +123,22 @@ We can Test! The goal of testing is to discover `faults` before they lead to `er
 * Testing often means traversing the different ways in which your app operates.
 * This is especially true for `penetration` tests which identify `security faults` (commonly known as `software weaknesses`).
 
-![error-slides](./img/error-slide5.png)
+![error-slides](../img/error-slide5.png)
 > Image credit: Bruegge and Dutoit, _Object-oriented Software Engineering: Using UML, Patterns, and Java_, Prentice Hall, 2010
 
 * Once we know, from testing, that `faults` exist, we can `patch` our code to remove it and prevent errors.
 
-![error-slides](./img/error-slide6.png)
+![error-slides](../img/error-slide6.png)
 > Image credit: Bruegge and Dutoit, _Object-oriented Software Engineering: Using UML, Patterns, and Java_, Prentice Hall, 2010
 
 * Another option is to design our app from the beginning to handle faults better by design. This is a concept called `redundancy`. Redundancy is vitally important for high-criticality systems like those that are operated by NASA, The Department of Defense, and others. `Redundancy` helps, in combination with patching, to ensure that if `errors` do occur they don't cause `failures` before they can be patched.
 
-![error-slides](./img/error-slide7.png)
+![error-slides](../img/error-slide7.png)
 > Image credit: Bruegge and Dutoit, _Object-oriented Software Engineering: Using UML, Patterns, and Java_, Prentice Hall, 2010
 
 * You can also embrace the chaos. It usually doesn't go well...
 
-![error-slides](./img/error-slide8.png)
+![error-slides](../img/error-slide8.png)
 > Image credit: Bruegge and Dutoit, _Object-oriented Software Engineering: Using UML, Patterns, and Java_, Prentice Hall, 2010
 
 * Author note: I love these images from Bruegge and Dutoit!
@@ -168,7 +165,7 @@ These goals, which can be written like `user stories` often involve some form of
 
 In general, you can follow this flow chart for thinking about penetration testing (and testing in general):
 
-![penetration testing](./img/test-workflow.png)
+![penetration testing](../img/test-workflow.png)
 
 * A `test case` is just a series of steps to see if the test fails or succeeds
 * A `mitigation` is a process to correct the `faults` identified during testing.
@@ -178,14 +175,14 @@ In practice, when you are evaluating real-world apps, you want to have strong `c
 
 I like to think of tests graphically:
 
-![penetration testing](./img/testing-surface.png)
+![penetration testing](../img/testing-surface.png)
 
 * In this example, most of the tests that have been conducted are located on part of the app that (as it turns out) doesn't have many vulnerabilities. These tests identify one `weakness` (upper right) that leads to a `vulnerability` but miss a highly vulnerable area of the app (lower left).
 * Maybe this vulnerable area is a `component` that is outdated or not well designed.
 
 Unfortunately, the surface is not the only place where vulnerabilities can occur.
 
-![penetration testing](./img/internal-vulnerabilities.png)
+![penetration testing](../img/internal-vulnerabilities.png)
 
 * `Attack vectors` (i.e. pathways that exploit `weaknesses` to produce `vulnerabilities`) can sometimes use identified vulnerabilities to get access to other areas in your app. Those internal components might be less `hardened` against attack.
 * Takeaway: It is important to test **all** of your components and surfaces.
@@ -193,29 +190,39 @@ Unfortunately, the surface is not the only place where vulnerabilities can occur
 ### Step 4: Getting started testing in POSTMAN
 We've created this pretty cool API and nice client-side interface to use it. However, as you will see, our API is, by default, pretty insecure! In the next sections, we will see just how bad it is by using some penetration tests to identify and highlight problems.
 
-* We will look at them one at a time. First lets start our server. Change into your `nebraska-gencyber-dev-env` folder.
-* type `docker-compose up` to run the server
+The server has already been developed and deployed to [http://137.48.191.180/](http://137.48.191.180/) for you. 
 
-> Note: This assumes your work is completed from the previous lesson. If you want to run this module stand-alone. Ensure you have the correct code and operational environment. For stand-alone setup, see [stand-alone setup](#stand-alone-lesson-setup) below.
+* Start off by logging into the server. Go to [http://137.48.191.180/admin/](http://137.48.191.180/)
+The login credentials are:
 
-* Now open `POSTMAN` and send a simple `GET` request to your local server at `https://localhost`.
+```
+username: admin
+password: admin1234
+```
+
+
+> Note: This lesson can be run locally and stand-alone, for more information see see [stand-alone setup](#stand-alone-lesson-setup) below.
+
+
+* Next open `POSTMAN` and sending a simple `GET` request to your local server at `https://137.48.191.180`.
 * What do you get?
-* Now try sending a `GET` request to `https://localhost/api/deviceevents`
+* Now try sending a `GET` request to `https://137.48.191.180/api/deviceevents`
 * What do you see?
+
 
 ### Step 5: Exploring Authentication and permissions
 The first issue on our server is that it doesn't enforce `authentication`. This violates the __least privilege__ first principle because anonymous users should only be able to login, not see or interact with data.
 
-* Lets go back to our browser and go to http://localhost.
+* Lets go back to our browser and go to [http://137.48.191.180](http://137.48.191.180/).
 * If you are logged in, click `logout`
 
-![data still there!](./img/logged-in.png)
+![data still there!](../img/logged-in.png)
 > Note your data items probably look slightly different than mine, since I am developing this lesson and haven't loaded much data in the app!
 
 * click `home` after logging out
 * What do you see?
 
-![data still there!](./img/logged-out.png)
+![data still there!](../img/logged-out.png)
 > Note your data items probably look slightly different than mine, since I am developing this lesson and haven't loaded much data in the app!
 
 What gives? Our data is still visible when we are logged out.
@@ -227,15 +234,16 @@ That means that anyone can get this data?
 Lets confirm this from `POSTMAN`:
 
 * open your `POSTMAN` window
-* Make a `GET` request to `https://localhost/api/deviceevents`
+* Make a `GET` request to `https://137.48.191.180/api/deviceevents`
 
-![Unauthenticated GET Request](./img/unauthenticated-GET.png)
+![Unauthenticated GET Request](../img/unauthenticated-GET.png)
 > Note your data items probably look slightly different than mine, since I am developing this lesson and haven't loaded much data in the app!
 
 * Notice that we have no headers in the request and we are not sending username/password or any kind of key as part of the request. It just works!
 * This means that we can get all of the device event data on the server without even logging in!
 
 ### Step 6: Examine the attack surface of our app
+> For advanced classes, students could explore the actual code that causes this error. For an introduction to pen testing, you can skip to step 8
 Our web server exposes several endpoints for end-user consumption, look at the files `django_backend/urls.py` and `/api/urls.py` in our `nebraska-gencyber-dev-env` folder. From these we see that the urls accepted by our server are:
 
 * `/admin/<approved admin urls>` -> Django admin package
@@ -288,7 +296,7 @@ TEMPLATES = [
     },
 ]
 ```
-This configuration setting joins the operating system's `BASE_DIR` (or base directory) to the `static/ember/` directory. This means, it looks for `/<path-where-django-exists>/static/ember/`. For us that is `/nebraska-gencyber-dev-env/backend/static/ember/`. If we look in that folder we will see the index.html file that loads in the javascript and other files associated with the client you have been looking at all of this time when you visit https://localhost
+This configuration setting joins the operating system's `BASE_DIR` (or base directory) to the `static/ember/` directory. This means, it looks for `/<path-where-django-exists>/static/ember/`. For us that is `/nebraska-gencyber-dev-env/backend/static/ember/`. If we look in that folder we will see the index.html file that loads in the javascript and other files associated with the client you have been looking at all of this time when you visit [https://137.48.191.180](https://137.48.191.180)
 
 > In practice you would need to do a full assessment of the client. For now, we will assume it is 'safe' from the point of view of the server.
 
@@ -330,7 +338,7 @@ Headers:
   "Content-Type": "application/json"
 }
 ```
-![request](./img/activate-headers.png)
+![request](../img/activate-headers.png)
 
 Body:
 ```json
@@ -341,12 +349,12 @@ Body:
 ```
 * If you send the request when your `cloudbit` is disconnected you will get:
 
-![request](./img/activate-request1.png)
+![request](../img/activate-request1.png)
 
 * If you connect it, you should get:
 
 <!--Image link does not work - activate-request2 doesn't exist-->
-![request](./img/activate-request2.png)
+![request](../img/activate-request2.png)
 
 In either case, we were able to execute the method without logging in. So clearly, **authentication is not required here**. It should be - since our cloudbit could otherwise be turned on by anyone.
 
@@ -392,14 +400,14 @@ Let's test our fields.
 
 * Send a request with string data in the `timestamp` field
 
-![request](./img/activate-request3.png)
+![request](../img/activate-request3.png)
 
 What happened? Oops, we caused the server to generate a 500 error. This happened because it tried to turn an arbitrary string into an int i.e. `timestamp = int(request.data.get('timestamp'))`. It is good that it didn't accept it, but it is bad that it crashed!
 
 * lets change the `timestamp` back and try to send a `cross-site scripting attack` using the event field.
 
-![request](./img/activate-accepts-arbitrary-input1.png)
-![request](./img/activate-accepts-arbitrary-input2.png)
+![request](../img/activate-accepts-arbitrary-input1.png)
+![request](../img/activate-accepts-arbitrary-input2.png)
 
 ```json
 {
@@ -445,9 +453,9 @@ To show you how bad storing arbitrary string text can be, the skeleton code incl
 * While this type of data loading is **quite typical** in many web applications it is **highly vulnerable** to a type of `cross-site scripting (XSS)` attack called `stored cross-site scripting`.
 * In our case, our server `API endpoint` did not filter the string text, so it allows for XSS text to be stored as a string. When the client loads the data from the server, it `renders it as HTML` causing the XSS attack to succeed and a popup to be generated.
 
-If you visit, https://localhost/css_example/ you can see this `Stored XSS` attack in action.
+If you visit, [https://137.48.191.180/css_example/](https://137.48.191.180/css_example/) you can see this `Stored XSS` attack in action.
 
-![request](./img/activate-accepts-arbitrary-input3.png)
+![request](../img/activate-accepts-arbitrary-input3.png)
 
 #### Answering Question 3 (Object Level Permissions)
 In this case, our method doesn't use authentication, so it **doesn't** use `object-level permissions` by default. If we did add authentication and wanted to check for object-level permissions. We would need to check that the code checks not just if the user is authenticated but also if they have permissions on that object to do what they are asking to do.
@@ -459,25 +467,23 @@ Look at the other URLs our app makes use of. Ask yourself similar questions and 
 
 ### Step 10: Exploring Error Handling Behavior
 Earlier, in Step 7 we saw that sending a string in the `timestamp` field generated the following error message:
-![request](./img/activate-request3.png)
+![request](../img/activate-request3.png)
 
 The problem here is not just that the field is mishandled, but that the error gives **FULL DETAILS ABOUT THE SERVER CONFIG**. As you can imagine listing out all the server details is bad practice.
 
 Accidentally revealing server information is a big problem. While this info is really helpful during development, it can expose the server if users see it in production. You can turn off debug information by setting a `DEBUG = False` in the `/django_backend/settings.py` file.
 
-We will return to this in the next lesson.
+> You could return to this in an advanced course to explore mitigation techniques
 
 ### Step 11: Risk Assessment - Summarizing your test results
 For now, lets summarize the `test results` that we have collected to identify what our risks look like. Usually, risks are collected and then ranked according to `severity` (or `impact`) and `likelihood` (i.e. how probable an attack is to occur). In organizations or systems with many risks, preventing all of them isn't always feasible. `Risk prioritization` can help you decide which threats to focus on first and which vulnerabilities need to be mitigated most.
 
-![request](./img/risk-priority-table.jpg)
+![request](../img/risk-priority-table.jpg)
 
 Based on the risks you've identified, score them and rank them based what you think the `likelihood` and `impact` of exploitation might be. While our list is small (and we can mitigate all of the problems) - this tool is useful when you have limited time, money, and other resources.
 
 ### Checkpoint
 Lets review what we've learned.
-
-<insert quiz here>
 
 ### Additional Resources
 For more information, investigate the following.
@@ -521,6 +527,9 @@ ipconfig --all
 * alternatively, you can go to http://google.com and search for 'my ip address'
 
 Also be sure to login to http://localhost/admin/ and add your API key by clicking `Api keys` and then `Add Api Key`. If you forgot it or don't have your key handy, you can retrieve it by visiting http://control.littlebitscloud.cc/ and clicking on `settings`. Set `owner` to `admin` and then click save to store it.
+
+#### Alternative stand alone lesson setup 
+If you want to host a single copy of the server, do so and then just point students towards that machine ip.
 
 ## Lead Author
 

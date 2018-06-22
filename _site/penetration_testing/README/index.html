@@ -1,0 +1,720 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+  <head>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-107147738-2"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-107147738-2');
+  </script>
+
+  <link href="http://gmpg.org/xfn/11" rel="profile">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  
+  <!-- Enable responsiveness on mobile devices-->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+
+  <title>
+    
+      Penetration testing &middot; 
+    
+  </title>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="https://mlhale.github.io/nebraska-gencyber-modules/public/css/poole.css">
+  <link rel="stylesheet" href="https://mlhale.github.io/nebraska-gencyber-modules/public/css/syntax.css">
+  <link rel="stylesheet" href="https://mlhale.github.io/nebraska-gencyber-modules/public/css/hyde.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=PT+Sans:400,400italic,700|Abril+Fatface">
+
+  <!-- Icons -->
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/public/apple-touch-icon-144-precomposed.png">
+  <link rel="shortcut icon" href="/public/favicon.ico">
+  <script async defer src="https://buttons.github.io/buttons.js"></script>
+                                
+  <!-- RSS -->
+  <link rel="alternate" type="application/rss+xml" title="RSS" href="/atom.xml">
+</head>
+
+
+  <body>
+
+    <div class="sidebar">
+  <div class="container sidebar-sticky">
+    <div class="sidebar-about">
+      <h1>
+
+      </h1>
+      <p class="lead"></p>
+    </div>
+
+    <nav class="sidebar-nav">
+      <a class="sidebar-nav-item" href="https://github.com/MLHale/nebraska-gencyber-modules">Nebraska GenCyber</a>
+      <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"></a>is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</a>. <img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /> You are encouraged to reuse, remix, and add to the lessons contained herein - just remember to properly provide attribution.
+      <br><br>
+      Overall content: Copyright (C) 2017-2018  <a href="http://faculty.ist.unomaha.edu/mhale/">Dr. Matthew L. Hale</a>, <a href="http://faculty.ist.unomaha.edu/rgandhi/">Dr. Robin Gandhi</a>, <a href="http://www.brianamorrison.net">Dr. Briana B. Morrison</a>, and <a href="http://www.bellevue.edu/about/leadership/faculty/rausch-douglas">Doug Rausch</a>. <br>
+      Individual content: Copyright (C) 2017-2018 as listed in each lesson.
+    </nav>
+
+    <a class="github-button" href="https://github.com/mlhale/nebraska-gencyber-modules" data-icon="octicon-star" data-size="large" aria-label="Star mlhale/nebraska-gencyber-modules on GitHub">Star</a>
+    <a class="github-button" href="https://github.com/mlhale/nebraska-gencyber-modules/fork" data-icon="octicon-repo-forked" data-size="large" aria-label="Fork mlhale/nebraska-gencyber-modules on GitHub">Fork</a>
+    <a class="github-button" href="https://github.com/mlhale/nebraska-gencyber-modules/issues" data-icon="octicon-issue-opened" data-size="large" aria-label="Issue mlhale/nebraska-gencyber-modules on GitHub">Issue</a>
+    <p>Site &copy; 2018 <a href="http://faculty.ist.unomaha.edu/mhale/">Matt Hale</a>. All rights reserved.</p>
+    
+  </div>
+</div>
+
+
+    <div class="content container">
+      <div class="page">
+  <h1 class="page-title">Penetration testing</h1>
+  <h3 id="cybersecurity-first-principles-in-this-lesson">Cybersecurity First Principles in this lesson</h3>
+
+<ul>
+  <li>
+    <p><strong>Abstraction</strong>: An abstraction is a representation of an object or concept. It could be something such as a door, a speedometer, or a data structure in computer science. Abstraction decouples the design from the implementation. The gauges in an automobile are an abstraction of the performance of a car. A map is an abstraction of the earth.</p>
+  </li>
+  <li>
+    <p><strong>Data Hiding</strong>: Data hiding is the technique that does not allow certain aspects of an object to be observed or accessed. Data and information hiding keeps the programmer from having complete access to data structures. It allows access to only what is necessary.</p>
+  </li>
+  <li>
+    <p><strong>Layering</strong>: Cyber security uses multiple layers of defense or protecting information. If one layer is defeated the next layer should catch it.</p>
+  </li>
+  <li>
+    <p><strong>Least Privilege</strong>: One of the ways to protect information is by limiting what people can see and do with your information and resources. The principle of least privilege says to allow the minimum number of privileges necessary to accomplish the task.</p>
+  </li>
+  <li>
+    <p><strong>Minimization</strong>: Minimization refers to having the least functionality necessary in a program or device. The goal of minimization is to simplify and decrease the number of ways that software can be exploited. This can include <strong>turning off ports that are not needed</strong>, reducing the amount of code running on a machine, and/or turning off unneeded features in an application.</p>
+  </li>
+  <li>
+    <p><strong>Modularization</strong>: The concept of modularity is like building blocks. Each block (or module) can be put in or taken out from a bigger project. Each module has its own separate function that is interchangeable with other modules.</p>
+  </li>
+  <li>
+    <p><strong>Resource Encapsulation</strong>: Encapsulation is an object oriented concept where all data and functions required to use the resource are packaged into a single self-contained component. The goal is to only allow access or manipulation of the resource in the way the designer intended. An example, assume a flag pole is the object. There are fixed methods on how the flag pole is to be used. Put the flag on, take the flag off, raise or lower the flag. Nothing else can be done to the flag pole.</p>
+  </li>
+  <li>
+    <p><strong>Simplicity</strong>: Simplicity allows a person to better understand hardware and software. Without the clutter of unnecessarily complicated code and interfaces, the software will be more understandable by people that will update the code when requirements change. It will be easier to understand by the testers and they will be able to spot problems sooner. By keeping software as simple and as focused as possible, the reliability and security is greatly increased.</p>
+  </li>
+</ul>
+
+<h3 id="introduction">Introduction</h3>
+<p>In this module, you will probe the server you created before to see how insecure API endpoints can be.</p>
+
+<h3 id="goals">Goals</h3>
+<p>By the end of this tutorial, you will be able to:</p>
+<ul>
+  <li>Use a REST Client to make malicious <code class="highlighter-rouge">POST</code> and <code class="highlighter-rouge">GET</code> requests to an <code class="highlighter-rouge">API</code></li>
+  <li>Identify and understand basic <code class="highlighter-rouge">software testing</code> paradigms</li>
+  <li>Identify <code class="highlighter-rouge">software weaknesses</code> in API endpoints</li>
+  <li>Trace exploit <code class="highlighter-rouge">weaknesses</code> to identify <code class="highlighter-rouge">vulnerabilities</code></li>
+  <li>Conduct a <code class="highlighter-rouge">risk assessment</code></li>
+</ul>
+
+<h3 id="materials-required">Materials Required</h3>
+<p>For this lesson, you will need:</p>
+
+<ul>
+  <li>PC</li>
+  <li>Internet connection</li>
+  <li>Little bits cloud bit and API Key</li>
+  <li>Little bits sensor and actuator</li>
+</ul>
+
+<h3 id="prerequisite-lessons">Prerequisite lessons</h3>
+<p>While not required, you should consider completing the following lessons before proceeding with this one.</p>
+<ul>
+  <li><a href="../intro_to_components_using_littlebits_droids/README.md">Intro to Components using Littlebits Droids</a></li>
+  <li><a href="../web_services_and_iot_using_littlebits_droids_and_ifttt/README.md">Web Services and IoT using Littlebits and IFTTT</a></li>
+  <li><a href="../understanding_rest_and_apis_with_droids/README.md">Understanding REST and APIs</a></li>
+</ul>
+
+<p>(optional if you want to build the server you are penetration testing)</p>
+<ul>
+  <li><a href="../containers/README.md">Containers</a></li>
+  <li><a href="../building_a_server/README.md">Building a server</a></li>
+</ul>
+
+<h3 id="table-of-contents">Table of Contents</h3>
+<!-- TOC START min:1 max:3 link:true update:true -->
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>- [Cybersecurity First Principles in this lesson](#cybersecurity-first-principles-in-this-lesson)
+- [Introduction](#introduction)
+- [Goals](#goals)
+- [Materials Required](#materials-required)
+- [Prerequisite lessons](#prerequisite-lessons)
+- [Table of Contents](#table-of-contents)
+- [Step 1: Where we left off](#step-1-where-we-left-off)
+- [Step 2: Key Penetration Testing Concepts](#step-2-key-penetration-testing-concepts)
+- [Step 3: Penetration testing process](#step-3-penetration-testing-process)
+- [Step 4: Getting started testing in POSTMAN](#step-4-getting-started-testing-in-postman)
+- [Step 5: Exploring Authentication and permissions](#step-5-exploring-authentication-and-permissions)
+- [Step 6: Examine the attack surface of our app](#step-6-examine-the-attack-surface-of-our-app)
+- [Step 7: Exploring the `home` method](#step-7-exploring-the-home-method)
+- [Step 8: Explore the `ActivateCloudbit` endpoint](#step-8-explore-the-activatecloudbit-endpoint)
+- [Step 9: Perform a similar analysis on the other endpoints](#step-9-perform-a-similar-analysis-on-the-other-endpoints)
+- [Step 10: Exploring Error Handling Behavior](#step-10-exploring-error-handling-behavior)
+- [Step 11: Risk Assessment - Summarizing your test results](#step-11-risk-assessment---summarizing-your-test-results)
+- [Checkpoint](#checkpoint)
+- [Additional Resources](#additional-resources)   - [Lead Author](#lead-author)
+- [Acknowledgements](#acknowledgements)
+- [License](#license)
+</code></pre></div></div>
+
+<!-- TOC END -->
+
+<h3 id="step-1-where-we-left-off">Step 1: Where we left off</h3>
+<p>When we left off, you had created an <code class="highlighter-rouge">endpoint</code> to make the button work to send a message to your <code class="highlighter-rouge">cloudbit</code>. We had to store our API key on the server to make this work. Our endpoint accepted a POST request to turn on the device. We also integrated our server with <code class="highlighter-rouge">Littlebits API</code> to <code class="highlighter-rouge">subscribe</code> to events that occurred on the <code class="highlighter-rouge">cloudbit</code>.</p>
+
+<p>In this lesson, we will take a look at the security implications of this service integration to see how our server isn’t well protected against attacks.</p>
+
+<h3 id="step-2-key-penetration-testing-concepts">Step 2: Key Penetration Testing Concepts</h3>
+<p><code class="highlighter-rouge">Penetration testing</code> is a special kind of <code class="highlighter-rouge">software testing</code> that evaluates the <code class="highlighter-rouge">attack surface</code> of an application for potential <code class="highlighter-rouge">software weaknesses</code> that if left unaddressed can lead to exploitable <code class="highlighter-rouge">vulnerabilities</code>. At the end of a penetration test, testers have more information about their product and more <code class="highlighter-rouge">assurance</code> that it will operate correctly in the real world. This section overviews the basics of testing.</p>
+
+<p>At its core, penetration testing, is about trying to <strong>make an app do something it wasn’t designed for</strong> and <strong>discover oversights or problems in the implementation and design</strong>.</p>
+
+<p>First of all, what is this?</p>
+
+<p><img src="../img/error-slide1.png" alt="error-slides" /></p>
+<blockquote>
+  <p>Image credit: Bruegge and Dutoit, <em>Object-oriented Software Engineering: Using UML, Patterns, and Java</em>, Prentice Hall, 2010</p>
+</blockquote>
+
+<ul>
+  <li>
+    <p>It all depends on what the goal of the app is. Maybe this is <em>how it is supposed to work</em> - but probably not.</p>
+  </li>
+  <li><code class="highlighter-rouge">Errors</code> are when things are about to go wrong. The system enters an <code class="highlighter-rouge">error state</code></li>
+  <li><code class="highlighter-rouge">Faults</code> are the root causes of <code class="highlighter-rouge">errors</code></li>
+  <li><code class="highlighter-rouge">Failures</code> occur after errors and can potentially bring down or harm other systems leading to more errors and failures.</li>
+</ul>
+
+<p><img src="../img/error-slide2.png" alt="error-slides" /></p>
+<blockquote>
+  <p>Image credit: Bruegge and Dutoit, <em>Object-oriented Software Engineering: Using UML, Patterns, and Java</em>, Prentice Hall, 2010</p>
+</blockquote>
+
+<h4 id="reasons-for-errors">Reasons for Errors</h4>
+<p>There can be many different scenarios that lead to errors.</p>
+<ul>
+  <li>Maybe the design is bad.</li>
+  <li>Maybe something went wrong with the implementation (an <code class="highlighter-rouge">algorithm fault</code>)</li>
+  <li>Maybe something occurs in the deployment environment that changes the setup and causes a <code class="highlighter-rouge">mechanical fault</code></li>
+</ul>
+
+<p><img src="../img/error-slide3.png" alt="error-slides" /></p>
+<blockquote>
+  <p>Image credit: Bruegge and Dutoit, <em>Object-oriented Software Engineering: Using UML, Patterns, and Java</em>, Prentice Hall, 2010</p>
+</blockquote>
+
+<p><img src="../img/error-slide4.png" alt="error-slides" /></p>
+<blockquote>
+  <p>Image credit: Bruegge and Dutoit, <em>Object-oriented Software Engineering: Using UML, Patterns, and Java</em>, Prentice Hall, 2010</p>
+</blockquote>
+
+<h4 id="what-can-we-do-about-errors-and-faults">What can we do about errors and faults?</h4>
+<p>We can Test! The goal of testing is to discover <code class="highlighter-rouge">faults</code> before they lead to <code class="highlighter-rouge">errors</code>. Once we know what is wrong, we can <code class="highlighter-rouge">mitigate</code> it in some way to prevent it from becoming an issue.</p>
+
+<ul>
+  <li>Testing often means traversing the different ways in which your app operates.</li>
+  <li>This is especially true for <code class="highlighter-rouge">penetration</code> tests which identify <code class="highlighter-rouge">security faults</code> (commonly known as <code class="highlighter-rouge">software weaknesses</code>).</li>
+</ul>
+
+<p><img src="../img/error-slide5.png" alt="error-slides" /></p>
+<blockquote>
+  <p>Image credit: Bruegge and Dutoit, <em>Object-oriented Software Engineering: Using UML, Patterns, and Java</em>, Prentice Hall, 2010</p>
+</blockquote>
+
+<ul>
+  <li>Once we know, from testing, that <code class="highlighter-rouge">faults</code> exist, we can <code class="highlighter-rouge">patch</code> our code to remove it and prevent errors.</li>
+</ul>
+
+<p><img src="../img/error-slide6.png" alt="error-slides" /></p>
+<blockquote>
+  <p>Image credit: Bruegge and Dutoit, <em>Object-oriented Software Engineering: Using UML, Patterns, and Java</em>, Prentice Hall, 2010</p>
+</blockquote>
+
+<ul>
+  <li>Another option is to design our app from the beginning to handle faults better by design. This is a concept called <code class="highlighter-rouge">redundancy</code>. Redundancy is vitally important for high-criticality systems like those that are operated by NASA, The Department of Defense, and others. <code class="highlighter-rouge">Redundancy</code> helps, in combination with patching, to ensure that if <code class="highlighter-rouge">errors</code> do occur they don’t cause <code class="highlighter-rouge">failures</code> before they can be patched.</li>
+</ul>
+
+<p><img src="../img/error-slide7.png" alt="error-slides" /></p>
+<blockquote>
+  <p>Image credit: Bruegge and Dutoit, <em>Object-oriented Software Engineering: Using UML, Patterns, and Java</em>, Prentice Hall, 2010</p>
+</blockquote>
+
+<ul>
+  <li>You can also embrace the chaos. It usually doesn’t go well…</li>
+</ul>
+
+<p><img src="../img/error-slide8.png" alt="error-slides" /></p>
+<blockquote>
+  <p>Image credit: Bruegge and Dutoit, <em>Object-oriented Software Engineering: Using UML, Patterns, and Java</em>, Prentice Hall, 2010</p>
+</blockquote>
+
+<ul>
+  <li>Author note: I love these images from Bruegge and Dutoit!</li>
+</ul>
+
+<h3 id="step-3-penetration-testing-process">Step 3: Penetration testing process</h3>
+<p>Ok, so we understand the basics of testing. How do developers think about penetration testing?</p>
+
+<p>Often <code class="highlighter-rouge">use cases</code> and <code class="highlighter-rouge">user stories</code> are used to define what a system should be doing.</p>
+
+<ul>
+  <li>For our app, some user stories might be:
+    <ol>
+      <li>As a <strong>cloudbit owner</strong>, I want to <strong>control my lights from my phone</strong>, so that <em>I don’t have to get off the couch to turn them on or off</em>.</li>
+      <li>As a <strong>cloudbit owner</strong>, I want to <strong>view previous device events</strong>, so that <em>I know when my device was used</em>.</li>
+    </ol>
+  </li>
+</ul>
+
+<p>Once you know what the app <em>should</em> do, you can define <code class="highlighter-rouge">misuse cases</code> or <code class="highlighter-rouge">misuser stories</code> that describe how bad actors might abuse or impair the use cases and user stories. These <code class="highlighter-rouge">misuse</code> scenarios guide the kind of penetration testing you might do.</p>
+
+<p>Anytime your app is on the internet you end up having a basic set of <code class="highlighter-rouge">misuse cases</code> that revolve around the exploitation of web resources for nefarious purposes.</p>
+
+<p>A short list of misuse cases includes:</p>
+<ul>
+  <li>Data theft</li>
+  <li>User data exfiltration</li>
+  <li>Hostile server takeover</li>
+</ul>
+
+<p>These goals, which can be written like <code class="highlighter-rouge">user stories</code> often involve some form of <code class="highlighter-rouge">web-based-attack</code>. We are going to look at our server, created in the previous <a href="../building_a_server/README.md">lesson</a> to see where it may have <code class="highlighter-rouge">weaknesses</code> that leave it vulnerable to attack.</p>
+
+<p>In general, you can follow this flow chart for thinking about penetration testing (and testing in general):</p>
+
+<p><img src="../img/test-workflow.png" alt="penetration testing" /></p>
+
+<ul>
+  <li>A <code class="highlighter-rouge">test case</code> is just a series of steps to see if the test fails or succeeds</li>
+  <li>A <code class="highlighter-rouge">mitigation</code> is a process to correct the <code class="highlighter-rouge">faults</code> identified during testing.</li>
+</ul>
+
+<h4 id="test-coverage">Test Coverage</h4>
+<p>In practice, when you are evaluating real-world apps, you want to have strong <code class="highlighter-rouge">coverage</code> across the app’s <code class="highlighter-rouge">attack surface</code> to ensure you don’t miss something by being too focused in one particular area.</p>
+
+<p>I like to think of tests graphically:</p>
+
+<p><img src="../img/testing-surface.png" alt="penetration testing" /></p>
+
+<ul>
+  <li>In this example, most of the tests that have been conducted are located on part of the app that (as it turns out) doesn’t have many vulnerabilities. These tests identify one <code class="highlighter-rouge">weakness</code> (upper right) that leads to a <code class="highlighter-rouge">vulnerability</code> but miss a highly vulnerable area of the app (lower left).</li>
+  <li>Maybe this vulnerable area is a <code class="highlighter-rouge">component</code> that is outdated or not well designed.</li>
+</ul>
+
+<p>Unfortunately, the surface is not the only place where vulnerabilities can occur.</p>
+
+<p><img src="../img/internal-vulnerabilities.png" alt="penetration testing" /></p>
+
+<ul>
+  <li><code class="highlighter-rouge">Attack vectors</code> (i.e. pathways that exploit <code class="highlighter-rouge">weaknesses</code> to produce <code class="highlighter-rouge">vulnerabilities</code>) can sometimes use identified vulnerabilities to get access to other areas in your app. Those internal components might be less <code class="highlighter-rouge">hardened</code> against attack.</li>
+  <li>Takeaway: It is important to test <strong>all</strong> of your components and surfaces.</li>
+</ul>
+
+<h3 id="step-4-getting-started-testing-in-postman">Step 4: Getting started testing in POSTMAN</h3>
+<p>We’ve created this pretty cool API and nice client-side interface to use it. However, as you will see, our API is, by default, pretty insecure! In the next sections, we will see just how bad it is by using some penetration tests to identify and highlight problems.</p>
+
+<p>The server has already been developed and deployed to <a href="http://137.48.191.180/">http://137.48.191.180/</a> for you.</p>
+
+<ul>
+  <li>Start off by logging into the server. Go to <a href="http://137.48.191.180/">http://137.48.191.180/admin/</a>
+The login credentials are:</li>
+</ul>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>username: admin
+password: admin1234
+</code></pre></div></div>
+
+<blockquote>
+  <p>Note: This lesson can be run locally and stand-alone, for more information see see <a href="#stand-alone-lesson-setup">stand-alone setup</a> below.</p>
+</blockquote>
+
+<ul>
+  <li>Next open <code class="highlighter-rouge">POSTMAN</code> and sending a simple <code class="highlighter-rouge">GET</code> request to your local server at <code class="highlighter-rouge">https://137.48.191.180</code>.</li>
+  <li>What do you get?</li>
+  <li>Now try sending a <code class="highlighter-rouge">GET</code> request to <code class="highlighter-rouge">https://137.48.191.180/api/deviceevents</code></li>
+  <li>What do you see?</li>
+</ul>
+
+<h3 id="step-5-exploring-authentication-and-permissions">Step 5: Exploring Authentication and permissions</h3>
+<p>The first issue on our server is that it doesn’t enforce <code class="highlighter-rouge">authentication</code>. This violates the <strong>least privilege</strong> first principle because anonymous users should only be able to login, not see or interact with data.</p>
+
+<ul>
+  <li>Lets go back to our browser and go to <a href="http://137.48.191.180/">http://137.48.191.180</a>.</li>
+  <li>If you are logged in, click <code class="highlighter-rouge">logout</code></li>
+</ul>
+
+<p><img src="../img/logged-in.png" alt="data still there!" /></p>
+<blockquote>
+  <p>Note your data items probably look slightly different than mine, since I am developing this lesson and haven’t loaded much data in the app!</p>
+</blockquote>
+
+<ul>
+  <li>click <code class="highlighter-rouge">home</code> after logging out</li>
+  <li>What do you see?</li>
+</ul>
+
+<p><img src="../img/logged-out.png" alt="data still there!" /></p>
+<blockquote>
+  <p>Note your data items probably look slightly different than mine, since I am developing this lesson and haven’t loaded much data in the app!</p>
+</blockquote>
+
+<p>What gives? Our data is still visible when we are logged out.
+This is because our server is not enforcing authentication on its <code class="highlighter-rouge">API endpoints</code>.</p>
+
+<p>That means that anyone can get this data?</p>
+<blockquote>
+  <p>Yeah pretty much.</p>
+</blockquote>
+
+<p>Lets confirm this from <code class="highlighter-rouge">POSTMAN</code>:</p>
+
+<ul>
+  <li>open your <code class="highlighter-rouge">POSTMAN</code> window</li>
+  <li>Make a <code class="highlighter-rouge">GET</code> request to <code class="highlighter-rouge">https://137.48.191.180/api/deviceevents</code></li>
+</ul>
+
+<p><img src="../img/unauthenticated-GET.png" alt="Unauthenticated GET Request" /></p>
+<blockquote>
+  <p>Note your data items probably look slightly different than mine, since I am developing this lesson and haven’t loaded much data in the app!</p>
+</blockquote>
+
+<ul>
+  <li>Notice that we have no headers in the request and we are not sending username/password or any kind of key as part of the request. It just works!</li>
+  <li>This means that we can get all of the device event data on the server without even logging in!</li>
+</ul>
+
+<h3 id="step-6-examine-the-attack-surface-of-our-app">Step 6: Examine the attack surface of our app</h3>
+<blockquote>
+  <p>For advanced classes, students could explore the actual code that causes this error. For an introduction to pen testing, you can skip to step 8
+Our web server exposes several endpoints for end-user consumption, look at the files <code class="highlighter-rouge">django_backend/urls.py</code> and <code class="highlighter-rouge">/api/urls.py</code> in our <code class="highlighter-rouge">nebraska-gencyber-dev-env</code> folder. From these we see that the urls accepted by our server are:</p>
+</blockquote>
+
+<ul>
+  <li><code class="highlighter-rouge">/admin/&lt;approved admin urls&gt;</code> -&gt; Django admin package</li>
+  <li><code class="highlighter-rouge">/api-auth/&lt;approved rest_framework urls&gt;</code> -&gt; Rest api-auth package</li>
+  <li><code class="highlighter-rouge">/api/session</code> -&gt; controllers.Session (Class)</li>
+  <li><code class="highlighter-rouge">/api/register</code> -&gt; controllers.Register (Class)</li>
+  <li><code class="highlighter-rouge">/api/deviceevents</code> -&gt; controllers.DeviceEvents (Class)</li>
+  <li><code class="highlighter-rouge">/api/activatecloudbit</code> -&gt; controllers.ActivateCloudbit (Class)</li>
+  <li><code class="highlighter-rouge">css-example/</code> -&gt; controllers.css_example (method that demonstrates cross-site scripting),</li>
+  <li><code class="highlighter-rouge">/*</code> -&gt; controllers.home (Single Method that serves up our frontend client)</li>
+</ul>
+
+<p>For our purposes, we will assume that the open source, highly reviewed, and security tested code from the <code class="highlighter-rouge">Django Admin</code> Package and the <code class="highlighter-rouge">Django REST Framework</code> library have been sufficiently assessed.</p>
+
+<blockquote>
+  <p>NOTE: In practice, you want to be careful about making too many assumptions about the security of third party libraries.</p>
+</blockquote>
+
+<p>That means we need to assess the security of each of the other endpoints.</p>
+
+<h3 id="step-7-exploring-the-home-method">Step 7: Exploring the <code class="highlighter-rouge">home</code> method</h3>
+<p>Starting from the bottom up, the first method of interest is the home method in <code class="highlighter-rouge">controllers.py</code>.</p>
+
+<p>This method simply returns an <code class="highlighter-rouge">index.html</code> file.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">home</span><span class="p">(</span><span class="n">request</span><span class="p">):</span>
+   <span class="s">"""
+   Send requests to / to the ember.js clientside app
+   """</span>
+   <span class="k">return</span> <span class="n">render_to_response</span><span class="p">(</span><span class="s">'ember/index.html'</span><span class="p">,</span>
+               <span class="p">{},</span> <span class="n">RequestContext</span><span class="p">(</span><span class="n">request</span><span class="p">))</span>
+</code></pre></div></div>
+
+<p>Where does <code class="highlighter-rouge">index.html</code> come from? We can answer that question by looking in the <code class="highlighter-rouge">django_backend/settings.py</code> file:</p>
+
+<p>You will see:</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">TEMPLATES</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="p">{</span>
+        <span class="s">'BACKEND'</span><span class="p">:</span> <span class="s">'django.template.backends.django.DjangoTemplates'</span><span class="p">,</span>
+        <span class="s">'DIRS'</span><span class="p">:</span> <span class="p">[</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">BASE_DIR</span><span class="p">,</span> <span class="s">"static/ember/"</span><span class="p">)],</span>
+        <span class="s">'APP_DIRS'</span><span class="p">:</span> <span class="bp">True</span><span class="p">,</span>
+        <span class="s">'OPTIONS'</span><span class="p">:</span> <span class="p">{</span>
+            <span class="s">'context_processors'</span><span class="p">:</span> <span class="p">[</span>
+                <span class="s">'django.template.context_processors.debug'</span><span class="p">,</span>
+                <span class="s">'django.template.context_processors.request'</span><span class="p">,</span>
+                <span class="s">'django.contrib.auth.context_processors.auth'</span><span class="p">,</span>
+                <span class="s">'django.contrib.messages.context_processors.messages'</span><span class="p">,</span>
+            <span class="p">],</span>
+        <span class="p">},</span>
+    <span class="p">},</span>
+<span class="p">]</span>
+</code></pre></div></div>
+<p>This configuration setting joins the operating system’s <code class="highlighter-rouge">BASE_DIR</code> (or base directory) to the <code class="highlighter-rouge">static/ember/</code> directory. This means, it looks for <code class="highlighter-rouge">/&lt;path-where-django-exists&gt;/static/ember/</code>. For us that is <code class="highlighter-rouge">/nebraska-gencyber-dev-env/backend/static/ember/</code>. If we look in that folder we will see the index.html file that loads in the javascript and other files associated with the client you have been looking at all of this time when you visit <a href="https://137.48.191.180">https://137.48.191.180</a></p>
+
+<blockquote>
+  <p>In practice you would need to do a full assessment of the client. For now, we will assume it is ‘safe’ from the point of view of the server.</p>
+</blockquote>
+
+<p>Overall, our server should assume that clients can be compromised and, therefore, focus on securing any <code class="highlighter-rouge">backend</code> functionality. This follows a <code class="highlighter-rouge">defense in depth</code> approach.</p>
+
+<p>What Cybersecurity First Principle might that be?</p>
+
+<h3 id="step-8-explore-the-activatecloudbit-endpoint">Step 8: Explore the <code class="highlighter-rouge">ActivateCloudbit</code> endpoint</h3>
+<p>Next up is the <code class="highlighter-rouge">ActivateCloudbit</code> class. We created this controller in the <a href="../building_a_server/README.md">previous lesson</a>. Since this endpoint includes a <code class="highlighter-rouge">POST</code> request handler, we should carefully review and assess it.</p>
+
+<h4 id="first-question">First Question</h4>
+<p>The first question is does it <code class="highlighter-rouge">require authentication</code>? Authentication should be used anytime you want to restrict access to data as part of an effort of <strong>information hiding</strong>.</p>
+
+<p>Should <code class="highlighter-rouge">ActivateCloudbit</code> require authentication?</p>
+
+<p>Keep track of your answers.</p>
+
+<h4 id="second-question">Second Question</h4>
+<p>Since it accepts data as part of the <code class="highlighter-rouge">POST</code> request, the second question is related to how it checks the data submitted in the request. It is <strong>important to check any data</strong> submitted to a server to ensure that it conforms to accepted <code class="highlighter-rouge">types</code>. This is called <code class="highlighter-rouge">type checking</code> and is referred to in the web world as <code class="highlighter-rouge">parameterization</code> or <code class="highlighter-rouge">parameterized requests</code>.</p>
+
+<p>What data does our method accept?
+Does it <code class="highlighter-rouge">type check</code> the data?
+Is our method an example of a <code class="highlighter-rouge">parameterized request</code>?</p>
+
+<h4 id="third-question">Third Question</h4>
+<p>Sometimes you want to restrict access to data based on who is making the request (and sometimes why they are making it). This is the principle of <strong>least privilege</strong> - that is, only give access to people that need it when they need it. When looking at specific data <code class="highlighter-rouge">objects</code> a question to ask in the risk assessment process is whether or not <code class="highlighter-rouge">object-level permissions</code> are used to check access.</p>
+
+<p>In our case, the question is ‘does our method restrict who can make the <code class="highlighter-rouge">POST</code> request?’ Assuming authentication was put in place, who has access?</p>
+
+<h4 id="answering-question-1-authentication">Answering Question 1 (Authentication)</h4>
+<p>Lets evaluate authentication. This one is easy. Looking at the code we see the line: <code class="highlighter-rouge">permission_classes = (AllowAny,)</code> in the <code class="highlighter-rouge">ActivateCloudbit</code> class. This, as the name implies, literally allows anyone to access this method. We can confirm this in <code class="highlighter-rouge">POSTMAN</code>.</p>
+
+<ul>
+  <li>Open <code class="highlighter-rouge">POSTMAN</code></li>
+  <li>Issue the following request:</li>
+</ul>
+
+<p>Headers:</p>
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="w">
+  </span><span class="s2">"Content-Type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"application/json"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div></div>
+<p><img src="../img/activate-headers.png" alt="request" /></p>
+
+<p>Body:</p>
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="w">
+    </span><span class="s2">"eventtype"</span><span class="p">:</span><span class="w"> </span><span class="s2">"test"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"timestamp"</span><span class="p">:</span><span class="w"> </span><span class="mi">1500681745</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div></div>
+<ul>
+  <li>If you send the request when your <code class="highlighter-rouge">cloudbit</code> is disconnected you will get:</li>
+</ul>
+
+<p><img src="../img/activate-request1.png" alt="request" /></p>
+
+<ul>
+  <li>If you connect it, you should get:</li>
+</ul>
+
+<!--Image link does not work - activate-request2 doesn't exist-->
+<p><img src="../img/activate-request2.png" alt="request" /></p>
+
+<p>In either case, we were able to execute the method without logging in. So clearly, <strong>authentication is not required here</strong>. It should be - since our cloudbit could otherwise be turned on by anyone.</p>
+
+<h4 id="answering-question-2-parameterization">Answering Question 2 (Parameterization)</h4>
+<p>The next question was whether or not the request is <code class="highlighter-rouge">parameterized</code>. Looking at our <code class="highlighter-rouge">post</code> method we see that it only accepts two input fields from the requestor. Everything else is collected elsewhere:</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">eventtype</span> <span class="o">=</span> <span class="n">request</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s">'eventtype'</span><span class="p">)</span>
+<span class="n">timestamp</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">request</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s">'timestamp'</span><span class="p">))</span>
+</code></pre></div></div>
+
+<p>We also see that overall, the method uses the <code class="highlighter-rouge">DeviceEvent</code> <code class="highlighter-rouge">model</code> schema to create a new event.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">newEvent</span> <span class="o">=</span> <span class="n">DeviceEvent</span><span class="p">(</span>
+    <span class="n">device</span><span class="o">=</span><span class="n">device</span><span class="p">,</span>
+    <span class="n">eventtype</span><span class="o">=</span><span class="n">eventtype</span><span class="p">,</span>
+    <span class="n">power</span><span class="o">=-</span><span class="mi">1</span><span class="p">,</span>
+    <span class="n">timestamp</span><span class="o">=</span><span class="n">datetime</span><span class="o">.</span><span class="n">datetime</span><span class="o">.</span><span class="n">fromtimestamp</span><span class="p">(</span><span class="n">timestamp</span><span class="o">/</span><span class="mi">1000</span><span class="p">,</span> <span class="n">pytz</span><span class="o">.</span><span class="n">utc</span><span class="p">),</span>
+    <span class="n">userid</span><span class="o">=</span><span class="n">userid</span><span class="p">,</span>
+    <span class="n">requestor</span><span class="o">=</span><span class="n">requestor</span>
+<span class="p">)</span>
+</code></pre></div></div>
+
+<p>The DeviceEvent method is parameterized by definition - i.e. each of the fields are typed in the definition of the model:</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">class</span> <span class="nc">DeviceEvent</span><span class="p">(</span><span class="n">models</span><span class="o">.</span><span class="n">Model</span><span class="p">):</span>
+    <span class="n">device</span> <span class="o">=</span> <span class="n">models</span><span class="o">.</span><span class="n">ForeignKey</span><span class="p">(</span><span class="n">Device</span><span class="p">,</span> <span class="n">on_delete</span><span class="o">=</span><span class="n">models</span><span class="o">.</span><span class="n">CASCADE</span><span class="p">,</span> <span class="n">related_name</span><span class="o">=</span><span class="s">'events'</span><span class="p">)</span>
+    <span class="n">eventtype</span> <span class="o">=</span> <span class="n">models</span><span class="o">.</span><span class="n">CharField</span><span class="p">(</span><span class="n">max_length</span><span class="o">=</span><span class="mi">1000</span><span class="p">,</span> <span class="n">blank</span><span class="o">=</span><span class="bp">False</span><span class="p">)</span>
+    <span class="n">power</span> <span class="o">=</span> <span class="n">models</span><span class="o">.</span><span class="n">IntegerField</span><span class="p">()</span>
+    <span class="n">timestamp</span> <span class="o">=</span> <span class="n">models</span><span class="o">.</span><span class="n">DateTimeField</span><span class="p">()</span>
+    <span class="n">userid</span> <span class="o">=</span> <span class="n">models</span><span class="o">.</span><span class="n">CharField</span><span class="p">(</span><span class="n">max_length</span><span class="o">=</span><span class="mi">1000</span><span class="p">,</span> <span class="n">blank</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
+    <span class="n">requestor</span> <span class="o">=</span> <span class="n">models</span><span class="o">.</span><span class="n">GenericIPAddressField</span><span class="p">(</span><span class="n">blank</span><span class="o">=</span><span class="bp">False</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">__str__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="nb">str</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">eventtype</span><span class="p">)</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">device</span><span class="p">)</span>
+</code></pre></div></div>
+
+<p>The only fields of concern here are <code class="highlighter-rouge">eventtype</code> and <code class="highlighter-rouge">timestamp</code>. We need to ensure that these fields are <code class="highlighter-rouge">character</code> (string) and <code class="highlighter-rouge">integer</code> fields respectively. Since <strong>accepting arbitrary string data is bad</strong>, it is also a good idea to not allow any raw special characters or symbols that can be used for nefarious purposes (like the keyword <code class="highlighter-rouge">javascript</code> or parentheses and slashes). For these characters, you want to either remove them or <code class="highlighter-rouge">escape</code> them.</p>
+
+<p>Let’s test our fields.</p>
+
+<ul>
+  <li>Send a request with string data in the <code class="highlighter-rouge">timestamp</code> field</li>
+</ul>
+
+<p><img src="../img/activate-request3.png" alt="request" /></p>
+
+<p>What happened? Oops, we caused the server to generate a 500 error. This happened because it tried to turn an arbitrary string into an int i.e. <code class="highlighter-rouge">timestamp = int(request.data.get('timestamp'))</code>. It is good that it didn’t accept it, but it is bad that it crashed!</p>
+
+<ul>
+  <li>lets change the <code class="highlighter-rouge">timestamp</code> back and try to send a <code class="highlighter-rouge">cross-site scripting attack</code> using the event field.</li>
+</ul>
+
+<p><img src="../img/activate-accepts-arbitrary-input1.png" alt="request" />
+<img src="../img/activate-accepts-arbitrary-input2.png" alt="request" /></p>
+
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="w">
+       </span><span class="s2">"eventtype"</span><span class="p">:</span><span class="w"> </span><span class="s2">"&lt;script type='text/javascript'&gt;alert('Cookie'+document.cookie)&lt;/script&gt;"</span><span class="p">,</span><span class="w">
+       </span><span class="s2">"timestamp"</span><span class="p">:</span><span class="w"> </span><span class="mi">1500681745</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div></div>
+
+<ul>
+  <li>It worked! We can send any string text to our app.</li>
+  <li>The good news is that <code class="highlighter-rouge">Django</code> automatically <code class="highlighter-rouge">escapes</code> the string before storing it in the database.</li>
+  <li>The other good news is that our client also <code class="highlighter-rouge">escaped</code> the string before inserting it into the page.</li>
+  <li>The bad news is that if a client rendered that string as <code class="highlighter-rouge">HTML</code> bad stuff would happen.</li>
+</ul>
+
+<p>To show you how bad storing arbitrary string text can be, the skeleton code includes an endpoint we have ignored up to this point called <code class="highlighter-rouge">css_example</code>. This stands for <em>cross-site scripting example</em>. The code for the example is loaded in a stand-alone index.html file in the <code class="highlighter-rouge">nebraska-gencyber-dev-env/backend/static/dumb-test-app</code> folder. Specifically, this <strong>dumb</strong> client includes the following (fairly typical) javascript method that is often used for loading data.</p>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;html&gt;</span>
+  <span class="nt">&lt;head&gt;</span>
+    <span class="nt">&lt;script </span><span class="na">src=</span><span class="s">"http://code.jquery.com/jquery.js"</span><span class="nt">&gt;&lt;/script&gt;</span>
+    <span class="nt">&lt;script </span><span class="na">type=</span><span class="s">"text/javascript"</span><span class="nt">&gt;</span>
+      <span class="nx">$</span><span class="p">.</span><span class="kd">get</span><span class="p">(</span><span class="s1">'../api/deviceevents'</span><span class="p">).</span><span class="nx">then</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">events</span><span class="p">){</span>
+        <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">events</span><span class="p">)</span>
+        <span class="nx">events</span><span class="p">.</span><span class="nx">forEach</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">event</span><span class="p">){</span>
+          <span class="nx">$</span><span class="p">(</span><span class="s1">'#this-is-bad'</span><span class="p">).</span><span class="nx">append</span><span class="p">(</span><span class="s2">"&lt;br&gt;"</span><span class="p">);</span>
+          <span class="nx">$</span><span class="p">(</span><span class="s1">'#this-is-bad'</span><span class="p">).</span><span class="nx">append</span><span class="p">(</span><span class="s1">'&lt;p&gt;Event id:'</span> <span class="o">+</span> <span class="nx">event</span><span class="p">.</span><span class="nx">pk</span> <span class="o">+</span> <span class="s1">' eventtype data below:'</span> <span class="o">+</span><span class="s1">'&lt;/p&gt;'</span><span class="p">);</span>
+          <span class="nx">$</span><span class="p">(</span><span class="s1">'#this-is-bad'</span><span class="p">).</span><span class="nx">append</span><span class="p">(</span><span class="nx">event</span><span class="p">.</span><span class="nx">fields</span><span class="p">.</span><span class="nx">eventtype</span><span class="p">)</span>
+          <span class="nx">$</span><span class="p">(</span><span class="s1">'#this-is-bad'</span><span class="p">).</span><span class="nx">append</span><span class="p">(</span><span class="s2">"---------------------------------------------------&lt;br&gt;"</span><span class="p">);</span>
+
+        <span class="p">});</span>
+      <span class="p">});</span>
+
+    <span class="nt">&lt;/script&gt;</span>
+  <span class="nt">&lt;/head&gt;</span>
+  <span class="nt">&lt;body&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">id=</span><span class="s">'this-is-bad'</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;h5&gt;</span>This field loads in whatever data is available. This is bad. Every event loaded will be appended as a new div below this line.<span class="nt">&lt;/h5&gt;</span>
+      <span class="nt">&lt;p&gt;</span>------------------------------------------------------------------------------------------------------------<span class="nt">&lt;/p&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;/body&gt;</span>
+</code></pre></div></div>
+
+<ul>
+  <li>In this html file we see that it includes <code class="highlighter-rouge">jquery</code> and then uses the <code class="highlighter-rouge">$.get</code> ajax method to make a <code class="highlighter-rouge">GET Request</code> to the server api, get the deviceevent data, and then use the <code class="highlighter-rouge">append</code> method to load it into the page.</li>
+  <li>While this type of data loading is <strong>quite typical</strong> in many web applications it is <strong>highly vulnerable</strong> to a type of <code class="highlighter-rouge">cross-site scripting (XSS)</code> attack called <code class="highlighter-rouge">stored cross-site scripting</code>.</li>
+  <li>In our case, our server <code class="highlighter-rouge">API endpoint</code> did not filter the string text, so it allows for XSS text to be stored as a string. When the client loads the data from the server, it <code class="highlighter-rouge">renders it as HTML</code> causing the XSS attack to succeed and a popup to be generated.</li>
+</ul>
+
+<p>If you visit, <a href="https://137.48.191.180/css_example/">https://137.48.191.180/css_example/</a> you can see this <code class="highlighter-rouge">Stored XSS</code> attack in action.</p>
+
+<p><img src="../img/activate-accepts-arbitrary-input3.png" alt="request" /></p>
+
+<h4 id="answering-question-3-object-level-permissions">Answering Question 3 (Object Level Permissions)</h4>
+<p>In this case, our method doesn’t use authentication, so it <strong>doesn’t</strong> use <code class="highlighter-rouge">object-level permissions</code> by default. If we did add authentication and wanted to check for object-level permissions. We would need to check that the code checks not just if the user is authenticated but also if they have permissions on that object to do what they are asking to do.</p>
+
+<p>We will come back to this in the next lesson.</p>
+
+<h3 id="step-9-perform-a-similar-analysis-on-the-other-endpoints">Step 9: Perform a similar analysis on the other endpoints</h3>
+<p>Look at the other URLs our app makes use of. Ask yourself similar questions and back them up with some tests. Keep track of the results you find as you go along.</p>
+
+<h3 id="step-10-exploring-error-handling-behavior">Step 10: Exploring Error Handling Behavior</h3>
+<p>Earlier, in Step 7 we saw that sending a string in the <code class="highlighter-rouge">timestamp</code> field generated the following error message:
+<img src="../img/activate-request3.png" alt="request" /></p>
+
+<p>The problem here is not just that the field is mishandled, but that the error gives <strong>FULL DETAILS ABOUT THE SERVER CONFIG</strong>. As you can imagine listing out all the server details is bad practice.</p>
+
+<p>Accidentally revealing server information is a big problem. While this info is really helpful during development, it can expose the server if users see it in production. You can turn off debug information by setting a <code class="highlighter-rouge">DEBUG = False</code> in the <code class="highlighter-rouge">/django_backend/settings.py</code> file.</p>
+
+<blockquote>
+  <p>You could return to this in an advanced course to explore mitigation techniques</p>
+</blockquote>
+
+<h3 id="step-11-risk-assessment---summarizing-your-test-results">Step 11: Risk Assessment - Summarizing your test results</h3>
+<p>For now, lets summarize the <code class="highlighter-rouge">test results</code> that we have collected to identify what our risks look like. Usually, risks are collected and then ranked according to <code class="highlighter-rouge">severity</code> (or <code class="highlighter-rouge">impact</code>) and <code class="highlighter-rouge">likelihood</code> (i.e. how probable an attack is to occur). In organizations or systems with many risks, preventing all of them isn’t always feasible. <code class="highlighter-rouge">Risk prioritization</code> can help you decide which threats to focus on first and which vulnerabilities need to be mitigated most.</p>
+
+<p><img src="../img/risk-priority-table.jpg" alt="request" /></p>
+
+<p>Based on the risks you’ve identified, score them and rank them based what you think the <code class="highlighter-rouge">likelihood</code> and <code class="highlighter-rouge">impact</code> of exploitation might be. While our list is small (and we can mitigate all of the problems) - this tool is useful when you have limited time, money, and other resources.</p>
+
+<h3 id="checkpoint">Checkpoint</h3>
+<p>Lets review what we’ve learned.</p>
+
+<h3 id="additional-resources">Additional Resources</h3>
+<p>For more information, investigate the following.</p>
+
+<ul>
+  <li><a href="http://developers.littlebitscloud.cc/">http://developers.littlebitscloud.cc/</a> - API reference for the Littlebits web service.</li>
+  <li><a href="http://dl.acm.org/citation.cfm?id=1795808">Bruegge and Dutoit, <em>Object-oriented Software Engineering: Using UML, Patterns, and Java</em>, Prentice Hall, 2010</a></li>
+</ul>
+
+<h4 id="stand-alone-lesson-setup">Stand Alone Lesson Setup</h4>
+<p>If you want to run this lesson without running <a href="../building_a_server/README.md">Building a server</a> you can run the following commands.</p>
+
+<p>Open a <code class="highlighter-rouge">Powershell</code> terminal and change directory to your <code class="highlighter-rouge">Desktop</code>:</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git clone https://github.com/MLHale/nebraska-gencyber-dev-env <span class="nt">--recursive</span>
+<span class="nb">cd </span>nebraska-gencyber-dev-env
+<span class="nb">cd </span>backend/
+git checkout tags/step10-server
+<span class="nb">cd</span> ..
+docker-compose build
+docker-compose run django bash
+python manage.py flush
+python manage.py makemigrations
+python manage.py migrate
+python manage.py createsuperuser <span class="nt">--username</span> admin <span class="nt">--email</span> admin
+<span class="nb">exit
+</span>docker-compose up
+</code></pre></div></div>
+
+<p>Now, in <code class="highlighter-rouge">Atom</code>, open the <code class="highlighter-rouge">/nebraska-gencyber-dev-env/backend/django_backend/settings.py</code> file.</p>
+
+<p>find the line marked:</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ALLOWED_HOSTS = ['137.48.185.230', 'localhost']
+</code></pre></div></div>
+<p>Replace ‘137.48.185.230’ with your <code class="highlighter-rouge">ip address</code>.</p>
+
+<ul>
+  <li>to get your server ip, you need to open a <code class="highlighter-rouge">Powershell</code> and type:
+    <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ipconfig <span class="nt">--all</span>
+</code></pre></div>    </div>
+  </li>
+  <li>find your ipv4 address on the ip record for the ethernet card attached to your machine</li>
+  <li>alternatively, you can go to http://google.com and search for ‘my ip address’</li>
+</ul>
+
+<p>Also be sure to login to http://localhost/admin/ and add your API key by clicking <code class="highlighter-rouge">Api keys</code> and then <code class="highlighter-rouge">Add Api Key</code>. If you forgot it or don’t have your key handy, you can retrieve it by visiting http://control.littlebitscloud.cc/ and clicking on <code class="highlighter-rouge">settings</code>. Set <code class="highlighter-rouge">owner</code> to <code class="highlighter-rouge">admin</code> and then click save to store it.</p>
+
+<h4 id="alternative-stand-alone-lesson-setup">Alternative stand alone lesson setup</h4>
+<p>If you want to host a single copy of the server, do so and then just point students towards that machine ip.</p>
+
+<h2 id="lead-author">Lead Author</h2>
+
+<ul>
+  <li>Matt Hale</li>
+</ul>
+
+<h3 id="acknowledgements">Acknowledgements</h3>
+<p>Special thanks to <a href="http://faculty.ist.unomaha.edu/rgandhi/">Dr. Robin Gandhi</a>, Andrew Li, and April Guerin for reviewing and editing this module.</p>
+
+<h3 id="license">License</h3>
+<p><a href="https://github.com/MLHale/nebraska-gencyber">Nebraska GenCyber</a> <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /></a><br /> is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</a>.</p>
+
+<p>Overall content: Copyright (C) 2017-2018  <a href="http://faculty.ist.unomaha.edu/mhale/">Dr. Matthew L. Hale</a>, <a href="http://faculty.ist.unomaha.edu/rgandhi/">Dr. Robin Gandhi</a>, <a href="http://www.brianamorrison.net">Dr. Briana B. Morrison</a>, and <a href="http://www.bellevue.edu/about/leadership/faculty/rausch-douglas">Doug Rausch</a>.</p>
+
+<p>Lesson content: Copyright (C) <a href="http://faculty.ist.unomaha.edu/mhale/">Dr. Matthew Hale</a> 2017-2018.<br />
+<a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /></a><br /><span xmlns:dct="http://purl.org/dc/terms/" property="dct:title">This lesson</span> is licensed by the author under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</a>.</p>
+
+</div>
+
+    </div>
+
+  </body>
+</html>

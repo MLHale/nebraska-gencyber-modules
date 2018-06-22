@@ -1,0 +1,754 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+  <head>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-107147738-2"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-107147738-2');
+  </script>
+
+  <link href="http://gmpg.org/xfn/11" rel="profile">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  
+  <!-- Enable responsiveness on mobile devices-->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+
+  <title>
+    
+      Building a server &middot; 
+    
+  </title>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="https://mlhale.github.io/nebraska-gencyber-modules/public/css/poole.css">
+  <link rel="stylesheet" href="https://mlhale.github.io/nebraska-gencyber-modules/public/css/syntax.css">
+  <link rel="stylesheet" href="https://mlhale.github.io/nebraska-gencyber-modules/public/css/hyde.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=PT+Sans:400,400italic,700|Abril+Fatface">
+
+  <!-- Icons -->
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/public/apple-touch-icon-144-precomposed.png">
+  <link rel="shortcut icon" href="/public/favicon.ico">
+  <script async defer src="https://buttons.github.io/buttons.js"></script>
+                                
+  <!-- RSS -->
+  <link rel="alternate" type="application/rss+xml" title="RSS" href="/atom.xml">
+</head>
+
+
+  <body>
+
+    <div class="sidebar">
+  <div class="container sidebar-sticky">
+    <div class="sidebar-about">
+      <h1>
+
+      </h1>
+      <p class="lead"></p>
+    </div>
+
+    <nav class="sidebar-nav">
+      <a class="sidebar-nav-item" href="https://github.com/MLHale/nebraska-gencyber-modules">Nebraska GenCyber</a>
+      <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"></a>is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</a>. <img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /> You are encouraged to reuse, remix, and add to the lessons contained herein - just remember to properly provide attribution.
+      <br><br>
+      Overall content: Copyright (C) 2017-2018  <a href="http://faculty.ist.unomaha.edu/mhale/">Dr. Matthew L. Hale</a>, <a href="http://faculty.ist.unomaha.edu/rgandhi/">Dr. Robin Gandhi</a>, <a href="http://www.brianamorrison.net">Dr. Briana B. Morrison</a>, and <a href="http://www.bellevue.edu/about/leadership/faculty/rausch-douglas">Doug Rausch</a>. <br>
+      Individual content: Copyright (C) 2017-2018 as listed in each lesson.
+    </nav>
+
+    <a class="github-button" href="https://github.com/mlhale/nebraska-gencyber-modules" data-icon="octicon-star" data-size="large" aria-label="Star mlhale/nebraska-gencyber-modules on GitHub">Star</a>
+    <a class="github-button" href="https://github.com/mlhale/nebraska-gencyber-modules/fork" data-icon="octicon-repo-forked" data-size="large" aria-label="Fork mlhale/nebraska-gencyber-modules on GitHub">Fork</a>
+    <a class="github-button" href="https://github.com/mlhale/nebraska-gencyber-modules/issues" data-icon="octicon-issue-opened" data-size="large" aria-label="Issue mlhale/nebraska-gencyber-modules on GitHub">Issue</a>
+    <p>Site &copy; 2018 <a href="http://faculty.ist.unomaha.edu/mhale/">Matt Hale</a>. All rights reserved.</p>
+    
+  </div>
+</div>
+
+
+    <div class="content container">
+      <div class="page">
+  <h1 class="page-title">Building a server</h1>
+  <h3 id="cybersecurity-first-principles-in-this-lesson">Cybersecurity First Principles in this lesson</h3>
+
+<ul>
+  <li>
+    <p><strong>Abstraction</strong>: An abstraction is a representation of an object or concept. It could be something such as a door, a speedometer, or a data structure in computer science. Abstraction decouples the design from the implementation. The gauges in an automobile are an abstraction of the performance of a car. A map is an abstraction of the earth.</p>
+  </li>
+  <li>
+    <p><strong>Data Hiding</strong>: Data hiding is the technique that does not allow certain aspects of an object to be observed or accessed. Data and information hiding keeps the programmer from having complete access to data structures. It allows access to only what is necessary.</p>
+  </li>
+  <li>
+    <p><strong>Layering</strong>: Cyber security uses multiple layers of defense or protecting information. If one layer is defeated the next layer should catch it.</p>
+  </li>
+  <li>
+    <p><strong>Least Privilege</strong>: One of the ways to protect information is by limiting what people can see and do with your information and resources. The principle of least privilege says to allow the minimum number of privileges necessary to accomplish the task.</p>
+  </li>
+  <li>
+    <p><strong>Minimization</strong>: Minimization refers to having the least functionality necessary in a program or device. The goal of minimization is to simplify and decrease the number of ways that software can be exploited. This can include <strong>turning off ports that are not needed</strong>, reducing the amount of code running on a machine, and/or turning off unneeded features in an application.</p>
+  </li>
+  <li>
+    <p><strong>Modularization</strong>: The concept of modularity is like building blocks. Each block (or module) can be put in or taken out from a bigger project. Each module has its own separate function that is interchangeable with other modules.</p>
+  </li>
+  <li>
+    <p><strong>Resource Encapsulation</strong>: Encapsulation is an object oriented concept where all data and functions required to use the resource are packaged into a single self-contained component. The goal is to only allow access or manipulation of the resource in the way the designer intended. An example, assume a flag pole is the object. There are fixed methods on how the flag pole is to be used. Put the flag on, take the flag off, raise or lower the flag. Nothing else can be done to the flag pole.</p>
+  </li>
+  <li>
+    <p><strong>Simplicity</strong>: Simplicity allows a person to better understand hardware and software. Without the clutter of unnecessarily complicated code and interfaces, the software will be more understandable by people that will update the code when requirements change. It will be easier to understand by the testers and they will be able to spot problems sooner. By keeping software as simple and as focused as possible, the reliability and security is greatly increased.</p>
+  </li>
+</ul>
+
+<h3 id="introduction">Introduction</h3>
+<p>In this module, you will learn how to build a server of your own and connect it up to Littlebits.</p>
+
+<h3 id="goals">Goals</h3>
+<p>By the end of this tutorial, you will be able to:</p>
+<ul>
+  <li>Build and deploy a <code class="highlighter-rouge">Django</code> server into a <code class="highlighter-rouge">container</code></li>
+  <li>Create a <code class="highlighter-rouge">REST endpoint</code> on the <code class="highlighter-rouge">application server</code></li>
+  <li>Connect your server to Littlebits to signal your <code class="highlighter-rouge">cloudbit</code> to turn on</li>
+</ul>
+
+<h3 id="materials-required">Materials Required</h3>
+<p>For this lesson, you will need:</p>
+
+<ul>
+  <li>PC</li>
+  <li>Internet connection</li>
+  <li>Littlebits cloud bit and API Key</li>
+  <li>Littlebits sensor and actuator</li>
+</ul>
+
+<h3 id="prerequisite-lessons">Prerequisite lessons</h3>
+<p>You should complete the following lessons before attempting this lesson.</p>
+<ul>
+  <li><a href="../intro_to_components_using_littlebits_droids/README.md">Intro to Components using Littlebits Droids</a></li>
+  <li><a href="../web_services_and_iot_using_littlebits_and_ifttt/README.md">Web Services and IoT using Littlebits and IFTTT</a></li>
+  <li><a href="../understanding_rest_and_apis/README.md">Understanding REST and APIs</a></li>
+  <li><a href="../containers/README.md">Containers</a></li>
+</ul>
+
+<h3 id="table-of-contents">Table of Contents</h3>
+<!-- TOC START min:1 max:3 link:true update:true -->
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>- [Cybersecurity First Principles in this lesson](#cybersecurity-first-principles-in-this-lesson)
+- [Introduction](#introduction)
+- [Goals](#goals)
+- [Materials Required](#materials-required)
+- [Prerequisite lessons](#prerequisite-lessons)
+- [Table of Contents](#table-of-contents)
+- [Step 1: Review - Where are we so far?](#step-1-review---where-are-we-so-far)
+- [Step 2: No, you won't be starting from scratch](#step-2-no-you-wont-be-starting-from-scratch)
+- [Step 3: Setup the server](#step-3-setup-the-server)
+- [Step 4: Run the server](#step-4-run-the-server)
+- [Step 5: Explore the server](#step-5-explore-the-server)
+- [Step 6: Press the button](#step-6-press-the-button)
+- [Step 7: Chrome Dev Tools - Your new best friend](#step-7-chrome-dev-tools---your-new-best-friend)
+- [Step 8: Make a new REST endpoint to make the client button work with the backend](#step-8-make-a-new-rest-endpoint-to-make-the-client-button-work-with-the-backend)
+- [Step 9: Get events from Littlebits](#step-9-get-events-from-littlebits)
+- [Step 10: Profit!](#step-10-profit)
+- [Checkpoint](#checkpoint-1)
+- [Additional Resources](#additional-resources)
+- [Acknowledgements](#acknowledgements)
+- [License](#license)
+</code></pre></div></div>
+
+<!-- TOC END -->
+
+<h3 id="step-1-review---where-are-we-so-far">Step 1: Review - Where are we so far?</h3>
+<p>Before we get started, let’s talk about what we’ve done so far. First, we looked at <code class="highlighter-rouge">Littlebits</code> and saw that we could plug and play the parts together to create new inventions. We wired these up and hooked them to <code class="highlighter-rouge">IFTTT</code> to let the web control our <code class="highlighter-rouge">cloudbit</code>. Then, in the <code class="highlighter-rouge">REST</code> lesson, we looked behind-the-scenes to see how <code class="highlighter-rouge">web services</code> like IFTTT and Littlebits actually work. We played around with <code class="highlighter-rouge">POSTMAN</code> and interacted with the Littlebits <code class="highlighter-rouge">API</code>.</p>
+
+<p>The last thing we left off with was hooking the Littlebits API up to our own server (instead of IFTTT) so we could make our own home-automation controller Dashboard. We saw how <code class="highlighter-rouge">containers</code> could be used to host <code class="highlighter-rouge">isolated</code> servers on another host machine.</p>
+
+<p>Now, in this lesson, we will examine how to create our own server and deploy it in a container.</p>
+
+<p>For reference, this is the overall design we are looking at. On the left side, you have Littlebits and the <code class="highlighter-rouge">Littlebits API</code>. We previously worked with the API using <code class="highlighter-rouge">IFTTT</code>. In the container lesson, you saw how we can setup a new standalone server. In this lesson, we will begin building the item marked <code class="highlighter-rouge">custom web API</code> in the figure below. It will have features to support authentication, managing our <code class="highlighter-rouge">cloudbit</code>, and logging events.
+<img src="./img/web-app-architecture.png" alt="Web App Architecture" /></p>
+
+<h3 id="step-2-no-you-wont-be-starting-from-scratch">Step 2: No, you won’t be starting from scratch</h3>
+<p>The process of creating a new application server from the ground up takes some time and attention. Instead of having you start from the ground up, we are providing you with some <strong>starter</strong> skeleton code. This code does the basics of accepting requests and storing data that comes in. Instead of building it, we will look at and examine how it operates before modifying it to make it more secure.</p>
+
+<ul>
+  <li>First, <code class="highlighter-rouge">fork</code> our repo by visiting the https://github.com/MLHale/nebraska-gencyber-dev-env and clicking ‘fork’. This will copy the code from our repository into your GitHub account - so you can track your changes as you go.</li>
+  <li>Since this project includes a <code class="highlighter-rouge">submodule</code> you need to fork it as well. Visit https://github.com/MLHale/littlebits-rest-api and click <code class="highlighter-rouge">fork</code>.</li>
+  <li>Let’s get started locally on your machine by changing into the Desktop directory and then using <code class="highlighter-rouge">git</code> to clone the skeleton code repository and get it in onto our local machine.</li>
+</ul>
+
+<p>Open a new `Powershell terminal instance:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">cd </span>Desktop
+git clone https://github.com/&lt;your-github-id without the brackets&gt;/nebraska-gencyber-dev-env
+<span class="nb">cd </span>nebraska-gencyber-dev-env/
+</code></pre></div></div>
+
+<p>Add the folder to your <code class="highlighter-rouge">Atom</code> workspace.</p>
+
+<p>Open the <code class="highlighter-rouge">.gitmodules</code> file. Edit the <code class="highlighter-rouge">backend</code> submodule to point to your forked copy, instead of the base repo.</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>[submodule "backend"]
+	path = backend
+	url = https://github.com/MLHale/littlebits-rest-api
+[submodule "frontend"]
+	path = frontend
+	url = https://github.com/MLHale/littlebits-rest-api-frontend
+</code></pre></div></div>
+
+<p>becomes</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>[submodule "backend"]
+	path = backend
+	url = https://github.com/&lt;your-github-id without the angled brackets&gt;/littlebits-rest-api
+[submodule "frontend"]
+	path = frontend
+	url = https://github.com/MLHale/littlebits-rest-api-frontend
+</code></pre></div></div>
+
+<p>This command tells git to use the new url as the path for the submodule. To pull down the code run the following (in the terminal):</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git submodule <span class="nb">sync
+</span>git submodule update <span class="nt">--init</span> <span class="nt">--recursive</span> <span class="nt">--remote</span>
+<span class="nb">cd </span>backend/
+git checkout tags/server-lesson-start
+git checkout <span class="nt">-b</span> my-server-work
+git push <span class="nt">--set-upstream</span> origin my-server-work
+<span class="nb">cd</span> ..
+git add <span class="nt">-A</span>
+git commit <span class="nt">-m</span> <span class="s2">"updated to forked submodule repository"</span>
+git push
+</code></pre></div></div>
+
+<p>This should check out the code for the start of this lesson and create a new branch called <code class="highlighter-rouge">my-server-work</code>. It also updates the <code class="highlighter-rouge">nebraska-gencyber-dev-env</code> repository you forked to include the correct pointer to the newly forked submodule. You should also see your file tree in <code class="highlighter-rouge">Atom</code> update. Any new updates you make you can always run the commands <code class="highlighter-rouge">git add</code>, <code class="highlighter-rouge">git commit</code>, and <code class="highlighter-rouge">git push</code> to save your changes in the branch to your remote repo.</p>
+
+<p>For now, we have our code ready.
+Now use <code class="highlighter-rouge">docker</code> to build the <code class="highlighter-rouge">image</code> that our container will use:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>docker-compose build
+</code></pre></div></div>
+
+<p>With this, we should be able to type the following and see our new image.</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>docker images
+</code></pre></div></div>
+<p>It will be called something like <code class="highlighter-rouge">nebraskagencyberdevenv_django</code>.</p>
+
+<h3 id="step-3-setup-the-server">Step 3: Setup the server</h3>
+<p>This server is completely new, so we need to do some setup to get it initially configured. Execute the following to run the server and open up a bash terminal to interact with it.</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>docker-compose run django bash
+</code></pre></div></div>
+
+<p>In this terminal that opens in the container, we need to tell our <code class="highlighter-rouge">Django</code> server to set up the database and create a new user account for us. The first two lines below set up the database by creating a <code class="highlighter-rouge">database Schema</code> that our SQL server can use to store data. The third line creates a new superuser account. Specify a password for admin. In development, you can use something simple (e.g. admin1234) for simplicity. In practice, you would want to use a much more secure password - since the server could be accessed from the wider internet.</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>python manage.py makemigrations
+python manage.py migrate
+python manage.py createsuperuser <span class="nt">--username</span> admin <span class="nt">--email</span> admin
+<span class="nb">exit</span>
+</code></pre></div></div>
+
+<ul>
+  <li>Now open <code class="highlighter-rouge">Atom</code> on your desktop,</li>
+  <li>go to the File -&gt; “Add Project Folder…”</li>
+</ul>
+
+<p><img src="./img/add-folder.png" alt="Add folder" /></p>
+<blockquote>
+  <p>note that your interface may look slightly different on windows.</p>
+</blockquote>
+
+<ul>
+  <li>Find your <code class="highlighter-rouge">nebraska-gencyber-dev-env</code> folder (it should be located at <code class="highlighter-rouge">C:/Users/student/Desktop/</code>)</li>
+  <li>Upon opening it you should see:</li>
+</ul>
+
+<p><img src="./img/file-tree1.png" alt="File Tree" /></p>
+
+<p>Now, in <code class="highlighter-rouge">Atom</code>, open the <code class="highlighter-rouge">/nebraska-gencyber-dev-env/backend/django_backend/settings.py</code> file by navigating to it in the file tree (on the left) and clicking it.</p>
+
+<p>find the line marked:</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ALLOWED_HOSTS = ['137.48.185.230', 'localhost']
+</code></pre></div></div>
+<p>Replace ‘137.48.185.230’ with your <code class="highlighter-rouge">ip address</code>.</p>
+
+<ul>
+  <li>to get your server ip, you need to open a <code class="highlighter-rouge">Powershell</code> and type:
+    <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ipconfig <span class="nt">--all</span>
+</code></pre></div>    </div>
+  </li>
+  <li>find your ipv4 address on the ip record for the ethernet card attached to your machine</li>
+  <li>alternatively, you can go to http://google.com and search for ‘my ip address’</li>
+</ul>
+
+<h3 id="step-4-run-the-server">Step 4: Run the server</h3>
+<p>With the database initialized, you should be able to easily run the app. All you need to do is:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>docker-compose up
+</code></pre></div></div>
+
+<p>This server diagrammatically looks like:</p>
+
+<p><img src="./img/django-architecture.png" alt="Django Architecture" /></p>
+
+<p>The docker command executes the container using the <code class="highlighter-rouge">docker-compose.yml</code> file located in your <code class="highlighter-rouge">/nebraska-gencyber-dev-env/</code> folder.</p>
+<ul>
+  <li>Leave this terminal running</li>
+  <li>It works by mapping <code class="highlighter-rouge">port 80</code> on the <code class="highlighter-rouge">host</code> to <code class="highlighter-rouge">port 8000</code> in the container.</li>
+  <li>Inside the container, Django executes its <code class="highlighter-rouge">runserver</code> utility - which works like a web server.</li>
+  <li>There is also a second container that starts up and runs our <code class="highlighter-rouge">postgres</code> database server.</li>
+  <li>You can take a look at the <code class="highlighter-rouge">Dockerfile</code> in your <code class="highlighter-rouge">/nebraska-gencyber-dev-env/</code> folder to learn more about what happens behind the scenes.</li>
+</ul>
+
+<p>With the server running, you should be able to visit <a href="http://localhost">http://localhost</a> to see your server. You should an interface that looks something like the following.</p>
+
+<p><img src="./img/skeleton-client.png" alt="skeleton client app" /></p>
+
+<p>This is a <code class="highlighter-rouge">web client</code> (also called a <code class="highlighter-rouge">frontend</code>) that we’ve built for demo purposes to work with our server. You will be making the server work better with the client.</p>
+
+<h3 id="step-5-explore-the-server">Step 5: Explore the server</h3>
+<p>Since our focus is the <code class="highlighter-rouge">backend</code> - let’s take a look at our server environment. First. Let’s explore the file tree.</p>
+
+<ul>
+  <li>click <code class="highlighter-rouge">backend</code> in the file tree to explore the actual files our server is using</li>
+  <li>Click <code class="highlighter-rouge">api</code> and <code class="highlighter-rouge">django_backend</code> to expand out the folders and see what we have.</li>
+  <li>This code is built using a <code class="highlighter-rouge">Model View Controller</code> framework called <code class="highlighter-rouge">Django</code>.
+    <ul>
+      <li><code class="highlighter-rouge">Models</code> (in <code class="highlighter-rouge">models.py</code>) are <code class="highlighter-rouge">abstraction</code> mechanisms that help you represent your data without worrying about the nitty gritty of database technologies.</li>
+      <li><code class="highlighter-rouge">Controllers</code> (in <code class="highlighter-rouge">controllers.py</code>) and <code class="highlighter-rouge">Views</code> are modularization mechanisms that separate user-facing code (like user interfaces) from backend code that handles number crunching and getting data to the views.</li>
+    </ul>
+  </li>
+  <li>Look over these three files, first <code class="highlighter-rouge">models.py</code>, then <code class="highlighter-rouge">urls.py</code>, then <code class="highlighter-rouge">controllers.py</code></li>
+</ul>
+
+<h4 id="modelspy">Models.py</h4>
+<ul>
+  <li>In <code class="highlighter-rouge">models.py</code> you will see that we have defined two <code class="highlighter-rouge">models</code> <code class="highlighter-rouge">Device</code> and <code class="highlighter-rouge">DeviceEvent</code>. Both of these are <code class="highlighter-rouge">schema</code> that have fields in them for each of the types of data they hold.</li>
+  <li>In our <code class="highlighter-rouge">Device</code> model we have fields for the <code class="highlighter-rouge">owner</code> and the <code class="highlighter-rouge">deviceid</code>. This model will hold data about our cloudbit so that our backend server can make use of it.</li>
+</ul>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">class</span> <span class="nc">Device</span><span class="p">(</span><span class="n">models</span><span class="o">.</span><span class="n">Model</span><span class="p">):</span>
+    <span class="n">owner</span> <span class="o">=</span> <span class="n">models</span><span class="o">.</span><span class="n">CharField</span><span class="p">(</span><span class="n">max_length</span><span class="o">=</span><span class="mi">1000</span><span class="p">,</span> <span class="n">blank</span><span class="o">=</span><span class="bp">False</span><span class="p">)</span>
+    <span class="n">deviceid</span> <span class="o">=</span> <span class="n">models</span><span class="o">.</span><span class="n">CharField</span><span class="p">(</span><span class="n">max_length</span><span class="o">=</span><span class="mi">1000</span><span class="p">,</span> <span class="n">blank</span><span class="o">=</span><span class="bp">False</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">__str__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="nb">str</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">deviceid</span><span class="p">)</span>
+
+    <span class="k">class</span> <span class="nc">JSONAPIMeta</span><span class="p">:</span>
+        <span class="n">resource_name</span> <span class="o">=</span> <span class="s">"devices"</span>
+</code></pre></div></div>
+
+<ul>
+  <li>In the <code class="highlighter-rouge">DeviceEvent</code> model we have fields for:
+    <ul>
+      <li><code class="highlighter-rouge">device</code> (i.e. the cloudbit the device event was created for),</li>
+      <li>the <code class="highlighter-rouge">eventtype</code> which describes what occurred,</li>
+      <li>the <code class="highlighter-rouge">power</code> which identifies the power level on the device when the event occurred</li>
+      <li><code class="highlighter-rouge">timestamp</code> (when it happened)</li>
+      <li><code class="highlighter-rouge">userid</code> which is the Littlebits id of the user</li>
+      <li>and <code class="highlighter-rouge">requestor</code> which logs the IP of the Littlebits server that sent the message</li>
+    </ul>
+  </li>
+</ul>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">class</span> <span class="nc">DeviceEvent</span><span class="p">(</span><span class="n">models</span><span class="o">.</span><span class="n">Model</span><span class="p">):</span>
+    <span class="n">device</span> <span class="o">=</span> <span class="n">models</span><span class="o">.</span><span class="n">ForeignKey</span><span class="p">(</span><span class="n">Device</span><span class="p">,</span> <span class="n">on_delete</span><span class="o">=</span><span class="n">models</span><span class="o">.</span><span class="n">CASCADE</span><span class="p">,</span> <span class="n">related_name</span><span class="o">=</span><span class="s">'events'</span><span class="p">)</span>
+    <span class="n">eventtype</span> <span class="o">=</span> <span class="n">models</span><span class="o">.</span><span class="n">CharField</span><span class="p">(</span><span class="n">max_length</span><span class="o">=</span><span class="mi">1000</span><span class="p">,</span> <span class="n">blank</span><span class="o">=</span><span class="bp">False</span><span class="p">)</span>
+    <span class="n">power</span> <span class="o">=</span> <span class="n">models</span><span class="o">.</span><span class="n">IntegerField</span><span class="p">()</span>
+    <span class="n">timestamp</span> <span class="o">=</span> <span class="n">models</span><span class="o">.</span><span class="n">DateTimeField</span><span class="p">()</span>
+    <span class="n">userid</span> <span class="o">=</span> <span class="n">models</span><span class="o">.</span><span class="n">CharField</span><span class="p">(</span><span class="n">max_length</span><span class="o">=</span><span class="mi">1000</span><span class="p">,</span> <span class="n">blank</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span> <span class="n">unique</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
+    <span class="n">requestor</span> <span class="o">=</span> <span class="n">models</span><span class="o">.</span><span class="n">GenericIPAddressField</span><span class="p">(</span><span class="n">blank</span><span class="o">=</span><span class="bp">False</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">__str__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="nb">str</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">eventtype</span><span class="p">)</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">device</span><span class="p">)</span>
+</code></pre></div></div>
+
+<ul>
+  <li>Both of the models also include a <code class="highlighter-rouge">__str__</code> function which outputs a string if the model is converted to a string.</li>
+</ul>
+
+<h4 id="urlspy">urls.py</h4>
+<p>Next lets look at <code class="highlighter-rouge">urls.py</code>. This file tells Django which URLs are accessible on the server. If a URL entry isn’t included in a <code class="highlighter-rouge">urls.py</code> file, then the method cannot be accessed.</p>
+
+<ul>
+  <li>The important part of this file, below, identifies all of the <code class="highlighter-rouge">url patterns</code> that are acceptable for <code class="highlighter-rouge">Django</code> to server up to any would-be requestors</li>
+  <li>Each is a regular expression.</li>
+  <li>Each maps to a function in the <code class="highlighter-rouge">controllers.py</code> file. Basically, when someone attempts to visit a URL, Django goes through its list of acceptable patterns. If it matches a pattern it executes the corresponding code in that method. If it doesn’t match any acceptable pattern, it gives the user an <code class="highlighter-rouge">HTTP 404</code> error (not found).</li>
+  <li>in this case, <code class="highlighter-rouge">api/urls.py</code> is a sub set of patterns that are mapped behind <code class="highlighter-rouge">/api/</code> as given in the file <code class="highlighter-rouge">django_backend/urls.py</code>.</li>
+</ul>
+
+<p><strong>api/urls.py</strong></p>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">urlpatterns</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="n">url</span><span class="p">(</span><span class="s">r'^session/'</span><span class="p">,</span> <span class="n">controllers</span><span class="o">.</span><span class="n">Session</span><span class="o">.</span><span class="n">as_view</span><span class="p">()),</span>
+    <span class="n">url</span><span class="p">(</span><span class="s">r'^register'</span><span class="p">,</span> <span class="n">csrf_exempt</span><span class="p">(</span><span class="n">controllers</span><span class="o">.</span><span class="n">Register</span><span class="o">.</span><span class="n">as_view</span><span class="p">())),</span>
+    <span class="n">url</span><span class="p">(</span><span class="s">r'^deviceevents'</span><span class="p">,</span> <span class="n">csrf_exempt</span><span class="p">(</span><span class="n">controllers</span><span class="o">.</span><span class="n">DeviceEvents</span><span class="o">.</span><span class="n">as_view</span><span class="p">())),</span>
+    <span class="n">url</span><span class="p">(</span><span class="s">r'^'</span><span class="p">,</span> <span class="n">include</span><span class="p">(</span><span class="n">router</span><span class="o">.</span><span class="n">urls</span><span class="p">)),</span>
+<span class="p">]</span>
+
+</code></pre></div></div>
+
+<p><strong>django_backend/urls.py</strong></p>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">urlpatterns</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="n">url</span><span class="p">(</span><span class="s">r'^admin/'</span><span class="p">,</span> <span class="n">admin</span><span class="o">.</span><span class="n">site</span><span class="o">.</span><span class="n">urls</span><span class="p">),</span>
+    <span class="n">url</span><span class="p">(</span><span class="s">r'^api-auth/'</span><span class="p">,</span> <span class="n">include</span><span class="p">(</span><span class="s">'rest_framework.urls'</span><span class="p">,</span> <span class="n">namespace</span><span class="o">=</span><span class="s">'rest_framework'</span><span class="p">)),</span>
+    <span class="n">url</span><span class="p">(</span><span class="s">r'^api/'</span><span class="p">,</span> <span class="n">include</span><span class="p">(</span><span class="n">api_urls</span><span class="p">)),</span>
+    <span class="n">url</span><span class="p">(</span><span class="s">r'^css-example/'</span><span class="p">,</span> <span class="n">controllers</span><span class="o">.</span><span class="n">css_example</span><span class="p">),</span>
+    <span class="n">url</span><span class="p">(</span><span class="s">r'^'</span><span class="p">,</span> <span class="n">views</span><span class="o">.</span><span class="n">home</span><span class="p">),</span>
+<span class="p">]</span>
+</code></pre></div></div>
+
+<h4 id="controllerspy">Controllers.py</h4>
+<p>Next, lets look at the <code class="highlighter-rouge">controllers.py</code> file to see what the server does when a URL is visited.</p>
+
+<p>There is a lot of code in this file. Let’s look at the function that handles requests to the <code class="highlighter-rouge">/api/deviceevents</code> URL.</p>
+
+<ul>
+  <li>Find the code below.</li>
+  <li>Notice that this is a <code class="highlighter-rouge">class</code> that extends the Django REST class <code class="highlighter-rouge">APIView</code>.</li>
+  <li>An <code class="highlighter-rouge">APIView</code> allows you to define functions that handle <code class="highlighter-rouge">GET</code> (single), <code class="highlighter-rouge">GET</code>(list), <code class="highlighter-rouge">POST</code>, <code class="highlighter-rouge">PUT</code>, and <code class="highlighter-rouge">DELETE</code> requests that might arrive at <code class="highlighter-rouge">/api/deviceevents</code></li>
+  <li>The <code class="highlighter-rouge">GET</code> (single) request is used whenever a user wants to get a single item (typically by id), something like <code class="highlighter-rouge">/api/deviceevents/4</code> would return the event with id 4.</li>
+  <li>The <code class="highlighter-rouge">GET</code> (list) request is used whenever a user wants to get all of the events.</li>
+  <li>The <code class="highlighter-rouge">POST</code> request is used whenever a user wants to make a new event.</li>
+  <li>The <code class="highlighter-rouge">PUT</code> request is used whenever a user wants to modify an existing event.</li>
+  <li>Finally, the <code class="highlighter-rouge">DELETE</code> request is used whenever a user wants to delete an existing event.</li>
+</ul>
+
+<blockquote>
+  <p>These conventions are not specific to <code class="highlighter-rouge">Django</code> they are based on <code class="highlighter-rouge">RESTful API</code> design standards.</p>
+</blockquote>
+
+<ul>
+  <li>
+    <p>In our <code class="highlighter-rouge">APIView</code> we have created two <code class="highlighter-rouge">REST endpoints</code> for handling <code class="highlighter-rouge">POST</code> requests and <code class="highlighter-rouge">GET</code> (list) requests.</p>
+  </li>
+  <li>The <code class="highlighter-rouge">post</code> function looks at the incoming request,</li>
+  <li>extracts the data fields from it,</li>
+  <li>gets the stored <code class="highlighter-rouge">Device</code> record (if one exists) or creates a new <code class="highlighter-rouge">Device</code> record (if one does not exist),</li>
+  <li>
+    <p>and then creates and stores a new <code class="highlighter-rouge">DeviceEvent</code> record based on the incoming request data</p>
+  </li>
+  <li>The <code class="highlighter-rouge">get</code> function simply queries the database for all <code class="highlighter-rouge">DeviceEvent</code> objects and returns them to the requestor in <code class="highlighter-rouge">JSON</code> format</li>
+</ul>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">class</span> <span class="nc">DeviceEvents</span><span class="p">(</span><span class="n">APIView</span><span class="p">):</span>
+    <span class="n">permission_classes</span> <span class="o">=</span> <span class="p">(</span><span class="n">AllowAny</span><span class="p">,)</span>
+    <span class="n">parser_classes</span> <span class="o">=</span> <span class="p">(</span><span class="n">parsers</span><span class="o">.</span><span class="n">JSONParser</span><span class="p">,</span><span class="n">parsers</span><span class="o">.</span><span class="n">FormParser</span><span class="p">)</span>
+    <span class="n">renderer_classes</span> <span class="o">=</span> <span class="p">(</span><span class="n">renderers</span><span class="o">.</span><span class="n">JSONRenderer</span><span class="p">,</span> <span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">post</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">request</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+        <span class="n">json_req</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">loads</span><span class="p">(</span><span class="n">request</span><span class="o">.</span><span class="n">POST</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s">'request'</span><span class="p">))</span>
+
+        <span class="n">eventtype</span> <span class="o">=</span> <span class="n">json_req</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s">'payload'</span><span class="p">)</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s">'delta'</span><span class="p">)</span>
+        <span class="n">power</span> <span class="o">=</span> <span class="n">json_req</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s">'payload'</span><span class="p">)</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s">'percent'</span><span class="p">)</span>
+        <span class="n">timestamp</span> <span class="o">=</span> <span class="n">json_req</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s">'timestamp'</span><span class="p">)</span>
+        <span class="n">userid</span> <span class="o">=</span> <span class="n">json_req</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s">'user_id'</span><span class="p">)</span>
+        <span class="n">requestor</span> <span class="o">=</span> <span class="n">request</span><span class="o">.</span><span class="n">META</span><span class="p">[</span><span class="s">'REMOTE_ADDR'</span><span class="p">]</span>
+
+        <span class="k">try</span><span class="p">:</span>
+            <span class="n">device</span> <span class="o">=</span> <span class="n">Device</span><span class="o">.</span><span class="n">objects</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">deviceid</span><span class="o">=</span><span class="n">json_req</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s">'bit_id'</span><span class="p">))</span>
+        <span class="k">except</span> <span class="n">Device</span><span class="o">.</span><span class="n">DoesNotExist</span><span class="p">:</span>
+            <span class="c">#device not created - Create it</span>
+            <span class="n">device</span> <span class="o">=</span> <span class="n">Device</span><span class="p">(</span>
+                <span class="n">deviceid</span><span class="o">=</span><span class="n">json_req</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s">'bit_id'</span><span class="p">),</span>
+                <span class="n">owner</span><span class="o">=</span><span class="n">userid</span>
+            <span class="p">)</span>
+            <span class="n">device</span><span class="o">.</span><span class="n">save</span><span class="p">()</span>
+
+        <span class="n">newEvent</span> <span class="o">=</span> <span class="n">DeviceEvent</span><span class="p">(</span>
+            <span class="n">device</span><span class="o">=</span><span class="n">device</span><span class="p">,</span>
+            <span class="n">eventtype</span><span class="o">=</span><span class="n">eventtype</span><span class="p">,</span>
+            <span class="n">power</span><span class="o">=</span><span class="n">power</span><span class="p">,</span>
+            <span class="n">timestamp</span><span class="o">=</span><span class="n">datetime</span><span class="o">.</span><span class="n">datetime</span><span class="o">.</span><span class="n">fromtimestamp</span><span class="p">(</span><span class="n">timestamp</span><span class="o">/</span><span class="mi">1000</span><span class="p">,</span> <span class="n">pytz</span><span class="o">.</span><span class="n">utc</span><span class="p">),</span>
+            <span class="n">userid</span><span class="o">=</span><span class="n">userid</span><span class="p">,</span>
+            <span class="n">requestor</span><span class="o">=</span><span class="n">requestor</span>
+        <span class="p">)</span>
+
+        <span class="k">try</span><span class="p">:</span>
+            <span class="n">newEvent</span><span class="o">.</span><span class="n">clean_fields</span><span class="p">()</span>
+        <span class="k">except</span> <span class="n">ValidationError</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+            <span class="k">print</span> <span class="n">e</span>
+            <span class="k">return</span> <span class="n">Response</span><span class="p">({</span><span class="s">'success'</span><span class="p">:</span><span class="bp">False</span><span class="p">,</span> <span class="s">'error'</span><span class="p">:</span><span class="n">e</span><span class="p">},</span> <span class="n">status</span><span class="o">=</span><span class="n">status</span><span class="o">.</span><span class="n">HTTP_400_BAD_REQUEST</span><span class="p">)</span>
+
+        <span class="n">newEvent</span><span class="o">.</span><span class="n">save</span><span class="p">()</span>
+        <span class="k">print</span> <span class="s">'New Event Logged from: '</span> <span class="o">+</span> <span class="n">json_req</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s">'bit_id'</span><span class="p">)</span>
+        <span class="k">print</span> <span class="n">json_req</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s">'payload'</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">Response</span><span class="p">({</span><span class="s">'success'</span><span class="p">:</span> <span class="bp">True</span><span class="p">},</span> <span class="n">status</span><span class="o">=</span><span class="n">status</span><span class="o">.</span><span class="n">HTTP_200_OK</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">get</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">request</span><span class="p">,</span> <span class="n">format</span><span class="o">=</span><span class="bp">None</span><span class="p">):</span>
+        <span class="n">events</span> <span class="o">=</span> <span class="n">DeviceEvent</span><span class="o">.</span><span class="n">objects</span><span class="o">.</span><span class="nb">all</span><span class="p">()</span>
+        <span class="n">json_data</span> <span class="o">=</span> <span class="n">serializers</span><span class="o">.</span><span class="n">serialize</span><span class="p">(</span><span class="s">'json'</span><span class="p">,</span> <span class="n">events</span><span class="p">)</span>
+        <span class="n">content</span> <span class="o">=</span> <span class="p">{</span><span class="s">'deviceevents'</span><span class="p">:</span> <span class="n">json_data</span><span class="p">}</span>
+        <span class="k">return</span> <span class="n">Response</span><span class="p">(</span><span class="n">content</span><span class="p">)</span>
+</code></pre></div></div>
+
+<h4 id="checkpoint">Checkpoint</h4>
+<ol>
+  <li>Is the URL <code class="highlighter-rouge">&lt;myserver&gt;/api/deviceevents</code> a valid URL?</li>
+  <li>Is the URL <code class="highlighter-rouge">&lt;myserver&gt;/api/session</code> a valid URL?</li>
+  <li>What function gets called when the user visits <code class="highlighter-rouge">&lt;myserver&gt;/api/register</code>?</li>
+  <li>What would be the result of making a <code class="highlighter-rouge">DELETE</code> request to <code class="highlighter-rouge">&lt;myserver&gt;/api/deviceevents</code>?</li>
+  <li>What would be the result of making a <code class="highlighter-rouge">POST</code> request to <code class="highlighter-rouge">&lt;myserver&gt;/api/deviceevents</code>?</li>
+</ol>
+
+<h3 id="step-6-press-the-button">Step 6: Press the button</h3>
+<p>Ok, so you now have a loose familiarity with the skeleton <code class="highlighter-rouge">backend</code> code that was provided to you. Let’s build upon it.</p>
+
+<p>When you log in, you should see a green button that says <strong>turn cloudbit on</strong> when visiting <code class="highlighter-rouge">localhost</code>. Time to push it!</p>
+
+<ul>
+  <li>connect the <code class="highlighter-rouge">power module</code> to the pink <code class="highlighter-rouge">button</code> input module</li>
+  <li>connect the <code class="highlighter-rouge">button</code> module to the <code class="highlighter-rouge">cloudbit</code> module</li>
+  <li>
+    <p>connect the <code class="highlighter-rouge">cloudbit</code> module to the <code class="highlighter-rouge">LED</code> module</p>
+  </li>
+  <li>in your browser, go to http://localhost</li>
+  <li>press the button</li>
+  <li>what happened?</li>
+  <li>How can we tell?</li>
+</ul>
+
+<p>Lets use the <code class="highlighter-rouge">chrome development tools</code> to take a closer look.</p>
+
+<ul>
+  <li>Press F12 (windows) or Right Click on the page -&gt; Select <code class="highlighter-rouge">Inspect</code></li>
+  <li>This will bring up the <code class="highlighter-rouge">chrome development tools</code> which have a number of very helpful capabilities for debugging websites and inspecting the behind-the-scenes action that happens when you interact with web content</li>
+</ul>
+
+<h3 id="step-7-chrome-dev-tools---your-new-best-friend">Step 7: Chrome Dev Tools - Your new best friend</h3>
+<p>Instead of me reinventing the wheel, head over to <a href="https://developers.google.com/web/tools/chrome-devtools/">https://developers.google.com/web/tools/chrome-devtools/</a> to learn the basics of what Chrome Development tools can do.</p>
+
+<p>When you’ve looked over the different features. Come back and click on the <code class="highlighter-rouge">network</code> tab to inspect what is happening with our button.
+You should see:</p>
+
+<p><a href="./img/button-request.png">button</a></p>
+
+<p>If you click on <code class="highlighter-rouge">activatecloudbit</code> you will see the exact request that is getting sent.</p>
+
+<p><a href="./img/button-failing.png">button</a></p>
+
+<p>If you click over to the <code class="highlighter-rouge">response</code> tab you will see the raw HTML that the server is returning when this button is clicked.</p>
+
+<h3 id="step-8-make-a-new-rest-endpoint-to-make-the-client-button-work-with-the-backend">Step 8: Make a new REST endpoint to make the client button work with the backend</h3>
+<p>Currently, the server doesn’t know that it needs to do anything special with the URL <code class="highlighter-rouge">/api/activatecloudbit</code> so it is just rendering the home page (what we have been looking at this whole time) in response. What we need is for our server to <strong>recognize that a new event has occurred</strong> from the client and then <strong>do something to handle it</strong>, in this case, contact the <code class="highlighter-rouge">Littlebits API</code>.</p>
+
+<p>For this to work, we need to create a new REST Endpoint controller to handle the request. Open up your <code class="highlighter-rouge">controllers.py</code> file and add a new entry called <code class="highlighter-rouge">ActivateCloudbit</code>. This entry will only expose a <code class="highlighter-rouge">POST</code> endpoint. The goal is to:</p>
+
+<ul>
+  <li>capture the info from the client</li>
+  <li>Talk to <code class="highlighter-rouge">Littlebits API</code> to retrieve the device info for the current user</li>
+  <li>Use the retrieved device info to craft a <code class="highlighter-rouge">request</code> to turn on the <code class="highlighter-rouge">Cloudbit</code></li>
+  <li>Turn on the cloudbit and log the resulting event locally</li>
+</ul>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">class</span> <span class="nc">ActivateCloudbit</span><span class="p">(</span><span class="n">APIView</span><span class="p">):</span>
+    <span class="n">permission_classes</span> <span class="o">=</span> <span class="p">(</span><span class="n">AllowAny</span><span class="p">,)</span>
+    <span class="n">parser_classes</span> <span class="o">=</span> <span class="p">(</span><span class="n">parsers</span><span class="o">.</span><span class="n">JSONParser</span><span class="p">,</span><span class="n">parsers</span><span class="o">.</span><span class="n">FormParser</span><span class="p">)</span>
+    <span class="n">renderer_classes</span> <span class="o">=</span> <span class="p">(</span><span class="n">renderers</span><span class="o">.</span><span class="n">JSONRenderer</span><span class="p">,</span> <span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">post</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="n">request</span><span class="p">):</span>
+        <span class="k">print</span> <span class="s">'REQUEST DATA'</span>
+        <span class="k">print</span> <span class="nb">str</span><span class="p">(</span><span class="n">request</span><span class="o">.</span><span class="n">data</span><span class="p">)</span>
+
+        <span class="n">eventtype</span> <span class="o">=</span> <span class="n">request</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s">'eventtype'</span><span class="p">)</span>
+        <span class="n">timestamp</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">request</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s">'timestamp'</span><span class="p">))</span>
+        <span class="n">requestor</span> <span class="o">=</span> <span class="n">request</span><span class="o">.</span><span class="n">META</span><span class="p">[</span><span class="s">'REMOTE_ADDR'</span><span class="p">]</span>
+        <span class="n">api_key</span> <span class="o">=</span> <span class="n">ApiKey</span><span class="o">.</span><span class="n">objects</span><span class="o">.</span><span class="nb">all</span><span class="p">()</span><span class="o">.</span><span class="n">first</span><span class="p">()</span>
+
+        <span class="c">#get device info from Littlebits API</span>
+        <span class="n">r</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s">'https://api-http.littlebitscloud.cc/v2/devices/'</span><span class="p">,</span> <span class="n">headers</span><span class="o">=</span> <span class="p">{</span>
+            <span class="s">'Authorization'</span> <span class="p">:</span> <span class="s">'Bearer '</span> <span class="o">+</span> <span class="n">api_key</span><span class="o">.</span><span class="n">key</span>
+        <span class="p">})</span>
+        <span class="k">print</span> <span class="s">'Retrieving List of Devices from Littlebits:'</span>
+        <span class="k">print</span> <span class="n">r</span><span class="o">.</span><span class="n">json</span><span class="p">()</span>
+        <span class="n">userid</span> <span class="o">=</span> <span class="n">r</span><span class="o">.</span><span class="n">json</span><span class="p">()[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s">'user_id'</span><span class="p">)</span>
+        <span class="n">deviceid</span><span class="o">=</span> <span class="n">r</span><span class="o">.</span><span class="n">json</span><span class="p">()[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s">'id'</span><span class="p">)</span>
+
+        <span class="k">try</span><span class="p">:</span>
+            <span class="n">device</span> <span class="o">=</span> <span class="n">Device</span><span class="o">.</span><span class="n">objects</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">deviceid</span><span class="o">=</span><span class="n">deviceid</span><span class="p">)</span>
+        <span class="k">except</span> <span class="n">Device</span><span class="o">.</span><span class="n">DoesNotExist</span><span class="p">:</span>
+            <span class="c">#device not created - Create it</span>
+            <span class="n">device</span> <span class="o">=</span> <span class="n">Device</span><span class="p">(</span>
+                <span class="n">deviceid</span><span class="o">=</span><span class="n">deviceid</span><span class="p">,</span>
+                <span class="n">owner</span><span class="o">=</span><span class="n">userid</span>
+            <span class="p">)</span>
+            <span class="n">device</span><span class="o">.</span><span class="n">save</span><span class="p">()</span>
+
+        <span class="k">print</span> <span class="s">"Creating New event"</span>
+
+        <span class="n">newEvent</span> <span class="o">=</span> <span class="n">DeviceEvent</span><span class="p">(</span>
+            <span class="n">device</span><span class="o">=</span><span class="n">device</span><span class="p">,</span>
+            <span class="n">eventtype</span><span class="o">=</span><span class="n">eventtype</span><span class="p">,</span>
+            <span class="n">power</span><span class="o">=-</span><span class="mi">1</span><span class="p">,</span>
+            <span class="n">timestamp</span><span class="o">=</span><span class="n">datetime</span><span class="o">.</span><span class="n">datetime</span><span class="o">.</span><span class="n">fromtimestamp</span><span class="p">(</span><span class="n">timestamp</span><span class="o">/</span><span class="mi">1000</span><span class="p">,</span> <span class="n">pytz</span><span class="o">.</span><span class="n">utc</span><span class="p">),</span>
+            <span class="n">userid</span><span class="o">=</span><span class="n">userid</span><span class="p">,</span>
+            <span class="n">requestor</span><span class="o">=</span><span class="n">requestor</span>
+        <span class="p">)</span>
+
+        <span class="k">print</span> <span class="n">newEvent</span>
+        <span class="k">print</span> <span class="s">"Sending Device Event to: "</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">deviceid</span><span class="p">)</span>
+
+        <span class="c">#send the new event (to turn on the device) to littlebits API</span>
+        <span class="n">event_req</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">post</span><span class="p">(</span><span class="s">'https://api-http.littlebitscloud.cc/v2/devices/'</span><span class="o">+</span><span class="n">deviceid</span><span class="o">+</span><span class="s">'/output'</span><span class="p">,</span> <span class="n">headers</span><span class="o">=</span> <span class="p">{</span>
+            <span class="s">'Authorization'</span> <span class="p">:</span> <span class="s">'Bearer '</span> <span class="o">+</span> <span class="n">api_key</span><span class="o">.</span><span class="n">key</span>
+        <span class="p">})</span>
+        <span class="k">print</span> <span class="n">event_req</span><span class="o">.</span><span class="n">json</span><span class="p">()</span>
+
+        <span class="c">#check to ensure the device was on and received the event</span>
+        <span class="k">if</span> <span class="p">(</span><span class="n">event_req</span><span class="o">.</span><span class="n">json</span><span class="p">()</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s">'success'</span><span class="p">)</span><span class="o">!=</span><span class="s">'true'</span><span class="p">):</span>
+            <span class="k">return</span> <span class="n">Response</span><span class="p">({</span><span class="s">'success'</span><span class="p">:</span><span class="bp">False</span><span class="p">,</span> <span class="s">'error'</span><span class="p">:</span><span class="n">event_req</span><span class="o">.</span><span class="n">json</span><span class="p">()</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s">'message'</span><span class="p">)},</span> <span class="n">status</span><span class="o">=</span><span class="n">status</span><span class="o">.</span><span class="n">HTTP_503_SERVICE_UNAVAILABLE</span><span class="p">)</span>
+
+        <span class="c">#check that the event is safe to store in the databse</span>
+        <span class="k">try</span><span class="p">:</span>
+            <span class="n">newEvent</span><span class="o">.</span><span class="n">clean_fields</span><span class="p">()</span>
+        <span class="k">except</span> <span class="n">ValidationError</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+            <span class="k">print</span> <span class="n">e</span>
+            <span class="k">return</span> <span class="n">Response</span><span class="p">({</span><span class="s">'success'</span><span class="p">:</span><span class="bp">False</span><span class="p">,</span> <span class="s">'error'</span><span class="p">:</span><span class="n">e</span><span class="p">},</span> <span class="n">status</span><span class="o">=</span><span class="n">status</span><span class="o">.</span><span class="n">HTTP_400_BAD_REQUEST</span><span class="p">)</span>
+
+        <span class="c">#log the event in the DB</span>
+        <span class="n">newEvent</span><span class="o">.</span><span class="n">save</span><span class="p">()</span>
+        <span class="k">print</span> <span class="s">'New Event Logged'</span>
+        <span class="k">return</span> <span class="n">Response</span><span class="p">({</span><span class="s">'success'</span><span class="p">:</span> <span class="bp">True</span><span class="p">},</span> <span class="n">status</span><span class="o">=</span><span class="n">status</span><span class="o">.</span><span class="n">HTTP_200_OK</span><span class="p">)</span>
+</code></pre></div></div>
+
+<p>Now that we have the endpoint defined we need to make it available on the web server. Modify <code class="highlighter-rouge">api/urls.py</code> to include a new line in the <code class="highlighter-rouge">urlpatterns</code>:</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">urlpatterns</span> <span class="o">=</span> <span class="p">[</span>
+  <span class="n">url</span><span class="p">(</span><span class="s">r'^activatecloudbit'</span><span class="p">,</span> <span class="n">csrf_exempt</span><span class="p">(</span><span class="n">controllers</span><span class="o">.</span><span class="n">ActivateCloudbit</span><span class="o">.</span><span class="n">as_view</span><span class="p">())),</span>
+  <span class="o">...</span><span class="n">other</span> <span class="n">stuff</span><span class="o">...</span>
+<span class="p">]</span>
+</code></pre></div></div>
+<blockquote>
+  <p>Note: don’t include the …other stuff… portion.</p>
+</blockquote>
+
+<p>This will make the endpoint available on the webserver. Now go back to http://localhost and try to click the button. What happens?</p>
+
+<p>Did you get an error?</p>
+
+<p><img src="./img/error-with-key.png" alt="error with key" /></p>
+
+<p>This is because we haven’t added our <code class="highlighter-rouge">API Key</code> to our server, so the field <code class="highlighter-rouge">api_key = ApiKey.objects.all().first()</code> returns null (or <code class="highlighter-rouge">NoneType</code>). To fix this, open your browser and go to http://localhost/admin/api/apikey/. Click ‘add api key’.</p>
+
+<p><img src="./img/api-key.png" alt="error with key" /></p>
+
+<p>Then enter your username (probably <code class="highlighter-rouge">admin</code>) in the <code class="highlighter-rouge">owner</code> field. In the <code class="highlighter-rouge">key</code> field add in your <code class="highlighter-rouge">Littlebits</code> API key used in the previous lesson (without the word <code class="highlighter-rouge">Bearer</code>). If you forgot it or don’t have it handy, you can retrieve it here by visiting http://control.littlebitscloud.cc/ and clicking on <code class="highlighter-rouge">settings</code>. When added, save the key.</p>
+
+<p>Since you made some changes to your code repository, lets track the changes with <code class="highlighter-rouge">git</code>:</p>
+
+<p>in a terminal change directory in the the <code class="highlighter-rouge">/nebraska-gencyber-dev-env</code> folder and execute the following:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git status
+git add <span class="nt">-A</span>
+git status
+git commit <span class="nt">-m</span> <span class="s2">"added activatecloudbit code"</span>
+git push
+</code></pre></div></div>
+
+<p>You just pushed your local changes to <code class="highlighter-rouge">remote</code> on <code class="highlighter-rouge">github</code>!</p>
+
+<h4 id="stray-observations">Stray observations</h4>
+<ul>
+  <li>Our new endpoint is a <code class="highlighter-rouge">module</code> that exemplifies the <code class="highlighter-rouge">modularization</code> Cybersecurity First Principle. It doesn’t rely on the other modules (endpoints).</li>
+  <li>We did not hardcode our <code class="highlighter-rouge">API key</code> in the code to protect it from static lookup - this is an example of the <code class="highlighter-rouge">information hiding</code> Cybersecurity First Principle.</li>
+  <li>We made use of <code class="highlighter-rouge">abstraction</code> and <code class="highlighter-rouge">resource encapsulation</code> as they relate to the API design for our server and for the <code class="highlighter-rouge">Littlebits API</code></li>
+</ul>
+
+<h3 id="step-9-get-events-from-littlebits">Step 9: Get events from Littlebits</h3>
+<p>The next step is to not only <code class="highlighter-rouge">send</code> events to Littlebits, but also to <code class="highlighter-rouge">subscribe</code> to and <code class="highlighter-rouge">receive</code> events that are output from the <code class="highlighter-rouge">cloudbit.</code> To do that, we need to use <code class="highlighter-rouge">POSTMAN</code> to add a subscriber. This was the last step where we left off in the <a href="../restful-api/README.md">REST API</a> tutorial. Now we are ready!</p>
+
+<p>Lets add a subscriber to catch input events going to the cloudbit:</p>
+<ul>
+  <li>make a POST request, using <code class="highlighter-rouge">POSTMAN</code> to https://api-http.littlebitscloud.cc/v2/subscriptions</li>
+  <li>In our case we want to make a server listen for the <code class="highlighter-rouge">cloudbit</code>, so lets use a URI endpoint as the subscriber</li>
+  <li>Make sure you use the same headers that you used in the <code class="highlighter-rouge">REST</code> tutorial. If you don’t remember it should be:</li>
+</ul>
+
+<p><code class="highlighter-rouge">headers</code>:</p>
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="w">
+    </span><span class="s2">"Authorization"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Bearer &lt;your api key here without the angled brackets&gt;"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"Content-type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"application/json"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div></div>
+
+<p>This time, in the body, we are going to use:</p>
+
+<p><code class="highlighter-rouge">body</code>:</p>
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="w">
+    </span><span class="s2">"publisher_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"&lt;your device id without the angled brackets&gt;"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"subscriber_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://gencyber2017.unomaha.edu/api/proxy/&lt;your-server-ip without the angled brackets&gt;/api/deviceevents"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"publisher_events"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">"amplitude:delta:ignite"</span><span class="p">]</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div></div>
+
+<ul>
+  <li>to get your server ip, you need to open a <code class="highlighter-rouge">Powershell</code> and type:
+    <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ipconfig <span class="nt">--all</span>
+</code></pre></div>    </div>
+  </li>
+  <li>find your ipv4 address on the ethernet card attached to your machine</li>
+  <li>alternatively, you can go to http://google.com and search for ‘my ip address’</li>
+  <li>put the ip in the body of the request above and send the message to the <code class="highlighter-rouge">Littlebits API</code></li>
+  <li>If the request works, you should see your request echoed back to you</li>
+</ul>
+
+<h4 id="stray-observations-1">Stray observations</h4>
+<ul>
+  <li>We are using http://gencyber2017.unomaha.edu/api/proxy so the requests from Littlebits can make it to your servers in this room.</li>
+  <li>UNO, like other universities and companies, uses a <code class="highlighter-rouge">defense in depth</code> strategy that includes <code class="highlighter-rouge">perimeter network firewalls</code>. This is an example of <code class="highlighter-rouge">layering</code>. In this case, we are filtering external requests through a proxy to check their conformity. If they are clean, they are forwarded through our network firewall to your individual servers.</li>
+  <li>The <code class="highlighter-rouge">publisher_events</code> field allows you to subscribe to several different types of events. You can find a full list here: http://developers.littlebitscloud.cc/#create-subscription</li>
+  <li>Please do not denial of service the proxy portal - your IP might get automatically banned if you do.</li>
+</ul>
+
+<h3 id="step-10-profit">Step 10: Profit!</h3>
+<p>Pretty neat. Observe your handy work.</p>
+
+<ul>
+  <li>connect the <code class="highlighter-rouge">power module</code> to the pink <code class="highlighter-rouge">button</code> input module</li>
+  <li>connect the <code class="highlighter-rouge">button</code> module to the <code class="highlighter-rouge">cloudbit</code> module</li>
+  <li>connect the <code class="highlighter-rouge">cloudbit</code> module to the <code class="highlighter-rouge">LED</code> module</li>
+</ul>
+
+<p>Now, press the button on <code class="highlighter-rouge">button</code> module. Watch as your server get the events from the <code class="highlighter-rouge">Littlebits API</code>, logs them locally (creating a database record), stores them for later, and then loads them into the client app for you to see.</p>
+
+<blockquote>
+  <p>Note: the client is designed to check for updates every 3 seconds.</p>
+</blockquote>
+
+<h3 id="checkpoint-1">Checkpoint</h3>
+<p>Lets review what we’ve learned.</p>
+
+<p>https://www.qzzr.com/c/quiz/435902/custom-server-development</p>
+
+<h3 id="additional-resources">Additional Resources</h3>
+<p>For more information, investigate the following.</p>
+
+<ul>
+  <li><a href="http://developers.littlebitscloud.cc/">http://developers.littlebitscloud.cc/</a> - API reference for the Littlebits web service.</li>
+  <li><a href="https://developers.google.com/web/tools/chrome-devtools/">https://developers.google.com/web/tools/chrome-devtools/</a> - Chrome Dev Tools overview</li>
+</ul>
+
+<h4 id="checkpointed-code">Checkpointed code</h4>
+<p>If you want to fast forward between lessons, I have provided you with a complete solution through step 10 of this lesson. You can update to that version using the following command from the terminal where your <code class="highlighter-rouge">nebraska-gencyber-dev-env</code> is running:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git checkout tags/step10-server
+</code></pre></div></div>
+
+<p>This will update your local code copy to the tagged release version. You can merge it back into your master branch by making a <code class="highlighter-rouge">pull request</code> into your master branch using <code class="highlighter-rouge">Github</code>.</p>
+
+<h3 id="acknowledgements">Acknowledgements</h3>
+<p>Special thanks to <a href="http://faculty.ist.unomaha.edu/rgandhi/">Dr. Robin Gandhi</a>, Andrew Li, and April Guerin for reviewing and editing this module.</p>
+
+<h3 id="license">License</h3>
+<p><a href="https://github.com/MLHale/nebraska-gencyber">Nebraska GenCyber</a> <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /></a><br /> is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</a>.</p>
+
+<p>Overall content: Copyright (C) 2017-2018  <a href="http://faculty.ist.unomaha.edu/mhale/">Dr. Matthew L. Hale</a>, <a href="http://faculty.ist.unomaha.edu/rgandhi/">Dr. Robin Gandhi</a>, <a href="http://www.brianamorrison.net">Dr. Briana B. Morrison</a>, and <a href="http://www.bellevue.edu/about/leadership/faculty/rausch-douglas">Doug Rausch</a>.</p>
+
+<p>Lesson content: Copyright (C) <a href="http://faculty.ist.unomaha.edu/mhale/">Dr. Matthew Hale</a> 2017-2018.<br />
+<a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /></a><br /><span xmlns:dct="http://purl.org/dc/terms/" property="dct:title">This lesson</span> is licensed by the author under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</a>.</p>
+
+</div>
+
+    </div>
+
+  </body>
+</html>
