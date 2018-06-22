@@ -1,4 +1,7 @@
-# Lesson Plan: Building a Server
+---
+layout: page
+title: Building a server
+---
 
 ### Summary
 This module will teach how to build a server of your own and connect it up to Littlebits..

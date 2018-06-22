@@ -1,4 +1,7 @@
-# Building a Server
+---
+layout: page
+title: Building a server
+---
 
 ### Cybersecurity First Principles in this lesson
 
@@ -45,7 +48,6 @@ You should complete the following lessons before attempting this lesson.
 
 ### Table of Contents
 <!-- TOC START min:1 max:3 link:true update:true -->
-- [Building a Server](#building-a-server)
     - [Cybersecurity First Principles in this lesson](#cybersecurity-first-principles-in-this-lesson)
     - [Introduction](#introduction)
     - [Goals](#goals)

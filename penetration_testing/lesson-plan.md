@@ -1,4 +1,7 @@
-# Lesson Plan: Penetration Testing
+---
+layout: page
+title: Penetration testing
+---
 
 ### Summary
 This module will give you an in-depth understanding of phising.
