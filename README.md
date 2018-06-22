@@ -7,7 +7,7 @@ Have questions or comments about the content? Used our content and want more? Wa
 ![matt](./img/matt.jpg)
 [Dr. Matt Hale](http://faculty.ist.unomaha.edu/mhale/)
 Assistant Professor of Cybersecurity
-University of Nebraska at Omaha .
+University of Nebraska at Omaha.
 [mlhale@unomaha.edu](mailto:mlhale@unomaha.edu)
 Twitter - [@mlhale](https://twitter.com/mlhale_)
 
