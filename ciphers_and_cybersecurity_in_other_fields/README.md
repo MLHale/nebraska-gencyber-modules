@@ -55,14 +55,21 @@ None
 <!-- TOC END -->
 
 ### Step 1: Learn all the words!
-Plaintext/Cleartext - an unaltered message as it's intended to be read
-Ciphertext – message that has been changed so its meaning is concealed
-Encryption/enciphering – changing plaintext to ciphertext
-Decryption/deciphering – changing ciphertext back into plaintext
-Key – secret value needed to encrypt and/or decrypt
-Cryptographic Algorithm/cipher – a standard sequence of computational steps to encrypt or decrypt a message using a key
-Cryptanalysis – practice of analyzing encrypted messages to reveal the plaintext without knowing the key
-Strength – determines how much effort and how long it takes to break a ciphertext
+__Plaintext/Cleartext__ - an unaltered message as it's intended to be read
+
+__Ciphertext__ – message that has been changed so its meaning is concealed
+
+__Encryption/enciphering__ – changing plaintext to ciphertext
+
+__Decryption/deciphering__ – changing ciphertext back into plaintext
+
+__Key__ – secret value needed to encrypt and/or decrypt
+
+__Cryptographic Algorithm/cipher__ – a standard sequence of computational steps to encrypt or decrypt a message using a key
+
+__Cryptanalysis__ – practice of analyzing encrypted messages to reveal the plaintext without knowing the key
+
+__Strength__ – determines how much effort and how long it takes to break a ciphertext
 
 ### Step 2: Ciphers
 
