@@ -8,6 +8,8 @@ Firewalls are often the first line of defense for an enterprise or home network.
 ### Cybersecurity First Principles
 * __Minimization__: Minimization refers to having the least functionality necessary in a program or device. The goal of minimization is to simplify and decrease the number of ways that software can be exploited. This can include **turning off ports that are not needed**, reducing the amount of code running on a machine, and/or turning off unneeded features in an application. This lesson focuses specifically on turning off ports and limiting network connections that aren't required for correct operation.
 
+* __Abstraction__: Something complicated can be thought of and represented more simply using Abstraction. Network packets are abstractions that only provide necessary details to network operators, while reducing the complexity to a set of essential characteristics.
+
 * __Layering__: Cyber security uses multiple layers of defense or protecting information. If one layer is defeated the next layer should catch it. Firewalls are a key aspect of any layered defense.
 
 * __Least Privilege__: One of the ways to protect information is by limiting what people can see and do with your information and resources. The principle of least privilege says to allow the minimum number of privileges necessary to accomplish the task.
@@ -37,7 +39,7 @@ Firewalls aren't just for networks. Each computer in a network can have its own 
 
 > ![Windows firewall](./img/windowsfirewall.png)
 
-When two machines communicate (such as a client talking to a server), communication spans many different __layers__. Each of these layers is progressively lower level as you move downward. In general there are 7 layers:
+When two machines communicate (such as a client talking to a server), communication spans many different __layers__. Each of these layers is progressively lower level as you move downward. These layers provide abstractions that show only the necessary details, while reducing the complexity to a set of essential characteristics. In general there are 7 layers:
 
 - `Application` - The highest level layer where application data is handled (HTTP/FTP/DHCP/SSH/SSL, etc)
 - `Presentation` - often the same as the application level, sometimes acts as a translation between application and session

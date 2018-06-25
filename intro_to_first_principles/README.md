@@ -204,7 +204,7 @@ We now examine 10 cybersecurity first principles. This discussion is adapted fro
 #### 8. Modularity
 
 - What is modularity?
-  - `Modulatiry` is a design technique that separates the functionality of a program into independent, interchangeable components.
+  - `Modularity` is a design technique that separates the functionality of a program into independent, interchangeable components.
   - Each component/module is self-sufficient and capable of executing a unique part of the desired functionality through well-designed interfaces.
 
 
