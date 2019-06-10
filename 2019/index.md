@@ -1,1 +1,3 @@
-
+<!-- tab separated syntax: title (required)	 link_to_module_root (required)	 short description (optional)  -->
+Introduction to Cybersecurity First Principles	https://mlhale.github.io/nebraska-gencyber-modules/intro_to_first_principles/	This lesson introduces the cybersecurity first principles, provides contextual examples of each, and includes activities based on the GenCyber card game.
+Computational thinking and design process using Littlebits Droids	https://github.com/MLHale/nebraska-gencyber-modules/tree/master/2019/introduction_to_computational_thinking_and_design_process	This module introduces computational thinking and design process by identify key algorithmic steps necessary to conceptualize, breakdown, and solve problems. The lesson emphasizes modularity, abstraction, resource encapsulation, and simplicity. 
