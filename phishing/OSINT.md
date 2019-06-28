@@ -47,7 +47,7 @@ Sites like Facebook, Linkedin, company websites, organizational charts and emplo
 
 > **Security Tip**: Even when clicking on links in emails or websites shared by close colleagues, friends, and family; trust but verify. This advice will seem even more reasonable after going through the Email analysis module.
 
-Is your information included in a breach? This website www.haveibeenpwned.com helps you identify if you or your family's information has been exposed in a data breach. Try your own email or someone in your family.
+Is your information included in a breach? This website [https://haveibeenpwned.com](https://haveibeenpwned.com) helps you identify if you or your family's information has been exposed in a data breach. Try your own email or someone in your family.
 
 ### Geolocation
 
