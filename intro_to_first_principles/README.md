@@ -300,8 +300,8 @@ The Cyber Realm card game helps teach the 10 principles of cybersecurity. The ca
 Split in groups of 4 or less. Hand two cards decks to each group.
 
 #### Game 1: Question Cards
-- STEP 1: Ask the groups to further split their team into two sub-groups. Give each sub-group a card deck. Students in the sub-groups take turns to examine the cards with first principles on it.
-- STEP 2: Use question cards (cards 1-20) of the one of the sub-group's decks as the question stack.
+- STEP 1: Ask the groups to further split their team into two sub-groups. Give each sub-group a card deck. Students in the sub-groups take turns to examine the `Dark Blue` cards with first principles on it. There should be 10 such cards.
+- STEP 2: Use the `Light Blue` question cards (cards 1-20) of the one of the sub-group's decks as the question stack.
 Shuffle these cards and place them face down in a stack to the left of sub-group 1.
 - STEP 3: Turn a question card over
 - STEP 4: Both sub-groups read the question and then place what they think the correct principle card is _face down_.
@@ -313,6 +313,8 @@ Shuffle these cards and place them face down in a stack to the left of sub-group
 - Repeat steps 3 – 6 for all question cards
 
 #### Game 2: Cybersecurity Matrix
+
+Now we use the `Dark Green` and `Green` cards. In the `Dark Green` set of cards, find card **# 21 - Information**. This card introduces users to the expectatations for information, information states and ways to safeguard information.
 
 - STEP 1: Have each sub-group identify and examine the following cards
 > Cards 22, 23, 24 are the expectations of information  
@@ -366,8 +368,18 @@ Cards 25, 26, 27 are the information states
 | **23 Integrity (I)**       | **35**  `incorrect` (I) `reads article` (E) | **36** `not altered` (I) `rules` (Po)                           | **34** `digitally signed` (Te) `digital signature` (I) |
 | **24 Availability (A)**    | **38** `find files` (A) `training` (E)      | **39** `constant email communications` (A) `recovery plan` (Po) | **37** `powerful device` (Te) `slow and freezes` (A)   |
 
-If there is a question as to where the card should be placed the answer is on the card – encrypted. For example on card 31 the lower right hand has the code XON21. This code is a simple rotation cipher and it rotated 21. You will get a three letter answer. In this case it will be CTS. The first letter will be either C, I, or A for Confidentiality, Integrity, Availability. The second letter will be P, E, or T for safeguards – Policy, Education or Technology. The third letter will be S, T or P for states – Storage, Transmission or Processing. In this case the answer is C for Confidentiality, and S for Storage.
+If there is a question as to where the card should be placed the answer is on the card – encrypted. For example on card 31 the lower right hand has the code XON21. This code is a simple rotation cipher and it rotated by 21. You will get a three letter answer. In this case it will be CTS. The first letter will be either C, I, or A for Confidentiality, Integrity, Availability. The second letter will be P, E, or T for safeguards – Policy, Education or Technology. The third letter will be S, T or P for states – Storage, Transmission or Processing. In this case the answer is C for Confidentiality, and S for Storage.
 
+
+#### Game 3: Thinking like the Adversary
+
+Now we use the `Dark Red` (41-48) and `Red` (49-56) cards. 
+
+STEP 1 - Examine the five phases of a cyberattack using the `Dark Red` cards. 
+
+STEP 2 - Research the terms on the `Red` cards and place them along the five phases of a cyberattack. `Defense in Depth` cards are the safeguards and `Tool, Techniques and Procedures` are used by attackers in a particular phase. 
+
+If there is a question as to where the card should be placed the answer is on the card – encrypted. For example on card 52 the lower right hand has the code `MYF10`. This code is a simple rotation cipher and it rotated by 10. You will get a three letter answer. In this case it will be `COV` - which stands for the `Covering Tracks` phase of a cyberattack.
 
 ## A test of your principles...
 
