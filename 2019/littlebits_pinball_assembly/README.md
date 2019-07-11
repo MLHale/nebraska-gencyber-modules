@@ -27,7 +27,7 @@ In this lesson, we will explore a cool hands-on activity with Littlebits to buil
 
 ### Table of Contents
 <!-- TOC START min:1 max:3 link:true update:true -->
-- [Hands-on IoT with - Littlebits Intro](#hands-on-iot-with---littlebits-intro)
+- [Building Arcade Games with Littlebits](#building-arcade-games-with-littlebits)
     - [Cybersecurity First Principles in this lesson](#cybersecurity-first-principles-in-this-lesson)
     - [Introduction](#introduction)
     - [Goals](#goals)
