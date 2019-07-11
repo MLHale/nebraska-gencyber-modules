@@ -108,7 +108,7 @@ Seems like you got a hang of this! Now think of an invention that would nudge an
 
 Here is something simple that I tested:
 
-![Launcher](./img/launcher.gif)
+![Launcher](./img/launch.gif)
 
 ### Additional Resources
 - [Food for thought: [Video] Littlebits meets Ozobot](https://www.youtube.com/watch?v=2uUBTV7fL_U)
