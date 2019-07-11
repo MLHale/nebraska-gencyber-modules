@@ -90,15 +90,28 @@ Ok, we've made our first circuit - but it's pretty simple. Let's add some more m
 
 [Follow the instructions linked here to build the game.](./files/pinball-instructions.pdf)
 
-<object data="./files/pinball-instructions.pdf" type="application/pdf" width="700px" height="700px">
-</object>
+[![Arcade Thumbnail](./img/arcadethumbnail.png)](./files/pinball-instructions.pdf)
 
+
+### Step 4: Let's get ready to....Catapult
+
+What can be more fun than making your own pinball machine? I know... a launcher for crumpled paper balls! Turns out, with a few modification, we can repurpose the materials used in the pinball machine to make a Catapult.
+
+Whatever you do don't let the teacher catch you launching these ;-)
+
+[Follow these instruction to build one of these.](./files/catapult-instructions.pdf)
+
+[![Catapult Thumbnail](./img/catapultthumbnail.png)](./files/catapult-instructions.pdf)
 
 ### Self Exploration
-Try some different designs yourself.
+Seems like you got a hang of this! Now think of an invention that would nudge an Ozobot on to the next stage of your Rube Goldberg machine. Use the iterative design process to build some prototypes and then refine them.
+
+Here is something simple that I tested:
+
+![Launcher](./img/launcher.gif)
 
 ### Additional Resources
-For more information, investigate the following:
+- [Food for thought: [Video] Littlebits meets Ozobot](https://www.youtube.com/watch?v=2uUBTV7fL_U)
 
 ### Lead Author
 
