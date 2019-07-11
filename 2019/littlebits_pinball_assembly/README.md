@@ -37,7 +37,7 @@ In this lesson, we will explore a cool hands-on activity with Littlebits to buil
     - [Step 1: Unbox it!](#step-1-unbox-it)
     - [Step 2: Gotta start somewhere](#step-2-gotta-start-somewhere)
     - [Step 3: Pinball Hall of Fame!](#step-3-pinball-hall-of-fame)
-    - [Step 4: Let's get ready to...Catapult](#step-4-lets-get-ready-to...catapult)
+    - [Step 4: Ready to Launch?](#step-4-ready-to-launch)
     - [Self Exploration](#self-exploration)
     - [Lead Author](#lead-author)
     - [Acknowledgements](#acknowledgements)
@@ -89,7 +89,7 @@ Ok, we've made our first circuit - but it's pretty simple. Let's add some more m
 [![Arcade Thumbnail](./img/arcadethumbnail.png)](./files/pinball-instructions.pdf)
 
 
-### Step 4: Let's get ready to....Catapult
+### Step 4: Ready to Launch?
 
 What can be more fun than making your own pinball machine? I know... a launcher for crumpled paper balls! Turns out, with a few modification, we can repurpose the materials used in the pinball machine to make a Catapult.
 
