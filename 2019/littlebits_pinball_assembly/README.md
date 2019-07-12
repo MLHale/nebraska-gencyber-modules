@@ -29,23 +29,16 @@ In this lesson, we will explore a cool hands-on activity with Littlebits to buil
 * [Introduction to Components With Littlebits](https://mlhale.github.io/nebraska-gencyber-modules/intro_to_components_with_littlebits/README/)
 
 ### Table of Contents
-<!-- TOC START min:1 max:3 link:true asterisk:false update:true -->
-    - [Cybersecurity First Principles in this lesson](#cybersecurity-first-principles-in-this-lesson)
-    - [Introduction](#introduction)
-    - [Goals](#goals)
-    - [Materials Required](#materials-required)
-    - [Prerequisite lessons](#prerequisite-lessons)
-    - [Table of Contents](#table-of-contents)
-    - [Step 1: Unbox it!](#step-1-unbox-it)
-    - [Step 2: Gotta start somewhere](#step-2-gotta-start-somewhere)
-    - [Step 3: Pinball Hall of Fame!](#step-3-pinball-hall-of-fame)
-    - [Step 4: Ready to Launch?](#step-4-ready-to-launch)
-    - [Self Exploration](#self-exploration)
-    - [Additional Resources](#additional-resources)
-    - [Lead Author](#lead-author)
-    - [Acknowledgements](#acknowledgements)
-    - [License](#license)
-<!-- TOC END -->
+
+- [Step 1: Unbox it!](#step-1-unbox-it)
+- [Step 2: Gotta start somewhere](#step-2-gotta-start-somewhere)
+- [Step 3: Pinball Hall of Fame!](#step-3-pinball-hall-of-fame)
+- [Step 4: Ready to Launch?](#step-4-ready-to-launch)
+- [Self Exploration](#self-exploration)
+- [Additional Resources](#additional-resources)
+- [Lead Author](#lead-author)
+- [Acknowledgements](#acknowledgements)
+- [License](#license)
 
 ### Step 1: Unbox it!
 First, open your Littlebits Arcade Game box. Take a second to look at the different components you have.
@@ -62,7 +55,7 @@ Look over each module.
 ![unbox](./img/unboxed.jpg)
 
 ### Step 2: Gotta start somewhere
-No time like the present. Lets make a simple invention. Your box should include a helpful "TRY THIS STARTER CIRCUIT" diagram. Try and build it!
+No time like the present. Let's make a simple invention. Your box should include a helpful "TRY THIS STARTER CIRCUIT" diagram. Try and build it!
 
 * find the blue ```power``` module.
 * find the 9V ```battery```
@@ -88,7 +81,7 @@ Ok, we've made our first circuit - but it's pretty simple. Let's add some more m
 
 [Follow the instructions linked here to build the game.](./files/pinball-instructions.pdf)
 
-[![Arcade Thumbnail](./img/arcadethumbnail.png)](./files/pinball-instructions.pdf)
+[![Arcade Thumbnail](./img/arcadethumbnail.png)](https://mlhale.github.io/nebraska-gencyber-modules/2019/littlebits_pinball_assembly/files/pinball-instructions.pdf)
 
 
 ### Step 4: Ready to Launch?
@@ -99,7 +92,7 @@ Whatever you do don't let the teacher catch you launching these ;-)
 
 [Follow these instruction to build one of these.](./files/catapult-instructions.pdf)
 
-[![Catapult Thumbnail](./img/catapultthumbnail.png)](./files/catapult-instructions.pdf)
+[![Catapult Thumbnail](./img/catapultthumbnail.png)](https://mlhale.github.io/nebraska-gencyber-modules/2019/littlebits_pinball_assembly/files/catapult-instructions.pdf)
 
 ### Self Exploration
 Seems like you got a hang of this! Now think of an invention that would nudge an Ozobot on to the next stage of your Rube Goldberg machine. Use the iterative design process to build some prototypes and then refine them.
@@ -121,7 +114,7 @@ Special thanks to Dr. Matt Hale for reviewing and editing this lesson.
 ### License
 [Nebraska GenCyber](https://github.com/MLHale/nebraska-gencyber) <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /></a><br /> is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</a>.
 
-Overall content: Copyright (C) 2017-2018  [Dr. Matthew L. Hale](http://faculty.ist.unomaha.edu/mhale/), [Dr. Robin Gandhi](http://faculty.ist.unomaha.edu/rgandhi/), and [Doug Rausch](http://www.bellevue.edu/about/leadership/faculty/rausch-douglas).
+Overall content: Copyright (C) 2017-2018  [Dr. Matthew L. Hale](http://faculty.ist.unomaha.edu/mhale/) and [Dr. Robin Gandhi](http://faculty.ist.unomaha.edu/rgandhi/).
 
 Lesson content: Copyright (C) [Dr. Matthew L. Hale](http://faculty.ist.unomaha.edu/mhale/) 2017-2018.  
 <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /></a><br /><span xmlns:dct="http://purl.org/dc/terms/" property="dct:title">This lesson</span> is licensed by the author under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</a>.
