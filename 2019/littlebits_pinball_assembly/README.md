@@ -1,3 +1,7 @@
+---
+layout: page
+title: Building Arcade Games with Littlebits
+---
 # Building Arcade Games with Littlebits
 
 ### Cybersecurity First Principles in this lesson
@@ -26,7 +30,7 @@ In this lesson, we will explore a cool hands-on activity with Littlebits to buil
 * [Introduction to Components With Littlebits](https://mlhale.github.io/nebraska-gencyber-modules/intro_to_components_with_littlebits/README/)
 
 ### Table of Contents
-<!-- TOC START min:1 max:3 link:true update:true -->
+<!-- TOC START min:1 max:3 link:true asterisk:false update:true -->
 - [Building Arcade Games with Littlebits](#building-arcade-games-with-littlebits)
     - [Cybersecurity First Principles in this lesson](#cybersecurity-first-principles-in-this-lesson)
     - [Introduction](#introduction)
@@ -39,10 +43,10 @@ In this lesson, we will explore a cool hands-on activity with Littlebits to buil
     - [Step 3: Pinball Hall of Fame!](#step-3-pinball-hall-of-fame)
     - [Step 4: Ready to Launch?](#step-4-ready-to-launch)
     - [Self Exploration](#self-exploration)
+    - [Additional Resources](#additional-resources)
     - [Lead Author](#lead-author)
     - [Acknowledgements](#acknowledgements)
     - [License](#license)
-
 <!-- TOC END -->
 
 ### Step 1: Unbox it!

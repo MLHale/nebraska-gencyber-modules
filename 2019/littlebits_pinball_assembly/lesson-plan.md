@@ -1,3 +1,7 @@
+---
+layout: page
+title: Building Littlebits Arcade Games
+---
 # Lesson Plan: Building Littlebits Arcade Games
 
 ### Summary
