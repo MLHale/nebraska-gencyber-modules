@@ -2,7 +2,6 @@
 layout: page
 title: Building Arcade Games with Littlebits
 ---
-# Building Arcade Games with Littlebits
 
 ### Cybersecurity First Principles in this lesson
 
@@ -31,7 +30,6 @@ In this lesson, we will explore a cool hands-on activity with Littlebits to buil
 
 ### Table of Contents
 <!-- TOC START min:1 max:3 link:true asterisk:false update:true -->
-- [Building Arcade Games with Littlebits](#building-arcade-games-with-littlebits)
     - [Cybersecurity First Principles in this lesson](#cybersecurity-first-principles-in-this-lesson)
     - [Introduction](#introduction)
     - [Goals](#goals)

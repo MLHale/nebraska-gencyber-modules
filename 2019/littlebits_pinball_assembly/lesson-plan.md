@@ -1,8 +1,7 @@
 ---
 layout: page
-title: Building Littlebits Arcade Games
+title: Lesson Plan: Building Littlebits Arcade Games
 ---
-# Lesson Plan: Building Littlebits Arcade Games
 
 ### Summary
 This module will explore hands-on technology called **Littlebits** to make an arcade game and extend a Rube Goldberg machine.
