@@ -9,8 +9,7 @@ title: Introduction to Components With LittleBits
 * __Simplicity__: Simplicity allows a person to better understand hardware and software. Without the clutter of unnecessarily complicated code and interfaces, the software will be more understandable by people that will update the code when requirements change. It will be easier to understand by the testers and they will be able to spot problems sooner. By keeping software as simple and as focused as possible, the reliability and security is greatly increased.
 
 
-### Introduction
-#### What are littlebits?
+### Introduction: What are LittleBits?
 * Each littleBit is an electronic circuit or switch, and it has its own unique function.
 * Each littleBit snaps together using magnets and are connected in a sequence, to make a circuit.
 * Developed by Ayah Bdeir while working on her Master’s degree in Computing Culture at MIT. She created the first littleBits prototypes on her own in 2011.
@@ -19,7 +18,7 @@ title: Introduction to Components With LittleBits
 1. Understand modularity.
 2. Know how littleBits work.
 
-### Materials Required]
+### Materials Required
 * [Intro to LittleBits Presentation](./assets/presentation.pdf) 
 * [Student Handout](./assets/student-handout.pdf)
 * Various LittleBits components
@@ -34,7 +33,7 @@ None
 - [Introduction](#introduction)
   - [What are littlebits?](#what-are-littlebits)
 - [Goals](#goals)
-- [Materials Required]](#materials-required)
+- [Materials Required](#materials-required)
 - [Prerequisite Lessons](#prerequisite-lessons)
 - [Table of Contents](#table-of-contents)
 - [Basics of littleBits](#basics-of-littlebits)
@@ -66,7 +65,7 @@ LittleBits are grouped into four different categories:
 ![](assets/README-9f5e5313.png)
 > Credit: LittleBits (https://littlebits.com/)  
 
-#### Challenges
+### Challenges
 * **Challenge 1:** You suspect that your sibling has been breaking into your room and snooping around in your stuff, but you never seem to catch them in the act. You decide to create a littleBit Invention that will alert you the next time your sibling is in your room.
 * **Challenge 2:** Get alerted if your refrigerator door has been left open for too long! The FDA says that your fridge should be set between 38 and 40 degrees Fahrenheit. If the temperature rises above this temperature for an extended period of time, your food could go bad. Prevent this from happening by creating a littleBits smart fridge circuit so you can save your food!
 
