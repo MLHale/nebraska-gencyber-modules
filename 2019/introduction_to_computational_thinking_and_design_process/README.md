@@ -24,9 +24,8 @@ By the end of this tutorial, you will be able to:
 
 ### Materials Required
 
-* Cardstock
-* tape
-* scissors
+* paper
+* tape (optional)
 
 ### Prerequisite lessons
 None
