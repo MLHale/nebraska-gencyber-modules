@@ -92,7 +92,7 @@ As a `type of user`, I want to `some action`, so that I can `rationale`.
 
 an example would be:
 
-As a `instagram user in highschool`, I want to `post pictures of myself and my friends`, so that I can `build my social status at school`.
+As a `instagram user in high school`, I want to `post pictures of myself and my friends`, so that I can `build my social status at school`.
 
 This may create very different requirements that a different kind of instagram user with different actions and rationales, e.g.
 
@@ -131,7 +131,7 @@ Prototyping is the stage where you start making. `Prototypes` should not be full
 As you progress, prototypes need to be `tested.` 
 
 ![design process](./img/test.jpg)
-> Author/Copyright holder: Teo Yu Siang and Interaction Design Foundation. Copyright licence: CC BY-NC-SA 3.0
+> Author/Copyright holder: Teo Yu Siang and Interaction Design Foundation. Copyright license: CC BY-NC-SA 3.0
 
 Testing a prototype helps us to learn whether or not it succeeds (i.e. does it meet the requirements of the problem) and can help to refine the definition of the problem - if we learn something about the problem that we hadn't thought of before. 
 
@@ -149,7 +149,7 @@ What is your user story? Write it in the workbook in the `empathize` box.
 What are the core attributes of the problem? Write what you think they are in the workbook in the `define` section.
 
 #### Ideate
-Use the worst possible idea method to think about some designs that wouldnt work well. Once you've ruled some out, brainstorm and draw a diagram (an abstraction) of your proposed solution. Use the `ideate` section of your workbook.
+Use the worst possible idea method to think about some designs that wouldn't work well. Once you've ruled some out, brainstorm and draw a diagram (an abstraction) of your proposed solution. Use the `ideate` section of your workbook.
 
 #### Prototype 
 Use the sheet of paper you are given to create a basic prototype of the design you came up with. Write down your thoughts after building it. How do you think it will work?

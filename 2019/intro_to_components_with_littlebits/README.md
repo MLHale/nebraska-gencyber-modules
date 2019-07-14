@@ -68,13 +68,15 @@ LittleBits are grouped into four different categories:
 
 #### Challenges
 * **Challenge 1:** You suspect that your sibling has been breaking into your room and snooping around in your stuff, but you never seem to catch them in the act. You decide to create a littleBit Invention that will alert you the next time your sibling is in your room.
-* **Challenge 2:** Get alerted if your refrigerator door has been left open for too long! The FDA says that your fridge should be set between 38 and 40 degrees Fahrenheit. If the temperature rises above this temperature for an extended period of time, your food could go bad. Prevent this from happening by creating a invention littleBits smart fridge circuit so you can save your food!
+* **Challenge 2:** Get alerted if your refrigerator door has been left open for too long! The FDA says that your fridge should be set between 38 and 40 degrees Fahrenheit. If the temperature rises above this temperature for an extended period of time, your food could go bad. Prevent this from happening by creating a littleBits smart fridge circuit so you can save your food!
 
 ### Lead Author
 Kristeen Shabram
 
 ### Acknowledgements
-Thanks to Raeanne Sando and Matt Hale for editting this module. 
+This lesson is based partially on [a module](https://mlhale.github.io/nebraska-gencyber-modules/intro_to_components_with_littlebits_iot/README) created by Dr. Matt Hale. It is used in accordance with its license (CC BY-NC-SA 3.0).
+
+Thanks to Raeanne Sando and Matt Hale for editing this module. 
 
 ### License
 Overall content: Copyright (C) 2017-2019  [Dr. Matthew L. Hale](http://faculty.ist.unomaha.edu/mhale/), [Dr. Robin Gandhi](http://faculty.ist.unomaha.edu/rgandhi/), and [Dr. Briana B. Morrison](http://www.brianamorrison.net).
