@@ -30,21 +30,18 @@ None
 ### Table of Contents
 <!-- TOC -->
 - [Cybersecurity First Principles in this lesson](#cybersecurity-first-principles-in-this-lesson)
-- [Introduction](#introduction)
-  - [What are littlebits?](#what-are-littlebits)
+- [Introduction: What are LittleBits?](#introduction-what-are-littlebits)
 - [Goals](#goals)
 - [Materials Required](#materials-required)
 - [Prerequisite Lessons](#prerequisite-lessons)
 - [Table of Contents](#table-of-contents)
 - [Basics of littleBits](#basics-of-littlebits)
-  - [Challenges](#challenges)
-- [Evaluation](#evaluation)
-- [Additional Resources](#additional-resources)
+- [Challenges](#challenges)
 - [Lead Author](#lead-author)
 - [Acknowledgements](#acknowledgements)
 - [License](#license)
-
 <!-- /TOC -->
+
 
 ### Basics of littleBits
 LittleBits are grouped into four different categories:
@@ -57,13 +54,13 @@ LittleBits are grouped into four different categories:
 * Order is important. `Power` bits always come first and input bits only affect the output bits that come after them.
 
 ![](assets/README-4292930a.png)
-> Credit: LittleBits (https://littlebits.com/)  
-> 
+> Image credit: LittleBits (https://littlebits.com/)  
+
 ![](assets/README-bf84f922.png)
-> Credit: LittleBits (https://littlebits.com/)  
-> 
+> Image credit: LittleBits (https://littlebits.com/)  
+
 ![](assets/README-9f5e5313.png)
-> Credit: LittleBits (https://littlebits.com/)  
+> Image credit: LittleBits (https://littlebits.com/)  
 
 ### Challenges
 * **Challenge 1:** You suspect that your sibling has been breaking into your room and snooping around in your stuff, but you never seem to catch them in the act. You decide to create a littleBit Invention that will alert you the next time your sibling is in your room.
