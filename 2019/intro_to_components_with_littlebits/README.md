@@ -48,20 +48,23 @@ None
 <!-- /TOC -->
 
 ### Basics of littleBits
-* The bits are grouped into four different categories:
-⋅⋅* Power (Blue)- Power Bits, plus a power supply, run power through your circuit.
-⋅⋅* Wire (Orange)- Wire Bits connect to other systems and let you build circuits in new directions.
-⋅⋅* Input (Pink)- Input Bits accept input from you or the environment and send signals that affect the Bits that follow.
-⋅⋅* Output (Green)- Output Bits do something; Light up, buzz, move...
+LittleBits are grouped into four different categories:
+
+* **<span style="color: pink">Pink</span>** modules are _inputs_, like an On/Off button. Input Bits accept input from you or the environment and send signals that affect the Bits that follow.  
+* **<span style="color: green">Green</span>** modules are _outputs_, like LEDs and Fans.  
+* **<span style="color: orange">Orange</span>** modules are special and usually are _supportive_. They allow you to wire your bits up, connect to other systems, and perform unique advanced functions.  
+* **<span style="color: blue">Blue</span>** modules are power related. They provide your circuits with the power they need to operate.  
 * Bits snap together with magnets. The arrows on the magnets always go RIGHT.
-* Order is important. Power bits always come first and input bits only affect the output bits that come after them.
+* Order is important. `Power` bits always come first and input bits only affect the output bits that come after them.
 
 ![](assets/README-4292930a.png)
-> Credit: LittleBits (https://littlebits.com/)
+> Credit: LittleBits (https://littlebits.com/)  
+> 
 ![](assets/README-bf84f922.png)
-> Credit: LittleBits (https://littlebits.com/)
+> Credit: LittleBits (https://littlebits.com/)  
+> 
 ![](assets/README-9f5e5313.png)
-> Credit: LittleBits (https://littlebits.com/)
+> Credit: LittleBits (https://littlebits.com/)  
 
 #### Challenges
 * **Challenge 1:** You suspect that your sibling has been breaking into your room and snooping around in your stuff, but you never seem to catch them in the act. You decide to create a littleBit Invention that will alert you the next time your sibling is in your room.
