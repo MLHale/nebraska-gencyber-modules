@@ -136,9 +136,9 @@ You have two stakeholders, yourself (as a camper) and me as an instructor.
 My user story is:
 As an instructor, I want students to test their airplanes in the hall, so that the technology in the room doesn't get broken. 
 
-What is your user story? Write it in the workbook in the empathize box.
+What is your user story? Write it in the workbook in the `empathize` box.
 
-What are the core attributes of the problem? Write what you think they are in the workbook in the define section.
+What are the core attributes of the problem? Write what you think they are in the workbook in the `define` section.
 
 #### Ideate
 Use the worst possible idea method to think about some designs that wouldnt work well. Once you've ruled some out, brainstorm and draw a diagram (an abstraction) of your proposed solution. Use the `ideate` section of your workbook.
@@ -147,7 +147,7 @@ Use the worst possible idea method to think about some designs that wouldnt work
 Use the sheet of paper you are given to create a basic prototype of the design you came up with. Write down your thoughts after building it. How do you think it will work?
 
 #### Test 
-Test your prototype airplane by flying it in the hallway. How far did it fly? How would you use this information to improve your design if you were to build a new prototype? Write down your thoughts in the workbook. 
+Test your prototype airplane by flying it in the hallway. How far did it fly? What other information would be useful to gather in your tests? How would you use this information to improve your design if you were to build a new prototype? Write down your answers and thoughts in the workbook in the `test` section. 
 
 ### Reflection and takeaways
 The design process is useful for conceptualizing a problem and exploring different solutions that meet all of your user's needs or meet the requirements of the problem. Often, breaking a problem down into subproblems can help you tackle complex issues. Components can be used in more than one way for more than one purpose. This leads to `reuse` and is a positive side effect of `modularization` and `resource encapsulation`.
