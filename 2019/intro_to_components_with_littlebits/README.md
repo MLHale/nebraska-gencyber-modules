@@ -19,8 +19,8 @@ title: Introduction to Components With LittleBits
 2. Know how littleBits work.
 
 ### Materials Required
-* [![presentation](./assets/presentation-thumbnail.png)](https://mlhale.github.io/nebraska-gencyber-modules/2019/intro_to_components_with_littlebits/assets/presentation.pdf) 
-* [![Student Handout](./assets/workbook-thumbnail.png)](https://mlhale.github.io/nebraska-gencyber-modules/2019/intro_to_components_with_littlebits/assets/student-handout.pdf)
+* [Intro to LittleBits Presentation](./assets/presentation.pdf) 
+* [Student Handout](./assets/student-handout.pdf)
 * Various LittleBits components
 
 ### Prerequisite Lessons
