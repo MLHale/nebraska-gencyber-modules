@@ -31,23 +31,32 @@ By the end of this tutorial, you will be able to:
 None
 
 ### Table of Contents
-<!-- TOC START min:1 max:3 link:true update:true -->
-- [Computational thinking and design process with Littlebits droids](#computational-thinking-and-design-process-with-littlebits-droids)
-    - [Cybersecurity First Principles in this lesson](#cybersecurity-first-principles-in-this-lesson)
-    - [Introduction](#introduction)
-    - [Goals](#goals)
-    - [Materials Required](#materials-required)
-    - [Prerequisite lessons](#prerequisite-lessons)
-    - [Table of Contents](#table-of-contents)
-    - [The Design Process](#the-design-process)
-    - [Scratch 101 in Littlebits App](#scratch-101-in-littlebits-app)
-    - [Exercise: Apply design thinking to solve a problem with Littlebits](#exercise-apply-design-thinking-to-solve-a-problem-with-littlebits)
-    - [Additional Resources](#additional-resources)
-  - [Lead Author](#lead-author)
-    - [Acknowledgements](#acknowledgements)
-    - [License](#license)
+<!-- TOC -->
+- [Cybersecurity First Principles in this lesson](#cybersecurity-first-principles-in-this-lesson)
+- [Introduction](#introduction)
+- [Goals](#goals)
+- [Materials Required](#materials-required)
+- [Prerequisite lessons](#prerequisite-lessons)
+- [Table of Contents](#table-of-contents)
+- [The Design Process](#the-design-process)
+  - [Empathizing and Defining](#empathizing-and-defining)
+    - [Some processes for empathizing and defining the problem](#some-processes-for-empathizing-and-defining-the-problem)
+    - [Exercise:](#exercise)
+  - [Ideating](#ideating)
+    - [Exercise:](#exercise-1)
+  - [Prototyping and Testing](#prototyping-and-testing)
+- [Exercise: Apply design thinking to solve a problem](#exercise-apply-design-thinking-to-solve-a-problem)
+  - [Empathize and Define](#empathize-and-define)
+  - [Ideate](#ideate)
+  - [Prototype](#prototype)
+  - [Test](#test)
+- [Reflection and takeaways](#reflection-and-takeaways)
+- [Additional Resources](#additional-resources)
+- [Lead Author](#lead-author)
+  - [Acknowledgements](#acknowledgements)
+  - [License](#license)
 
-<!-- TOC END -->
+<!-- /TOC -->
 
 ### The Design Process
 Design is about more than sitting down and starting to code or building something. In the real world when faced with a complex problem, companies, and individuals need a systematic process to think about the problem, consider all of the stakeholders and come up with a solution. In this lesson, we examine a 5-step `design thinking process` created by the [Hasso-Plattner Institute of Design at Stanford](https://dschool.stanford.edu/). Their process is iterative and non-linear.
