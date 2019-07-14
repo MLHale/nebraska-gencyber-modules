@@ -60,7 +60,7 @@ Lets watch an intro video to see some Rube Goldbergs in action.
 > See this [video of all of the times it didn't work](https://www.youtube.com/watch?v=7bMbgW32wfA)
 
 ### Challenge
-Create a machine that drops a ball into a cup. 
+Create a machine that `takes the trash out` (AKA drops a piece of trash into a cup). 
 
 * Use your GenCyber workbook to document a model __abstraction__ of your design. Use the `draw out your initial design` section. Like the girls in the video, try to plan out what concepts will work together to make your design work. 
 * How will you test your design? Write down your `test criteria` in the workbook and what your expectations are.
