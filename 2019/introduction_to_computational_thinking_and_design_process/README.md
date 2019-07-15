@@ -37,14 +37,7 @@ None
 - [Goals](#goals)
 - [Materials Required](#materials-required)
 - [Prerequisite lessons](#prerequisite-lessons)
-- [Table of Contents](#table-of-contents)
 - [The Design Process](#the-design-process)
-  - [Empathizing and Defining](#empathizing-and-defining)
-    - [Some processes for empathizing and defining the problem](#some-processes-for-empathizing-and-defining-the-problem)
-    - [Exercise:](#exercise)
-  - [Ideating](#ideating)
-    - [Exercise:](#exercise-1)
-  - [Prototyping and Testing](#prototyping-and-testing)
 - [Exercise: Apply design thinking to solve a problem](#exercise-apply-design-thinking-to-solve-a-problem)
   - [Empathize and Define](#empathize-and-define)
   - [Ideate](#ideate)
@@ -167,7 +160,7 @@ For more information, investigate the following:
 * [Affinity diagramming process](https://uxdict.io/design-thinking-methods-affinity-diagrams-357bd8671ad4)
 * [Worst Possible ideas](https://www.interaction-design.org/literature/article/learn-how-to-use-the-best-ideation-methods-worst-possible-idea)
 
-## Lead Author
+### Lead Author
 
 - Matt Hale
 
