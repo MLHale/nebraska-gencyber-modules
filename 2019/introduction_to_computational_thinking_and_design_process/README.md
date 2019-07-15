@@ -93,11 +93,6 @@ As a `company on instagram`, I want to `post pictures of my products`, so that I
 
 Both statements help define requirements for any potential solution.
 
-##### Exercise:
-* Read [https://www.mountaingoatsoftware.com/blog/advantages-of-the-as-a-user-i-want-user-story-template](https://www.mountaingoatsoftware.com/blog/advantages-of-the-as-a-user-i-want-user-story-template)
-* Read [https://uxdict.io/design-thinking-methods-affinity-diagrams-357bd8671ad4](https://uxdict.io/design-thinking-methods-affinity-diagrams-357bd8671ad4)
-* try it
-
 #### Ideating
 Once we can begin to stabilize the problem definition, we can start zoning in on solutions. The `ideation` phase is very important to help us find as many possible solutions to the problem as possible - so that we can pick the best one. Often times, computer scientists and developers **don't ideate enough** before jumping into development. This can lead to some myopic focus on one particular design - that might be _bad_. 
 
@@ -108,10 +103,6 @@ One is obviously `brainstorming` - where the team sits around a table and thinks
 First, a technique called `worst possible idea` is a good starting place. The worst possible idea process, seems counter-intuitive to solving a problem, but it is a helpful exercise. Here, participants come up with the absolute worst solutions to a problem that they can think of. Bad solutions are considered for _why_ and _how_ they are bad - to list out all the reasons. 
 
 Going through this process, the group begins to get a notion of the **solutions to avoid**. This is a great time to introduce brainstorming. The group can start to frame new ideas in terms of how they avoid the mistake and pitfalls of the bad ideas. This can help break down team-dynamics barriers that often emerge whenever a particular team member becomes _attached_ to their particular idea.
-
-##### Exercise:
-* Read [https://www.interaction-design.org/literature/article/learn-how-to-use-the-best-ideation-methods-worst-possible-idea](https://www.interaction-design.org/literature/article/learn-how-to-use-the-best-ideation-methods-worst-possible-idea) (~5 min read)
-* try it
 
 ![design process](./img/ideate.jpg)
 > Author/Copyright holder: Teo Yu Siang and Interaction Design Foundation. Copyright licence: CC BY-NC-SA 3.0
