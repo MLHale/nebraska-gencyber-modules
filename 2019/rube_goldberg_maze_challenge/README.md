@@ -26,11 +26,11 @@ Complete a maze functional programming puzzle challenge as the first step of a R
 ### Materials Required
 * Ozobot
 * Maze Tiles
-  - ![Start Zone](assets/README-94d578a3.pdf)
-  - ![Zone card 1](assets/README-72337bc7.pdf)
-  - ![Zone card 2](assets/README-01c7cbfa.pdf)
-  - ![Zone card 3](assets/README-33420cba.pdf)
-  - ![Login Zone](assets/README-d88bc052.pdf)
+  - [Start Zone](assets/README-94d578a3.pdf)
+  - [Zone card 1](assets/README-72337bc7.pdf)
+  - [Zone card 2](assets/README-01c7cbfa.pdf)
+  - [Zone card 3](assets/README-33420cba.pdf)
+  - [Login Zone](assets/README-d88bc052.pdf)
 * Ozobot color code stickers (optional, for corrections)
 
 ### Prerequisite Lessons
@@ -74,8 +74,8 @@ Make sure to print one of each of the maze tiles. Set aside the start and login 
 * Ozobot must come to a complete stop after entering the password
 
 #### Bridge Zone (we need to stay above the fray)
-Uses second Ozobot
-To be continued in [Rube Goldberg Bridge Challenge](../rube_goldberg_bridge_challenge/README.md)
+* Uses second Ozobot
+* To be continued in [Rube Goldberg Bridge Challenge](../rube_goldberg_bridge_challenge/README.md)
 
 ### Lead Author
 Matt Hale 
