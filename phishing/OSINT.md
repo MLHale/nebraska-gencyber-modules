@@ -14,11 +14,10 @@ title: Phishing - OSINT Gathering
 - Open Source INTelligence (OSINT) gathering
 
 ## Materials required
-- Internet connected Machine
+- Internet connected machine
 
 ## Prerequisite lessons
 - None
-
 
 ## Table of Contents
    
@@ -34,12 +33,12 @@ Crafting URLs is just one part of the deception used by spammers. *Spear-Phishin
 Watch this 3 min video (if you do not have audio, it is OK):   
 https://www.youtube.com/watch?v=F7pYHN9iC9I
 
-There is a ton of information on the web pertaining to most of us. This is true even if you do not use social media. Voting registries, court records, county and property records, phone books, online review sites are just some examples. If you use social media, then there is a lot more information to collect. All you need is your target's name to start reconnaissance.
+There is a ton of information on the web pertaining to most of us. This is true even if you do not use social media. Voting registries, court records, county and property records, phone books, online review sites are just some examples. If you use social media, then there is a lot more information to collect. All you need is your target's name to start `reconnaissance` (Hey! thats the name of a card in our Gencyber Card Deck. See if you can find it).
 
-Visit these sites and see how much information is available about yourself:   
-[Pipl](https://www.pipl.com) and [Spokeo](https://www.spokeo.com)
+Visit these sites and see how much information is available about yourself or a family member. You may have to pick the correct entry from the search results. But that should be easy with additional information about age and location of your target.: 
 
-You may have to pick out yourself from other people who share your name. But that should be easy with additional information about your age and location.
+- [Pipl](https://www.pipl.com)
+- [Spokeo](https://www.spokeo.com)
 
 Sites like Facebook, Linkedin, company websites, organizational charts and employee directories, make it easy to craft emails from colleagues, friends, and family. There are commercial tools available to collect what is called Open Source INTelligence or OSINT. Here is a tool that does just that: https://www.paterva.com/web7/buy/maltego-clients/maltego.php
 
