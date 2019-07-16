@@ -75,7 +75,7 @@ Make sure to print one of each of the maze tiles. Set aside the start and login 
 
 #### Bridge Zone (we need to stay above the fray)
 Uses second Ozobot
-To be continued in [Rube Goldberg Bridge Challenge](../rube_goldburg_bridge_challenge/README.md)
+To be continued in [Rube Goldberg Bridge Challenge](../rube_goldberg_bridge_challenge/README.md)
 
 ### Lead Author
 Matt Hale 
