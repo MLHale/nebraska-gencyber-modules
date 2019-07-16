@@ -56,27 +56,25 @@ Tools are freely available for conducting Geolocation OSINT. For example, this t
 Downloads: http://www.geocreepy.com/  
 Source code: https://github.com/ilektrojohn/creepy  
 
-To spread awareness of this issue, an educational web application has been developed.
+Here is another website that allows to see images uploaded and publically visibile at a physical address.
 
-http://app.teachingprivacy.org  (Beware of the ".com" version of this site. This is called [`domain-squatting`](https://en.wikipedia.org/wiki/Cybersquatting))
+ - [Localize US](https://loc.alize.us/)
+ 
+Here are Pictures near our camp: https://loc.alize.us/#/geo:41.247140,-96.016767,18,/
+
+Here is an image of some of our colleages found through this website: [https://www.flickr.com/photos/sociotechnika/41740794011/](https://www.flickr.com/photos/sociotechnika/41740794011/)
+
+Let's upload the image on to an EXIF processor (https://tool.geoimgr.com)
+
+To spread awareness of such issues with social media, an educational web application has been developed.
+
+http://app.teachingprivacy.org (Beware of the ".com" version of this site. This is called [`domain-squatting`](https://en.wikipedia.org/wiki/Cybersquatting))
 
 This web-application takes a twitter handle and aggregates all publicly available geotagged information on a map. For example, here are the travel patterns of Steve Wozniak, co-founder of Apple.
 
 ![geotagging](../img/stevewoz.png)
 
-It is often prudent for celebrities and politicians to turn off geotagging in their posts. Here is Donald Trump's twitter account. He (or someone on his behalf) has taken appropriate steps to avoid leaking information about his whereabouts through social media, even while leaking hot air.
-
-![geotagging](../img/trump.png)
-
-Hillary Clinton is also very cautious about her privacy, unlike her handling of classified emails.
-
- ![geotagging](../img/clinton.png)
-
-To prevent inadvertent sharing of geolocation data, turn off **location services** for social media applications. Also, remove geotags from photos before sharing them on social media.  Here is some more guidance: http://teachingprivacy.org/prevention/#location
-
-For instance, if you have a twitter account, there is a setting (Settings --> Security and Privacy) to delete any previously tagged locations.
-
-![geotagging](../img/deletelocation.png)
+It is often prudent for celebrities and politicians to turn off geotagging in their posts. For instance, if you have a twitter account, there is a setting (Settings --> Security and Privacy) to delete any previously tagged locations.
 
 Protecting privacy requires **Information Hiding**. Deleting or hiding metadata prevents sensitive patterns from being learned over time. This is true even for encrypted `https` Internet traffic. While `https` encryption protects message contents, it still reveals the communication endpoints. Over time an accurate communication graph can be built by examining many such communications. To conceal browsing patterns over the Internet, Virtual Private Networks (VPN) are very effective. VPNs work by forming a tunnel between your current connection and a known network (such as the unomaha network). Once a tunnel is formed, all requests you make appear as if they originate from within the known network, since they emanate from the location you have tunneled to.
 
@@ -85,7 +83,6 @@ Protecting privacy requires **Information Hiding**. Deleting or hiding metadata 
 ## Additional Readings
 
 * APWG, Phishing [Public Education](http://phish-education.apwg.org/r/en/index.htm)
-* Teaching Privacy: http://teachingprivacy.org
 
 [Top](#table-of-contents)
 
