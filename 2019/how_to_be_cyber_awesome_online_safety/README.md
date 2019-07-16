@@ -35,12 +35,13 @@ https://www.youtube.com/watch?v=F7pYHN9iC9I
 
 There is a ton of information on the web pertaining to most of us. This is true even if you do not use social media. Voting registries, court records, county and property records, phone books, online review sites are just some examples. If you use social media, then there is a lot more information to collect. All you need is your target's name to start `reconnaissance` (Hey! thats the name of a card in our Gencyber Card Deck. See if you can find it).
 
-Visit these sites and see how much information is available about yourself or a family member. You may have to pick the correct entry from the search results. But that should be easy with additional information about age and location of your target.:
+Visit the Spokeo site and see how much information is available about yourself or a family member. You may have to pick the correct entry from the search results. But that should be easy with additional information about age and location of your target.:
 
-- [Pipl](https://www.pipl.com)
 - [Spokeo](https://www.spokeo.com)
 
-Sites like Facebook, Linkedin, company websites, organizational charts and employee directories, make it easy to craft emails from colleagues, friends, and family. There are commercial tools available to collect what is called Open Source INTelligence or OSINT. Here is a tool that does just that: https://www.paterva.com/web7/buy/maltego-clients/maltego.php
+Another site like Spokeo is [Pipl](https://pipl.com). It used to be free but now it only offers a paid solution (one low price of $99/month. Phone numbers are guaranteed!).
+
+Finally, sites like Facebook, Linkedin, company websites, organizational charts and employee directories, make it easy to craft emails from colleagues, friends, and family. There are commercial tools available to collect what is called Open Source INTelligence or OSINT. Here is a tool that does just that (it also has a free version): https://www.paterva.com/web7/buy/maltego-clients/maltego.php
 
 > Maltego is an interactive data mining tool that renders directed graphs for link analysis. The tool is used in online investigations for finding relationships between pieces of information from various sources located on the Internet.
 
@@ -56,15 +57,15 @@ Tools are freely available for conducting Geolocation OSINT. For example, this t
 Downloads: http://www.geocreepy.com/  
 Source code: https://github.com/ilektrojohn/creepy  
 
-Here is another website that allows to see images uploaded and publically visibile at a physical address.
+Here is another website that overlays images on a map. These are images that have been posted on websites like Flikr with unrestricted public access and a geotag embedded in their metadata.
 
  - [Localize US](https://loc.alize.us/)
 
 Here are Pictures near our camp: https://loc.alize.us/#/geo:41.247140,-96.016767,18,/
 
-Here is an image of some of our colleages found through this website: [https://www.flickr.com/photos/sociotechnika/41740794011/](https://www.flickr.com/photos/sociotechnika/41740794011/)
+Here is an image of some of our colleagues found through this website: [https://www.flickr.com/photos/sociotechnika/41740794011/](https://www.flickr.com/photos/sociotechnika/41740794011/)
 
-Let's upload the image on to an EXIF processor (https://tool.geoimgr.com)
+Let's upload the image on to an EXIF (Exchangeable image file format) processor (https://tool.geoimgr.com)
 
 To spread awareness of such issues with social media, an educational web application has been developed.
 
@@ -72,7 +73,7 @@ http://app.teachingprivacy.org (Beware of the ".com" version of this site. This 
 
 This web-application takes a twitter handle and aggregates all publicly available geotagged information on a map. For example, here are the travel patterns of Steve Wozniak, co-founder of Apple.
 
-![geotagging](../img/stevewoz.png)
+![geotagging](./img/stevewoz.png)
 
 It is often prudent for celebrities and politicians to turn off geotagging in their posts. For instance, if you have a twitter account, there is a setting (Settings --> Security and Privacy) to delete any previously tagged locations.
 
@@ -82,6 +83,7 @@ Protecting privacy requires **Information Hiding**. Deleting or hiding metadata 
 
 ## Additional Readings
 
+* [Ten Principles for Online Privacy](https://teachingprivacy.org)
 * APWG, Phishing [Public Education](http://phish-education.apwg.org/r/en/index.htm)
 
 [Top](#table-of-contents)
