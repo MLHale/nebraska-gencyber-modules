@@ -77,6 +77,17 @@ This web-application takes a twitter handle and aggregates all publicly availabl
 
 It is often prudent for celebrities and politicians to turn off geotagging in their posts. For instance, if you have a twitter account, there is a setting (Settings --> Security and Privacy) to delete any previously tagged locations.
 
+Generating analytics about social media posts is also real easy. The following website provided detailed breakdown of tweets. All you need is a twitter handle.
+
+https://socialbearing.com/search/user/
+
+Checkout what your instructors are up to:
+
+https://socialbearing.com/search/user/mlhale_
+https://socialbearing.com/search/user/robinagandhi
+https://socialbearing.com/search/user/kristeenshabram
+https://socialbearing.com/search/user/lynnspady
+
 Protecting privacy requires **Information Hiding**. Deleting or hiding metadata prevents sensitive patterns from being learned over time. This is true even for encrypted `https` Internet traffic. While `https` encryption protects message contents, it still reveals the communication endpoints. Over time an accurate communication graph can be built by examining many such communications. To conceal browsing patterns over the Internet, Virtual Private Networks (VPN) are very effective. VPNs work by forming a tunnel between your current connection and a known network (such as the unomaha network). Once a tunnel is formed, all requests you make appear as if they originate from within the known network, since they emanate from the location you have tunneled to.
 
 [Top](#table-of-contents)
