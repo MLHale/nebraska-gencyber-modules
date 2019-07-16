@@ -53,7 +53,7 @@ A `rube goldberg` machine is a device that accomplishes a task by complex means 
 
 Lets watch an intro video to see some Rube Goldbergs in action.
 * [Intro Video](https://www.youtube.com/watch?v=3rjLPX-LcB8)
-[![video 1 thumbnail](README-3148d713.png)](https://www.youtube.com/watch?v=3rjLPX-LcB8)
+[![video 1 thumbnail](assets/README-3148d713.png)](https://www.youtube.com/watch?v=3rjLPX-LcB8)
 * [Intro video 2](https://youtu.be/xHrYypDKXTc)
 [![video 2 thumbnail](assets/README-ad3d089b.png)](https://youtu.be/xHrYypDKXTc)
 
