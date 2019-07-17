@@ -16,8 +16,26 @@ What type of career(s) are you interested in? Some careers have obvious links to
 * [Student Handout](assets/README-2d4ca7a7.pdf)
 
 ### Prerequisite Lessons
+None 
 
 ### Table of Contents
+<!-- TOC -->
+
+- [Cybersecurity First Principles in this lesson](#cybersecurity-first-principles-in-this-lesson)
+- [Introduction](#introduction)
+- [Goals](#goals)
+- [Materials Required](#materials-required)
+- [Prerequisite Lessons](#prerequisite-lessons)
+- [Table of Contents](#table-of-contents)
+- [Computing Career Videos](#computing-career-videos)
+- [Activity](#activity)
+- [Closure / Reflection](#closure--reflection)
+- [Additional Resources](#additional-resources)
+- [Lead Author](#lead-author)
+- [Acknowledgements](#acknowledgements)
+- [License](#license)
+
+<!-- /TOC -->
 
 ### Computing Career Videos 
 * Miral Kotb - [Combining computing and dance](https://www.youtube.com/watch?v=Xg1dUhVI9i0)
@@ -40,8 +58,6 @@ Which one of the women in computing inspired you? Why?
 
 How could you combine your future career choice with computing?
 
-### Additional Resources
-
 ### Lead Author
 Lynn Spady 
 
@@ -49,8 +65,6 @@ Lynn Spady
 Thanks to Matt Hale for editing this module text 
 
 ### License
-[Nebraska GenCyber](https://www.nebraskagencyber.com) <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /></a><br /> is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</a>.
-
 Overall content: Copyright (C) 2017-2019  [Dr. Matthew L. Hale](http://faculty.ist.unomaha.edu/mhale/), [Dr. Robin Gandhi](http://faculty.ist.unomaha.edu/rgandhi/), and [Dr. Briana B. Morrison](http://www.brianamorrison.net).
 
 Lesson content: Copyright (C) Lynn Spady 2019.  

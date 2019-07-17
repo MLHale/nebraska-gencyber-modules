@@ -24,6 +24,21 @@ Street signs give pedestrians and drivers important information while on the roa
 None, just lots of curiosity
 
 ### Table of Contents
+<!-- TOC -->
+
+- [Cybersecurity First Principles in this lesson](#cybersecurity-first-principles-in-this-lesson)
+- [Introduction](#introduction)
+- [Goals](#goals)
+- [Materials Required](#materials-required)
+- [Prerequisite Lessons](#prerequisite-lessons)
+- [Table of Contents](#table-of-contents)
+- [Getting started with color codes](#getting-started-with-color-codes)
+- [Challenges](#challenges)
+- [Lead Author](#lead-author)
+- [Acknowledgements](#acknowledgements)
+- [License](#license)
+
+<!-- /TOC -->
 
 ### Getting started with color codes
 Color codes are like roadsigns. They tell the Ozobot how to drive. The chart below shows you some of the road signs your Ozobot will obey (if it sees them).
