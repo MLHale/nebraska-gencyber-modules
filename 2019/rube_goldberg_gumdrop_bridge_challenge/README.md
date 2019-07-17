@@ -33,6 +33,22 @@ This lesson continues the Rube Goldberg design by introducing a gap-spanning bri
 * [Rube Goldberg Machine Maze Challenge](../rube_goldberg_maze_challenge/README.md)
 
 ### Table of Contents
+<!-- TOC -->
+
+- [Cybersecurity First Principles in this lesson](#cybersecurity-first-principles-in-this-lesson)
+- [Introduction](#introduction)
+- [Goals](#goals)
+- [Materials Required](#materials-required)
+- [Prerequisite Lessons](#prerequisite-lessons)
+- [Table of Contents](#table-of-contents)
+- [Building a bridge](#building-a-bridge)
+- [Requirements](#requirements)
+- [Design Goals (and prizes)](#design-goals-and-prizes)
+- [Lead Author](#lead-author)
+- [Acknowledgements](#acknowledgements)
+- [License](#license)
+
+<!-- /TOC -->
 
 ### Building a bridge 
 Just like in the prior Rube Goldberg Maze Challenge, the Gumdrop bridge has some hard-and-fast requirements that any solution-seeking design must address. 
