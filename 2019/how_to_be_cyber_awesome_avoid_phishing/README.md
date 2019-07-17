@@ -3,8 +3,9 @@ layout: page
 title: How to be Cyber Awesome: Avoid Phishing and URL Analysis
 ---
 ### Cybersecurity First Principles in this lesson
-**Layering:** Cybersecurity uses multiple layers of defense or protecting information. If one layer is defeated the next layer should catch it.
-**Information Hiding:** Information hiding is any attempt to prevent people from being able to see information.
+__Layering__: Cybersecurity uses multiple layers of defense or protecting information. If one layer is defeated the next layer should catch it.
+
+__Information Hiding__: Information hiding is any attempt to prevent people from being able to see information.
 
 ### Introduction
 Phishing is an attempt to deceive an individual using fraudulent emails or websites. Unsuspecting users click on malicious URLs and attachments to become a victim of cybercrime. Internet users need to understand how to read URLs and Email Headers to avoid falling prey to Phishing schemes.
@@ -14,9 +15,9 @@ Phishing is an attempt to deceive an individual using fraudulent emails or websi
 2. Be identify and avoid phishy emails and URLs.
 
 ### Materials Required
-* [Teacher presentation] () <!-- Add link here-->
-* [Student handout] () <!-- Add link here-->
-* [Fishing rod] (https://www.amazon.com/John-Deere-Farm-Pond-Adventure/dp/B000HAVGMY/ref=pd_sim_21_3?_encoding=UTF8&pd_rd_i=B000HAVGMY&pd_rd_r=KKD8YAYPGQGJH4W2NM1S&pd_rd_w=V76tK&pd_rd_wg=DqVxs&psc=1&refRID=KKD8YAYPGQGJH4W2NM1S&dpID=41zv8A15wOL&preST=_SY300_QL70_&dpSrc=detail)
+* [Teacher presentation]() <!-- Add link here-->
+* [Student handout]() <!-- Add link here-->
+* [Fishing rod](https://www.amazon.com/John-Deere-Farm-Pond-Adventure/dp/B000HAVGMY/ref=pd_sim_21_3?_encoding=UTF8&pd_rd_i=B000HAVGMY&pd_rd_r=KKD8YAYPGQGJH4W2NM1S&pd_rd_w=V76tK&pd_rd_wg=DqVxs&psc=1&refRID=KKD8YAYPGQGJH4W2NM1S&dpID=41zv8A15wOL&preST=_SY300_QL70_&dpSrc=detail)
 
 ### Prerequisite Lessons
 None
@@ -77,8 +78,6 @@ None
 * It is registered by the Internet Corporation for Assigned Names and Numbers (ICANN).
 * https://www.accounts.facebook.com/**verifylogin**/user/
 * https://www.facebook.**fblogin.com**/home
-
-### Evaluation
 
 ### Additional Resources
 
