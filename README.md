@@ -4,10 +4,10 @@ This is an open-source repository of cybersecurity curricular modules for K-12
 ## Nebraska GenCyber Program Director (Primary Point of Contact)
 Have questions or comments about the content? Used our content and want more? Want to discuss other collaboration opportunities? Please contact us.
 
-[Dr. Matt Hale](http://faculty.ist.unomaha.edu/mlhale/)
-Assistant Professor of Cybersecurity
-University of Nebraska at Omaha .
-[mlhale@unomaha.edu](mailto:mlhale@unomaha.edu)
+[Dr. Matt Hale](http://faculty.ist.unomaha.edu/mlhale/)  
+Assistant Professor of Cybersecurity  
+University of Nebraska at Omaha  
+[mlhale@unomaha.edu](mailto:mlhale@unomaha.edu)  
 Twitter - [@mlhale](https://twitter.com/mlhale_)
 
 # License
