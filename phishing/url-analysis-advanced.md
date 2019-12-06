@@ -122,26 +122,6 @@ ASCII Encoding for www.wellsfargo.com
 
 Link #5 is an image map. Different regions of the image are mapped to different URLs. Try hovering your mouse over the image starting from the far right, slowly moving towards the left. Notice the change in links in the status bar. Spammers trick victims by embedding images with a mix of malicious and legitimate links using this technique. For example, by chance, you may hover over an image area with legitimate links when checking the status bar, but then click a different (malicious link) area to visit the linked website.
 
-## Clickjacking
-
-Visit this link:
-https://robinagandhi.github.io/phishing-demo/clickjacking.html
-
-At first, there is nothing unusual about this page. There is just a single link to "like the kitten".
-
-As you should know very well by now, nothing is as it seems. To reveal the true nature of this page click on a modified version of this page below.
-https://robinagandhi.github.io/phishing-demo/clickjacking-reveal.html
-
-![trickyurls](../img/clickjacking-reveal.png)
-
-Now you can see, that the page is crafted to steal your clicks and pass them on to an invisible page in front of it. Spammers do this to generate advertisement revenue from unsuspecting users by stealing their clicks. This exploit is called **click jacking**. You may explore the page source on these pages to notice that such behavior is possible using HTML `iframe` technology. With an invisible `iframe` the entire page becomes a minefield for your mouse clicks!
-
-In the demo page, `Like the kitten` is strategically placed on a link that tweets great things about Dr. Gandhi. You would be "liking" me without really intending to do so!
-
-![trickyurls](../img/clickjacking-tweet.png)
-
-When playing "free" online games, you may be clicking invisible advertisements!
-
 ## Open Source INTelligence Gathering
 
 ### Spear-Phishing
@@ -175,23 +155,13 @@ To spread awareness of this issue, an educational web application has been devel
 
 http://app.teachingprivacy.org  (Beware of the ".com" version of this site. This is called [`domain-squatting`](https://en.wikipedia.org/wiki/Cybersquatting))
 
-This web-application takes a twitter handle and aggregates all publicly available geotagged information on a map. For example, here are the travel patterns of Steve Wozniak, co-founder of Apple.
-
-![geotagging](../img/stevewoz.png)
+This web-application takes a twitter handle and aggregates all publicly available geotagged information on a map. For example, here search for the twitter handle @stevewoz for Steve Wozniak, co-founder of Apple.
 
 It is often prudent for celebrities and politicians to turn off geotagging in their posts. Here is Donald Trump's twitter account. He (or someone on his behalf) has taken appropriate steps to avoid leaking information about his whereabouts through social media, even while leaking hot air.
 
 ![geotagging](../img/trump.png)
 
-Hillary Clinton is also very cautious about her privacy, unlike her handling of classified emails.
-
- ![geotagging](../img/clinton.png)
-
 To prevent inadvertent sharing of geolocation data, turn off **location services** for social media applications. Also, remove geotags from photos before sharing them on social media.  Here is some more guidance: http://teachingprivacy.org/prevention/#location
-
-For instance, if you have a twitter account, there is a setting (Settings --> Security and Privacy) to delete any previously tagged locations.
-
-![geotagging](../img/deletelocation.png)
 
 Protecting privacy requires **Information Hiding**. Deleting or hiding metadata prevents sensitive patterns from being learned over time. This is true even for encrypted `https` Internet traffic. While `https` encryption protects message contents, it still reveals the communication endpoints. Over time an accurate communication graph can be built by examining many such communications. To conceal browsing patterns over the Internet, Virtual Private Networks (VPN) are very effective. VPNs work by forming a tunnel between your current connection and a known network (such as the unomaha network). Once a tunnel is formed, all requests you make appear as if they originate from within the known network, since they emanate from the location you have tunneled to.
 
