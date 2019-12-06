@@ -12,7 +12,6 @@ title: Phishing - Advanced URL Analysis - Obfuscation, Clickjacking and OSINT Ga
 
 ## Lesson goals
 - Obfuscation of URLs and Pages
-- Clickjacking
 - Open Source INTelligence (OSINT) gathering
 
 ## Materials required
@@ -25,8 +24,7 @@ title: Phishing - Advanced URL Analysis - Obfuscation, Clickjacking and OSINT Ga
 ## Table of Contents
 
 [Obfuscation of Web Content](#obfuscation-of-web-content)  
-[Obfuscation of URLs using Encoding](#obfuscation-of-urls-using-encoding)    
-[Clickjacking](#clickjacking)     
+[Obfuscation of URLs using Encoding](#obfuscation-of-urls-using-encoding)      
 [Open Source INTelligence Gathering](#open-source-intelligence-gathering)    
 [Additional Readings](#additional-readings)  
 [Acknowledgements](#special-thanks)  
