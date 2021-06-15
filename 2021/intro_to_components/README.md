@@ -133,11 +133,13 @@ Your PI should light up and start booting up.
 
 ### Step 5: Passwords and Internet Setup
 
-Press the button and the light turns on. That was easy!
+
 
 
 
 <!-- ### Step 3: Count all the things!
+
+Press the button and the light turns on. That was easy!
 Ok, we've made our first circuit - but it's pretty simple. Let's add some more modules:
 
 * Find the green ```o21 number``` output module
