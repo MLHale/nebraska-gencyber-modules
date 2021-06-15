@@ -1,9 +1,7 @@
 ---
 layout: page
-title: Introduction to Components With LittleBits
+title: Introduction to Components
 ---
-# Hands-on IoT with - Littlebits Intro
-
 ### Cybersecurity First Principles in this lesson
 
 * __Abstraction__: An abstraction is a representation of an object or concept. It could be something such as a door, a speedometer, or a data structure in computer science. Abstraction decouples the design from the implementation. The gauges in an automobile are an abstraction of the performance of a car. A map is an abstraction of the earth.
@@ -12,80 +10,134 @@ title: Introduction to Components With LittleBits
 
 * __Simplicity__: Simplicity allows a person to better understand hardware and software. Without the clutter of unnecessarily complicated code and interfaces, the software will be more understandable by people that will update the code when requirements change. It will be easier to understand by the testers and they will be able to spot problems sooner. By keeping software as simple and as focused as possible, the reliability and security is greatly increased.
 
+* __Resource Encapsulation__: Encapsulation is an object oriented concept where all data and functions required to use the resource are packaged into a single self-contained component. The goal is to only allow access or manipulation of the resource in the way the designer intended. An example, assume a flag pole is the object. There are fixed methods on how the flag pole is to be used. Put the flag on, take the flag off, raise or lower the flag. Nothing else can be done to the flag pole.
+
+
 ### Introduction
-In this lesson, we will explore a cool hands-on technology called [Littlebits](http://littlebits.cc/). Littlebits follows a _component-based design_ paradigm using _GPIO_ (or general purpose input/output) to let you easily make apps. We will learn how to plug and play bits together to make some simple inventions. Littlebits will be the central platform for the rest of camp and you will be using them in other lessons.
+In this lesson, we will explore a cool hands-on technology called [Raspberry Pi](https://www.raspberrypi.org/). Raspberry Pi follows a _component-based design_ paradigm using _GPIOs_ (or general purpose input/outputs) to let you easily write apps and connect them to hardware components. In this lesson, you will build your Raspberry Pi and connect it to a sensor. Raspberry Pi will be the central platform used for the rest of camp.  Multiple other camp lessons build onto this one.
 
 ### Goals
-By the end of this tutorial, you will be able to:
-* Use Littlebits and GPIO to make your first (or another) IoT app
-* Understand IoT `modularity`
+By the end of this module, you will be able to:
+* Build a Raspberry PI
+* Connect your PI to an LCD Screen
+* Use GPIOs to make a simple sensor platform
+* Define and relate the `modularity` principle to component-based design frameworks like Raspberry PI
 * Come up with some of your own app ideas
 
 ### Materials Required
 
-* Littlebits kit
+* (Raspberry PI 4 (Labists kit or equivalent))[https://www.amazon.com/LABISTS-Raspberry-Complete-Preloaded-Heatsinks/dp/B07YRSYR3M/]
+* (Raspberry PI 4 touchscreen)[https://www.amazon.com/Miuzei-Raspberry-Full-Angle-Heatsinks-Raspbian/dp/B07XBVF1C9/]
+* (SunFoundry sensor modules kit)https://www.amazon.com/SunFounder-Modules-Sensor-Raspberry-Extension/dp/B014PF05ZA/
+* USB Keyboard and Mouse
 * Power outlet nearby
 
 ### Prerequisite lessons
 None
 
 ### Table of Contents
-<!-- TOC START min:1 max:3 link:true update:true -->
-- [Hands-on IoT with - Littlebits Intro](#hands-on-iot-with---littlebits-intro)
-    - [Cybersecurity First Principles in this lesson](#cybersecurity-first-principles-in-this-lesson)
-    - [Introduction](#introduction)
-    - [Goals](#goals)
-    - [Materials Required](#materials-required)
-    - [Prerequisite lessons](#prerequisite-lessons)
-    - [Table of Contents](#table-of-contents)
-    - [Step 1: Unbox it!](#step-1-unbox-it)
-    - [Step 2: Gotta start somewhere](#step-2-gotta-start-somewhere)
-    - [Step 3: Count all the things!](#step-3-count-all-the-things)
-    - [Step 4: The world is more than True or False - Variable Inputs](#step-4-the-world-is-more-than-true-or-false---variable-inputs)
-    - [Step 5: Hey, Listen - Audio](#step-5-hey-listen---audio)
-    - [Step 6: Turning on an outlet with the IR transmitter](#step-6-turning-on-an-outlet-with-the-ir-transmitter)
-    - [Step 7: Motoring onward](#step-7-motoring-onward)
-    - [Self Exploration](#self-exploration)
-    - [Test Your Bits, err... Wits!](#test-your-bits-err-wits)
-    - [Additional Resources](#additional-resources)
-    - [Acknowledgements](#acknowledgements)
-    - [License](#license)
-
+<!-- TOC START min:1 max:3 link:true asterisk:false update:true -->
+        - [Cybersecurity First Principles in this lesson](#cybersecurity-first-principles-in-this-lesson)
+        - [Introduction](#introduction)
+        - [Goals](#goals)
+        - [Materials Required](#materials-required)
+        - [Prerequisite lessons](#prerequisite-lessons)
+        - [Table of Contents](#table-of-contents)
+        - [Step 1: Unbox it!](#step-1-unbox-it)
+        - [Step 2: Gotta start somewhere](#step-2-gotta-start-somewhere)
+        - [Step 3: Setting up the bread board](#step-3-setting-up-the-bread-board)
+        - [Step 4: Install the LCD Touch Screen Display](#step-4-install-the-lcd-touch-screen-display)
+        - [Step 4: Peripherals, Power, and First Boot-up](#step-4-peripherals-power-and-first-boot-up)
+        - [Step 5: Passwords and Internet Setup](#step-5-passwords-and-internet-setup)
+        - [Additional Resources](#additional-resources)
+        - [Lead Author](#lead-author)
+        - [Acknowledgements](#acknowledgements)
+        - [License](#license)
 <!-- TOC END -->
 
 ### Step 1: Unbox it!
-First, open your Littlebits box. Take a second to look at the different components you have. Littlebits is organized around three colors:
+First, open your Raspberry PI box. Take a second to look at the different components you have. 
 
-* **<span style="color: pink">Pink</span>** modules are _inputs_, like an On/Off button.
-* **<span style="color: green">Green</span>** modules are _outputs_, like LEDs and Fans.
-* **<span style="color: orange">Orange</span>** modules are special and usually are _supportive_ - think splitters and logic handlers.
-* **<span style="color: blue">Blue</span>** modules are power related.
+![unbox](./img/unbox2.jpg)
 
-Look over each module. Your box should include a helpful component diagram fold-out poster that shows off each of your modules. Read about some of them.
 
-![unbox](./img/unbox.jpg)
+Here is a diagram of the different `modular interfaces` on your PI.
+
+![unbox](./img/pi-labelled.png)
 
 ### Step 2: Gotta start somewhere
-No time like the present. Lets make a simple invention:
+Find your `Quick Start Guide` and turn to page 03. Follow the steps shown to `install the heatsinks`.
 
-* find the blue ```power``` module.
-* find the pink ```button``` input module
-* find the green ```bright led``` output module
+Once your heatsinks are installed, insert the `SD Card` into the slot on the bottom of the board.
 
-Lets make a simple circuit:
+![sdcard](./img/pi-sd.png)
 
-* Connect the power to the wall
-* Connect micro USB end to the ```power``` module
-* Connect the ```button``` to the ```power``` module
-* Connect the ```bright led``` to the ```button```.
+This SD card has an operating system called `Raspbian` pre-installed on it. Raspbian is like other operating systems you may be familiar with like windows, linux, or MacOS.
 
-![unbox](./img/simple-circuit.jpg)
+The operating system also has several programs we will use during the camp pre-installed on it.
+
+### Step 3: Setting up the bread board
+Next, we are going to configure your Pi to interface with a range of different components using `GPIO` ports. 
+
+GPIO ports, an acronym for `General-purpose input/output` ports are simplified interfaces that allow a device to read or write data to the PI. Programs on your PI can control the ports to allow code to `interface` with `sensors` or `actuators`. 
+
+`GPIO` is a form of `modularity` that arises from using a standard interface. The nice part of standard interfaces is that it means the device **doesn't need to understand or know anything about what they are connected to**. This is a great example of the `modularity` cybersecurity first principle.
+
+Your PI has a `40 pin GPIO header block` (See labeled diagram above). Since it can be tricky to directly connect to these pins, it is often easier to use a `breadboard`. A breadboard is just a circuit board with multiple pin slots that can be used to wire components together.
+
+Find your breadboard by unboxing your SunFounder Sensor Kit.
+
+![unbox](./img/unbox1.jpg)
+
+The breadboard is the component in the upper left of the diagram above. 
+
+Also locate your `GPIO Extension Board` component. It is a read chip with multiple labels on it (third from top left in the diagram above.)
+
+Finally, locate the `ribbon cable` (rainbow colored cable on the lower left of the diagram above).
+
+Carefully socket your `GPIO Extension Board` into the broad board as shown below, then connect the `ribbon cable` to the `GPIO Extension Board` and finally, using the other end, carefully connect it to your Raspberry PI. The resulting setup should look like this:
+
+![sdcard](./img/pi-extension-board.png)
+
+Page 34 of your Sunfounder Sensor kit booklet also has additional information that you might want to read.
+
+### Step 4: Install the LCD Touch Screen Display
+Next we will install a 4in LCD Touch Screen, so that you can see and interact with your PI.
+
+Go ahead and open the box. The components inside, should look something like this:
+
+![lcd unbox](./img/unbox3.jpg)
+
+I recommend you keep the packaging so that you can house your screen in it.
+
+Locate a 2-pin red/black cable from your Sunfounder kit package. Connect the `2-pin cable` to the back of the LCD screen as follows.
+
+![lcd screen](./img/lcd-display.jpg)
+
+Connect the ends of the `2-pin cable` to the `breadboard` like as shown in the upper left of the image below. The black cable should connect to the `-` sign and the red should connect to the `+` symbol.
+
+![lcd screen](./img/lcd-screen-wires1.jpg)
+
+Now, use some additional `male-to-male jumper cables` from your SunFounder kit to connect the `5VD` pin on the `GPIO Extension Board` to the `+` channels on your breadboard. Also connect the `GND` pin to the `-` channels on your breadboard.
+
+Your setup should look like the image below. I like to use red cables to represent power (or 5v) and black to be the ground (GND).
+
+![lcd screen](./img/lcd-screen-wires2.jpg)
+
+### Step 4: Peripherals, Power, and First Boot-up
+Alright, we have a screen, we have a computer (the PI), now we need to connect the keyboard and mouse to the usb ports on the PI.
+
+Once you have those connected, connect the power cable to the PI and turn it on, by flipping the switch.
+
+Your PI should light up and start booting up. 
+
+### Step 5: Passwords and Internet Setup
 
 Press the button and the light turns on. That was easy!
 
-This is `GPIO` in a nutshell. Each module has a general purpose input and output, with a standard interface, and **doesn't need to understand or know anything about what they are connected to**. These modules also need to protect themselves from invalid input. This is a great example of the `modularity` cybersecurity first principle.
 
-### Step 3: Count all the things!
+
+<!-- ### Step 3: Count all the things!
 Ok, we've made our first circuit - but it's pretty simple. Let's add some more modules:
 
 * Find the green ```o21 number``` output module
@@ -224,7 +276,7 @@ The last module we will explore is the ```servo``` which can bring actual moveme
 
 When you press the button, it should rotate the arm 90 degrees.
 
-This can be used for all kinds of purposes!
+This can be used for all kinds of purposes! 
 
 ### Self Exploration
 Try some different designs yourself.
@@ -234,11 +286,14 @@ Try some different designs yourself.
 
 <div class="quizz-container" data-width="100%" data-iframe-title="QUIZ: All About Littlebits - Introduction" data-height="auto" data-quiz="430545"></div>
 
+-->
 ### Additional Resources
 For more information, investigate the following:
 
-* [Littlebits](http://littlebits.cc/how-it-works) - Overview of concepts and available bits
-* [https://shop.littlebits.cc/products/smart-home-kit](https://shop.littlebits.cc/products/smart-home-kit) - Information about the Smart Home Kit
+
+
+### Lead Author
+Matt Hale 
 
 ### Acknowledgements
 Special thanks to [Dr. Robin Gandhi](http://faculty.ist.unomaha.edu/rgandhi/) for reviewing and editing this lesson.
