@@ -1,0 +1,70 @@
+
+Email Header
+============================================================================
+
+Received: from BL2PRD0711HT001.namprd07.prod.outlook.com (10.255.104.164) by
+ BY2PRD0711HT003.namprd07.prod.outlook.com (10.255.88.166) with Microsoft SMTP
+ Server (TLS) id 14.16.257.4; Thu, 17 Jan 2013 23:35:35 +0000
+Received: from BL2PRD0711HT002.namprd07.prod.outlook.com (10.255.104.165) by
+ BL2PRD0711HT001.namprd07.prod.outlook.com (10.255.104.164) with Microsoft
+ SMTP Server (TLS) id 14.16.257.4; Thu, 17 Jan 2013 23:35:34 +0000
+Received: from mail240-tx2-R.bigfish.com (65.55.88.116) by
+ BL2PRD0711HT002.namprd07.prod.outlook.com (10.255.104.165) with Microsoft
+ SMTP Server (TLS) id 14.16.257.4; Thu, 17 Jan 2013 23:35:34 +0000
+Received: from mail240-tx2 (localhost [127.0.0.1]) by mail240-tx2-R.bigfish.com (Postfix) with ESMTP id A05C032025F for <jerryp@mail.unomaha.edu>; Thu, 17 Jan 2013 23:35:33 +0000 (UTC)
+X-Forefront-Antispam-Report: CIP:59.125.100.113;KIP:(null);UIP:(null);IPV:NLI;H:bf.shako.com.tw;RD:59-125-100-113.HINET-IP.hinet.net;EFVD:NLI
+X-BigFish: ps73(zz7f52hd926hzz1ee6h1de0h1ce5h1202h1e76h1d1ah1d2ahz58hz8275bhz2ei2a8h668h839h940h10d2h1177h1288h12a5h12a9h12bdh137ah139eh13b6h13eah1441h1537h162dh1631h1758h17f1h184fh1898h300k503k953iwa7jk)
+X-FOSE-spam: This message appears to be spam.
+X-SpamScore: 73
+Received-SPF: neutral (mail240-tx2: 59.125.100.113 is neither permitted nor denied by domain of aol.com) client-ip=59.125.100.113; envelope-from=vieria@aol.com; helo=bf.shako.com.tw ;shako.com.tw ;
+Received: from mail240-tx2 (localhost.localdomain [127.0.0.1]) by mail240-tx2
+ (MessageSwitch) id 1358465731454940_30539; Thu, 17 Jan 2013 23:35:31 +0000
+ (UTC)
+Received: from TX2EHSMHS007.bigfish.com (unknown [10.9.14.242]) by mail240-tx2.bigfish.com (Postfix) with ESMTP id 675424200E7 for <jerryp@mail.unomaha.edu>; Thu, 17 Jan 2013 23:35:31 +0000 (UTC)
+Received: from bf.shako.com.tw (59.125.100.113) by TX2EHSMHS007.bigfish.com
+ (10.9.99.107) with Microsoft SMTP Server (TLS) id 14.1.225.23; Thu, 17 Jan
+ 2013 23:35:28 +0000
+Received: from mail.shako.com.tw (59-125-100-112.HINET-IP.hinet.net
+ [59.125.100.112]) by bf.shako.com.tw (8.14.3/8.14.3) with ESMTP id
+ r0HNYCgA013928; Fri, 18 Jan 2013 07:34:12 +0800
+X-Authentication-Warning: bf.shako.com.tw: Host 59-125-100-112.HINET-IP.hinet.net [59.125.100.112] claimed to be mail.shako.com.tw
+Authenticated-By: nobody
+X-SpamFilter-By: BOX Solutions SpamTrap 3.5 with qID r0HNXZSI028539, This message is passed by code: ctdos35128
+Received: from User (85-250-54-29.bb.netvision.net.il[85.250.54.29])
+(authenticated bits=0)
+by mail.shako.com.tw (8.14.3/8.14.3/4.90) with ESMTP
+ id r0HNXZSI028539; Fri, 18 Jan 2013 07:33:38 +0800
+X-BOX-Message-Id: r0HNXZSI028539
+Message-ID: <201301172333.r0HNXZSI028539@mail.shako.com.tw>
+X-Authentication-Warning: mail.shako.com.tw: Host 85-250-54-29.bb.netvision.net.il[85.250.54.29] claimed to be User
+Reply-To: <carrr444@yahoo.com>
+From: JOSEPH CAMARAH VIEIRA <vieria@aol.com>
+Subject: [Spam-Mail] Dear Sir/Madam. (This message should be blocked: ctdos35128)
+Date: Fri, 18 Jan 2013 01:46:07 +0200
+Content-Type: text/plain; charset="Windows-1251"
+Content-Transfer-Encoding: 7bit
+X-Mailer: Microsoft Outlook Express 6.00.2600.0000
+X-MimeOLE: Produced By Microsoft MimeOLE V6.00.2600.0000
+To: Undisclosed recipients:;
+Return-Path: vieria@aol.com
+X-MS-Exchange-Organization-SCL: 7
+X-MS-Exchange-Organization-AVStamp-Mailbox: MSFTFF;1;0;0 0 0
+X-MS-Exchange-Organization-AuthSource: BL2PRD0711HT002.namprd07.prod.outlook.com
+X-MS-Exchange-Organization-AuthAs: Anonymous
+MIME-Version: 1.0
+
+Dear Sir/Madam,
+my name is Joseph Camarah Vieira, i  am from Guinea Bissau, my late father was the former minister of mines in my country Guinea Bissau, he was short dead by the rebels in my country, before his death he deposited $60 million Dollars with Global Trust Security Company Accra Ghana, i want you to help me receive this money in your country for investment in your country i will give you 30% of the total sum when the funds arrive your country.
+
+Regards.
+Mr Joseph Camarah Vieira
+00233 244 617 863
+my email:carrr444@yahoo.com
+
+
+===============================================================================
+
+Questions:
+
+What is the IP address from where the message originated?_______________________________________________________________What country did the email originate from?_______________________________________________________________Does it match the country indicated in the email message body?_______________________________________________________________What is the spam score of the email?_______________________________________________________________What is the Reply-to address? Is it different from the sender? _______________________________________________________________
+

@@ -1,0 +1,151 @@
+                                                                                                                                                                                                                                                               
+Email Header
+============================================================================
+
+Received: from BL2PR07MB2354.namprd07.prod.outlook.com (10.167.101.20) by
+ BL2PR07MB2354.namprd07.prod.outlook.com (10.167.101.20) with Microsoft SMTP
+ Server (TLS) id 15.1.523.12 via Mailbox Transport; Sat, 2 Jul 2016 07:08:06
+ +0000
+Received: from BLUPR07CA068.namprd07.prod.outlook.com (10.160.24.23) by
+ BL2PR07MB2354.namprd07.prod.outlook.com (10.167.101.20) with Microsoft SMTP
+ Server (TLS) id 15.1.523.12; Sat, 2 Jul 2016 07:08:05 +0000
+Received: from SN1NAM01FT021.eop-nam01.prod.protection.outlook.com
+ (2a01:111:f400:7e40::200) by BLUPR07CA068.outlook.office365.com
+ (2a01:111:e400:8ae::23) with Microsoft SMTP Server (TLS) id 15.1.528.16 via
+ Frontend Transport; Sat, 2 Jul 2016 07:08:05 +0000
+Authentication-Results: spf=none (sender IP is 209.85.214.67)
+ smtp.mailfrom=ijntse.com; unomaha.edu; dkim=pass (signature was verified)
+ header.d=ijntse.com;unomaha.edu; dmarc=bestguesspass action=none
+ header.from=ijntse.com;unomaha.edu; dkim=pass (signature was verified)
+ header.d=ijntse.com;
+Received-SPF: None (protection.outlook.com: ijntse.com does not designate
+ permitted sender hosts)
+Received: from mail-it0-f67.google.com (209.85.214.67) by
+ SN1NAM01FT021.mail.protection.outlook.com (10.152.65.191) with Microsoft SMTP
+ Server (TLS) id 15.1.523.9 via Frontend Transport; Sat, 2 Jul 2016 07:08:04
+ +0000
+Received: by mail-it0-f67.google.com with SMTP id y93so4338779ita.0
+        for <jamiep@unomaha.edu>; Sat, 02 Jul 2016 00:08:04 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=ijntse.com; s=google;
+        h=mime-version:from:date:message-id:subject:to;
+        bh=On7c2RbGlh8QRU+JI1i+MMp4RvC9iqwIFvXzCHnO6Lo=;
+        b=OU1+RqQ7jfdyDPvycOH4Rl9GqSD45SLqu/8M+2eydJFfGWbIzjMbC/bY8gxfSDCoFg
+         3+1IDj6CCfK5KyMj8cGDlit/ek8Dvs/t4BcvxPqtFbT1qpT8cE2OC1iPer+aEqZcy2Rb
+         0CGihzCEcRkR08d7Rp3QfI+D6WbNJYbdYJ24A=
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20130820;
+        h=x-gm-message-state:mime-version:from:date:message-id:subject:to;
+        bh=On7c2RbGlh8QRU+JI1i+MMp4RvC9iqwIFvXzCHnO6Lo=;
+        b=az9dMJQNu6/yemOS7oH1dWojCe/WozNo3TnUZHnYhRdlUB2mWUGG7hNOjH75smB/3B
+         J5U1S8lLQDH7dKXgJ2eb2xQmBfxwsppSVOCcc7ZT1idsJ1qeO/swkVWNaQBNKmoXqk8K
+         Zdn5wQMF9O4DXc04UeTDT9/Nhh/raeNC3h1sSHJ73aNZ7F+h7iWbgHXXW7QHyhvODCTE
+         nCTh1yjzAnoNbvbk57Ud3X22kzlSc8Nekgfcuw0IgnGNTKpIG5rB/riGkcR0t9RwOiPE
+         aStZQbXk6KdcLj3PxNv7u+qj6ih0G4DRsuBRp4zQA3dDf1qJBgRbsmKfxYGBlnfxH4qS
+         HGKg==
+X-Gm-Message-State: ALyK8tLrV0v3F0Zz/NVX0iN3S5yQc+r9vY4QfGQvt5C0Z3k+jOc/OXAreTtFoIzKMZNFoFYIPJqnBmkaoKjhxheaJ0q01xBKyPrRZJnlUzLQ80In0VyBY3teSRVt+T4KcpuuEWTIyJuzwoCI
+X-Received: by 10.36.67.145 with SMTP id s139mr1642347itb.78.1467443284251;
+ Sat, 02 Jul 2016 00:08:04 -0700 (PDT)
+MIME-Version: 1.0
+Received: by 10.107.134.161 with HTTP; Sat, 2 Jul 2016 00:08:02 -0700 (PDT)
+From: Sree Lakshmi <contact1@ijntse.com>
+Date: Sat, 2 Jul 2016 12:38:02 +0530
+Message-ID: <CADfhFR+q9-+qNWggOwZtWhE5nu76U2qGiNAidv8PPy6aSVA1hw@mail.gmail.com>
+Subject:
+To: sn1@pmme.co.in
+BCC: <jamiep@unomaha.edu>
+Content-Type: multipart/alternative; boundary="001a113f766aafe8190536a1c3d7"
+Return-Path: contact1@ijntse.com
+X-MS-Exchange-Organization-Network-Message-Id: 10fc2c6a-06ea-45ac-c4d5-08d3a2479cf8
+X-EOPAttributedMessage: 0
+X-EOPTenantAttributedMessage: f1f4be86-d048-47e8-aa26-15b01dcdb13d:0
+X-MS-Exchange-Organization-MessageDirectionality: Incoming
+X-Forefront-Antispam-Report: CIP:209.85.214.67;IPV:NLI;CTRY:US;EFV:NLI;SFV:SPM;SFS:(8206002)(2980300002)(428002)(42154003)(199003)(189002)(34854003)(15198665003)(55446002)(1096003)(61726006)(7846002)(8896002)(8576002)(50986999)(61266001)(25636003)(92566002)(586003)(356003)(42186005)(9896002)(246002)(19617315012)(6806005)(19580395003)(84326002)(86362001)(9686002)(450100001)(1720100001)(15395725005)(2351001)(956001)(15975445007)(512874002)(105586002)(110136002)(5406001)(107886002)(59536001)(101416001)(2361001)(63696999)(7596002)(189998001)(106466001)(7906003)(93516999)(4001450100002)(305945005)(7636002)(11100500001)(16796002)(54356999)(8666005)(53650200002);DIR:INB;SFP:;SCL:5;SRVR:BL2PR07MB2354;H:mail-it0-f67.google.com;FPR:;SPF:None;PTR:mail-it0-f67.google.com;A:1;MX:1;LANG:en;
+X-MS-Office365-Filtering-Correlation-Id: 10fc2c6a-06ea-45ac-c4d5-08d3a2479cf8
+X-Microsoft-Exchange-Diagnostics: 1;BL2PR07MB2354;2:grXWrkzqShRxM7bSnrzwq5zpOJl6alk29SnelphrdsqwQ14wbww7k0vaLhfoTE/ji8NZA8u7d/e42eHR3ruC87dcKj38vySfhHnwNj6L/Qx6+kUaVD+yRaPiclDGNCzMpwzCw8x8VQckNPi9PEPmc5jVFucNBQMrTSz8abJkdgKVmEeaBszQjQUkQYWkGbkS;3:wzYzNe+Z+A+US383toPl8YWzlkzSBRg4mzNu8qCAwwTZRaGlhVdCQcdHGpNXsWygV3YKMl7Jxtc18hcrJs5RgmjkU/TLcGwtrxWcfcpP8gJAh8lv9p5itM/VtqaQk8FDmsN594XMqaulA80vE+JvToKW2Kovxoo9Om640vgHald6qA4V8FwTQbyUfILbYv4NKEg0USzesLcuVK9FKRWQ78pPMYQLZG003MXke0DMjr188u4306Ma+ZY6Mb9g/B1wzuKcpa+5x/fdW8TcUunom8GGNkLdbvpDHfinoCGRhEm2urQEQe35C5eZzCyyHBVuQjtvDYD8SjX5uP9Z8wIMGg==
+X-DkimResult-Test: Passed
+X-Microsoft-Antispam: UriScan:;BCL:0;PCL:0;RULEID:(8251501002)(3001016)(71701004)(71702002);SRVR:BL2PR07MB2354;
+X-Microsoft-Exchange-Diagnostics: =?us-ascii?Q?1;BL2PR07MB2354;25:JgP30CNQbMQDmKiWXuVJ6Gaa1kmgcgAuDhB3Ov/lC?=
+ =?us-ascii?Q?goIOTWGkS2P1GXjawyOKTf3TYUoBNe1OYFbMRhYMBfXyQIncJN/jCFg/gCUB?=
+ =?us-ascii?Q?vbNEkwWu6h/GORgUHso2c8UjZ9sst1Y7FBgSbomIKOljsmUn875eRCulc/JE?=
+ =?us-ascii?Q?P07C3rYpDAT7DGFzNFsSZOdt32kLxn6tVBbQy5eYctnVBarBMMGHJUWXWUkC?=
+ =?us-ascii?Q?am56ego2e2aXzcP8WNgs74LoYskf5T7T+AMl13gA9TtVuBKM1YXBKaILc9qX?=
+ =?us-ascii?Q?/h8CVnyP8shhjgm8mYqHQUNt8gdTk0jRMVNN3Js+yceYnGCPErx+1sGjlJS0?=
+ =?us-ascii?Q?D+9eWPmM96tADb7AV3vcGNeUJlxwfLI9NJ6hd8zihcR9+OaYSGDZLwegPDt9?=
+ =?us-ascii?Q?RfZ0hKE50TiN4nJ2tvTDvLgcZ5imfV+yvXjJAiHHQ4woxpgjxKuDDS+7TWVZ?=
+ =?us-ascii?Q?Qay6mlrpH3l5PIqZQJAmmxjTl4M7uukouLDk3w3bXwZsSn/agi/oqIFTD2e+?=
+ =?us-ascii?Q?eIrPg1Pw6JTyqRwXRmU7TQUJ7KTkZ5f016CJHZXpY/znQRBoCbLNeYiIn60y?=
+ =?us-ascii?Q?6ZpeXuHcErHbilj7I9aiK0zr1Ld7x/QNGkcl378XLXu1BFYd2OTah8jZL70W?=
+ =?us-ascii?Q?BYw6EKDwVo7Ds/GJF0fF3fMJnMioY7BIq2OriNQUGh3uNoauA6diQS9J8rLt?=
+ =?us-ascii?Q?PRe2A2jH69y9KHJ8CWJJQQqBt8LD3QYtyQegDydaGUH+W6agNdsjz5v4tpqt?=
+ =?us-ascii?Q?wR5DLzxK7ruqrnKg0DLFvy6RrUBMe0ME9T6Lk0jj2kyhyhP1URpQiQ82rbr5?=
+ =?us-ascii?Q?qTLFWzL1Rhz29tOew6dmzezRfF5nvbbvfbOCCDIM8GD3caQ0yKxZaL6BQJsr?=
+ =?us-ascii?Q?cgKxCF/CNwTrW+1ZUcbz8x2FPx83Ah6tXIyVbOCzTIA6GI/dalnLp12Czskg?=
+ =?us-ascii?Q?9qfO6uVL7wSadofCIFSoeS+jKlDbVeyU8emLBgC9w=3D=3D?=
+X-MS-Exchange-Organization-AVStamp-Service: 1.0
+X-Microsoft-Exchange-Diagnostics: 1;BL2PR07MB2354;20:JOsQVP8QkVyrMV+8KPs6KmMbHLAm+FvTwrH6dfKzVtmISVCDOQVrBNCMJj7wFTlfS/UuaxxctHarn6MDGAmyg1+jV5sv1PU5GoRMx1IOoZyJW2H39jrYc+tAwj+um2bXtEygwbjxwVamzNtBJBc0r8vLRYUfDWIjL0D71EYyH9U/sPAIfeKeZGeMkys7lFw7zwT0BsKUXo9hgyJuBgaI5d9dURau94h9ULw1CJo4dA+JtwVYBPlqNjrKlFu8zfYRg7JegK50QlEsdfJN6ojpUC5scf9qb41TMiAOAzuVX6ZR/VEhFGVFYRU8hMt83QdZwoUGfUsr9BTwKv3Ud9W9bPVWkIwhonH7x9GT54/duysB211ua9+VABSzUa59lA15AaHiQRGwoQo9yY+yhBg6GhLaNv87pTgJ0VIaAoqKfO/YAD822uz2EVQqBA4niyVg8g8qjC1xIKcZ1Psrt710b3UW00qlzYrlvwfbJJAJ6cKeJUDbXRLkIAgCiXg+GJjf
+X-Exchange-Antispam-Report-Test: UriScan:(167856512178636);
+X-Exchange-Antispam-Report-CFA-Test: BCL:0;PCL:0;RULEID:(9101531078)(601004)(2401047)(8121501046)(13018025)(13016025)(13024025)(13023025)(3002001)(10201501046)(2003001)(2002001);SRVR:BL2PR07MB2354;BCL:0;PCL:0;RULEID:;SRVR:BL2PR07MB2354;
+X-Microsoft-Exchange-Diagnostics: 1;BL2PR07MB2354;4:WOCR39ohJz2Gt0o717P9O+4UXo+zBm07xwGWvHQMhKmm3Cq5EAIBSrVH9xOP8YJ0xBz49PxLMswmWHvOiRCJ7SZdksWk9nSS855Q3h4l85Y0JHeoJNjVuowFrQA0g0N03FMKx2vRezMFqSCxiIt6aEO59AHYFAt2KGer5es8hH9LKicTojUl7V9xK3TzDFfQCQFryHJoAJYRDZIeAnKV5GGwtRUnqqtBoPjrDjwqyn44kY92ffXKD1IPEc3nWi4vI1YmtXphsnzm8lK6MzygEimxIsLUCZhzySB9P5kEJb47W/kipEvURK8IGzh3sseqr9mjodNeOFcw678lp0sX3YwR5sfSEWy+t8HizGrW4bQXFtdkYKjq8JWEV5wolp+63qUzA0lMnbq6OJAg5gyT4sFmWc272rkNtbfaNjwFqIXyy4WrqoM5LOqALoI/o6KSpS2US0di9BjuDSuvNYVFIYXx2DUKnhfhTPesD/uLyA3HhjbI7HVnfo6yDRkXeErizctFKeA1bUS+R1X587WaOQ==
+X-MS-Exchange-Organization-SCL: 5
+X-Microsoft-Exchange-Diagnostics: =?us-ascii?Q?1;BL2PR07MB2354;23:nw/B4lnltj2xGipDrPPhO5ODLGz9lgIq15WBs0d+H?=
+ =?us-ascii?Q?nerKotcTwsoB1gwE8K4tFGd6z1P9IVRk3Xa1kLfQaq34pYsKs9IFsLbIU+5e?=
+ =?us-ascii?Q?VohHKsASijumPaGKM9a62zWVjkotJ447yVUKfesmh5mUx034BrcSc23DfMri?=
+ =?us-ascii?Q?lJyDMtNejPHPmLlcvJAQnc4rzU9aV2BIhM0B8we5Xr4KDV/6GB9AJl8wDJaH?=
+ =?us-ascii?Q?amP2BddwTZpPCTuj3itH6xQg34HaNL4SpKSHyVQ6QddkNZAMVX3e3PeF/Jmh?=
+ =?us-ascii?Q?U2w4uvXlqMRCPm4Zv6jO0WnChmFcnoajBTrdqCmcotaZXockzgUTADLczI5j?=
+ =?us-ascii?Q?GP2070gBGRF1yXzSrF+tmdKeCDaB+e2MEIRR1yTknCweFEkIYMprv8blYCEB?=
+ =?us-ascii?Q?T6ZjJw5JCRY753R0hJmdolhGIB4tYeypIa1AMBZsQpPKzMXZ1F4Vm/ZZXNu+?=
+ =?us-ascii?Q?WxVL3KXjlmMw/nLj87hvtzuJuPUG3Ou67CaVESmIJ2wq9xa3Ffjl56AY6TbW?=
+ =?us-ascii?Q?zjneTeJP5AOcxOXITX3PpBUd5giDqyhVoobmztnvUfxVoznYLd0h+vvFUUQv?=
+ =?us-ascii?Q?p/25cj4KT+Uxu6OGsM6p/wWMjKkobq0x7dLuohFYIYv1L2Of5UO1sdkKfLiU?=
+ =?us-ascii?Q?R5+fWpow8kfiULY/dQJvNnPgI/xM+q0aLoc1SHWrXdoC+jgY2vYNM9EZ2euB?=
+ =?us-ascii?Q?EYedoCd+Tf9o7cTxhB6oA4gbc1Km53QNdSnQeDJxEALwb08aw6wc06kCj9ln?=
+ =?us-ascii?Q?5rZjMSFa8Erv+uGsEb52BCYjvEoTwvP4COGmJ2aV3/ngtXG8cIoQYfGUvsXh?=
+ =?us-ascii?Q?2xbjjM4vWB7VLXsaLrMrShc6YwcSd81O+TGiUnpsnQ6Granol/hSop868Wpb?=
+ =?us-ascii?Q?++SySO+sCE3doKQHYt1I1toHbBRTFC7G1tZrnZaoDbKyN+bs/JqtyzvoplQr?=
+ =?us-ascii?Q?IyNTHzlgLFGo9uzl5qjICak4Fa40PJ8j/lUgIe1h7ELZ3rOyICPw52Z+BZUJ?=
+ =?us-ascii?Q?AfErkBKBN9AEbkDxAxxOIn9BCe+BwE0ezLCQjBWWK5sduGR8NouP6C+4LbMJ?=
+ =?us-ascii?Q?NsI17d8KV533f+7luLsw+QLyKKupEnu239clcXYkqbj3vJaJxckDoIIx7eZy?=
+ =?us-ascii?Q?hXqt4sJAGHcaOEtGew2kMAI1mSOzs4nOVZnN7QbEWgjBNgCwyxrrpljnL20k?=
+ =?us-ascii?Q?+oVqZ8OMX09t+dbBunpIT+D2txTjClTQJqanxx+FE/7kiAJidzgwqSxyprGH?=
+ =?us-ascii?Q?OAD5HxBlaDiu3tNk5dhRiyNQxHJSnQDt/1WAYy17UTdx2FN1MlVN4FldW0vb?=
+ =?us-ascii?Q?9HNIF40UrX4qRKjiI4JcNEELx28MKbN7S4+gh974AYOZ38EGndbZQ3ymtBwW?=
+ =?us-ascii?Q?JoltC1hN0Bv9cF4FRnreWmpQf1L9t3cLLFCh3sS16VQQ0fjlVKVZEQL99WEq?=
+ =?us-ascii?Q?+Gu3dyvgg=3D=3D?=
+X-Microsoft-Exchange-Diagnostics: 1;BL2PR07MB2354;6:LBv5u4aa4C2jFhWOvHlzR8WGm/7ITZqsMHWKCbRXSl92SUH/9XhY612xrgmHGrMSYvo4Zlmblfo1LugUM+fXUbt+CDN/AmGNUUUmcCKADZlDuDYwpBojb3LgxE3ke52qLsITyN2BZuHvDkNPeelAKI51+XwnE04a88Rh+n9DY6lnVCQNLfQv+cX6ZCafnHzbS2vovyOKW8mJ68Kh5KLq9dSgiT0v3Kg3q3/JHv4I/54hMk8Tfn7kf8k7eCvpI7F4rCeob23KjIJ+E2PrCmIBUjdishEzL2Dugg/wEJ+63TeJ2rcrQGs/coAlKxJr0ryOPr4Hfo0Ujle7saf2zk2idQ==;5:ezaGwio6jdSHTT+/0DOH1rP//bemgnDKjuOwj01q3IFMaa3Wp6zQ3vDdaiYVB7KDj+Gdjkj6Q3qcRIXuLKcT0x8S42hQGX+JT4t/Ch0hHTWGFOanl7J5nbN/R7Ve7EW8WX1SKiLUOrtA2pGYlI/c4w==;24:BTzqDQX4wkZQM00vLnH4Y632INcIgEwVyyrwB1kFHc+901r6WbBO9x6L0lstie2CVFILM7QhYe2K3sOhNSVhZA==;7:yAOpGsnkwXVezDeS3R9uNtYv19YrcOmSfeN/7UcLSV6PpwlpRhge0xn27/H0r0SMOYcSr1NxMxp/tnR6UtvZZrHQmhZA1klRhZBJjdjX2ZYtJlY0XcxcQBAgZRJJsp6Gx7a/rgUDToQDDxR0zU5LnSaa0OwrrnxAKs/n/KJ4hAmLlNEyZeCQvCx4katmAbccEEXLurw0idDZ/pCQlKVNr+dxXeoqG+MCsNQ0wAaHQJF0O24J5ewJh4dDdF8XP3aqKd6MvEmEs2tZYdtvjuu1Ow==
+SpamDiagnosticOutput: 1:22
+SpamDiagnosticMetadata: Default
+X-MS-Exchange-CrossTenant-OriginalArrivalTime: 02 Jul 2016 07:08:04.8204
+ (UTC)
+X-MS-Exchange-CrossTenant-Id: f1f4be86-d048-47e8-aa26-15b01dcdb13d
+X-MS-Exchange-CrossTenant-FromEntityHeader: Internet
+X-MS-Exchange-Transport-CrossTenantHeadersStamped: BL2PR07MB2354
+X-MS-Exchange-Organization-AuthSource: SN1NAM01FT021.eop-nam01.prod.protection.outlook.com
+X-MS-Exchange-Organization-AuthAs: Anonymous
+X-MS-Exchange-Transport-EndToEndLatency: 00:00:02.0334318
+X-Microsoft-Exchange-Diagnostics:
+	1;BL2PR07MB2354;9:dAIL9UHFXR5XdEFQvIH2PRn/bos+F3abA7FvXxmNFZjkGqR8zBZV7uvPQAqMUBReBWEJDOH3vEJUC66meRo9qAisQPKfitWBFcxHYhrXuA8L++aCu04iRwsBY6wLFPM4vwjQWJ2YYLRTERKO0BGvNhh3WmBT5EObqzqamVkLKRPNhg/De1k+q1zdW+BHVEDORYufxL3HOl2A3C2XtX9wTw==
+
+Final notification:
+
+ To-day also can submit the paper for Elsevier proceedings Conference papers also will be indexed by. SCOPUS.
+
+ 
+
+Conference proceedings:
+
+ All presented papers will be published in Elsevier Materials To-day Proceedings:
+
+ 
+
+More details about the event will be at: http://bit.do/cmp02072016045
+
+
+Disclaimer: This email and any file(s) transmitted with it are confidential and intended solely for the use of the individual or entity to whom they are addressed. This message contains confidential information and is intended only for the individual named. If you are not the named addressee you should not disseminate, distribute or copy this e-mail. Please notify the sender immediately by e-mail if you have received this e-mail by mistake and delete this e-mail from your system. If you are not the intended recipient you are notified that disclosing, copying, distributing or taking any action in reliance on the contents of this information is strictly prohibited.
+
+===============================================================================
+
+Questions:
+
+Can you spot a BCC field? What does it mean for the “spamminess” of the message?_______________________________________________________________What is the name of the sending computer or server?_______________________________________________________________Check the From and Return Path email addresses. Do they match the sender name?_______________________________________________________________Which is the first mail server that resolves to a public Internet address?_______________________________________________________________How likely is it that this message is spam? _______________________________________________________________
