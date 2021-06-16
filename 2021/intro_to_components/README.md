@@ -52,7 +52,7 @@ None
         - [Step 6: Welcome to your Raspbian Desktop and Connecting to the internet](#step-6-welcome-to-your-raspbian-desktop-and-connecting-to-the-internet)
         - [Step 7: Landscape Screen Setup](#step-7-landscape-screen-setup)
         - [Step 8: Ready for some component-based design action!](#step-8-ready-for-some-component-based-design-action)
-        - [Step 9: Use a temperature modules](#step-9-use-a-temperature-modules)
+        - [Step 9: Use a temperature module](#step-9-use-a-temperature-module)
         - [Self Exploration](#self-exploration)
         - [Lead Author](#lead-author)
         - [Acknowledgements](#acknowledgements)
@@ -227,8 +227,14 @@ sudo python3 01_dule_color_led.py
 This should result in a flashing light like this:
 ![led lesson](./img/led.gif)
 
-### Step 9: Use a temperature modules
+### Step 9: Use a temperature module
 Turn to page 135 of your booklet and follow the steps provided to configure your PI to work with a digital temperature sensor. 
+
+When you are done, you should be able to run your program and begin getting temperature output like this:
+
+![temperature lessom](./img/temperature.png)
+
+We will be using the temperature module later in a weather station example during later lessons.
 
 ### Self Exploration
 Try out some other components in the box - find the lesson number for each one.
