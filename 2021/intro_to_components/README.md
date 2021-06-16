@@ -52,6 +52,7 @@ None
         - [Step 6: Welcome to your Raspbian Desktop and Connecting to the internet](#step-6-welcome-to-your-raspbian-desktop-and-connecting-to-the-internet)
         - [Step 7: Landscape Screen Setup](#step-7-landscape-screen-setup)
         - [Step 8: Ready for some component-based design action!](#step-8-ready-for-some-component-based-design-action)
+        - [Step 9: If you have extra time play with some of the components](#step-9-if-you-have-extra-time-play-with-some-of-the-components)
         - [Additional Resources](#additional-resources)
         - [Lead Author](#lead-author)
         - [Acknowledgements](#acknowledgements)
@@ -179,10 +180,54 @@ cd LCD-show
 sudo ./MPI4008-show
 ```
 
-Wait a bit as the driver is installed. Once its done, you can restart your PI and it should be in landscape mode.
+Wait a bit as the driver is installed. Once it is done, you can restart your PI and it should be in landscape mode.
 
 ### Step 8: Ready for some component-based design action!
+Your Sunfounder box contains a whole range of sensors and actuators. A diagram of every part can be found on pages 1 to 8 of the Sunfounder guide booklet.
 
+Each part is a `component`. Components generally all need `power` (often labeled as `vcc`), `ground` (labeled as `gnd`), and a `signal` (labeled `sig`).
+
+We will be wiring up the components to create inventions and solve problems in the internet of things.
+
+Before we start working with our first components, we need to setup a few libraries. Go back to the terminal on your pi and type the following, one line at a time.
+
+```
+cd /tmp
+wget https://project-downloads.drogon.net/wiringpi-latest.deb
+sudo dpkg -i wiringpi-latest.deb
+cd ~
+```
+
+Then check to make sure you see v 2.52 when you type `gpio -v`
+
+```
+cd /home/pi
+git clone https://github.com/sunfounder/SunFounder_SensorKit_for_RPi2
+```
+
+These instructions are also located in the SunFounder booklet on pages 37-39.
+
+Now that we have our component libraries installed, lets try out some of the lessons from the SunFounder booklet to learn about individual components.
+
+The booklet has numbered lessons, starting on page 40, that showcase each component. Each lesson includes a `wiring diagram`, a code sample, and details about what the component does. Lets take a look at Lesson 1 for the `LED module`.
+
+The Lesson has you prepare a wiring diagram that looks like this:
+![led lesson](./img/led-lesson1.png)
+> credit [SunFounder_SensorKit_for_RPi2 manual](https://github.com/sunfounder/SunFounder_SensorKit_for_RPi2/blob/master/docs/(EN)%20Sensor_kit_V2.0_for_Raspberry_Pi_4%20Model_B.pdf)
+
+Follow the instructions for the python code. We will be using python throughout the rest of the camp. 
+
+Run the code sample by executing the following commands on your terminal:
+
+```
+cd /home/pi/SunFounder_SensorKit_for_RPi2/Python/
+sudo python3 01_dule_color_led.py
+```
+
+This should result in a flashing light like this:
+![led lesson](./img/led.mp4)
+
+### Step 9: If you have extra time play with some of the components 
 <!-- ### Step 3: Count all the things!
 
 Press the button and the light turns on. That was easy!
