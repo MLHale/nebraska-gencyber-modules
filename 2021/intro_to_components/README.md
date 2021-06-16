@@ -48,7 +48,10 @@ None
         - [Step 3: Setting up the bread board](#step-3-setting-up-the-bread-board)
         - [Step 4: Install the LCD Touch Screen Display](#step-4-install-the-lcd-touch-screen-display)
         - [Step 4: Peripherals, Power, and First Boot-up](#step-4-peripherals-power-and-first-boot-up)
-        - [Step 5: Passwords and Internet Setup](#step-5-passwords-and-internet-setup)
+        - [Step 5: Password and OS Setup](#step-5-password-and-os-setup)
+        - [Step 6: Welcome to your Raspbian Desktop and Connecting to the internet](#step-6-welcome-to-your-raspbian-desktop-and-connecting-to-the-internet)
+        - [Step 7: Landscape Screen Setup](#step-7-landscape-screen-setup)
+        - [Step 8: Ready for some component-based design action!](#step-8-ready-for-some-component-based-design-action)
         - [Additional Resources](#additional-resources)
         - [Lead Author](#lead-author)
         - [Acknowledgements](#acknowledgements)
@@ -131,11 +134,54 @@ Once you have those connected, connect the power cable to the PI and turn it on,
 
 Your PI should light up and start booting up. 
 
-### Step 5: Passwords and Internet Setup
+### Step 5: Password and OS Setup
+Once your PI has booted up, it will step you through a wizard with a few screens to setup a password and configure the device.
 
+It should look something like this:
+![pi wizard setup](./img/pi-wizard-setup.gif)
 
+We recommend you use a easy to remember password that you can share with the students or other device users in your classroom. For the purposes of this example, we recommend using `nebraskagencyber` as the password and use the default username `pi`.
 
+In practice, if you were to deploy this device as an actual IoT device on a production network, you would want to follow a more secure configuration.
 
+At this point, you can click `skip` for updates and `skip` for connecting to WiFi.
+
+### Step 6: Welcome to your Raspbian Desktop and Connecting to the internet
+Once setup, you should see a Raspbian default desktop that looks like this:
+
+![pi desktop](./img/raspbian-desktop.png)
+
+- *If you are running this lesson at your school or testing this lesson at home*, 
+  - Click on the `bi-directional arrows` in the top right of the screen. 
+  - Open the menu and connect to your preferred WiFi network.*
+- *If you are following along with this module at our Nebraska GenCyber camp*
+  - We will need to connect your device to the NU-IoT network. 
+  - To do this, open the `command terminal` by clicking on the `red Raspberry PI icon` on the upper left, then select `accessories`, then select `terminal`.
+  - Once there you should see this screen:
+![pi terminal](./img/terminal.png)
+  - Type the command `ifconfig`
+  - You should see some information about your networks that looks like this:
+![pi terminal](./img/mac-address.png)
+  - Locate the `eth0` interface (shown in a red box), then find the `mac address` information in the pink box. Eth0 is just a fancy name for the `0th or first ethernet interface`. The mac address is kind of like your device's unique name that differentiates itself from all other devices. We are going to use this information to setup your connection. Just come talk to a Nebraska GenCyber staff member, bring us this address, and we will give you a password to connect to the NU-IoT WiFi network.
+  - To do so, click the the `bi-directional arrows` in the top right of the screen.
+  - Select `NU-IoT` and then enter the password we give you as the `pre-shared key` it asks for.
+
+### Step 7: Landscape Screen Setup
+Your Raspberry PI touch screen is by default in `portrait mode.` We need to install `a driver` to help your PI better use the screen and to allow it to use `landscape mode` to make it easier to see.
+
+To do this, go back to the terminal and type the following command:
+
+```
+sudo rm -rf LCD-show
+git clone https://github.com/goodtft/LCD-show.git
+chmod -R 755 LCD-show
+cd LCD-show
+sudo ./MPI4008-show
+```
+
+Wait a bit as the driver is installed. Once its done, you can restart your PI and it should be in landscape mode.
+
+### Step 8: Ready for some component-based design action!
 
 <!-- ### Step 3: Count all the things!
 
