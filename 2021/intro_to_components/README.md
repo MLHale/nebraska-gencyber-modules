@@ -52,8 +52,8 @@ None
         - [Step 6: Welcome to your Raspbian Desktop and Connecting to the internet](#step-6-welcome-to-your-raspbian-desktop-and-connecting-to-the-internet)
         - [Step 7: Landscape Screen Setup](#step-7-landscape-screen-setup)
         - [Step 8: Ready for some component-based design action!](#step-8-ready-for-some-component-based-design-action)
-        - [Step 9: If you have extra time play with some of the components](#step-9-if-you-have-extra-time-play-with-some-of-the-components)
-        - [Additional Resources](#additional-resources)
+        - [Step 9: Use a temperature modules](#step-9-use-a-temperature-modules)
+        - [Self Exploration](#self-exploration)
         - [Lead Author](#lead-author)
         - [Acknowledgements](#acknowledgements)
         - [License](#license)
@@ -163,7 +163,7 @@ Once setup, you should see a Raspbian default desktop that looks like this:
   - Type the command `ifconfig`
   - You should see some information about your networks that looks like this:
 ![pi terminal](./img/mac-address.png)
-  - Locate the `eth0` interface (shown in a red box), then find the `mac address` information in the pink box. Eth0 is just a fancy name for the `0th or first ethernet interface`. The mac address is kind of like your device's unique name that differentiates itself from all other devices. We are going to use this information to setup your connection. Just come talk to a Nebraska GenCyber staff member, bring us this address, and we will give you a password to connect to the NU-IoT WiFi network.
+  - Locate the `wlan0` interface (shown in a red box), then find the `mac address` information in the pink box next to the word `ether`. Wlan0 is just a fancy name for the `0th wireless local area network interface`. The mac address is kind of like your device's unique name that differentiates itself from all other devices. We are going to use this information to setup your connection. Just come talk to a Nebraska GenCyber staff member, bring us this address, and we will give you a password to connect to the NU-IoT WiFi network.
   - To do so, click the the `bi-directional arrows` in the top right of the screen.
   - Select `NU-IoT` and then enter the password we give you as the `pre-shared key` it asks for.
 
@@ -225,164 +225,23 @@ sudo python3 01_dule_color_led.py
 ```
 
 This should result in a flashing light like this:
-![led lesson](./img/led.mp4)
+![led lesson](./img/led.gif)
 
-### Step 9: If you have extra time play with some of the components 
-<!-- ### Step 3: Count all the things!
-
-Press the button and the light turns on. That was easy!
-Ok, we've made our first circuit - but it's pretty simple. Let's add some more modules:
-
-* Find the green ```o21 number``` output module
-
-Time to extend your previous circuit to ![count](./img/count-all-the-things.jpg)
-
-* Connect the ```o21 number``` to the ```bright led```
-* Set the switch to the up position on the ```o21 number``` module. This puts it into **count** mode instead of **voltage** mode.
-
-Press the button!
-
-Pretty simple. Notice we can **chain the output modules together** (```bright led``` and a ```counter``` in this case). Any number of output modules can be chained together.
-
-Now, lets switch up our circuit a bit.
-
-* Find the pink ```sound trigger``` input module
-* Find the pink ```light sensor``` input module
-
-Lets swap some components around.
-
-* Remove the ```bright led``` module (it is really bright!)
-
-Press the button. Everything still works!
-
-* Connect the ```light sensor``` to the ```power``` and then to the ```button```
-
-Press the button. Does it work? How about if you cover up the light sensor?
-
-This shows you that you can also **chain multiple input modules together** and their **total behavior is a combination of their input designs**. In this case, our counter only worked if the light was detected **AND** the button was pressed.
-
-Lets try one more combo:
-
-* Remove the ```button``` module.
-* Remove the ```light sensor``` module.
-* Connect the ```sound trigger``` between the ```power``` and the ```o21 number``` module.
-
-Snap your fingers or tap the table near your device.
-
-![unbox](./img/sound-counter.gif)
-
-### Step 4: The world is more than True or False - Variable Inputs
-So far, we have outputs and inputs that result in an **on** (True) or **off** (False) behavior.
-
-![grey](./img/grey-world.jpg).
-
-The world is not always **on** or **off**
-
-* Find the pink ```temperature sensor``` input module.
-* Find the pink ```i23 threshold``` input module.
-* Get the ```light sensor``` and ```bright led``` out again
-
-We are going to make a circuit that shows off variable voltage.
-
-* Remove all components.
-* Connect the ```temperature sensor``` to the ```o21 number``` module.
-* Set the ```o21 number``` switch to **value** (middle position)
-* Set the ```temperature sensor``` switch to **f** (for Fahrenheit)
-
-You should see the current temperature in the room near the device.
-![temperature](./img/temperature.jpg)
-
-
-* Replace the ```temperature sensor``` with the ```light sensor```
-* Put the ```o21 number``` module back into **voltage** mode by moving the switch to the bottom position.
-* Move your finger closer to and further away from the light sensor
-
-You should see that the more light it gets, the more voltage it outputs.
-
-* Now connect the ```bright led``` to the right-hand side of the ```o21 number``` module
-* Move your finger closer to and further away from the light sensor
-
-You should notice the light dimming and brightening depending on the voltage it receives.
-
-Ok, last part!
-
-* Connect the ```i23 threshold``` module between the ```o21 number``` and ```bright led``` modules
-* Set the threshold on the ```i23 threshold``` by turning the knob.
-* Keep turning until a voltage of roughly 3 or greater turns on the ```bright led```
-* You can put your finger over the light sensor to change the voltage
-
-So, what did we learn? The thresholder can **set a voltage tolerance and output a 1 (True) if its input is greater than the threshold***. This can be helpful if you want to do **sound**, **light**, or **temperature** detection, but you only want to output True if the value is greater than some value.
-
-### Step 5: Hey, Listen - Audio
-![navi](./img/hey-listen.jpg)
-> Photo Credit: CmOrigins@deviantart http://cmorigins.deviantart.com/art/Navi-Hey-Listen-322389835
-
-Sometimes you want your inventions to have some sound. The next design we will explore involves using audio.
-
-* Find the pink ```mp3 player``` input module
-* Find the green ```synth speaker``` output module
-* Get the pink ```button``` module again
-
-Lets play a sound when a button is pressed:
-
-* Remove all components
-* Connect the ```button``` to the ```power```
-* Connect the ```mp3 player``` to the ```button```
-* Connect the ```synth speaker``` to the ```mp3 player```
-
-Press the button. This plays **all** of the tracks. If you move the ```mp3 player``` switch to **next**, it will allow you to press the ```button``` to switch tracks. You can also use the buttons on the ```mp3 player``` board.
-
-![mp3-player](./img/mp3player.jpg)
-
-By default, the ```mp3 player``` comes loaded with stock Littlebits tutorial audio. You can replace it using the ```sdcard``` in the board to load it with your own audio.
-
-### Step 6: Turning on an outlet with the IR transmitter
-The next module to explore is the ```ir transmitter``` and ```power outlet``` combo.
-
-* Find the green ```ir transmitter``` output module
-* Find the outlet with IR sensor (hard to miss)
-* Get your pink ```button``` module
-
-Lets wire this up so that when you press the button the outlet comes on.
-
-* Remove all components
-* Connect the ```button``` up to the ```power```
-* Plug the outlet into a nearby power outlet
-* Plug something up to the outlet (optional)
-* Connect the ```ir transmitter``` to the ```button```
-
-Pressing the button should turn on the device. The first time you press it, you will see the outlet light blink. It is pairing up. Once its paired, press the button a few times. You can see the red light turn on and off as you do.
-
-> Note: Since it is IR, the IR transmitter needs line-of-sight to the IR sensor on the outlet.
-
-### Step 7: Motoring onward
-The last module we will explore is the ```servo``` which can bring actual movement into your inventions!
-
-* Remove all components
-* Connect the ```button``` to the ```power```.
-* Connect the ```servo``` to the ```button```.
-* Open the packet of black attachments and pick one of the arms.
-* Attach the arm by pushing it down onto the ```white plastic gear``` on the ```servo```
-* Set the switch on the ```servo``` board to ```turn```.
-
-> Note you don't need to use the screw, but hang onto it for later - it should be used in production to secure the turner down
-
-When you press the button, it should rotate the arm 90 degrees.
-
-This can be used for all kinds of purposes! 
+### Step 9: Use a temperature modules
+Turn to page 135 of your booklet and follow the steps provided to configure your PI to work with a digital temperature sensor. 
 
 ### Self Exploration
-Try some different designs yourself.
+Try out some other components in the box - find the lesson number for each one.
 
-### Test Your Bits, err... Wits!
+<!-- ### Test Your Bits, err... Wits!
 [Quiz](https://www.qzzr.com/c/quiz/430545/all-about-littlebits-introduction)
 
-<div class="quizz-container" data-width="100%" data-iframe-title="QUIZ: All About Littlebits - Introduction" data-height="auto" data-quiz="430545"></div>
+<div class="quizz-container" data-width="100%" data-iframe-title="QUIZ: All About Littlebits - Introduction" data-height="auto" data-quiz="430545"></div> -->
 
 -->
-### Additional Resources
+<!-- ### Additional Resources
 For more information, investigate the following:
-
+ -->
 
 
 ### Lead Author
