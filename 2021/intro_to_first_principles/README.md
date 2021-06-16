@@ -12,7 +12,7 @@ This lesson is about cybersecurity first principles. So all of them will be disc
 2. Explain cybersecurity first principles
 
 ## Materials required
-- [Gencyber Cyber Realm Card Deck](https://gencybercards.com)
+- Gencyber Cyber Realm Card Deck (optional) <!-- (https://gencybercards.com) -->
 
 ## Prerequisite lessons
 - None, just lots of curiosity
@@ -31,7 +31,7 @@ This lesson is about cybersecurity first principles. So all of them will be disc
 
 ### What are first principles?
 
-Building a secure system is a design problem. Which means that there is no de-facto recipe to do so. In the absence of methodical techniques, experience has contributed to a set of first principles. The principles are basic, foundational propositions regarding what qualities of a system contribute to cybersecurity. These principles guide tradeoffs during system design that contribute to security.
+Building a secure system is a design problem. Which means that there is no de-facto recipe to do so. In the absence of methodical techniques, experience has contributed to a set of first principles. The principles are basic, foundational propositions regarding what qualities of a system contribute to cybersecurity. These principles guide system design decisions and tradeoffs that contribute to cybersecurity.
 
 ### Stepping through the principles
 
@@ -40,7 +40,7 @@ We now examine 10 cybersecurity first principles. This discussion is adapted fro
 #### 1. Domain Separation
 
 - What is a `Domain`?
-  - In a computer, this word refers to a _collection of data or instructions_ that warrant protection. Outside of a computer, a domain can be an area of responsibility or control.
+  - In a computer, this word refers to a _collection of data or computer code_ that warrant protection. Outside of a computer, a domain can be an area of responsibility or control.
   - Separating domains allows for enforcement of rules governing the entry and use of domains by entities outside the domain.
   - During system testing, test data should be separated from "real" data, such as personal information. Such separation avoids unauthorized or accidental disclosure of personal or sensitive data.
 
@@ -64,18 +64,18 @@ We now examine 10 cybersecurity first principles. This discussion is adapted fro
 #### 2. Process Isolation
 
 - What is a Process?
-  - A `process` is a program running on a computer. Each process has a region of the memory (address space), which only it can access.  
+  - A `process` is a program or code running on a computer. Each process has a region of the memory (a collection of memory addresses often referred to as an `address space`), which only it can access.  
   - Isolating the process address space from other address spaces prevents tampering or interference from/by other processes.
 
 
 - Examples
   - A word processor, a database, and a browser running on a computer are all running in different addresses spaces. Process isolation ensures that each one cannot influence the others address space.
-  - A non-technical example of process isolation is when a prosecutor and defense attorney run their cases in court. It would be a problem if either had access to each other's work. Keeping their work seperate protects it from misuse by the other party.
+  - A non-technical example of process isolation is when a prosecutor and defense attorney run their cases in court. It would be a problem if either had access to each other's work. Keeping their work separate protects it from misuse by the other party.
 
 
 - Implications
   - Processes have to use defined communications mediated by the operating system to communicate with other processes.
-  - A process should never trust any other process on the computer.
+  - A process should never trust any other process on the computer without appropriate verification.
 
 
 - Related principles
@@ -95,6 +95,7 @@ We now examine 10 cybersecurity first principles. This discussion is adapted fro
 - Examples
   - The application logic of a website only allows access and manipulation of database records in defined ways. Here the database is a resource encapsulated by the website application logic.
   - A flag pole only allows certain operations (raise the flag, lower the flag, unhook the flag). No one needs to know how the flag pole works internally, just that they can use it only in certain ways.
+  - An electrical outlet encapsulates all the wiring inside of it, only exposing standard interfaces to appliances
 
 
 - Implications
@@ -133,7 +134,7 @@ We now examine 10 cybersecurity first principles. This discussion is adapted fro
 #### 5. Layering
 
 - What is a Layer?
-  - In the context of computer security, a `layer` is a separate level that must be conquered by an attacker to breach a system.
+  - In the context of cybersecurity, a `layer` is a separate level that must be conquered by an attacker to breach a system.
   - Layering slows down an attacker. The attacker needs to conquer each layer before moving on to the next.
 
 
@@ -184,17 +185,17 @@ We now examine 10 cybersecurity first principles. This discussion is adapted fro
 
 #### 7. Data Hiding
 
-- How does data hiding contribute to cybersecurity?
-  - Only allow necessary aspects of a data structure or a record to be observed or accessed. Log all access attempts.
+- What is Data Hiding?
+  - Only allow necessary aspects of a data structure (e.g. a table) to be observed or accessed. Log all access attempts.
 
 
 - Examples
   - A stack data structure exposes only the data at the top of the stack using simple push and pop instructions. The operating system applies access control to different regions of the stack.
-  - Websites don't need to load all of a user's data to show a list of usernames - they only need the username, the rest of the record fields can be hidden.
+  - Bank websites only display the last few digits of a card or account number. The rest of the digits are hidden and never transmitted unless required for a specific transaction.
 
 
 - Implications
-  - Programmer or user frustration if allowed access is not sufficient to carry out the task.
+  - Programmer or user frustration if the provided data is not sufficient to carry out a task.
 
 
 - Related principles
@@ -209,9 +210,9 @@ We now examine 10 cybersecurity first principles. This discussion is adapted fro
 
 
 - How does modularity contribute to cybersecurity?
-  - Modules can be mutually-untrusting
-  - Compartmentalization is possible using modularization. It contains damage to a single module.
-  - Using modules means that you can swap out a bad part. If batteries weren't modules, any time a battery died you would need to throw out the entire electronic device it was in.
+  - Modules can be mutually-untrusting. In this relationship, a module validates all input received from other modules even after appropriate authentication.
+  - Compartmentalization is possible using modularization. It contains the damage to a single module.
+  - Using modules means that you can swap out a bad part. If batteries weren't modules, any time a battery died you would need to throw out the entire electronic device it was in! (e.g. Airpods!)
 
 
 - Examples
@@ -233,11 +234,11 @@ We now examine 10 cybersecurity first principles. This discussion is adapted fro
   - Abstraction
 
 
-
 #### 9. Simplicity
 
 - How does simplicity contribute to cybersecurity?
-  - The lack of complexity allows system designers and programmers to identify unwanted access paths.
+  - Abstraction and Modularity does not necessarily mean simple. Unnecessary complexity should be avoided.
+  - Simplicity may allow system designers and programmers to better identify unwanted access paths.
   - Users can easily translate their general protection goals to appropriate system security configurations.
 
 
@@ -261,6 +262,7 @@ We now examine 10 cybersecurity first principles. This discussion is adapted fro
 
 - What is minimization?
   - Having the least functionality necessary in a program or device
+  - For a product that offers security services, opt a minimal viable product with rigorous verification of security requirements.
 
 
 - How does minimization contribute to cybersecurity?
@@ -282,7 +284,7 @@ We now examine 10 cybersecurity first principles. This discussion is adapted fro
   - Simplicity
   - Abstraction
 
-### CIA Triad - Expectations of Information
+### CIA Triad - Expectations that humans have from other entities in possession of information
 
 #### Confidentiality
 It is an expectation for the entity entrusted with data (or code) to keep it a secret. For example, if a healthcare provider is entrusted with patient data, the user expects the health care provider to keep it secret.
@@ -312,22 +314,22 @@ Shuffle these cards and place them face down in a stack to the left of sub-group
 
 - Repeat steps 3 – 6 for all question cards
 
+- Here is one possible [solution](http://www.gencyberteachers.camp/cyber-realm-card-game.html) from another camp to resolve differences
+
 #### Game 2: Cybersecurity Matrix
 
-Now we use the `Dark Green` and `Green` cards. In the `Dark Green` set of cards, find card **# 21 - Information**. This card introduces users to the expectatations for information, information states and ways to safeguard information.
+Now we use the `Dark Green` and `Green` cards. In the `Dark Green` set of cards, find card **# 21 - Information**. This card introduces users to the expectations for information, information states and ways to safeguard information.
 
 - STEP 1: Have each sub-group identify and examine the following cards
 > Cards 22, 23, 24 are the expectations of information  
 Cards 25, 26, 27 are the information states
 
-- STEP 2: Arrange these two sets of cards into an matrix as shown in the diagram below
-
-![array](https://gencybercards.com/wp-content/uploads/2017/06/d1.jpg)
+- STEP 2: Arrange these two sets of cards into a matrix. For example, cards 22, 23, and 24 form column headers, and cards 25, 26, and 27 form rows.
 
 - STEP 3: Have each sub-group identify and examine the following cards
 > Cards 31 – 39
 
-- STEP 4: Now ask each sub-group to arrange the cards 31-39 as examples that fit at the cross section of the cards in the row and column. In the example below – Card 31 “Javier’s Concern” indicates that he wants to encrypt his hard drive. As such it is put in the first row first column since it cross references storage (hard drive) and encryption (confidentiality).
+- STEP 4: Now ask each sub-group to arrange the cards 31-39 as examples that fit at the cross section of the cards in the row and column. For example – Card 31 “Javier’s Concern” indicates that he wants to encrypt his hard drive. As such it is placed at the intersection of storage (hard drive) and encryption (confidentiality).
 > Ask students to place cards in a Round Robin fashion. Internally discuss and resolve any disagreements. Each team must put all 9 cards down in the matrix within 5 minutes.
 
 - STEP 5: Ask the sub-groups to share their solution. Discuss and resolve any disagreements raised by between the sub-groups using your answer key.  
@@ -373,11 +375,11 @@ If there is a question as to where the card should be placed the answer is on th
 
 #### Game 3: Thinking like the Adversary
 
-Now we use the `Dark Red` (41-48) and `Red` (49-56) cards. 
+Now we use the `Dark Red` (41-48) and `Red` (49-56) cards.
 
-STEP 1 - Examine the five phases of a cyberattack using the `Dark Red` cards. 
+STEP 1 - Examine the five phases of a cyberattack using the `Dark Red` cards.
 
-STEP 2 - Research the terms on the `Red` cards and place them along the five phases of a cyberattack. `Defense in Depth` cards are the safeguards and `Tool, Techniques and Procedures` are used by attackers in a particular phase. 
+STEP 2 - Research the terms on the `Red` cards and place them along the five phases of a cyberattack. `Defense in Depth` cards are the safeguards and `Tool, Techniques and Procedures` are used by attackers in a particular phase.
 
 If there is a question as to where the card should be placed the answer is on the card – encrypted. For example on card 52 the lower right hand has the code `MYF10`. This code is a simple rotation cipher and it rotated by 10. You will get a three letter answer. In this case it will be `COV` - which stands for the `Covering Tracks` phase of a cyberattack.
 
