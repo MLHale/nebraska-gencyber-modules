@@ -186,7 +186,7 @@ We now examine 10 cybersecurity first principles. This discussion is adapted fro
 #### 7. Data Hiding
 
 - What is Data Hiding?
-  - Only allow necessary aspects of a data structure (e.g. a table) to be observed or accessed. Log all access attempts.
+  - Only allow necessary aspects of a data structure (e.g. a table) to be observed or accessed. `Hide` the rest of the `data` and log all access attempts.
 
 
 - Examples
@@ -238,7 +238,7 @@ We now examine 10 cybersecurity first principles. This discussion is adapted fro
 
 - How does simplicity contribute to cybersecurity?
   - Abstraction and Modularity does not necessarily mean simple. Unnecessary complexity should be avoided.
-  - Simplicity may allow system designers and programmers to better identify unwanted access paths.
+  - `Simplicity` may allow system designers and programmers to better identify unwanted access paths.
   - Users can easily translate their general protection goals to appropriate system security configurations.
 
 
@@ -262,7 +262,7 @@ We now examine 10 cybersecurity first principles. This discussion is adapted fro
 
 - What is minimization?
   - Having the least functionality necessary in a program or device
-  - For a product that offers security services, opt a minimal viable product with rigorous verification of security requirements.
+  - For a product that offers security services, opt a `minimal` viable product with rigorous verification of security requirements.
 
 
 - How does minimization contribute to cybersecurity?
@@ -409,7 +409,7 @@ If there is a question as to where the card should be placed the answer is on th
 ## License
 [Nebraska GenCyber](https://github.com/MLHale/nebraska-gencyber) <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /></a><br /> is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</a>.
 
-Overall content: Copyright (C) 2017-2018  [Dr. Matthew L. Hale](http://faculty.ist.unomaha.edu/mhale/), [Dr. Robin Gandhi](http://faculty.ist.unomaha.edu/rgandhi/), [Dr. Briana B. Morrison](http://www.brianamorrison.net), and [Doug Rausch](http://www.bellevue.edu/about/leadership/faculty/rausch-douglas).
+Overall content: Copyright (C) 2017-2021 [Dr. Matthew L. Hale](http://faculty.ist.unomaha.edu/mhale/), [Dr. Robin Gandhi](http://faculty.ist.unomaha.edu/rgandhi/), and [Dr. Briana B. Morrison](http://www.brianamorrison.net).
 
-Lesson content: Copyright (C) [Robin Gandhi](http://faculty.ist.unomaha.edu/rgandhi/) 2018.  
+Lesson content: Copyright (C) [Robin Gandhi](http://faculty.ist.unomaha.edu/rgandhi/) 2018-2021.  
 <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /></a><br /><span xmlns:dct="http://purl.org/dc/terms/" property="dct:title">This lesson</span> is licensed by the author under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</a>.
