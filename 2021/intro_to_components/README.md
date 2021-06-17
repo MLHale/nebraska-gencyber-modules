@@ -54,6 +54,7 @@ None
         - [Step 8: Ready for some component-based design action!](#step-8-ready-for-some-component-based-design-action)
         - [Step 9: Use a temperature module](#step-9-use-a-temperature-module)
         - [Self Exploration](#self-exploration)
+        - [Additional Resources](#additional-resources)
         - [Lead Author](#lead-author)
         - [Acknowledgements](#acknowledgements)
         - [License](#license)
@@ -245,9 +246,10 @@ Try out some other components in the box - find the lesson number for each one.
 <div class="quizz-container" data-width="100%" data-iframe-title="QUIZ: All About Littlebits - Introduction" data-height="auto" data-quiz="430545"></div> -->
 
 -->
-<!-- ### Additional Resources
+### Additional Resources
 For more information, investigate the following:
- -->
+
+[SunFounder GitHub Repository for Raspbery PI 4 Sensors](https://github.com/sunfounder/SunFounder_SensorKit_for_RPi2)
 
 
 ### Lead Author
