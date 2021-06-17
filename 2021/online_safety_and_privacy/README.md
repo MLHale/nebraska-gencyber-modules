@@ -31,9 +31,10 @@ title: Online Safety and Privacy
 Crafting URLs is just one part of the deception used by spammers. *Spear-Phishing* is a social engineering technique where a spammer uses intimate details about your life, your contacts, and/or recent activities to tailor a very specific phishing attack.
 
 Watch this 3 min video (if you do not have audio, it is OK):   
-[https://www.youtube.com/watch?v=F7pYHN9iC9I](https://www.youtube.com/watch?v=F7pYHN9iC9I)
+[Amazing Mind Reader Reveals his "Gift"](https://www.youtube.com/watch?v=F7pYHN9iC9I)
 
-Here is another one that is high on details! [https://youtu.be/u9dBGWVwMMA?t=80](https://youtu.be/u9dBGWVwMMA?t=80)
+Here is another one that is high on details!  
+[Hacking Bernard the CEO](https://youtu.be/u9dBGWVwMMA?t=55)
 
 There is a ton of information on the web pertaining to most of us. This is true even if you do not use social media. Voting registries, court records, county and property records, phone books, and online review sites are just some examples. For so social media users, there is even more information on the web. All you need is your target's name to start `reconnaissance` (Hey! thats the name of a card in our GenCyber Card Deck. See if you can find it).
 
@@ -88,7 +89,6 @@ Checkout what some of your camp instructors are up to:
 * [https://socialbearing.com/search/user/mlhale_](https://socialbearing.com/search/user/mlhale_)  
 * [https://socialbearing.com/search/user/robinagandhi](https://socialbearing.com/search/user/robinagandhi)  
 * [https://socialbearing.com/search/user/kristeenshabram](https://socialbearing.com/search/user/kristeenshabram)  
-* [https://socialbearing.com/search/user/lynnspady](https://socialbearing.com/search/user/lynnspady)  
 
 Protecting privacy requires **Data Hiding**. Deleting or hiding metadata prevents sensitive patterns from being learned over time. This is true even for encrypted `https` Internet traffic. While `https` encryption protects message contents, it still reveals the communication endpoints. Over time an accurate communication graph can be built by examining many such communications. To conceal browsing patterns over the Internet, Virtual Private Networks (VPN) are very effective. VPNs work by forming a tunnel between your current connection and a known network (such as the unomaha network). Once a tunnel is formed, all requests you make appear as if they originate from within the known network, since they emanate from the location you have tunneled to.
 
