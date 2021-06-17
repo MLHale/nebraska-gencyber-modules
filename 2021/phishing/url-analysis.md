@@ -17,7 +17,7 @@ title: Phishing - URL Analysis
 ### Cybersecurity First Principles
 * __Layering__: Cyber security uses multiple layers of defense or protecting information. If one layer is defeated the next layer should catch it.
 
-* __Information Hiding__: Information hiding is any attempt to prevent people from being able to see information. It can be hiding the content of a letter, or it can be applied to hiding how the letter is delivered. Both ways can prevent people from being able to see the information. This lesson looks at how malicious information can be hidden in URLs or other data fields.
+* __Information Hiding__: Information hiding is any attempt to prevent people from being able to see information. It can be hiding the content of a letter, or it can be applied to hiding how the letter is delivered. Both ways can prevent people from being able to see the information.
 
 ## Phishing Humor
 
@@ -47,7 +47,8 @@ Phishing victims often fear ridicule and do not report crimes...
 [Introduction](#introduction-to-urls)  
 [Reading a URL](#reading-a-url)  
 [URL Tricks](#url-tricks)  
-[AntiPhishing Phil Game](#antiphishing-phil-game)   
+[Obfuscation of Web Content](#obfuscation-of-web-content)  
+[Obfuscation of URLs using Encoding](#obfuscation-of-urls-using-encoding)
 [Additional Readings](#additional-readings)  
 [Teacher Developed Modules](#teacher-developed-modules)  
 [Acknowledgements](#special-thanks)
@@ -64,7 +65,7 @@ A URL is an acronym for Uniform Resource Locator. It is a standard format for lo
 
 Computer users often have misconceptions about understanding a URL. Spammers take advantage of these misconceptions when crafting phishing URLs.
 
-##### Misconception 1   
+### Misconception 1   
 Read a URL from left to right, just like English [WRONG!]
 
 Consider this email snippet:
@@ -82,9 +83,9 @@ So is this a Facebook URL?  How do we tell if this link is legitimate or not wit
 
 If we just start reading the URL from left to right, like English, then this URL appears legitimate because we encounter the word `facebook` in the URL. But that is not the correct way of reading a URL.
 
-### The "Right" way to read a URL
+#### The "Right" way to read a URL
 
-The Internet is a network of networks. Each network that is under the control of an authority, is a separate **Domain** (Hey! that is another example for `Domain Separation`). For example, organizations like University of Nebraska at Omaha, Facebook or Apple have authority over their own Domains/Networks that are connected to the Internet. URLs, which are used to reference computers in a particular network are also called **Domain Names**. Continuing our example, some top-level domains are `unomaha.edu`, `facebook.com` and `apple.com`.
+The Internet is a network of networks. Each network that is under the control of an authority, is a separate **Domain** (Hey! that is another example for `Domain Separation`). For example, organizations like University of Nebraska at Omaha, Facebook or Apple have authority over their own Domains/Networks that are connected to the Internet. URLs, which are used to reference computers in a particular network are also called **Domain Names**. Continuing our example, some top-level domains are `unomaha.edu`, `facebook.com` and `apple.com`. These are examples of the  `Registrable Domain` component of a URL.
 
 These domain names have to be **unique** on the Internet. So who is responsible for ensuring this? This function is coordinated by ICANN. Here is what is listed on the ICANN website:
 
@@ -143,10 +144,18 @@ Check your answers with your peers. Do they match?
 [Answer key](./misc.md)
 
 
-##### Misconception 2
+### Misconception 2
 `www` is a standard part of a URL and cannot be changed. ```WRONG!```
 
 Beyond the top-level domains, a organization or individual that has registered the domain has much control over the names of the computers in their networks. The name `www` is commonly give to computers that serve pages to the _World Wide Web_. But it is not necessary to name a web-server as `www`. For example, it is OK to have names such as `http://www2.nationalgeographic.com` or even `http://web.nationalgeographic.com`. So there is nothing special about the `www` part of a URL.
+
+
+Here are the possible components that you may see in a URL [Source: [Chrome Guidelines for URL Display](https://chromium.googlesource.com/chromium/src/+/refs/heads/main/docs/security/url_display_guidelines/url_display_guidelines.md)]
+
+![URL Components](./img/urlcomponents.png)
+
+The `Registrable Domain` is the only security sensitive information that a user should care about. All other components of the URL __can be crafted__ by the website providing the content! :scream:
+
 
 [Top](#table-of-contents)
 
@@ -191,7 +200,7 @@ Link #4 is very strange looking. You may examine the page source and still have 
 
 ![trickyurls](img/7-tricky-urls.png)
 
-If you hover over the link in Chrome, much to our surprise it turns out to be `google.com`!!!!
+If you hover over the link in Chrome, much to our surprise it turns out to be `example.com`!!!!
 
 ![trickyurls](img/8-tricky-urls.png)
 
@@ -227,6 +236,8 @@ So the last part of Link #4 is `google.com`
 	```
 
 With these tricks uncovered, the previous two URL reading rules will suffice now to know what the true top-level domains are. Certainly not `wellsfargo.com`.
+
+
 
 ### Link #5
 
@@ -284,13 +295,15 @@ Such attacks are similar to domain-squatting but also referred to as [homophone]
 
 **Right Click** on links #9 and #10 and select `Open Link in New Tab`. Switch to the new tab.
 
-When you visit these links, the destination appears to be wellsfargo.com. Even the URL appears to be wellsfargo.com. But a few things are off. The protocol is different and there are additional characters (`<`, `...` and `,`) that you would not normally see. Now click in the URL bar and navigate to the right of the URL using arrow keys. You will notice a bunch of text. Copy the entire URL (`crtl+a` and then `crtl+c`) and paste it in Notepad.
+When you visit these links, the destination appears to be example.com and wellsfargo.com. On #10 even the URL appears to be wellsfargo.com. But a few things are off. The protocol is different and there are additional characters (`<`, `...` and `,`) that you would not normally see. Now click in the URL bar and navigate to the right of the URL using arrow keys. You will notice a bunch of text. Copy the entire URL (`crtl+a` and then `crtl+c`) and paste it in Notepad.
 
 > ![trickyurls](img/dataURL.png)
 
-This is a [Data URL](https://en.wikipedia.org/wiki/Data_URI_scheme) that allows specifying small files inline within HTML documents. Typically this is used to includes images in HTML document. Turns out that browsers will also render this URL as an HTML page. All the content needed to render the html page is right within the URL itself!
+This is a [Data URL](https://en.wikipedia.org/wiki/Data_URI_scheme) that allows specifying small files inline within HTML documents. Typically this is used to includes images in HTML document. Turns out that browsers will also render this URL as an HTML page. All the content needed to render the html page is right within the URL itself! Try to paste the link in the browser and see what it does.
 
 In this link we have embedded enough spaces between the place holder text and the real content such that a user can be fooled into believing the website is being loaded from the displayed domain name. This URL was generated by scraping all the HTML from wellsfargo.com, including embedded images, and encoding it within the Data URL. We could have just as easily included some malicious javascript in here to steal any username and password entered.
+
+Most recently browsers have taken steps to block these URLs from being loaded when directly clicked. You have to either paste the data URI into the URL bar or open in a new tab for it to be rendered.
 
 ### Link #11
 
@@ -300,48 +313,11 @@ Phishers craft links like #11 using an HTML-based trick. Tool-tips in HTML can b
 
 I hope these examples made you a bit more skeptical of links on a webpage or email. Don't worry the game in the next section is safe 😎
 
-## AntiPhishing Phil Game
-
-Let's play a game to test your URL "Know-How". The game is called AntiPhishing Phil.
-
-> Sometimes the game is slow to load between rounds. If you see a blank square box then be patient and click inside it to move through the game.
-
-http://www.ucl.ac.uk/cert/antiphishing/
-
-Here is a link to the commercial game site.
-Registration is required to play the demo game :-(  
-http://wombatsecurity.com/antiphishingphil
-
-A free training course is available at OIT. This is free to play:  
-https://oit.byuh.edu/help/anti-phishing
 
 [Top](#table-of-contents)
 
 
-# Advanced URL Analysis
-
-### Cybersecurity First Principles
-* __Layering__: Cybersecurity uses multiple layers of defense when protecting information or resources. If one layer is defeated the next layer should still be defending.
-
-* __Information Hiding__: Information hiding is any attempt to prevent people from being able to see information. It can be hiding the content of a letter, or it can be applied to hiding how the letter is delivered. Both ways can prevent people from being able to see the information. This lesson looks at how malicious information can be hidden in URLs or other data fields.
-
-# Introduction
-
-## Lesson goals
-- Obfuscation of URLs and Pages
-- Open Source INTelligence (OSINT) gathering
-
-## Materials required
-- Internet connected Machine
-
-## Prerequisite lessons
-- [URL Analysis Module](./url-analysis.md)
-
-
-## Table of Contents
-
-[Obfuscation of Web Content](#obfuscation-of-web-content)  
-[Obfuscation of URLs using Encoding](#obfuscation-of-urls-using-encoding)      
+     
 [Open Source INTelligence Gathering](#open-source-intelligence-gathering)    
 [Additional Readings](#additional-readings)  
 [Acknowledgements](#special-thanks)  
@@ -359,107 +335,22 @@ It is similar to the page in the [URL Analysis Lesson](../url-analysis.md) in fo
 Spammers use such obfuscation to avoid detection and analysis. Navigate away from such pages or delete emails that have gone to such lengths to conceal their "trickeries".
 
 Just viewing the source files for obfuscated pages provides no useful information. But if we put our minds to it, we can defeat the bad guys. Navigate back to the obfuscated page. Then right click on a blank area and select `Inspect` or `Inspect Element`. In the `Elements` tab unravel the HTML code that is computed by the browser to render a human readable page. Now it should look similar to the phishing page from before:
-> ![trickyurls](../img/inspectelement.png)
+> ![trickyurls](./img/inspectelement.png)
 
 The developer tools built into the browser also help us see right through the obfuscated data.
 
-## Obfuscation of URLs using Encoding
+## Emoji in urls
 
-Examine links on this page: https://robinagandhi.github.io/phishing-demo/encoding.html
-Have you seen links like this before? Examine the page source (right click the blank area and click `view source`).   
+Since URLs allow emoji's, a malicious URL may try to embed a secure lock icon.
 
-Now click on the URLs to reveal their true destinations. How is this working?
+Copy and paste this URL in the browser. The banana emoji will still be there!
 
-Most humanly readable domain names map to IPv4 addresses. IPv4 addresses are 32-bit binary numbers. Typically, they are expressed as 4 sets of decimal numbers from 0-255. For example, `unomaha.edu` maps to the `137.48.1.233` IP address.
+https://example.com/🍌
 
-It just so happens that 32-bit IP addresses can be expressed in Octal, Decimal and Hex formats. Browsers know how to interpret IP addresses in these formats.
+As a security measure, most modern browsers prohibit these 🔒🔏🔑 emoji's by escaping them. Try this URL to observe:
 
-### Links #1-3
+https://example.com/🔒
 
-Links #1-3 are explained below for an IP address that maps to `google.com`
+However, these emoji's still work!
 
-```text
-216.58.194.36 # One of the IP addresses for google.com
-
-Decimal (Base 10) and Hex (Base 16) Encoding
-
-    First, convert to Binary (Base 2)
-
-    216 = 11011000
-    58  = 00111010
-    194 = 11000010
-    36  = 00100100
-
-    Combined Binary: 11011000001110101100001000100100
-
-    Decimal equivalent: 3627729444     -->    http://3627729444/
-    Hex equivalent    : 0xD83AC224     -->    http://0xD83AC224/
-
-Octal Encoding (Base 8)
-
-    Octal equivalent numbers need to be padded with a leading zero.
-
-    216 = 0330
-    58  = 072
-    194 = 0302
-    36  = 044
-
-    Octal equivalent: http://0330.072.0302.044/
-```
-
-> **Security Tip**: Never visit links that have IP addresses or numbers as their web address. These are most likely machines connected to the Internet with no legitimate domain name mapping, which means there is no validation. Anybody can set them up with an Internet connected machine.
-
-### Link #4
-
-URLs embedded in HTML pages can be encoded in Hex or Decimal encodings. Link #4 `href` generation is explained below.
-
-```text
-ASCII Encoding for www.wellsfargo.com
-
-    Hex Encoding (Starts with % sign)
-      www         = %77%77%77
-
-    Decimal Encoding (Starts with &#)
-      wellsfargo  = &#119&#101&#108&#108&#115&#102&#97&#114&#103&#111&#46&#99&#111&#109
-
-    Final URL: http://%77%77%77.&#119&#101&#108&#108&#115&#102&#97&#114&#103&#111&#46&#99&#111&#109
-
-        This forms the href attribute of Link #5.
-
-    ASCII Table: http://www.asciitable.com/index/asciifull.gif
-        # This is a useful resource for ASCII to hex, decimal conversions
-
-        The `HTML` column in the ASCII table explains how obfuscation on this page works. For example, `&#119;` maps to the letter `w`. A browser does this automatically and renders a humanly readable webpage. Dev tools (Inspect Element) should also help.
-
-```
-
-### Link #5
-
-Link #5 is an image map. Different regions of the image are mapped to different URLs. Try hovering your mouse over the image starting from the far right, slowly moving towards the left. Notice the change in links in the status bar. Spammers trick victims by embedding images with a mix of malicious and legitimate links using this technique. For example, by chance, you may hover over an image area with legitimate links when checking the status bar, but then click a different (malicious link) area to visit the linked website.
-
-
-## Additional Readings
-
-* Infographic, Phishing: [How many take the bait?](http://www.getcybersafe.gc.ca/cnt/rsrcs/nfgrphcs/nfgrphcs-2012-10-11-en.aspx)
-* [Reporting Phishing](https://www.consumer.ftc.gov/articles/0003-phishing), Federal Trade Commission
-
-[Top](#table-of-contents)
-
-## Lead Author
-
-- Robin Gandhi
-
-## Special Thanks
-
-* A special thanks to Matt Hale, Aaron Vigal and Cade Wollcot for reviews of this module and thoughtful discussions.
-
-[Top](#table-of-contents)
-
-
-## License
-[Nebraska GenCyber](https://github.com/MLHale/nebraska-gencyber) <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /></a><br /> is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</a>.
-
-Overall content: Copyright (C) 2017-2018  [Dr. Matthew L. Hale](http://faculty.ist.unomaha.edu/mhale/), [Dr. Robin Gandhi](http://faculty.ist.unomaha.edu/rgandhi/), [Dr. Briana B. Morrison](http://www.brianamorrison.net), and [Doug Rausch](http://www.bellevue.edu/about/leadership/faculty/rausch-douglas).
-
-Lesson content: Copyright (C) [Robin Gandhi](http://faculty.ist.unomaha.edu/rgandhi/) 2017-2018.  
-<a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /></a><br /><span xmlns:dct="http://purl.org/dc/terms/" property="dct:title">This lesson</span> is licensed by the author under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</a>.
+https://example.com/

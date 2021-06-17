@@ -27,4 +27,4 @@ Answer:
 Answer:  
 If you answered #2 then you fell prey to a phishing attack! Notice the typo in the domain name for link #2. Spammers often register domain names with common typos for popular domain names. This is called "Typo-squatting".
 
-For #1, ftp:// is a just a different protocol than http. Otherwise, it is a legitimate `microsoft.com` domain resource.
+For #1, ftp:// is a just a different protocol than http. Otherwise, it is a legitimate `microsoft.com` domain resource. This first part of the URL is called the `Scheme` component. 
