@@ -341,13 +341,11 @@ The developer tools built into the browser also help us see right through the ob
 
 ## Emoji in urls
 
-Since URLs allow emoji's, a malicious URL may try to embed a secure lock icon.
-
-Copy and paste this URL in the browser. The banana emoji will still be there!
+Did you know that that emoji's can be part of a URL? Copy and paste this URL in the browser. The banana emoji will still be there!
 
 https://example.com/🍌
 
-As a security measure, most modern browsers prohibit these 🔒🔏🔑 emoji's by escaping them. Try this URL to observe:
+Adding a secure lock icon could trick someone into thinking a URL is safe. As a security measure, most modern browsers prohibit these 🔒🔏🔑 emoji's by escaping them. Try this URL to observe:
 
 https://example.com/🔒
 
