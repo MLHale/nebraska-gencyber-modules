@@ -45,7 +45,7 @@ Another site like Spokeo is [Pipl](https://pipl.com). It used to be free but now
 
 Finally, sites like Facebook, LinkedIn, company websites, organizational charts and employee directories, make it easy to for attackers to learn information about their targets. This can help them craft emails that appear to come from colleagues, friends, and/or family.
 
-The process of gathering information online is called Open Source INTelligence or OSINT. There are many tools online that have been built to gather OSINT. One such tool, called maltego, is very prominent, it even has free version): [https://www.paterva.com/web7/buy/maltego-clients/maltego.php](https://www.paterva.com/web7/buy/maltego-clients/maltego.php)
+The process of gathering information online is called Open Source INTelligence or OSINT. There are many tools online that have been built to gather OSINT. One such tool, called maltego, is very prominent, it even has free version): [https://www.maltego.com](https://www.maltego.com)
 
 > Maltego is an interactive data mining tool that renders directed graphs for link analysis. The tool is used in online investigations for finding relationships between pieces of information from various sources located on the Internet.
 
@@ -53,9 +53,9 @@ The process of gathering information online is called Open Source INTelligence o
 
 This version also integrates with Pipl: [https://www.maltego.com/transform-hub/pipl/](https://www.maltego.com/transform-hub/pipl/)
 
-Open source information is not only about people but also IoT devices. Shodan is a search engine for things connected to the internet, where you can search for specific terms like the brand of a camera and the software version number. E.g. [https://www.shodan.io/search?query=linux+upnp+avtech](https://www.shodan.io/search?query=linux+upnp+avtech) searches for linux based IP surveillance technologies developed by [Avtech](https://avtech.com/Products/Network_Cameras/).
+Attackers can also gather information about people and their password preferences from prior breaches. A `breach` is an attack that has penetrated a network or system of a company. You may have heard of breaches like the __Target data breach__ or the __Equifax data breach__. These breaches exposed a lot of information about a lot of people. Attackers use prior breach information to focus their efforts and to zone in on targets for further exploitation. Security researchers have tried to help protect people online by compiling lists of known breaches to alert people that their information may have been exposed in prior attacks. You can find out if your information is included in a prior breach by visiting a website called [https://haveibeenpwned.com](https://haveibeenpwned.com). It helps you identify if you or your family's information has been exposed in a data breach. Try searching your own email or someone in your family. It even supports a [password lookup](https://haveibeenpwned.com/Passwords).
 
-Often, attackers start by gathering information about people from prior breaches. A `breach` is an attack that has penetrated a network or system of a company. You may have heard of breaches like the __target data breach__ or the __sony data breach__. These breaches exposed a lot of information about a lot of people. Attackers use prior breach information to focus their efforts and to zone in on targets for further exploitation. Security researchers have tried to help protect people online by compiling lists of known breaches to alert people that their information may have been exposed in prior attacks. You can find out if your information is included in a prior breach by visiting a website called [https://haveibeenpwned.com](https://haveibeenpwned.com). It helps you identify if you or your family's information has been exposed in a data breach. Try searching your own email or someone in your family.
+Open source information is not only about people but also IoT devices. [Shodan](https://www.shodan.io) is a search engine for things connected to the internet, where you can search for specific terms like the brand of a camera or the software version number running on a IoT device. E.g. [https://www.shodan.io/search?query=linux+upnp+avtech](https://www.shodan.io/search?query=linux+upnp+avtech) searches for linux based IP surveillance technologies developed by [Avtech](https://avtech.com/Products/Network_Cameras/). You can even find systems that control critical infrastructure like power and water [https://www.shodan.io/search?query=atvise](https://www.shodan.io/search?query=atvise). Scary!
 
 ### Geolocation
 
@@ -75,11 +75,9 @@ Here is an image of some of our colleagues found through this website: [https://
 
 Let's upload the image on to an EXIF (Exchangeable image file format) processor ([https://tool.geoimgr.com](https://tool.geoimgr.com)). Do you see any problems here?
 
-To spread awareness of such issues with social media, an educational website called __teachingprivacy.org__ has been developed.
+To spread awareness of such issues with social media, an educational website called [teachingprivacy.org](teachingprivacy.org) has a list of `Ten Principles for Online Privacy` along with several modules for [classroom activities](https://teachingprivacy.org/teachers-portal/) (Beware of the ".com" version of this site. This is called [`domain-squatting`](https://en.wikipedia.org/wiki/Cybersquatting))
 
-[https://teachingprivacy.org/teachers-portal/](https://teachingprivacy.org/teachers-portal/) (Beware of the ".com" version of this site. This is called [`domain-squatting`](https://en.wikipedia.org/wiki/Cybersquatting))
-
-It is often prudent to turn off geotagging in twitter posts. For instance, if you have a twitter account, there is a setting (Settings --> Security and Privacy) to delete any previously tagged locations.
+It is often prudent to turn off geotagging in twitter posts. For instance, if you have a twitter account, there is a setting (More --> Settings and Privacy --> Privacy and Safety --> Location Information) to delete any previously tagged locations.
 
 Generating analytics about social media posts is also real easy. The following website provided detailed breakdown of tweets. All you need is a twitter handle.
 
@@ -119,7 +117,7 @@ Finally, the [OSINT Framework](https://osintframework.com) has a comprehensive l
 ## License
 [Nebraska GenCyber](https://www.nebraskagencyber.com) <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /></a><br /> is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</a>.
 
-Overall content: Copyright (C) 2017-2019  [Dr. Matthew L. Hale](http://faculty.ist.unomaha.edu/mhale/), [Dr. Robin Gandhi](http://faculty.ist.unomaha.edu/rgandhi/), and [Dr. Briana B. Morrison](http://www.brianamorrison.net).
+Overall content: Copyright (C) 2017-2021  [Dr. Matthew L. Hale](http://faculty.ist.unomaha.edu/mhale/), [Dr. Robin Gandhi](http://faculty.ist.unomaha.edu/rgandhi/), and [Dr. Briana B. Morrison](http://www.brianamorrison.net).
 
-Lesson content: Copyright (C) [Robin Gandhi](http://faculty.ist.unomaha.edu/rgandhi/) 2017-2019.  
+Lesson content: Copyright (C) [Robin Gandhi](http://faculty.ist.unomaha.edu/rgandhi/) 2017-2021.  
 <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /></a><br /><span xmlns:dct="http://purl.org/dc/terms/" property="dct:title">This lesson</span> is licensed by the author under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</a>.
