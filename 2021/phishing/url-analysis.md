@@ -318,6 +318,126 @@ https://oit.byuh.edu/help/anti-phishing
 [Top](#table-of-contents)
 
 
+# Advanced URL Analysis
+
+### Cybersecurity First Principles
+* __Layering__: Cybersecurity uses multiple layers of defense when protecting information or resources. If one layer is defeated the next layer should still be defending.
+
+* __Information Hiding__: Information hiding is any attempt to prevent people from being able to see information. It can be hiding the content of a letter, or it can be applied to hiding how the letter is delivered. Both ways can prevent people from being able to see the information. This lesson looks at how malicious information can be hidden in URLs or other data fields.
+
+# Introduction
+
+## Lesson goals
+- Obfuscation of URLs and Pages
+- Open Source INTelligence (OSINT) gathering
+
+## Materials required
+- Internet connected Machine
+
+## Prerequisite lessons
+- [URL Analysis Module](./url-analysis.md)
+
+
+## Table of Contents
+
+[Obfuscation of Web Content](#obfuscation-of-web-content)  
+[Obfuscation of URLs using Encoding](#obfuscation-of-urls-using-encoding)      
+[Open Source INTelligence Gathering](#open-source-intelligence-gathering)    
+[Additional Readings](#additional-readings)  
+[Acknowledgements](#special-thanks)  
+
+## Obfuscation of Web Content
+
+Obfuscation means the act of making something obscure, unclear, or unintelligible.
+In this sense, it means to make code that is intentionally hard to read, usually to prevent the code of an atttack from being easily read.
+
+Examine this link:
+https://robinagandhi.github.io/phishing-demo/obfuscated.html
+
+It is similar to the page in the [URL Analysis Lesson](../url-analysis.md) in form and function but now examine its page source. It has been obfuscated using an external javascript file. Examine that file as well: https://robinagandhi.github.io/phishing-demo/myscr150731.js
+
+Spammers use such obfuscation to avoid detection and analysis. Navigate away from such pages or delete emails that have gone to such lengths to conceal their "trickeries".
+
+Just viewing the source files for obfuscated pages provides no useful information. But if we put our minds to it, we can defeat the bad guys. Navigate back to the obfuscated page. Then right click on a blank area and select `Inspect` or `Inspect Element`. In the `Elements` tab unravel the HTML code that is computed by the browser to render a human readable page. Now it should look similar to the phishing page from before:
+> ![trickyurls](../img/inspectelement.png)
+
+The developer tools built into the browser also help us see right through the obfuscated data.
+
+## Obfuscation of URLs using Encoding
+
+Examine links on this page: https://robinagandhi.github.io/phishing-demo/encoding.html
+Have you seen links like this before? Examine the page source (right click the blank area and click `view source`).   
+
+Now click on the URLs to reveal their true destinations. How is this working?
+
+Most humanly readable domain names map to IPv4 addresses. IPv4 addresses are 32-bit binary numbers. Typically, they are expressed as 4 sets of decimal numbers from 0-255. For example, `unomaha.edu` maps to the `137.48.1.233` IP address.
+
+It just so happens that 32-bit IP addresses can be expressed in Octal, Decimal and Hex formats. Browsers know how to interpret IP addresses in these formats.
+
+### Links #1-3
+
+Links #1-3 are explained below for an IP address that maps to `google.com`
+
+```text
+216.58.194.36 # One of the IP addresses for google.com
+
+Decimal (Base 10) and Hex (Base 16) Encoding
+
+    First, convert to Binary (Base 2)
+
+    216 = 11011000
+    58  = 00111010
+    194 = 11000010
+    36  = 00100100
+
+    Combined Binary: 11011000001110101100001000100100
+
+    Decimal equivalent: 3627729444     -->    http://3627729444/
+    Hex equivalent    : 0xD83AC224     -->    http://0xD83AC224/
+
+Octal Encoding (Base 8)
+
+    Octal equivalent numbers need to be padded with a leading zero.
+
+    216 = 0330
+    58  = 072
+    194 = 0302
+    36  = 044
+
+    Octal equivalent: http://0330.072.0302.044/
+```
+
+> **Security Tip**: Never visit links that have IP addresses or numbers as their web address. These are most likely machines connected to the Internet with no legitimate domain name mapping, which means there is no validation. Anybody can set them up with an Internet connected machine.
+
+### Link #4
+
+URLs embedded in HTML pages can be encoded in Hex or Decimal encodings. Link #4 `href` generation is explained below.
+
+```text
+ASCII Encoding for www.wellsfargo.com
+
+    Hex Encoding (Starts with % sign)
+      www         = %77%77%77
+
+    Decimal Encoding (Starts with &#)
+      wellsfargo  = &#119&#101&#108&#108&#115&#102&#97&#114&#103&#111&#46&#99&#111&#109
+
+    Final URL: http://%77%77%77.&#119&#101&#108&#108&#115&#102&#97&#114&#103&#111&#46&#99&#111&#109
+
+        This forms the href attribute of Link #5.
+
+    ASCII Table: http://www.asciitable.com/index/asciifull.gif
+        # This is a useful resource for ASCII to hex, decimal conversions
+
+        The `HTML` column in the ASCII table explains how obfuscation on this page works. For example, `&#119;` maps to the letter `w`. A browser does this automatically and renders a humanly readable webpage. Dev tools (Inspect Element) should also help.
+
+```
+
+### Link #5
+
+Link #5 is an image map. Different regions of the image are mapped to different URLs. Try hovering your mouse over the image starting from the far right, slowly moving towards the left. Notice the change in links in the status bar. Spammers trick victims by embedding images with a mix of malicious and legitimate links using this technique. For example, by chance, you may hover over an image area with legitimate links when checking the status bar, but then click a different (malicious link) area to visit the linked website.
+
+
 ## Additional Readings
 
 * Infographic, Phishing: [How many take the bait?](http://www.getcybersafe.gc.ca/cnt/rsrcs/nfgrphcs/nfgrphcs-2012-10-11-en.aspx)
