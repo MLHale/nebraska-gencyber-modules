@@ -10,7 +10,7 @@ This module will give you an in-depth understanding of phishing.
 Educators
 
 ### Time Required
-TBD
+1-2 hrs
 
 ### First principles
 - [ ] Domain Separation
@@ -31,9 +31,6 @@ Add an x in each of the above that apply.
 1. Students will be able to analyze URLs
 2. Students will be able to analyze Emails
 3. Students will be able to understand obfuscation of URLs and Pages.
-4. Students will be able to understand clickjacking.
-5. Students will be able to understand Open Source INTelligence (OSINT) gathering.
-
 ### Materials list
 
 * Internet connected Machine
