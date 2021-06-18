@@ -176,7 +176,26 @@ a3 01 4b 46 7f ff 0d 10 ce t=26187
 
 The second line `t=26187` is the current temperature value. If you want to convert it to degree Celsius, you can divide by 1000, that is, the current temperature is `26187/1000=26.187` degrees Celsius.
 
-#### Output
+##### Step 5: Edit the code
+Change directory and edit the program.
+> Here the program is named 26_ds18b20 (the lesson number, followed by the name of the component). We need to edit the file to replace the serial number of the temperature sensor in the code with the serial number you found before. Carefully type your serial number in after typing the following:
+
+```
+cd /home/pi/SunFounder_SensorKit_for_RPi2/Python/
+nano 26_ds18b20.py
+```
+
+##### Step 6: Run the temperature demo program
+```
+sudo python3 26_ds18b20.py
+```
+Now, you should see the current temperature value displayed on the screen.
+
+![temperature config](./img/temperature-configuration.png)
+
+> This is the end of lesson 26 in your booklet, I've included the expected output below.
+
+##### Output
 When you are done, you should be able to run your program and begin getting temperature output like this:
 
 ![temperature output](./img/temperature.png)
