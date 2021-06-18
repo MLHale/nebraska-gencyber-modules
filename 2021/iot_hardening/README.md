@@ -288,7 +288,7 @@ Copy the default configuration template to a file named `jail.local` to configur
 sudo cp /etc/fail2ban/jail.conf /etc/fail2ban/jail.local
 ```
 
-Now let's edit the `jail.local` configuration file to check for SSH abnormalities.
+Now let's edit the `jail.local` configuration file to check for SSH anomalies.
 
 ```
 sudo nano /etc/fail2ban/jail.local
@@ -323,7 +323,7 @@ Restart the fail2ban service to apply the configuration changes.
 sudo systemctl restart fail2ban
 ```
 
-Examine the number of active jails using this commands
+Examine the number of active jails using this command
 
 ```
 sudo fail2ban-client status
