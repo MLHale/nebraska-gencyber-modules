@@ -3,10 +3,13 @@ layout: page
 title: IoT Hardening
 ---
 
-Firewalls are often the first line of defense for an enterprise or home network. In this unit, we will understand the fundamentals of firewalls, write firewall rules that configure its behavior and then test if the firewall performs as expected.
+IoT devices often seem helpless against the villains of the Internet. This might seem in part due to the resource constraints of a small IoT device or in part due to neglect (out of sight, out of mind). But it does not have to be that way. There a few simple things (five in this lesson) that can go a long way to make your IoT devices a bit more harder to discover and attack.  
 
 ### Cybersecurity First Principles
-* __Minimization__: Minimization refers to having the least functionality necessary in a program or device. The goal of minimization is to simplify and decrease the number of ways that software can be exploited. This can include **turning off ports that are not needed**, reducing the amount of code running on a machine, and/or turning off unneeded features in an application. This lesson focuses specifically on turning off ports and limiting network connections that aren't required for correct operation.
+
+* __Domain Separation__: Domain separation allows for enforcement of rules governing the entry and use of resources in the domains by entities outside the domain.
+
+* __Minimization__: Minimization refers to having the least functionality necessary in a program or device. The goal of minimization is to simplify and decrease the number of ways that software can be exploited. This can include **turning off ports that are not needed**, reducing the amount of code running on a machine, and/or turning off unneeded features in an application. A part of this lesson specifically focuses specifically on turning off ports and limiting network connections that aren't required for correct operation.
 
 * __Abstraction__: Something complicated can be thought of and represented more simply using Abstraction. Network packets are abstractions that only provide necessary details to network operators, while reducing the complexity to a set of essential characteristics.
 
@@ -14,62 +17,157 @@ Firewalls are often the first line of defense for an enterprise or home network.
 
 * __Least Privilege__: One of the ways to protect information is by limiting what people can see and do with your information and resources. The principle of least privilege says to allow the minimum number of privileges necessary to accomplish the task.
 
+* __Information Hiding__: Information hiding is any attempt to prevent people from being able to see information. It can be hiding the content of a letter, or it can be applied to hiding how the letter is delivered. Both ways can prevent people from being able to see the information.
+
 ### Table of Contents  
-[Overview](#overview)  
-[Firewalls as a Collection of Valves](#firewall-as-a-collection-of-valves)  
-[Firewall Rules](#firewall-rules)  
-[Windows Firewall](#windows-firewall)   
+
+[Hardening Overview](#hardening-overview)  
+[Software Updates](#software-updates)  
+[Change install-time Defaults](#change-install-time-defaults)  
+[Review running services](#review-running-services)  
+[Configure and enable a firewall](#configure-and-enable-a-firewall)  
+[Setup anomaly monitoring](#setup-anomaly-monitoring)  
 [Additional Readings](#additional-readings)  
-[Teacher Developed Modules](#teacher-developed-modules)  
 [Acknowledgements](#special-thanks)  
 
 
-## Overview
+## Hardening Overview
 
-The name `firewall` is inspired from its physical manifestation in construction which refers to walls that are designed to stop a fire from spreading.
+To attack a computer, an attacker needs access to weaknesses that can be exploited. Larger the attack surface, larger the chance the attacker can find an exploit to get in.
 
-> ![Firewall in a substation](https://upload.wikimedia.org/wikipedia/commons/3/3c/Firewall_Electrical_Substation.jpg)
+What can a user do to reduce exploitable weaknesses and the attack surface?
 
-While these firewalls are "cool", we are interested in a different kind of firewall. Namely, the ones that protect internal networks from external networks. These kinds of firewalls allow us to control the flow of information between networks. Firewalls __minimize__ the number of ways that internal networks and computers on them can be exploited. They also encourage __least functionality__ by turning off ports that are not needed. Firewalls can also drop network traffic that does not conform to expected patterns (such as malicious requests to an application server).
+ __Hardening__ refers to the process of _minimizing_ the system resources exposed to the Internet and _layering_ the exposed parts with multiple defenses. In some cases it also involves _hiding information_ that can give additional clues to an attacker about the system's inner workings. Did you notice how I snuck in the first principles in to that definition?
+
+ For IoT systems, I recommend five basic hardening steps that go a long way, and most importantly don't get in the way of normal operation (mostly).
+
+ 1. Software updates!
+ 1. Change install-time defaults
+ 1. Review running services
+ 1. Configure and enable a firewall
+ 1. Setup anomaly monitoring
+
+While we will examine these hardening steps in the context of IoT devices, they also apply more generally to most IT systems
+
+## Software Updates
+
+No one likes to do software updates. It might even seem risky to update a system only to find out that it won't work anymore!
+
+Before performing a software update, make sure that the update is downloaded from verified software repositories or app stores.
+
+On a Raspberry Pi use the following command to update your software sources. Before you run this command, make sure you are connected to the Internet.
+
+```
+sudo apt-get update
+```
+`apt-get` is a tool to automatically update your Debian-based Linux machine and get and install debian packages/programs [[1]](https://wiki.debian.org/apt-get).
+
+Next, we run a full-upgrade of the OS. Adding -y to the end of apt-get commands instructs the program to automatically answer yes to any questions rather than waiting for you to type Y or N. A full-upgrade may remove installed packages if that is needed to upgrade the whole system. This option may affect backward compatibility, but generally a better option.
+
+```
+sudo apt-get full-upgrade -y
+```
+The previous command may download a lot of software installers. To save storage space run the `clean` command.
+
+```
+sudo apt-get clean
+```
+
+If you are worried about storage space, here is a quick command to examine available storage.
+
+```
+sudo df -h
+```
+
+After a successful upgrade, it is best to restart the system for the changes to take effect. Do NOT skip this step.
+
+```
+sudo reboot
+```
+## Change install-time Defaults
+
+Default usernames and passwords for IoT devices are usually a quick [Google search away](https://datarecovery.com/rd/default-passwords/). For Raspberry Pi's the default user is `pi`, and the password is `raspberry`, which could give someone root access!
+
+For the GenCyber camp, you likely set it the password to `NebraskaGencyber`. This password is easily guessed, so now is your chance to update it to something that only you know.
+
+Use the `raspi-config` command line utility to do so.
+
+```
+sudo raspi-config
+```
+
+Select `Option 1: System Option` by pressing `enter` and then use arrow keys to select `Option S3: Password`. Follow the instructions to change the password. You can also use the `passwd` command on any Linux to do the same thing.  
+
+A default username like `pi`, makes it very easy for an attacker to write a script to brute-force this account's password. If the default username was changed or removed, such a script would simply fail. Please note that with the current Raspberry Pi OS distribution, there are some aspects that require the pi user to be present. So I recommend not to change the `pi` username. However, we can make `sudo` require a password!
+
+Adding `sudo` in front of a command temporarily gives you superuser privilege. With great power comes great responsibility. But by default, `sudo` does not need a password! Let's change this. To force sudo to require a password, enter:
+
+```
+sudo nano /etc/sudoers.d/010_pi-nopasswd
+```
+and change the pi entry to:
+```
+pi ALL=(ALL) PASSWD: ALL
+```
+Then save the file: `Control + X`, followed by `Enter`. Once the file is saved, any subsequent use of `sudo` will require a password to be supplied. Try this command to test it out:
+
+```
+sudo su - pi
+```
+
+At this point, we changed the default password, and made it required every-time superuser privileges are required. This strategy is a good example of the _layering_ first principle.
+
+
+## Review running services
+
+Keeping an inventory of network services running on your system is important. Let's examine the network services currently running on the Pi that utilize the TCP network protocol.
+
+```
+sudo lsof -i -n -P | grep TCP | more
+```
+
+If you enabled SSH and/or VNC you should observe these services running on specific TCP ports. Make a note of these services and ports. We will need them later for firewall configuration.
+
+To see the effect of adding a new service, let's add a webserver. Webservers run on port 80 by default.
+
+We will install the Apache HTTP webserver.
+
+```
+sudo apt install apache2
+sudo systemctl start apache2
+```
+
+Now, re-issue the following command.
+
+```
+sudo lsof -i -n -P | grep TCP | more
+```
+
+You should see `apache2` processes running on port 80.
+
+
+## Configure and enable a firewall
+
+With an inventory of running network services, we are now ready to configure and enable a firewall.
+
+The name `firewall` is inspired from its physical manifestation in construction which refers to walls that are designed to stop a fire from spreading. While these firewalls are "cool", we are interested in a different kind of firewall. Namely, the ones that protect internal networks from external networks. These kinds of firewalls allow us to control the flow of information between networks. Firewalls __minimize__ the number of ways that internal networks and computers on them can be exploited. They also encourage __least functionality__ by turning off ports that are not needed. Firewalls can also drop network traffic that does not conform to expected patterns (such as malicious requests to an application server).
 
 > ![network firewalls](./img/networkfirewall.png)
 
 
-Firewalls aren't just for networks. Each computer in a network can have its own `personal firewall`. All popular operating systems now come with a firewall installed. For Windows Server and Desktop installations we will focus on the built-in `Windows Firewall with Advanced Security` application. This application can be configured with a graphical user interface or the command line interface using `netsh` or Powershell `NetSecurity` modules. These options provide a lot of flexibility and control over the configuration of the firewall for personal and enterprise use.
+Firewalls aren't just for networks. Each computer in a network can have its own `personal firewall`. Linux has a firewall called `iptables` built right into the OS kernel. But it is a bit hard to use. So we will install a frontend to `iptables` called the Uncomplicated Firewall or `ufw`. Let's install it.
 
-> ![Windows firewall](./img/windowsfirewall.png)
+```
+sudo apt install ufw
+```
 
-When two machines communicate (such as a client talking to a server), communication spans many different __layers__. Each of these layers is progressively lower level as you move downward. These layers provide abstractions that show only the necessary details, while reducing the complexity to a set of essential characteristics. In general there are 7 layers:
-
-- `Application` - The highest level layer where application data is handled (HTTP/FTP/DHCP/SSH/SSL, etc)
-- `Presentation` - often the same as the application level, sometimes acts as a translation between application and session
-- `Session` - The layer that is used to form sessions between applications (often issues remote procedure calls (RPCs))
-- `Transport` - One of the two layers that are foundational to the modern internet (TCP / UDP), this layer serves to transport packets from one host to another.
-- `Network` - The second of the foundation layers for the modern internet (IP, IPv4, IPv6, IPSec, etc). This layer serves to transport packets between routers (often referred to as __packet forwarding__).
-- `Data Link` - The biggest example of the data link layer is `ethernet`. It provides a protocol for exchanging data over a local network.
-- and `Physical` - This layer is nothing but raw bits that underly the interpretation of those bits at higher levels.
-
-> ![network layers](https://javirodz.files.wordpress.com/2013/07/21acd-osi.gif)
-
-### Question
-
-At which [OSI layer](https://support.microsoft.com/en-us/kb/103884) does it make the most sense for a firewall to filter the information flowing between two different networks?
-
-- [ ] Physical layer  
-- [ ] Data link layer  
-- [ ] Network layer and above  
-
-Discussion:  
-The headers on ethernet frames at the `Data link` layer and below are not useful for routing across networks. Packet filtering Firewalls rules are authored using routing information starting at the `Network` (also called the IP layer in the TCP/IP implementation) layer and above, all the way to the `Application` layer. As a result IP layer firewalls are the simplest and most widely used.
-
-
-[Top](#table-of-contents)
+Now before using such a powerful tool, it helps to understand how it works.
 
 ### Firewall as a Collection of Valves
 
-A packet filtering Firewall can be understood as a collection of valves  
+A network packet filtering Firewall can be understood as a collection of valves  
 
-* Each valve/port corresponds to single service at the application level (e.g. HTTP, SSH, HTTPS, SMTP)
+* Each valve/port corresponds to single service at the application level (e.g. HTTP, SSH, VNC, etc,.)
 * Each valve can  
   - Permit traffic in one or both directions  
   - Deny traffic  
@@ -78,154 +176,244 @@ A packet filtering Firewall can be understood as a collection of valves
 
 Here are three basic scenarios to keep in mind.  
 
-First, lets consider **Ports 1 and 4**. These ports are open. Which means they permit packets from internal and external sources. So in the case of the TCP protocol, which forms explicit connections or circuits before transmitting data via a handshake mechanism, such connections can be externally or internally initiated.
+First, lets consider **Ports 1 and 4**. These ports are open. Which means they permit packets from internal and external sources.
 
 In the case of **Port 2**, it allows unrestricted flow of information if the connection is initiated internally. However, it blocks all external requests to initiate an information flow. That is, it permits packets from external sources only if they correspond to a `connection` initiated by an internal source. The firewall will not permit connection requests from external sources. This restriction is useful when an internal web client initiates a web browsing request, then the firewall will allow the corresponding incoming response from an external webserver to pass through the firewall. Any connection initiated externally will not be allowed.
 
-Finally, **Port 3** is closed. Which means that it denies all traffic. A closed port may just drop the packets or send back an RST or "Reset" packet. From a security and resource consumption standpoint, it is always better to just drop the packet. Upon denial of access, no additional or useful information should be communicated back.
+Finally, **Port 3** is closed. Which means that it denies all traffic.
 
-[Top](#table-of-contents)
+### Firewall Rules
 
-## Firewall Rules
+Always start firewall configuration with a `whitelisting` philosophy, where you **Deny by default** and allow only specific information flows. This means, start the firewall configuration by dropping all packets by default. Then add rules to `allow` specific traffic patterns as required by application needs.
 
-Firewalls are configured using simple `if then` rules. In a packet filtering firewall, a rule says: `IF source IP, destination IP, protocol, and local ports and remote ports match a pattern THEN take this action`. Since there are many rules involved, the order of the rules matters. **A LOT!**
+As it turns out, for usability reasons, the default `iptables` firewall in Linux allows all incoming and outgoing traffic. See for yourself:
 
-Rules are evaluated **in order**, starting with the first one at the top until a first match is discovered. If your top rule is very generic, i.e. matches almost every packet, then **none of the later specific rules will ever be evaluated**. So it is best to start with rules that are the `most restrictive` (i.e rules that focus on to specific services and have a very small chance of interfering with other rules). After ordering by restrictiveness it is then best to order rules according to `how well they match the majority of your network traffic`. This minimizes the number of checks required to find a matching rule. If `block` and `allow` rules do not match, the default policy of the firewall is applied.
+```
+sudo iptables -nL
+```
 
-Always start firewall configuration with a `whitelisting` philosophy, where you **Deny by default** and allow only specific information flows. This means, start the firewall configuration by dropping all packets by default. Then add rules to `allow` specific traffic patterns (incoming, outbound, or forwarding) as required by application needs.
+Since we are using the `ufw` firewall, let's configure it to deny all incoming traffic and allow all outgoing traffic by default.
+```
+sudo ufw default deny incoming
+sudo ufw default allow outgoing
+```
 
-Let's look at an example for exposing a web service over HTTP.
+Now we add rules to `allow` specific ports and protocols as required. Since most end-users don't know much about ports and protocols, we first list the services that `ufw` can mediate access to on our machine.
 
-| Rule#  | Direction     | Source        | Destination   | Local Port   | Remote Port   | Action   |
-| ------ |:-------------:|:-------------:| :------------:|:------------:|:-------------:|:--------:|
-| 1      | inbound       | any           | web server    | http (80)    | any           | ```accept```   |
-| 2      | outbound      | web server    |   any         | http (80)    | any           | ```accept```   |
-| 3      | any           | any           |   any         | any          | any           | ```reject```   |
+```
+sudo ufw app list
+```
 
-**Rule 1** permits externally initiated requests (Direction: inbound) to a webserver behind the firewall. So the source is ```any```, since we cannot anticipate a specific IP address at the time of writing the rule. The destination is the IP address of the webserver and the Local Port specifies the port number where the service is typically hosted. That would be port ```80``` for a web server. The request may originate from any Remote Port. If these conditions match an incoming packet then the action is ```accept```(allow packet to come in).
+Investigate a service name further using the `ufw app info` command. This command describes the app and the port that it uses.
+```
+sudo ufw app info SSH
+sudo ufw app info VNC
+sudo ufw app info CUPS
+sudo ufw app info WWW
+```
+We now know the ports for several services that were noted perviously in our review: SSH (port 22), VNC (port 5900), CUPS (port 631) and WWW (port 80).
 
-**Rule 2** permits internal requests (Direction: outbound) out to the Internet. So the source is any IP address of the ```web server``` and the Destination is  ```any```. The Local Port is ```80``` (originating port) and Remote Port is ```any```. If a packet matches these conditions then the action is ```accept``` (allow packet to go out).
+Allowing these services through the firewall is as simple as this:
 
-**Rule 3** denies all traffic (in ```any``` direction). So all match conditions are specified as ```any``` and the action is ```reject```. This is ```Default Deny``` behavior.
+```
+sudo ufw allow SSH
+sudo ufw allow VNC
+sudo ufw allow CUPS
+sudo ufw allow WWW
+```
 
-### Question
+Since our firewall is not enabled yet, we use the following command to see if the rules have been successfully added.
 
-What would happen if we re-ordered these rules? Specifically, if Rule 3 was exchanged with Rule 1.
+```
+sudo ufw show added
+```
 
-Discussion:
-* Inbound and outbound rules are typically maintained in separate lists. We will see this shortly. Rule 3 is typically implemented as a ```Default Policy``` in Inbound and Outbound rule lists. It applies if none of the specified rules match.
+If everything looks right, we can enable the firewall.
 
-[Top](#table-of-contents)
+```
+sudo ufw enable
+```
 
+You will notice that this command not only enables the firewall, but also enables the firewall on system startup.
 
-## Interactive Firewall Game
+Examine the status of the active firewall using this command:
 
-Let's play a game that helps us understand firewall rules. These rules are the basic building blocks of a fundamental packet filtering mechanism.
-
-[Click here to play the Game](https://groups.inf.ed.ac.uk/tulips/projects/1617/PermissionImpossible/)
-
-## Windows Firewall
-
-As mentioned before, Windows has a built-in firewall. Depending on the profile (type) of Network your computer is connected to, the firewall can be configured to have a different behavior. Your home network should be assigned the ```Private``` profile, while coffee-shop and airport networks are best assigned to the ```Public``` profile. Enterprise computers are typically part of a ```Domain``` in an enterprise network. For this option, the ```Domain``` profile is used. When you bring up the firewall, you will see these profiles listed. You will also see the default policy for inbound and outbound network connections associated with each profile.
-
-> ![Windows firewall](./img/network-profiles.png)
-
-### Observations:  
-
-* The firewall is ON
-* Inbound connections are being blocked by default. Allowed connections have to be whitelisted.
-* Outbound connections are being allowed by default!!!    
-Which means that unless you block a connection, it is allowed. This is not a secure setting. Once malware is installed on your machine (quite plausible with phishing), it can easily call out to a remote server and exfiltrate data. This poor [design choice](https://docs.microsoft.com/en-us/windows/access-protection/windows-firewall/create-an-outbound-port-rule) is perhaps motivated by a trade-off between usability and security.
-
-The defaults for Outbound connections go against the fundamental security principle of ```Default Deny``` and ```Whitelisting``` allowed connections. Let's go ahead and make it right.
-
-> Be ready for many internet connected programs to stop working after this change!
-
-Click on Firewall Properties to view the defaults for all profiles
-
-> ![Windows firewall](./img/firewall-defaults.png)
-
-
-Let's change the default behavior for Outbound connections to ```Block```.
-
-> ![Windows firewall](./img/block-outbound.png)
-
-Repeat the same for Private and Public profiles (tabs). Then hit ```Apply``` to save these settings.
-
-By default, all rules apply to all network interfaces for both IPv4 and IPv6 protocols. The network interfaces protected by Windows Firewall can be changed clicking on the ```Customize``` button next to ```Protected network connections```
-
-> ![Windows firewall](./img/network-connections.png)
-
-We see that all network interfaces are selected. Observe that DockerNAT is also covered.  
-Hit ```OK``` to exit.  
-Hit ```OK``` again to exit the Properties dialog box.  
-
-Now the firewall status page should look like this:
-
-> ![Windows firewall](./img/default-deny.png)
-
-Let's test with Chrome. Open the Chrome browser and see if you can navigate to any website.
-
-The web request fails. Why?
-
-> The request can not pass through the firewall (outgoing direction) to reach web servers
-
-So we need to allow Chrome program through our firewall in the Outbound direction.
-We want to be very specific to the Program, Ports, and Protocol in our Rule (Cybersecurity First principle: Minimization).
-
-Let's start to author a new Outbound rule. Select ```Custom``` rule to provide the most flexibility. Click ```Next```.
-
-> ![Windows firewall](./img/outbound-rule.png)
-
-Next, we locate the program that we want to allow through the firewall in the outbound direction. Click the browse button and locate the Chrome executable here: `%ProgramFiles%\Google\Chrome\Application\chrome.exe`
-
-Click ```Next```. That brings us to ```Protocols and Ports```.   
-We want Chrome to be able to contact web servers on HTTP (Port ```80```) and HTTPS (Port ```443```) services using the ```TCP``` protocol.    
-So adjust the settings as shown:
-
-> ![Windows firewall](./img/outbound-ports.png)
-
-Click ```Next```. We will not limit the connection to specific IP addresses, so we will leave ```Scope``` as is.   
-Click ```Next``` again.
-
-Now for ```Action```. Select ```Allow the connection``` since we are whitelisting this application.
-
-> ![Windows firewall](./img/outbound-action.png)
-
-Next, for ```Profile``` select all profiles so that the rule applies to all network types.  
-Finally, provide the rule a Name and Description to identify it later.
-
-Click ```Finish```. The rule is now active and should be listed in the Outbound rules listing.
-
-Now use similar steps as above to add a rule for the same program (Chrome), but allowing protocol ```UDP``` for remote port ```53```. This allows DNS requests to go through. DNS helps with domain name discovery.
-
-Once the UDP rule is added, we are ready to try accessing a website again.
-
-It should work this time. Call the instructor to troubleshoot if are still not able to browse to a website.
-
-If you would like to practice further, [firewall configuration with Docker for Windows is available here.](./advanced.md)
-
-## Test your blockage, err … knowledge!
+```
+sudo ufw status
+```
+You will notice that the firewall protects both ipv4 and ipv6 interfaces. Very useful!
 
 
-[Firewall Quiz](https://unomaha.az1.qualtrics.com/jfe/form/SV_2nx7ci6Tm2NE7Jz)
+`ufw` also supports connection rate limiting, which is useful for protecting against brute-force login attacks. When a limit rule is used, ufw will normally allow the connection but will deny connections if an IP address attempts to initiate 6 or more connections within 30 seconds. See [http://www.debian-administration.org/articles/187](http://www.debian-administration.org/articles/187) for details. We can enable rate limiting for SSH and VNC as follows:
+```
+sudo ufw limit SSH
+sudo ufw limit VNC
+```
 
-That's it for Firewalls in this Unit. Happy Surfing.
+Let's test if the firewall is really doing it's job. Visit the ip address of your Rasperry Pi in a browser on a different machine on the same network. You should see the default Apache webserver page.
 
-> Firewalls are an essential component of "Defense-in-Depth" strategy. It can certainly slow down an attacker. However, firewalls cannot keep a determined adversary out. There are many ways in which firewalls can be abused and easily bypassed. Such attacks need to be constantly monitored using Intrusion Detection Systems (IDS) and Network Monitoring solutions. The final line of defense is applications built using secure coding practices and proper encryption implementations. This is an example of `Layering`.
+Now let's delete the `ufw` rule that allows the Apache webserver (WWW app) to respond to incoming requests on port 80.
+
+```
+sudo ufw delete allow WWW
+```
+Now the webserver on the Raspberry Pi should be inaccessible to other machines on the network machines. You can restore connectivity by adding the rule again.
+
+```
+sudo ufw allow WWW
+```
+Explore other firewall operations using the help command. Be careful not to lock yourself out if you are remotely connected to the Pi.
+
+```
+sudo ufw help
+```
+
+`iptables` and `ufw` are a good example of __Domain Separation__, __Abstration__ and __Minimization__ principles applied to protection mechanisms.
+
+## Setup anomaly monitoring
+
+Anomaly monitoring complements firewalls by checking allowed services for suspicious behaviors. This is an example of the __Layering__ principle.
+
+An IoT device, like the Raspberry Pi, will need certain services like ssh to be exposed by the firewall to allow required interactions. In these cases, it is prudent to monitor these services for anomalous behaviors like password brute-forcing or denial of service.
+
+> Fail2ban, written in Python, is a scanner that examines the log files produced by the Raspberry Pi, and checks them for suspicious activity. It catches things like multiple brute-force attempts to log in, and can inform any installed firewall to stop further login attempts from suspicious IP addresses. It saves you having to manually check log files for intrusion attempts and then update the firewall (via iptables) to prevent them [[2](https://www.raspberrypi.org/documentation/configuration/security.md)].
+
+You can install __fail2ban__ using the following command:
+```
+sudo apt install fail2ban
+```
+
+Copy the default configuration template to a file named `jail.local` to configure fail2ban.
+```
+sudo cp /etc/fail2ban/jail.conf /etc/fail2ban/jail.local
+```
+
+Now let's edit the `jail.local` configuration file to check for SSH abnormalities.
+
+```
+sudo nano /etc/fail2ban/jail.local
+```
+
+Scroll through the file to locate a section titled JAILS. Edit the SSH Servers subsection to look like this:
+
+```
+#
+# SSH servers
+#
+
+[sshd]
+
+# To use more aggressive sshd modes set filter parameter "mode" in jail.local:
+# normal (default), ddos, extra or aggressive (combines all).
+# See "tests/files/logs/sshd" or "filter.d/sshd.conf" for usage example and det$
+mode        = aggressive
+port        = ssh
+logpath     = /var/log/auth.log
+maxretry    = 3
+bantime     = 600
+```
+
+These settings instruct fail2ban to monitor the `/var/log/auth.log` system log file for ssh password brute-force attempts, with a max-retry threshold of 3 and a bantime of 600 second. A bantime of -1 will permanently bans an IP address after three failed attempts using a firewall rule.
+
+Save the config file (`Control+X` followed by `Enter`).
+
+Restart the fail2ban service to apply the configuration changes.
+
+```
+sudo systemctl restart fail2ban
+```
+
+Examine the number of active jails using this commands
+
+```
+sudo fail2ban-client status
+```
+
+This command should show the `sshd` jail to be active.
+
+```
+pi@raspberrypi:/ $ sudo fail2ban-client status
+Status
+|- Number of jail:	1
+`- Jail list:	sshd
+```
+
+Now let's test it. From another machine on the same network (For example, with IP address: `10.144.27.34`), ssh to the Raspberry Pi IP address. In the example below the IP address of the Raspberry Pi is: `10.66.224.224`
+
+```
+ssh -l root 10.66.224.224
+```
+Enter the a blank password repeatedly three times. The next time you try to connect you will see a __Connection Refused__ message. See these sample interactions below.
+
+```
+$ ssh -l root 10.66.224.224
+root@10.66.224.224's password:
+Permission denied, please try again.
+root@10.66.224.224's password:
+Permission denied, please try again.
+root@10.66.224.224's password:
+root@10.66.224.224: Permission denied (publickey,password).
+
+$ ssh -l root 10.66.224.224
+ssh: connect to host 10.66.224.224 port 22: Connection refused
+```
+
+The remote machine is banned for 600 seconds!
+
+On the Raspberry Pi, examine the Fail2Ban status.
+
+```
+sudo fail2ban-client status sshd
+```
+
+It should show the banned IP address as follows:
+
+```
+pi@raspberrypi:/etc/fail2ban/filter.d $ sudo fail2ban-client status sshd
+
+Status for the jail: sshd
+|- Filter
+|  |- Currently failed:	1
+|  |- Total failed:	4
+|  `- File list:	/var/log/auth.log
+`- Actions
+   |- Currently banned:	1
+   |- Total banned:	1
+   `- Banned IP list:	10.144.27.34
+```
+
+We see the `10.144.27.34` IP address in the banned list. To clear the ban on `10.144.27.34` run the following command on the Raspberry Pi.
+
+```
+sudo fail2ban-client set ssh unbanip 10.144.27.34
+```
+Examining the Fail2Ban status again shows the cleared banned IP list.
+
+```
+pi@raspberrypi:/ $ sudo fail2ban-client status sshd
+Status for the jail: sshd
+|- Filter
+|  |- Currently failed:	1
+|  |- Total failed:	4
+|  `- File list:	/var/log/auth.log
+`- Actions
+   |- Currently banned:	0
+   |- Total banned:	1
+   `- Banned IP list:
+
+```
+
+You should be able to ssh into the Raspberry Pi again, from the machine that was perviously banned. 
+
+In summary, we see how all the hardening steps work together to slow down an attacker.
 
 [Top](#table-of-contents)
 
 ## Additional Readings
-
-* [Order of Windows Firewall Rule Evaluation](https://technet.microsoft.com/en-us/library/cc755191%28v=ws.10%29.aspx)
-* [Microsoft Windows Firewall in Enterprise Environment Resources](https://docs.microsoft.com/en-us/windows/access-protection/windows-firewall/windows-firewall-with-advanced-security-design-guide)
-* [Microsoft The OSI Model's Seven Layers Defined and Functions Explained](https://support.microsoft.com/en-us/kb/103884)  
-* Linux firewalls
-  * [Ubuntu iptables Wiki](https://help.ubuntu.com/community/IptablesHowTo)  
-  * [CentOS iptables Wiki](https://wiki.centos.org/HowTos/Network/IPTables)
-  * 25 Most Used iptables commands, [The Geek Stuff](http://www.thegeekstuff.com/2011/06/iptables-rules-examples/)
-  * [UFW - Uncomplicated Firewall for Ubuntu](https://help.ubuntu.com/community/UFW)
+* [Securing your Raspberry Pi](https://www.raspberrypi.org/documentation/configuration/security.md)
+* [UFW - Uncomplicated Firewall for Ubuntu](https://help.ubuntu.com/community/UFW)
+* [UFW Essentials: Common Firewall Rules and Commands](https://www.digitalocean.com/community/tutorials/ufw-essentials-common-firewall-rules-and-commands)
+* [How Fail2Ban Works to Protect Services on a Linux Server](https://www.digitalocean.com/community/tutorials/how-fail2ban-works-to-protect-services-on-a-linux-server)
 
 [Top](#table-of-contents)
 
@@ -242,7 +430,7 @@ That's it for Firewalls in this Unit. Happy Surfing.
 # License
 [Nebraska GenCyber](https://github.com/MLHale/nebraska-gencyber) <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /></a><br /> is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</a>.
 
-Overall content: Copyright (C) 2017-2018  [Dr. Matthew L. Hale](http://faculty.ist.unomaha.edu/mhale/), [Dr. Robin Gandhi](http://faculty.ist.unomaha.edu/rgandhi/), [Dr. Briana B. Morrison](http://www.brianamorrison.net), and [Doug Rausch](http://www.bellevue.edu/about/leadership/faculty/rausch-douglas).
+Overall content: Copyright (C) 2017-2021  [Dr. Matthew L. Hale](http://faculty.ist.unomaha.edu/mhale/), [Dr. Robin Gandhi](http://faculty.ist.unomaha.edu/rgandhi/), and [Dr. Briana B. Morrison](http://www.brianamorrison.net).
 
-Lesson content: Copyright (C) [Robin Gandhi](http://faculty.ist.unomaha.edu/rgandhi/) 2017-2018.  
+Lesson content: Copyright (C) [Robin Gandhi](http://faculty.ist.unomaha.edu/rgandhi/) 2017-2021.  
 <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /></a><br /><span xmlns:dct="http://purl.org/dc/terms/" property="dct:title">This lesson</span> is licensed by the author under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</a>.

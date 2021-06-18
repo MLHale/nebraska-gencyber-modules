@@ -1,7 +1,7 @@
-# Lesson Plan Introduction to Firewalls
+# Lesson Plan IoT Hardening
 
 ### Summary
-The module will review the fundamentals of firewalls. In this lesson, we will review the importance of firewalls, the OSI 7 Layer Model, how they are configured, and take a hands-on look at a Windows firewall.
+The module will review steps necessary to harden an IoT device using the example of a Raspberry Pi. In this lesson, we will review the importance of software updates, user management, network management, and intrusion detection systems.
 
 ### Grade
 High School
@@ -10,23 +10,23 @@ High School
 60 Minutes
 
 ### First principles
-- [ ] Domain Separation
+- [x] Domain Separation
 - [ ] Process Isolation
 - [ ] Resource Encapsulation
 - [ ] Modularity
 - [x] Least Privilege
-- [ ] Abstraction
-- [ ] Data Hiding
+- [x] Abstraction
+- [x] Data Hiding
 - [x] Layering
 - [ ] Simplicity
 - [x] Minimization
 
 ### Learning Objectives
 
-1. What is a Firewall and why is it important.
-2. What is the OSI 7 Layer Model and where should a firewall be operated within it.
+1. What is __Hardening__ and why is it important.
+2. How make it harder for attackers to profile your IoT.
 3. How to configure a firewall with firewall rules.
-4. Learn to configure a windows firewall.
+4. Add multiple layers of defense to a device.
 
 ### Materials list
 
@@ -35,14 +35,14 @@ High School
 ### Learning Facilitation
 
 #### Warm up Activity
-Talk about the origins of the word "Firewall". Ask what do you already know about IT Firewalls?
+Ask what do you already know about it __Hardening__ an Internet connected device?
 
 #### Vocabulary
 * Firewall
-* Internal
-* External
+* Intrusion Detection
+* User management
 
-#### Focused Activity
+#### Unplugged Activity Example
 1. Assign two students to be personal computers in a network. Give them signs to put on their chest that say personal computer.
 
 2. Assign two students to be the Firewall. Have students extend their arms out and connect them. Have them stand in front of the personal computer students.
@@ -57,7 +57,9 @@ Talk about the origins of the word "Firewall". Ask what do you already know abou
 
 7. Review Firewalls as a Collection of Valves and discuss Firewall Rules.
 
-8. Author Linux iptables firewall rules.
+8. Author ufw (uncomplicated fire wall) firewall rules for a Linux OS (Raspberry Pi)
+
+9. Consider similar activities for other IoT Hardening Concepts.
 
 #### Closure
 
