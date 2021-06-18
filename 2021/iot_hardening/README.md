@@ -403,7 +403,7 @@ Status for the jail: sshd
 
 ```
 
-You should be able to ssh into the Raspberry Pi again, from the machine that was perviously banned. 
+You should be able to ssh into the Raspberry Pi again, from the machine that was perviously banned.
 
 In summary, we see how all the hardening steps work together to slow down an attacker.
 
@@ -414,6 +414,7 @@ In summary, we see how all the hardening steps work together to slow down an att
 * [UFW - Uncomplicated Firewall for Ubuntu](https://help.ubuntu.com/community/UFW)
 * [UFW Essentials: Common Firewall Rules and Commands](https://www.digitalocean.com/community/tutorials/ufw-essentials-common-firewall-rules-and-commands)
 * [How Fail2Ban Works to Protect Services on a Linux Server](https://www.digitalocean.com/community/tutorials/how-fail2ban-works-to-protect-services-on-a-linux-server)
+* [How To Protect SSH and Apache Using Fail2Ban on Ubuntu Linux](https://www.rapid7.com/blog/post/2017/02/13/how-to-protect-ssh-and-apache-using-fail2ban-on-ubuntu-linux/)
 
 [Top](#table-of-contents)
 
