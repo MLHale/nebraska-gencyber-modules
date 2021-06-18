@@ -322,7 +322,7 @@ I hope these examples made you a bit more skeptical of links on a webpage or ema
 Obfuscation means the act of making something obscure, unclear, or unintelligible.
 In this sense, it means to make code that is intentionally hard to read, usually to prevent the code of an atttack from being easily read.
 
-Examine this link:[Obfuscated page](./phishing-demo/obfuscated.html)
+Examine this link: [Obfuscated page](./phishing-demo/obfuscated.html)
 
 It is similar to the [page we have been using](./phishing-demo/phishing.html) in form and function but now examine its page source. It has been obfuscated using an external javascript file. Examine that file as well: [JavaScript file](./phishing-demo/myscr150731.js)
 
