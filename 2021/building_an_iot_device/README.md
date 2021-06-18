@@ -50,6 +50,7 @@ By the end of this tutorial, you will be able to:
         - [Table of Contents](#table-of-contents)
         - [Before We Start](#before-we-start)
         - [Using a temperature component](#using-a-temperature-component)
+        - [Using a barometer component](#using-a-barometer-component)
         - [Self Exploration](#self-exploration)
         - [Test you Bits, err... Wits!](#test-you-bits-err-wits)
         - [Cybersecurity First Principle Reflections](#cybersecurity-first-principle-reflections)
@@ -74,18 +75,18 @@ Areas of their guide have also been enhanced with comments that look like this:
 
 These comments are meant to provide extra context or detail.
 
-#### Introduction to the Temperature Component
+##### Introduction to the Temperature Component
 Temperature Sensor DS18B20 is a commonly used digital temperature sensor featured with small size, low-cost hardware, strong anti-interference capability and high precision. The digital temperature sensor is easy to wire and can be applied a various occasions after packaging. Different from conventional AD collection temperature sensors, it uses a 1-wire bus and can directly output temperature data.
 
 ![temperature sensor](./img/temperature-sensor.png)
 
-#### Required Components
+##### Required Components
 - 1 * Raspberry Pi
 - 1 * Breadboard
 - 1 * DS18B20 Temperature Sensor module
 - 1 * 3-Pin anti-reverse cable
 
-#### Wiring Diagram
+##### Wiring Diagram
 With a unique single-wire interface, DS18B20 requires only one pin for a two-way
 communication with a microprocessor. It supports multi-point networking to measure
 multi-point temperatures. Eight sensors can be connected at most, because it will
@@ -200,8 +201,23 @@ When you are done, you should be able to run your program and begin getting temp
 
 ![temperature output](./img/temperature.png)
 
-We will be using the temperature module later in a weather station example during later lessons.
 
+### Using a barometer component
+Next, lets setup a barometer component. For this part, we will use lesson 31 in the SunFounder booklet. Once again, the lesson is excerpted here, with additional comments and context provided.
+
+##### Introduction to the barometer
+A `barometer` measures air pressure. The BMP180 barometer measures temperature and pressure is the new digital barometric pressure sensor, with a very high performance, which enables applications in advanced mobile devices, such as smart phones, tablets and sports devices. It complies with the BMP085 but boasts many improvements, like a smaller size and more digital interfaces.
+
+![temperature output](./img/barometer-sensor.png)
+
+##### Required Components
+- 1 * Raspberry Pi - 1 * Breadboard
+- 1 * Barometer module
+- 1 * 4-Pin anti-reverse cable
+
+##### Step 1: Build the circuit
+
+![temperature output](./img/barometer-wiring.png)
 
 ### Self Exploration
 Try some different designs yourself. You can combine any services with any Littlebits sensors. 
