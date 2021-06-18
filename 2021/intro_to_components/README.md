@@ -228,14 +228,7 @@ sudo python3 01_dule_color_led.py
 This should result in a flashing light like this:
 ![led lesson](./img/led.gif)
 
-### Step 9: Use a temperature module
-Turn to page 135 of your booklet and follow the steps provided to configure your PI to work with a digital temperature sensor. 
 
-When you are done, you should be able to run your program and begin getting temperature output like this:
-
-![temperature lessom](./img/temperature.png)
-
-We will be using the temperature module later in a weather station example during later lessons.
 
 ### Self Exploration
 Try out some other components in the box - find the lesson number for each one.
