@@ -115,7 +115,7 @@ Then save the file: `Control + X`, followed by `Enter`. Once the file is saved, 
 sudo su - pi
 ```
 
-At this point, we changed the default password, and made it required every-time superuser privileges are required. This strategy is a good example of the _layering_ first principle.
+At this point, we changed the default password, and made it required every-time superuser privileges are invoked. This strategy is a good example of the _layering_ first principle.
 
 
 ## Review running services
