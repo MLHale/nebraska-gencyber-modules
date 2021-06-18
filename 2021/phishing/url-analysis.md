@@ -164,7 +164,7 @@ The `Registrable Domain` is the only security sensitive information that a user 
 The knowledge in the previous section should serve you well in reading URLs. But spammers often conceal the real URL in HTML formatted emails or fake websites. Let's explore a few such tricks. Some URL behaviors are browser specific. So for our discussion let's open the links below in a `Chrome` browser.
 
 ## Tricky Links  
-Open this link in a Chrome browser: https://robinagandhi.github.io/phishing-demo/phishing.html
+Open this link in a Chrome browser: [Phishing Demo](./phishing-demo/phishing.html)
 
 ### Link #1  
 
@@ -317,20 +317,14 @@ I hope these examples made you a bit more skeptical of links on a webpage or ema
 [Top](#table-of-contents)
 
 
-     
-[Open Source INTelligence Gathering](#open-source-intelligence-gathering)    
-[Additional Readings](#additional-readings)  
-[Acknowledgements](#special-thanks)  
-
 ## Obfuscation of Web Content
 
 Obfuscation means the act of making something obscure, unclear, or unintelligible.
 In this sense, it means to make code that is intentionally hard to read, usually to prevent the code of an atttack from being easily read.
 
-Examine this link:
-https://robinagandhi.github.io/phishing-demo/obfuscated.html
+Examine this link:[Obfuscated page](./phishing-demo/obfuscated.html)
 
-It is similar to the page in the [URL Analysis Lesson](../url-analysis.md) in form and function but now examine its page source. It has been obfuscated using an external javascript file. Examine that file as well: https://robinagandhi.github.io/phishing-demo/myscr150731.js
+It is similar to the [page we have been using](./phishing-demo/phishing.html) in form and function but now examine its page source. It has been obfuscated using an external javascript file. Examine that file as well: [JavaScript file](./phishing-demo/myscr150731.js)
 
 Spammers use such obfuscation to avoid detection and analysis. Navigate away from such pages or delete emails that have gone to such lengths to conceal their "trickeries".
 
