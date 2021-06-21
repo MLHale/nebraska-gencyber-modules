@@ -34,7 +34,7 @@ When reading emails, the first item that grabs our attention is the sender's nam
 Here is an interesting one:
 
 > How long does an attacker have to wait to get that foot in the door? We aggregated the results of over 150,000 e-mails sent as part of sanctioned tests by two of our security awareness partners and measured how much time had passed from when the message was sent to when the recipient opened it, and if they were influenced to click or provide data (where the real damage is done). The data showed that nearly 50% of users open e-mails and click on phishing links within the first hour. [Verizon DBIR 2014]
-> ![verzon dbir stats](../img/dbirstats.png)
+> ![verzon dbir stats](./img/dbirstats.png)
 >
 >> It did not get any better in 2016: _**13%** of people tested click on a phishing attachment; median time to click is very
  short._  
@@ -50,7 +50,7 @@ Email Headers hold a lot of information. Much of this information is never displ
 
 Before we get started, consider this email from President Donald Trump to a Researcher at the University of Nebraska at Omaha. They have a great Cybersecurity program. They recently obtained the prestigious [CAE-CO](https://www.nsa.gov/resources/educators/centers-academic-excellence/cyber-operations/) (Cyber Operations) designation from NSA. You may read about the available degree programs in Cybersecurity here: https://www.unomaha.edu/college-of-information-science-and-technology/academics/cybersecurity.php
 
-> ![email](../img/emailfrompresident.png)
+> ![email](./img/emailfrompresident.png)
 
 
 Anyways...we see emails like this all the time using desktop or web-based email clients. The section pointed to by the big red arrow in the figure above, is the part of the email header that most people are familiar with.
@@ -58,22 +58,22 @@ Anyways...we see emails like this all the time using desktop or web-based email 
 There is more to this header. To reveal the full message header, different desktop or web email applications have different methods. Here are instructions to get the full email headers using popular email applications:
 
 #### Apple Mail
-> ![applemail](../img/applemail.png)
+> ![applemail](./img/applemail.png)
 
 #### Outlook Desktop Client
-> ![outlook](../img/outlook.png)
+> ![outlook](./img/outlook.png)
 
 #### Outlook Web Client
-> ![outlookweb](../img/outlookweb.png)
+> ![outlookweb](./img/outlookweb.png)
 
 #### Gmail
-> ![gmail](../img/gmail.png)
+> ![gmail](./img/gmail.png)
 
 It is obvious that in all cases, full email headers are hard to find if you don't know where to look.
 
-Once you do find it, there is a ton of information in the header about the route taken by an email. Let's look at some actual email headers. Open up the files in the ["email-headers" Folder](../email-headers).
+Once you do find it, there is a ton of information in the header about the route taken by an email. Let's look at some actual email headers. Open up the files in the ["email-headers" Folder](./email-headers).
 
-Here is the raw message from [email-header1.txt](../email-headers/email-header1.txt)
+Here is the raw message from [email-header1.txt](./email-headers/email-header1.txt)
 
 ```text
 Received: from BL2PRD0711HT001.namprd07.prod.outlook.com (10.255.104.164) by
@@ -152,13 +152,13 @@ Passenger-Received: from U.S. by Germany    # German Authority
 
 The header is like a passport for your email. The header receives an entry at every stop along the way by the email server it encounters. As a result, the more servers the email is routed through, the longer the header.
 
-Now, if you observe [email-header1.txt](../email-headers/email-header1.txt) there seems to be a lot of **`Received:`** entries in there.
+Now, if you observe [email-header1.txt](./email-headers/email-header1.txt) there seems to be a lot of **`Received:`** entries in there.
 
 > So, where in this file should we start to trace the email source/origin and the stops that it took to get to the final destination?
 
 Here is some information to help us do this. As an email travels from the source to its destination, each server adds its header entries to the top of the email body. So if we want to trace the email origin, this will be the very first **`Received:`** entry encountered from the **bottom of the raw email**. If you see something like `Received-SPF:`, ignore it.
 
-For [email-header1.txt](../email-headers/email-header1.txt) start scanning from the bottom of the header towards the top and examine the very first **`Received:`** entry. It looks like this:
+For [email-header1.txt](./email-headers/email-header1.txt) start scanning from the bottom of the header towards the top and examine the very first **`Received:`** entry. It looks like this:
 
 ```text
 Received: from User (85-250-54-29.bb.netvision.net.il[85.250.54.29])
@@ -212,14 +212,14 @@ There are few other fields that you should investigate in the email header.
 
 * `X-Spam score`, `X-Spam flag` and `X-Spam status` entries help determine “spamminess”. But the scores are not standardized across servers so these have to examine on a case by case basis.
 
-Google has an [online tool](https://toolbox.googleapps.com/apps/messageheader/) that helps to examine the "hops" and the time delay between them. Large delays in accepting email by the first server may be a sign of overloaded and resource constrained spam servers. Here's what the tool shows about [email-header1.txt](../email-headers/email-header1.txt). There is a suspicious 12-minute delay right at the beginning, which may indicate an overloaded spam sending email server. Sometimes, the time difference between servers may cause false positives.
+Google has an [online tool](https://toolbox.googleapps.com/apps/messageheader/) that helps to examine the "hops" and the time delay between them. Large delays in accepting email by the first server may be a sign of overloaded and resource constrained spam servers. Here's what the tool shows about [email-header1.txt](./email-headers/email-header1.txt). There is a suspicious 12-minute delay right at the beginning, which may indicate an overloaded spam sending email server. Sometimes, the time difference between servers may cause false positives.
 
-![google header analysis](../img/googleheaderanalyzer.png)
+![google header analysis](./img/googleheaderanalyzer.png)
 
 
 ## Exercise
 
-Open up the files in the ["email-headers" Folder](../email-headers) using the Google Header analysis tool and then answer the questions in each one of them. Check your answers with a peer. If they differ then work with your peer to come to a final conclusion. Links to the online tools are shown above.
+Open up the files in the ["email-headers" Folder](./email-headers) using the Google Header analysis tool and then answer the questions in each one of them. Check your answers with a peer. If they differ then work with your peer to come to a final conclusion. Links to the online tools are shown above.
 
 * [Network-tools](http://network-tools.com)
 * [Google Message Header Analyzer](https://toolbox.googleapps.com/apps/messageheader/)
