@@ -284,6 +284,11 @@ We now examine 10 cybersecurity first principles. This discussion is adapted fro
   - Simplicity
   - Abstraction
 
+
+### How do the First Principles Relate to each other?
+> Think of the first three principles as the necessary elements of building a protection mechanism, like a Castle: Wall, Door, Guard and Check. They help you answer the question, how to build a protection mechanism.
+The rest of the principles that follow, contribute to the quality of the protection mechanism. They help you answer the question, how good is the protection mechanism.
+
 ### CIA Triad - Expectations that humans have from other entities in possession of information
 
 #### Confidentiality
@@ -392,6 +397,8 @@ If there is a question as to where the card should be placed the answer is on th
 - [Quick review of first principles using pictures](https://spark.adobe.com/page/DbZGSqJ12Q82A/)
 - [NSA document listing Cybersecurity first principles](https://users.cs.jmu.edu/tjadenbc/Bootcamp/0-GenCyber-First-Principles.pdf)
 - [First Principle Hand Gestures](https://gencyber.utulsa.edu/wp-content/uploads/2016/10/10-Principles-GenCyber-Card-Game.pdf)
+- [Scratch Activity and Quiz: Castle Story by Briana Morrison](https://scratch.mit.edu/projects/546131482)
+- [Answer Key for GenCyber Cards](http://www.gencyberteachers.camp/cyber-realm-card-game.html)
 
 
 [Top](#table-of-contents)
