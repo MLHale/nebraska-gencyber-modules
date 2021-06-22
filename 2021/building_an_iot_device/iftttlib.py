@@ -3,7 +3,7 @@
 # @Email:  mlhale@unomaha.edu
 # @Filename: servicelib.py
 # @Last modified by:   matthale
-# @Last modified time: 2021-06-17T05:41:50-05:00
+# @Last modified time: 2021-06-22T00:03:55-05:00
 # @Copyright: Copyright (C) 2019 Matthew L. Hale
 
 
@@ -20,7 +20,7 @@ class IFTTTLib:
     Sample invocation:
         ifttt = IFTTTLib()
         ifttt.setKey("your_key")
-        ifttt.sendWeather("your_event_name","21")
+        ifttt.invokeWebhookTrigger("your_event_name","21")
     """
     
     secretkey = ""
@@ -34,7 +34,7 @@ class IFTTTLib:
         """
         self.secretkey = keyval
         
-    def webhookTrigger(self, event, val1=None, val2=None, val3=None, debug=True):
+    def invokeWebhookTrigger(self, event, val1=None, val2=None, val3=None, debug=True):
         """
         This method triggers a webhook endpoint on IFTTT.
         
@@ -89,5 +89,5 @@ class IFTTTLib:
             val3 = "Humidity: " + str(humidity) + " %"
         else:
             val3 = "Humidity: N/A"
-        self.webhookTrigger(event, val1, val2, val3, debug=debug)
+        self.invokeWebhookTrigger(event, val1, val2, val3, debug=debug)
         
