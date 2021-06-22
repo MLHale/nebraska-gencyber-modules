@@ -29,6 +29,8 @@ By the end of this you will be:
 ### Slides
 Here are the [slides](./img/slides.pptx).
 
+### Lesson Plan Template
+Here is the [lesson plan template](./img/lesson-plan-template.docx)
 ## Lead Author
 
 - Briana Morrison
