@@ -1,0 +1,55 @@
+Received: from DM8PR07MB8805.namprd07.prod.outlook.com (2603:10b6:8:30::11) by
+ CH2PR07MB8217.namprd07.prod.outlook.com with HTTPS; Tue, 22 Jun 2021 17:25:57
+ +0000
+Received: from MWHPR04CA0027.namprd04.prod.outlook.com (2603:10b6:300:ee::13)
+ by DM8PR07MB8805.namprd07.prod.outlook.com (2603:10b6:8:30::11) with
+ Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id 15.20.4242.16; Tue, 22 Jun
+ 2021 17:25:56 +0000
+Received: from MW2NAM10FT008.eop-nam10.prod.protection.outlook.com
+ (2603:10b6:300:ee:cafe::99) by MWHPR04CA0027.outlook.office365.com
+ (2603:10b6:300:ee::13) with Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id 15.20.4264.18 via Frontend
+ Transport; Tue, 22 Jun 2021 17:25:55 +0000
+Authentication-Results: spf=softfail (sender IP is 148.163.147.197)
+ smtp.mailfrom=whitehouse.gov; unomaha.edu; dkim=none (message not signed)
+ header.d=none;unomaha.edu; dmarc=fail action=none
+ header.from=whitehouse.gov;compauth=softpass reason=202
+Received-SPF: SoftFail (protection.outlook.com: domain of transitioning
+ whitehouse.gov discourages use of 148.163.147.197 as permitted sender)
+Received: from mx0a-00246402.pphosted.com (148.163.147.197) by
+ MW2NAM10FT008.mail.protection.outlook.com (10.13.154.158) with Microsoft SMTP
+ Server (version=TLS1_2, cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id
+ 15.20.4242.21 via Frontend Transport; Tue, 22 Jun 2021 17:25:55 +0000
+Received: from pps.filterd (m0136265.ppops.net [127.0.0.1])
+	by mx0a-00246402.pphosted.com (8.16.0.43/8.16.0.43) with SMTP id 15MHD57m031412
+	for <smartprof@unomaha.edu>; Tue, 22 Jun 2021 12:25:54 -0500
+Received: from pps.reinject (localhost [127.0.0.1])
+	by mx0a-00246402.pphosted.com with ESMTP id 39b38arw2v-1
+	(version=TLSv1.2 cipher=ECDHE-RSA-AES256-GCM-SHA384 bits=256 verify=NOT)
+	for <smartprof@unomaha.edu>; Tue, 22 Jun 2021 12:25:54 -0500
+Received: from pps.reinject (m0136265.ppops.net [127.0.0.1])
+	by pps.reinject (8.16.0.43/8.16.0.43) with SMTP id 15MHPsHO005959
+	for <smartprof@unomaha.edu>; Tue, 22 Jun 2021 12:25:54 -0500
+Authentication-Results-Original: ppops.net;	spf=softfail
+ smtp.mailfrom=joe@whitehouse.gov
+Received: from srv151.best-hosting.ru (srv151.best-hosting.ru [213.108.249.189])
+	by mx0b-00246402.pphosted.com with ESMTP id 39bjbwgmd0-1
+	(version=TLSv1.2 cipher=AES128-SHA bits=128 verify=NOT)
+	for <smartprof@unomaha.edu>; Tue, 22 Jun 2021 12:24:03 -0500
+Received: from [195.128.123.146] (helo=web38)
+	by srv151.best-hosting.ru with esmtpa (Exim 4.80)
+	(envelope-from <joe@whitehouse.gov>)
+	id 1lvk7z-000U4F-KM
+	for smartprof@unomaha.edu; Tue, 22 Jun 2021 20:24:01 +0300
+Thread-Topic: Build Cyber Back Better!
+thread-index: Addni2IKa/Yh8PYzRayhIA0DMXVsTw==
+From: "Joe Biden" <joe@whitehouse.gov>
+To: <smartprof@unomaha.edu>
+Cc:
+Date: Tue, 22 Jun 2021 20:23:57 +0300
+Message-ID: <5533D05930444325A715D6AD894B6371@corp.parking.ru>
+Content-Type: multipart/alternative;
+	boundary="----=_NextPart_000_0A0F_01D767A4.87582FC0"
+
+

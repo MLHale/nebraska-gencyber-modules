@@ -145,15 +145,28 @@ What are your first thoughts?
 
 ## Headers are like Passports
 
-Consider a Turkey citizen, who is traveling from the U.S. to China via stops in Germany and India. Authorities in countries in each leg of her trip would record the source and destination of the previous leg in the passport.  Assume that she has appropriate visas for all the visited countries. One way to describe the journey in her passport could be as follows, with the most recent entry at the top:
+Consider a U.S. citizen traveling from the U.S. to China via stops in Germany and India. In each leg of her trip, authorities in countries would record the source and destination of the last leg in the passport.  Assume that she has appropriate visas for all the visited countries. One way to describe the journey in her passport could be as follows, with the most recent entry at the top:
 
+First passport entry upon arriving in Germany
 ```text
-Passenger-Received: from India by China     # Chinese Authority
-Passenger-Received: from Germany by India   # Indian Authority
-Passenger-Received: from U.S. by Germany    # German Authority
+Received: from U.S. by Germany    # German Authority
 ```
 
-The header is like a passport for your email. The header receives an entry at every stop along the way by the email server it encounters. As a result, the more servers the email is routed through, the longer the header.
+New record added upon arriving in India
+```text
+Received: from Germany by India   # Indian Authority
+Received: from U.S. by Germany    # German Authority
+```
+New record added upon arriving at the final destination, China
+```text
+Received: from India by China     # Chinese Authority
+Received: from Germany by India   # Indian Authority
+Received: from U.S. by Germany    # German Authority
+```
+
+These entries help understand the origin and destination of the traveller, and the countries visited along the way. Very useful!
+
+An email header is a passport for your email. The header receives an entry from every email server it encounters along the way from the origin to its final destination. The more servers the email is routed through, the longer the header!
 
 Now, if you observe [email-header1.txt](./email-headers/email-header1.txt) there seems to be a lot of **`Received:`** entries in there.
 
@@ -316,6 +329,7 @@ Stay Vigilant!
 * Advanced email headers. [ARCLAB](https://www.arclab.com/en/kb/email/how-to-read-and-analyze-the-email-header-fields-spf-dkim.html)
 * [DMARC (Domain-based Message Authentication, Reporting and Conformance)](https://en.wikipedia.org/wiki/DMARC)
 * [Sending Emails from Raspberry Pi with Python](https://bc-robotics.com/tutorials/sending-email-using-python-raspberry-pi/)
+* Spoofbox for spoofing more than just email: [https://www.spoofbox.com](https://www.spoofbox.com)
 
 ## Lead Author
 
