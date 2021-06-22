@@ -31,24 +31,27 @@ A vigilant, trained and aware human user is a critical layer of defense against 
 
 When reading emails, the first item that grabs our attention is the sender's name, email, and subject. But, it may come as a surprise that spoofing these in an email is a pretty easy thing! It is also effective at fooling unsuspecting email users. Take a look at some of the statistics in the [Verizon Data Breach Reports](http://www.verizonenterprise.com/verizon-insights-lab/dbir/).
 
-Here is an interesting one:
+Here is an interesting one from the 2021 report:
 
-> How long does an attacker have to wait to get that foot in the door? We aggregated the results of over 150,000 e-mails sent as part of sanctioned tests by two of our security awareness partners and measured how much time had passed from when the message was sent to when the recipient opened it, and if they were influenced to click or provide data (where the real damage is done). The data showed that nearly 50% of users open e-mails and click on phishing links within the first hour. [Verizon DBIR 2014]
-> ![verzon dbir stats](./img/dbirstats.png)
->
->> It did not get any better in 2016: _**13%** of people tested click on a phishing attachment; median time to click is very
- short._  
+> Compared to all other types of "Hacks" contributing to data breachers, the one that is currently on the rise and exceeds all other forms of attacks is __Social Engineering__!
 
->> Update from 2017: _"**Phishing via email** was the most prevalent variety of social attacks"_ Social attacks were utilized in 43% of all breaches in the 2017 dataset. Almost all phishing attacks that led to a breach were followed with some form of malware, and 28% of phishing breaches were targeted. Phishing is the most common social tactic in the 2017 dataset (93% of social incidents).
+![Trends](https://www.verizon.com/business/dam/img/resources/reports/2021/dbir/section-3-png/Figure%2045.png)
 
-If you are a bad guy planning a heist, Phishing emails are the easiest way for getting malware into an organization. Because of that, it is prudent to understand exactly where an email is really coming from. Do not rush to open attachments or click links in emails. Verizon DBIR states _over 99% of malware is sent by either email or web server_.
+> Drilling down further, __Phishing__ is the top variety in Social Engineering attacks.
 
+![Types of Attacks in Social Engineering](https://www.verizon.com/business/dam/img/resources/reports/2021/dbir/section-3-png/Figure%2073.png)
+
+If you are a bad guy planning a heist, __Phishing__ emails seem to to be the most popular way among the bad guys for getting malware into an organization. Because of that, it is prudent to understand exactly where an email is really coming from.
+
+Do not rush to open attachments or click links in emails. Verizon DBIR states:
+
+> In a sample of 1,148 people who received real and simulated phishes, none of them clicked the simulated phish, but 2.5% clicked the real phishing email.
 
 ## Email Headers
 
 Email Headers hold a lot of information. Much of this information is never displayed to the user. The email reader only sees a select few pieces of information like the subject, date, and the sender's email and info. The surprising part is that the information that is actually displayed to a user can be easily forged!
 
-Before we get started, consider this email from President Donald Trump to a Researcher at the University of Nebraska at Omaha. They have a great Cybersecurity program. They recently obtained the prestigious [CAE-CO](https://www.nsa.gov/resources/educators/centers-academic-excellence/cyber-operations/) (Cyber Operations) designation from NSA. You may read about the available degree programs in Cybersecurity here: https://www.unomaha.edu/college-of-information-science-and-technology/academics/cybersecurity.php
+Before we get started, consider this email from our Past President Donald Trump to a Researcher at the University of Nebraska at Omaha. They have a great Cybersecurity program. They recently obtained the prestigious [CAE-CO](https://www.nsa.gov/resources/educators/centers-academic-excellence/cyber-operations/) (Cyber Operations) designation from NSA. You may read about the available degree programs in Cybersecurity here: https://www.unomaha.edu/college-of-information-science-and-technology/academics/cybersecurity.php
 
 > ![email](./img/emailfrompresident.png)
 
@@ -311,8 +314,7 @@ Stay Vigilant!
 
 * How to locate raw headers in email clients. [mxtoolbox](https://mxtoolbox.com/Public/Content/EmailHeaders/)
 * Advanced email headers. [ARCLAB](https://www.arclab.com/en/kb/email/how-to-read-and-analyze-the-email-header-fields-spf-dkim.html)
-* DomainKeys Identified Mail (DKIM), https://en.wikipedia.org/wiki/DomainKeys_Identified_Mail
-* Sender Policy Framework (SPF), http://www.openspf.org
+* [DMARC (Domain-based Message Authentication, Reporting and Conformance)](https://en.wikipedia.org/wiki/DMARC)
 
 ## Lead Author
 
