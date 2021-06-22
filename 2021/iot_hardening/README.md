@@ -239,7 +239,7 @@ You will notice that this command not only enables the firewall, but also enable
 Examine the status of the active firewall using this command:
 
 ```
-sudo ufw status
+sudo ufw status verbose
 ```
 You will notice that the firewall protects both ipv4 and ipv6 interfaces. Very useful!
 
