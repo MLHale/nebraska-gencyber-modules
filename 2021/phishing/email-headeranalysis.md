@@ -315,6 +315,7 @@ Stay Vigilant!
 * How to locate raw headers in email clients. [mxtoolbox](https://mxtoolbox.com/Public/Content/EmailHeaders/)
 * Advanced email headers. [ARCLAB](https://www.arclab.com/en/kb/email/how-to-read-and-analyze-the-email-header-fields-spf-dkim.html)
 * [DMARC (Domain-based Message Authentication, Reporting and Conformance)](https://en.wikipedia.org/wiki/DMARC)
+* [Sending Emails from Raspberry Pi with Python](https://bc-robotics.com/tutorials/sending-email-using-python-raspberry-pi/)
 
 ## Lead Author
 

@@ -1,0 +1,124 @@
+Received: from BY1PR0701MB1813.namprd07.prod.outlook.com (10.162.141.27) by
+ SN1PR0701MB1822.namprd07.prod.outlook.com (10.162.100.151) with Microsoft
+ SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384_P256) id 15.1.1304.22 via
+ Mailbox Transport; Sun, 6 Aug 2017 21:05:18 +0000
+Received: from BN3PR07MB2529.namprd07.prod.outlook.com (10.167.4.142) by
+ BY1PR0701MB1813.namprd07.prod.outlook.com (10.162.141.27) with Microsoft SMTP
+ Server (version=TLS1_2, cipher=TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384_P256) id
+ 15.1.1320.16; Sun, 6 Aug 2017 21:05:16 +0000
+Received: from CO2PR07CA0055.namprd07.prod.outlook.com (10.174.192.23) by
+ BN3PR07MB2529.namprd07.prod.outlook.com (10.167.4.142) with Microsoft SMTP
+ Server (version=TLS1_2, cipher=TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384_P256) id
+ 15.1.1304.22; Sun, 6 Aug 2017 21:05:09 +0000
+Received: from BN3NAM01FT014.eop-nam01.prod.protection.outlook.com
+ (2a01:111:f400:7e41::208) by CO2PR07CA0055.outlook.office365.com
+ (2603:10b6:100::23) with Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384_P256) id 15.1.1320.16 via
+ Frontend Transport; Sun, 6 Aug 2017 21:05:08 +0000
+Authentication-Results: spf=none (sender IP is 148.163.148.221)
+ smtp.mailfrom=lists.unomaha.edu; unomaha.edu; dkim=none (message not signed)
+ header.d=none;unomaha.edu; dmarc=fail action=none header.from=unomaha.edu;
+Received-SPF: None (protection.outlook.com: lists.unomaha.edu does not
+ designate permitted sender hosts)
+Received: from mx0a-00261b01.pphosted.com (148.163.148.221) by
+ BN3NAM01FT014.mail.protection.outlook.com (10.152.67.115) with Microsoft SMTP
+ Server (version=TLS1_2, cipher=TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384_P384) id
+ 15.1.1304.16 via Frontend Transport; Sun, 6 Aug 2017 21:05:07 +0000
+Received: from pps.filterd (m0104360.ppops.net [127.0.0.1])
+ by mx0b-00261b01.pphosted.com (8.16.0.21/8.16.0.21) with SMTP id v76L2kkx009021;
+ Sun, 6 Aug 2017 16:05:07 -0500
+Authentication-Results-Original: ppops.net;	spf=none
+ smtp.mailfrom=uno-benefits-wellness-bounces@lists.unomaha.edu
+Received: from lists.unomaha.edu (nexus.unomaha.edu [137.48.14.2])
+ by mx0b-00261b01.pphosted.com with ESMTP id 2c59csnkdd-7;
+ Sun, 06 Aug 2017 16:05:07 -0500
+Received: from lists.unomaha.edu (localhost.localdomain [127.0.0.1])
+ by lists.unomaha.edu (Postfix) with ESMTP id 187BE14337A;
+ Sun,  6 Aug 2017 16:05:06 -0500 (CDT)
+X-Original-To: uno-benefits-wellness@lists.unomaha.edu
+Delivered-To: uno-benefits-wellness@lists.unomaha.edu
+Received: from se2mxb212.globaltestmarket.com
+ (se2asp-mxb03.globaltestmarket.com [209.67.69.212])
+ by lists.unomaha.edu (Postfix) with ESMTP id 9F124143393
+ for <uno-benefits-wellness@lists.unomaha.edu>;
+ Sun,  6 Aug 2017 16:04:57 -0500 (CDT)
+Received: from se2portals12.asp.gmi.lcl (unknown [10.64.8.222])
+ by se2mxb212.globaltestmarket.com (Postfix) with ESMTP id 687437E4DF
+ for <uno-benefits-wellness@lists.unomaha.edu>;
+ Sun,  6 Aug 2017 21:04:57 +0000 (UTC)
+Received: from se2portals12.asp.gmi.lcl (localhost.localdomain [127.0.0.1])
+ by se2portals12.asp.gmi.lcl (Postfix) with SMTP id 55B747D01
+ for <uno-benefits-wellness@lists.unomaha.edu>;
+ Sun,  6 Aug 2017 21:04:57 +0000 (GMT)
+Received: (from apache@se2portals12.asp.gmi.lcl)
+ by se2portals12.asp.gmi.lcl (mini_sendmail/1.3.6 29jun2005);
+ Sun, 06 Aug 2017 21:04:57 GMT
+ (sender apache@se2portals12.asp.gmi.lcl)
+To: <uno-benefits-wellness@lists.unomaha.edu>
+MIME-Version: 1.0
+From: "Xfinity Sec. Team messages-noreply@xfinity.com" <trochford@unomaha.edu>
+Message-ID: <20170806210457.55B747D01@se2portals12.asp.gmi.lcl>
+Date: Sun, 6 Aug 2017 21:04:57 +0000
+Subject: [Uno-benefits-wellness] Important Notice To All Xfinity Customers
+X-BeenThere: uno-benefits-wellness@lists.unomaha.edu
+X-Mailman-Version: 2.1.9
+Precedence: list
+List-Id: "The list serve will be used to communicate benefits and wellness
+ information for list serve participants."
+ <uno-benefits-wellness.lists.unomaha.edu>
+List-Unsubscribe: <http://lists.unomaha.edu/mailman/listinfo/uno-benefits-wellness>,
+ <mailto:uno-benefits-wellness-request@lists.unomaha.edu?subject=unsubscribe>
+List-Archive: <http://lists.unomaha.edu/mailman/private/uno-benefits-wellness>
+List-Post: <mailto:uno-benefits-wellness@lists.unomaha.edu>
+List-Help: <mailto:uno-benefits-wellness-request@lists.unomaha.edu?subject=help>
+List-Subscribe: <http://lists.unomaha.edu/mailman/listinfo/uno-benefits-wellness>,
+ <mailto:uno-benefits-wellness-request@lists.unomaha.edu?subject=subscribe>
+Reply-To: <alt.v1-99bew63@yopmail.com>
+Content-Type: multipart/mixed; boundary="===============1536458300=="
+Sender: <uno-benefits-wellness-bounces@lists.unomaha.edu>
+Errors-To: uno-benefits-wellness-bounces@lists.unomaha.edu
+X-CLX-Shades: MLX
+X-CLX-Response: 1TFkXGRsfEQpMehcZGhEKWU0XZ2ZyEQpZSRcacRoQGncGGBMfcRITHBAadwY YGgYaEQpZXhdoY3kRCklGF19ERUdLQkt1QkVZXk9OEQpDThdIfWhTf3pEGxhbQmxzGltOfHptEn JMUkdmHHpHfXpcEhEKWFwXHwQaBBsbHgccTE4TGE4bSQUbGgQbGhoEHhIEHxAbHhofGhEKXlkXe
+ 1x5QU8RCk1cFxkaGBEKTFoXaWttUk1SEQpNThdoEQpMRhd7a0VpaxEKQ1oXGxkdBB4SBBseBBgR CkJeFxsRCkRYFx8aEQpCRhdkTFp9elgbRk5aYxEKQkcXY0ZSa2tYfn9DYWQRCkJcFxoRCkJFF2h dQVpDZUB8e21kEQpCThdhZHNjTUBGRmFNQxEKQkwXbFp/U30BHWVrG0gRCkJsF2ccQHpdfHtEG1
+ 5TEQpCQBdpeB8BewVaQVNhfBEKWlgXGBEKcGcXZB9BE11eWllkHFIQGx4RCnBoF2teAVtmSEFkb m9dEBgSEQpwaBdgZnN9ZAF9HwVOZBAYEhEKcGgXY01uclxYH3thGmQQGBIRCnBoF2JhZmcfGFhz GWMcEBgSEQpwaBdjc2hQbkNeeRJYHRAYEhEKcH8Xbxp7SWFoeUVcemYQGBIRCnBfF2AeeF1MTBk
+ dZBgfEBgSEQpwfRdrWXNEa0NoAWRkThAYEhEKcH0Xa1lzRGtDaAFkZE4QGBIRCnBnF2IBH11fU0 N7Qkx9EBkaEQpwfxdiYmxHf2EZAVhQbBATHxEKcF8XZmNoSRgZHB98fEUQGRoRCnB9F2BiGWRZZ mdzfm1oEBkaEQpwbBdmckZSGkhgGUlYUBAeHxEKcEMXZHhsexNsHl5HW3kQGR8RCm1+FxoRClhN F0sRIA==
+X-Proofpoint-Virus-Version: vendor=fsecure engine=2.50.10432:,, definitions=2017-08-06_14:,,
+ signatures=0
+X-Proofpoint-Spam-Details: rule=inbound_notspam policy=inbound score=0 classifier= adjust=0
+ reason=safe scancount=1 engine=8.0.1-1706020000
+ definitions=main-1708060366
+Return-Path: uno-benefits-wellness-bounces@lists.unomaha.edu
+X-MS-Exchange-Organization-Network-Message-Id: 5e94aecf-88c5-4164-5d9d-08d4dd0ed1c2
+X-EOPAttributedMessage: 0
+X-EOPTenantAttributedMessage: f1f4be86-d048-47e8-aa26-15b01dcdb13d:0
+X-MS-Exchange-Organization-MessageDirectionality: Incoming
+X-Forefront-Antispam-Report: CIP:148.163.148.221;IPV:CAL;SCL:-1;CTRY:US;EFV:NLI;SFV:SKN;SFS:;DIR:INB;SFP:;SCL:-1;SRVR:BN3PR07MB2529;H:mx0a-00261b01.pphosted.com;FPR:;SPF:None;LANG:en;;SKIP:1;
+X-MS-Exchange-Organization-SCL: -1
+X-Microsoft-Exchange-Diagnostics: 1;BN3NAM01FT014;1:uSZhgBJE9lfi3IFwpvRurOo+JODI+BYf3zc4uMqfQLhFzCYKOAk7aciW6DzOOzP8kfbJBBl29CwO9hosJpW8IGSHhWrWKZez072RvG/mkx/h5DsXF3pf+QsrqFXGKI3W4MGUxrZRBdG7IeBW+vg7zu6PQQ0vrzuNM+rMjSlIXrMqlnyW/grufmEmoNp7gt1KPiem53ErdS31YkOI9KejwpOk/+u9QWj9ODDKTOk94ReWLD3oQbSltGFbTyafHWyXpgiNiCnfBBjcGNb9DomRRG+eNFh5b4r4bLVqkZfppc89nK0RwmZLp8ZYMAsyqQLGNW1+bZV+YGIcfNol0FwRctu5L4NxdLfp7MnBat7ZPA4f/ga8fL9iwRr2CVIg+eFU+N3uMyYiqWIb4euly5Rw3+64NSxbDbXtxnkwVw4TYQfVKBvTnCsjJjkLVj01vidQ2v6LlM6LYIoM7hYDpix5/vsx5TrJ/3oVQDcz3GBm9fkdoWLuKDngjNwZFFMBuIbni+Lztx9AuR1mEnMD6Ads+WEjE0lj95SMSeJ5txArmvOpSSnlwozjfzHFLO7q8KKDHR0ih2QanwibiahmSGUd84WP9TNtZRG35EeDmRpSAuDTy/0CwUaWfQwcFZYdSA6pkW1gdo+8XZW9ORPcQaEN3TsWFOTQJ1eixHiqqJ87LL71FvUcpnFw4wqfAdLBqsw8OydyQDc56dH0qHeN/sofQcX0l0KA7AKoW5glaryFQNbpupHXrcB44wDuwBmZMv3Qje1fcg0c0Cl1Bual0TdO5djYgWUpB2jkD8H71GZ32XnHZXV5B1XsJ8we3+d2EnFDJoqIXjl0dKu5me3KyYe2ovH5r/Gdf5lmqbkT/JiPEdxLH3lmtRsPXc3kGjIFouWldngdGMvi5RBm66ZbmFs+49Nu3e0NrYEXLkLrl6ax9bc=
+X-MS-PublicTrafficType: Email
+X-MS-Office365-Filtering-Correlation-Id: 5e94aecf-88c5-4164-5d9d-08d4dd0ed1c2
+X-Microsoft-Antispam: UriScan:;BCL:0;PCL:0;RULEID:(300000500095)(300135000095)(300000501095)(300135300095)(23075)(22001)(300000502095)(300135100095)(421252002)(300000503095)(300135400095)(49563074)(71702078)(300000504095)(300135200095)(300000505095)(300135600095)(300000506095)(300135500095);SRVR:BN3PR07MB2529;
+X-Microsoft-Exchange-Diagnostics: 1;BN3PR07MB2529;3:LmzegZHSYhDRlua62p3tscO/WQEVhuFeDbChMof6VrK1rRLffMBNbBtpdp1NlEp6aAaROlrzkXkOLMwsYCKkvculZeDn2EHz2G6fIsjiOCQELjyjVcz0AbnHojqNSKb+HucfWgYL4t8QHweRg93I4bYuYxmMnTI84d7B+VyFxvKpNXetXDWQMnBqqGtwjTM0hxHMHXlXc9il3G4tt45RvACDdwX+QCl00F+FXrjxjA1VeRLT5AToIog4oQHOJc8xGuZPYbgX1GS5tiWtEFUHkogmqvlLOV5R17kJkVavXEshNVG3oPnOfRxK/XXPWEGy8R4Kyu7BoM673XQvN0j6vJpib2057fH+uofU0UUhoMY=;25:zz4cnQWW3tY+qWVm76vjJDzr3k5LhffytwXTwdSM1zYi0j9J7SgWBcsFXR/d3kU8PEOshu6TOIRTpxXJzmN/l3YO6SbueLjWRD2xXwowvTsaT7lLM9km2xbGCVekuKx/pqeJuJdxtD7sfLVNfUF6gsygJN+BgqqQMbvJl9FdW8NZ10KuL8u7VKqJ/6hgCy4BG7HNLMImUzXLtD6ClyNjSFcqh/0EKeQnU9SFm0J/L/ZwHeDq1qJh/a1n0mOrkQ4DonGU2LWhifQON3aBYQPBtptJRE3ENNSNtmp1S4G5Vp0Wxrba0zhNuqA/uC+BYUFO/XMLeA6x0rE+lg2a6p60rg==
+X-MS-TrafficTypeDiagnostic: BN3PR07MB2529:|BY1PR0701MB1813:
+X-Microsoft-Exchange-Diagnostics: 1;BN3PR07MB2529;31:6yD2VpekC6s/zgVvj91fk6q3EX7Z9fywMvn5xmaKrChJm2hD6GejhBDMaTQ3BSpDMFntD7HdBl9JYpMXyg7vHstlqqJK1Tcp23RcedQMqdLoQjlDuJhl1xyJ5TsyE0BN2+LMwzMr6SrtTnhFGlT6lmkmwwx9BbPWWGo1gJMMzOij/R96SKqBT2T7qOODMckAcGTV0e6rhpyv7SsMebVjfMyzIksNVauE/+UmKyymcIg=;20:AHaorKM4Ursxf+RbOGcKpfSm2MjTINhhyEpYqH4rADRtQalJo95jo9/UY4D0pbMe/PG8C4HXZcEzU1ncA9UdC7WF8sHnAOy3Q+05jFk8oqEKsejz/5iXq8CfezGTt2oLjDgKLghODY2ww9WOHouu3Om3yT0IO0h/qy4HhkGougnLla4F9EQAngHlV91b7rQJW29bu5n3cMSordiPYbGIpytFco0zbCi3sdc/8EpCd4/JtX5VImFrL4uzxrigz0NND+zbGpDEI0xchn0WDmWSa9wB8XOi+xgYrT2XsQ/NSW2ikIMzP8XT7zb4HjEHIBdK1K86aOKIyb5CczNRHoFDfv3ukH90qDOywWQX5O/YjlZhvLnhNmJqDnhCxPauc8Z24+lnYoJl9Nu0gDmrDz9120uWu60Looj3BNGFuv0G6nKg3bM2nm5g4G/K06c8VUAO2IcD/ocFXP7RnupY6aNRvNZRgzr7BVHXbTvaGJmIfkv1cwGTVOmmBUAJ+jtY1QcuJg1AYth/lmSG+AOLGad7t8Dcs8JSrc4SSfWmKAb9R24sYKjllEv904e/OGvkXtM1XZ53O4QbReanemURK92htbF/XpCBtz+ClMCLeIKy8zE=
+X-Exchange-Antispam-Report-Test: UriScan:(192374486261705)(52103502698954)(275809806118684);
+X-Exchange-Antispam-Report-CFA-Test: BCL:0;PCL:0;RULEID:(100000700101)(100105000095)(100000701101)(100105300095)(100000702101)(100105100095)(102415395)(601004)(9101512052)(2401047)(9101501001)(9101504095)(9101506045)(13013025)(9101511026)(9101510026)(9101507010)(9101509026)(13021025)(8121501046)(9101525026)(9101536074)(93006095)(93000095)(10201501046)(3002001)(100000703101)(100105400095)(100000704101)(100105200095)(100000705101)(100105500095);SRVR:BN3PR07MB2529;BCL:0;PCL:0;RULEID:(100000800101)(100110000095)(100000801101)(100110300095)(100000802101)(100110100095)(100000803101)(100110400095)(100000804101)(100110200095)(100000805101)(100110500095);SRVR:BN3PR07MB2529;
+X-Microsoft-Exchange-Diagnostics: 1;BN3PR07MB2529;4:IMXEAy0KxR+2DJb0MV5chAJrBmAU3LMEMCmgKAcXmlEBi4yuovHOQzK5/91ZDlcmupOvyeOwM0w6bEtfozZoMZ7qvxtzyWn1S24h8d3uWaDijYBH5vfnFNQvOuVyF9tafXnHsuKwae4YjKzA2MtA7kThGOucH4XEAUAobAPMog97EHWEQ5ifdC38gkAcJrlCdU6c1SdZ8jFYU4wdbOykMVI/TcUaSYkHrxWcPVk0x5330KyJj6tLqYIGwHGv+suxkuqWfkr53Pjb69woaGFygKSL9n1GYBUmcwIk9Xuw9MnFvp86jeMYu2fvkFdmNP7IOA6rI1hlUp6g8lswhFFuOlogG2ytMvXz2dzQWPGeuhPVApRSESc73p8y7HG67f1P;23:1zLGlwoUOO9cMzxawmu8/aXVMysqr0VeLLrFbNOk/tRX2ZmWzihkLHKGb60IzAAawOFCeZv/fhX45VR2X+/5ufES8JJJmdS6AsN6hVj1hol2erI4bWSzIqQLKWYDhDzCpm4/diXpdkkTjDaKpWFlcY4EsKKA1pnGflPYVeZGNMB5HpiqSmmDnt4AVxa1XaPUDtCK1ARQiuOPbEIT3EBGVjHR7GmsYYxBSgxslnhi6yQ=
+X-Microsoft-Exchange-Diagnostics: 1;BN3PR07MB2529;6:BI19s4DveNBF6sVUF6flhfmFT3rbstj4wU9Hp0ksH4VELbkAUrRKPKE5mZitof9O95XEG0Zv3X6n31ewG84PlSHj1f7QKgoepTLlzLU61eFvbKUqPRJA9tKtslcEeVymFOp4PnDndjVAGOGM4J1s2dzzn3K8C92+c02Q1Af68KHvllgtfAc2ij7JqkFJrbhCTAcvl8G2BWVPq4OMhcs3Pv8M2AJEtt9RVvUBAQbGP9IEH1iLEBqpKD4S+2e4CVJmvDaS3emf1fevPxkkgxtEnXYV5di3em5C1vec7F95oUJUmPVqxEMJiEGOghN2ppdCmo6e98QnqDlN0nvC+AGCYA==;5:DoTeYsASuj91+FdcEMIZOLkclKnHma1ywfXTp2hXSEf+QmRpC1R83v1ZYmufkx2gYevyVDJpTD9bTNQUj7Lz9d0YUuUhgRF+euGkar9/maWSwl91qfMehgoGQSYKTZVTeGKwdghCFYnWAT1W/eGM1Q==;24:mnGePQ3pQh2G/MiL/W/zLztNmEWXTIEVizWjQc6GKBG9IzRMDwiCSGMPi1LOmHuiwStMpBgXXwdfByq0wGQBO81ZBMieB9SVRclLw5VIoBo=;7:RgOynSuK7MKnTEwLOrmGGTRUmmfgJGRS6r54NB/f9FHGx2/wTonaq+RkgC24/o/tcF43sSYXi25N3UHarh1j93Yi2cEAfuLK02AbQ+XNH8ooXcAcFfo7LbP0L12gRFIu/GbZufL/pGS+Ahh1Ksy3R8ABJnKJeZB9DuPPS/83Wir3y0UIN2ZqjCkiWOQFySNh35IvuCh6NcJQLh6dCH+q3CbLMbaZzJ2A2y2rCFHztzk=
+SpamDiagnosticOutput: 1:2
+SpamDiagnosticMetadata: d02ef4249a364938877b944c92f04372
+X-MS-Exchange-CrossTenant-OriginalArrivalTime: 06 Aug 2017 21:05:07.9851
+ (UTC)
+X-MS-Exchange-CrossTenant-Id: f1f4be86-d048-47e8-aa26-15b01dcdb13d
+X-MS-Exchange-CrossTenant-FromEntityHeader: Internet
+X-MS-Exchange-Transport-CrossTenantHeadersStamped: BN3PR07MB2529
+X-Microsoft-Exchange-Diagnostics: 1;BY1PR0701MB1813;23:7KfYZb4A1C3ZbxBKVNMpXkXzQIOusE4mUl3c7g/CKvhqeIw0Iuzy50JSaqGb+dtqYCZsVcQbN41g8lmgArcZ8UIMrZyhkcj++s8/WXqKdIA1NODNjoDq7870Oszv2rSARpGcLlUYH4kYEv72ZYEz0AIlNVL+PoenWQ7CQr/lhlu2B77RF29XFKp1NXJBY2ffGyGqWu3jzYK3fRqU7Teg7go9EmJ3pW7mHdNrDTYBkLE=
+X-MS-Exchange-Organization-AuthSource: BN3NAM01FT014.eop-nam01.prod.protection.outlook.com
+X-MS-Exchange-Organization-AuthAs: Anonymous
+X-MS-Exchange-Transport-EndToEndLatency: 00:00:10.9954692
+X-MS-Exchange-Processed-By-BccFoldering: 15.01.1304.027
+X-Microsoft-Exchange-Diagnostics:
+ 1;SN1PR0701MB1822;9:kZIfDwUbpAHGm+2kbys/0XbkOqUJum3CXg267CW6F0+HFiclFEU7XKAz2aj3i2kWIqqrsNCbkQxNgx1CyNoH+bFiHSQfnO76JyTaEMPygURgqjAXx4LPnDVUeLiR67PZ
+X-Microsoft-Exchange-Diagnostics:
+ 1;SN1PR0701MB1822;27:gWoaguHn7kIiZlhy5uS0GyT0j8+5tuPaaLb2Fnes6Fkt3ywIt4skHpWksc2ofwDvFfhdHavwVCUKazLKPPs2tQ85EdkngWsQmTG4T2u6RdBGd+P2P/Ut+bwKoBcnH1Gn
