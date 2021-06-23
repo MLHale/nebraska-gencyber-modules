@@ -414,10 +414,29 @@ Now you can run your new program and see what happens:
 sudo python3 ng_weather.py
 ```
 
-### Self Exploration 1
-How might you bring the data from the temperature sensor, humidity sensor, AND barometer all into the same python program?
+### Finalizing the design
+The prior invention only works with one sensor. Let's pull the data from the other sensors (e.g. humidity) into the program. 
 
-### Self Exploration 2
+I've packaged the `iftttlib` and a full weather station example into a program repository. To get the code and run it try the following:
+
+```bash
+cd ~
+git clone https://github.com/MLHale/ng-weather
+cd ng-weather
+sudo python3 weatherstation.py
+```
+
+This program `will ask you to enter your secret key` for the webhook maker service when you run the program. This brings up a good point. In our earlier program, you `hard coded` a password into the program. 
+
+What kinds of issues might this cause? 
+
+How frequently did the prior program send data to IFTTT?
+
+The new program does not store the secret key, it only holds it in memory when the program is called.
+
+The new program also only sends the weather station data once every minute instead of every second.
+
+### Self Exploration
 Try some different designs yourself. You can combine any services with any Raspberry PI sensors. 
 
 
