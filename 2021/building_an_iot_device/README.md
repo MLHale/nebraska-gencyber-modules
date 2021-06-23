@@ -57,7 +57,6 @@ By the end of this tutorial, you will be able to:
         - [Self Exploration 1](#self-exploration-1)
         - [Self Exploration 2](#self-exploration-2)
         - [Cybersecurity First Principle Reflections](#cybersecurity-first-principle-reflections)
-        - [Additional Resources](#additional-resources)
     - [Lead Author](#lead-author)
         - [Acknowledgements](#acknowledgements)
         - [License](#license)
@@ -272,7 +271,7 @@ The digital temperature and humidity sensor DHT11 is a composite sensor that con
 
 > The sensor works by collecting small samples of air in the small holes on the board. The increased water content decreases resistance in a way that is measurable on the electrical components. This change in resistance is what is computed as % humidity. 
 
-![humidity sensor](./img/humdity-sensor.png)
+![humidity sensor](./img/humidity-sensor.png)
 
 ##### Required Components
 - 1 * Raspberry Pi
@@ -318,6 +317,7 @@ Here is the class: [iftttlib.py](./iftttlib.py)
 
 The class has a few methods:
 - **setKey**:
+
 ```
 This method sets a private secret key to be used with requests to the maker endpoint. Find your key at https://ifttt.com/maker_webhooks/settings
 
@@ -325,6 +325,7 @@ Parameters:
 keyval (string) : This is the secret key provided by the maker endpoint
 ```
 - **invokeWebhookTrigger**
+
 ```
 This method triggers a webhook endpoint on IFTTT.
 
@@ -430,11 +431,6 @@ Web services use __resource encapsulation__ to ensure that all functions related
 __Data hiding__ is also important to prevent internal data in the service from being released outside of the `service invocation`. Local data remains hidden, while `interfaces` expose only what the service wants to release (for instance to `IFTTT`). This also relates to __minimization__ because services can turn ports and other access off except for the specific interfaces it wants to leave open for other services to use.
 
 
-### Additional Resources
-For more information, investigate the following.
-
-* [Littlebits](http://littlebits.cc/how-it-works) - Overview of concepts and available bits
-
 ## Lead Author
 
 - Matt Hale
@@ -445,7 +441,7 @@ Special thanks to [Dr. Robin Gandhi](http://faculty.ist.unomaha.edu/rgandhi/) fo
 ### License
 [Nebraska GenCyber](https://github.com/MLHale/nebraska-gencyber) <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /></a><br /> is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</a>.
 
-Overall content: Copyright (C) 2017-2018  [Dr. Matthew L. Hale](http://faculty.ist.unomaha.edu/mhale/), [Dr. Robin Gandhi](http://faculty.ist.unomaha.edu/rgandhi/), [Dr. Briana B. Morrison](http://www.brianamorrison.net), and [Doug Rausch](http://www.bellevue.edu/about/leadership/faculty/rausch-douglas).
+Overall content: Copyright (C) 2017-2021  [Dr. Matthew L. Hale](http://faculty.ist.unomaha.edu/mhale/), [Dr. Robin Gandhi](http://faculty.ist.unomaha.edu/rgandhi/), [Dr. Briana B. Morrison](http://www.brianamorrison.net), and Brian Dorn.
 
-Lesson content: Copyright (C) [Dr. Matthew L. Hale](http://faculty.ist.unomaha.edu/mhale/) 2017-2018.  
+Lesson content: Copyright (C) [Dr. Matthew L. Hale](http://faculty.ist.unomaha.edu/mhale/) 2017-2021.  
 <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /></a><br /><span xmlns:dct="http://purl.org/dc/terms/" property="dct:title">This lesson</span> is licensed by the author under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</a>.
