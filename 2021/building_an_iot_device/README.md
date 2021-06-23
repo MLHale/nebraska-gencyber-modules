@@ -41,25 +41,25 @@ By the end of this tutorial, you will be able to:
 <!-- * [Web services and IFTTT](../web_services_and_ifttt/README.md) -->
 
 ### Table of Contents
-<!-- TOC START min:1 max:3 link:true asterisk:false update:true -->
-        - [Cybersecurity First Principles in this lesson](#cybersecurity-first-principles-in-this-lesson)
-        - [Introduction and goals](#introduction-and-goals)
-        - [Goals](#goals)
-        - [Materials Required](#materials-required)
-        - [Prerequisite lessons](#prerequisite-lessons)
-        - [Table of Contents](#table-of-contents)
-        - [Before We Start](#before-we-start)
-        - [Design thinking, User Story, and Storyboard](#design-thinking-user-story-and-storyboard)
-        - [Using a temperature component](#using-a-temperature-component)
-        - [Using a barometer component](#using-a-barometer-component)
-        - [Using a humidity sensor](#using-a-humidity-sensor)
-        - [Connecting your weather station to IFTTT web services](#connecting-your-weather-station-to-ifttt-web-services)
-        - [Self Exploration 1](#self-exploration-1)
-        - [Self Exploration 2](#self-exploration-2)
-        - [Cybersecurity First Principle Reflections](#cybersecurity-first-principle-reflections)
-    - [Lead Author](#lead-author)
-        - [Acknowledgements](#acknowledgements)
-        - [License](#license)
+<!-- TOC START min:1 max:3 link:true asterisk:false update:false -->
+- [Cybersecurity First Principles in this lesson](#cybersecurity-first-principles-in-this-lesson)
+- [Introduction and goals](#introduction-and-goals)
+- [Goals](#goals)
+- [Materials Required](#materials-required)
+- [Prerequisite lessons](#prerequisite-lessons)
+- [Table of Contents](#table-of-contents)
+- [Before We Start](#before-we-start)
+- [Design thinking, User Story, and Storyboard](#design-thinking-user-story-and-storyboard)
+- [Using a temperature component](#using-a-temperature-component)
+- [Using a barometer component](#using-a-barometer-component)
+- [Using a humidity sensor](#using-a-humidity-sensor)
+- [Connecting your weather station to IFTTT web services](#connecting-your-weather-station-to-ifttt-web-services)
+- [Self Exploration 1](#self-exploration-1)
+- [Self Exploration 2](#self-exploration-2)
+- [Cybersecurity First Principle Reflections](#cybersecurity-first-principle-reflections)
+- [Lead Author](#lead-author)
+- [Acknowledgements](#acknowledgements)
+- [License](#license)
 <!-- TOC END -->
 
 
@@ -124,7 +124,7 @@ Update your kernel
 
 > We need to do this, to make sure that any installed libraries are up-to-date to work with the required components 
 
-```
+```bash
 sudo apt-get update
 sudo apt-get upgrade
 ```
@@ -136,7 +136,7 @@ Edit the config.txt file with nano.
 > config.txt is a configuration file that tells your PI what to do when it boots up. The changes we are making next will tell your PI to setup the necessary drivers to handle single pin GPIO operations required for your temperature component to work properly
 
 Type the following in a terminal:
-```
+```bash
 sudo nano /boot/config.txt
 ```
 
@@ -150,13 +150,13 @@ dtoverlay=w1-gpio
 
 Then reboot with:
 
-```
+```bash
 sudo reboot
 ```
 
 Mount the device drivers and confirm whether the device is connected or not.
 
-```
+```bash
 sudo modprobe w1-gpio
 sudo modprobe w1-therm
 cd /sys/bus/w1/devices/
@@ -164,7 +164,7 @@ ls
 ```
 
 The result of the ls command should look like:
-```
+```bash
 root@rasberrypi:/sys/bus/w1/devices# ls
 28-00000495db35 w1_bus_master1
 ```
@@ -174,24 +174,24 @@ root@rasberrypi:/sys/bus/w1/devices# ls
 ##### Step 4: Test the temperature
 In the terminal type:
 
-```
+```bash
 cd 28-00000495db35
 ls
 ```
 
 The result should look like:
-```
+```bash
 root@rasberrypi:/sys/bus/w1/devices/28-00000495db35# ls
 driver id name power subsystem uevent w1_slave
 ```
 
 Type:
-```
+```bash
 cat w1_slave
 ```
 
 The result should look like:
-```
+```bash
 root@raspberrypi:/sys/bus/w1_slave/28-00000495db35# cat w1_slave
 a3 01 4b 46 7f ff 0d 10 ce : crc=ce YES
 a3 01 4b 46 7f ff 0d 10 ce t=26187
@@ -203,13 +203,13 @@ The second line `t=26187` is the current temperature value. If you want to conve
 Change directory and edit the program.
 > Here the program is named 26_ds18b20 (the lesson number, followed by the name of the component). We need to edit the file to replace the serial number of the temperature sensor in the code with the serial number you found before. Carefully type your serial number in after typing the following:
 
-```
+```bash
 cd /home/pi/SunFounder_SensorKit_for_RPi2/Python/
 nano 26_ds18b20.py
 ```
 
 ##### Step 6: Run the temperature demo program
-```
+```bash
 sudo python3 26_ds18b20.py
 ```
 Now, you should see the current temperature value displayed on the screen.
@@ -245,18 +245,18 @@ A `barometer` measures air pressure. The BMP180 barometer measures temperature a
 Install smbus for I2C.
 
 > i2c is a type of communication protocol used for serial devices like the barometer 
-```
+```bash
 sudo apt-get install python3-smbus i2c-tools
 ```
 ##### Step 4: Installing utilities
 We'll need to install some utilities for the Raspberry Pi to communicate over I2C.
-```
+```bash
 git clone https://github.com/adafruit/Adafruit_Python_BMP.git
 cd Adafruit_Python_BMP
 sudo python3 setup.py install
 ```
 ##### Step 5: Change directory.
-```
+```bash
 cd /home/pi/SunFounder_SensorKit_for_RPi2/Python/
 Step 6: Run.
 sudo python3 31_barometer.py
@@ -288,11 +288,11 @@ For more information, please refer to the datasheet of DHT11.
 ![humdity wiring](./img/humidity-wiring.png)
 
 ##### Step 2: Change directory.
-```
+```bash
 cd /home/pi/SunFounder_SensorKit_for_RPi2/Python/
 ```
 ##### Step 3: Run.
-```
+```bash
 sudo python3 28_humiture.py
 ```
 Now, you can see humidity and temperature value printed on the screen.
@@ -341,7 +341,7 @@ debug (boolean) :   Setting debug to true displays additional detail about reque
 ```
 
 To use the library you can do the following:
-```
+```python
 from iftttlib import IFTTTLib
 ifttt = IFTTTLib()
 ifttt.setKey("your_key")
@@ -350,24 +350,25 @@ ifttt.invokeWebhookTrigger("your_event_name","21")
 
 Let's add this code to the barometer program we used.
 
-```
+```bash
 cd /home/pi/SunFounder_SensorKit_for_RPi2/Python/
 ```
 
 Instead of overwriting our program, lets copy it.
 
-```
+```bash
 cp 31_barometer.py ng_weather.py
 ```
 
 Now edit `ng_weather.py` to add in our necessary code to send data to IFTTT:
 
-```
+```bash
 sudo nano ng_weather.py
 ```
 
 > Make sure to replace the "your_key" value below with your secret webhook key from IFTTT
-```
+
+```python
 #
 # Modified barometer example from https://github.com/sunfounder/SunFounder_SensorKit_for_RPi2/blob/master/Python/31_barometer.py to work with IFTTTlib by Matt Hale
 #
