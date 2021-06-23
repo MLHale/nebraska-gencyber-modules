@@ -36,7 +36,7 @@ The objective of the game is to deliver all packets from the originating compute
 
 ### Warm-up Activity
 
-Host a discussion on routing tables and how packets travel over a network.
+Host a discussion on routing tables and how packets travel over a network after watching [this video](https://www.youtube.com/watch?v=AYdF7b3nMto).
 
 ## Activity Instructions
 
