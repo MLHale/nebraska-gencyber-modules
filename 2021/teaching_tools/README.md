@@ -229,6 +229,11 @@ In a Breakout Box activity, students work together and think critically to "brea
 ---------------
 <div id='author'/>
 
+# Unplugged Activities and Computational Thinking bins
+[Unplugged Activities Overview Slides](./images/unplugged-activities.pptx)
+> Slides by Brian Dorn
+
+[Computational Thinking Bins Slides](./images/ctbins-cryptography.pptx)
 ## Lead Author
 
 Kristeen Shabram
@@ -240,7 +245,3 @@ Overall content: Copyright (C) 2017-2021  [Dr. Matthew L. Hale](http://faculty.i
 
 Lesson content: Copyright (C) [Dr. Matthew L. Hale](http://faculty.ist.unomaha.edu/mhale/) 2017-2018.  
 <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /></a><br /><span xmlns:dct="http://purl.org/dc/terms/" property="dct:title">This lesson</span> is licensed by the author under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</a>.
-
-
-
-

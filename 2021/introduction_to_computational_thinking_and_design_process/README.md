@@ -50,6 +50,9 @@ None
   - [License](#license)
 
 <!-- /TOC -->
+### Slide deck conceptual intro to computational Thinking
+[CT Intro Slidedeck](./img/ctintro.pptx)
+> Slides by Brian Dorn
 
 ### The Design Process
 Design is about more than sitting down and starting to code or building something. In the real world when faced with a complex problem, companies, and individuals need a systematic process to think about the problem, consider all of the stakeholders and come up with a solution. In this lesson, we examine a 5-step `design thinking process` created by the [Hasso-Plattner Institute of Design at Stanford](https://dschool.stanford.edu/). Their process is iterative and non-linear.
