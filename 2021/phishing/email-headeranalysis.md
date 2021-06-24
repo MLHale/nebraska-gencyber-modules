@@ -235,7 +235,17 @@ Google has an [online tool](https://toolbox.googleapps.com/apps/messageheader/) 
 
 ## Exercise
 
-Open up the files in the ["email-headers" Folder](./email-headers) using the Google Header analysis tool and then answer the questions in each one of them. Check your answers with a peer. If they differ then work with your peer to come to a final conclusion. Links to the online tools are shown above.
+Analyze the following headers:
+
+* [Header 1](./email-headers/email-header1.txt)
+* [Header 2](./email-headers/email-header2.txt)
+* [Header 3](./email-headers/email-header3.txt)
+* [Header 4](./email-headers/email-header4.txt)
+* [Header 5](./email-headers/email-header5.txt)
+* [Header 6](./email-headers/email-header6.txt)
+
+
+Open up the files in the "email-headers" Folder](./email-headers) using the Google Header analysis tool and then answer the questions in each one of them. Check your answers with a peer. If they differ then work with your peer to come to a final conclusion. Links to the online tools are shown above.
 
 * [Network-tools](http://network-tools.com)
 * [Google Message Header Analyzer](https://toolbox.googleapps.com/apps/messageheader/)
