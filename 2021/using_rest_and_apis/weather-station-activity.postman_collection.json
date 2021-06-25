@@ -1,0 +1,265 @@
+{
+	"info": {
+		"_postman_id": "93686f87-0625-4918-bcaa-7153a413ae55",
+		"name": "GenCyber teacher 2021",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Register new station",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"let response = pm.response.json();",
+							"let id = response.ID;",
+							"console.log(id);",
+							"pm.collectionVariables.set(\"station\", id);"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"external_id\" : \"matt-test-1\",\n    \"name\" : \"Matt Test Station\",\n    \"latitude\" : 41.24743422140127,\n    \"longitude\" : -96.01729083356045\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://api.openweathermap.org/data/3.0/stations?appid={{appid}}",
+					"protocol": "http",
+					"host": [
+						"api",
+						"openweathermap",
+						"org"
+					],
+					"path": [
+						"data",
+						"3.0",
+						"stations"
+					],
+					"query": [
+						{
+							"key": "appid",
+							"value": "{{appid}}"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete a station",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://api.openweathermap.org/data/3.0/stations/60cb413409e7430001b9ef82?appid={{appid}}",
+					"protocol": "http",
+					"host": [
+						"api",
+						"openweathermap",
+						"org"
+					],
+					"path": [
+						"data",
+						"3.0",
+						"stations",
+						"60cb413409e7430001b9ef82"
+					],
+					"query": [
+						{
+							"key": "appid",
+							"value": "{{appid}}"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get all stations",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://api.openweathermap.org/data/3.0/stations?appid={{appid}}",
+					"protocol": "http",
+					"host": [
+						"api",
+						"openweathermap",
+						"org"
+					],
+					"path": [
+						"data",
+						"3.0",
+						"stations"
+					],
+					"query": [
+						{
+							"key": "appid",
+							"value": "{{appid}}"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Station info for Matt test",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": null
+			},
+			"response": []
+		},
+		{
+			"name": "Get station measurements",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							"let now = Math.round(new Date().getTime() / 1000);",
+							"let yesterday = now - (24 * 3600);",
+							"pm.environment.set('yesterday', yesterday);"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://api.openweathermap.org/data/3.0/measurements?station_id=60cb400309e7430001b9ef81&appid={{appid}}&type=h&limit=24&from={{yesterday}}&to={{$timestamp}}",
+					"protocol": "http",
+					"host": [
+						"api",
+						"openweathermap",
+						"org"
+					],
+					"path": [
+						"data",
+						"3.0",
+						"measurements"
+					],
+					"query": [
+						{
+							"key": "station_id",
+							"value": "60cb400309e7430001b9ef81"
+						},
+						{
+							"key": "appid",
+							"value": "{{appid}}"
+						},
+						{
+							"key": "type",
+							"value": "h"
+						},
+						{
+							"key": "limit",
+							"value": "24"
+						},
+						{
+							"key": "from",
+							"value": "{{yesterday}}"
+						},
+						{
+							"key": "to",
+							"value": "{{$timestamp}}"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create new station measurement",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "[\n    {\n        \"station_id\" : \"60cb400309e7430001b9ef81\",\n        \"dt\" : 1623867134,\n        \"temperature\" : 21,\n        \"pressure\" : 1021,\n        \"humidity\" : 87\n    }\n]",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://api.openweathermap.org/data/3.0/measurements?appid={{appid}}",
+					"protocol": "http",
+					"host": [
+						"api",
+						"openweathermap",
+						"org"
+					],
+					"path": [
+						"data",
+						"3.0",
+						"measurements"
+					],
+					"query": [
+						{
+							"key": "appid",
+							"value": "{{appid}}"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "appid",
+			"value": "fef72e0b7375fba5e2f0d17db83d0486"
+		},
+		{
+			"key": "station",
+			"value": "60cb400309e7430001b9ef81"
+		}
+	]
+}

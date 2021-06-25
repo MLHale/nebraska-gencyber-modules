@@ -40,26 +40,31 @@ For this lesson, you will need:
 * Raspberry PI
 
 ### Prerequisite lessons
-You should complete the [Intro to components](./intro_to_components/README.md), [Computational thinking](introduction_to_computational_thinking_and_design_process), and [Web services and IFTTT](./web_services_and_ifttt/README.md) lessons before attempting this lesson.
+You should complete the [Intro to components](./intro_to_components/README.md), [Computational thinking](introduction_to_computational_thinking_and_design_process), [Web services and IFTTT](./web_services_and_ifttt/README.md), and [Building and Iot Device](./building_an_iot_device/README.md) lessons before attempting this lesson.
 
 ### Table of Contents
-<!-- TOC START min:1 max:3 link:true update:false -->
-  - [Step 1: Background](#step-1-background)
-  - [Step 2: Ok, lets take a look at a real API](#step-2-ok-lets-take-a-look-at-a-real-api)
-  - [Step 3: Getting our API Key](#step-3-getting-our-api-key)
-  - [Step 4: Making your first REST request](#step-4-making-your-first-rest-request)
-  - [Step 5: GET device info](#step-5-get-device-info)
-  - [Step 6: First POST request to turn the device on](#step-6-first-post-request-to-turn-the-device-on)
-  - [Exercise](#exercise)
-  - [Checkpoint](#checkpoint)
-  - [Additional Resources](#additional-resources)
-- [Lead Author](#lead-author)
-  - [Acknowledgements](#acknowledgements)
-  - [License](#license)
-
+<!-- TOC START min:1 max:3 link:true asterisk:false update:true -->
+        - [Cybersecurity First Principles in this lesson](#cybersecurity-first-principles-in-this-lesson)
+        - [Introduction](#introduction)
+        - [Goals](#goals)
+        - [Materials Required](#materials-required)
+        - [Prerequisite lessons](#prerequisite-lessons)
+        - [Table of Contents](#table-of-contents)
+        - [Background](#background)
+        - [Ok, lets take a look at a real API](#ok-lets-take-a-look-at-a-real-api)
+    - [Activities](#activities)
+        - [REST Role Play](#rest-role-play)
+    - [Working with a real API and Raspberry PI](#working-with-a-real-api-and-raspberry-pi)
+        - [Step 1: Setup an Openweather API account and get your key](#step-1-setup-an-openweather-api-account-and-get-your-key)
+        - [Step 2: READ THE DOCUMENTATION!](#step-2-read-the-documentation)
+        - [Step 3: Working with POSTMAN or Python](#step-3-working-with-postman-or-python)
+        - [Extension: Working with Python](#extension-working-with-python)
+    - [Lead Author](#lead-author)
+        - [Acknowledgements](#acknowledgements)
+        - [License](#license)
 <!-- TOC END -->
 
-### Step 1: Background
+### Background
 Before we get started, lets talk about what an `API` is.
 
 > This background text and its associated images are modified for this setting by Matt Hale. Modifications are licensed under creative commons share-alike. The original material it is based upon was created by the Mozilla foundation and its contributors. Credit: [https://developer.mozilla.org/en-US/docs/Web/HTTP/Overview](https://developer.mozilla.org/en-US/docs/Web/HTTP/Overview#)
@@ -165,12 +170,127 @@ Bodies can be broadly divided into three categories:
 *   **Single-resource bodies**, consisting of a single file of unknown length, encoded by chunks with `Transfer-Encoding` set to `chunked`.
 *   **[Multiple-resource bodies](https://developer.mozilla.org/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types#multipartform-data)**, consisting of a multipart body, each containing a different section of information. These are relatively rare.
 
-### Step 2: Ok, lets take a look at a real API
+### Ok, lets take a look at a real API
 Phew, enough background. In the previous [lesson](./building_an_iot_device/README.md), we wired our `Raspberry PI` up to the web and explored how we could send it signals using [IFTTT](https://ifttt.com). We saw that if we collected the weather information, we could craft a `request` to the have `IFTTT webhook maker service` and have it do something using another service. Web APIs in general can use  _requests_ and _responses_ to process all kinds of web information. These are central to the concept of `RESTful APIs`. REST, or REpresentational State Transfer, APIs, or Application Programming Interfaces, are tools that developers use to provide __abstraction__ and __resource encapsulation__ to people who want to interact with their data.
 
 APIs allow you to get and save data back to the application, without needing to tightly integrate with that application. This improves __simplicity__ and helps your code to be more __modular__. APIs include `endpoints`, such as `/api/events`, that allow you to access certain specific data (e.g. events in this example). API endpoints help provide __minimization__ since users can only interact with the application through those interfaces provided by the developer.
 
 ...Enough talk! Lets look at an API!
+
+To work with weather data, like the data we acquired from sensors on our Raspberry PI in the previous lesson, it might make sense to work with a `weather data API`. We can imagine that a weather data API might have abilities like the following:
+- create a new weather station site 
+- update a weather station site's information (e.g. its name or location)
+- delete a weather station site (e.g. it goes down permanently)
+- create a new weather reading at a site 
+- view weather readings at a site 
+- view the most recent weather reading at a site 
+
+Now... We could build this ourselves by creating a web server, writing code to handle each one of these `endpoints`, and deploying it on the internt.
+
+OR... We can use existing, FREE, resources like the `openweather api` which is a freemium api on the internet for hobbist weather station operators. 
+
+Openweather API does all of these things for us. Read more about it at [https://openweathermap.org/stations](https://openweathermap.org/stations)
+
+
+## Activities
+
+### REST Role Play
+For the REST Role Play activity, you only need some paper, post-it notes, and a few pencils. Access to a white board is also helpful. In this `unplugged activity` students role play various parts of the `invocation chain` involved in the operation of the internet.
+
+The primary roles are:
+
+- `web server endpoint handler` - The web server endpoint handler role is responsible for checking that incoming `http requests` correctly match their input parameters. If a request does not match the parameters, they must generate an `http response` with an `error code` (like `404 not found` or `500 error`) to tell the requestor that their request was erroneous. If you are running the weather example from the prior [Building and Iot Device](./building_an_iot_device/README.md) lesson, consider using the following fields:
+  - `/api/temperature?temperature=____&location=____&time=____`
+  - `/api/pressure?pressure=____&location=____&time=____`
+  - `/api/humidity?humidity=____&location=____&time=____`
+- `web server database` - The web server database role is responsible for updating the current values the database holds with the values passed in through one of the endpoints. You might also have this person generate the appropriate `http response` to notify requestors that the request to update the database succeeded (e.g. a `200 ok http response`). If you are running the weather example from the prior [Building and Iot Device](./building_an_iot_device/README.md) lesson, consider using the following fields:
+  - `temperature`
+  - `air pressure`
+  - `humidity`
+- `Phone` - The phone role is to simulate an end user. If you are using a weather example like the one from the prior [Building and Iot Device](./building_an_iot_device/README.md), then the phone might be running a weather app.
+- `Weather Station` - The Weather station (or another input device if you are using a different example) role is responsible for collecting the weather data (or other data) and reporting it periodically to the `web server` using `http requests`
+- `HTTP Request` - This role is responsible for sending data from a phone or weather station, waiting at the webserver, and then picking up the http response.
+- `HTTP Response` - This role goes back from two parties after a http request was communicated.
+
+We recommend you walk through a full example with students first, then let your students run through it while pausing to address first principles and misconceptions as they go.
+
+You might consider using the following free resources:
+- ![handouts](./img/api.jpg)
+- ![handouts](./img/phone.png)
+- ![handouts](./img/weather-station.jpeg)
+- ![handouts](./img/http.png)
+- ![handouts](./img/http-response.png)
+
+## Working with a real API and Raspberry PI
+This activity is much more technical than the role play activity. It works as a great follow-on activity with students with a firm technology foundation (e.g. from other prior lessons).
+
+### Step 1: Setup an Openweather API account and get your key
+To use the openweather API, we need to get an `api key`. An API Key is like the secret key we used with `IFTTT`. It is essentially a password that `authenticates` you 
+(or code you write) to the API and allows you the `privileges` you need to use the functions of the API.
+
+To signup at openweather, visit:
+
+[https://openweathermap.org/register](https://openweathermap.org/register)
+
+Once you setup an account at openweather, you can get your `APIKEY` by visiting:
+
+[https://home.openweathermap.org/api_keys](https://home.openweathermap.org/api_keys)
+
+Here you can also generate new keys. For classrooms, you might consider setting up a few different teacher accounts and then generating a few keys per account to give to students, so that they don't have to setup accounts themselves. 
+
+### Step 2: READ THE DOCUMENTATION!
+Most APIs worth their salt will provide detailed `API Documentation` that describes all of the capabilities they have (just like we saw in the REST Role Play exercise if you ran that activity).
+
+Capabilities should be defined as a set of `endpoints` with details about what `request parameters` (or input data values that must or can be present in the request) they accept along with the kinds of `response output` values the endpoint generates as a response. These descriptions are really speaking to the kind of structure used in `HTTP Requests` and `HTTP Responses` involved on the server. 
+
+You can find the documentation for the Openweather API at [https://openweathermap.org/stations](https://openweathermap.org/stations)
+
+### Step 3: Working with POSTMAN or Python 
+Once students have an understanding of the documentation, they could work in [POSTMAN](https://chrome.google.com/webstore/detail/postman/fhbjgbiflinjbdggehcddcbncdddomop?hl=en), a web request testing framework, or even write code in python to work with the API directly. 
+
+For scaffolding, we suggest starting in POSTMAN and moving to code.
+
+Following the documentation, we have packaged requests for postman to invoke each of the `endpoints` the open weather api supports. You can download those [here](./weather-station-activity.postman_collect.json)
+
+You can have your students download this collection, change the environment variables in the collection to their `appid` (their api key), create their first weather station, and then save their weather station id in the collection. 
+
+> Please note, it is best to download postman onto mac, windows, or linux. If students are using raspberry pi as their only device to run POSTMAN, the interface might look slightly different and may have slightly different functionality than shown. 
+
+Importing the collection is as simple as:
+![import](./img/import-collection1.png)
+
+![import](./img/import-collection2.png)
+
+![import](./img/imported-collection.png)
+
+Once you have imported the collection, you should see:
+![import](./img/imported-collection2.png)
+
+Now, just have the students first add their `API Key` (called `appid`):
+![edit variables](./img/edit-collection-variables.png)
+
+![edit variables](./img/edit-collection-variables2.png)
+
+![edit variables](./img/edit-collection-variables3.png)
+
+Have them insert their key in the appid section.
+
+Now have them make their first `POST` request to create a new station. 
+
+Use the `Register Station` item from the collection:
+
+![register station](./img/register-station.png)
+
+Have the students copy the `ID` value returned from the response and paste that into the `station` environment variable, by editing the collection as shown above. This will save the variable so students dont have to repeatedly type the same thing over and over. 
+
+You can now have the students explore the collection to create new data values manually. 
+
+### Extension: Working with Python 
+After students have a foundation with requests and responses, you could have them use a python library to write additional code to their raspberry pi to automatically send data to the weather station api. 
+
+Students can use libraries like [py requests](https://docs.python-requests.org/en/master/) to create, format, and send `HTTP Requests` to web servers. 
+
+This activity is left as homework, but if you have questions, free free to reach out. 
 
 ## Lead Author
 
