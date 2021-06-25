@@ -40,19 +40,19 @@ We now examine 10 cybersecurity first principles.
 - Create barriers around protected objects.
 
 #### 3. Resource Encapsulation
-- Control interactions with the protected object.
+- Monitor interactions with protected objects.
 
 #### 4. Least Privilege
-- Assign needed permissions for interactions with protected objects.  
+- Define permissions for interactions with protected objects.  
 
 #### 5. Layering
 - Use more than one way to stop an intrusion.
 
 #### 6. Abstraction
-- Adapt computational services to their use.
+- Adapt computers for their use.
 
 #### 7. Data Hiding
-- Limit exposure of the protected objects.
+- Hide protected objects from unwanted exposure.
 
 #### 8. Modularity
 - Use interchangeable components.
