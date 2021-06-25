@@ -248,7 +248,7 @@ Once students have an understanding of the documentation, they could work in [PO
 
 For scaffolding, we suggest starting in POSTMAN and moving to code.
 
-Following the documentation, we have packaged requests for postman to invoke each of the `endpoints` the open weather api supports. You can download those [here](./weather-station-activity.postman_collect.json)
+Following the documentation, we have packaged requests for postman to invoke each of the `endpoints` the open weather api supports. You can download those [here](../weather-station-activity.postman_collection.json)
 
 You can have your students download this collection, change the environment variables in the collection to their `appid` (their api key), create their first weather station, and then save their weather station id in the collection. 
 
