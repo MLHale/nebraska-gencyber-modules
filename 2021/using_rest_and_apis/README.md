@@ -209,11 +209,15 @@ The primary roles are:
 We recommend you walk through a full example with students first, then let your students run through it while pausing to address first principles and misconceptions as they go.
 
 You might consider using the following free resources:
-- ![handouts](./img/api.jpg)
-- ![handouts](./img/phone.png)
-- ![handouts](./img/weather-station.jpeg)
-- ![handouts](./img/http.png)
-- ![handouts](./img/http-response.png)
+![handouts](./img/api.jpg)
+
+![handouts](./img/phone.png)
+
+![handouts](./img/weather-station.jpeg)
+
+![handouts](./img/http.png)
+
+![handouts](./img/http-response.png)
 
 ## Working with a real API and Raspberry PI
 This activity is much more technical than the role play activity. It works as a great follow-on activity with students with a firm technology foundation (e.g. from other prior lessons).
