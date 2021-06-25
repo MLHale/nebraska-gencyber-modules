@@ -25,46 +25,46 @@ This lesson is about defining cybersecurity first principles for elementary or m
 
 ## Cybersecurity First Principles
 
-### What are first principles?
+### What are Cybersecurity first principles?
 
-Building a secure system is a design problem. Which means that there is no de-facto recipe to do so. In the absence of methodical techniques, experience has contributed to a set of first principles. The principles are basic, foundational propositions regarding what qualities of a system contribute to cybersecurity. These principles guide system design decisions and tradeoffs that contribute to cybersecurity.
+The principles are basic activities in designing a good security system.
 
 ### Stepping through the principles
 
 We now examine 10 cybersecurity first principles.
 
 #### 1. Domain Separation
-- Define boundaries around protected objects.
+> Define boundaries around protected objects.
 
 #### 2. Process Isolation
-- Create barriers around protected objects.
+> Create barriers around protected objects.
 
 #### 3. Resource Encapsulation
-- Monitor interactions with protected objects.
+> Monitor interactions with protected objects.
 
 #### 4. Least Privilege
-- Define permissions for interactions with protected objects.  
+> Define permissions for interactions with protected objects.  
 
 #### 5. Layering
-- Use more than one way to stop an intrusion.
+> Use more than one way to stop an intrusion.
 
 #### 6. Abstraction
-- Adapt computers for their use.
+> Adapt computers for their use.
 
 #### 7. Data Hiding
-- Hide protected objects from unwanted exposure.
+> Hide protected objects from unwanted exposure.
 
 #### 8. Modularity
-- Use interchangeable components.
+> Use interchangeable components.
 
 #### 9. Simplicity
-- Avoid unnecessary complexity.
+> Avoid unnecessary complexity.
 
 #### 10. Minimization
-- Reduce exposed areas.
+> Reduce exposed areas.
 
 ### How do the First Principles Relate to each other?
-> Think of the first three principles as the necessary elements of building a protection mechanism, like a Castle: Wall, Door, Guard and Check. They help you answer the question, how to build a protection mechanism.
+Think of the first four principles are the necessary elements of building a protection mechanism, like a Castle: Wall, Door, Guard and Check. They help you answer the question, how to build a protection mechanism.
 The rest of the principles that follow, contribute to the quality of the protection mechanism. They help you answer the question, how good is the protection mechanism.
 
 ## Additional Resources

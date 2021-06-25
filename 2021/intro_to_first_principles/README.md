@@ -286,7 +286,7 @@ We now examine 10 cybersecurity first principles. This discussion is adapted fro
 
 
 ### How do the First Principles Relate to each other?
-> Think of the first three principles as the necessary elements of building a protection mechanism, like a Castle: Wall, Door, Guard and Check. They help you answer the question, how to build a protection mechanism.
+> Think of the first four principles as the necessary elements of building a protection mechanism, like a Castle: Wall, Door, Guard and Check. They help you answer the question, how to build a protection mechanism.
 The rest of the principles that follow, contribute to the quality of the protection mechanism. They help you answer the question, how good is the protection mechanism.
 
 ### CIA Triad - Expectations that humans have from other entities in possession of information
