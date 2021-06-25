@@ -3,18 +3,37 @@ layout: page
 title: Internet of Strings
 ---
 
-# Hands-on IoT: Internet of Strings
+# Lesson Plan: Hands-on IoT Internet of Strings
 
-### Cybersecurity First Principles in this lesson
+### Summary
 
-* __Modularization__: The concept of modularity is like building blocks. Each block (or module) can be put in or taken out from a bigger project. Each module has its own separate function that is interchangeable with other modules.
+This module will introduce students to networking and routing concepts through an interactive game.
 
-* __Abstraction__: An abstraction is a representation of an object or concept. It could be something such as a door, a speedometer, or a data structure in computer science. Abstraction decouples the design from the implementation. The gauges in an automobile are an abstraction of the performance of a car. A map is an abstraction of the earth.
+### Grade
 
-### Objectives
+Can be modified as needed to accommodate grade level
 
-This lesson will aid students in understanding how routing occurs within networks.<br> 
-The objective of the game is to deliver all packets from the originating computer to the receiving computer as quickly as possible.
+### Cybersecurity First Principles in this Lesson
+
+- [ ] Domain Separation
+- [ ] Process Isolation
+- [ ] Resource Encapsulation
+- [x] Modularity
+- [ ] Least Privilege
+- [x] Abstraction
+- [ ] Data Hiding
+- [ ] Layering
+- [ ] Simplicity
+- [ ] Least Privilege
+- [ ] Minimization
+- [ ] Modularization
+- [ ] Resource Encapsulation
+- [ ] Simplicity
+
+### Learning Objectives
+
+1. Students understand the role of routers, TCPs, & packets within networks.
+2. Students will be able to visualize the activity of networks.
 
 ### Materials
 
@@ -24,8 +43,7 @@ The objective of the game is to deliver all packets from the originating compute
 * Envelopes
 * Post-it notes (for MS/HS version)
 
-### Preparation
-#### For a class of 30 kids (can be modified for other class sizes)
+### Preparation (for a class of 30)
 
 * Label 4 envelopes with “From: Computer 1, To: Computer 2”. Label the next 4 with “From: Computer 2, To: Computer 3”. Label the last 4 with “From: Computer 3, To: Computer 1”.
 * Write 4-word phrases on the index cards - one word per index card.
@@ -34,66 +52,19 @@ The objective of the game is to deliver all packets from the originating compute
 
 \* If running the MS/HS version, the routing tables are only compatible with the given floor network map, so you will have to create your own routing tables if you modify the map.
 
+### Learning Facilitation
+
 ### Warm-up Activity
 
-Host a discussion on routing tables and how packets travel over a network.
+Watch [this video](https://www.youtube.com/watch?v=AYdF7b3nMto) and host a discussion on routing tables and how packets travel over a network.
 
-## Activity Instructions
+## Focused Activity
 
-***Setup***
+Students will role play as components of digital networks. The objective of the game is to successfully deliver a team's packets from an originating computer to its destination computer.
 
-1. Assign 3 kids as computers, 3 as TCP, 12 to hold packets (4 at each computer), and 12 as routers.
-2. Originating computers each hold 4 papers (when the papers are put together, they make a phrase). Packets each hold an envelope.
-3. When the game starts, originating computers put one piece of the phrase in each packet’s envelope.
-
-#### Activity Process
-
-* Once packets receive the "message" from their computer, they start to travel the network lines (the blue tape). Encourage them not to travel together. 
-* When they arrive at a router, the router directs the packets on the quickest route to its destination. 
-* If a packet collides with another packet, return the packet to the router it came from, wait 10 seconds before going to the next hop again.
-* When a packet arrives at its destination, TCP must verify that it arrived at the correct computer by checking the envelope. It then informs the computer, and the computer must yell “Packet Received!”
-* When all packets have been received and TCP has put them in the correct order, the receiving computer must yell the phrase. 
-* <b>To increase difficulty:</b> While the game is in process, cut random network lines (break the tape between two routers) and declare that line "Out of Service". The routers must adapt to find the quickest available route without that line.
-
-#### Continued Activity Process (MS/HS Level)
-
-If you are the first router to receive this packet
-1. Refer to your node's routing table and select the least cost route to final destination.
-2. Build packet header on post-it note (see below) and place on packet envelope.
-3. Move to the next hop.
-
-***Packet Header Format (for MS/HS version)***: Each post-it note packet header should contain the following information:
-
-<ul>
- 
-    Source: computer the message started at
-    Destination: computer the message should travel to
-    Next Hop: next router to travel to
-    
-</ul>
-
-<br>
-
-*When you arrive at a router:*
-1. Review packet header and determine if message is for the router you are at.
-    - If message is for this router, announce results, either "message received" or "message misrouted".
-    - If message is not for this router, hand packet to next individual and continue with step 2 below.
-
-2. Refer to the current node's routing table and select the least cost route to final destination
-    - If there is no route to final destination announce "bad route" and go to the end of the line for that router.
-    - If there is a route but the link you need is not available.
-      a. Check to see if there is a higher cost route available.
-      b. If there is a higher cost route use it and continue with number 3.
-      c. If there is not a higher cost route announce "link down".
-      
-3. Build new packet header by adding a new next hop and place on packet
-
-*If you are moving to the next hop and collide with another packet:*
-1. Return to the router you came from
-2. Wait 10 seconds before going to the next hop again.
-
-<br>
-<br>
+If time permits:
+* Increase the difficulty by "breaking network lines" (cut the tape). Students will have to reroute to find the quickest route on the available network lines.
+* Allow students to switch roles so they can better understanding other components of the network.
 
 ### Closure
 
