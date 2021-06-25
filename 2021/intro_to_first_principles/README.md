@@ -395,7 +395,7 @@ If there is a question as to where the card should be placed the answer is on th
 ## Additional Resources
 
 - [Quick review of first principles using pictures](https://spark.adobe.com/page/DbZGSqJ12Q82A/)
-- [One-line defintitions for Cybersecurity first principles](./definitions-simple.md)
+- [One-line definitions for Cybersecurity first principles](./definitions-simple.md)
 - [NSA document listing Cybersecurity first principles](https://users.cs.jmu.edu/tjadenbc/Bootcamp/0-GenCyber-First-Principles.pdf)
 - [First Principle Hand Gestures](https://gencyber.utulsa.edu/wp-content/uploads/2016/10/10-Principles-GenCyber-Card-Game.pdf)
 - [Scratch Activity and Quiz: Castle Story by Briana Morrison](https://scratch.mit.edu/projects/546131482)
