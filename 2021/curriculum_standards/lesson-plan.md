@@ -1,86 +1,100 @@
 ---
 layout: page
-title: Web services and IoT using Littlebits and IFTTT (w/ droids)
+title: Lesson Plan Format
 ---
 
-### Summary
-In this lesson, students will explore a hands-on technology called Littlebits. Students will learn how to plug and play bits together to make some simple inventions.
+### The format for a general lesson plan is printed below 
 
-### Grade
-High School
+-------
+**Lesson Plan**: TITLE GOES HERE
 
-### Time Required
-2-3 hours
+**Summary:**
 
-### First principles
-- [ ] Domain Separation
-- [ ] Process Isolation
-- [x] Resource Encapsulation
-- [x] Modularity
-- [ ] Least Privilege
-- [x] Abstraction
-- [x] Data Hiding
-- [ ] Layering
-- [ ] Simplicity
-- [x] Minimization
+Include a 1 to 2 sentence summary of the lesson so that it is easily identifiable to others.
 
+**Grade:**
 
-### Learning Objectives
+Specify the appropriate grade range for the lesson. Examples are K-3, 4-5, 6-8, 9-12, Educators.
 
-* Students will interact with web services.
-* Create web services with Littlebits
+**Time Required:**
 
+Please give an estimated time for both prep and execution of the lesson.
 
-### Materials list
+**First principles:**
+* Domain Separation
+* Process Isolation
+* Resource Encapsulation
+* Modularity 
+* Least Privilege
+* Abstraction
+* Data Hiding 
+* Layering 
+* Simplicity 
+* Minimization
 
-* Littlebits kit
-* Power outlet nearby
-* Wi-Fi Internet Connection
+(Add an x in front of each of the above that apply.)
 
-### Learning Facilitation
+**Learning Objectives:**
+1.	Learning Objective 1
+2.	Learning Objective 2
 
-Each item below is optional.
+List the learning objectives (measurable, using verbs).
 
-#### Warm up Activity
+**Standards Addressed:**
+Which standards (CSTA, ISTE, NE) does the lesson cover?
 
-1. Have the students create an account and login to the Littlebits portal.
+**Materials list:**
+*	Item 1
+*	Item 2
 
-2. Have students continue with the hands-on activity and pair their cloudbit with the portal.
+List all the materials needed for the lesson. If they can be found on the internet, include the URL.
 
-#### Focused Activity
+**Learning Facilitation**
 
-* Continue with steps 3-8 of the module.
+In general we expect every lesson to have a warm-up activity (gently introduce the topic, connect to prior learning, explicitly state the purpose of learning the material and why the information is important), a focused activity where the majority of the learning occurs, and closure (wrap-up, summary of what was learned, how it applies to other topics, etc.).  Providing a reflection activity is beneficial to allow learners to further absorb the information and reflect on what they have experienced and learned.
 
-#### Closure
+**Warm up Activity**
 
-* Host a discussion and ask questions about the variety of services that could be created.
+Be as detailed as possible in defining one or more ways to introduce the topic. Connect to any previous topics the learners may understand and explain relevance of topic. Providing more than a single way to introduce the material is appreciated.
 
-#### Reflection
+**Focused Activity**
 
-* Review how each cybersecurity First Priciple were demonstrated in this module.
+Detailed lesson plan. Providing timings if known. If there are common student misconceptions or places where the lesson may be difficult for learners, please identify. If there are known “easy ways” to accomplish a task, please state, including any lessons learned. If there are places where learners may attempt to shortcut the lesson, please identify.  Basically include any and all information that you would want to know if you were going to teach the lesson.
 
-### Assessment
+**Closure**
 
-1. Assess the student's understanding of the concepts applied in this module.
+Provide a means to wrap-up the lesson and what content should be reviewed. What are the important concepts / objectives that learners should remember?
 
+**Reflection**
 
-[comment]: # (Quiz / Presentation / Project / Writing Assignment / Observation / Walk Around / Oral Questioning / Other)
+Is there an activity (journal prompt, partner discussion topic, etc.) that would allow learners to reflect on the material?  If so, please identify.
 
-### Accommodations for students with disabilities
+**Assessment**
 
-N/A
+Indicate an appropriate assessment activity to determine if the learning objectives have been met. You may link to another file (test, quiz, etc.) or other website (Kahoot, Quizlet) if assessments have been created.
 
-### Extension Activity
+**Accommodations for students with disabilities**
 
-N/A
+If the lesson needs to be modified for students with disabilities, please include that information here.
 
-### Module Lead Author
+**Extension Activity (ies)**
 
-[Dr. Matthew L. Hale](http://faculty.ist.unomaha.edu/mhale/)
+Please give information on additional activities that serve as follow-up, can be done by students who finish early, or as at home assignments.
 
-### Acknowledgements
+**Module Lead Author**
 
-Special thanks to [Dr. Robin Gandhi](http://faculty.ist.unomaha.edu/rgandhi/) for reviewing and editing this lesson.
+Put your name (and any co-authors) here. You may link to a personal/professional web page if you have one.
+
+**License:**
+
+Nebraska GenCyber   is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License.
+
+Overall content: Copyright (C) 2021 Dr. Matthew L. Hale, Dr. Robin Gandhi, Briana Morrison, and Brian Dorn.
+
+Lesson content: Copyright (C) [Your name here](your site here) 2021.
+ This lesson is licensed by the author under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License.
+
+------------
 
 ## License
 [Nebraska GenCyber](https://github.com/MLHale/nebraska-gencyber) <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /></a><br /> is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</a>.

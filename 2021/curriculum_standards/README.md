@@ -25,12 +25,107 @@ By the end of this you will be:
 <!-- ### Materials Required
 
 * A free IFTTT Account (instructions to create one in this lesson) -->
-
+--------
 ### Slides
-Here are the [slides](./img/slides.pptx).
+Here are the [slides](./img/slides.pptx). (The information from this slideshow is also printed below)
 
+### Plans for the week
+We are asking you to creeate a new cybersecurity lesson:
+* For your classroom
+* To share with others (this and future years)
+
+You can do this alone or in small groups (2-3).
+You will be able to have a "dry run" of the lesson by teaching it to this group. 
+### Lesson Documentation
+You will write up your new lesson in a prescribed format:
+* title
+* summary
+* targeted grade/age level
+* time requirement
+* first principles addressed
+* learning objectives
+* standards addressed
+* material list
+### Continued...
+* lesson plan (warm up, focused, closure, reflection)
+* assessment
+* accommodations
+* extensions
+* authorship
+Creative Commons Licensee
+
+### Dry Runs
+We have allocated time for you to "practice" your lesson once and update any lesson documentation based on experience and feedback from the group. 
+
+### Timing
+Research and Prep
+* Friday morning
+* Monday morning
+* Monday afternoon
+
+Feedback
+* Tuesday morning (circle share)
+* Friday - dry runs
+
+### Curriculum Standards 
+* K-12 Computer science framework
+* CSTA CS Standards
+* ISTE Standards for Students
+    * ISTE Computational Thinking Competencies
+* Nebraska CS Standards
+
+### K-12 Computer Science Framework
+* https://k12cs.org/
+
+### CSTA CS Standards
+* https://www.csteachers.org/page/standards
+* Ages 5-16
+    * Computing Systems (devices, hardware & software, troubleshooting)
+    * Networks & the internet (network communication & organization, cybersecurity)
+    * Data & analysis (storage, collection, visualization & transformation, inference & models)
+    * Algorithms & programming (algorithms, variables, control, modularity, program development)
+    * Impacts of computing (culture, social interactions, safety, law, & ethics)
+    
+### ISTE Standards for Students
+* https://www.iste.org/standards/iste-standards-for-students
+* empowered learner
+* digital citizen
+* knowledge constructor
+* innovative designer
+* computational thinker
+* creative communicator
+* global collaborator
+
+### ISTE Computational Thinking Competencies
+* https://www.iste.org/standards/iste-standards-for-computational-thinking
+* Computational thinking (learner)
+* equity leader (leader)
+* collaborating around computing (collaborator)
+* creativity and design (designer)
+* integrating computational thinking (facilitator)
+* also CT Computencies for Educators
+
+### Nebraska CS Standards
+* https://www.education.ne.gov/nce/cis/
+* Computational Thinking Standards
+* Programming Standards
+* Classes 
+*   Foundations of Computing
+    * Computer Science Principles
+    * AP CS A
+    * Software Development
+    * Cybersecurity
+* [K-12 Technology Scope and Sequence](https://cdn.education.ne.gov/wp-content/uploads/2018/04/NEK12Tech.pdf)
+
+### Support
+Know that we are available for support during the week. Also available is Kristeen - another teacher!
+Questions?
+
+(end of slideshow)
+
+----------
 ### Lesson Plan Template
-Here is the [lesson plan template](./img/lesson-plan-template.docx)
+Here is the [lesson plan template.](./img/lesson-plan-template.docx) (This information is also available under the Curriculum Standards "Lesson Plan" link on the home page)
 ## Lead Author
 
 - Briana Morrison
