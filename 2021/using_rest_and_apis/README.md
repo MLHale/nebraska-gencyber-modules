@@ -43,25 +43,19 @@ For this lesson, you will need:
 You should complete the [Intro to components](./intro_to_components/README.md), [Computational thinking](introduction_to_computational_thinking_and_design_process), [Web services and IFTTT](./web_services_and_ifttt/README.md), and [Building and Iot Device](./building_an_iot_device/README.md) lessons before attempting this lesson.
 
 ### Table of Contents
-<!-- TOC START min:1 max:3 link:true asterisk:false update:true -->
-        - [Cybersecurity First Principles in this lesson](#cybersecurity-first-principles-in-this-lesson)
-        - [Introduction](#introduction)
-        - [Goals](#goals)
-        - [Materials Required](#materials-required)
-        - [Prerequisite lessons](#prerequisite-lessons)
-        - [Table of Contents](#table-of-contents)
-        - [Background](#background)
-        - [Ok, lets take a look at a real API](#ok-lets-take-a-look-at-a-real-api)
-    - [Activities](#activities)
-        - [REST Role Play](#rest-role-play)
-    - [Working with a real API and Raspberry PI](#working-with-a-real-api-and-raspberry-pi)
-        - [Step 1: Setup an Openweather API account and get your key](#step-1-setup-an-openweather-api-account-and-get-your-key)
-        - [Step 2: READ THE DOCUMENTATION!](#step-2-read-the-documentation)
-        - [Step 3: Working with POSTMAN or Python](#step-3-working-with-postman-or-python)
-        - [Extension: Working with Python](#extension-working-with-python)
-    - [Lead Author](#lead-author)
-        - [Acknowledgements](#acknowledgements)
-        - [License](#license)
+<!-- TOC START min:1 max:3 link:true asterisk:false update:false -->
+- [Background](#background)
+- [Ok, lets take a look at a real API](#ok-lets-take-a-look-at-a-real-api)
+- [Activities](#activities)
+    - [REST Role Play](#rest-role-play)
+- [Working with a real API and Raspberry PI](#working-with-a-real-api-and-raspberry-pi)
+    - [Step 1: Setup an Openweather API account and get your key](#step-1-setup-an-openweather-api-account-and-get-your-key)
+    - [Step 2: READ THE DOCUMENTATION!](#step-2-read-the-documentation)
+    - [Step 3: Working with POSTMAN or Python](#step-3-working-with-postman-or-python)
+    - [Extension: Working with Python](#extension-working-with-python)
+- [Lead Author](#lead-author)
+    - [Acknowledgements](#acknowledgements)
+    - [License](#license)
 <!-- TOC END -->
 
 ### Background
