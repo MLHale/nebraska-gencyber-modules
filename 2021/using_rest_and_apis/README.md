@@ -47,12 +47,12 @@ You should complete the [Intro to components](./intro_to_components/README.md), 
 - [Background](#background)
 - [Ok, lets take a look at a real API](#ok-lets-take-a-look-at-a-real-api)
 - [Activities](#activities)
-    - [REST Role Play](#rest-role-play)
-- [Working with a real API and Raspberry PI](#working-with-a-real-api-and-raspberry-pi)
+  - [REST Role Play](#rest-role-play)
+  - [Working with a real API and Raspberry PI](#working-with-a-real-api-and-raspberry-pi)
     - [Step 1: Setup an Openweather API account and get your key](#step-1-setup-an-openweather-api-account-and-get-your-key)
     - [Step 2: READ THE DOCUMENTATION!](#step-2-read-the-documentation)
     - [Step 3: Working with POSTMAN or Python](#step-3-working-with-postman-or-python)
-    - [Extension: Working with Python](#extension-working-with-python)
+  - [Extension: Working with Python](#extension-working-with-python)
 - [Lead Author](#lead-author)
     - [Acknowledgements](#acknowledgements)
     - [License](#license)
@@ -219,10 +219,10 @@ You might consider using the following free resources:
 
 ![handouts](./img/http-response.png)
 
-## Working with a real API and Raspberry PI
+### Working with a real API and Raspberry PI
 This activity is much more technical than the role play activity. It works as a great follow-on activity with students with a firm technology foundation (e.g. from other prior lessons).
 
-### Step 1: Setup an Openweather API account and get your key
+#### Step 1: Setup an Openweather API account and get your key
 To use the openweather API, we need to get an `api key`. An API Key is like the secret key we used with `IFTTT`. It is essentially a password that `authenticates` you 
 (or code you write) to the API and allows you the `privileges` you need to use the functions of the API.
 
@@ -236,14 +236,14 @@ Once you setup an account at openweather, you can get your `APIKEY` by visiting:
 
 Here you can also generate new keys. For classrooms, you might consider setting up a few different teacher accounts and then generating a few keys per account to give to students, so that they don't have to setup accounts themselves. 
 
-### Step 2: READ THE DOCUMENTATION!
+#### Step 2: READ THE DOCUMENTATION!
 Most APIs worth their salt will provide detailed `API Documentation` that describes all of the capabilities they have (just like we saw in the REST Role Play exercise if you ran that activity).
 
 Capabilities should be defined as a set of `endpoints` with details about what `request parameters` (or input data values that must or can be present in the request) they accept along with the kinds of `response output` values the endpoint generates as a response. These descriptions are really speaking to the kind of structure used in `HTTP Requests` and `HTTP Responses` involved on the server. 
 
 You can find the documentation for the Openweather API at [https://openweathermap.org/stations](https://openweathermap.org/stations)
 
-### Step 3: Working with POSTMAN or Python 
+#### Step 3: Working with POSTMAN or Python 
 Once students have an understanding of the documentation, they could work in [POSTMAN](https://chrome.google.com/webstore/detail/postman/fhbjgbiflinjbdggehcddcbncdddomop?hl=en), a web request testing framework, or even write code in python to work with the API directly. 
 
 For scaffolding, we suggest starting in POSTMAN and moving to code.
