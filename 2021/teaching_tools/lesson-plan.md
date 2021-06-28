@@ -1,41 +1,41 @@
 ---
 layout: page
-title: Web services and IoT using Littlebits and IFTTT (w/ droids)
+title: Breakout Boxes and Icebreakers
 ---
 
 ### Summary
-In this lesson, students will explore a hands-on technology called Littlebits. Students will learn how to plug and play bits together to make some simple inventions.
+In this lesson, students will learn about concepts like cybersecurity, phishing, and digital etiquette through breakout boxes, games, and icebreakers. 
 
 ### Grade
-High School
+Elementary -> High School
 
 ### Time Required
-2-3 hours
+1 hour
 
 ### First principles
-- [ ] Domain Separation
+- [x] Domain Separation
 - [ ] Process Isolation
-- [x] Resource Encapsulation
-- [x] Modularity
-- [ ] Least Privilege
-- [x] Abstraction
+- [ ] Resource Encapsulation
+- [ ] Modularity
+- [x] Least Privilege
+- [ ] Abstraction
 - [x] Data Hiding
-- [ ] Layering
+- [x] Layering
 - [ ] Simplicity
-- [x] Minimization
+- [ ] Minimization
 
 
 ### Learning Objectives
 
-* Students will interact with web services.
-* Create web services with Littlebits
-
+* Students will learn about digital etiquette and other cybersecurity concepts
 
 ### Materials list
 
-* Littlebits kit
-* Power outlet nearby
-* Wi-Fi Internet Connection
+* Breakout boxes (Box, locks, puzzles, invisible ink)
+* Nutstacker Game (Chopsticks, 5/8in. metal nuts)
+* Stack'em Up Game (Plastic cups, rubber bands, zip ties)
+* Marshmallow Transfer Game (mini marshmallows, straws)
+* On the Hook (paperclip, chopsticks, string, keys)
 
 ### Learning Facilitation
 
@@ -43,28 +43,25 @@ Each item below is optional.
 
 #### Warm up Activity
 
-1. Have the students create an account and login to the Littlebits portal.
-
-2. Have students continue with the hands-on activity and pair their cloudbit with the portal.
+* Put the students into small groups and do a icebreaker game (Nutstacker, Stack'em Up, Marshmallow Transfer, or On the Hook)
 
 #### Focused Activity
 
-* Continue with steps 3-8 of the module.
+* Put the students into small groups and have them do a breakout box. 
+* Challenge your students to finish the activity in 25 minutes or less
 
 #### Closure
 
-* Host a discussion and ask questions about the variety of services that could be created.
+* Host a discussion and ask the students questions about the variety of puzzles they solved during the breakout box activity. 
 
 #### Reflection
 
-* Review how each cybersecurity First Priciple were demonstrated in this module.
+* Review how each cybersecurity First Principle was demonstrated in this module.
 
 ### Assessment
 
 1. Assess the student's understanding of the concepts applied in this module.
-
-
-[comment]: # (Quiz / Presentation / Project / Writing Assignment / Observation / Walk Around / Oral Questioning / Other)
+2. Have the students write down each concept that was explored and how it was represented in the activity.
 
 ### Accommodations for students with disabilities
 
@@ -76,11 +73,12 @@ N/A
 
 ### Module Lead Author
 
-[Dr. Matthew L. Hale](http://faculty.ist.unomaha.edu/mhale/)
+* [Dr. Matthew L. Hale](http://faculty.ist.unomaha.edu/mhale/)
+* Kristeen Shabram 
 
 ### Acknowledgements
 
-Special thanks to [Dr. Robin Gandhi](http://faculty.ist.unomaha.edu/rgandhi/) for reviewing and editing this lesson.
+Special thanks to Victoria for reviewing and editing this lesson.
 
 ## License
 [Nebraska GenCyber](https://github.com/MLHale/nebraska-gencyber) <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /></a><br /> is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</a>.

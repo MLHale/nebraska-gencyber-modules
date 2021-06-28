@@ -54,6 +54,7 @@ Can be modified as needed to accommodate grade level
 
 ### Learning Facilitation
 
+
 ### Warm-up Activity
 
 Watch [this video](https://www.youtube.com/watch?v=AYdF7b3nMto) and host a discussion on routing tables and how packets travel over a network.

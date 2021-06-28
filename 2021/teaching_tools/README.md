@@ -5,15 +5,10 @@ title: Teaching Tools
 
 ### Cybersecurity First Principles in this lesson
 
-* __Abstraction__: An abstraction is a representation of an object or concept. It could be something such as a door, a speedometer, or a data structure in computer science. Abstraction decouples the design from the implementation. The gauges in an automobile are an abstraction of the performance of a car. A map is an abstraction of the earth.
-
-* __Data Hiding__: Data hiding is the technique that does not allow certain aspects of an object to be observed or accessed. Data and information hiding keeps the programmer from having complete access to data structures. It allows access to only what is necessary.
-
-* __Minimization__: Minimization refers to having the least functionality necessary in a program or device. The goal of minimization is to simplify and decrease the number of ways that software can be exploited. This can include **turning off ports that are not needed**, reducing the amount of code running on a machine, and/or turning off unneeded features in an application.
-
-* __Modularization__: The concept of modularity is like building blocks. Each block (or module) can be put in or taken out from a bigger project. Each module has its own separate function that is interchangeable with other modules.
-
-* __Resource Encapsulation__: Encapsulation is an object oriented concept where all data and functions required to use the resource are packaged into a single self-contained component. The goal is to only allow access or manipulation of the resource in the way the designer intended. An example, assume a flag pole is the object. There are fixed methods on how the flag pole is to be used. Put the flag on, take the flag off, raise or lower the flag. Nothing else can be done to the flag pole.
+* **Data Hiding**: Data hiding is the technique that does not allow certain aspects of an object to be observed or accessed. Data and information hiding keeps the programmer from having complete access to data structures. It allows access to only what is necessary.
+* **Least Privilege**: Giving only necessary privileges creates accountability and prevents misuse
+* **Layering**: In the context of cybersecurity, layers make it more difficult for attackers to reach protected data and programs
+* **Domain Separation**: Separating domains can help us secure each one separately. 
 
 ### Introduction and goals
 In these lessons, you will learn about different icebreakers, games, and breakout boxes that you can use to teach others about concepts like cybersecurity, phishing, and digital etiquette. 
@@ -28,11 +23,13 @@ By the end of this tutorial, you will be able to:
 None 
 
 ### Table of Contents
-1. [Unit 5-4: Digital Etiquette](#5.4)
-2. [Unit 6-1: Teaching tools (Icebreakers and Challenges)](#6.1)
-3. [Unit 6-2: Teaching tools (Breakout Boxes)](#6.2)
-4. [Unit 6.3: Teaching Tools (Phishing)](#6.3)
-5. [Lead Author](#author)
+
+1. [Unit 6-1: Teaching tools (Icebreakers and Challenges)](#6.1)
+2. [Unit 6-2: Teaching tools (Breakout Boxes)](#6.2)
+3. [Unit 6.3: Teaching Tools (Phishing)](#6.3)
+4. [Unit 5-4: Digital Etiquette](#5.4)
+5. [Unplugged Activities and Computational Thinking Bins](#unplugged)
+6. [Lead Author](#author)
 
 
 <div id='6.1'/>
@@ -227,13 +224,16 @@ In a Breakout Box activity, students work together and think critically to "brea
 **All documents for this The Digital Etiquette Breakout Box** - https://drive.google.com/drive/folders/1I7mtsB6Zosdj7mUMeQ1pM_wWSwPo_taP?usp=sharing
 
 ---------------
-<div id='author'/>
+<div id='unplugged'/>
 
 # Unplugged Activities and Computational Thinking bins
 [Unplugged Activities Overview Slides](./images/unplugged-activities.pptx)
 > Slides by Brian Dorn
 
 [Computational Thinking Bins Slides](./images/ctbins-cryptography.pptx)
+--------------
+<div id='author'/>
+
 ## Lead Author
 
 Kristeen Shabram
