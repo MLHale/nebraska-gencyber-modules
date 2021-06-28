@@ -11,10 +11,9 @@ title: Internet of Strings
 
 * __Abstraction__: An abstraction is a representation of an object or concept. It could be something such as a door, a speedometer, or a data structure in computer science. Abstraction decouples the design from the implementation. The gauges in an automobile are an abstraction of the performance of a car. A map is an abstraction of the earth.
 
-### Objectives
+### Introduction
 
-This lesson will aid students in understanding how routing occurs within networks.<br> 
-The objective of the game is to deliver all packets from the originating computer to the receiving computer as quickly as possible.
+In this module, you will learn the roles of the components of a digital network.
 
 ### Materials
 
@@ -40,9 +39,13 @@ Host a discussion on routing tables and how packets travel over a network after 
 
 ## Activity Instructions
 
-***Setup***
+***Role Assignments***
+* `Computer`: The computers are responsible for giving packets their messages and declaring the received message once the TCP verifies it.
+* `TCP`: The TCP is responsible for verifying packets when they arrive, organizing the messages from verified packets, and relaying that message to the computer.
+* `Packet`: The packets are responsible for delivering their message from an originating computer to its destination.
+* `Router`: The routers are responsible for directing packets on the quickest route to their destination computer. 
 
-1. Assign 3 kids as computers, 3 as TCP, 12 to hold packets (4 at each computer), and 12 as routers.
+1. Assign 3 kids as `computers`, 3 as `TCP`, 12 to hold `packets` (4 at each computer), and 12 as `routers`.
 2. Originating computers each hold 4 papers (when the papers are put together, they make a phrase). Packets each hold an envelope.
 3. When the game starts, originating computers put one piece of the phrase in each packet’s envelope.
 
@@ -82,9 +85,9 @@ If you are the first router to receive this packet
 2. Refer to the current node's routing table and select the least cost route to final destination
     - If there is no route to final destination announce "bad route" and go to the end of the line for that router.
     - If there is a route but the link you need is not available.
-      a. Check to see if there is a higher cost route available.
-      b. If there is a higher cost route use it and continue with number 3.
-      c. If there is not a higher cost route announce "link down".
+      - Check to see if there is a higher cost route available.
+      - If there is a higher cost route use it and continue with number 3.
+      - If there is not a higher cost route announce "link down".
       
 3. Build new packet header by adding a new next hop and place on packet
 
