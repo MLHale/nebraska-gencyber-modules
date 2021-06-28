@@ -10,6 +10,8 @@ Jill: https://www.cbsnews.com/news/peloton-bike-treadmill-security-vulnerability
 
 Molly: https://www.bleepingcomputer.com/news/security/fujifilm-shuts-down-network-after-suspected-ransomware-attack/
 
+Teresa: https://www.wsj.com/articles/microsoft-discloses-new-customer-hack-linked-to-solarwinds-cyberattackers-11624680860?reflink=desktopwebshare_permalink
+
 ## Lead Author
 
 - Victoria Chin
