@@ -12,6 +12,8 @@ Molly: https://www.bleepingcomputer.com/news/security/fujifilm-shuts-down-networ
 
 Teresa: https://www.wsj.com/articles/microsoft-discloses-new-customer-hack-linked-to-solarwinds-cyberattackers-11624680860?reflink=desktopwebshare_permalink
 
+Johnathan: https://thecrimereport.org/2021/06/16/more-than-one-million-cybercrimes-reported-during-pandemic/
+
 ## Lead Author
 
 - Victoria Chin

@@ -7,7 +7,7 @@ title: Ciphers and Cybersecurity in Other Fields
 * __Data Hiding__: Data hiding is the technique that does not allow certain aspects of an object to be observed or accessed. Data and information hiding keeps the programmer from having complete access to data structures. It allows access to only what is necessary.
 
 * __Layering__: Cyber security uses multiple layers of defense or protecting information. If one layer is defeated the next layer should catch it.
-
+``
 * __Least Privilege__: One of the ways to protect information is by limiting what people can see and do with your information and resources. The principle of least privilege says to allow the minimum number of privileges necessary to accomplish the task.
 
 
