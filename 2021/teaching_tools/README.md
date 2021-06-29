@@ -36,7 +36,7 @@ None
 
 # **Unit 6-1: Teaching tools (Icebreakers and Challenges)**
 
-## **<div align="center"> Icebreakers </div>**
+## Icebreakers
 
 ### **1. Nutstacker Game**
 
@@ -68,7 +68,7 @@ _____________
 
 Take one rubber band and attach 4 zip ties to it, spacing them out (similar to picture below). This is the tool that students will use to stack the cups. <ins>NOTE: Each group will need one of these tools.</ins>
 
-![cup and rubber band example](images/image1.jpg "cup")
+![cup and rubber band example](images/img1.png "cup")
 
 **How to Play:**
 * Put students into groups of 4.
@@ -113,7 +113,7 @@ Create a fishing rod out of a chopstick, string, and paper clip. Cut a 12 inch p
 
 <ins>NOTE: Each student will need one of these fishing rods.</ins>
 
-![fishing rod example](images/image2.jpg "fishing rod")
+![fishing rod example](images/img2.png "fishing rod")
 
 **How to Play:**
 
@@ -237,6 +237,9 @@ In a Breakout Box activity, students work together and think critically to "brea
 ## Lead Author
 
 Kristeen Shabram
+
+### Acknowledgements
+Special thanks to Victoria for reviewing and editing this lesson.
 
 ### License
 [Nebraska GenCyber](https://github.com/MLHale/nebraska-gencyber) <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /></a><br /> is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</a>.
