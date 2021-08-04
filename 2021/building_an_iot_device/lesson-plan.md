@@ -57,11 +57,11 @@ Each item below is optional.
 
 #### Reflection
 
-* Review how each cybersecurity First Priciple were demonstrated in this module.
+* Review how each cybersecurity First Principle was demonstrated in this module.
 
 ### Assessment
 
-1. Assess the student's understanding of the concepts applied in this module.
+* Assess the student's understanding of the concepts applied in this module.
 
 
 [comment]: # (Quiz / Presentation / Project / Writing Assignment / Observation / Walk Around / Oral Questioning / Other)

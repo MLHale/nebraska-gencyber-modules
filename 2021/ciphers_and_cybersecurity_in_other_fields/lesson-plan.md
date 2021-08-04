@@ -5,10 +5,10 @@ title: Ciphers and Cybersecurity in other fields
 
 
 ### Summary
-Students will learn about basic cryptography and how it relates to cybersecurity. 
+Students will learn about basic cryptography and how it relates to cybersecurity.
 
 ### Grade
-Elementary -> High School
+Elementary - High School
 
 ### Time Required
 1 hour
@@ -27,36 +27,40 @@ Elementary -> High School
 
 ### Learning Objectives
 
-* Students will learn how to encrypt and decrypt messages by using ciphers. 
+* Students will learn how to encrypt and decrypt messages by using ciphers.
 
 ### Materials list
 
-* Cipher Wheels
-* Vigenere Square
+* Cipher Wheels ([printable version](https://aca.edu.au/resources/cryptography-cipher-wheels/cipher-wheels.pdf))
+
+* Vigenere Square ([printable version](https://i.stack.imgur.com/XuFWA.png))
+
 * Scratch paper and pencils
 
 #### Focused Activity
-* Explain the history behind ciphers (https://www.khanacademy.org/computing/computer-science/cryptography/crypt/v/caesar-cipher)
-* Have students use a cipher wheel to decrypt given phrases. 
-  
+* Explain the history behind ciphers ([Khan Academy Caesar Cipher Video](https://www.khanacademy.org/computing/computer-science/cryptography/crypt/v/caesar-cipher))
+* Have students use a cipher wheel to decrypt given phrases.
+
     **How to decrypt:**
-    * Line up the letter 'A' on the inner wheel with the number of the key on the outer wheel. 
+    * Line up the letter 'A' on the inner wheel with the number of the key on the outer wheel.
     * Find the first letter of the encrypted phrase on the outer wheel. Write down the letter on the inner wheel that lines up with it (this is the decrypted letter)
-    * Repeat step 2 with each letter until you see the decrypted phrase. 
+    * Repeat step 2 with each letter until you see the decrypted phrase.
 
 
 * Have students use a cipher wheel to encrypt phrases that they come up with.
-    
+
     **How to encrypt:**
-    * Come up with a phrase you would like to write in code. 
-    * Choose a number to use as your key, then line up this number on the outer wheel with the 'A' on the inner wheel. 
-    * Find the letter of your phrase on the inner wheel, then write down the letter on the outer wheel that lines up with it. 
+    * Come up with a phrase you would like to write in code.
+    * Choose a number to use as your key, then line up this number on the outer wheel with the 'A' on the inner wheel.
+    * Find the letter of your phrase on the inner wheel, then write down the letter on the outer wheel that lines up with it.
     * Repeat step 3 for every letter in your phrase.
-    
+
 
 * Students can pair up to encrypt/decrypt phrases that their partner comes up with.
+
 #### Reflection
 * Ask your students questions and have them reflect on which/how cybersecurity principles relate to the activity.
+  * In this lesson, we saw how encryption can be used for `data hiding`. Multiple encryption rounds can also be used as for `layering`.
 
 ### Module Lead Author
 
