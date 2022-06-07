@@ -6,15 +6,12 @@ title: Ciphers and Cybersecurity in Other Fields
 
 * __Data Hiding__: Data hiding is the technique that does not allow certain aspects of an object to be observed or accessed. Data and information hiding keeps the programmer from having complete access to data structures. It allows access to only what is necessary.
 
-* __Layering__: Cyber security uses multiple layers of defense or protecting information. If one layer is defeated the next layer should catch it.
-``
+* __Layering__: Cyber security uses multiple layers of defense or protecting information. If one layer is defeated, the next layer should catch it.
+
 * __Least Privilege__: One of the ways to protect information is by limiting what people can see and do with your information and resources. The principle of least privilege says to allow the minimum number of privileges necessary to accomplish the task.
 
-
-* __Pre-digital era Ciphers__: Transposition ciphers – rearrange the order of the characters of plaintext also called permutation ciphers
-The arrangement becomes the key
-Substitution ciphers – replace the characters with something else (e.g. another character or number)
-The replacement function becomes the key
+* __Pre-digital era Ciphers__: _Transposition ciphers_ rearrange the order of the characters of plaintext also called permutation ciphers. The arrangement becomes the key.
+_Substitution ciphers_, on the other hand, replace  characters with something else (e.g. another character or number). The replacement function becomes the key.
 
 
 ### Introduction
@@ -35,22 +32,20 @@ None
 
 ### Table of Contents
 <!-- TOC START min:1 max:3 link:true update:true -->
-- [Basic Terms](#ciphers-and-cybersecurity-in-other-fields)
-    - [Cybersecurity First Principles in this lesson](#cybersecurity-first-principles-in-this-lesson)
-    - [Introduction](#introduction)
-    - [Goals](#goals)
-    - [Materials Required](#materials-required)
-    - [Prerequisite lessons](#prerequisite-lessons)
-    - [Table of Contents](#table-of-contents)
-    - [Step 1: Learn all the words!](#step-1-learn-all-the-words)
-    - [Step 2: Ciphers](#step-2-ciphers)
-    - [Step 3: Cryptoanalysis](#step-3-cryptoanalysis)
-    - [Step 4: Practice Decrypting and Encrypting](#step-4-tpractice-decrypting-encrypting)
-    - [Self Exploration](#self-exploration)
-    - [Test Your Bits, err... Wits!](#test-your-bits-err-wits)
-    - [Additional Resources](#additional-resources)
-    - [Acknowledgements](#acknowledgements)
-    - [License](#license)
+- [Cybersecurity First Principles in this lesson](#cybersecurity-first-principles-in-this-lesson)
+- [Introduction](#introduction)
+- [Goals](#goals)
+- [Materials Required](#materials-required)
+- [Prerequisite lessons](#prerequisite-lessons)
+- [Table of Contents](#table-of-contents)
+- [Step 1: Learn all the words!](#step-1-learn-all-the-words)
+- [Step 2: Ciphers](#step-2-ciphers)
+- [Step 3: Cryptoanalysis](#step-3-cryptoanalysis)
+- [Step 4: Practice Decrypting and Encrypting](#step-4-tpractice-decrypting-encrypting)
+- [Partner Activity](#partner-activity)
+- [Additional Resources](#additional-resources)
+- [Acknowledgements](#acknowledgements)
+- [License](#license)
 
 <!-- TOC END -->
 
@@ -73,35 +68,48 @@ __Strength__ – determines how much effort and how long it takes to break a cip
 
 ### Step 2: Ciphers
 
+We will discuss the usages and history of each of these ciphers:
+
 - Zig-Zag and Route Crypto
 - Civil War Crypto Sticks
-- Caesar Ciphers
-> ![Caesar](./img/caesarciper.jpg)
-- Vigenere Square
-> ![vigenere](./img/vigenere.png)
-- Enigma Machine  
+- Enigma Machine
 
-We will discuss the usages and history of each of these ciphers.
+- __Caesar Ciphers__
+> ![Caesar](./img/caesarciper.jpg)
+
+- __Vigenere Square__
+> ![vigenere](./img/vigenere.png)
 
 
 ### Step 3: Cryptanalysis
 
-- Frequency  
-By doing frequency analysis to see which letters appeared most often then substituting most frequent plain text letter, could break the cipher.
-- Language characteristics  
-If spaces are left in, then characteristics like single letter and 2 letter words are still in tact and knowledge of these can be utilized to help in breaking
-Having a longer message only makes both things easier to spot
+- __Frequency:__</br> </br>
+Frequency analysis is used to see which letters appear most often in the message. Substituting most frequent plain text letter after analysis could break the cipher.
 
-### Step 4: Practice decrypting and encrypting
+- __Language characteristics:__ </br> </br>
+If spaces are left in, then characteristics like single-letter and 2-letter words are still intact and knowledge of these can be utilized to break the cipher.
 
-Using the cipher rings we will practice encoding and decoding.
-> ![Cipher Rings](https://pbs.twimg.com/media/DgDyyy0W4AEPAjx.jpg:small)
+A longer message makes both frequency and language characteristics easier to spot.
 
-### Self Exploration
-Try some different encryption yourself.
+### Step 4: Decrypting and Encrypting
+
+__How to decrypt:__
+
+* Line up the letter 'A' on the inner wheel with the number of the key on the outer wheel.
+* Find the first letter of the encrypted phrase on the outer wheel. Write down the letter on the inner wheel that lines up with it - this is the decrypted letter.
+* Repeat step 2 with each letter until you see the decrypted phrase.
+
+__How to encrypt:__
+* Come up with a phrase you would like to write in code.
+* Choose a number to use as your key, then line up this number on the outer wheel with the 'A' on the inner wheel.
+* Find the letter of your phrase on the inner wheel, then write down the letter on the outer wheel that lines up with it.
+* Repeat step 3 for every letter in your phrase.
+
+### Partner Activity
+Encrypt up with a phrase of your own, and give it to a partner to decrypt using the Caesar cipher.
 
 ### Reflection
-In this lesson, we saw how encryption can be used for `data hiding`. Multiple encryption rounds can also be used as for `layering`.
+Which cybersecurity principles are applied in this activity?
 
 ### Additional Resources
 For more information, investigate the following:

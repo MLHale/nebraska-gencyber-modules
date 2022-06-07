@@ -11,7 +11,7 @@ title: Internet of Strings
 
 * __Abstraction__: An abstraction is a representation of an object or concept. It could be something such as a door, a speedometer, or a data structure in computer science. Abstraction decouples the design from the implementation. The gauges in an automobile are an abstraction of the performance of a car. A map is an abstraction of the earth.
 
-### Introduction
+### Introduction   
 
 In this module, you will learn the roles of the components of a digital network.
 
@@ -43,7 +43,7 @@ Host a discussion on routing tables and how packets travel over a network after 
 * `Computer`: The computers are responsible for giving packets their messages and declaring the received message once the TCP verifies it.
 * `TCP`: The TCP is responsible for verifying packets when they arrive, organizing the messages from verified packets, and relaying that message to the computer.
 * `Packet`: The packets are responsible for delivering their message from an originating computer to its destination.
-* `Router`: The routers are responsible for directing packets on the quickest route to their destination computer. 
+* `Router`: The routers are responsible for directing packets on the quickest route to their destination computer.
 
 1. Assign 3 kids as `computers`, 3 as `TCP`, 12 to hold `packets` (4 at each computer), and 12 as `routers`.
 2. Originating computers each hold 4 papers (when the papers are put together, they make a phrase). Packets each hold an envelope.
@@ -51,11 +51,11 @@ Host a discussion on routing tables and how packets travel over a network after 
 
 #### Activity Process
 
-* Once packets receive the "message" from their computer, they start to travel the network lines (the blue tape). Encourage them not to travel together. 
-* When they arrive at a router, the router directs the packets on the quickest route to its destination. 
+* Once packets receive the "message" from their computer, they start to travel the network lines (the blue tape). Encourage them not to travel together.
+* When they arrive at a router, the router directs the packets on the quickest route to its destination.
 * If a packet collides with another packet, return the packet to the router it came from, wait 10 seconds before going to the next hop again.
 * When a packet arrives at its destination, TCP must verify that it arrived at the correct computer by checking the envelope. It then informs the computer, and the computer must yell “Packet Received!”
-* When all packets have been received and TCP has put them in the correct order, the receiving computer must yell the phrase. 
+* When all packets have been received and TCP has put them in the correct order, the receiving computer must yell the phrase.
 * <b>To increase difficulty:</b> While the game is in process, cut random network lines (break the tape between two routers) and declare that line "Out of Service". The routers must adapt to find the quickest available route without that line.
 
 #### Continued Activity Process (MS/HS Level)
@@ -68,11 +68,11 @@ If you are the first router to receive this packet
 ***Packet Header Format (for MS/HS version)***: Each post-it note packet header should contain the following information:
 
 <ul>
- 
+
     Source: computer the message started at
     Destination: computer the message should travel to
     Next Hop: next router to travel to
-    
+
 </ul>
 
 <br>
@@ -88,7 +88,7 @@ If you are the first router to receive this packet
       - Check to see if there is a higher cost route available.
       - If there is a higher cost route use it and continue with number 3.
       - If there is not a higher cost route announce "link down".
-      
+
 3. Build new packet header by adding a new next hop and place on packet
 
 *If you are moving to the next hop and collide with another packet:*
@@ -108,7 +108,7 @@ Once the activity is over, host a discussion on how this activity translates to 
 
 ### Optional Alterations
 
--	If class is slightly larger/smaller than 30, simply get rid of as many router spots as needed. 
+-	If class is slightly larger/smaller than 30, simply get rid of as many router spots as needed.
 -	If class is significantly larger/smaller than 30, add or remove a computer; or change the length of the phrases at each computer.
 -	To play outside, set up the game using chalk or use string/yarn as the network lines.
 
@@ -120,12 +120,12 @@ Once the activity is over, host a discussion on how this activity translates to 
 
 #### Node Routing Tables
 
-<img width="300" alt="node1" src="https://user-images.githubusercontent.com/86324276/123000325-0f85e680-d375-11eb-9164-1645eeeedb57.png"> 
-<img width="300" alt="node2" src="https://user-images.githubusercontent.com/86324276/123000814-a488df80-d375-11eb-814b-ccf0b0f5c81b.png"> 
-<img width="300" alt="node3" src="https://user-images.githubusercontent.com/86324276/123000859-b23e6500-d375-11eb-9486-4b5173cc23a5.png"> 
-<img width="300" alt="node4" src="https://user-images.githubusercontent.com/86324276/123000899-c1251780-d375-11eb-8c53-dcd3e3e7ad67.png"> 
-<img width="300" alt="node5" src="https://user-images.githubusercontent.com/86324276/123000919-c8e4bc00-d375-11eb-8fd4-c8490cebf021.png"> 
-<img width="300" alt="node6" src="https://user-images.githubusercontent.com/86324276/123000942-d0a46080-d375-11eb-998b-4ededdade5f1.png"> 
+<img width="300" alt="node1" src="https://user-images.githubusercontent.com/86324276/123000325-0f85e680-d375-11eb-9164-1645eeeedb57.png">
+<img width="300" alt="node2" src="https://user-images.githubusercontent.com/86324276/123000814-a488df80-d375-11eb-814b-ccf0b0f5c81b.png">
+<img width="300" alt="node3" src="https://user-images.githubusercontent.com/86324276/123000859-b23e6500-d375-11eb-9486-4b5173cc23a5.png">
+<img width="300" alt="node4" src="https://user-images.githubusercontent.com/86324276/123000899-c1251780-d375-11eb-8c53-dcd3e3e7ad67.png">
+<img width="300" alt="node5" src="https://user-images.githubusercontent.com/86324276/123000919-c8e4bc00-d375-11eb-8fd4-c8490cebf021.png">
+<img width="300" alt="node6" src="https://user-images.githubusercontent.com/86324276/123000942-d0a46080-d375-11eb-998b-4ededdade5f1.png">
 <img width="300" alt="node7" src="https://user-images.githubusercontent.com/86324276/123000966-d7cb6e80-d375-11eb-807c-08c39dc2e379.png">
 <img width="300" alt="node8" src="https://user-images.githubusercontent.com/86324276/123001250-237e1800-d376-11eb-9433-ee5f8e1c9a77.png">
 <img width="300" alt="node9" src="https://user-images.githubusercontent.com/86324276/123001261-27aa3580-d376-11eb-8c2b-10cd99860095.png">
