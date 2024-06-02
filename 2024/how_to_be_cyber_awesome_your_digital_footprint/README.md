@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Building Arcade Games with Littlebits
+title: How to be Cyber Awesome: Your Digital Footprint
 ---
 
 ### Cybersecurity First Principles in this lesson
