@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Building Arcade Games with Littlebits
+title: How to be Cyber Awesome: Your Personal and Private Information
 ---
 
 ### Cybersecurity First Principles in this lesson
@@ -28,13 +28,18 @@ None
 
 ### Table of Contents
 
-
+- [Let's Brainstorm First!](#let's-brainstorm-first!)
+- [Personal Information VS Private Information](#personal-information-vs-private-information)
+- [Personal or Private?](#personal-or-private?)
+- [How Could Sharing Private Information Online be Unsafe?](#how-could-sharing-private-information-online-be-unsafe?)
+- [“Oversharing” Personal Information Online](#“oversharing”-personal-information-online)
+- [Tips for Preventing Oversharing](#tips-for-preventing-oversharing)
 - [Additional Resources](#additional-resources)
 - [Lead Author](#lead-author)
 - [Acknowledgements](#acknowledgements)
 - [License](#license)
 
-### Let's Brainstorm first!
+### Let's Brainstorm First!
 
 - List 1-2 things that are okay to share online?
 - List 1-2 things you should not share online?
@@ -62,7 +67,6 @@ None
 
 - It’s okay to share some personal information online, but be careful of “Oversharing.”
 - “Oversharing” is sharing an excessive amount of personal and private information online, especially in a way which might be considered inappropriate or dangerous to you and those around you.
-
 
 ### Tips for Preventing Oversharing
 
