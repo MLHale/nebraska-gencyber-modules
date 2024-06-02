@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Introduction to Components With LittleBits
+title: How to be Cyber Awesome: Your Personal vs Private Information
 ---
 
 ### Cybersecurity First Principles in this lesson
