@@ -1,6 +1,6 @@
 ---
 layout: page
-title: How to be Cyber Awesome: Your Personal and Private Information
+title: Introduction to Components With LittleBits
 ---
 
 ### Cybersecurity First Principles in this lesson
@@ -32,7 +32,7 @@ None
 - [Personal Information VS Private Information](#personal-information-vs-private-information)
 - [Personal or Private?](#personal-or-private?)
 - [How Could Sharing Private Information Online be Unsafe?](#how-could-sharing-private-information-online-be-unsafe?)
-- [“Oversharing” Personal Information Online](#“oversharing”-personal-information-online)
+- [Oversharing Personal Information Online](#oversharing-personal-information-online)
 - [Tips for Preventing Oversharing](#tips-for-preventing-oversharing)
 - [Additional Resources](#additional-resources)
 - [Lead Author](#lead-author)
