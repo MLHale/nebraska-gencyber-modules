@@ -30,6 +30,16 @@ None
 
 ### Table of Contents
 
+- [What is a Digital Footprint](#what-is-a-digital-footprint)
+- [IP Addresses and Your Digital Footprint](#ip-addresses-and-digital-footprint)
+- [Good for Your Digital Footprint](#good-for-your-digital-footprint)
+- [Harmful for Your Digital Footprint](#harmful-for-your-digital-footprint)
+- [Tips for keeping a Good Digital Footprint](#tips-for-keeping-a-good-digital-footprint)
+- [Activity](#activity)
+- [Additional Resources](#additional-resources)
+- [Lead Author](#lead-author)
+- [Acknowledgements](#acknowledgements)
+- [License](#license)
 
 ### What is a Digital Footprint?
 
@@ -76,6 +86,7 @@ None
 #### An illustration of Your Digital Footprint
 
 In the footprint, write OR draw logos of websites you like to visit on your devices.
+
 ![digital footprint](digital_footprint.png)
 
 
