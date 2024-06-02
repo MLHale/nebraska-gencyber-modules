@@ -25,21 +25,27 @@ None
 
 ### Table of Contents
 
-
+- [What is Cybersecurity?](#what-is-cybersecurity?)
+- [What are Cybersecurity Concepts?](#what-are-cybersecurity-concepts?)
+    - [Cybersecurity Concepts:](#cybersecurity-concepts:)
+- [Defense in Depth](#defense-in-depth)
+- [Confidentiality](#confidentiality)
+- [Integrity](#integrity)
+- [Availability](#availability)
+- [Think Like an Adversary](#think-Like-an-adversary)
+- [Keep it Simple!](#keep-it-simple)
 - [Additional Resources](#additional-resources)
 - [Lead Author](#lead-author)
 - [Acknowledgements](#acknowledgements)
 - [License](#license)
 
 ### What is Cybersecurity?
-
-#### Let's Brainstorm first!
 Draw a picture or write in your own words what you think “cybersecurity” means or what you think it looks like?
 
 ### What are Cybersecurity Concepts?
 The fundamental building blocks of protecting systems, networks, and programs from digital attacks.
 
-### Cybersecurity Concepts:
+#### Cybersecurity Concepts:
 1. Defense in Depth
 2. Confidentiality
 3. Integrity
@@ -47,7 +53,7 @@ The fundamental building blocks of protecting systems, networks, and programs fr
 5. Think Like an Adversary
 6. Keep it Simple
 
-####  Defense in Depth
+###  Defense in Depth
 A comprehensive strategy of including multiple layers of security within a system so that if one layer fails, another layer of security is already in place to stop the attack/unauthorized access.
 
 **Definition:** Using multiple layers of protection to secure something.
@@ -61,7 +67,7 @@ A comprehensive strategy of including multiple layers of security within a syste
 
 ![](/images/defense-in-depth.jpg)
 
-####  Confidentiality
+###  Confidentiality
 The property that information is not disclosed to individuals, devices, or processes unless they have been authorized to access the information.
 
 **Definition:** Define permissions for interactions with protected objects.
@@ -72,7 +78,7 @@ The property that information is not disclosed to individuals, devices, or proce
   - 
 ![](images/confidentiality.png)
 
-#### Integrity
+### Integrity
 The property that information, an information system, or a component of a system has not been modified or destroyed in an unauthorized manner.
 
 **Definition:** Prevent data from being modified or misused by an unauthorized party.
@@ -83,7 +89,7 @@ The property that information, an information system, or a component of a system
 
 ![](images/integrity.png)
 
-#### Availability
+### Availability
 The property that information or information systems are accessible and usable upon demand.
 
 **Definition:**  Information is available under any circumstance.
@@ -94,7 +100,7 @@ The property that information or information systems are accessible and usable u
 
 ![](images/availability.png)
 
-#### Think Like an Adversary
+### Think Like an Adversary
 The strategy of putting yourself inside the mindset of a potential attacker that allows you to anticipate attack strategies and defend your systems accordingly.
 
 **Definition:** Be proactive by thinking of what an attacker can exploit (weaknesses and vulnerabilities).
@@ -106,7 +112,7 @@ The strategy of putting yourself inside the mindset of a potential attacker that
 
 ![](images/think-like-an-adversary.png)
 
-#### Keep it Simple
+### Keep it Simple
 The strategy of designing information and security systems to be configured and operated as simply as possible; all systems perform best when they have simple designs rather than complex ones.
 
 **Definition:** Avoid unnecessary complexity and reduce exposed areas.
