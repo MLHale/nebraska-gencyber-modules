@@ -1,6 +1,6 @@
 ---
 layout: page
-title: How to be Cyber Awesome: Your Digital Footprint
+title: Introduction to Components With LittleBits
 ---
 
 ### Cybersecurity First Principles in this lesson
