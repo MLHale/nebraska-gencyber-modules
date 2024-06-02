@@ -59,7 +59,7 @@ A comprehensive strategy of including multiple layers of security within a syste
   - Anti-virus, firewall and website blocker are examples of multiple defenses
   - Utilizing multi-factor authentication
 
-![]()
+![](/images/defense-in-depth.jpg)
 
 ####  Confidentiality
 The property that information is not disclosed to individuals, devices, or processes unless they have been authorized to access the information.
@@ -70,7 +70,7 @@ The property that information is not disclosed to individuals, devices, or proce
 - Computing Example:
   - Certain User accounts only have  permissions to do things. Giving only necessary privileges creates accountability and prevents misuse.
   - 
-![]()
+![](images/confidentiality.png)
 
 #### Integrity
 The property that information, an information system, or a component of a system has not been modified or destroyed in an unauthorized manner.
@@ -81,7 +81,7 @@ The property that information, an information system, or a component of a system
 - Computing Example:
   - Backup up your files to an external drive so that they can be restored if tampered with.
 
-![]()
+![](images/integrity.png)
 
 #### Availability
 The property that information or information systems are accessible and usable upon demand.
@@ -92,7 +92,7 @@ The property that information or information systems are accessible and usable u
 - Computing Example:
   - In the event of a  DDoS (Distributed Denial of Service) attacks, creating a DDoS response plan, create redundancy in systems, load balancing and fault tolerance.
 
-![]()
+![](images/availability.png)
 
 #### Think Like an Adversary
 The strategy of putting yourself inside the mindset of a potential attacker that allows you to anticipate attack strategies and defend your systems accordingly.
@@ -104,7 +104,7 @@ The strategy of putting yourself inside the mindset of a potential attacker that
 - Computing Example:
   - Running software updates to patch potential software weaknesses/vulnerabilities. Staying up-to-date on the latest attacks and putting in place strategies to avoid potential attacks.
 
-![]()
+![](images/think-like-an-adversary.png)
 
 #### Keep it Simple
 The strategy of designing information and security systems to be configured and operated as simply as possible; all systems perform best when they have simple designs rather than complex ones.
@@ -116,7 +116,7 @@ The strategy of designing information and security systems to be configured and 
 - Computing Example:
   - Simple programming languages, such as blocks, are easier to understand when first learning to program.
 
-![]()
+![](images/keep-it-simple.jpg)
 
 ### Additional Resources
 
