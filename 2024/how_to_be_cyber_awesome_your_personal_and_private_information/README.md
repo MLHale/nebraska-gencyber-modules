@@ -2,7 +2,6 @@
 layout: page
 title: How to be Cyber Awesome: Your Personal vs Private Information
 ---
-
 ### Cybersecurity First Principles in this lesson
 
 * __Think Like an Adversary__: Be proactive by thinking of what an attacker can exploit (weaknesses and vulnerabilities).
