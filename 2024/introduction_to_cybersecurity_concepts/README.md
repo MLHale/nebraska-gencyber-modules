@@ -27,7 +27,7 @@ None
 
 - [What is Cybersecurity?](#what-is-cybersecurity?)
 - [What are Cybersecurity Concepts?](#what-are-cybersecurity-concepts?)
-    - [Cybersecurity Concepts:](#cybersecurity-concepts:)
+    - [Cybersecurity Concepts](#cybersecurity-concepts)
 - [Defense in Depth](#defense-in-depth)
 - [Confidentiality](#confidentiality)
 - [Integrity](#integrity)
@@ -45,7 +45,7 @@ Draw a picture or write in your own words what you think “cybersecurity” mea
 ### What are Cybersecurity Concepts?
 The fundamental building blocks of protecting systems, networks, and programs from digital attacks.
 
-#### Cybersecurity Concepts:
+#### Cybersecurity Concepts
 1. Defense in Depth
 2. Confidentiality
 3. Integrity
