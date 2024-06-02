@@ -11,9 +11,10 @@ title: How to be Cyber Awesome: Your Digital Footprint
 * __Confidentiality__: Define permissions for interactions with protected objects.
 
 ### Introduction
-In this lesson, we will learn how components can be used to solve a problem by decomposing it into sub-problems. We will also learn about how the `design process` can be applied to imagine a problem, think about different solutions, and then iteratively make attempts to solve it - getting better solutions at each iteration. 
+
 
 ### Goals
+
 By the end of this tutorial, you will be able to:
 * 
 * 
@@ -28,15 +29,7 @@ By the end of this tutorial, you will be able to:
 None
 
 ### Table of Contents
-<!-- TOC -->
 
-- [Reflection and takeaways](#reflection-and-takeaways)
-- [Additional Resources](#additional-resources)
-- [Lead Author](#lead-author)
-  - [Acknowledgements](#acknowledgements)
-  - [License](#license)
-
-<!-- /TOC -->
 
 ### What is a Digital Footprint?
 
@@ -83,26 +76,24 @@ None
 #### An illustration of Your Digital Footprint
 
 In the footprint, write OR draw logos of websites you like to visit on your devices.
-![digital footprint](/assets/images/digital_footprint.png)
+![digital footprint](digital_footprint.png)
 
 
 ### Additional Resources
-For more information, investigate the following:
 
-* [Advantages of User stories](https://www.mountaingoatsoftware.com/blog/advantages-of-the-as-a-user-i-want-user-story-template)
-* [Affinity diagramming process](https://uxdict.io/design-thinking-methods-affinity-diagrams-357bd8671ad4)
-* [Worst Possible ideas](https://www.interaction-design.org/literature/article/learn-how-to-use-the-best-ideation-methods-worst-possible-idea)
 
 ### Lead Author
 
-- 
+- Kristeen Shabram
 
 ### Acknowledgements
+
+Special thanks to Gul e Fatima Kiani for reviewing and editing this lesson.
 
 ### License
 [Nebraska GenCyber](https://www.nebraskagencyber.com) <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /></a><br /> is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</a>.
 
-Overall content: Copyright (C) 2014  [Dr. Matthew L. Hale](http://faculty.ist.unomaha.edu/mhale/), [Dr. Robin Gandhi](http://faculty.ist.unomaha.edu/rgandhi/), and [Dr. Briana B. Morrison](http://www.brianamorrison.net).
+Overall content: Copyright (C) 2024  [Dr. Matthew L. Hale](http://faculty.ist.unomaha.edu/mhale/), [Dr. Robin Gandhi](http://faculty.ist.unomaha.edu/rgandhi/), and [Dr. Briana B. Morrison](http://www.brianamorrison.net).
 
 Lesson content: Copyright (C) [Dr. Matthew L. Hale](http://faculty.ist.unomaha.edu/mhale/) 2024.  
 <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /></a><br /><span xmlns:dct="http://purl.org/dc/terms/" property="dct:title">This lesson</span> is licensed by the author under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</a>.
