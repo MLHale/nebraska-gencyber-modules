@@ -50,6 +50,7 @@ The fundamental building blocks of protecting systems, networks, and programs fr
 5. Think Like an Adversary
 6. Keep it Simple
 
+
 ###  Defense in Depth
 A comprehensive strategy of including multiple layers of security within a system so that if one layer fails, another layer of security is already in place to stop the attack/unauthorized access.
 
@@ -75,6 +76,7 @@ The property that information is not disclosed to individuals, devices, or proce
   - 
 ![](images/confidentiality.png)
 
+
 ### Integrity
 The property that information, an information system, or a component of a system has not been modified or destroyed in an unauthorized manner.
 
@@ -86,6 +88,7 @@ The property that information, an information system, or a component of a system
 
 ![](images/integrity.png)
 
+
 ### Availability
 The property that information or information systems are accessible and usable upon demand.
 
@@ -96,6 +99,7 @@ The property that information or information systems are accessible and usable u
   - In the event of a  DDoS (Distributed Denial of Service) attacks, creating a DDoS response plan, create redundancy in systems, load balancing and fault tolerance.
 
 ![](images/availability.png)
+
 
 ### Think Like an Adversary
 The strategy of putting yourself inside the mindset of a potential attacker that allows you to anticipate attack strategies and defend your systems accordingly.
@@ -109,6 +113,7 @@ The strategy of putting yourself inside the mindset of a potential attacker that
 
 ![](images/think-like-an-adversary.png)
 
+
 ### Keep it Simple
 The strategy of designing information and security systems to be configured and operated as simply as possible; all systems perform best when they have simple designs rather than complex ones.
 
@@ -120,6 +125,7 @@ The strategy of designing information and security systems to be configured and 
   - Simple programming languages, such as blocks, are easier to understand when first learning to program.
 
 ![](images/keep-it-simple.jpg)
+
 
 ### Additional Resources
 
