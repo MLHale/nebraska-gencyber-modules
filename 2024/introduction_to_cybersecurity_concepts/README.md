@@ -3,22 +3,19 @@ layout: page
 title: Introduction to Cybersecurity Concepts
 ---
 
-
-
 ### Introduction
-
+Cybersecurity is the practice of protecting systems, networks, data from digital attacks. It is essential for safeguarding digital information and systems from unauthorized access, attacks and damage. This lesson introduces the importance of cybersecurity in our increasingly connected world and sets the foundation for understanding how to protect our digital assets effectively.
 
 ### Goals
 
 By the end of this tutorial, you will be able to:
-* 
-* 
-* 
+* understand the fundamental concept of cybersecurity.
+* gain insights into key cybersecurity principles.
 
 ### Materials Required
 
-* 
-* 
+* Teacher presentation
+* Student handout
 
 ### Prerequisite lessons
 None
