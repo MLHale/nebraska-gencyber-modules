@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Introduction to Components With LittleBits
+title: How to be Cyber Awesome-Your Digital Footprint
 ---
 
 ### Cybersecurity First Principles in this lesson
@@ -11,19 +11,18 @@ title: Introduction to Components With LittleBits
 * __Confidentiality__: Define permissions for interactions with protected objects.
 
 ### Introduction
-
+Digital footprint is the trail of data we leave behind whenever we use the internet, from social media posts to online searches. It's Important to maintain a positive digital footprint because it can affect our reputation, opportunities and safety both now and in the future.
 
 ### Goals
 
 By the end of this tutorial, you will be able to:
-* 
-* 
-* 
+* know what digital footprint is.
+* differentiate between good and harmful footprint.
+* keep a good digital footprint of yourself.
 
 ### Materials Required
-
-* 
-* 
+* Teacher presentation.
+* Student handout.
 
 ### Prerequisite lessons
 None
@@ -88,9 +87,6 @@ None
 In the footprint, write OR draw logos of websites you like to visit on your devices.
 
 ![digital footprint](digital_footprint.png)
-
-
-### Additional Resources
 
 
 ### Lead Author
