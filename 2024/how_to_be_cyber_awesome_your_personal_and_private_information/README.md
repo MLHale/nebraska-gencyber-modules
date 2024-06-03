@@ -1,6 +1,6 @@
 ---
 layout: page
-title: How to be Cyber Awesome: Your Personal vs Private Information
+title: How to be Cyber Awesome-Your Personal and Private Information
 ---
 ### Cybersecurity First Principles in this lesson
 
@@ -8,19 +8,19 @@ title: How to be Cyber Awesome: Your Personal vs Private Information
 * __Confidentiality__: Define permissions for interactions with protected objects.
 
 ### Introduction
-
+It is important to be mindful of what you share online. Sharing private information and oversharing personal details can lead to various risks,including identity theft, cyberbulling, and loss of privacy, so it's important to know how to protect yourself by being careful.
 
 ### Goals
 
-By the end of this tutorial, you will be able to:
-* 
-* 
-* 
+By the end of this tutorial, you will be able to know:
+* the difference between personal and private information.
+* how sharing private information and oversharing personal could be unsafe.
+* how to prevent oversharing online.
 
 ### Materials Required
 
-* 
-* 
+* Teacher presentation
+* Student handout
 
 ### Prerequisite lessons
 None
@@ -83,10 +83,6 @@ None
 
 #### You wouldn’t share your toothbrush with anyone. 
 - Don’t share your private information online.
-
-
-### Additional Resources
-
 
 ### Lead Author
 
