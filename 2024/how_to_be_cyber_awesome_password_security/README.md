@@ -30,7 +30,12 @@ None
 
 ### Table of Contents
 
-
+- [Authentication](#authentication)
+- [Single, Two, Multi-factor Authentication](#single,-two,-multi-factor-authentication)
+- [Strong Passwords may contain](#strong-passwords-may-contain)
+- [Weak Passwords may contain](#weak-passwords-may-contain)
+- [How can someone figure out your password?](#how-can-someone-figure-out-your-password?)
+- [Activity](#activity)
 - [Additional Resources](#additional-resources)
 - [Lead Author](#lead-author)
 - [Acknowledgements](#acknowledgements)
@@ -40,7 +45,7 @@ None
 - Authentication is the process of verifying that you are who you say you are. 
 - Example: username, password, email.
 
-![](1.png)
+![](11.png)
   
 ### Single, Two, Multi-factor Authentication
 - Something you know: includes your username and password.
@@ -49,7 +54,9 @@ None
 - Multi-factor is the process of choosing two or more of these factors
 
 Passwords are the most common form of authentication used by websites.
+
 What makes a good password?
+![](1.gif)
 
 
 ### Strong Passwords may contain
@@ -76,10 +83,26 @@ A couple of things first:
 We will be using variables and functions. 
 
 **Functions:** are used to make a portion of code do a similar task multiple times. 
+![](3.png) 
+![](4.png)
+![](5.png)
 
 **Variables:** a variable is something that can be changed. We use variables in coding to store information that may change or may need to be used later.
+![](6.png)
+
+### Creating Your Own Password Generator - Button Actions
+![](7.png)
+![](8.png)
+![](9.png)
+
+### Creating Your Own Password Generator - Function
+![](10.png)
 
 
+### Your Turn!!!
+The password generator code is [here](https://tinyurl.com/UNOGenCyber2024)
+
+Check your password [here](https://www.security.org/how-secure-is-my-password). How many years will it take to crack your password?
 
 
 ### Additional Resources
@@ -87,7 +110,7 @@ We will be using variables and functions.
 
 ### Lead Author
 
-- Kristeen Shabram
+- Dr. Matthew L. Hale, Dr. Deanna House
 
 ### Acknowledgements
 
