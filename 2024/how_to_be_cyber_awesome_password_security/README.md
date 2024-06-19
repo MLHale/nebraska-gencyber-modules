@@ -40,7 +40,7 @@ None
 - Authentication is the process of verifying that you are who you say you are. 
 - Example: username, password, email.
 
-  
+![](nebraska-gencyber-modules/2024/how_to_be_cyber_aweseome_password_security/1.png)
   
 ### Single, Two, Multi-factor Authentication
 - Something you know: includes your username and password.
