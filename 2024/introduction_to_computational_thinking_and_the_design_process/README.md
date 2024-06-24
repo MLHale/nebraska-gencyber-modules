@@ -40,7 +40,7 @@ Now, you’re ready to generate ideas. The solid background of knowledge from th
 
 ### Computational Thinking
 
-<div align="center">
+<div style="text-align:center;">
 	<img src="6.png">
 </div>
 
