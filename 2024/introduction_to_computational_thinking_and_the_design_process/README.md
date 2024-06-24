@@ -40,9 +40,9 @@ Now, you’re ready to generate ideas. The solid background of knowledge from th
 
 ### Computational Thinking
 
-<div style="text-align:center;">
+<center>
 	<img src="6.png">
-</div>
+</center>
 
 
 Computational Thinking is the process of breaking down a problem into simple enough steps that even a computer would understand.
