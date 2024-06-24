@@ -1,5 +1,34 @@
+---
+layout: page
+title: Introduction to Logic
+---
+
+### Introduction
 
 
+### Goals
+
+By the end of this tutorial, you will be able to:
+* 
+* 
+* 
+
+### Materials Required
+
+* 
+* 
+
+### Prerequisite lessons
+None
+
+### Table of Contents
+- [Important Vocabulary](#important-vocabulary)
+- [Logic Unplugged Activity](#logic-unplugged-activity-rules)
+- [Logic Unplugged Activity-Materials](#logic-unplugged-activity-materials)
+- [Logic Unplugged - Your Turn!](#logic-unplugged-your-turn!)
+- [Lead Author](#lead-author)
+- [Acknowledgements](#acknowledgements)
+- [License](#license)
 
 
 
@@ -39,6 +68,23 @@ You will need:
 - Now try it on your own! 
 - Get into your groups and pick one of these designs. 
 - Make sure you also write down your “program” using the symbols in your workbook
+
+
+### Lead Author
+
+- Kristeen Shabram
+
+### Acknowledgements
+
+Special thanks to Gul e Fatima Kiani for reviewing and editing this lesson.
+
+### License
+[Nebraska GenCyber](https://www.nebraskagencyber.com) <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /></a><br /> is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</a>.
+
+Overall content: Copyright (C) 2024  [Dr. Matthew L. Hale](http://faculty.ist.unomaha.edu/mhale/), [Dr. Robin Gandhi](http://faculty.ist.unomaha.edu/rgandhi/), [Dr. Deanna House](#),[Derek Babb](https://derekbabb.com/), [Kristeen Shabram](#), [Dr. Lynn Spady](#), and [Gul e Fatima Kiani](#)
+
+Lesson content: Copyright (C) [Dr. Matthew L. Hale](http://faculty.ist.unomaha.edu/mhale/) 2024.  
+<a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /></a><br /><span xmlns:dct="http://purl.org/dc/terms/" property="dct:title">This lesson</span> is licensed by the author under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</a>.
 
 
 
