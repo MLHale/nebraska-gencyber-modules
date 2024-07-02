@@ -15,6 +15,10 @@ By the end of this tutorial, you will be able to:
 * crack the code behind ISBNs, a special system used to identify books accurately.
 
 
+### Materials Required
+
+* Instructor's slides
+* Microbit
 
 ### Prerequisite lessons
 None
