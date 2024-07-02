@@ -48,15 +48,15 @@ None
   - How do you think the recepient responded? How would you response?
 - Screenhots are given below
 
-![](1.png) 
+![](1.jpg) 
 
-![](2.png) 
+![](2.jpg) 
 
-![](3.png) 
+![](3.jpg) 
 
-![](4.png)
+![](4.jpg)
 
-![](5.png)
+![](5.jpg)
 
 ![](6.png)
 
