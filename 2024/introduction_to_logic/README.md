@@ -4,7 +4,7 @@ title: Keep it Simple
 ---
 
 ### Introduction
-
+In cybersecurity, "keep it simple" means prioritizing clear, manageable security practices. This reduces attack points and promotes user understanding, ultimately strengthening your defenses.
 
 ### Goals
 
@@ -24,11 +24,12 @@ None
 
 ### Table of Contents
 - [Important Vocabulary](#important-vocabulary)
-- [Acitivity 1: Logic Unplugged](#activity-1:-logic-unplugged)
+- [Activity 1: Logic Unplugged](#activity-1-logic-unplugged)
   - [Logic Unplugged Activity](#logic-unplugged-activity-rules)
   - [Logic Unplugged Activity-Materials](#logic-unplugged-activity-materials)
   - [Logic Unplugged - Your Turn!](#logic-unplugged-your-turn!)
-- [Activity 2: Write It Do It](#activity-2:-write-it-do-it)
+- [Activity 2: Write It Do It](#activity-2-write-it-do-it)
+- [Activity 3: Paper Tower Challenge](#activity-3-paper-tower-challenge)
 - [Lead Author](#lead-author)
 - [Acknowledgements](#acknowledgements)
 - [License](#license)
@@ -73,7 +74,10 @@ You will need:
 #### Logic Unplugged - Your Turn!
 - Now try it on your own! 
 - Get into your groups and pick one of these designs.
-  ![](3.png) ![](4.png)
+  
+  ![](3.png)
+
+   ![](4.png)
 - Make sure you also write down your “program” using the symbols in your workbook
 
 ### Activity 2: Write It Do It 
