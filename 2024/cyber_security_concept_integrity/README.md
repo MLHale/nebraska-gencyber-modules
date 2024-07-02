@@ -43,14 +43,18 @@ None
 
 ### Integrity of Images
 - Imagine we have a 4x4 Black & White Image
+  
   ![](1.png)
+  
 - How can we verify this image is displayed as intended?
 - We can add a bit in a 5th row/column.
 - The 5th row/column should make the number of black bits even.
+  
   ![](2.png)
 
   ![](3.png)
--Images are not sent as pictures.
+  
+- Images are not sent as pictures.
 - Images are sent as a series of zeros and ones
   - Everything is sent as zeros and ones.
 
