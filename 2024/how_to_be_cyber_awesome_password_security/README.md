@@ -11,19 +11,20 @@ title: How to be Cyber Awesome - Password Security
 * __Confidentiality__: Define permissions for interactions with protected objects.
 
 ### Introduction
-
+In today's digital world, our passwords act as the gatekeepers to our personal information. Strong password security is essential to prevent unauthorized access and safeguard our online accounts.
 
 ### Goals
 
 By the end of this tutorial, you will be able to:
-* 
-* 
-* 
+* identify different ways to prove you're the rightful owner of your online accounts (authentication).
+* crack the codes for creating strong passwords and learn to avoid common pitfalls that make them weak.
+* know how sneaky hackers might try to steal your password, so you can stay a step ahead!
+
 
 ### Materials Required
 
-* 
-* 
+* Instructor's slides
+* Microbit
 
 ### Prerequisite lessons
 None
@@ -56,6 +57,7 @@ None
 Passwords are the most common form of authentication used by websites.
 
 What makes a good password?
+
 ![](1.gif)
 
 
