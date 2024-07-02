@@ -9,7 +9,7 @@ In cybersecurity, "keep it simple" means prioritizing clear, manageable security
 ### Goals
 
 By the end of these fun activities, you will be able to:
-* explore how simplifying things can actually make them stronger.
+* understand how simplifying things can actually make them stronger.
 
 
 ### Materials Required
