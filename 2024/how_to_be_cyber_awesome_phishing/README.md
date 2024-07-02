@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Building Arcade Games with Littlebits
+title: How to be Cyber Awesome-Phishing
 ---
 
 ### Cybersecurity First Principles in this lesson
@@ -11,26 +11,23 @@ title: Building Arcade Games with Littlebits
 * __Confidentiality__: Define permissions for interactions with protected objects.
 
 ### Introduction
-
+Phishing is a cybercrime where scammers pretend to be a trusted source to trick you into giving away your personal information, like passwords or credit card details. Be cautious of any unexpected messages or requests for information online.
 
 ### Goals
 
 By the end of this tutorial, you will be able to:
-* 
-* 
-* 
+* know what phishing is.
+* identify some of the tricks scammers use in phishing attempts and understand the dangers they pose.
 
 ### Materials Required
-
-* 
-* 
+* None
 
 ### Prerequisite lessons
 None
 
 ### Table of Contents
-
-
+- [What is Phishing?](#what-is-phishing?)
+- [Activity](#activity)
 - [Additional Resources](#additional-resources)
 - [Lead Author](#lead-author)
 - [Acknowledgements](#acknowledgements)
@@ -51,17 +48,25 @@ None
   - How do you think the recepient responded? How would you response?
 - Screenhots are given below
 
+![](1.png) 
 
+![](2.png) 
 
+![](3.png) 
 
+![](4.png)
+
+![](5.png)
+
+![](6.png)
 
 
 ### Additional Resources
-
+[What is Phishing?](#https://www.youtube.com/watch?v=Xle27xh_N0A) 
 
 ### Lead Author
 
-- Kristeen Shabram
+- Dr. Lynn Spady
 
 ### Acknowledgements
 
