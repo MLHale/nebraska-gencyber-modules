@@ -31,8 +31,11 @@ By the end of this tutorial, you will be able to:
 
 #### Spoofing Examples
 ![](s1.png)
+
 ![](s2.png)
+
 ![](s3.png)
+
 ![](s4.png)
 
 ### What is a Deep Fake?
@@ -54,6 +57,7 @@ By the end of this tutorial, you will be able to:
 - Play the game
     - How many badges can you collect?
     - What do they mean?
+      
 ![](s7.png) 
 
 
