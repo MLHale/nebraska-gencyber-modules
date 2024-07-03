@@ -5,14 +5,14 @@ title: Introduction to Microbits
 
 
 ### Introduction
-
+Microbits are pocket-sized computers designed to make learning and teaching easy and fun. They are equipped with various sensors and inputs, allowing users to create and program a wide range of interactive projects.
 
 ### Goals
 
 By the end of this tutorial, you will be able to:
-* 
-* 
-* 
+* understand the basic components and features of the Microbit including its LED display, buttons, and sensors.
+* create simple programs using block-based coding to control the Microbit and interact with its various components through hands-on activities and challenges.
+
 
 ### Materials Required
 
@@ -26,7 +26,6 @@ By the end of this tutorial, you will be able to:
 None
 
 ### Table of Contents
-
 
 - [Additional Resources](#additional-resources)
 - [Lead Author](#lead-author)
@@ -47,7 +46,7 @@ None
 
 ### Microbit Features
 ![](m1.png)
-[Image Source: https://microbit.org/get-started/user-guide/overview/](#https://microbit.org/get-started/user-guide/overview/)
+[Image Source: https://microbit.org/get-started/user-guide/overview/](https://microbit.org/get-started/user-guide/overview/)
 
 ### Task 1: Attaching the Battery Pack to the Microbit
 - Unpackage your batteries and put them in your battery holder.
@@ -84,7 +83,7 @@ None
 ![](m4.png)
 
 ### Task 4: Using the MakeCode Website
-- Open the Chrome web browser and go to [https://makecode.microbit.org](#https://makecode.microbit.org)
+- Open the Chrome web browser and go to [https://makecode.microbit.org](https://makecode.microbit.org)
 - Click the purple plus sign to create a new project.
 
 ### Practice Programs
