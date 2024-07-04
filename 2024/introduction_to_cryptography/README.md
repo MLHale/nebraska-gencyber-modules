@@ -88,19 +88,26 @@ By the end of this tutorial, you will be able to:
 2. Wrap each strip of paper around the Pringles can in the same order they were printed on the sheet. 
 3. Overlap the tab at the end of each strip and secure with a piece of tape. 
 4. Ensure each of the paper rings (rotors) can freely rotate
+
 ![](c5.png)
 
 #### Decoding Challenges
 **Challenge 1 - Rotor 1**
+
 Rotor Settings: AAA
+
 Message: GJGMJ
 
 **Challenge 2 - Rotor 1**
+
 Rotor Settings: AHA
+
 Message:LMQANI
 
 **Challenge 3 - Rotor 2**
+
 Rotor Settings: AIA
+
 Message: FHZPIUIMKA
 
 
