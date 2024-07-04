@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Building Arcade Games with Littlebits
+title: Introduction to Cryptography
 ---
 
 ### Cybersecurity First Principles in this lesson
