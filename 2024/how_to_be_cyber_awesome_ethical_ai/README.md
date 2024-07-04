@@ -1,6 +1,6 @@
 ---
 layout: page
-title: How to be Cyber Awesome - Ethical AI#
+title: How to be Cyber Awesome - Ethical AI
 ---
 
 ### Cybersecurity First Principles in this lesson
