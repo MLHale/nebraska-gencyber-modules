@@ -22,11 +22,10 @@ By the end of this tutorial, you will be able to:
 
 ### Materials Required
 
-* 
-* 
+
 
 ### Prerequisite lessons
-None
+- Cyber Security Concepts
 
 ### Table of Contents
 
@@ -36,25 +35,13 @@ None
 - [Acknowledgements](#acknowledgements)
 - [License](#license)
 
-### 
-
-### 
-
-### 
-
-### 
-
-### 
-
-### 
 
 
-### Additional Resources
 
 
 ### Lead Author
 
-- Kristeen Shabram
+- Dr. Deanna House, Dr. Matthew L. Hale, Derek Babb, Kristeen Shabram
 
 ### Acknowledgements
 
