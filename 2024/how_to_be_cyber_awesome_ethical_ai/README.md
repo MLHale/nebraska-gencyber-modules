@@ -40,6 +40,7 @@ By the end of this tutorial, you will be able to:
     - an artificial heart
     - an artificial lake
     - artificial fur/sweeteners/flowers (my example of snow cone flavors)
+  
 ![](e1.png)
 ![](e2.png)
 
