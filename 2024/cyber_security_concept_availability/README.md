@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Building Arcade Games with Littlebits
+title: Cybersecurity Concept - Availability
 ---
 
 ### Cybersecurity First Principles in this lesson
