@@ -48,10 +48,15 @@ Layering, failure handling, redundancy
 
 
 **The Human Layer:** Awareness and Training (Guards)
+
 **Perimeter Security:** Firewalls, spam filters etc. (outer walls and draw bridges)
+
 **Network Security:** Segmentation (inner walls)
+
 **Application Security:** Anti-virus (watch towers)
+
 **Data Security:** Passwords (inner locks)
+
 **Mission Criticial Assets:** Encryption (king's/queen's guard)
 
 
