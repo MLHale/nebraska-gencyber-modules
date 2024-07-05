@@ -1,47 +1,116 @@
 ---
 layout: page
-title: Building Arcade Games with Littlebits
+title: Defense in Depth
 ---
 
 ### Cybersecurity First Principles in this lesson
 
 * __Defense in Depth__: Using multiple layers of protection to secure something.
-* __Keep it Simple__: Avoid unnecessary complexity and reduce exposed areas.
-* __Think Like an Adversary__: Be proactive by thinking of what an attacker can exploit (weaknesses and vulnerabilities).
-* __Confidentiality__: Define permissions for interactions with protected objects.
 
 ### Introduction
-
+Defense in depth is a multi-layered security strategy that incorporates multiple defensive mechanisms to protect information and resources. This approach ensures that if one security layer is breached, additional layers continue to provide protection.
 
 ### Goals
 
 By the end of this tutorial, you will be able to:
-* 
-* 
-* 
+* understand and explain the principles of defense in depth and its importance in cybersecurity.
+* apply the concepts of defense in depth by designing and implementing a multi-layered security system using microbits
+
 
 ### Materials Required
-
+* Microbit
 
 
 ### Prerequisite lessons
-- Cyber Security Concepts
+- None
 
 ### Table of Contents
-
-
+- [Defense in Depth](#defense-in-depth)
+- [Castle Defenses ⇔ Computer Systems](#castle-defenses-⇔-computer-systems]
+- [Activities](#activities)
 - [Additional Resources](#additional-resources)
 - [Lead Author](#lead-author)
 - [Acknowledgements](#acknowledgements)
 - [License](#license)
 
+### Defense in Depth
+#### Definition
+Using multiple layers of protection to secure something.
+
+#### Key Ideas
+Layering, failure handling, redundancy
 
 
+### Take the example of Castles
+
+- Castle comes from a latin term meaning “fortified place
+
+#### Castle Defenses ⇔ Computer Systems
+
+
+**The Human Layer:** Awareness and Training (Guards)
+**Perimeter Security:** Firewalls, spam filters etc. (outer walls and draw bridges)
+**Network Security:** Segmentation (inner walls)
+**Application Security:** Anti-virus (watch towers)
+**Data Security:** Passwords (inner locks)
+**Mission Criticial Assets:** Encryption (king's/queen's guard)
+
+
+![](d2.png)  ![](d3.png)
+
+#### Takeaway
+Secure your systems like castles
+
+
+### Activities
+#### Activity 1: Secure a Castle
+- Challenge 1 - build your physical defenses
+- Draw your castle, it should have:
+    - a moat 
+    - an outer wall
+    - a courtyard
+    - and a keep
+- Discuss your defenses with the peers on your table
+- What attacks might your castle defense be resilient against?
+- What attacks might it still be vulnerable too?
+
+#### Activity 1: Secure a Castle - With Tech
+- Challenge 2 - Guard the entrance with a drawbridge
+- Build an LED drawbridge over your moat
+
+![](d4.png)
+
+#### Activity 2: Radio-controlled attack/defend game
+**Goal:** prevent all attacks with defense in depth
+Download complete code from [here](https://github.com/MLHale/did)
+
+![](d5.png)
+
+![](d6.png)
+
+- Two player game (Take turns)
+    - one player is the ‘defender’, second player is the ‘attacker’
+    - PRESS A+B at the same time to reset screen / be the defender
+- Attacker options
+    - Press A, B, Logo for ‘regular attack’
+    - Long Press logo for ‘special attack’
+- Defend options
+    - Tilt left to toggle firewall 1
+    - Tilt right to toggle firewall 2
+ 
+#### Activity 3: Add a Password
+- Guard the entrance with a passworded drawbridge
+- Use a more advanced version that actually raises a bridge
+- Open a new browser tab
+- Go to [https://tinyurl.com/ngc23-moat](https://tinyurl.com/ngc23-moat)
+- Click ‘Simulator’
+- Download the code
+- Try it with a motor!
 
 
 ### Lead Author
 
-- Dr. Deanna House, Dr. Matthew L. Hale, Derek Babb, Kristeen Shabram
+- Dr. Matthew L. Hale
 
 ### Acknowledgements
 
