@@ -22,13 +22,12 @@ By the end of this tutorial, you will be able to:
 
 
 ### Prerequisite lessons
-- None
+- Cybersecurity concepts
 
 ### Table of Contents
 - [Defense in Depth](#defense-in-depth)
 - [Castle Defenses ⇔ Computer Systems](#castle-defenses-⇔-computer-systems]
 - [Activities](#activities)
-- [Additional Resources](#additional-resources)
 - [Lead Author](#lead-author)
 - [Acknowledgements](#acknowledgements)
 - [License](#license)
