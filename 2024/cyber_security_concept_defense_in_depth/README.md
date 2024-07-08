@@ -60,7 +60,10 @@ Layering, failure handling, redundancy
 **Mission Criticial Assets:** Encryption (king's/queen's guard)
 
 
-![](d22.png)  ![](d3.png)
+![](d22.png) 
+> Img credit: https://www.questionmark.com/app/uploads/2022/11/castle2-1.jpg
+
+![](d3.png)
 
 #### Takeaway
 Secure your systems like castles
