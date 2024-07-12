@@ -4,7 +4,7 @@ title: Cyber Security Concept - Confidentiality
 ---
 
 ### Introduction
-Confidentiality is a security principle that ensures information is accessible only to those authorized to view it. It protects sensitive data from unauthorized access and disclosure.
+Confidentiality is a security principle that ensures information is accessible only to those authorized to view it. It protects sensitive data from unauthorized access and disclosure. In this lesson, we will get hands-on with 'Confidentiality Unplugged' and explore Caesar cipher encryption on a Microbit.
 
 ### Goals
 
@@ -21,8 +21,10 @@ By the end of this tutorial, you will be able to:
 - Cyber Security Concepts
 
 ### Table of Contents
-
-
+- [Confidentiality](#confidentiality)
+- [Confidentiality: Unplugged](#confidentiality-unplugged)
+- [Threats to Confidentiality](#threats-to-confidentiality)
+- [Activity](#activity)
 - [Additional Resources](#additional-resources)
 - [Lead Author](#lead-author)
 - [Acknowledgements](#acknowledgements)
@@ -32,6 +34,7 @@ By the end of this tutorial, you will be able to:
 - The property that information is not disclosed to individuals, devices, or processes unless they have been authorized to access the information
 
   ![](c1.png)
+  > Img Credit: [https://www.alamy.com/secure-access-permissions-concept-icon-image466495847.html]
   
 - **Definition:** Define _permissions_ for interactions with _protected_ objects.
 - Everyday Life Example: 
@@ -41,11 +44,13 @@ By the end of this tutorial, you will be able to:
 
 ![](c2.png)
 
-Image Source:[https://studentprivacycompass.org](https://studentprivacycompass.org)
+> Img Credit:[https://studentprivacycompass.org](https://studentprivacycompass.org)
 
 ### What are some protected, sensitive data in a classroom?
 
 ![](c3.png)
+> Img Credit: [https://www.linkedin.com/pulse/use-students-data-khaled-salem-ph-d]
+
 
 ### Confidentiality: Unplugged
 - Compute information about a group without revealing information about individuals
