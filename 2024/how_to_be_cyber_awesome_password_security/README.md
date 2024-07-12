@@ -11,7 +11,7 @@ title: How to be Cyber Awesome - Password Security
 * __Confidentiality__: Define permissions for interactions with protected objects.
 
 ### Introduction
-In today's digital world, our passwords act as the gatekeepers to our personal information. Strong password security is essential to prevent unauthorized access and safeguard our online accounts.
+In today's digital world, our passwords act as the gatekeepers to our personal information. Strong password security is essential to prevent unauthorized access and safeguard our online accounts. In this lesson, we will learn how to create secure passwords and explore how to test their strength with a fun Microbit activity.
 
 ### Goals
 
