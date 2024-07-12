@@ -11,7 +11,7 @@ title: Introduction to Cryptography
 * __Confidentiality__: Define permissions for interactions with protected objects.
 
 ### Introduction
-Cryptography is the practice and study of techniques for securing communication and data from unauthorized access or tampering. It involves transforming readable information into coded text using algorithms, ensuring that only intended recipients can decode and understand the information.
+Cryptography is the practice and study of techniques for securing communication and data from unauthorized access or tampering. It involves transforming readable information into coded text using algorithms. In this lesson you will be introduced to different cryptographic techniques with the help of hands-on activities.
 
 ### Goals
 
