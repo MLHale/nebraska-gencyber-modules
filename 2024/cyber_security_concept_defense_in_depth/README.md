@@ -8,7 +8,7 @@ title: Defense in Depth
 * __Defense in Depth__: Using multiple layers of protection to secure something.
 
 ### Introduction
-Defense in depth is a multi-layered security strategy that incorporates multiple defensive mechanisms to protect information and resources. This approach ensures that if one security layer is breached, additional layers continue to provide protection.
+Defense in depth is a multi-layered security strategy that incorporates multiple defensive mechanisms to protect information and resources. This approach ensures that if one security layer is breached, additional layers continue to provide protection. In this lesson, we will explore how to build a mini defense system using a Microbit!
 
 ### Goals
 
@@ -61,9 +61,11 @@ Layering, failure handling, redundancy
 
 
 ![](d22.png) 
-> Img credit: https://www.questionmark.com/app/uploads/2022/11/castle2-1.jpg
+> Img Credit: [https://www.questionmark.com/app/uploads/2022/11/castle2-1.jpg]
 
 ![](d3.png)
+> Img Credit: [https://www.diamondit.pro/7-layers-of-cybersecurity/]
+
 
 #### Takeaway
 Secure your systems like castles
