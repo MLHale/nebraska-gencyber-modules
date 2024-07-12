@@ -8,7 +8,7 @@ title: Cybersecurity Concept - Availability
 * __Defense in Depth__: Using multiple layers of protection to secure something.
 
 ### Introduction
-Availability in cybersecurity ensures that systems, services, and data are accessible and operational when needed by authorized users. It is a crucial aspect of security that focuses on minimizing downtime and preventing disruptions from attacks or failures.
+Availability in cybersecurity ensures that systems, services, and data are accessible and operational when needed by authorized users. In this lesson, we will learn how it guarantees authorized users timely access to systems and data with the help of an activity.
 
 ### Goals
 By the end of this tutorial, you will be able to:
