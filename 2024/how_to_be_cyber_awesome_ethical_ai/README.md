@@ -11,7 +11,7 @@ title: How to be Cyber Awesome - Ethical AI
 * __Confidentiality__: Define permissions for interactions with protected objects.
 
 ### Introduction
-Ethical AI refers to the development and deployment of artificial intelligence systems in ways that are fair, transparent, and respectful of human rights and values. It emphasizes the importance of ensuring AI technologies are used responsibly.
+In this lesson, we'll dive into Ethical AI, making sure AI is fair, transparent, and used for good, just like using a powerful tool responsibly. We'll also explore cutting-edge AI like ChatGPT and get hands-on to see AI in action.
 
 ### Goals
 
@@ -27,7 +27,12 @@ By the end of this tutorial, you will be able to:
 
 ### Table of Contents
 
-
+- [What is Artificial?](#what-is-artificial?)
+- [What is Intelligence?](#what-is-intelligence?)
+- [What is Artificial Intelligence?](#what-is-artificial-intelligence?)
+- [Artificial Intelligence (AI) and Ethics](#artificial-intelligence-(AI)-and-ethics)
+- [Current Modern Artificial Intelligence](#current-modern-artificial-intelligence)
+- [Activities](#activities)
 - [Additional Resources](#additional-resources)
 - [Lead Author](#lead-author)
 - [Acknowledgements](#acknowledgements)
@@ -40,9 +45,13 @@ By the end of this tutorial, you will be able to:
     - an artificial heart
     - an artificial lake
     - artificial fur/sweeteners/flowers (my example of snow cone flavors)
-  
+> Content Credit: [https://dictionary.cambridge.org/us/dictionary/english/natural
+ 
 ![](e1.png)
+> Img Credit: [https://www.iberdrola.com/talent/naturalistic-intelligence]
+
 ![](e2.png)
+> Img Credit: [https://instituteofyou.org/multiple-intelligences/]
 
 ### What is Intelligence?
 
@@ -50,11 +59,11 @@ By the end of this tutorial, you will be able to:
 
 ![](e3.png)
 
-Image Source: [https://www.iberdrola.com/talent/naturalistic-intelligence](https://www.iberdrola.com/talent/naturalistic-intelligence)
+> Imd Credit: [https://www.iberdrola.com/talent/naturalistic-intelligence]
 
 ![](e4.png)
 
-Image Source: [https://instituteofyou.org/multiple-intelligences/](https://instituteofyou.org/multiple-intelligences/)
+> Img Credit: [https://instituteofyou.org/multiple-intelligences/]
 
 
 ### What is ArtificiaL Intelligence?
