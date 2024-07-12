@@ -5,7 +5,7 @@ title: Cyber Security Concepts-Integrity
 
 
 ### Introduction
-Data integrity ensures information remains unaltered (unchanged) and complete (no missing parts) throughout its lifecycle, from creation to storage and use, to ensure it's reliability and trustworthiness.
+Data integrity ensures information remains unaltered (unchanged) and complete (no missing parts) throughout its lifecycle. In this lesson we'll see how data, must stay unchanged and complete from creation to storage and use, to ensure it's reliability and trustworthiness. We'll even explore how to build a system that checks data integrity using a Microbit!
 
 ### Goals
 
