@@ -8,7 +8,7 @@ title: How to be Cyber Awesome-Your Personal and Private Information
 * __Confidentiality__: Define permissions for interactions with protected objects.
 
 ### Introduction
-It is important to be mindful of what you share online. Sharing private information and oversharing personal details can lead to various risks,including identity theft, cyberbulling, and loss of privacy, so it's important to know how to protect yourself by being careful.
+In this lesson, we will learn how important it is to be mindful of what you share online. Sharing private information and oversharing personal details can lead to various risks,including identity theft, cyberbulling, and loss of privacy.
 
 ### Goals
 
@@ -19,11 +19,11 @@ By the end of this tutorial, you will be able to know:
 
 ### Materials Required
 
-* Teacher presentation
+* Teacher's presentation
 * Student handout
 
 ### Prerequisite lessons
-None
+Introduction to Cybersecurity Concepts
 
 ### Table of Contents
 
