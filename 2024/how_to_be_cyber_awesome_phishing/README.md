@@ -11,7 +11,9 @@ title: How to be Cyber Awesome-Phishing
 * __Confidentiality__: Define permissions for interactions with protected objects.
 
 ### Introduction
-Phishing is a cybercrime where scammers pretend to be a trusted source to trick you into giving away your personal information, like passwords or credit card details. Be cautious of any unexpected messages or requests for information online.
+Phishing is a cybercrime where scammers pretend to be a trusted source to trick you into giving away your personal information, like passwords or credit card details. In this lesson, we will learn what phishing is by put our phishing radar to the test with a challenging activity.
+
+
 
 ### Goals
 
@@ -23,7 +25,7 @@ By the end of this tutorial, you will be able to:
 * None
 
 ### Prerequisite lessons
-None
+Introduction to Cybersecurity Concepts
 
 ### Table of Contents
 - [What is Phishing?](#what-is-phishing?)
