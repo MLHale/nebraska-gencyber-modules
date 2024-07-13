@@ -4,7 +4,7 @@ title: Keep it Simple
 ---
 
 ### Introduction
-In cybersecurity, "keep it simple" means prioritizing clear, manageable security practices. This reduces attack points and promotes user understanding, ultimately strengthening your defenses.
+In cybersecurity, "keep it simple" means prioritizing clear, manageable security practices. In this lesson, we will explore the concept of 'keep it simple' In this lesson with several unplugged activities.
 
 ### Goals
 
@@ -17,10 +17,8 @@ By the end of these fun activities, you will be able to:
 - Tape
 - Scissors (Optional)
 
-
-
 ### Prerequisite lessons
-None
+Introduction to Cybersecurity Concepts
 
 ### Table of Contents
 - [Important Vocabulary](#important-vocabulary)
@@ -127,7 +125,3 @@ Overall content: Copyright (C) 2024  [Dr. Matthew L. Hale](http://faculty.ist.un
 
 Lesson content: Copyright (C) [Dr. Matthew L. Hale](http://faculty.ist.unomaha.edu/mhale/) 2024.  
 <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /></a><br /><span xmlns:dct="http://purl.org/dc/terms/" property="dct:title">This lesson</span> is licensed by the author under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</a>.
-
-
-
-
