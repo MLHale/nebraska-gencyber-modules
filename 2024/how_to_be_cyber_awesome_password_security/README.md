@@ -27,7 +27,9 @@ By the end of this tutorial, you will be able to:
 * Microbit
 
 ### Prerequisite lessons
-None
+* Introduction to Cybersecurity Concepts
+* How to be Cyber Awesome
+* Introduction to Microbits
 
 ### Table of Contents
 
@@ -106,8 +108,6 @@ The password generator code is [here](https://tinyurl.com/UNOGenCyber2024)
 
 Check your password [here](https://www.security.org/how-secure-is-my-password). How many years will it take to crack your password?
 
-
-### Additional Resources
 
 
 ### Lead Author
