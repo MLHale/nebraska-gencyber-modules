@@ -1,15 +1,15 @@
 ---
 layout: page
-title: Introduction to Cybersecurity Concepts
+title: How to be Cyber Awesome - Password Security
 ---
 ### Summary
-Learn about 
+This module educates students to create strong passwords by building a microbit generator and testing its effectiveness.
 
 ### Grade
 Middle School
 
 ### Time Required
-20 minutes
+30 minutes
 
 ### Cybersecurity Concepts
 - [x] Defense in Depth
