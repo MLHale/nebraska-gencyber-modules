@@ -12,12 +12,12 @@ Middle School
 20 minutes
 
 ### Cybersecurity Concepts
-- [] Defense in Depth
-- [] Confidentiality 
-- [] Integrity
-- [] Availability
-- [] Think Like an Adversary
-- [] Keep it Simple
+- [ ] Defense in Depth
+- [ ] Confidentiality 
+- [ ] Integrity
+- [ ] Availability
+- [ ] Think Like an Adversary
+- [ ] Keep it Simple
 
 ### Learning Objectives
 * Students will be able to 
