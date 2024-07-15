@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Introduction to Cybersecurity Concepts
+title: How to be Cyber Awesome - Phishing
 ---
 ### Summary
 Students will learn what phishing is by put their 'phishing radar' to the test with a challenging activity.
