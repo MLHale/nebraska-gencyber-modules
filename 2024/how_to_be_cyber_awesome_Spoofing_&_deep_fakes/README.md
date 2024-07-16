@@ -3,6 +3,11 @@ layout: page
 title: How to be Cyber Awesome - Spoofing & Deep Fakes
 ---
 
+### Cybersecurity Concepts in this Lesson
+
+* __Think Like an Adversary__: Be proactive by thinking of what an attacker can exploit (weaknesses and vulnerabilities).
+* __Integrity__: Guarantees the accuracy and completeness of information and protects it from unauthorized modification.
+
 ### Introduction
 In this lesson,we'll expose spoofing tactics! We'll learn how tricksters disguise themselves online, like wearing a mask to impersonate someone else. Then, we'll explore deepfakes, AI-generated videos that can be shockingly real, and how they can be used to mislead.
 
