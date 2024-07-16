@@ -3,37 +3,46 @@ layout: page
 title: Introduction to Cryptography
 ---
 ### Summary
-Learn about 
+This module will explore the art of securing communication through cryptography, learn basic encryption and decryption techniques using hands-on activities like Caesar Ciphers and building their own "Enigma" machines. 
 
 ### Grade
 Middle School
 
 ### Time Required
-20 minutes
+90 minutes
 
 ### Cybersecurity Concepts
-- [ ] Defense in Depth
-- [ ] Confidentiality 
+- [x] Defense in Depth
+- [x] Confidentiality 
 - [ ] Integrity
 - [ ] Availability
-- [ ] Think Like an Adversary
-- [ ] Keep it Simple
+- [x] Think Like an Adversary
+- [x] Keep it Simple
 
 ### Learning Objectives
-* Students will be able to 
-* Students will be to able to 
+* Students will be able to understand the fundamental principles and concepts of cryptography, including encryption and decryption.   
+* Students will be to able to apply basic cryptographic techniques to encode and decode messages which will enhance your problem-solving and analytical skills through hands-on activities.
+
 
 ### Materials list
-None
+* Caesar Cipher Wheel
+* Brad
+* Scissors
+* Breakout box
+
 
 ### Learning Facilitation
 
 #### Warm up Activity
 
-
+Students will discuss real-life scenarios where securing messages might be important (e.g., sending passwords, confidential documents).
 
 #### Focused Activity
-N/A
+
+Students will:
+1. practice encryption and decryption by decoding messages using a Caesar Cipher wheel and create their own encrypted messages.
+2. collaborate to build "Enigma"-inspired machines with rotating rotors and decode the messages.
+3. face a "Cryptography Breakout Box" challenge by applying their newly learned skills.
 
 #### Closure
 
@@ -41,7 +50,7 @@ Review what was discussed in the module.
 
 #### Reflection
 
-Review how each cybersecurity concepts were explained in this module.
+Students will reflect on the importance of cryptography in cybersecurity and explore its various applications in the real world.
 
 ### Assessment
 
@@ -57,9 +66,9 @@ N/A
 
 ### Module Authors
 
+Dr. Deanna House, Dr. Matthew L. Hale, Derek Babb, Kristeen Shabram
 
-
-## Special Thanks
+## Acknowledgements
 
 * A special thanks to Gul e Fatima Kiani for reviews of this module.
 
