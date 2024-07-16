@@ -9,6 +9,8 @@ title: Building Arcade Games with Littlebits
 * __Keep it Simple__: Avoid unnecessary complexity and reduce exposed areas.
 * __Think Like an Adversary__: Be proactive by thinking of what an attacker can exploit (weaknesses and vulnerabilities).
 * __Confidentiality__: Define permissions for interactions with protected objects.
+* __Availability__: Ensures information systems and data are accessible to authorized users when needed.
+* __Integrity__: Guarantees the accuracy and completeness of information and protects it from unauthorized modification.
 
 ### Introduction
 
