@@ -3,37 +3,39 @@ layout: page
 title: Cybersecurity Concept - Confidentiality
 ---
 ### Summary
-Learn about 
+This module will explore the importance of confidentiality in securing sensitive information. Students will participate in an "unplugged" activity and then build a Caesar Cipher program on Microbits.
 
 ### Grade
 Middle School
 
 ### Time Required
-20 minutes
+2 hours 15 minutes
 
 ### Cybersecurity Concepts
 - [ ] Defense in Depth
-- [ ] Confidentiality 
+- [x] Confidentiality 
 - [ ] Integrity
 - [ ] Availability
 - [ ] Think Like an Adversary
 - [ ] Keep it Simple
 
 ### Learning Objectives
-* Students will be able to 
-* Students will be to able to 
+* Students will be able to understand the importance of confidentiality and its role in protecting sensitive information.    
+* Students will be to able to implement strategies and best practices to maintain confidentiality in various scenarios through hands-on activities and real-world examples.
+
 
 ### Materials list
-None
+Micorbits
 
 ### Learning Facilitation
 
 #### Warm up Activity
-
+Students will brainstorm information typically found in a classroom setting. They then categorize this information as either confidential or non confidential.
 
 
 #### Focused Activity
-N/A
+Students will participate in a collaborative activity to compute average ratings without revealing individual scores. This demonstrates how data can be aggregated while maintaining confidentiality.
+Students will code a Caesar Cipher program on Microbits, encrypting and decrypting messages using buttons and tilting gestures.
 
 #### Closure
 
@@ -41,7 +43,7 @@ Review what was discussed in the module.
 
 #### Reflection
 
-Review how each cybersecurity concepts were explained in this module.
+Students will consider the importance of confidentiality in their own lives and explore additional cybersecurity measures to protect sensitive data.
 
 ### Assessment
 
@@ -53,13 +55,13 @@ N/A
 
 ### Extension Activity (ies)
 
-N/A
+Point students to the additional resources provided in the lesson.
 
-### Module Authors
+### Module Author
 
+Dr. Robin Gandhi
 
-
-## Special Thanks
+### Acknowledgements
 
 * A special thanks to Gul e Fatima Kiani for reviews of this module.
 
