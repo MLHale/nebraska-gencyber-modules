@@ -3,7 +3,7 @@ layout: page
 title: How to be Cyber Awesome - Personal & Private Information
 ---
 ### Summary
- 
+This module will help students to differentiate between personal and private information and emphasize how important it is to be mindful of what you share online.
 
 ### Grade
 Middle School
