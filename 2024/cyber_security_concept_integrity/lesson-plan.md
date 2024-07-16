@@ -63,7 +63,7 @@ Point to the additional resources provided in the lesson
 
 Derek Babb
 
-## Special Thanks
+## Acknowledgement
 
 * A special thanks to Gul e Fatima Kiani for reviews of this module.
 
