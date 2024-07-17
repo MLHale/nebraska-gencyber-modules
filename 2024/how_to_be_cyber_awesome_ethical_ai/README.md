@@ -3,7 +3,7 @@ layout: page
 title: How to be Cyber Awesome - Ethical AI
 ---
 
-### Cybersecurity First Principles in this lesson
+### Cybersecurity Concepts in this lesson
 
 * __Defense in Depth__: Using multiple layers of protection to secure something.
 * __Keep it Simple__: Avoid unnecessary complexity and reduce exposed areas.
@@ -20,10 +20,10 @@ By the end of this tutorial, you will be able to:
 * learn how to use AI technologies ethically.
 
 ### Materials Required
-* None
+* Chrome Book
 
 ### Prerequisite lessons
-- None
+- Cybersecurity Concepts
 
 ### Table of Contents
 
@@ -95,7 +95,7 @@ By the end of this tutorial, you will be able to:
 #### Activity 1
 - Work with your assigned partner
 - Step 1: visit [https://chat.openai.com/](https://chat.openai.com/) 
-- Step 2: create a prompt to make a fake news story - this is the one we used together“write a fake news story about how dangerous downtown omaha is during the college world series. It should be a news bulletin for those traveling to Omaha”.
+- Step 2: create a prompt to make a fake news story - this is the one we used together “write a fake news story about how dangerous downtown omaha is during the college world series. It should be a news bulletin for those traveling to Omaha”.
 
 
 #### Activity 2
