@@ -3,16 +3,16 @@ layout: page
 title: Cybersecurity Concept - Defense in Depth
 ---
 ### Summary
-Learn about 
+This lesson explores the concept of defense in depth by building a multi-layered security system using Microbits. Students will learn about cybersecurity concept and its practical application.
 
 ### Grade
 Middle School
 
 ### Time Required
-20 minutes
+1 hour 45 minutes
 
 ### Cybersecurity Concepts
-- [ ] Defense in Depth
+- [x] Defense in Depth
 - [ ] Confidentiality 
 - [ ] Integrity
 - [ ] Availability
@@ -20,28 +20,31 @@ Middle School
 - [ ] Keep it Simple
 
 ### Learning Objectives
-* Students will be able to 
-* Students will be to able to 
+* Students will be able to understand and explain the principles of defense in depth and its importance in cybersecurity.
+* Students will be able to apply the concepts of defense in depth by designing and implementing a multi-layered security system using microbits
 
+  
 ### Materials list
-None
+Microbit
 
 ### Learning Facilitation
 
 #### Warm up Activity
-
-
+Students will be introduced to the concept of defense in depth by comparing a castle's security measures to a computer system's defenses. The analogy will highlight how multiple layers of protection can significantly enhance security.
 
 #### Focused Activity
-N/A
+Students will draw a castle with various layers of physical defense (moat, walls, keep). They will discuss strengths and vulnerabilities of their designs.
+Students will use LEDs to simulate a light-up drawbridge controlled by the Microbit.
+Students will play a two-player game where one defends a Microbit system with togglable firewalls (represented by tilt gestures) against simulated attacks.
+Students will explore a more advanced Microbit program with a password-protected drawbridge.
+
 
 #### Closure
 
-Review what was discussed in the module.
-
+Summarize the benefits and importance of defense in depth in cybersecurity.
 #### Reflection
 
-Review how each cybersecurity concepts were explained in this module.
+Students will reflect how they can implement the concepts of defense in depth to protect their own online information and devices.
 
 ### Assessment
 
@@ -57,7 +60,7 @@ N/A
 
 ### Module Authors
 
-
+Dr. Matthew L. Hale
 
 ## Special Thanks
 
