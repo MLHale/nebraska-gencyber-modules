@@ -3,28 +3,29 @@ layout: page
 title: How to be Cyber Awesome - Ethical AI
 ---
 ### Summary
-Learn about 
+This module will explore the core principles of Ethical AI. Students will learn about the responsible use of powerful artificial intelligence technologies.
 
 ### Grade
 Middle School
 
 ### Time Required
-20 minutes
+25 minutes
 
 ### Cybersecurity Concepts
-- [ ] Defense in Depth
-- [ ] Confidentiality 
+- [x] Defense in Depth
+- [x] Confidentiality 
 - [ ] Integrity
 - [ ] Availability
-- [ ] Think Like an Adversary
-- [ ] Keep it Simple
+- [x] Think Like an Adversary
+- [x] Keep it Simple
 
 ### Learning Objectives
-* Students will be able to 
-* Students will be to able to 
+* Students will be able to understand the fundamental concepts of AI.    
+* Students will be to able to learn how to use AI technologies ethically.
+
 
 ### Materials list
-None
+Chrome Book
 
 ### Learning Facilitation
 
