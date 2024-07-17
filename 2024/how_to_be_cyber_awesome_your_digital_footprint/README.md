@@ -25,7 +25,7 @@ By the end of this tutorial, you will be able to:
 * Student handout.
 
 ### Prerequisite lessons
-None
+- Introduction to Cybersecurity concepts
 
 ### Table of Contents
 
