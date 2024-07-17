@@ -3,9 +3,6 @@ layout: page
 title: Cybersecurity Concept - Availability
 ---
 
-### Cybersecurity First Principles in this lesson
-
-* __Defense in Depth__: Using multiple layers of protection to secure something.
 
 ### Introduction
 Availability in cybersecurity ensures that systems, services, and data are accessible and operational when needed by authorized users. In this lesson, we will learn how it guarantees authorized users timely access to systems and data with the help of an activity.
@@ -20,7 +17,7 @@ By the end of this tutorial, you will be able to:
 * Microbit
 
 ### Prerequisite lessons
-- Cyber Security Concepts
+- Introduction to Cybersecurity Concepts
 
 ### Table of Contents
 
