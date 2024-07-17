@@ -30,11 +30,12 @@ Chrome Book
 ### Learning Facilitation
 
 #### Warm up Activity
-
+Students will be shown some items from daily life and asked to categorize them as either natural or artificial. They will then discuss their understanding of artificial intelligence and its potential applications.
 
 
 #### Focused Activity
-N/A
+- Students will visit ChatGPT (https://chat.openai.com/) and create a prompt to highlight the potential misuse of AI for generating fake news.
+- Students will again use ChatGPT to create a game for their microbits.
 
 #### Closure
 
@@ -42,7 +43,7 @@ Review what was discussed in the module.
 
 #### Reflection
 
-Review how each cybersecurity concepts were explained in this module.
+Students will reflect on how AI can be used ethically in their own lives and how to avoid potential misuse.
 
 ### Assessment
 
@@ -58,7 +59,7 @@ N/A
 
 ### Module Authors
 
-
+Dr. Matthew L Hale
 
 ## Special Thanks
 
