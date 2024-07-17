@@ -3,45 +3,46 @@ layout: page
 title: How to be Cyber Awesome - Your Digital Footprint
 ---
 ### Summary
-Learn about 
+This module introduces the concept of a digital footprint and its impact on an individual's reputation and opportunities. Students will learn how to create a positive digital footprint and understand the consequences of harmful online behavior.
 
 ### Grade
 Middle School
 
 ### Time Required
-20 minutes
+25 minutes
 
 ### Cybersecurity Concepts
-- [ ] Defense in Depth
-- [ ] Confidentiality 
+- [x] Defense in Depth
+- [x] Confidentiality 
 - [ ] Integrity
 - [ ] Availability
-- [ ] Think Like an Adversary
-- [ ] Keep it Simple
+- [x] Think Like an Adversary
+- [x] Keep it Simple
 
 ### Learning Objectives
-* Students will be able to 
-* Students will be to able to 
+* Students will be able to know what digital footprint is.
+* Students will be to able to   differentiate between good and harmful footprint.
+* Students will be able to keep a good digital footprint of themselves.
 
 ### Materials list
-None
+Student handout
 
 ### Learning Facilitation
 
 #### Warm up Activity
 
-
+Students will brainstorm examples of online activities and discuss how these actions might contribute to a digital footprint
 
 #### Focused Activity
-N/A
+Students will create a visual representation of their ideal digital footprint, including positive online behaviors and content. They will then identify potential negative impacts of harmful online activities.
 
 #### Closure
 
-Review what was discussed in the module.
+Students will summarize key points about digital footprint management.
 
 #### Reflection
 
-Review how each cybersecurity concepts were explained in this module.
+Students will reflect on their own digital footprint and develop a personal plan for maintaining a positive online presence.
 
 ### Assessment
 
@@ -57,7 +58,7 @@ N/A
 
 ### Module Authors
 
-
+Kristeen Shabram
 
 ## Special Thanks
 
