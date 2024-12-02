@@ -292,7 +292,7 @@ MIME-Version: 1.0
 Questions:
 
 * What are the `From` and `Return-Path` email addresses. Do they match? What are they?
-* What is the name of the sending computer or server?
+* What is the domain name of the sending computer or server?
 * Where is the sending computer geo-located?
 * What website is linked to “Grant funding request.” in the message?
 * How likely is it that this message is spam?
